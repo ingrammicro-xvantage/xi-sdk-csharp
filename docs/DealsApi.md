@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Api.DealsApi
+# xi-sdk-resellers-csharp.Api.DealsApi
 
 All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
 
@@ -19,9 +19,9 @@ The Deals Details API will retrieve all the details related to the specific deal
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using xi-sdk-csharp.Api;
-using xi-sdk-csharp.Client;
-using xi-sdk-csharp.Model;
+using xi-sdk-resellers-csharp.Api;
+using xi-sdk-resellers-csharp.Client;
+using xi-sdk-resellers-csharp.Model;
 
 namespace Example
 {
@@ -123,9 +123,9 @@ The Deals Search API, by default, will retrieve all the deals that are associate
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using xi-sdk-csharp.Api;
-using xi-sdk-csharp.Client;
-using xi-sdk-csharp.Model;
+using xi-sdk-resellers-csharp.Api;
+using xi-sdk-resellers-csharp.Client;
+using xi-sdk-resellers-csharp.Model;
 
 namespace Example
 {

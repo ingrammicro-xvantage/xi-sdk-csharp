@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Model.ReturnsCreateResponseReturnsClaimsInner
+# xi-sdk-resellers-csharp.Model.ReturnsCreateResponseReturnsClaimsInner
 
 ## Properties
 

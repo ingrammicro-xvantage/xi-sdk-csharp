@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Model.ProductLineTypeSerialnumberdetailsInner
+# xi-sdk-resellers-csharp.Model.ProductLineTypeSerialnumberdetailsInner
 
 ## Properties
 

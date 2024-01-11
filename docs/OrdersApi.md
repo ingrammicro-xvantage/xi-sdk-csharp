@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Api.OrdersApi
+# xi-sdk-resellers-csharp.Api.OrdersApi
 
 All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
 
@@ -22,9 +22,9 @@ This call must be submitted before the order is released to Ingram Micro’s war
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using xi-sdk-csharp.Api;
-using xi-sdk-csharp.Client;
-using xi-sdk-csharp.Model;
+using xi-sdk-resellers-csharp.Api;
+using xi-sdk-resellers-csharp.Client;
+using xi-sdk-resellers-csharp.Model;
 
 namespace Example
 {
@@ -126,9 +126,9 @@ The Orders details API endpoint allows a customer to retrieve their Ingram Micro
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using xi-sdk-csharp.Api;
-using xi-sdk-csharp.Client;
-using xi-sdk-csharp.Model;
+using xi-sdk-resellers-csharp.Api;
+using xi-sdk-resellers-csharp.Client;
+using xi-sdk-resellers-csharp.Model;
 
 namespace Example
 {
@@ -239,9 +239,9 @@ The Orders Search API endpoint allows a customer to search their Ingram Micro or
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using xi-sdk-csharp.Api;
-using xi-sdk-csharp.Client;
-using xi-sdk-csharp.Model;
+using xi-sdk-resellers-csharp.Api;
+using xi-sdk-resellers-csharp.Client;
+using xi-sdk-resellers-csharp.Model;
 
 namespace Example
 {
@@ -378,9 +378,9 @@ Instantly create and place orders. The POST API supports stocked SKUs as well as
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using xi-sdk-csharp.Api;
-using xi-sdk-csharp.Client;
-using xi-sdk-csharp.Model;
+using xi-sdk-resellers-csharp.Api;
+using xi-sdk-resellers-csharp.Client;
+using xi-sdk-resellers-csharp.Model;
 
 namespace Example
 {
@@ -483,9 +483,9 @@ The Order Modify API endpoint allows for changes to be made to an order after th
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using xi-sdk-csharp.Api;
-using xi-sdk-csharp.Client;
-using xi-sdk-csharp.Model;
+using xi-sdk-resellers-csharp.Api;
+using xi-sdk-resellers-csharp.Client;
+using xi-sdk-resellers-csharp.Model;
 
 namespace Example
 {

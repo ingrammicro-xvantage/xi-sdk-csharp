@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Model.OrderSearchResponseOrdersInner
+# xi-sdk-resellers-csharp.Model.OrderSearchResponseOrdersInner
 
 ## Properties
 

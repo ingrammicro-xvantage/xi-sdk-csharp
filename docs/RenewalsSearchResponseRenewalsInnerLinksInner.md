@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Model.RenewalsSearchResponseRenewalsInnerLinksInner
+# xi-sdk-resellers-csharp.Model.RenewalsSearchResponseRenewalsInnerLinksInner
 
 ## Properties
 

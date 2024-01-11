@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Model.OrderDetailResponseServiceresponseOrderdetailresponseMiscfeelineInner
+# xi-sdk-resellers-csharp.Model.OrderDetailResponseServiceresponseOrderdetailresponseMiscfeelineInner
 
 ## Properties
 

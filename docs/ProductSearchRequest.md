@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Model.ProductSearchRequest
+# xi-sdk-resellers-csharp.Model.ProductSearchRequest
 Request object model for the product search endpoint
 
 ## Properties

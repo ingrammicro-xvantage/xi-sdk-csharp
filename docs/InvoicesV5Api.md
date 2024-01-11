@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Api.InvoicesV5Api
+# xi-sdk-resellers-csharp.Api.InvoicesV5Api
 
 All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
 
@@ -18,9 +18,9 @@ View invoice details. This is a request to query invoice details for a specific 
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using xi-sdk-csharp.Api;
-using xi-sdk-csharp.Client;
-using xi-sdk-csharp.Model;
+using xi-sdk-resellers-csharp.Api;
+using xi-sdk-resellers-csharp.Client;
+using xi-sdk-resellers-csharp.Model;
 
 namespace Example
 {

@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Model.OrderCreateRequestShipmentDetails
+# xi-sdk-resellers-csharp.Model.OrderCreateRequestShipmentDetails
 Shipping details for the order provided by the customer.
 
 ## Properties

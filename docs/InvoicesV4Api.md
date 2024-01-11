@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Api.InvoicesV4Api
+# xi-sdk-resellers-csharp.Api.InvoicesV4Api
 
 All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
 
@@ -18,9 +18,9 @@ A real-time request that allows the customer to query Ingram Micro for Invoice i
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using xi-sdk-csharp.Api;
-using xi-sdk-csharp.Client;
-using xi-sdk-csharp.Model;
+using xi-sdk-resellers-csharp.Api;
+using xi-sdk-resellers-csharp.Client;
+using xi-sdk-resellers-csharp.Model;
 
 namespace Example
 {

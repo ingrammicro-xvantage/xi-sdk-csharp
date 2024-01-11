@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Model.OrderCreateRequest
+# xi-sdk-resellers-csharp.Model.OrderCreateRequest
 Request schema for order create endpoint
 
 ## Properties

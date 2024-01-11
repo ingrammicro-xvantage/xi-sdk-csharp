@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Model.RenewalsDetailsResponse
+# xi-sdk-resellers-csharp.Model.RenewalsDetailsResponse
 
 ## Properties
 

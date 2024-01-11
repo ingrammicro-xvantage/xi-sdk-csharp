@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Model.OrderSearchResponseOrdersInnerLinks
+# xi-sdk-resellers-csharp.Model.OrderSearchResponseOrdersInnerLinks
 Link to Order Details for the order(s).
 
 ## Properties

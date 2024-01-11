@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Model.InvoiceDetailResponseServiceresponseInvoicedetailresponseMiscfeelineInner
+# xi-sdk-resellers-csharp.Model.InvoiceDetailResponseServiceresponseInvoicedetailresponseMiscfeelineInner
 
 ## Properties
 

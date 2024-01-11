@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Model.OrderCreateRequestShipToInfo
+# xi-sdk-resellers-csharp.Model.OrderCreateRequestShipToInfo
 The shipping information provided by the reseller.
 
 ## Properties

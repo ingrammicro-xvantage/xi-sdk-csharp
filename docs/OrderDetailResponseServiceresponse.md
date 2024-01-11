@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Model.OrderDetailResponseServiceresponse
+# xi-sdk-resellers-csharp.Model.OrderDetailResponseServiceresponse
 
 ## Properties
 

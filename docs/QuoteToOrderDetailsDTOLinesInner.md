@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Model.QuoteToOrderDetailsDTOLinesInner
+# xi-sdk-resellers-csharp.Model.QuoteToOrderDetailsDTOLinesInner
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Model.AvailabilityAsyncNotificationRequestResourceInnerLinksInner
+# xi-sdk-resellers-csharp.Model.AvailabilityAsyncNotificationRequestResourceInnerLinksInner
 
 ## Properties
 

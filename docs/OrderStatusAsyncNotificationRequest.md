@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Model.OrderStatusAsyncNotificationRequest
+# xi-sdk-resellers-csharp.Model.OrderStatusAsyncNotificationRequest
 
 ## Properties
 

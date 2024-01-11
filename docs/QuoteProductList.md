@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Model.QuoteProductList
+# xi-sdk-resellers-csharp.Model.QuoteProductList
 
 ## Properties
 

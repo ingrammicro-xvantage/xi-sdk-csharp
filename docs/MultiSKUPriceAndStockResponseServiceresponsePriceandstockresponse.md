@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Model.MultiSKUPriceAndStockResponseServiceresponsePriceandstockresponse
+# xi-sdk-resellers-csharp.Model.MultiSKUPriceAndStockResponseServiceresponsePriceandstockresponse
 
 ## Properties
 

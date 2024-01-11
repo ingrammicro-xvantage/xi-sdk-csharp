@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Model.ErrorResponseErrorsInnerFieldsInner
+# xi-sdk-resellers-csharp.Model.ErrorResponseErrorsInnerFieldsInner
 
 ## Properties
 

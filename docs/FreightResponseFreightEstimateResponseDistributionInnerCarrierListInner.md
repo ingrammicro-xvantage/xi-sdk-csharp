@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Model.FreightResponseFreightEstimateResponseDistributionInnerCarrierListInner
+# xi-sdk-resellers-csharp.Model.FreightResponseFreightEstimateResponseDistributionInnerCarrierListInner
 
 ## Properties
 

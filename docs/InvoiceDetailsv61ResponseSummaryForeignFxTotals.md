@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Model.InvoiceDetailsv61ResponseSummaryForeignFxTotals
+# xi-sdk-resellers-csharp.Model.InvoiceDetailsv61ResponseSummaryForeignFxTotals
 
 ## Properties
 

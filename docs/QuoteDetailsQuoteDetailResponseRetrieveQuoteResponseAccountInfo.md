@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Model.QuoteDetailsQuoteDetailResponseRetrieveQuoteResponseAccountInfo
+# xi-sdk-resellers-csharp.Model.QuoteDetailsQuoteDetailResponseRetrieveQuoteResponseAccountInfo
 
 ## Properties
 

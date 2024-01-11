@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Api.OrderStatusApi
+# xi-sdk-resellers-csharp.Api.OrderStatusApi
 
 All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
 
@@ -16,9 +16,9 @@ Order Status
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using xi-sdk-csharp.Api;
-using xi-sdk-csharp.Client;
-using xi-sdk-csharp.Model;
+using xi-sdk-resellers-csharp.Api;
+using xi-sdk-resellers-csharp.Client;
+using xi-sdk-resellers-csharp.Model;
 
 namespace Example
 {

@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Model.OrderDetailB2BLinesInnerServiceContractInfo
+# xi-sdk-resellers-csharp.Model.OrderDetailB2BLinesInnerServiceContractInfo
 
 ## Properties
 

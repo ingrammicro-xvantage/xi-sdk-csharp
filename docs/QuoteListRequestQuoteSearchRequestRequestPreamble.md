@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Model.QuoteListRequestQuoteSearchRequestRequestPreamble
+# xi-sdk-resellers-csharp.Model.QuoteListRequestQuoteSearchRequestRequestPreamble
 
 ## Properties
 

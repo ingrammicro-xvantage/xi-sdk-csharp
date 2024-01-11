@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Model.PostRenewalssearch400Response
+# xi-sdk-resellers-csharp.Model.PostRenewalssearch400Response
 
 ## Properties
 

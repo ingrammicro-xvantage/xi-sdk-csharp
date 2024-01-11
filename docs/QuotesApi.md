@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Api.QuotesApi
+# xi-sdk-resellers-csharp.Api.QuotesApi
 
 All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
 
@@ -20,9 +20,9 @@ The Quote Search API, by default, will retrieve quotes modified or created withi
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using xi-sdk-csharp.Api;
-using xi-sdk-csharp.Client;
-using xi-sdk-csharp.Model;
+using xi-sdk-resellers-csharp.Api;
+using xi-sdk-resellers-csharp.Client;
+using xi-sdk-resellers-csharp.Model;
 
 namespace Example
 {
@@ -150,9 +150,9 @@ The validate quote helps the customer validate the quote created in Ingram Micro
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using xi-sdk-csharp.Api;
-using xi-sdk-csharp.Client;
-using xi-sdk-csharp.Model;
+using xi-sdk-resellers-csharp.Api;
+using xi-sdk-resellers-csharp.Client;
+using xi-sdk-resellers-csharp.Model;
 
 namespace Example
 {
@@ -254,9 +254,9 @@ The quote details API provides all quote details associated with the quote numbe
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using xi-sdk-csharp.Api;
-using xi-sdk-csharp.Client;
-using xi-sdk-csharp.Model;
+using xi-sdk-resellers-csharp.Api;
+using xi-sdk-resellers-csharp.Client;
+using xi-sdk-resellers-csharp.Model;
 
 namespace Example
 {

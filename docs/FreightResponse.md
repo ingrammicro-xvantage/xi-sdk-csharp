@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Model.FreightResponse
+# xi-sdk-resellers-csharp.Model.FreightResponse
 
 ## Properties
 

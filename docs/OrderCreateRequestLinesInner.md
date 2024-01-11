@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Model.OrderCreateRequestLinesInner
+# xi-sdk-resellers-csharp.Model.OrderCreateRequestLinesInner
 
 ## Properties
 

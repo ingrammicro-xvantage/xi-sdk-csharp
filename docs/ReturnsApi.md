@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Api.ReturnsApi
+# xi-sdk-resellers-csharp.Api.ReturnsApi
 
 All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
 
@@ -20,9 +20,9 @@ The Returns Details API will retrieve all the details related to the specific ca
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using xi-sdk-csharp.Api;
-using xi-sdk-csharp.Client;
-using xi-sdk-csharp.Model;
+using xi-sdk-resellers-csharp.Api;
+using xi-sdk-resellers-csharp.Client;
+using xi-sdk-resellers-csharp.Model;
 
 namespace Example
 {
@@ -124,9 +124,9 @@ The Returns Search API, by default, will retrieve all the returns that are assoc
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using xi-sdk-csharp.Api;
-using xi-sdk-csharp.Client;
-using xi-sdk-csharp.Model;
+using xi-sdk-resellers-csharp.Api;
+using xi-sdk-resellers-csharp.Client;
+using xi-sdk-resellers-csharp.Model;
 
 namespace Example
 {
@@ -256,9 +256,9 @@ Return create endpoint will allow customers to create a return request. In order
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using xi-sdk-csharp.Api;
-using xi-sdk-csharp.Client;
-using xi-sdk-csharp.Model;
+using xi-sdk-resellers-csharp.Api;
+using xi-sdk-resellers-csharp.Client;
+using xi-sdk-resellers-csharp.Model;
 
 namespace Example
 {

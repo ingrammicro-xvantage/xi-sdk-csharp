@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Model.OrderDetailResponseBillToInfo
+# xi-sdk-resellers-csharp.Model.OrderDetailResponseBillToInfo
 The billing information provided by the reseller.
 
 ## Properties

@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Model.OrderDetailB2BLinesInnerEstimatedDatesInnerDeliveryDeliveryDateRange
+# xi-sdk-resellers-csharp.Model.OrderDetailB2BLinesInnerEstimatedDatesInnerDeliveryDeliveryDateRange
 Delivery date range.
 
 ## Properties

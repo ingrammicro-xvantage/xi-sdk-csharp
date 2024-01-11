@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Model.ReturnsCreateRequestListInnerShipFromInfoInner
+# xi-sdk-resellers-csharp.Model.ReturnsCreateRequestListInnerShipFromInfoInner
 
 ## Properties
 

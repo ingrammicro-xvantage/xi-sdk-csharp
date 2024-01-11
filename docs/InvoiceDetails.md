@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Model.InvoiceDetails
+# xi-sdk-resellers-csharp.Model.InvoiceDetails
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Model.RenewalsSearchRequest
+# xi-sdk-resellers-csharp.Model.RenewalsSearchRequest
 
 ## Properties
 

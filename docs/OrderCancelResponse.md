@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Model.OrderCancelResponse
+# xi-sdk-resellers-csharp.Model.OrderCancelResponse
 Response schema for order delete endpoint
 
 ## Properties

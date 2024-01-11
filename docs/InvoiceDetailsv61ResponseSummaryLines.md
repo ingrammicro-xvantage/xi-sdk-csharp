@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Model.InvoiceDetailsv61ResponseSummaryLines
+# xi-sdk-resellers-csharp.Model.InvoiceDetailsv61ResponseSummaryLines
 
 ## Properties
 

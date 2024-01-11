@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Model.ProductDetailResponseAdditionalInformationProductWeightInner
+# xi-sdk-resellers-csharp.Model.ProductDetailResponseAdditionalInformationProductWeightInner
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Model.PriceAndAvailabilityRequest
+# xi-sdk-resellers-csharp.Model.PriceAndAvailabilityRequest
 Request object model for the multi sku price and stock API endpoint
 
 ## Properties

@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Api.InvoicesV6Api
+# xi-sdk-resellers-csharp.Api.InvoicesV6Api
 
 All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
 
@@ -18,9 +18,9 @@ Use your Ingram Micro invoice number to search for existing invoices or retrieve
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using xi-sdk-csharp.Api;
-using xi-sdk-csharp.Client;
-using xi-sdk-csharp.Model;
+using xi-sdk-resellers-csharp.Api;
+using xi-sdk-resellers-csharp.Client;
+using xi-sdk-resellers-csharp.Model;
 
 namespace Example
 {

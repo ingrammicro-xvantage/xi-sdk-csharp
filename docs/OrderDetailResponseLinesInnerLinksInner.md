@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Model.OrderDetailResponseLinesInnerLinksInner
+# xi-sdk-resellers-csharp.Model.OrderDetailResponseLinesInnerLinksInner
 Link to Order Details for the line item.
 
 ## Properties

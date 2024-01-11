@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Model.OrderCreateRequestResellerInfo
+# xi-sdk-resellers-csharp.Model.OrderCreateRequestResellerInfo
 The address and contact information provided by the reseller.
 
 ## Properties

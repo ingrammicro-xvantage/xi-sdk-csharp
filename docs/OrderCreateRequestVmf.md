@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Model.OrderCreateRequestVmf
+# xi-sdk-resellers-csharp.Model.OrderCreateRequestVmf
 Vendor mandatory fields, this is required in case of warranty orders.
 
 ## Properties

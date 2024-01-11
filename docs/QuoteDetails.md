@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Model.QuoteDetails
+# xi-sdk-resellers-csharp.Model.QuoteDetails
 Response schema for quote details
 
 ## Properties

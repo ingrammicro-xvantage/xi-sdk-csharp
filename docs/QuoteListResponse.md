@@ -1,4 +1,4 @@
-# xi-sdk-csharp.Model.QuoteListResponse
+# xi-sdk-resellers-csharp.Model.QuoteListResponse
 Response schema for get quote list endpoint
 
 ## Properties
