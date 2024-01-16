@@ -1,4 +1,4 @@
-# xi-sdk-resellers-csharp.Api.QuotesV5Api
+# xi.sdk.resellers.csharp.Api.QuotesV5Api
 
 All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
 
@@ -19,9 +19,10 @@ The quote details API provides all quote details associated with the quote numbe
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using xi-sdk-resellers-csharp.Api;
-using xi-sdk-resellers-csharp.Client;
-using xi-sdk-resellers-csharp.Model;
+using System.Net.Http;
+using xi.sdk.resellers.csharp.Api;
+using xi.sdk.resellers.csharp.Client;
+using xi.sdk.resellers.csharp.Model;
 
 namespace Example
 {
@@ -34,7 +35,10 @@ namespace Example
             // Configure OAuth2 access token for authorization: application
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
-            var apiInstance = new QuotesV5Api(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new QuotesV5Api(httpClient, config, httpClientHandler);
             var quoteNumber = "\"QUO-25576-C8S2W7\"";  // string | Ingram Micro Quote Number (default to "QUO-25576-C8S2W7")
             var customerNumber = "\"20-222222\"";  // string | Your Ingram Micro unique customer number (default to "20-222222")
             var isoCountryCode = "\"US\"";  // string |  (default to "US")
@@ -119,9 +123,10 @@ This endpoint enables the retrieval and filtering of relevant quote list key cri
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using xi-sdk-resellers-csharp.Api;
-using xi-sdk-resellers-csharp.Client;
-using xi-sdk-resellers-csharp.Model;
+using System.Net.Http;
+using xi.sdk.resellers.csharp.Api;
+using xi.sdk.resellers.csharp.Client;
+using xi.sdk.resellers.csharp.Model;
 
 namespace Example
 {
@@ -134,7 +139,10 @@ namespace Example
             // Configure OAuth2 access token for authorization: application
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
-            var apiInstance = new QuotesV5Api(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new QuotesV5Api(httpClient, config, httpClientHandler);
             var quoteListRequest = new QuoteListRequest?(); // QuoteListRequest? |  (optional) 
 
             try

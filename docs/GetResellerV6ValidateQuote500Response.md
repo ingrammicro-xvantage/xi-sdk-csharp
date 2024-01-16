@@ -1,4 +1,4 @@
-# xi-sdk-resellers-csharp.Model.GetResellerV6ValidateQuote500Response
+# xi.sdk.resellers.csharp.Model.GetResellerV6ValidateQuote500Response
 
 ## Properties
 

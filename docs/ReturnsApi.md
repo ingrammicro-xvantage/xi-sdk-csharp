@@ -1,4 +1,4 @@
-# xi-sdk-resellers-csharp.Api.ReturnsApi
+# xi.sdk.resellers.csharp.Api.ReturnsApi
 
 All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
 
@@ -20,9 +20,10 @@ The Returns Details API will retrieve all the details related to the specific ca
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using xi-sdk-resellers-csharp.Api;
-using xi-sdk-resellers-csharp.Client;
-using xi-sdk-resellers-csharp.Model;
+using System.Net.Http;
+using xi.sdk.resellers.csharp.Api;
+using xi.sdk.resellers.csharp.Client;
+using xi.sdk.resellers.csharp.Model;
 
 namespace Example
 {
@@ -35,7 +36,10 @@ namespace Example
             // Configure OAuth2 access token for authorization: application
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
-            var apiInstance = new ReturnsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new ReturnsApi(httpClient, config, httpClientHandler);
             var iMCustomerNumber = 20-222222;  // string | Your unique Ingram Micro customer number.
             var iMCountryCode = US;  // string | Two-character ISO country code.
             var iMCorrelationID = fbac82ba-cf0a-4bcf-fc03-0c5084;  // string | Unique transaction number to identify each transaction across all the systems.
@@ -124,9 +128,10 @@ The Returns Search API, by default, will retrieve all the returns that are assoc
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using xi-sdk-resellers-csharp.Api;
-using xi-sdk-resellers-csharp.Client;
-using xi-sdk-resellers-csharp.Model;
+using System.Net.Http;
+using xi.sdk.resellers.csharp.Api;
+using xi.sdk.resellers.csharp.Client;
+using xi.sdk.resellers.csharp.Model;
 
 namespace Example
 {
@@ -139,7 +144,10 @@ namespace Example
             // Configure OAuth2 access token for authorization: application
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
-            var apiInstance = new ReturnsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new ReturnsApi(httpClient, config, httpClientHandler);
             var iMCustomerNumber = 20-222222;  // string | Your unique Ingram Micro customer number.
             var iMCountryCode = US;  // string | Two-character ISO country code.
             var iMCorrelationID = fbac82ba-cf0a-4bcf-fc03-0c5084;  // string | Unique transaction number to identify each transaction across all the systems.
@@ -256,9 +264,10 @@ Return create endpoint will allow customers to create a return request. In order
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using xi-sdk-resellers-csharp.Api;
-using xi-sdk-resellers-csharp.Client;
-using xi-sdk-resellers-csharp.Model;
+using System.Net.Http;
+using xi.sdk.resellers.csharp.Api;
+using xi.sdk.resellers.csharp.Client;
+using xi.sdk.resellers.csharp.Model;
 
 namespace Example
 {
@@ -271,7 +280,10 @@ namespace Example
             // Configure OAuth2 access token for authorization: application
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
-            var apiInstance = new ReturnsApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new ReturnsApi(httpClient, config, httpClientHandler);
             var iMCustomerNumber = 20-222222;  // string | Your unique Ingram Micro customer number.
             var iMCountryCode = US;  // string | Two-character ISO country code.
             var iMCorrelationID = fbac82ba-cf0a-4bcf-fc03-0c5084;  // string | Unique transaction number to identify each transaction across all the systems.

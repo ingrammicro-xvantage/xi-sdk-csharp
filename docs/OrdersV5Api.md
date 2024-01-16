@@ -1,4 +1,4 @@
-# xi-sdk-resellers-csharp.Api.OrdersV5Api
+# xi.sdk.resellers.csharp.Api.OrdersV5Api
 
 All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
 
@@ -21,9 +21,10 @@ This endpoint is a request to cancel a previously accepted order. Use your Ingra
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using xi-sdk-resellers-csharp.Api;
-using xi-sdk-resellers-csharp.Client;
-using xi-sdk-resellers-csharp.Model;
+using System.Net.Http;
+using xi.sdk.resellers.csharp.Api;
+using xi.sdk.resellers.csharp.Client;
+using xi.sdk.resellers.csharp.Model;
 
 namespace Example
 {
@@ -36,7 +37,10 @@ namespace Example
             // Configure OAuth2 access token for authorization: application
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
-            var apiInstance = new OrdersV5Api(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new OrdersV5Api(httpClient, config, httpClientHandler);
             var ordernumber = 20-RD128;  // string | Ingram Micro sales order number
             var customerNumber = "customerNumber_example";  // string | Your unique Ingram Micro customer number
             var isoCountryCode = "isoCountryCode_example";  // string | 2 chars ISO country code
@@ -121,9 +125,10 @@ Search your Ingram Micro orders. This endpoint searches by multiple order parame
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using xi-sdk-resellers-csharp.Api;
-using xi-sdk-resellers-csharp.Client;
-using xi-sdk-resellers-csharp.Model;
+using System.Net.Http;
+using xi.sdk.resellers.csharp.Api;
+using xi.sdk.resellers.csharp.Client;
+using xi.sdk.resellers.csharp.Model;
 
 namespace Example
 {
@@ -136,7 +141,10 @@ namespace Example
             // Configure OAuth2 access token for authorization: application
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
-            var apiInstance = new OrdersV5Api(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new OrdersV5Api(httpClient, config, httpClientHandler);
             var customerNumber = 20-222222;  // string | Your unique Ingram Micro customer number
             var isocountrycode = US;  // string | 2 char iso country code
             var ordernumber = "ordernumber_example";  // string? | Ingram sales order number (optional) 
@@ -231,9 +239,10 @@ Use your Ingram Micro sales order number to search for existing orders or retrie
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using xi-sdk-resellers-csharp.Api;
-using xi-sdk-resellers-csharp.Client;
-using xi-sdk-resellers-csharp.Model;
+using System.Net.Http;
+using xi.sdk.resellers.csharp.Api;
+using xi.sdk.resellers.csharp.Client;
+using xi.sdk.resellers.csharp.Model;
 
 namespace Example
 {
@@ -246,7 +255,10 @@ namespace Example
             // Configure OAuth2 access token for authorization: application
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
-            var apiInstance = new OrdersV5Api(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new OrdersV5Api(httpClient, config, httpClientHandler);
             var ordernumber = 20-RD128;  // string | Ingram Micro sales order number
             var customernumber = "\"20-222222\"";  // string | Your unique Ingram Micro customer number (default to "20-222222")
             var isocountrycode = "\"US\"";  // string | 2 chars ISO country code (default to "US")
@@ -337,9 +349,10 @@ Instantly create and place orders. The POST API supports stocked SKUs as well as
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using xi-sdk-resellers-csharp.Api;
-using xi-sdk-resellers-csharp.Client;
-using xi-sdk-resellers-csharp.Model;
+using System.Net.Http;
+using xi.sdk.resellers.csharp.Api;
+using xi.sdk.resellers.csharp.Client;
+using xi.sdk.resellers.csharp.Model;
 
 namespace Example
 {
@@ -352,7 +365,10 @@ namespace Example
             // Configure OAuth2 access token for authorization: application
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
-            var apiInstance = new OrdersV5Api(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new OrdersV5Api(httpClient, config, httpClientHandler);
             var orderCreateRequest = new OrderCreateRequest?(); // OrderCreateRequest? |  (optional) 
 
             try

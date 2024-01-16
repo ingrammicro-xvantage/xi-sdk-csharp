@@ -1,4 +1,4 @@
-# xi-sdk-resellers-csharp.Model.PostQuoteToOrderV6400ResponseFieldsInner
+# xi.sdk.resellers.csharp.Model.PostQuoteToOrderV6400ResponseFieldsInner
 
 ## Properties
 

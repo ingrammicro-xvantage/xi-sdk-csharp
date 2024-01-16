@@ -1,4 +1,4 @@
-# xi-sdk-resellers-csharp.Model.OrderDetailResponseLinesInnerShipmentDetailsInnerCarrierDetails
+# xi.sdk.resellers.csharp.Model.OrderDetailResponseLinesInnerShipmentDetailsInnerCarrierDetails
 The shipment carrier details for the line item.
 
 ## Properties

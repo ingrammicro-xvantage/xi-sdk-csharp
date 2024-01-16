@@ -1,4 +1,4 @@
-# xi-sdk-resellers-csharp.Model.OrderDetailRequestServicerequestOrderdetailrequest
+# xi.sdk.resellers.csharp.Model.OrderDetailRequestServicerequestOrderdetailrequest
 
 ## Properties
 

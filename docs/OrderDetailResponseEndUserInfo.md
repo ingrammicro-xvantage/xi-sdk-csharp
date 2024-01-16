@@ -1,4 +1,4 @@
-# xi-sdk-resellers-csharp.Model.OrderDetailResponseEndUserInfo
+# xi.sdk.resellers.csharp.Model.OrderDetailResponseEndUserInfo
 The contact information for the end user/customer provided by the reseller. Used to determine pricing and discounts.
 
 ## Properties

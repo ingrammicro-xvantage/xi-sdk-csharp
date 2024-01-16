@@ -1,4 +1,4 @@
-# xi-sdk-resellers-csharp.Model.OrderModifyRequestServicerequestOrdermodifyrequestShipto
+# xi.sdk.resellers.csharp.Model.OrderModifyRequestServicerequestOrdermodifyrequestShipto
 
 ## Properties
 

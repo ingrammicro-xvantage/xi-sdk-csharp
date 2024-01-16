@@ -1,4 +1,4 @@
-# xi-sdk-resellers-csharp.Model.ErrorResponse
+# xi.sdk.resellers.csharp.Model.ErrorResponse
 
 ## Properties
 

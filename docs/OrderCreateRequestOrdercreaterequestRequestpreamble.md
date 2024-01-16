@@ -1,4 +1,4 @@
-# xi-sdk-resellers-csharp.Model.OrderCreateRequestOrdercreaterequestRequestpreamble
+# xi.sdk.resellers.csharp.Model.OrderCreateRequestOrdercreaterequestRequestpreamble
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# xi-sdk-resellers-csharp.Model.QuoteToOrderDetailsDTOAdditionalAttributesInner
+# xi.sdk.resellers.csharp.Model.QuoteToOrderDetailsDTOAdditionalAttributesInner
 
 ## Properties
 

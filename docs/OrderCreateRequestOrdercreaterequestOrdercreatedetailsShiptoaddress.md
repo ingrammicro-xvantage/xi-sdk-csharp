@@ -1,4 +1,4 @@
-# xi-sdk-resellers-csharp.Model.OrderCreateRequestOrdercreaterequestOrdercreatedetailsShiptoaddress
+# xi.sdk.resellers.csharp.Model.OrderCreateRequestOrdercreaterequestOrdercreatedetailsShiptoaddress
 
 ## Properties
 

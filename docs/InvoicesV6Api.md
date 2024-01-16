@@ -1,4 +1,4 @@
-# xi-sdk-resellers-csharp.Api.InvoicesV6Api
+# xi.sdk.resellers.csharp.Api.InvoicesV6Api
 
 All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
 
@@ -18,9 +18,10 @@ Use your Ingram Micro invoice number to search for existing invoices or retrieve
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using xi-sdk-resellers-csharp.Api;
-using xi-sdk-resellers-csharp.Client;
-using xi-sdk-resellers-csharp.Model;
+using System.Net.Http;
+using xi.sdk.resellers.csharp.Api;
+using xi.sdk.resellers.csharp.Client;
+using xi.sdk.resellers.csharp.Model;
 
 namespace Example
 {
@@ -33,7 +34,10 @@ namespace Example
             // Configure OAuth2 access token for authorization: application
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
-            var apiInstance = new InvoicesV6Api(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new InvoicesV6Api(httpClient, config, httpClientHandler);
             var invoicenumber = 335238411;  // string | The Ingram Micro invoice number.
             var varVersion = 20-222222;  // string | Version of codebase.
             var iMCustomerNumber = 20-222222;  // string | Your unique Ingram Micro customer number.

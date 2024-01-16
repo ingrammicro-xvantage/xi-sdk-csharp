@@ -1,4 +1,4 @@
-# xi-sdk-resellers-csharp.Model.OrderModifyRequestServicerequestRequestpreamble
+# xi.sdk.resellers.csharp.Model.OrderModifyRequestServicerequestRequestpreamble
 
 ## Properties
 

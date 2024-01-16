@@ -1,4 +1,4 @@
-# xi-sdk-resellers-csharp.Api.OrderStatusApi
+# xi.sdk.resellers.csharp.Api.OrderStatusApi
 
 All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
 
@@ -16,9 +16,10 @@ Order Status
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using xi-sdk-resellers-csharp.Api;
-using xi-sdk-resellers-csharp.Client;
-using xi-sdk-resellers-csharp.Model;
+using System.Net.Http;
+using xi.sdk.resellers.csharp.Api;
+using xi.sdk.resellers.csharp.Client;
+using xi.sdk.resellers.csharp.Model;
 
 namespace Example
 {
@@ -31,7 +32,10 @@ namespace Example
             // Configure OAuth2 access token for authorization: application
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
-            var apiInstance = new OrderStatusApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new OrderStatusApi(httpClient, config, httpClientHandler);
             var targeturl = https://59a2dc5368073ab42fd9a92e210a9fdb.m.pipedream.net/;  // string | The webhook url where the request needs to sent.
             var xHubSignature = 3LeaTfLE5FLj1FcYflwdwFosH4ADHmMbds6thtirGC3e9lEkF9/1pt4T2fQQGlxf40EznDBER0b60M75K6ZW0A==;  // string | Ingram Micro creates a signature token by use of a secret key + Event ID. The algorithm to generate the secret ley is given at link https://developer.ingrammicro.com/reseller/article/how-use-webhook-secret-key. Use the event Id in the below sample along with your secret key to generate the key. Alternatively, to send try this out, use a random text to see how it works.
             var orderStatusAsyncNotificationRequest = new OrderStatusAsyncNotificationRequest(); // OrderStatusAsyncNotificationRequest | 

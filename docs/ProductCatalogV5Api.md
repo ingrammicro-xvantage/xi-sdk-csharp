@@ -1,4 +1,4 @@
-# xi-sdk-resellers-csharp.Api.ProductCatalogV5Api
+# xi.sdk.resellers.csharp.Api.ProductCatalogV5Api
 
 All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
 
@@ -19,9 +19,10 @@ Search the Ingram Micro product catalog using customerNumber, isoCountryCode and
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using xi-sdk-resellers-csharp.Api;
-using xi-sdk-resellers-csharp.Client;
-using xi-sdk-resellers-csharp.Model;
+using System.Net.Http;
+using xi.sdk.resellers.csharp.Api;
+using xi.sdk.resellers.csharp.Client;
+using xi.sdk.resellers.csharp.Model;
 
 namespace Example
 {
@@ -34,7 +35,10 @@ namespace Example
             // Configure OAuth2 access token for authorization: application
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
-            var apiInstance = new ProductCatalogV5Api(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new ProductCatalogV5Api(httpClient, config, httpClientHandler);
             var customerNumber = "\"20-222222\"";  // string | Your unique Ingram Micro customer number (default to "20-222222")
             var isoCountryCode = "\"US\"";  // string | 2 chars country code (default to "US")
             var partNumber = "\"1AQ821\"";  // string | Part Number can be ingram part number or vendor part number or customer part number or UPC (default to "1AQ821")
@@ -117,9 +121,10 @@ Search the product catalog for the price and availability for up to 50 SKUs at o
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using xi-sdk-resellers-csharp.Api;
-using xi-sdk-resellers-csharp.Client;
-using xi-sdk-resellers-csharp.Model;
+using System.Net.Http;
+using xi.sdk.resellers.csharp.Api;
+using xi.sdk.resellers.csharp.Client;
+using xi.sdk.resellers.csharp.Model;
 
 namespace Example
 {
@@ -132,7 +137,10 @@ namespace Example
             // Configure OAuth2 access token for authorization: application
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
-            var apiInstance = new ProductCatalogV5Api(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new ProductCatalogV5Api(httpClient, config, httpClientHandler);
             var priceAndAvailabilityRequest = new PriceAndAvailabilityRequest?(); // PriceAndAvailabilityRequest? |  (optional) 
 
             try

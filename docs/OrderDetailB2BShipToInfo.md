@@ -1,4 +1,4 @@
-# xi-sdk-resellers-csharp.Model.OrderDetailB2BShipToInfo
+# xi.sdk.resellers.csharp.Model.OrderDetailB2BShipToInfo
 The shipping information provided by the reseller for order delivery.
 
 ## Properties

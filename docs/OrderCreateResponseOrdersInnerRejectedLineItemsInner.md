@@ -1,4 +1,4 @@
-# xi-sdk-resellers-csharp.Model.OrderCreateResponseOrdersInnerRejectedLineItemsInner
+# xi.sdk.resellers.csharp.Model.OrderCreateResponseOrdersInnerRejectedLineItemsInner
 
 ## Properties
 

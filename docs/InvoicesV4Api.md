@@ -1,4 +1,4 @@
-# xi-sdk-resellers-csharp.Api.InvoicesV4Api
+# xi.sdk.resellers.csharp.Api.InvoicesV4Api
 
 All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
 
@@ -18,9 +18,10 @@ A real-time request that allows the customer to query Ingram Micro for Invoice i
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using xi-sdk-resellers-csharp.Api;
-using xi-sdk-resellers-csharp.Client;
-using xi-sdk-resellers-csharp.Model;
+using System.Net.Http;
+using xi.sdk.resellers.csharp.Api;
+using xi.sdk.resellers.csharp.Client;
+using xi.sdk.resellers.csharp.Model;
 
 namespace Example
 {
@@ -33,7 +34,10 @@ namespace Example
             // Configure OAuth2 access token for authorization: application
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
-            var apiInstance = new InvoicesV4Api(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new InvoicesV4Api(httpClient, config, httpClientHandler);
             var invoiceDetailRequest = new InvoiceDetailRequest?(); // InvoiceDetailRequest? |  (optional) 
 
             try

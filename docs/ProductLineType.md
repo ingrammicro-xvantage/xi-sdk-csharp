@@ -1,4 +1,4 @@
-# xi-sdk-resellers-csharp.Model.ProductLineType
+# xi.sdk.resellers.csharp.Model.ProductLineType
 Product line items object under each invoice
 
 ## Properties

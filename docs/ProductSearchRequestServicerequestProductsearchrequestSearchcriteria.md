@@ -1,4 +1,4 @@
-# xi-sdk-resellers-csharp.Model.ProductSearchRequestServicerequestProductsearchrequestSearchcriteria
+# xi.sdk.resellers.csharp.Model.ProductSearchRequestServicerequestProductsearchrequestSearchcriteria
 
 ## Properties
 

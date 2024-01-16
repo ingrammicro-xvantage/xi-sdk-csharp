@@ -1,4 +1,4 @@
-# xi-sdk-resellers-csharp.Model.OrderDetailB2BAdditionalAttributesInner
+# xi.sdk.resellers.csharp.Model.OrderDetailB2BAdditionalAttributesInner
 
 ## Properties
 

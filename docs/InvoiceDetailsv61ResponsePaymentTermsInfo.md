@@ -1,4 +1,4 @@
-# xi-sdk-resellers-csharp.Model.InvoiceDetailsv61ResponsePaymentTermsInfo
+# xi.sdk.resellers.csharp.Model.InvoiceDetailsv61ResponsePaymentTermsInfo
 Payment terms is the agreement between Ingram and the customer by what period they should pay the invoice by
 
 ## Properties

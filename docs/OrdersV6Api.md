@@ -1,4 +1,4 @@
-# xi-sdk-resellers-csharp.Api.OrdersV6Api
+# xi.sdk.resellers.csharp.Api.OrdersV6Api
 
 All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
 
@@ -18,9 +18,10 @@ Use your Ingram Micro sales order number to search for existing orders or retrie
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using xi-sdk-resellers-csharp.Api;
-using xi-sdk-resellers-csharp.Client;
-using xi-sdk-resellers-csharp.Model;
+using System.Net.Http;
+using xi.sdk.resellers.csharp.Api;
+using xi.sdk.resellers.csharp.Client;
+using xi.sdk.resellers.csharp.Model;
 
 namespace Example
 {
@@ -33,7 +34,10 @@ namespace Example
             // Configure OAuth2 access token for authorization: application
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
-            var apiInstance = new OrdersV6Api(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new OrdersV6Api(httpClient, config, httpClientHandler);
             var ordernumber = 20-RD3QV;  // string | The Ingram Micro sales order number.
             var iMCustomerNumber = 20-222222;  // string | Your unique Ingram Micro customer number.
             var iMCountryCode = US;  // string | Two-character ISO country code.

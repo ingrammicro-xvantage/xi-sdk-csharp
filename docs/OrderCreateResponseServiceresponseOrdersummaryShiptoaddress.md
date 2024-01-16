@@ -1,4 +1,4 @@
-# xi-sdk-resellers-csharp.Model.OrderCreateResponseServiceresponseOrdersummaryShiptoaddress
+# xi.sdk.resellers.csharp.Model.OrderCreateResponseServiceresponseOrdersummaryShiptoaddress
 
 ## Properties
 

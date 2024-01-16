@@ -1,4 +1,4 @@
-# xi-sdk-resellers-csharp.Model.InvoiceDetailsv61ResponseFxRateInfo
+# xi.sdk.resellers.csharp.Model.InvoiceDetailsv61ResponseFxRateInfo
 
 ## Properties
 

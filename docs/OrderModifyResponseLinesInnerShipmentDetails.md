@@ -1,4 +1,4 @@
-# xi-sdk-resellers-csharp.Model.OrderModifyResponseLinesInnerShipmentDetails
+# xi.sdk.resellers.csharp.Model.OrderModifyResponseLinesInnerShipmentDetails
 Shipping details for the order provided by the reseller.
 
 ## Properties

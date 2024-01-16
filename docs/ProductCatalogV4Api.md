@@ -1,4 +1,4 @@
-# xi-sdk-resellers-csharp.Api.ProductCatalogV4Api
+# xi.sdk.resellers.csharp.Api.ProductCatalogV4Api
 
 All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
 
@@ -19,9 +19,10 @@ Find price and availability of up to 50 SKUs in a single request. As you increas
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using xi-sdk-resellers-csharp.Api;
-using xi-sdk-resellers-csharp.Client;
-using xi-sdk-resellers-csharp.Model;
+using System.Net.Http;
+using xi.sdk.resellers.csharp.Api;
+using xi.sdk.resellers.csharp.Client;
+using xi.sdk.resellers.csharp.Model;
 
 namespace Example
 {
@@ -34,7 +35,10 @@ namespace Example
             // Configure OAuth2 access token for authorization: application
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
-            var apiInstance = new ProductCatalogV4Api(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new ProductCatalogV4Api(httpClient, config, httpClientHandler);
             var multiSKUPriceAndStockRequest = new MultiSKUPriceAndStockRequest?(); // MultiSKUPriceAndStockRequest? |  (optional) 
 
             try
@@ -113,9 +117,10 @@ A real time search that provides the Ingram Micro part number using the manufact
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using xi-sdk-resellers-csharp.Api;
-using xi-sdk-resellers-csharp.Client;
-using xi-sdk-resellers-csharp.Model;
+using System.Net.Http;
+using xi.sdk.resellers.csharp.Api;
+using xi.sdk.resellers.csharp.Client;
+using xi.sdk.resellers.csharp.Model;
 
 namespace Example
 {
@@ -128,7 +133,10 @@ namespace Example
             // Configure OAuth2 access token for authorization: application
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
-            var apiInstance = new ProductCatalogV4Api(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new ProductCatalogV4Api(httpClient, config, httpClientHandler);
             var productSearchRequest = new ProductSearchRequest?(); // ProductSearchRequest? |  (optional) 
 
             try

@@ -1,4 +1,4 @@
-# xi-sdk-resellers-csharp.Api.ProductCatalogApi
+# xi.sdk.resellers.csharp.Api.ProductCatalogApi
 
 All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
 
@@ -20,9 +20,10 @@ Search all the product-related details using a unique Ingram Part Number. Curren
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using xi-sdk-resellers-csharp.Api;
-using xi-sdk-resellers-csharp.Client;
-using xi-sdk-resellers-csharp.Model;
+using System.Net.Http;
+using xi.sdk.resellers.csharp.Api;
+using xi.sdk.resellers.csharp.Client;
+using xi.sdk.resellers.csharp.Model;
 
 namespace Example
 {
@@ -35,7 +36,10 @@ namespace Example
             // Configure OAuth2 access token for authorization: application
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
-            var apiInstance = new ProductCatalogApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new ProductCatalogApi(httpClient, config, httpClientHandler);
             var ingramPartNumber = 6YE881;  // string | Ingram Micro unique part number for the product
             var iMCustomerNumber = 20-222222;  // string | Your unique Ingram Micro customer number
             var iMCountryCode = US;  // string | Two-character ISO country code.
@@ -125,9 +129,10 @@ Search the Ingram Micro product catalog by providing any of the information in t
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using xi-sdk-resellers-csharp.Api;
-using xi-sdk-resellers-csharp.Client;
-using xi-sdk-resellers-csharp.Model;
+using System.Net.Http;
+using xi.sdk.resellers.csharp.Api;
+using xi.sdk.resellers.csharp.Client;
+using xi.sdk.resellers.csharp.Model;
 
 namespace Example
 {
@@ -140,7 +145,10 @@ namespace Example
             // Configure OAuth2 access token for authorization: application
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
-            var apiInstance = new ProductCatalogApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new ProductCatalogApi(httpClient, config, httpClientHandler);
             var iMCustomerNumber = 20-222222;  // string | Your unique Ingram Micro customer number
             var iMCorrelationID = fbac82ba-cf0a-4bcf-fc03-0c5084;  // string | Unique transaction number to identify each transaction accross all the systems
             var iMCountryCode = US;  // string | Two-character ISO country code.
@@ -250,9 +258,10 @@ The PriceAndAvailability API, will retrieve Pricing, Availability, discounts, In
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using xi-sdk-resellers-csharp.Api;
-using xi-sdk-resellers-csharp.Client;
-using xi-sdk-resellers-csharp.Model;
+using System.Net.Http;
+using xi.sdk.resellers.csharp.Api;
+using xi.sdk.resellers.csharp.Client;
+using xi.sdk.resellers.csharp.Model;
 
 namespace Example
 {
@@ -265,7 +274,10 @@ namespace Example
             // Configure OAuth2 access token for authorization: application
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
-            var apiInstance = new ProductCatalogApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new ProductCatalogApi(httpClient, config, httpClientHandler);
             var includeAvailability = new List<bool>(); // List<bool> | Pass boolean value as input, if true the response will contain warehouse availability details, if false the response will not hold warehouse availability details
             var includePricing = true;  // bool | Pass boolean value as input, if true the response will contain Pricing details of the Product, if false the response will not hold Pricing details.
             var iMCustomerNumber = 20-222222;  // string | Your unique Ingram Micro customer number.

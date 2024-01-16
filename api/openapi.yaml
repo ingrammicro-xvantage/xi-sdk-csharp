@@ -16941,13 +16941,11 @@ components:
         dateofPurchase:
           description: Date of purchase of the hardware.
           format: date
-          maxLength: 8
           type: string
         shipDate:
           description: "Vendor specific mandatory field, date of hardware/product\
             \ shipment from vendor."
           format: date
-          maxLength: 8
           type: string
         primarySerialNumber:
           description: Serial number of the hardware/product.
@@ -17224,7 +17222,6 @@ components:
           description: The reseller-requested delivery date in UTC format. Delivery
             date is not guaranteed.
           format: date
-          maxLength: 8
           type: string
         signatureRequired:
           description: Specifies whether a signature is required for delivery. Default

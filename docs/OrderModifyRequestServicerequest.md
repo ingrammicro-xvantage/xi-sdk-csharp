@@ -1,4 +1,4 @@
-# xi-sdk-resellers-csharp.Model.OrderModifyRequestServicerequest
+# xi.sdk.resellers.csharp.Model.OrderModifyRequestServicerequest
 
 ## Properties
 

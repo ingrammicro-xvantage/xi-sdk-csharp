@@ -1,4 +1,4 @@
-# xi-sdk-resellers-csharp.Model.AddressType
+# xi.sdk.resellers.csharp.Model.AddressType
 Address type object
 
 ## Properties

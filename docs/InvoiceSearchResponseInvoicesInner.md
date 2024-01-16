@@ -1,4 +1,4 @@
-# xi-sdk-resellers-csharp.Model.InvoiceSearchResponseInvoicesInner
+# xi.sdk.resellers.csharp.Model.InvoiceSearchResponseInvoicesInner
 
 ## Properties
 

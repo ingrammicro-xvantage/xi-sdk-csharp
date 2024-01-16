@@ -1,4 +1,4 @@
-# xi-sdk-resellers-csharp.Model.OrderDetailResponseServiceresponseOrderdetailresponseBilltoaddress
+# xi.sdk.resellers.csharp.Model.OrderDetailResponseServiceresponseOrderdetailresponseBilltoaddress
 
 ## Properties
 

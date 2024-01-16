@@ -1,4 +1,4 @@
-# xi-sdk-resellers-csharp.Model.ProductSearchResponseServiceresponseResponsepreamble
+# xi.sdk.resellers.csharp.Model.ProductSearchResponseServiceresponseResponsepreamble
 
 ## Properties
 

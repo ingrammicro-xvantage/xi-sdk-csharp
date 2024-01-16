@@ -1,4 +1,4 @@
-# xi-sdk-resellers-csharp.Api.OrdersApi
+# xi.sdk.resellers.csharp.Api.OrdersApi
 
 All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
 
@@ -22,9 +22,10 @@ This call must be submitted before the order is released to Ingram Micro’s war
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using xi-sdk-resellers-csharp.Api;
-using xi-sdk-resellers-csharp.Client;
-using xi-sdk-resellers-csharp.Model;
+using System.Net.Http;
+using xi.sdk.resellers.csharp.Api;
+using xi.sdk.resellers.csharp.Client;
+using xi.sdk.resellers.csharp.Model;
 
 namespace Example
 {
@@ -37,7 +38,10 @@ namespace Example
             // Configure OAuth2 access token for authorization: application
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
-            var apiInstance = new OrdersApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new OrdersApi(httpClient, config, httpClientHandler);
             var orderNumber = 20-RD128;  // string | Ingram Micro sales order number.
             var iMCustomerNumber = 20-222222;  // string | Your unique Ingram Micro customer number.
             var iMCountryCode = US;  // string | Two-character ISO country code.
@@ -126,9 +130,10 @@ The Orders details API endpoint allows a customer to retrieve their Ingram Micro
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using xi-sdk-resellers-csharp.Api;
-using xi-sdk-resellers-csharp.Client;
-using xi-sdk-resellers-csharp.Model;
+using System.Net.Http;
+using xi.sdk.resellers.csharp.Api;
+using xi.sdk.resellers.csharp.Client;
+using xi.sdk.resellers.csharp.Model;
 
 namespace Example
 {
@@ -141,7 +146,10 @@ namespace Example
             // Configure OAuth2 access token for authorization: application
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
-            var apiInstance = new OrdersApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new OrdersApi(httpClient, config, httpClientHandler);
             var ordernumber = 20-RD3QV;  // string | The Ingram Micro sales order number.
             var iMCustomerNumber = 20-222222;  // string | Your unique Ingram Micro customer number.
             var iMCountryCode = US;  // string | Two-character ISO country code.
@@ -239,9 +247,10 @@ The Orders Search API endpoint allows a customer to search their Ingram Micro or
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using xi-sdk-resellers-csharp.Api;
-using xi-sdk-resellers-csharp.Client;
-using xi-sdk-resellers-csharp.Model;
+using System.Net.Http;
+using xi.sdk.resellers.csharp.Api;
+using xi.sdk.resellers.csharp.Client;
+using xi.sdk.resellers.csharp.Model;
 
 namespace Example
 {
@@ -254,7 +263,10 @@ namespace Example
             // Configure OAuth2 access token for authorization: application
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
-            var apiInstance = new OrdersApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new OrdersApi(httpClient, config, httpClientHandler);
             var iMCustomerNumber = 20-222222;  // string | Your unique Ingram Micro customer number.
             var iMCountryCode = US;  // string | Two-character ISO country code.
             var iMCorrelationID = fbac82ba-cf0a-4bcf-fc03-0c5084;  // string | Unique transaction number to identify each transaction accross all the systems.
@@ -378,9 +390,10 @@ Instantly create and place orders. The POST API supports stocked SKUs as well as
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using xi-sdk-resellers-csharp.Api;
-using xi-sdk-resellers-csharp.Client;
-using xi-sdk-resellers-csharp.Model;
+using System.Net.Http;
+using xi.sdk.resellers.csharp.Api;
+using xi.sdk.resellers.csharp.Client;
+using xi.sdk.resellers.csharp.Model;
 
 namespace Example
 {
@@ -393,7 +406,10 @@ namespace Example
             // Configure OAuth2 access token for authorization: application
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
-            var apiInstance = new OrdersApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new OrdersApi(httpClient, config, httpClientHandler);
             var iMCustomerNumber = 20-222222;  // string | Your unique Ingram Micro customer number.
             var iMCountryCode = US;  // string | Two-character ISO country code.
             var iMCorrelationID = fbac82ba-cf0a-4bcf-fc03-0c5084;  // string | Unique transaction number to identify each transaction accross all the systems.
@@ -483,9 +499,10 @@ The Order Modify API endpoint allows for changes to be made to an order after th
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using xi-sdk-resellers-csharp.Api;
-using xi-sdk-resellers-csharp.Client;
-using xi-sdk-resellers-csharp.Model;
+using System.Net.Http;
+using xi.sdk.resellers.csharp.Api;
+using xi.sdk.resellers.csharp.Client;
+using xi.sdk.resellers.csharp.Model;
 
 namespace Example
 {
@@ -498,7 +515,10 @@ namespace Example
             // Configure OAuth2 access token for authorization: application
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
-            var apiInstance = new OrdersApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new OrdersApi(httpClient, config, httpClientHandler);
             var orderNumber = 20-RC1RD;  // string | Ingram sales order number.
             var iMCustomerNumber = 20-222222;  // string | Your unique Ingram Micro customer number.
             var iMCountryCode = US;  // string | Two-character ISO country code.

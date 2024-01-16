@@ -1,4 +1,4 @@
-# xi-sdk-resellers-csharp.Model.ProductSearchResponseServiceresponseProductsearchresponseInner
+# xi.sdk.resellers.csharp.Model.ProductSearchResponseServiceresponseProductsearchresponseInner
 
 ## Properties
 

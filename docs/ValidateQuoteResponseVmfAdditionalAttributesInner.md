@@ -1,4 +1,4 @@
-# xi-sdk-resellers-csharp.Model.ValidateQuoteResponseVmfAdditionalAttributesInner
+# xi.sdk.resellers.csharp.Model.ValidateQuoteResponseVmfAdditionalAttributesInner
 
 ## Properties
 

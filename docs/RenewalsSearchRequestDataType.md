@@ -1,4 +1,4 @@
-# xi-sdk-resellers-csharp.Model.RenewalsSearchRequestDataType
+# xi.sdk.resellers.csharp.Model.RenewalsSearchRequestDataType
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# xi-sdk-resellers-csharp.Model.InvoiceDetailsv61ResponseLinesInnerSerialNumbersInner
+# xi.sdk.resellers.csharp.Model.InvoiceDetailsv61ResponseLinesInnerSerialNumbersInner
 
 ## Properties
 
