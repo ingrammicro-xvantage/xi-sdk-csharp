@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp - the C# library for the Reseller API Documentation
+# xi.sdk.resellers - the C# library for the Reseller API
 
 For Resellers. <br>
 Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
@@ -33,9 +33,9 @@ Run the following command to generate the DLL
 
 Then include the DLL (under the `bin` folder) in the C# project, and use the namespaces:
 ```csharp
-using xi.sdk.resellers.csharp.Api;
-using xi.sdk.resellers.csharp.Client;
-using xi.sdk.resellers.csharp.Model;
+using xi.sdk.resellers.Api;
+using xi.sdk.resellers.Client;
+using xi.sdk.resellers.Model;
 ```
 <a id="packaging"></a>
 ## Packaging
@@ -45,7 +45,7 @@ A `.nuspec` is included with the project. You can follow the Nuget quickstart to
 This `.nuspec` uses placeholders from the `.csproj`, so build the `.csproj` directly:
 
 ```
-nuget pack -Build -OutputDirectory out xi.sdk.resellers.csharp.csproj
+nuget pack -Build -OutputDirectory out xi.sdk.resellers.csproj
 ```
 
 Then, publish to a [local feed](https://docs.microsoft.com/en-us/nuget/hosting-packages/local-feeds) or [other host](https://docs.microsoft.com/en-us/nuget/hosting-packages/overview) and consume the new package via Nuget as usual.
@@ -95,9 +95,9 @@ services.AddHttpClient<YourApiClass>(httpClient =>
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using xi.sdk.resellers.csharp.Api;
-using xi.sdk.resellers.csharp.Client;
-using xi.sdk.resellers.csharp.Model;
+using xi.sdk.resellers.Api;
+using xi.sdk.resellers.Client;
+using xi.sdk.resellers.Model;
 
 namespace Example
 {

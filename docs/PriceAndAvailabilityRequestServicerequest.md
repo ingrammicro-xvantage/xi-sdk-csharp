@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.PriceAndAvailabilityRequestServicerequest
+# xi.sdk.resellers.Model.PriceAndAvailabilityRequestServicerequest
 
 ## Properties
 

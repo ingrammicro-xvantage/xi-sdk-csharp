@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.ReturnsCreateRequestListInner
+# xi.sdk.resellers.Model.ReturnsCreateRequestListInner
 
 ## Properties
 

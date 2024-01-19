@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.QuoteDetailsRequestQuoteProductsRequestRequestpreamble
+# xi.sdk.resellers.Model.QuoteDetailsRequestQuoteProductsRequestRequestpreamble
 
 ## Properties
 

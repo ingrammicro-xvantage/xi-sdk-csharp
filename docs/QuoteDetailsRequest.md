@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.QuoteDetailsRequest
+# xi.sdk.resellers.Model.QuoteDetailsRequest
 Request schema for get quote details endpoint
 
 ## Properties

@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.ValidateQuoteResponse
+# xi.sdk.resellers.Model.ValidateQuoteResponse
 
 ## Properties
 

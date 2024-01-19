@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.OrderCreateRequestOrdercreaterequest
+# xi.sdk.resellers.Model.OrderCreateRequestOrdercreaterequest
 
 ## Properties
 

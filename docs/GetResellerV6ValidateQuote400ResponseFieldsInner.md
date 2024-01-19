@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.GetResellerV6ValidateQuote400ResponseFieldsInner
+# xi.sdk.resellers.Model.GetResellerV6ValidateQuote400ResponseFieldsInner
 
 ## Properties
 

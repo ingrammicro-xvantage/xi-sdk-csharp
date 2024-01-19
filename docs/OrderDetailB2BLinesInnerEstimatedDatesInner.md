@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.OrderDetailB2BLinesInnerEstimatedDatesInner
+# xi.sdk.resellers.Model.OrderDetailB2BLinesInnerEstimatedDatesInner
 
 ## Properties
 

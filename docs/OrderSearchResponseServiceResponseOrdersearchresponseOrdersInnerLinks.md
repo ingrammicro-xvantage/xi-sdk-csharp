@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.OrderSearchResponseServiceResponseOrdersearchresponseOrdersInnerLinks
+# xi.sdk.resellers.Model.OrderSearchResponseServiceResponseOrdersearchresponseOrdersInnerLinks
 HATEOAS links for the main order
 
 ## Properties

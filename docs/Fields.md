@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.Fields
+# xi.sdk.resellers.Model.Fields
 
 ## Properties
 

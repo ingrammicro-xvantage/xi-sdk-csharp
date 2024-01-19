@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.OrderCancelResponseServiceresponseResponsepreamble
+# xi.sdk.resellers.Model.OrderCancelResponseServiceresponseResponsepreamble
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Api.InvoicesApi
+# xi.sdk.resellers.Api.InvoicesApi
 
 All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
 
@@ -20,9 +20,9 @@ Use your Ingram Micro invoice number to search for existing invoices or retrieve
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using xi.sdk.resellers.csharp.Api;
-using xi.sdk.resellers.csharp.Client;
-using xi.sdk.resellers.csharp.Model;
+using xi.sdk.resellers.Api;
+using xi.sdk.resellers.Client;
+using xi.sdk.resellers.Model;
 
 namespace Example
 {
@@ -132,9 +132,9 @@ Search your Ingram Micro invoices. This endpoint searches by multiple invoice pa
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using xi.sdk.resellers.csharp.Api;
-using xi.sdk.resellers.csharp.Client;
-using xi.sdk.resellers.csharp.Model;
+using xi.sdk.resellers.Api;
+using xi.sdk.resellers.Client;
+using xi.sdk.resellers.Model;
 
 namespace Example
 {

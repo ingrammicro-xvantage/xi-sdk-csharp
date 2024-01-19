@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.OrderSearchRequest
+# xi.sdk.resellers.Model.OrderSearchRequest
 Request schema for order search endpoint
 
 ## Properties

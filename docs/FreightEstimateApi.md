@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Api.FreightEstimateApi
+# xi.sdk.resellers.Api.FreightEstimateApi
 
 All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
 
@@ -19,9 +19,9 @@ The freight estimator endpoint will allow customers to understand the freight co
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using xi.sdk.resellers.csharp.Api;
-using xi.sdk.resellers.csharp.Client;
-using xi.sdk.resellers.csharp.Model;
+using xi.sdk.resellers.Api;
+using xi.sdk.resellers.Client;
+using xi.sdk.resellers.Model;
 
 namespace Example
 {

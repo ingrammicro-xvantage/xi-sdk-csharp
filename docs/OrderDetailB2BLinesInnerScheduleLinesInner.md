@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.OrderDetailB2BLinesInnerScheduleLinesInner
+# xi.sdk.resellers.Model.OrderDetailB2BLinesInnerScheduleLinesInner
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.OrderDetailB2BMiscellaneousChargesInner
+# xi.sdk.resellers.Model.OrderDetailB2BMiscellaneousChargesInner
 
 ## Properties
 

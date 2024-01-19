@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.OrderDetailB2BLinesInnerServiceContractInfoSubscriptions
+# xi.sdk.resellers.Model.OrderDetailB2BLinesInnerServiceContractInfoSubscriptions
 
 ## Properties
 

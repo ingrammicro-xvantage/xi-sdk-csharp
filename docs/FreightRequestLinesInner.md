@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.FreightRequestLinesInner
+# xi.sdk.resellers.Model.FreightRequestLinesInner
 
 ## Properties
 

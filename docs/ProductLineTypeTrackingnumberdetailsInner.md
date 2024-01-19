@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.ProductLineTypeTrackingnumberdetailsInner
+# xi.sdk.resellers.Model.ProductLineTypeTrackingnumberdetailsInner
 
 ## Properties
 

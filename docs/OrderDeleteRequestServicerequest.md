@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.OrderDeleteRequestServicerequest
+# xi.sdk.resellers.Model.OrderDeleteRequestServicerequest
 
 ## Properties
 

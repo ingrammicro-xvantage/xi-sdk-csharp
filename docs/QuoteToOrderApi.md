@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Api.QuoteToOrderApi
+# xi.sdk.resellers.Api.QuoteToOrderApi
 
 All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
 
@@ -19,9 +19,9 @@ The “Quote to Order” (QTO) endpoint allows a customer to create an order usi
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using xi.sdk.resellers.csharp.Api;
-using xi.sdk.resellers.csharp.Client;
-using xi.sdk.resellers.csharp.Model;
+using xi.sdk.resellers.Api;
+using xi.sdk.resellers.Client;
+using xi.sdk.resellers.Model;
 
 namespace Example
 {

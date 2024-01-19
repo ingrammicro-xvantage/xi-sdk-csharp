@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.InvoiceDetailRequestServicerequest
+# xi.sdk.resellers.Model.InvoiceDetailRequestServicerequest
 
 ## Properties
 

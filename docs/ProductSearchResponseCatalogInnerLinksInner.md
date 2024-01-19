@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.ProductSearchResponseCatalogInnerLinksInner
+# xi.sdk.resellers.Model.ProductSearchResponseCatalogInnerLinksInner
 HATEOAS links for the price and availability of the sku.
 
 ## Properties

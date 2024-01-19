@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.QuoteToOrderResponse
+# xi.sdk.resellers.Model.QuoteToOrderResponse
 
 ## Properties
 

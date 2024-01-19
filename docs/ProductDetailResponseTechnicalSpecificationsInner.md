@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.ProductDetailResponseTechnicalSpecificationsInner
+# xi.sdk.resellers.Model.ProductDetailResponseTechnicalSpecificationsInner
 
 ## Properties
 

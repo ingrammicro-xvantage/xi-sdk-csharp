@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.MultiSKUPriceAndStockRequestServicerequestPriceandstockrequestItem
+# xi.sdk.resellers.Model.MultiSKUPriceAndStockRequestServicerequestPriceandstockrequestItem
 
 ## Properties
 

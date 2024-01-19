@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.QuoteListResponseQuoteSearchResponse
+# xi.sdk.resellers.Model.QuoteListResponseQuoteSearchResponse
 
 ## Properties
 

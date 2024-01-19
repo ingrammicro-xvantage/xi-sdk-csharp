@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.ReturnsSearchResponse
+# xi.sdk.resellers.Model.ReturnsSearchResponse
 
 ## Properties
 

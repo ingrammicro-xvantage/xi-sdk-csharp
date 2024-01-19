@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.OrderCreateRequestOrdercreaterequestOrdercreatedetailsLinesInnerProductextendedspecsInner
+# xi.sdk.resellers.Model.OrderCreateRequestOrdercreaterequestOrdercreatedetailsLinesInnerProductextendedspecsInner
 
 ## Properties
 

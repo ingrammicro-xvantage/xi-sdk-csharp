@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.RenewalsSearchRequestStatusOpporutinyStatus
+# xi.sdk.resellers.Model.RenewalsSearchRequestStatusOpporutinyStatus
 
 ## Properties
 

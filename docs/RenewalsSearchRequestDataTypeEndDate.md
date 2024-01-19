@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.RenewalsSearchRequestDataTypeEndDate
+# xi.sdk.resellers.Model.RenewalsSearchRequestDataTypeEndDate
 
 ## Properties
 

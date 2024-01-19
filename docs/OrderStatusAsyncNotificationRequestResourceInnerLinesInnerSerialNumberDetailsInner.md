@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.OrderStatusAsyncNotificationRequestResourceInnerLinesInnerSerialNumberDetailsInner
+# xi.sdk.resellers.Model.OrderStatusAsyncNotificationRequestResourceInnerLinesInnerSerialNumberDetailsInner
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.RenewalsDetailsResponseReferenceNumberInner
+# xi.sdk.resellers.Model.RenewalsDetailsResponseReferenceNumberInner
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.ProductDetailResponseAdditionalInformation
+# xi.sdk.resellers.Model.ProductDetailResponseAdditionalInformation
 Additional Information related to the product.
 
 ## Properties

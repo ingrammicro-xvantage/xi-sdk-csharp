@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.OrderCreateRequestOrdercreaterequestOrdercreatedetailsLinesInnerEnduser
+# xi.sdk.resellers.Model.OrderCreateRequestOrdercreaterequestOrdercreatedetailsLinesInnerEnduser
 
 ## Properties
 

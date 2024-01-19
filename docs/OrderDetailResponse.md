@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.OrderDetailResponse
+# xi.sdk.resellers.Model.OrderDetailResponse
 Response schema for order details endpoint
 
 ## Properties

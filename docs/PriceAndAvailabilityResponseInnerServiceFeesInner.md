@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.PriceAndAvailabilityResponseInnerServiceFeesInner
+# xi.sdk.resellers.Model.PriceAndAvailabilityResponseInnerServiceFeesInner
 
 ## Properties
 

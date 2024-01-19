@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.OrderModifyResponseLinesInner
+# xi.sdk.resellers.Model.OrderModifyResponseLinesInner
 
 ## Properties
 

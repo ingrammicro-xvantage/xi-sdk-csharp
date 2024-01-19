@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.OrderCreateResponseOrdersInnerMiscellaneousChargesInner
+# xi.sdk.resellers.Model.OrderCreateResponseOrdersInnerMiscellaneousChargesInner
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.ErrorResponseDTO
+# xi.sdk.resellers.Model.ErrorResponseDTO
 
 ## Properties
 

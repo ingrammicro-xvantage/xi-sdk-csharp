@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.OrderDetailB2BLinesInnerAdditionalAttributesInner
+# xi.sdk.resellers.Model.OrderDetailB2BLinesInnerAdditionalAttributesInner
 
 ## Properties
 

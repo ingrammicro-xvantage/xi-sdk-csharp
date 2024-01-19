@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.OrderModifyRequestAdditionalAttributesInner
+# xi.sdk.resellers.Model.OrderModifyRequestAdditionalAttributesInner
 
 ## Properties
 

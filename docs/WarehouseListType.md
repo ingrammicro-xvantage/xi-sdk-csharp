@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.WarehouseListType
+# xi.sdk.resellers.Model.WarehouseListType
 
 ## Properties
 

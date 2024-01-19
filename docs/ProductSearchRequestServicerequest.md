@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.ProductSearchRequestServicerequest
+# xi.sdk.resellers.Model.ProductSearchRequestServicerequest
 
 ## Properties
 

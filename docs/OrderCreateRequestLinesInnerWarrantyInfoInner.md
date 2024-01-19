@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.OrderCreateRequestLinesInnerWarrantyInfoInner
+# xi.sdk.resellers.Model.OrderCreateRequestLinesInnerWarrantyInfoInner
 
 ## Properties
 

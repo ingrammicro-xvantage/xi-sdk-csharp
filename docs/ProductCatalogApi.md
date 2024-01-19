@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Api.ProductCatalogApi
+# xi.sdk.resellers.Api.ProductCatalogApi
 
 All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
 
@@ -21,9 +21,9 @@ Search all the product-related details using a unique Ingram Part Number. Curren
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using xi.sdk.resellers.csharp.Api;
-using xi.sdk.resellers.csharp.Client;
-using xi.sdk.resellers.csharp.Model;
+using xi.sdk.resellers.Api;
+using xi.sdk.resellers.Client;
+using xi.sdk.resellers.Model;
 
 namespace Example
 {
@@ -130,9 +130,9 @@ Search the Ingram Micro product catalog by providing any of the information in t
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using xi.sdk.resellers.csharp.Api;
-using xi.sdk.resellers.csharp.Client;
-using xi.sdk.resellers.csharp.Model;
+using xi.sdk.resellers.Api;
+using xi.sdk.resellers.Client;
+using xi.sdk.resellers.Model;
 
 namespace Example
 {
@@ -259,9 +259,9 @@ The PriceAndAvailability API, will retrieve Pricing, Availability, discounts, In
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using xi.sdk.resellers.csharp.Api;
-using xi.sdk.resellers.csharp.Client;
-using xi.sdk.resellers.csharp.Model;
+using xi.sdk.resellers.Api;
+using xi.sdk.resellers.Client;
+using xi.sdk.resellers.Model;
 
 namespace Example
 {

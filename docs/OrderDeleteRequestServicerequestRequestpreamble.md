@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.OrderDeleteRequestServicerequestRequestpreamble
+# xi.sdk.resellers.Model.OrderDeleteRequestServicerequestRequestpreamble
 
 ## Properties
 

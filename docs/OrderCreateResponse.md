@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.OrderCreateResponse
+# xi.sdk.resellers.Model.OrderCreateResponse
 Response schema for order create endpoint
 
 ## Properties

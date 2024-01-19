@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.OrderCreateResponseServiceresponseOrdersummary
+# xi.sdk.resellers.Model.OrderCreateResponseServiceresponseOrdersummary
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.InvoiceDetailResponseServiceresponseResponsepreamble
+# xi.sdk.resellers.Model.InvoiceDetailResponseServiceresponseResponsepreamble
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.PriceAndAvailabilityResponseServiceresponseResponsepreamble
+# xi.sdk.resellers.Model.PriceAndAvailabilityResponseServiceresponseResponsepreamble
 
 ## Properties
 

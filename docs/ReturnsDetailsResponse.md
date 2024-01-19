@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.ReturnsDetailsResponse
+# xi.sdk.resellers.Model.ReturnsDetailsResponse
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.OrderDetailB2BBillToInfo
+# xi.sdk.resellers.Model.OrderDetailB2BBillToInfo
 The billing information provided by the reseller.
 
 ## Properties

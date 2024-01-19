@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.OrderModifyResponseServiceresponseResponsepreamble
+# xi.sdk.resellers.Model.OrderModifyResponseServiceresponseResponsepreamble
 
 ## Properties
 

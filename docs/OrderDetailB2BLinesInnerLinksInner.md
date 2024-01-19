@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.OrderDetailB2BLinesInnerLinksInner
+# xi.sdk.resellers.Model.OrderDetailB2BLinesInnerLinksInner
 Link to Order Details for the line item.
 
 ## Properties

@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Api.OrdersV6Api
+# xi.sdk.resellers.Api.OrdersV6Api
 
 All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
 
@@ -19,9 +19,9 @@ Use your Ingram Micro sales order number to search for existing orders or retrie
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
-using xi.sdk.resellers.csharp.Api;
-using xi.sdk.resellers.csharp.Client;
-using xi.sdk.resellers.csharp.Model;
+using xi.sdk.resellers.Api;
+using xi.sdk.resellers.Client;
+using xi.sdk.resellers.Model;
 
 namespace Example
 {

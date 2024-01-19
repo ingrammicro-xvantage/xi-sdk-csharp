@@ -1,4 +1,4 @@
-# xi.sdk.resellers.csharp.Model.OrderModifyRequest
+# xi.sdk.resellers.Model.OrderModifyRequest
 Request schema for order modify endpoint
 
 ## Properties
