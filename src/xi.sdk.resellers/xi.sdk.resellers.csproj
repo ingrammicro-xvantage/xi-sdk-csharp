@@ -2,21 +2,23 @@
 
   <PropertyGroup>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo><!-- setting GenerateAssemblyInfo to false causes this bug https://github.com/dotnet/project-system/issues/3934 -->
-    <TargetFramework>net8.0</TargetFramework>
-    <AssemblyName>xi.sdk.resellers</AssemblyName>
+    <TargetFrameworks>net8.0;net7.0;net6.0;net48;net47;netstandard2.1;netstandard2.0;netstandard1.6;netstandard1.5;netstandard1.4;netstandard1.3</TargetFrameworks>
+    <AssemblyName>XI.Sdk.Resellers</AssemblyName>
     <PackageId>xi.sdk.resellers</PackageId>
     <OutputType>Library</OutputType>
-    <Authors>OpenAPI</Authors>
-    <Company>OpenAPI</Company>
-    <AssemblyTitle>OpenAPI Library</AssemblyTitle>
-    <Description>A library generated from a OpenAPI doc</Description>
-    <Copyright>No Copyright</Copyright>
-    <RootNamespace>xi.sdk.resellers</RootNamespace>
+    <Authors>Xvantage Integration (XI)</Authors>
+    <Company>Ingram Micro</Company>
+    <AssemblyTitle>xi.sdk.resellers</AssemblyTitle>
+    <Description>Ingram Micro - Xvantage Integration (XI) C# Server-side SDK.</Description>
+    <RootNamespace>xi.sdk.resellers.csharp</RootNamespace>
     <Version>1.0.0</Version>
-    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\xi.sdk.resellers.xml</DocumentationFile>
-    <RepositoryUrl>https://github.com/GIT_USER_ID/GIT_REPO_ID.git</RepositoryUrl>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\xi.sdk.resellers.csharp.xml</DocumentationFile>
+    <RepositoryUrl>https://github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageReleaseNotes>Minor update</PackageReleaseNotes>
+    <PackageReleaseNotes>https://github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp/releases</PackageReleaseNotes>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageProjectUrl>https://developer.ingrammicro.com/reseller</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Nullable>annotations</Nullable>
   </PropertyGroup>
 
@@ -28,6 +30,8 @@
 
   <ItemGroup>
     <None Remove="System.Web" />
+    <None Include="..\..\README.md" Pack="true" PackagePath="" Visible="False" />
+    
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Web" />
