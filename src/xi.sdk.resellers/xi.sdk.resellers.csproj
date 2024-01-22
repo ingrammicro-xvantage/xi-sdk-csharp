@@ -8,9 +8,9 @@
     <OutputType>Library</OutputType>
     <Authors>Xvantage Integration (XI)</Authors>
     <Company>Ingram Micro</Company>
-    <AssemblyTitle>xi.sdk.resellers</AssemblyTitle>
+    <AssemblyTitle>Xi.sdk.Resellers</AssemblyTitle>
     <Description>Ingram Micro - Xvantage Integration (XI) C# Server-side SDK.</Description>
-    <RootNamespace>xi.sdk.resellers.csharp</RootNamespace>
+    <RootNamespace>xi.sdk.resellers</RootNamespace>
     <Version>1.0.0</Version>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\xi.sdk.resellers.csharp.xml</DocumentationFile>
     <RepositoryUrl>https://github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp.git</RepositoryUrl>
@@ -19,6 +19,7 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageProjectUrl>https://developer.ingrammicro.com/reseller</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <readme>README.md</readme>
     <Nullable>annotations</Nullable>
   </PropertyGroup>
 
@@ -30,7 +31,7 @@
 
   <ItemGroup>
     <None Remove="System.Web" />
-    <None Include="..\..\README.md" Pack="true" PackagePath="" Visible="False" />
+    <None Include="README.md" Pack="true" PackagePath="" Visible="False" />
     
   </ItemGroup>
   <ItemGroup>
