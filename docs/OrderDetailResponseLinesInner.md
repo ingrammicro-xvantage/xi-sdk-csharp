@@ -1,0 +1,35 @@
+# xi.sdk.resellers.Model.OrderDetailResponseLinesInner
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**SubOrderNumber** | **string** | The sub order number. The two-digit prefix is the warehouse code of the warehouse nearest the reseller. The middle number is the order number. The two-digit suffix is the sub order number. | [optional] 
+**IngramOrderLineNumber** | **string** | Unique Ingram Micro line number. Starts with 001. | [optional] 
+**VendorSalesOrderLineNumber** | **string** | The vendor&#39;s sales order line number. | [optional] 
+**CustomerLinenumber** | **string** | The reseller&#39;s line item number for reference in their system. | [optional] 
+**LineStatus** | **string** | The status for the line item in the order. One of- Backordered, In Progress, Shipped, Delivered, Canceled, On Hold | [optional] 
+**IngramPartNumber** | **string** | Unique IngramMicro part number. | [optional] 
+**VendorPartNumber** | **string** | The vendor&#39;s part number for the line item. | [optional] 
+**VendorName** | **string** | The vendor&#39;s name for the part in their system. | [optional] 
+**PartDescription** | **string** | The vendor&#39;s description of the part in their system. | [optional] 
+**UnitWeight** | **decimal** | The unit weight of the line item. | [optional] 
+**WeightUom** | **string** | The unit of measure for the line item. | [optional] 
+**UnitPrice** | **int** | The unit price of the line item. | [optional] 
+**UpcCode** | **string** | The UPC code of a product. | [optional] 
+**ExtendedPrice** | **decimal** | Unit price X quantity for the line item. | [optional] 
+**TaxAmount** | **decimal** | The tax amount for the line item. | [optional] 
+**CurrencyCode** | **string** | The country-specific three character ISO 4217 currency code for the line item. | [optional] 
+**QuantityOrdered** | **int** | The quantity ordered of the line item. | [optional] 
+**QuantityConfirmed** | **int** | The quantity confirmed for the line item. | [optional] 
+**QuantityBackOrdered** | **int** | The quantity backordered for the line item. | [optional] 
+**SpecialBidNumber** | **string** | The line-level bid number provided to the reseller by the vendor for special pricing and discounts. Used to track the bid number in the case of split orders or where different line items have different bid numbers. Line-level bid numbers take precedence over header-level bid numbers. | [optional] 
+**RequestedDeliveryDate** | **DateTime** | Reseller-requested delivery date. Delivery date is not guaranteed. | [optional] 
+**PromisedDeliveryDate** | **DateTime** | The delivery date promised by IngramMicro. | [optional] 
+**LineNotes** | **string** | Line-level notes for the order. | [optional] 
+**ShipmentDetails** | [**List&lt;OrderDetailResponseLinesInnerShipmentDetailsInner&gt;**](OrderDetailResponseLinesInnerShipmentDetailsInner.md) |  | [optional] 
+**AdditionalAttributes** | [**List&lt;OrderDetailResponseLinesInnerAdditionalAttributesInner&gt;**](OrderDetailResponseLinesInnerAdditionalAttributesInner.md) |  | [optional] 
+**Links** | [**List&lt;OrderDetailResponseLinesInnerLinksInner&gt;**](OrderDetailResponseLinesInnerLinksInner.md) |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
