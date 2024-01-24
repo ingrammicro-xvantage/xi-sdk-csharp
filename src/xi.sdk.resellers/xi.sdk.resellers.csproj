@@ -2,13 +2,8 @@
 
   <PropertyGroup>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo><!-- setting GenerateAssemblyInfo to false causes this bug https://github.com/dotnet/project-system/issues/3934 -->
-<<<<<<< HEAD
     <TargetFrameworks>net8.0;net7.0;net6.0;net48;net47;netstandard2.1;netstandard2.0;</TargetFrameworks>
     <AssemblyName>XI.Sdk.Resellers</AssemblyName>
-=======
-    <TargetFramework>net8.0</TargetFramework>
-    <AssemblyName>xi.sdk.resellers</AssemblyName>
->>>>>>> d7c5d28d5d4007e93339da6690b12aafc8a66c92
     <PackageId>xi.sdk.resellers</PackageId>
     <OutputType>Library</OutputType>
     <Authors>OpenAPI</Authors>
