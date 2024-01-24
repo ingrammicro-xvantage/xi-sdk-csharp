@@ -26,24 +26,23 @@ jobs:
         run: |
           version=${{ github.event.inputs.version }}
           sed -i "s/<Version>.*<\/Version>/<Version>$version<\/Version>/" src/xi.sdk.resellers/xi.sdk.resellers.csproj
-          git config --local user.email ${{secrets.ADMIN_EMAIL}}
-          git config --local user.name ${{secrets.ORG_NAME}}
+          git config --local user.email "${{ secrets.ADMIN_EMAIL }}"
+          git config --local user.name "${{ secrets.ORG_NAME }}"
           git add .
           if git diff --exit-code; then
             echo "No changes to commit."
           else
-            git add .
             git commit -m "Update version in .csproj" || true
-            git push https://${{secrets.WORKFLOW_TOKEN}}@github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp.git test_package
+            git push https://${{ secrets.WORKFLOW_TOKEN }}@github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp.git test_package
+          fi
 
       - name: Build Package
         run: dotnet pack -c Release --output github-package/ --version-suffix $(date +"%Y%m%d%H%M%S")
 
       - name: Commit and Push Package
         run: |
-          git config --local user.email ${{secrets.ADMIN_EMAIL}}
-          git config --local user.name ${{secrets.ORG_NAME}}
+          git config --local user.email "${{ secrets.ADMIN_EMAIL }}"
+          git config --local user.name "${{ secrets.ORG_NAME }}"
           git add github-package/*.nupkg
           git commit -m "Add NuGet package" || true
-          git push https://${{secrets.WORKFLOW_TOKEN}}@github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp.git tweak-workflow
-
+          git push https://${{ secrets.WORKFLOW_TOKEN }}@github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp.git tweak-workflow
