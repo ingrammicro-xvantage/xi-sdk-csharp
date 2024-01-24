@@ -25,7 +25,7 @@ jobs:
       - name: Update Version in .csproj
         run: |
           version=${{ github.event.inputs.version }}
-          sed -i "s/<Version>.*<\/Version>/<Version>$version<\/Version>/" src/xi.sdk.resellers.csharp/xi.sdk.resellers.csharp.csproj
+          sed -i "s/<Version>.*<\/Version>/<Version>$version<\/Version>/" src/xi.sdk.resellers/xi.sdk.resellers.csproj
           git config --local user.email ${{secrets.ADMIN_EMAIL}}
           git config --local user.name ${{secrets.ORG_NAME}}
           git add .
