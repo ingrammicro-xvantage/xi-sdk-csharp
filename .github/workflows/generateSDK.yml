@@ -29,8 +29,12 @@ jobs:
           git config --local user.email ${{secrets.ADMIN_EMAIL}}
           git config --local user.name ${{secrets.ORG_NAME}}
           git add .
-          git commit -m "Update version in .csproj" || true
-          git push https://${{secrets.WORKFLOW_TOKEN}}@github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp.git test_package
+          if git diff --exit-code; then
+            echo "No changes to commit."
+          else
+            git add .
+            git commit -m "Update version in .csproj" || true
+            git push https://${{secrets.WORKFLOW_TOKEN}}@github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp.git test_package
 
       - name: Build Package
         run: dotnet pack -c Release --output github-package/ --version-suffix $(date +"%Y%m%d%H%M%S")
