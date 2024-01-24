@@ -48,4 +48,5 @@ jobs:
           git checkout -b tweak-workflow
           git add github-package/*.nupkg
           git commit -m "Add NuGet package" || true
+          git pull origin tweak-workflow
           git push https://${{secrets.WORKFLOW_TOKEN}}@github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp.git tweak-workflow
