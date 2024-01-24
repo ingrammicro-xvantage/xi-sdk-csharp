@@ -41,8 +41,8 @@ jobs:
 
       - name: Commit and Push Package
         run: |
-          git config --local user.email "${{ secrets.ADMIN_EMAIL }}"
-          git config --local user.name "${{ secrets.ORG_NAME }}"
+          git config --global user.email "${{ secrets.ADMIN_EMAIL }}"
+          git config --globak user.name "${{ secrets.ORG_NAME }}"
           git add github-package/*.nupkg
           git commit -m "Add NuGet package" || true
           git push https://${{ secrets.WORKFLOW_TOKEN }}@github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp.git tweak-workflow
