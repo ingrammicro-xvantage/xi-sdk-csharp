@@ -1,6 +1,6 @@
 # xi.sdk.resellers.Api.OrdersApi
 
-All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
+All URIs are relative to *https://api.ingrammicro.com:443*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
@@ -34,7 +34,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.ingrammicro.com:443/sandbox";
+            config.BasePath = "https://api.ingrammicro.com:443";
             // Configure OAuth2 access token for authorization: application
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
@@ -120,7 +120,7 @@ void (empty response body)
 
 <a id="getorderdetailsv61"></a>
 # **GetOrderdetailsV61**
-> OrderDetailB2B GetOrderdetailsV61 (string ordernumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = null, DateTime? ingramOrderDate = null, string? vendorNumber = null, string? simulateStatus = null, bool? isIml = null, string? regionCode = null)
+> OrderDetailB2B GetOrderdetailsV61 (string ordernumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = null, DateOnly? ingramOrderDate = null, string? vendorNumber = null, string? simulateStatus = null, bool? isIml = null, string? regionCode = null)
 
 Get Order Details v6.1
 
@@ -142,7 +142,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.ingrammicro.com:443/sandbox";
+            config.BasePath = "https://api.ingrammicro.com:443";
             // Configure OAuth2 access token for authorization: application
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
@@ -155,7 +155,7 @@ namespace Example
             var iMCountryCode = US;  // string | Two-character ISO country code.
             var iMCorrelationID = fbac82ba-cf0a-4bcf-fc03-0c5084;  // string | Unique transaction number to identify each transaction accross all the systems.
             var iMSenderID = MyCompany;  // string? | Unique value used to identify the sender of the transaction. Example: MyCompany. (optional) 
-            var ingramOrderDate = Wed May 13 00:00:00 UTC 2020;  // DateTime? | The date and time in UTC format that the order was created. (optional) 
+            var ingramOrderDate = Wed May 13 00:00:00 UTC 2020;  // DateOnly? | The date and time in UTC format that the order was created. (optional) 
             var vendorNumber = "vendorNumber_example";  // string? | Vendor Number. (optional) 
             var simulateStatus = "IM::SHIPPED";  // string? | Order response for various order statuses. Not for use in production. (optional) 
             var isIml = true;  // bool? | True/False only for IML customers. (optional) 
@@ -207,7 +207,7 @@ catch (ApiException e)
 | **iMCountryCode** | **string** | Two-character ISO country code. |  |
 | **iMCorrelationID** | **string** | Unique transaction number to identify each transaction accross all the systems. |  |
 | **iMSenderID** | **string?** | Unique value used to identify the sender of the transaction. Example: MyCompany. | [optional]  |
-| **ingramOrderDate** | **DateTime?** | The date and time in UTC format that the order was created. | [optional]  |
+| **ingramOrderDate** | **DateOnly?** | The date and time in UTC format that the order was created. | [optional]  |
 | **vendorNumber** | **string?** | Vendor Number. | [optional]  |
 | **simulateStatus** | **string?** | Order response for various order statuses. Not for use in production. | [optional]  |
 | **isIml** | **bool?** | True/False only for IML customers. | [optional]  |
@@ -259,7 +259,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.ingrammicro.com:443/sandbox";
+            config.BasePath = "https://api.ingrammicro.com:443";
             // Configure OAuth2 access token for authorization: application
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
@@ -402,7 +402,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.ingrammicro.com:443/sandbox";
+            config.BasePath = "https://api.ingrammicro.com:443";
             // Configure OAuth2 access token for authorization: application
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
@@ -511,7 +511,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.ingrammicro.com:443/sandbox";
+            config.BasePath = "https://api.ingrammicro.com:443";
             // Configure OAuth2 access token for authorization: application
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 

@@ -6,8 +6,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **RenewalId** | **string** | Unique Ingram renewal ID. | [optional] 
 **IngramOrderNumber** | **string** | The IngramMicro sales order number. | [optional] 
-**IngramOrderDate** | **DateTime** | The IngramMicro sales order date. | [optional] 
-**ExpirationDate** | **DateTime** | Renewal expiration date. | [optional] 
+**IngramOrderDate** | **DateOnly** | The IngramMicro sales order date. | [optional] 
+**ExpirationDate** | **DateOnly** | Renewal expiration date. | [optional] 
 **IngramPurchaseOrderNumber** | **string** | Ingram purchase order number. | [optional] 
 **CustomerOrderNumber** | **string** | The reseller&#39;s order number for reference in their system. | [optional] 
 **EndCustomerOrderNumber** | **string** | The end customer&#39;s order number for reference in their system. | [optional] 

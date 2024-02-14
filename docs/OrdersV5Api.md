@@ -1,6 +1,6 @@
 # xi.sdk.resellers.Api.OrdersV5Api
 
-All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
+All URIs are relative to *https://api.ingrammicro.com:443*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
@@ -33,7 +33,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.ingrammicro.com:443/sandbox";
+            config.BasePath = "https://api.ingrammicro.com:443";
             // Configure OAuth2 access token for authorization: application
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
@@ -137,7 +137,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.ingrammicro.com:443/sandbox";
+            config.BasePath = "https://api.ingrammicro.com:443";
             // Configure OAuth2 access token for authorization: application
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
@@ -229,7 +229,7 @@ catch (ApiException e)
 
 <a id="getv5ordersdetails"></a>
 # **GetV5OrdersDetails**
-> OrderDetailResponse GetV5OrdersDetails (string ordernumber, string customernumber, string isocountrycode, string? customerordernumber = null, DateTime? startcreatetimestamp = null, string? endcreatetimestamp = null, string? simulate = null)
+> OrderDetailResponse GetV5OrdersDetails (string ordernumber, string customernumber, string isocountrycode, string? customerordernumber = null, DateOnly? startcreatetimestamp = null, string? endcreatetimestamp = null, string? simulate = null)
 
 Get Order Details
 
@@ -251,7 +251,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.ingrammicro.com:443/sandbox";
+            config.BasePath = "https://api.ingrammicro.com:443";
             // Configure OAuth2 access token for authorization: application
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
@@ -263,7 +263,7 @@ namespace Example
             var customernumber = "\"20-222222\"";  // string | Your unique Ingram Micro customer number (default to "20-222222")
             var isocountrycode = "\"US\"";  // string | 2 chars ISO country code (default to "US")
             var customerordernumber = "customerordernumber_example";  // string? | Your PO/Order Number provide at the time of order creation (optional) 
-            var startcreatetimestamp = Sun Mar 15 00:00:00 UTC 2020;  // DateTime? | Filter start date - format YYYY-MM-DD (optional) 
+            var startcreatetimestamp = Sun Mar 15 00:00:00 UTC 2020;  // DateOnly? | Filter start date - format YYYY-MM-DD (optional) 
             var endcreatetimestamp = 2020-04-20;  // string? | Filter end date - format YYYY-MM-DD (optional) 
             var simulate = ;  // string? | Order response for various order statuses. Not for use in production. (optional) 
 
@@ -312,7 +312,7 @@ catch (ApiException e)
 | **customernumber** | **string** | Your unique Ingram Micro customer number | [default to &quot;20-222222&quot;] |
 | **isocountrycode** | **string** | 2 chars ISO country code | [default to &quot;US&quot;] |
 | **customerordernumber** | **string?** | Your PO/Order Number provide at the time of order creation | [optional]  |
-| **startcreatetimestamp** | **DateTime?** | Filter start date - format YYYY-MM-DD | [optional]  |
+| **startcreatetimestamp** | **DateOnly?** | Filter start date - format YYYY-MM-DD | [optional]  |
 | **endcreatetimestamp** | **string?** | Filter end date - format YYYY-MM-DD | [optional]  |
 | **simulate** | **string?** | Order response for various order statuses. Not for use in production. | [optional]  |
 
@@ -361,7 +361,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.ingrammicro.com:443/sandbox";
+            config.BasePath = "https://api.ingrammicro.com:443";
             // Configure OAuth2 access token for authorization: application
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 

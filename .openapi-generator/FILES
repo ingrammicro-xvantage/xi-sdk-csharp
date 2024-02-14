@@ -246,8 +246,8 @@ docs/ProductCatalogV5Api.md
 docs/ProductDetailResponse.md
 docs/ProductDetailResponseAdditionalInformation.md
 docs/ProductDetailResponseAdditionalInformationProductWeightInner.md
-docs/ProductDetailResponseCiscoFieldsInner.md
-docs/ProductDetailResponseIndicatorsInner.md
+docs/ProductDetailResponseCiscoFields.md
+docs/ProductDetailResponseIndicators.md
 docs/ProductDetailResponseTechnicalSpecificationsInner.md
 docs/ProductLineType.md
 docs/ProductLineTypeSerialnumberdetailsInner.md
@@ -591,8 +591,8 @@ src/xi.sdk.resellers.Test/Model/PriceAndAvailabilityResponseServiceresponseTests
 src/xi.sdk.resellers.Test/Model/PriceAndAvailabilityResponseTests.cs
 src/xi.sdk.resellers.Test/Model/ProductDetailResponseAdditionalInformationProductWeightInnerTests.cs
 src/xi.sdk.resellers.Test/Model/ProductDetailResponseAdditionalInformationTests.cs
-src/xi.sdk.resellers.Test/Model/ProductDetailResponseCiscoFieldsInnerTests.cs
-src/xi.sdk.resellers.Test/Model/ProductDetailResponseIndicatorsInnerTests.cs
+src/xi.sdk.resellers.Test/Model/ProductDetailResponseCiscoFieldsTests.cs
+src/xi.sdk.resellers.Test/Model/ProductDetailResponseIndicatorsTests.cs
 src/xi.sdk.resellers.Test/Model/ProductDetailResponseTechnicalSpecificationsInnerTests.cs
 src/xi.sdk.resellers.Test/Model/ProductDetailResponseTests.cs
 src/xi.sdk.resellers.Test/Model/ProductLineTypeSerialnumberdetailsInnerTests.cs
@@ -949,8 +949,8 @@ src/xi.sdk.resellers/Model/PriceAndAvailabilityResponseServiceresponseResponsepr
 src/xi.sdk.resellers/Model/ProductDetailResponse.cs
 src/xi.sdk.resellers/Model/ProductDetailResponseAdditionalInformation.cs
 src/xi.sdk.resellers/Model/ProductDetailResponseAdditionalInformationProductWeightInner.cs
-src/xi.sdk.resellers/Model/ProductDetailResponseCiscoFieldsInner.cs
-src/xi.sdk.resellers/Model/ProductDetailResponseIndicatorsInner.cs
+src/xi.sdk.resellers/Model/ProductDetailResponseCiscoFields.cs
+src/xi.sdk.resellers/Model/ProductDetailResponseIndicators.cs
 src/xi.sdk.resellers/Model/ProductDetailResponseTechnicalSpecificationsInner.cs
 src/xi.sdk.resellers/Model/ProductLineType.cs
 src/xi.sdk.resellers/Model/ProductLineTypeSerialnumberdetailsInner.cs

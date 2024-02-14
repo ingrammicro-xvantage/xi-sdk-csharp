@@ -1,13 +1,13 @@
 openapi: 3.0.0
 info:
-  description: |-
-    For Resellers. <br>
-    Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
-  title: Reseller API
-  version: "6.0"
+  description: For Resellers. Who are looking to Innovate with Ingram Micro's API
+    SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create
+    a seamless experience for your customers.
+  title: XI Sdk Resellers
+  version: 1.0.0
 servers:
 - description: Sandbox
-  url: https://api.ingrammicro.com:443/sandbox
+  url: https://api.ingrammicro.com:443/
 tags:
 - description: "\nThe Ingram Micro Product Catalog v6 API endpoints enable users to:\n\
     \  - Search products by SKU or additional criteria.\n  - Find price and availability\
@@ -137,10 +137,7 @@ paths:
         name: includeAvailability
         required: true
         schema:
-          items:
-            type: boolean
-            uniqueItems: false
-          type: array
+          type: boolean
         style: form
       - description: "Pass boolean value as input, if true the response will contain\
           \ Pricing details of the Product, if false the response will not hold Pricing\
@@ -6088,7 +6085,7 @@ paths:
       summary: Quote To Order
       tags:
       - Quote To Order
-  /resellers/v6/invoices/:
+  /resellers/v6/invoices:
     get:
       description: Search your Ingram Micro invoices. This endpoint searches by multiple
         invoice parameters and supports pagination of results.
@@ -6098,7 +6095,7 @@ paths:
           \ Example: MyCompany"
         explode: false
         in: header
-        name: 'IM-ApplicationID '
+        name: IM-ApplicationID
         required: true
         schema:
           example: MyCompany
@@ -7520,10 +7517,21 @@ paths:
           \ Example: MyCompany"
         explode: false
         in: header
-        name: IM-SenderID
-        required: false
+        name: IM-ApplicationId
+        required: true
         schema:
           example: MyCompany
+          maxLength: 32
+          type: string
+        style: simple
+      - description: Environment name.
+        example: prodChicago
+        explode: false
+        in: header
+        name: IM-Environment
+        required: true
+        schema:
+          example: 20-222222
           maxLength: 32
           type: string
         style: simple
@@ -12075,8 +12083,8 @@ components:
             weightUnit: weightUnit
           isBulkFreight: true
           height: height
-        productClass: productClass
         customerPartNumber: customerPartNumber
+        productClass: productClass
         description: description
         upc: upc
         warrantyInformation:
@@ -12085,38 +12093,7 @@ components:
         productAuthorized: true
         vendorName: vendorName
         indicators:
-        - isHeavyWeight: true
-          isEnduserRequired: true
-          hasStdWebDiscount: true
-          hasStdSpecialPrice: true
-          isPreorderProduct: true
-          hasWarranty: true
-          isDirectshipOrderable: true
-          isNewProduct: true
-          isDownloadable: true
-          isClearanceProduct: true
-          isOversizeProduct: true
-          isShippedFromPartner: true
-          isIngramShip: true
-          hasAcopQuantityBreak: true
-          IsBackOrderAllowed: true
-          isReplacementProduct: true
-          hasSpecialBid: true
-          isReturnableProduct: true
-          isConfigurable: true
-          isExportableToCountry: true
-          isDigitalType: true
-          hasAcopSpecialPrice: true
-          isRefurbishedProduct: true
-          isLicenseProduct: true
-          HasReturnLimits: true
-          skuType: skuType
-          isDiscontinuedProduct: true
-          hasLtl: true
-          isServiceSku: true
-          hasBundle: true
-          isDirectship: true
-        - isHeavyWeight: true
+          isHeavyWeight: true
           isEnduserRequired: true
           hasStdWebDiscount: true
           hasStdSpecialPrice: true
@@ -12150,14 +12127,7 @@ components:
         productCategory: productCategory
         productSubcategory: productSubcategory
         ciscoFields:
-        - itemType: itemType
-          productSubGroup: productSubGroup
-          configurationIndicator: configurationIndicator
-          internalBusinessEntity: internalBusinessEntity
-          serviceProgramName: serviceProgramName
-          globalListPrice: globalListPrice
-          itemCatalogCategory: itemCatalogCategory
-        - itemType: itemType
+          itemType: itemType
           productSubGroup: productSubGroup
           configurationIndicator: configurationIndicator
           internalBusinessEntity: internalBusinessEntity
@@ -12183,6 +12153,9 @@ components:
           type: string
         vendorPartNumber:
           description: Vendor’s part number for the product.
+          type: string
+        customerPartNumber:
+          description: Reseller / end-user’s part number for the product.
           type: string
         productAuthorized:
           description: Boolean that indicates whether a product is authorized.
@@ -12228,19 +12201,10 @@ components:
             \ for Specialized Demand (Order to backorder) X= direct ship from Vendor\
             \ V = product that vendor has elected to discontinue."
           type: string
-        customerPartNumber:
-          description: Reseller / end-user’s part number for the product.
-          type: string
         indicators:
-          description: Indicators of the Product
-          items:
-            $ref: '#/components/schemas/ProductDetailResponse_indicators_inner'
-          type: array
+          $ref: '#/components/schemas/ProductDetailResponse_indicators'
         ciscoFields:
-          description: Cisco product related information.
-          items:
-            $ref: '#/components/schemas/ProductDetailResponse_ciscoFields_inner'
-          type: array
+          $ref: '#/components/schemas/ProductDetailResponse_ciscoFields'
         technicalSpecifications:
           description: Technical specifications of the product.
           items:
@@ -12465,26 +12429,20 @@ components:
           dealId: dealId
           vendor: vendor
           links:
-          - topic: topic
-            href: href
-            type: type
-          - topic: topic
+            topic: topic
             href: href
             type: type
           version: version
-          dealExpiryDate: 2000-01-23
+          dealExpiryDate: dealExpiryDate
         - endUser: endUser
           dealId: dealId
           vendor: vendor
           links:
-          - topic: topic
-            href: href
-            type: type
-          - topic: topic
+            topic: topic
             href: href
             type: type
           version: version
-          dealExpiryDate: 2000-01-23
+          dealExpiryDate: dealExpiryDate
         pageSize: 6
         recordsFound: 0
       properties:
@@ -12513,21 +12471,7 @@ components:
         endUser: endUser
         priceProtectionEndDate: 2000-01-23
         endUserInfo:
-        - city: city
-          companyName: companyName
-          postalCode: postalCode
-          phoneNumber: phoneNumber
-          countryCode: countryCode
-          contact: contact
-          addressLine1: addressLine1
-          addressLine2: addressLine2
-          addressLine3: addressLine3
-          state: state
-          name2: name2
-          addressLine4: addressLine4
-          name1: name1
-          email: email
-        - city: city
+          city: city
           companyName: companyName
           postalCode: postalCode
           phoneNumber: phoneNumber
@@ -12610,9 +12554,7 @@ components:
           description: Country specific currency code.
           type: string
         endUserInfo:
-          items:
-            $ref: '#/components/schemas/renewalsDetailsResponse_endUserInfo_inner'
-          type: array
+          $ref: '#/components/schemas/renewalsDetailsResponse_endUserInfo_inner'
         products:
           items:
             $ref: '#/components/schemas/dealsDetailsResponse_products_inner'
@@ -12624,7 +12566,7 @@ components:
         previousPage: previousPage
         returnsClaims:
         - modifiedOn: modifiedOn
-          estimatedTotalValue: 2000-01-23
+          estimatedTotalValue: 5.962133916683182
           referenceNumber: referenceNumber
           returnReason: returnReason
           returnClaimId: returnClaimId
@@ -12637,11 +12579,11 @@ components:
             href: href
             type: type
           type: type
-          credit: 5.962133916683182
-          createdOn: 2000-01-23
+          credit: 5.637376656633329
+          createdOn: createdOn
           status: status
         - modifiedOn: modifiedOn
-          estimatedTotalValue: 2000-01-23
+          estimatedTotalValue: 5.962133916683182
           referenceNumber: referenceNumber
           returnReason: returnReason
           returnClaimId: returnClaimId
@@ -12654,8 +12596,8 @@ components:
             href: href
             type: type
           type: type
-          credit: 5.962133916683182
-          createdOn: 2000-01-23
+          credit: 5.637376656633329
+          createdOn: createdOn
           status: status
         nextPage: nextPage
         pageSize: 6
@@ -12684,48 +12626,48 @@ components:
     returnsDetailsResponse:
       example:
         returnWarehouseAddress: returnWarehouseAddress
-        tax: 3.616076749251911
-        subTotal: 9.301444243932576
+        tax: 7.061401241503109
+        subTotal: 2.3021358869347655
         createdOn: 2000-01-23
         rmaClaimId: rmaClaimId
         products:
         - ingramPartNumber: ingramPartNumber
-          unitPrice: 5.962133916683182
-          quantity: 1
-          requestDetails: 6
+          unitPrice: 6.027456183070403
+          quantity: 0.8008281904610115
+          requestDetails: requestDetails
           description: description
           upc: upc
           ingramLineNumber: ingramLineNumber
           invoiceDate: 2000-01-23
-          customerOrderNumber: 0
-          extendedPrice: 5.637376656633329
+          customerOrderNumber: customerOrderNumber
+          extendedPrice: 1.4658129805029452
           invoiceNumber: invoiceNumber
-          returnBranch: 2
+          returnBranch: 5
           vendorPartNumber: vendorPartNumber
-          shipFromBranch: 7
+          shipFromBranch: 5
           status: status
         - ingramPartNumber: ingramPartNumber
-          unitPrice: 5.962133916683182
-          quantity: 1
-          requestDetails: 6
+          unitPrice: 6.027456183070403
+          quantity: 0.8008281904610115
+          requestDetails: requestDetails
           description: description
           upc: upc
           ingramLineNumber: ingramLineNumber
           invoiceDate: 2000-01-23
-          customerOrderNumber: 0
-          extendedPrice: 5.637376656633329
+          customerOrderNumber: customerOrderNumber
+          extendedPrice: 1.4658129805029452
           invoiceNumber: invoiceNumber
-          returnBranch: 2
+          returnBranch: 5
           vendorPartNumber: vendorPartNumber
-          shipFromBranch: 7
+          shipFromBranch: 5
           status: status
         typeOfDetails: typeOfDetails
         referenceNumber: referenceNumber
         returnReason: returnReason
         caseRequestNumber: caseRequestNumber
-        estimatedTotal: 4.145608029883936
+        estimatedTotal: 3.616076749251911
         status: status
-        additionalFees: 2.027123023002322
+        additionalFees: 9.301444243932576
       properties:
         typeOfDetails:
           description: The type of the details. Return or Claim.
@@ -14099,6 +14041,28 @@ components:
       x-tags:
       - invoices
     ErrorResponse:
+      example:
+        errors:
+        - id: id
+          type: type
+          message: message
+          fields:
+          - field: field
+            message: message
+            value: value
+          - field: field
+            message: message
+            value: value
+        - id: id
+          type: type
+          message: message
+          fields:
+          - field: field
+            message: message
+            value: value
+          - field: field
+            message: message
+            value: value
       properties:
         errors:
           items:
@@ -14971,24 +14935,24 @@ components:
           totalCount: 6
           quoteList:
           - totalAmount: totalAmount
-            createdDate: 2019-10-08T00:00:00.000+00:00
+            createdDate: 2019-10-08
             revisionNumber: 0
-            lastModifiedDate: 2019-10-08T00:00:00.000+00:00
+            lastModifiedDate: 2019-10-08
             endUserName: endUserName
             bidNumber: bidNumber
             quoteNumber: quoteNumber
             quoteStatus: quoteStatus
-            quoteExpiryDate: 2019-10-08T00:00:00.000+00:00
+            quoteExpiryDate: 2019-10-08
             quoteName: quoteName
           - totalAmount: totalAmount
-            createdDate: 2019-10-08T00:00:00.000+00:00
+            createdDate: 2019-10-08
             revisionNumber: 0
-            lastModifiedDate: 2019-10-08T00:00:00.000+00:00
+            lastModifiedDate: 2019-10-08
             endUserName: endUserName
             bidNumber: bidNumber
             quoteNumber: quoteNumber
             quoteStatus: quoteStatus
-            quoteExpiryDate: 2019-10-08T00:00:00.000+00:00
+            quoteExpiryDate: 2019-10-08
             quoteName: quoteName
       properties:
         quoteSearchResponse:
@@ -15111,7 +15075,7 @@ components:
               contactName: contactName
             revisionNumber: revisionNumber
             legalTerms: legalTerms
-            created: 2019-10-04T00:00:00.000+00:00
+            created: 2019-10-04
             priceDeviationExpiryDate: 2000-01-23
             solutionProposed: solutionProposed
             quoteNumber: quoteNumber
@@ -15131,7 +15095,7 @@ components:
               endUserState: endUserState
               endUserEmail: endUserEmail
             customerNeed: customerNeed
-            modified: 2019-10-04T00:00:00.000+00:00
+            modified: 2019-10-04
             vendorAttributes:
               vendorSettingMessage: vendorSettingMessage
               dealId: dealId
@@ -15141,7 +15105,7 @@ components:
             priceDeviationId: priceDeviationId
             leasingInstructions: leasingInstructions
             currencyCode: currencyCode
-            quoteExpiryDate: 2020-01-01T00:00:00.000+00:00
+            quoteExpiryDate: 2020-01-01
             quoteName: quoteName
             status: status
           responsePreamble:
@@ -15935,6 +15899,17 @@ components:
       type: object
     Error:
       additionalProperties: false
+      example:
+        id: id
+        type: type
+        message: message
+        fields:
+        - field: field
+          message: message
+          value: value
+        - field: field
+          message: message
+          value: value
       properties:
         id:
           nullable: true
@@ -15953,6 +15928,28 @@ components:
       type: object
     ErrorResponseDTO:
       additionalProperties: false
+      example:
+        errors:
+        - id: id
+          type: type
+          message: message
+          fields:
+          - field: field
+            message: message
+            value: value
+          - field: field
+            message: message
+            value: value
+        - id: id
+          type: type
+          message: message
+          fields:
+          - field: field
+            message: message
+            value: value
+          - field: field
+            message: message
+            value: value
       properties:
         errors:
           items:
@@ -15962,6 +15959,10 @@ components:
       type: object
     Fields:
       additionalProperties: false
+      example:
+        field: field
+        message: message
+        value: value
       properties:
         field:
           nullable: true
@@ -16605,6 +16606,10 @@ components:
           type: array
       type: object
     get_reseller_v6_validateQuote_400_response_fields_inner:
+      example:
+        field: field
+        message: message
+        value: value
       properties:
         field:
           description: Contains the name of the field.
@@ -16617,6 +16622,17 @@ components:
           type: string
       type: object
     get_reseller_v6_validateQuote_400_response:
+      example:
+        traceid: traceid
+        type: type
+        message: message
+        fields:
+        - field: field
+          message: message
+          value: value
+        - field: field
+          message: message
+          value: value
       properties:
         traceid:
           description: Unique Id to identify error.
@@ -16633,6 +16649,13 @@ components:
           type: array
       type: object
     get_reseller_v6_validateQuote_500_response:
+      example:
+        traceid: traceid
+        type: type
+        message: message
+        fields:
+        - "{}"
+        - "{}"
       properties:
         traceid:
           description: Unique Id to identify error.
@@ -16649,6 +16672,10 @@ components:
           type: array
       type: object
     post_QuoteToOrder_v6_400_response_fields_inner:
+      example:
+        field: field
+        message: message
+        value: value
       properties:
         field:
           description: Name of the field.
@@ -16661,6 +16688,17 @@ components:
           type: string
       type: object
     post_QuoteToOrder_v6_400_response:
+      example:
+        traceid: traceid
+        type: type
+        message: message
+        fields:
+        - field: field
+          message: message
+          value: value
+        - field: field
+          message: message
+          value: value
       properties:
         traceid:
           description: A unique trace id to identify the issue.
@@ -16677,6 +16715,16 @@ components:
           type: array
       type: object
     post_renewalssearch_400_response:
+      example:
+        traceid: traceid
+        type: type
+        fields:
+        - field: field
+          message: message
+          value: value
+        - field: field
+          message: message
+          value: value
       properties:
         traceid:
           description: Unique Id to identify error.
@@ -19551,7 +19599,8 @@ components:
             search API.
           type: string
       type: object
-    ProductDetailResponse_indicators_inner:
+    ProductDetailResponse_indicators:
+      description: Indicators of the Product
       example:
         isHeavyWeight: true
         isEnduserRequired: true
@@ -19686,7 +19735,8 @@ components:
           description: Boolean that indicates whether product is configurable.
           type: boolean
       type: object
-    ProductDetailResponse_ciscoFields_inner:
+    ProductDetailResponse_ciscoFields:
+      description: Cisco product related information.
       example:
         itemType: itemType
         productSubGroup: productSubGroup
@@ -20068,14 +20118,11 @@ components:
         dealId: dealId
         vendor: vendor
         links:
-        - topic: topic
-          href: href
-          type: type
-        - topic: topic
+          topic: topic
           href: href
           type: type
         version: version
-        dealExpiryDate: 2000-01-23
+        dealExpiryDate: dealExpiryDate
       properties:
         dealId:
           description: Deal/Special bid number.
@@ -20091,12 +20138,9 @@ components:
           type: string
         dealExpiryDate:
           description: Expiration date of the deal/Special bid.
-          format: date
           type: string
         links:
-          items:
-            $ref: '#/components/schemas/renewalsSearchResponse_renewals_inner_links_inner'
-          type: array
+          $ref: '#/components/schemas/renewalsSearchResponse_renewals_inner_links_inner'
       type: object
     dealsDetailsResponse_products_inner:
       example:
@@ -20185,7 +20229,7 @@ components:
     returnsSearchResponse_returnsClaims_inner:
       example:
         modifiedOn: modifiedOn
-        estimatedTotalValue: 2000-01-23
+        estimatedTotalValue: 5.962133916683182
         referenceNumber: referenceNumber
         returnReason: returnReason
         returnClaimId: returnClaimId
@@ -20198,8 +20242,8 @@ components:
           href: href
           type: type
         type: type
-        credit: 5.962133916683182
-        createdOn: 2000-01-23
+        credit: 5.637376656633329
+        createdOn: createdOn
         status: status
       properties:
         returnClaimId:
@@ -20210,7 +20254,6 @@ components:
           type: string
         createdOn:
           description: 'The date on which the return request was created. '
-          format: date
           type: string
         type:
           description: Type of request.
@@ -20223,8 +20266,8 @@ components:
           type: string
         estimatedTotalValue:
           description: The estimated total value of the return.
-          format: date
-          type: string
+          format: double
+          type: number
         credit:
           description: The amount of credit.
           format: decimal
@@ -20243,19 +20286,19 @@ components:
     returnsDetailsResponse_products_inner:
       example:
         ingramPartNumber: ingramPartNumber
-        unitPrice: 5.962133916683182
-        quantity: 1
-        requestDetails: 6
+        unitPrice: 6.027456183070403
+        quantity: 0.8008281904610115
+        requestDetails: requestDetails
         description: description
         upc: upc
         ingramLineNumber: ingramLineNumber
         invoiceDate: 2000-01-23
-        customerOrderNumber: 0
-        extendedPrice: 5.637376656633329
+        customerOrderNumber: customerOrderNumber
+        extendedPrice: 1.4658129805029452
         invoiceNumber: invoiceNumber
-        returnBranch: 2
+        returnBranch: 5
         vendorPartNumber: vendorPartNumber
-        shipFromBranch: 7
+        shipFromBranch: 5
         status: status
       properties:
         ingramLineNumber:
@@ -20282,13 +20325,14 @@ components:
           type: string
         customerOrderNumber:
           description: The reseller's order number for reference in their system.
-          type: integer
+          type: string
         requestDetails:
           description: Request details.
-          type: integer
+          type: string
         quantity:
           description: The quantity of the line item.
-          type: integer
+          format: decimal
+          type: number
         unitPrice:
           description: The unit price of the line item.
           format: decimal
@@ -22227,6 +22271,10 @@ components:
           type: string
       type: object
     ErrorResponse_errors_inner_fields_inner:
+      example:
+        field: field
+        message: message
+        value: value
       properties:
         field:
           description: Contains the name of the field.
@@ -22239,6 +22287,17 @@ components:
           type: string
       type: object
     ErrorResponse_errors_inner:
+      example:
+        id: id
+        type: type
+        message: message
+        fields:
+        - field: field
+          message: message
+          value: value
+        - field: field
+          message: message
+          value: value
       properties:
         id:
           description: Unique Id to identify error.
@@ -24643,14 +24702,14 @@ components:
     quoteListResponse_quoteSearchResponse_quoteList_inner:
       example:
         totalAmount: totalAmount
-        createdDate: 2019-10-08T00:00:00.000+00:00
+        createdDate: 2019-10-08
         revisionNumber: 0
-        lastModifiedDate: 2019-10-08T00:00:00.000+00:00
+        lastModifiedDate: 2019-10-08
         endUserName: endUserName
         bidNumber: bidNumber
         quoteNumber: quoteNumber
         quoteStatus: quoteStatus
-        quoteExpiryDate: 2019-10-08T00:00:00.000+00:00
+        quoteExpiryDate: 2019-10-08
         quoteName: quoteName
       properties:
         quoteName:
@@ -24710,24 +24769,24 @@ components:
         totalCount: 6
         quoteList:
         - totalAmount: totalAmount
-          createdDate: 2019-10-08T00:00:00.000+00:00
+          createdDate: 2019-10-08
           revisionNumber: 0
-          lastModifiedDate: 2019-10-08T00:00:00.000+00:00
+          lastModifiedDate: 2019-10-08
           endUserName: endUserName
           bidNumber: bidNumber
           quoteNumber: quoteNumber
           quoteStatus: quoteStatus
-          quoteExpiryDate: 2019-10-08T00:00:00.000+00:00
+          quoteExpiryDate: 2019-10-08
           quoteName: quoteName
         - totalAmount: totalAmount
-          createdDate: 2019-10-08T00:00:00.000+00:00
+          createdDate: 2019-10-08
           revisionNumber: 0
-          lastModifiedDate: 2019-10-08T00:00:00.000+00:00
+          lastModifiedDate: 2019-10-08
           endUserName: endUserName
           bidNumber: bidNumber
           quoteNumber: quoteNumber
           quoteStatus: quoteStatus
-          quoteExpiryDate: 2019-10-08T00:00:00.000+00:00
+          quoteExpiryDate: 2019-10-08
           quoteName: quoteName
       properties:
         responsePreamble:
@@ -24876,7 +24935,7 @@ components:
           contactName: contactName
         revisionNumber: revisionNumber
         legalTerms: legalTerms
-        created: 2019-10-04T00:00:00.000+00:00
+        created: 2019-10-04
         priceDeviationExpiryDate: 2000-01-23
         solutionProposed: solutionProposed
         quoteNumber: quoteNumber
@@ -24896,7 +24955,7 @@ components:
           endUserState: endUserState
           endUserEmail: endUserEmail
         customerNeed: customerNeed
-        modified: 2019-10-04T00:00:00.000+00:00
+        modified: 2019-10-04
         vendorAttributes:
           vendorSettingMessage: vendorSettingMessage
           dealId: dealId
@@ -24906,7 +24965,7 @@ components:
         priceDeviationId: priceDeviationId
         leasingInstructions: leasingInstructions
         currencyCode: currencyCode
-        quoteExpiryDate: 2020-01-01T00:00:00.000+00:00
+        quoteExpiryDate: 2020-01-01
         quoteName: quoteName
         status: status
       properties:
@@ -24981,7 +25040,7 @@ components:
             contactName: contactName
           revisionNumber: revisionNumber
           legalTerms: legalTerms
-          created: 2019-10-04T00:00:00.000+00:00
+          created: 2019-10-04
           priceDeviationExpiryDate: 2000-01-23
           solutionProposed: solutionProposed
           quoteNumber: quoteNumber
@@ -25001,7 +25060,7 @@ components:
             endUserState: endUserState
             endUserEmail: endUserEmail
           customerNeed: customerNeed
-          modified: 2019-10-04T00:00:00.000+00:00
+          modified: 2019-10-04
           vendorAttributes:
             vendorSettingMessage: vendorSettingMessage
             dealId: dealId
@@ -25011,7 +25070,7 @@ components:
           priceDeviationId: priceDeviationId
           leasingInstructions: leasingInstructions
           currencyCode: currencyCode
-          quoteExpiryDate: 2020-01-01T00:00:00.000+00:00
+          quoteExpiryDate: 2020-01-01
           quoteName: quoteName
           status: status
         responsePreamble:

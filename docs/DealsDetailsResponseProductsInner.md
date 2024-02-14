@@ -15,8 +15,8 @@ Name | Type | Description | Notes
 **RemainingQuantity** | **int** | The quantity remaining as part of the deal for the customer to order. | [optional] 
 **Comments** | **string** | Comments of the deal. | [optional] 
 **SpecialConditions** | **string** | Special conditions of the deal. | [optional] 
-**StartDate** | **DateTime** | Start Date. | [optional] 
-**ExpirationDate** | **DateTime** | Expiration date. | [optional] 
+**StartDate** | **DateOnly** | Start Date. | [optional] 
+**ExpirationDate** | **DateOnly** | Expiration date. | [optional] 
 **DaysRemaining** | **int** | Number of days remaining before the deal expires. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

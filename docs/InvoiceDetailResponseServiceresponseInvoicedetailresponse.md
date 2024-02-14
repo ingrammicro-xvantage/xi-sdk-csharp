@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Customernumber** | **string** |  | [optional] 
 **Invoicenumber** | **string** |  | [optional] 
-**Invoicedate** | **DateTime** |  | [optional] 
+**Invoicedate** | **DateOnly** |  | [optional] 
 **Invoicetype** | **string** |  | [optional] 
 **Customerordernumber** | **string** |  | [optional] 
 **Customerfreightamount** | **double** |  | [optional] 
