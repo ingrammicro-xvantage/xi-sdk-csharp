@@ -1,6 +1,6 @@
 # xi.sdk.resellers.Api.ProductCatalogApi
 
-All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
+All URIs are relative to *https://api.ingrammicro.com:443*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
@@ -32,7 +32,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.ingrammicro.com:443/sandbox";
+            config.BasePath = "https://api.ingrammicro.com:443";
             // Configure OAuth2 access token for authorization: application
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
@@ -141,7 +141,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.ingrammicro.com:443/sandbox";
+            config.BasePath = "https://api.ingrammicro.com:443";
             // Configure OAuth2 access token for authorization: application
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
@@ -248,7 +248,7 @@ catch (ApiException e)
 
 <a id="postpriceandavailability"></a>
 # **PostPriceandavailability**
-> List&lt;PriceAndAvailabilityResponseInner&gt; PostPriceandavailability (List<bool> includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, PriceAndAvailabilityRequest priceAndAvailabilityRequest, bool? includeProductAttributes = null, string? iMSenderID = null)
+> List&lt;PriceAndAvailabilityResponseInner&gt; PostPriceandavailability (bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, PriceAndAvailabilityRequest priceAndAvailabilityRequest, bool? includeProductAttributes = null, string? iMSenderID = null)
 
 Price and Availability
 
@@ -270,7 +270,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.ingrammicro.com:443/sandbox";
+            config.BasePath = "https://api.ingrammicro.com:443";
             // Configure OAuth2 access token for authorization: application
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
@@ -278,7 +278,7 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new ProductCatalogApi(httpClient, config, httpClientHandler);
-            var includeAvailability = new List<bool>(); // List<bool> | Pass boolean value as input, if true the response will contain warehouse availability details, if false the response will not hold warehouse availability details
+            var includeAvailability = true;  // bool | Pass boolean value as input, if true the response will contain warehouse availability details, if false the response will not hold warehouse availability details
             var includePricing = true;  // bool | Pass boolean value as input, if true the response will contain Pricing details of the Product, if false the response will not hold Pricing details.
             var iMCustomerNumber = 20-222222;  // string | Your unique Ingram Micro customer number.
             var iMCountryCode = US;  // string | Two-character ISO country code.
@@ -328,7 +328,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **includeAvailability** | [**List&lt;bool&gt;**](bool.md) | Pass boolean value as input, if true the response will contain warehouse availability details, if false the response will not hold warehouse availability details |  |
+| **includeAvailability** | **bool** | Pass boolean value as input, if true the response will contain warehouse availability details, if false the response will not hold warehouse availability details |  |
 | **includePricing** | **bool** | Pass boolean value as input, if true the response will contain Pricing details of the Product, if false the response will not hold Pricing details. |  |
 | **iMCustomerNumber** | **string** | Your unique Ingram Micro customer number. |  |
 | **iMCountryCode** | **string** | Two-character ISO country code. |  |

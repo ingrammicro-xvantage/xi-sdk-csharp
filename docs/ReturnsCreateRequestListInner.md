@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **InvoiceNumber** | **string** | The Invoice number of the order. | 
-**InvoiceDate** | **DateTime** | Date of an Invoice. | 
+**InvoiceDate** | **DateOnly** | Date of an Invoice. | 
 **CustomerOrderNumber** | **string** | The reseller&#39;s order number for reference in their system. | [optional] 
 **IngramPartNumber** | **string** | Unique line number from Ingram. | [optional] 
 **VendorPartNumber** | **string** | Vendor Part Number. | [optional] 

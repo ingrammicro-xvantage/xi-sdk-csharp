@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **Orderedquantity** | **string** |  | [optional] 
 **Marginpercent** | **string** |  | [optional] 
 **Backorderquantity** | **string** |  | [optional] 
-**Backorderetadate** | **DateTime** |  | [optional] 
+**Backorderetadate** | **DateOnly** |  | [optional] 
 **Extendedprice** | **string** |  | [optional] 
 **Specialbidnumber** | **string** |  | [optional] 
 **Ordersuffix** | **string** |  | [optional] 

@@ -11,9 +11,9 @@ Name | Type | Description | Notes
 **BidNumber** | **string** | Special Pricing Bid Number, also refers to as Dart Number relates to a unique pricing deal associated with a vendor for the quote. | [optional] 
 **TotalAmount** | **string** | Total amount of quoted price for all products in the quote. | [optional] 
 **QuoteStatus** | **string** | This refers to the primary status of the quote. API responses will return: Active | [optional] 
-**CreatedDate** | **DateTime** | Date the Quote was initially Created | [optional] 
-**LastModifiedDate** | **DateTime** | Date the Quote was last updated or modified. | [optional] 
-**QuoteExpiryDate** | **DateTime** | Date the Quote Expires | [optional] 
+**CreatedDate** | **DateOnly** | Date the Quote was initially Created | [optional] 
+**LastModifiedDate** | **DateOnly** | Date the Quote was last updated or modified. | [optional] 
+**QuoteExpiryDate** | **DateOnly** | Date the Quote Expires | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

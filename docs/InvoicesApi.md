@@ -1,11 +1,11 @@
 # xi.sdk.resellers.Api.InvoicesApi
 
-All URIs are relative to *https://api.ingrammicro.com:443/sandbox*
+All URIs are relative to *https://api.ingrammicro.com:443*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
 | [**GetInvoicedetailsV61**](InvoicesApi.md#getinvoicedetailsv61) | **GET** /resellers/v6.1/invoices/{invoiceNumber} | Get Invoice Details v6.1 |
-| [**GetResellersV6Invoicesearch**](InvoicesApi.md#getresellersv6invoicesearch) | **GET** /resellers/v6/invoices/ | Search your invoice |
+| [**GetResellersV6Invoicesearch**](InvoicesApi.md#getresellersv6invoicesearch) | **GET** /resellers/v6/invoices | Search your invoice |
 
 <a id="getinvoicedetailsv61"></a>
 # **GetInvoicedetailsV61**
@@ -31,7 +31,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.ingrammicro.com:443/sandbox";
+            config.BasePath = "https://api.ingrammicro.com:443";
             // Configure OAuth2 access token for authorization: application
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
@@ -143,7 +143,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.ingrammicro.com:443/sandbox";
+            config.BasePath = "https://api.ingrammicro.com:443";
             // Configure OAuth2 access token for authorization: application
             config.AccessToken = "YOUR_ACCESS_TOKEN";
 
