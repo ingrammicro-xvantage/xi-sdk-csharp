@@ -53,7 +53,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="technicalSpecifications">Technical specifications of the product..</param>
         /// <param name="warrantyInformation">Warranty information related to the product..</param>
         /// <param name="additionalInformation">additionalInformation.</param>
-        public ProductDetailResponse(string ingramPartNumber = default(string), string vendorPartNumber = default(string), string customerPartNumber = default(string), bool productAuthorized = default(bool), string description = default(string), string productDetailDescription = default(string), string upc = default(string), string productCategory = default(string), string productSubcategory = default(string), string vendorName = default(string), string vendorNumber = default(string), string productStatusCode = default(string), string productClass = default(string), ProductDetailResponseIndicators indicators = default(ProductDetailResponseIndicators), ProductDetailResponseCiscoFields ciscoFields = default(ProductDetailResponseCiscoFields), List<ProductDetailResponseTechnicalSpecificationsInner> technicalSpecifications = default(List<ProductDetailResponseTechnicalSpecificationsInner>), List<Object> warrantyInformation = default(List<Object>), ProductDetailResponseAdditionalInformation additionalInformation = default(ProductDetailResponseAdditionalInformation))
+        public ProductDetailResponse(string ingramPartNumber = default(string), string vendorPartNumber = default(string), string customerPartNumber = default(string), string productAuthorized = default(string), string description = default(string), string productDetailDescription = default(string), string upc = default(string), string productCategory = default(string), string productSubcategory = default(string), string vendorName = default(string), string vendorNumber = default(string), string productStatusCode = default(string), string productClass = default(string), ProductDetailResponseIndicators indicators = default(ProductDetailResponseIndicators), ProductDetailResponseCiscoFields ciscoFields = default(ProductDetailResponseCiscoFields), List<ProductDetailResponseTechnicalSpecificationsInner> technicalSpecifications = default(List<ProductDetailResponseTechnicalSpecificationsInner>), List<Object> warrantyInformation = default(List<Object>), ProductDetailResponseAdditionalInformation additionalInformation = default(ProductDetailResponseAdditionalInformation))
         {
             this.IngramPartNumber = ingramPartNumber;
             this.VendorPartNumber = vendorPartNumber;
@@ -100,8 +100,8 @@ namespace xi.sdk.resellers.Model
         /// Boolean that indicates whether a product is authorized.
         /// </summary>
         /// <value>Boolean that indicates whether a product is authorized.</value>
-        [DataMember(Name = "productAuthorized", EmitDefaultValue = true)]
-        public bool ProductAuthorized { get; set; }
+        [DataMember(Name = "productAuthorized", EmitDefaultValue = false)]
+        public string ProductAuthorized { get; set; }
 
         /// <summary>
         /// The description given for the product.
