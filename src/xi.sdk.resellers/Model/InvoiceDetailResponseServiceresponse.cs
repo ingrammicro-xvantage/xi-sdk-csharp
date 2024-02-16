@@ -1,5 +1,5 @@
 /*
- * XI SDK Resellers
+ * XI Sdk Resellers
  *
  * For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
  *
@@ -29,7 +29,7 @@ namespace xi.sdk.resellers.Model
     /// <summary>
     /// InvoiceDetailResponseServiceresponse
     /// </summary>
-    [DataContract(Name = "invoiceDetailResponse_serviceresponse")]
+    [DataContract(Name = "InvoiceDetailResponse_serviceresponse")]
     public partial class InvoiceDetailResponseServiceresponse : IValidatableObject
     {
         /// <summary>

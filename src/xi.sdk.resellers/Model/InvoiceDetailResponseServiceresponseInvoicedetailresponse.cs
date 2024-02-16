@@ -1,5 +1,5 @@
 /*
- * XI SDK Resellers
+ * XI Sdk Resellers
  *
  * For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
  *
@@ -29,7 +29,7 @@ namespace xi.sdk.resellers.Model
     /// <summary>
     /// InvoiceDetailResponseServiceresponseInvoicedetailresponse
     /// </summary>
-    [DataContract(Name = "invoiceDetailResponse_serviceresponse_invoicedetailresponse")]
+    [DataContract(Name = "InvoiceDetailResponse_serviceresponse_invoicedetailresponse")]
     public partial class InvoiceDetailResponseServiceresponseInvoicedetailresponse : IValidatableObject
     {
         /// <summary>
@@ -46,7 +46,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="totalamount">totalamount.</param>
         /// <param name="shiptosuffix">shiptosuffix.</param>
         /// <param name="billtosuffix">billtosuffix.</param>
-        /// <param name="freightamount">freightamount.</param>
+        /// <param name="freightamount">May not be available in all countries.</param>
         /// <param name="paymentterms">paymentterms.</param>
         /// <param name="orderdate">orderdate.</param>
         /// <param name="carrier">carrier.</param>
@@ -56,7 +56,28 @@ namespace xi.sdk.resellers.Model
         /// <param name="enduserponumber">enduserponumber.</param>
         /// <param name="freightforwardercode">freightforwardercode.</param>
         /// <param name="creditmemoreasoncode">creditmemoreasoncode.</param>
-        public InvoiceDetailResponseServiceresponseInvoicedetailresponse(string customernumber = default(string), string invoicenumber = default(string), DateOnly invoicedate = default(DateOnly), string invoicetype = default(string), string customerordernumber = default(string), double customerfreightamount = default(double), float customerforeignfrightamt = default(float), double totaltaxamount = default(double), double totalamount = default(double), string shiptosuffix = default(string), string billtosuffix = default(string), double freightamount = default(double), string paymentterms = default(string), string orderdate = default(string), string carrier = default(string), string carrierdescription = default(string), double discountamount = default(double), string taxtype = default(string), string enduserponumber = default(string), string freightforwardercode = default(string), string creditmemoreasoncode = default(string))
+        /// <param name="fulfillmentflag">fulfillmentflag.</param>
+        /// <param name="holdreason">holdreason.</param>
+        /// <param name="shipcomplete">shipcomplete.</param>
+        /// <param name="shipdate">shipdate.</param>
+        /// <param name="companycurrency">companycurrency.</param>
+        /// <param name="currencycode">currencycode.</param>
+        /// <param name="currencyrate">currencyrate.</param>
+        /// <param name="globalorderid">globalorderid.</param>
+        /// <param name="originalshipcode">originalshipcode.</param>
+        /// <param name="ordertype">ordertype.</param>
+        /// <param name="orderstatus">orderstatus.</param>
+        /// <param name="totalotherfees">totalotherfees.</param>
+        /// <param name="totalsales">totalsales.</param>
+        /// <param name="weight">weight.</param>
+        /// <param name="shippableswitch">shippableswitch.</param>
+        /// <param name="soldto">soldto.</param>
+        /// <param name="billto">billto.</param>
+        /// <param name="shoptoaddress">shoptoaddress.</param>
+        /// <param name="lines">lines.</param>
+        /// <param name="extendedspecs">extendedspecs.</param>
+        /// <param name="miscfeeline">miscfeeline.</param>
+        public InvoiceDetailResponseServiceresponseInvoicedetailresponse(string customernumber = default(string), string invoicenumber = default(string), DateOnly invoicedate = default(DateOnly), string invoicetype = default(string), string customerordernumber = default(string), double customerfreightamount = default(double), float customerforeignfrightamt = default(float), double totaltaxamount = default(double), double totalamount = default(double), string shiptosuffix = default(string), string billtosuffix = default(string), double freightamount = default(double), string paymentterms = default(string), DateOnly orderdate = default(DateOnly), string carrier = default(string), string carrierdescription = default(string), double discountamount = default(double), string taxtype = default(string), string enduserponumber = default(string), string freightforwardercode = default(string), string creditmemoreasoncode = default(string), string fulfillmentflag = default(string), string holdreason = default(string), string shipcomplete = default(string), DateOnly shipdate = default(DateOnly), string companycurrency = default(string), string currencycode = default(string), string currencyrate = default(string), string globalorderid = default(string), string originalshipcode = default(string), string ordertype = default(string), string orderstatus = default(string), decimal totalotherfees = default(decimal), string totalsales = default(string), string weight = default(string), string shippableswitch = default(string), AddressType soldto = default(AddressType), AddressType billto = default(AddressType), AddressType shoptoaddress = default(AddressType), List<ProductLineType> lines = default(List<ProductLineType>), List<InvoiceDetailResponseServiceresponseInvoicedetailresponseExtendedspecsInner> extendedspecs = default(List<InvoiceDetailResponseServiceresponseInvoicedetailresponseExtendedspecsInner>), List<InvoiceDetailResponseServiceresponseInvoicedetailresponseMiscfeelineInner> miscfeeline = default(List<InvoiceDetailResponseServiceresponseInvoicedetailresponseMiscfeelineInner>))
         {
             this.Customernumber = customernumber;
             this.Invoicenumber = invoicenumber;
@@ -79,6 +100,27 @@ namespace xi.sdk.resellers.Model
             this.Enduserponumber = enduserponumber;
             this.Freightforwardercode = freightforwardercode;
             this.Creditmemoreasoncode = creditmemoreasoncode;
+            this.Fulfillmentflag = fulfillmentflag;
+            this.Holdreason = holdreason;
+            this.Shipcomplete = shipcomplete;
+            this.Shipdate = shipdate;
+            this.Companycurrency = companycurrency;
+            this.Currencycode = currencycode;
+            this.Currencyrate = currencyrate;
+            this.Globalorderid = globalorderid;
+            this.Originalshipcode = originalshipcode;
+            this.Ordertype = ordertype;
+            this.Orderstatus = orderstatus;
+            this.Totalotherfees = totalotherfees;
+            this.Totalsales = totalsales;
+            this.Weight = weight;
+            this.Shippableswitch = shippableswitch;
+            this.Soldto = soldto;
+            this.Billto = billto;
+            this.Shoptoaddress = shoptoaddress;
+            this.Lines = lines;
+            this.Extendedspecs = extendedspecs;
+            this.Miscfeeline = miscfeeline;
         }
 
         /// <summary>
@@ -149,8 +191,9 @@ namespace xi.sdk.resellers.Model
         public string Billtosuffix { get; set; }
 
         /// <summary>
-        /// Gets or Sets Freightamount
+        /// May not be available in all countries
         /// </summary>
+        /// <value>May not be available in all countries</value>
         [DataMember(Name = "freightamount", EmitDefaultValue = false)]
         public double Freightamount { get; set; }
 
@@ -164,7 +207,8 @@ namespace xi.sdk.resellers.Model
         /// Gets or Sets Orderdate
         /// </summary>
         [DataMember(Name = "orderdate", EmitDefaultValue = false)]
-        public string Orderdate { get; set; }
+        [JsonConverter(typeof(OpenAPIDateConverter))]
+        public DateOnly Orderdate { get; set; }
 
         /// <summary>
         /// Gets or Sets Carrier
@@ -209,6 +253,133 @@ namespace xi.sdk.resellers.Model
         public string Creditmemoreasoncode { get; set; }
 
         /// <summary>
+        /// Gets or Sets Fulfillmentflag
+        /// </summary>
+        [DataMember(Name = "fulfillmentflag", EmitDefaultValue = false)]
+        public string Fulfillmentflag { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Holdreason
+        /// </summary>
+        [DataMember(Name = "holdreason", EmitDefaultValue = false)]
+        public string Holdreason { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Shipcomplete
+        /// </summary>
+        [DataMember(Name = "shipcomplete", EmitDefaultValue = false)]
+        public string Shipcomplete { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Shipdate
+        /// </summary>
+        [DataMember(Name = "shipdate", EmitDefaultValue = false)]
+        [JsonConverter(typeof(OpenAPIDateConverter))]
+        public DateOnly Shipdate { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Companycurrency
+        /// </summary>
+        [DataMember(Name = "companycurrency", EmitDefaultValue = false)]
+        public string Companycurrency { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Currencycode
+        /// </summary>
+        [DataMember(Name = "currencycode", EmitDefaultValue = false)]
+        public string Currencycode { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Currencyrate
+        /// </summary>
+        [DataMember(Name = "currencyrate", EmitDefaultValue = false)]
+        public string Currencyrate { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Globalorderid
+        /// </summary>
+        [DataMember(Name = "globalorderid", EmitDefaultValue = false)]
+        public string Globalorderid { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Originalshipcode
+        /// </summary>
+        [DataMember(Name = "originalshipcode", EmitDefaultValue = false)]
+        public string Originalshipcode { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Ordertype
+        /// </summary>
+        [DataMember(Name = "ordertype", EmitDefaultValue = false)]
+        public string Ordertype { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Orderstatus
+        /// </summary>
+        [DataMember(Name = "orderstatus", EmitDefaultValue = false)]
+        public string Orderstatus { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Totalotherfees
+        /// </summary>
+        [DataMember(Name = "totalotherfees", EmitDefaultValue = false)]
+        public decimal Totalotherfees { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Totalsales
+        /// </summary>
+        [DataMember(Name = "totalsales", EmitDefaultValue = false)]
+        public string Totalsales { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Weight
+        /// </summary>
+        [DataMember(Name = "weight", EmitDefaultValue = false)]
+        public string Weight { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Shippableswitch
+        /// </summary>
+        [DataMember(Name = "shippableswitch", EmitDefaultValue = false)]
+        public string Shippableswitch { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Soldto
+        /// </summary>
+        [DataMember(Name = "soldto", EmitDefaultValue = false)]
+        public AddressType Soldto { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Billto
+        /// </summary>
+        [DataMember(Name = "billto", EmitDefaultValue = false)]
+        public AddressType Billto { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Shoptoaddress
+        /// </summary>
+        [DataMember(Name = "shoptoaddress", EmitDefaultValue = false)]
+        public AddressType Shoptoaddress { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Lines
+        /// </summary>
+        [DataMember(Name = "lines", EmitDefaultValue = false)]
+        public List<ProductLineType> Lines { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Extendedspecs
+        /// </summary>
+        [DataMember(Name = "extendedspecs", EmitDefaultValue = false)]
+        public List<InvoiceDetailResponseServiceresponseInvoicedetailresponseExtendedspecsInner> Extendedspecs { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Miscfeeline
+        /// </summary>
+        [DataMember(Name = "miscfeeline", EmitDefaultValue = false)]
+        public List<InvoiceDetailResponseServiceresponseInvoicedetailresponseMiscfeelineInner> Miscfeeline { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -237,6 +408,27 @@ namespace xi.sdk.resellers.Model
             sb.Append("  Enduserponumber: ").Append(Enduserponumber).Append("\n");
             sb.Append("  Freightforwardercode: ").Append(Freightforwardercode).Append("\n");
             sb.Append("  Creditmemoreasoncode: ").Append(Creditmemoreasoncode).Append("\n");
+            sb.Append("  Fulfillmentflag: ").Append(Fulfillmentflag).Append("\n");
+            sb.Append("  Holdreason: ").Append(Holdreason).Append("\n");
+            sb.Append("  Shipcomplete: ").Append(Shipcomplete).Append("\n");
+            sb.Append("  Shipdate: ").Append(Shipdate).Append("\n");
+            sb.Append("  Companycurrency: ").Append(Companycurrency).Append("\n");
+            sb.Append("  Currencycode: ").Append(Currencycode).Append("\n");
+            sb.Append("  Currencyrate: ").Append(Currencyrate).Append("\n");
+            sb.Append("  Globalorderid: ").Append(Globalorderid).Append("\n");
+            sb.Append("  Originalshipcode: ").Append(Originalshipcode).Append("\n");
+            sb.Append("  Ordertype: ").Append(Ordertype).Append("\n");
+            sb.Append("  Orderstatus: ").Append(Orderstatus).Append("\n");
+            sb.Append("  Totalotherfees: ").Append(Totalotherfees).Append("\n");
+            sb.Append("  Totalsales: ").Append(Totalsales).Append("\n");
+            sb.Append("  Weight: ").Append(Weight).Append("\n");
+            sb.Append("  Shippableswitch: ").Append(Shippableswitch).Append("\n");
+            sb.Append("  Soldto: ").Append(Soldto).Append("\n");
+            sb.Append("  Billto: ").Append(Billto).Append("\n");
+            sb.Append("  Shoptoaddress: ").Append(Shoptoaddress).Append("\n");
+            sb.Append("  Lines: ").Append(Lines).Append("\n");
+            sb.Append("  Extendedspecs: ").Append(Extendedspecs).Append("\n");
+            sb.Append("  Miscfeeline: ").Append(Miscfeeline).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

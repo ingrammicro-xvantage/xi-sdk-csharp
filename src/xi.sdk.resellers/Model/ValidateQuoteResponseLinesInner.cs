@@ -1,5 +1,5 @@
 /*
- * XI SDK Resellers
+ * XI Sdk Resellers
  *
  * For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
  *
@@ -39,7 +39,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="ingramPartNumber">Unique Ingram Micro part number..</param>
         /// <param name="quantity">The quantity of the line item..</param>
         /// <param name="vmfAdditionalAttributesLines">The object containing the list of fields required at a line level by the vendor..</param>
-        public ValidateQuoteResponseLinesInner(string customerLineNumber = default(string), string ingramPartNumber = default(string), string quantity = default(string), List<ValidateQuoteResponseLinesInnerVmfAdditionalAttributesLinesInner> vmfAdditionalAttributesLines = default(List<ValidateQuoteResponseLinesInnerVmfAdditionalAttributesLinesInner>))
+        public ValidateQuoteResponseLinesInner(string customerLineNumber = default(string), string ingramPartNumber = default(string), string quantity = default(string), List<QuoteToOrderDetailsDTOLinesInnerVmfAdditionalAttributesLinesInner> vmfAdditionalAttributesLines = default(List<QuoteToOrderDetailsDTOLinesInnerVmfAdditionalAttributesLinesInner>))
         {
             this.CustomerLineNumber = customerLineNumber;
             this.IngramPartNumber = ingramPartNumber;
@@ -76,7 +76,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>The object containing the list of fields required at a line level by the vendor.</value>
         [DataMember(Name = "vmfAdditionalAttributesLines", EmitDefaultValue = false)]
-        public List<ValidateQuoteResponseLinesInnerVmfAdditionalAttributesLinesInner> VmfAdditionalAttributesLines { get; set; }
+        public List<QuoteToOrderDetailsDTOLinesInnerVmfAdditionalAttributesLinesInner> VmfAdditionalAttributesLines { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

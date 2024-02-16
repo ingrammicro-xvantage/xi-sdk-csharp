@@ -1,5 +1,5 @@
 /*
- * XI SDK Resellers
+ * XI Sdk Resellers
  *
  * For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
  *
@@ -55,12 +55,237 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'QuoteDetailResponse'
+        /// Test the property 'QuoteName'
         /// </summary>
         [Fact]
-        public void QuoteDetailResponseTest()
+        public void QuoteNameTest()
         {
-            // TODO unit test for the property 'QuoteDetailResponse'
+            // TODO unit test for the property 'QuoteName'
+        }
+
+        /// <summary>
+        /// Test the property 'QuoteNumber'
+        /// </summary>
+        [Fact]
+        public void QuoteNumberTest()
+        {
+            // TODO unit test for the property 'QuoteNumber'
+        }
+
+        /// <summary>
+        /// Test the property 'Revision'
+        /// </summary>
+        [Fact]
+        public void RevisionTest()
+        {
+            // TODO unit test for the property 'Revision'
+        }
+
+        /// <summary>
+        /// Test the property 'IngramQuoteDate'
+        /// </summary>
+        [Fact]
+        public void IngramQuoteDateTest()
+        {
+            // TODO unit test for the property 'IngramQuoteDate'
+        }
+
+        /// <summary>
+        /// Test the property 'LastModifiedDate'
+        /// </summary>
+        [Fact]
+        public void LastModifiedDateTest()
+        {
+            // TODO unit test for the property 'LastModifiedDate'
+        }
+
+        /// <summary>
+        /// Test the property 'IngramQuoteExpiryDate'
+        /// </summary>
+        [Fact]
+        public void IngramQuoteExpiryDateTest()
+        {
+            // TODO unit test for the property 'IngramQuoteExpiryDate'
+        }
+
+        /// <summary>
+        /// Test the property 'CurrencyCode'
+        /// </summary>
+        [Fact]
+        public void CurrencyCodeTest()
+        {
+            // TODO unit test for the property 'CurrencyCode'
+        }
+
+        /// <summary>
+        /// Test the property 'SpecialBidId'
+        /// </summary>
+        [Fact]
+        public void SpecialBidIdTest()
+        {
+            // TODO unit test for the property 'SpecialBidId'
+        }
+
+        /// <summary>
+        /// Test the property 'SpecialBidEffectiveDate'
+        /// </summary>
+        [Fact]
+        public void SpecialBidEffectiveDateTest()
+        {
+            // TODO unit test for the property 'SpecialBidEffectiveDate'
+        }
+
+        /// <summary>
+        /// Test the property 'SpecialBidExpirationDate'
+        /// </summary>
+        [Fact]
+        public void SpecialBidExpirationDateTest()
+        {
+            // TODO unit test for the property 'SpecialBidExpirationDate'
+        }
+
+        /// <summary>
+        /// Test the property 'Status'
+        /// </summary>
+        [Fact]
+        public void StatusTest()
+        {
+            // TODO unit test for the property 'Status'
+        }
+
+        /// <summary>
+        /// Test the property 'CustomerNeed'
+        /// </summary>
+        [Fact]
+        public void CustomerNeedTest()
+        {
+            // TODO unit test for the property 'CustomerNeed'
+        }
+
+        /// <summary>
+        /// Test the property 'ProposedSolution'
+        /// </summary>
+        [Fact]
+        public void ProposedSolutionTest()
+        {
+            // TODO unit test for the property 'ProposedSolution'
+        }
+
+        /// <summary>
+        /// Test the property 'IntroPreamble'
+        /// </summary>
+        [Fact]
+        public void IntroPreambleTest()
+        {
+            // TODO unit test for the property 'IntroPreamble'
+        }
+
+        /// <summary>
+        /// Test the property 'PurchaseInstructions'
+        /// </summary>
+        [Fact]
+        public void PurchaseInstructionsTest()
+        {
+            // TODO unit test for the property 'PurchaseInstructions'
+        }
+
+        /// <summary>
+        /// Test the property 'LegalTerms'
+        /// </summary>
+        [Fact]
+        public void LegalTermsTest()
+        {
+            // TODO unit test for the property 'LegalTerms'
+        }
+
+        /// <summary>
+        /// Test the property 'LeaseInfo'
+        /// </summary>
+        [Fact]
+        public void LeaseInfoTest()
+        {
+            // TODO unit test for the property 'LeaseInfo'
+        }
+
+        /// <summary>
+        /// Test the property 'LeasingInstructions'
+        /// </summary>
+        [Fact]
+        public void LeasingInstructionsTest()
+        {
+            // TODO unit test for the property 'LeasingInstructions'
+        }
+
+        /// <summary>
+        /// Test the property 'ResellerInfo'
+        /// </summary>
+        [Fact]
+        public void ResellerInfoTest()
+        {
+            // TODO unit test for the property 'ResellerInfo'
+        }
+
+        /// <summary>
+        /// Test the property 'EndUserInfo'
+        /// </summary>
+        [Fact]
+        public void EndUserInfoTest()
+        {
+            // TODO unit test for the property 'EndUserInfo'
+        }
+
+        /// <summary>
+        /// Test the property 'Products'
+        /// </summary>
+        [Fact]
+        public void ProductsTest()
+        {
+            // TODO unit test for the property 'Products'
+        }
+
+        /// <summary>
+        /// Test the property 'ProductsCount'
+        /// </summary>
+        [Fact]
+        public void ProductsCountTest()
+        {
+            // TODO unit test for the property 'ProductsCount'
+        }
+
+        /// <summary>
+        /// Test the property 'ExtendedMsrpTotal'
+        /// </summary>
+        [Fact]
+        public void ExtendedMsrpTotalTest()
+        {
+            // TODO unit test for the property 'ExtendedMsrpTotal'
+        }
+
+        /// <summary>
+        /// Test the property 'QuantityTotal'
+        /// </summary>
+        [Fact]
+        public void QuantityTotalTest()
+        {
+            // TODO unit test for the property 'QuantityTotal'
+        }
+
+        /// <summary>
+        /// Test the property 'ExtendedQuotePriceTotal'
+        /// </summary>
+        [Fact]
+        public void ExtendedQuotePriceTotalTest()
+        {
+            // TODO unit test for the property 'ExtendedQuotePriceTotal'
+        }
+
+        /// <summary>
+        /// Test the property 'AdditionalAttributes'
+        /// </summary>
+        [Fact]
+        public void AdditionalAttributesTest()
+        {
+            // TODO unit test for the property 'AdditionalAttributes'
         }
     }
 }
