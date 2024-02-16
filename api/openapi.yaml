@@ -9445,7 +9445,7 @@ components:
     dealsDetailsResponse:
       example:
         endUser: endUser
-        priceProtectionEndDate: 2000-01-23
+        priceProtectionEndDate: priceProtectionEndDate
         endUserInfo:
           city: city
           companyName: companyName
@@ -9467,7 +9467,7 @@ components:
         version: version
         extendedMsrp: 0.8008281904610115
         currencyCode: currencyCode
-        dealExpiryDate: 2000-01-23
+        dealExpiryDate: dealExpiryDate
         products:
         - ingramPartNumber: ingramPartNumber
           remainingQuantity: 2
@@ -9520,11 +9520,9 @@ components:
           type: string
         dealExpiryDate:
           description: Expiration date of the deal/Special bid.
-          format: date
           type: string
         priceProtectionEndDate:
           description: The date on which the price protection will end.
-          format: date
           type: string
         currencyCode:
           description: Country specific currency code.
@@ -9602,48 +9600,48 @@ components:
     returnsDetailsResponse:
       example:
         returnWarehouseAddress: returnWarehouseAddress
-        tax: 7.061401241503109
-        subTotal: 2.3021358869347655
+        tax: 2.3021358869347655
+        subTotal: 5.637376656633329
         createdOn: 2000-01-23
         rmaClaimId: rmaClaimId
         products:
         - ingramPartNumber: ingramPartNumber
-          unitPrice: 6.027456183070403
-          quantity: 0.8008281904610115
+          unitPrice: 1.4658129805029452
+          quantity: 6.027456183070403
           requestDetails: requestDetails
           description: description
           upc: upc
-          ingramLineNumber: ingramLineNumber
+          ingramLineNumber: 0
           invoiceDate: 2000-01-23
           customerOrderNumber: customerOrderNumber
-          extendedPrice: 1.4658129805029452
+          extendedPrice: 5.962133916683182
           invoiceNumber: invoiceNumber
-          returnBranch: 5
+          returnBranch: returnBranch
           vendorPartNumber: vendorPartNumber
-          shipFromBranch: 5
+          shipFromBranch: shipFromBranch
           status: status
         - ingramPartNumber: ingramPartNumber
-          unitPrice: 6.027456183070403
-          quantity: 0.8008281904610115
+          unitPrice: 1.4658129805029452
+          quantity: 6.027456183070403
           requestDetails: requestDetails
           description: description
           upc: upc
-          ingramLineNumber: ingramLineNumber
+          ingramLineNumber: 0
           invoiceDate: 2000-01-23
           customerOrderNumber: customerOrderNumber
-          extendedPrice: 1.4658129805029452
+          extendedPrice: 5.962133916683182
           invoiceNumber: invoiceNumber
-          returnBranch: 5
+          returnBranch: returnBranch
           vendorPartNumber: vendorPartNumber
-          shipFromBranch: 5
+          shipFromBranch: shipFromBranch
           status: status
         typeOfDetails: typeOfDetails
         referenceNumber: referenceNumber
         returnReason: returnReason
         caseRequestNumber: caseRequestNumber
-        estimatedTotal: 3.616076749251911
+        estimatedTotal: 9.301444243932576
         status: status
-        additionalFees: 9.301444243932576
+        additionalFees: 7.061401241503109
       properties:
         typeOfDetails:
           description: The type of the details. Return or Claim.
@@ -10330,9 +10328,9 @@ components:
         invoices:
         - orderCreateDate: orderCreateDate
           paymentTermsDueDate: paymentTermsDueDate
-          invoicedAmountDue: invoicedAmountDue
+          invoicedAmountDue: 5.962133916683182
           endCustomerOrderNumber: endCustomerOrderNumber
-          invoiceAmountInclTax: invoiceAmountInclTax
+          invoiceAmountInclTax: 5.637376656633329
           invoiceNumber: invoiceNumber
           erpOrderNumber: erpOrderNumber
           invoiceStatus: invoiceStatus
@@ -10341,9 +10339,9 @@ components:
           invoiceDueDate: invoiceDueDate
         - orderCreateDate: orderCreateDate
           paymentTermsDueDate: paymentTermsDueDate
-          invoicedAmountDue: invoicedAmountDue
+          invoicedAmountDue: 5.962133916683182
           endCustomerOrderNumber: endCustomerOrderNumber
-          invoiceAmountInclTax: invoiceAmountInclTax
+          invoiceAmountInclTax: 5.637376656633329
           invoiceNumber: invoiceNumber
           erpOrderNumber: erpOrderNumber
           invoiceStatus: invoiceStatus
@@ -10379,30 +10377,30 @@ components:
           miscCharges:
           - chargeLineReference: chargeLineReference
             isNonMisc: isNonMisc
-            miscChargeLineTotal: 1.2315135367772556
-            miscChargeLineCount: 7
+            miscChargeLineTotal: 1.0246457001441578
+            miscChargeLineCount: 1
             chargeDescription: chargeDescription
           - chargeLineReference: chargeLineReference
             isNonMisc: isNonMisc
-            miscChargeLineTotal: 1.2315135367772556
-            miscChargeLineCount: 7
+            miscChargeLineTotal: 1.0246457001441578
+            miscChargeLineCount: 1
             chargeDescription: chargeDescription
           totals:
-            netInvoiceAmount: 1.0246457001441578
-            freightAmount: 1.1730742509559433
-            invoicedAmountDue: 7.457744773683766
-            discountAmount: 1.4894159098541704
+            netInvoiceAmount: 1.4894159098541704
+            freightAmount: 4.965218492984954
+            invoicedAmountDue: 1.1730742509559433
+            discountAmount: 6.84685269835264
             discountType: discountType
-            totalTaxAmount: 6.84685269835264
+            totalTaxAmount: 7.457744773683766
           foreignFxTotals:
             foreignCurrencyCode: foreignCurrencyCode
-            foreignCurrencyFxRate: 4.965218492984954
-            foreignTotalTaxAmount: 5.025004791520295
+            foreignCurrencyFxRate: 5.025004791520295
+            foreignTotalTaxAmount: 9.965781217890562
             foreignInvoiceAmountDue: foreignInvoiceAmountDue
             foreignTotalTaxableAmount: foreignTotalTaxableAmount
           lines:
-            productLineCount: 2
-            productLineTotalQuantity: 4
+            productLineCount: 4
+            productLineTotalQuantity: 7
         notes: notes
         endCustomerOrderNumber: endCustomerOrderNumber
         invoiceDate: 2000-01-23
@@ -10443,7 +10441,7 @@ components:
         invoiceNumber: invoiceNumber
         fxRateInfo:
           companyCurrency: companyCurrency
-          currencyFxRate: 3.616076749251911
+          currencyFxRate: 2.027123023002322
           currencyCode: currencyCode
           invoiceCurrency: invoiceCurrency
         invoiceType: invoiceType
@@ -10451,45 +10449,45 @@ components:
         invoiceStatus: invoiceStatus
         lines:
         - ingramPartNumber: ingramPartNumber
-          unitWeight: unitWeight
-          unitPrice: 6.027456183070403
+          unitWeight: 0.8008281904610115
+          unitPrice: 1.4658129805029452
           customerPartNumber: customerPartNumber
-          quantity: 0
+          quantity: 6
           unitOfMeasure: unitOfMeasure
-          taxPercentage: 5.962133916683182
+          taxPercentage: 5.637376656633329
           serialNumbers:
           - serialNumber: serialNumber
           - serialNumber: serialNumber
           ingramLineNumber: ingramLineNumber
-          quantityOrdered: 7
+          quantityOrdered: 9
           vendorName: vendorName
           customerLineNumber: "0"
-          taxRate: 5.637376656633329
-          quantityShipped: 9
-          extendedPrice: 1.4658129805029452
+          taxRate: 2.3021358869347655
+          quantityShipped: 3
+          extendedPrice: 5.962133916683182
           vendorPartNumber: vendorPartNumber
-          taxAmount: 2.3021358869347655
+          taxAmount: 7.061401241503109
           currencyCode: currencyCode
           productDescription: productDescription
         - ingramPartNumber: ingramPartNumber
-          unitWeight: unitWeight
-          unitPrice: 6.027456183070403
+          unitWeight: 0.8008281904610115
+          unitPrice: 1.4658129805029452
           customerPartNumber: customerPartNumber
-          quantity: 0
+          quantity: 6
           unitOfMeasure: unitOfMeasure
-          taxPercentage: 5.962133916683182
+          taxPercentage: 5.637376656633329
           serialNumbers:
           - serialNumber: serialNumber
           - serialNumber: serialNumber
           ingramLineNumber: ingramLineNumber
-          quantityOrdered: 7
+          quantityOrdered: 9
           vendorName: vendorName
           customerLineNumber: "0"
-          taxRate: 5.637376656633329
-          quantityShipped: 9
-          extendedPrice: 1.4658129805029452
+          taxRate: 2.3021358869347655
+          quantityShipped: 3
+          extendedPrice: 5.962133916683182
           vendorPartNumber: vendorPartNumber
-          taxAmount: 2.3021358869347655
+          taxAmount: 7.061401241503109
           currencyCode: currencyCode
           productDescription: productDescription
       properties:
@@ -14649,24 +14647,24 @@ components:
     returnsDetailsResponse_products_inner:
       example:
         ingramPartNumber: ingramPartNumber
-        unitPrice: 6.027456183070403
-        quantity: 0.8008281904610115
+        unitPrice: 1.4658129805029452
+        quantity: 6.027456183070403
         requestDetails: requestDetails
         description: description
         upc: upc
-        ingramLineNumber: ingramLineNumber
+        ingramLineNumber: 0
         invoiceDate: 2000-01-23
         customerOrderNumber: customerOrderNumber
-        extendedPrice: 1.4658129805029452
+        extendedPrice: 5.962133916683182
         invoiceNumber: invoiceNumber
-        returnBranch: 5
+        returnBranch: returnBranch
         vendorPartNumber: vendorPartNumber
-        shipFromBranch: 5
+        shipFromBranch: shipFromBranch
         status: status
       properties:
         ingramLineNumber:
           description: Unique Ingram Micro line number.
-          type: string
+          type: integer
         description:
           description: The description of the line item product.
           type: string
@@ -14709,10 +14707,10 @@ components:
           type: string
         returnBranch:
           description: The code of the return branch.
-          type: integer
+          type: string
         shipFromBranch:
           description: The code of the ship from branch.
-          type: integer
+          type: string
       type: object
     returnsCreateRequest_list_inner_shipFromInfo_inner:
       properties:
@@ -15726,9 +15724,9 @@ components:
       example:
         orderCreateDate: orderCreateDate
         paymentTermsDueDate: paymentTermsDueDate
-        invoicedAmountDue: invoicedAmountDue
+        invoicedAmountDue: 5.962133916683182
         endCustomerOrderNumber: endCustomerOrderNumber
-        invoiceAmountInclTax: invoiceAmountInclTax
+        invoiceAmountInclTax: 5.637376656633329
         invoiceNumber: invoiceNumber
         erpOrderNumber: erpOrderNumber
         invoiceStatus: invoiceStatus
@@ -15756,7 +15754,8 @@ components:
           type: string
         invoicedAmountDue:
           description: Invoice Amount.
-          type: string
+          format: decimal
+          type: number
         customerOrderNumber:
           description: Customer Order No.
           type: string
@@ -15768,7 +15767,8 @@ components:
           type: string
         invoiceAmountInclTax:
           description: Invoice Amount Inclusive of Taxes
-          type: string
+          format: decimal
+          type: number
     InvoiceDetailsv6_1Response_paymentTermsInfo:
       additionalProperties: false
       description: Payment terms is the agreement between Ingram and the customer
@@ -15900,24 +15900,24 @@ components:
       additionalProperties: false
       example:
         ingramPartNumber: ingramPartNumber
-        unitWeight: unitWeight
-        unitPrice: 6.027456183070403
+        unitWeight: 0.8008281904610115
+        unitPrice: 1.4658129805029452
         customerPartNumber: customerPartNumber
-        quantity: 0
+        quantity: 6
         unitOfMeasure: unitOfMeasure
-        taxPercentage: 5.962133916683182
+        taxPercentage: 5.637376656633329
         serialNumbers:
         - serialNumber: serialNumber
         - serialNumber: serialNumber
         ingramLineNumber: ingramLineNumber
-        quantityOrdered: 7
+        quantityOrdered: 9
         vendorName: vendorName
         customerLineNumber: "0"
-        taxRate: 5.637376656633329
-        quantityShipped: 9
-        extendedPrice: 1.4658129805029452
+        taxRate: 2.3021358869347655
+        quantityShipped: 3
+        extendedPrice: 5.962133916683182
         vendorPartNumber: vendorPartNumber
-        taxAmount: 2.3021358869347655
+        taxAmount: 7.061401241503109
         currencyCode: currencyCode
         productDescription: productDescription
       properties:
@@ -15947,7 +15947,8 @@ components:
           type: string
         unitWeight:
           description: Weight of the product.
-          type: string
+          format: decimal
+          type: number
         quantity:
           description: Quantity of the product.
           format: int32
@@ -15996,7 +15997,7 @@ components:
       additionalProperties: false
       example:
         companyCurrency: companyCurrency
-        currencyFxRate: 3.616076749251911
+        currencyFxRate: 2.027123023002322
         currencyCode: currencyCode
         invoiceCurrency: invoiceCurrency
       properties:
@@ -16017,8 +16018,8 @@ components:
     InvoiceDetailsv6_1Response_summary_lines:
       additionalProperties: false
       example:
-        productLineCount: 2
-        productLineTotalQuantity: 4
+        productLineCount: 4
+        productLineTotalQuantity: 7
       properties:
         productLineCount:
           description: Number of lines in the order.
@@ -16034,8 +16035,8 @@ components:
       example:
         chargeLineReference: chargeLineReference
         isNonMisc: isNonMisc
-        miscChargeLineTotal: 1.2315135367772556
-        miscChargeLineCount: 7
+        miscChargeLineTotal: 1.0246457001441578
+        miscChargeLineCount: 1
         chargeDescription: chargeDescription
       properties:
         chargeDescription:
@@ -16059,12 +16060,12 @@ components:
     InvoiceDetailsv6_1Response_summary_totals:
       additionalProperties: false
       example:
-        netInvoiceAmount: 1.0246457001441578
-        freightAmount: 1.1730742509559433
-        invoicedAmountDue: 7.457744773683766
-        discountAmount: 1.4894159098541704
+        netInvoiceAmount: 1.4894159098541704
+        freightAmount: 4.965218492984954
+        invoicedAmountDue: 1.1730742509559433
+        discountAmount: 6.84685269835264
         discountType: discountType
-        totalTaxAmount: 6.84685269835264
+        totalTaxAmount: 7.457744773683766
       properties:
         netInvoiceAmount:
           description: Net Invoice amount.
@@ -16094,8 +16095,8 @@ components:
       additionalProperties: false
       example:
         foreignCurrencyCode: foreignCurrencyCode
-        foreignCurrencyFxRate: 4.965218492984954
-        foreignTotalTaxAmount: 5.025004791520295
+        foreignCurrencyFxRate: 5.025004791520295
+        foreignTotalTaxAmount: 9.965781217890562
         foreignInvoiceAmountDue: foreignInvoiceAmountDue
         foreignTotalTaxableAmount: foreignTotalTaxableAmount
       properties:
@@ -16123,30 +16124,30 @@ components:
         miscCharges:
         - chargeLineReference: chargeLineReference
           isNonMisc: isNonMisc
-          miscChargeLineTotal: 1.2315135367772556
-          miscChargeLineCount: 7
+          miscChargeLineTotal: 1.0246457001441578
+          miscChargeLineCount: 1
           chargeDescription: chargeDescription
         - chargeLineReference: chargeLineReference
           isNonMisc: isNonMisc
-          miscChargeLineTotal: 1.2315135367772556
-          miscChargeLineCount: 7
+          miscChargeLineTotal: 1.0246457001441578
+          miscChargeLineCount: 1
           chargeDescription: chargeDescription
         totals:
-          netInvoiceAmount: 1.0246457001441578
-          freightAmount: 1.1730742509559433
-          invoicedAmountDue: 7.457744773683766
-          discountAmount: 1.4894159098541704
+          netInvoiceAmount: 1.4894159098541704
+          freightAmount: 4.965218492984954
+          invoicedAmountDue: 1.1730742509559433
+          discountAmount: 6.84685269835264
           discountType: discountType
-          totalTaxAmount: 6.84685269835264
+          totalTaxAmount: 7.457744773683766
         foreignFxTotals:
           foreignCurrencyCode: foreignCurrencyCode
-          foreignCurrencyFxRate: 4.965218492984954
-          foreignTotalTaxAmount: 5.025004791520295
+          foreignCurrencyFxRate: 5.025004791520295
+          foreignTotalTaxAmount: 9.965781217890562
           foreignInvoiceAmountDue: foreignInvoiceAmountDue
           foreignTotalTaxableAmount: foreignTotalTaxableAmount
         lines:
-          productLineCount: 2
-          productLineTotalQuantity: 4
+          productLineCount: 4
+          productLineTotalQuantity: 7
       properties:
         lines:
           $ref: '#/components/schemas/InvoiceDetailsv6_1Response_summary_lines'
