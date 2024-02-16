@@ -1,4 +1,4 @@
-# xi.sdk.resellers.Model.ValidateQuoteResponseLinesInnerVmfAdditionalAttributesLinesInner
+# xi.sdk.resellers.Model.QuoteToOrderDetailsDTOLinesInnerVmfAdditionalAttributesLinesInner
 
 ## Properties
 

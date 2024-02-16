@@ -1,5 +1,5 @@
 /*
- * XI SDK Resellers
+ * XI Sdk Resellers
  *
  * For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
  *
@@ -55,12 +55,147 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'Serviceresponse'
+        /// Test the property 'IngramOrderNumber'
         /// </summary>
         [Fact]
-        public void ServiceresponseTest()
+        public void IngramOrderNumberTest()
         {
-            // TODO unit test for the property 'Serviceresponse'
+            // TODO unit test for the property 'IngramOrderNumber'
+        }
+
+        /// <summary>
+        /// Test the property 'ChangeDescription'
+        /// </summary>
+        [Fact]
+        public void ChangeDescriptionTest()
+        {
+            // TODO unit test for the property 'ChangeDescription'
+        }
+
+        /// <summary>
+        /// Test the property 'OrderModifiedDate'
+        /// </summary>
+        [Fact]
+        public void OrderModifiedDateTest()
+        {
+            // TODO unit test for the property 'OrderModifiedDate'
+        }
+
+        /// <summary>
+        /// Test the property 'CustomerOrderNumber'
+        /// </summary>
+        [Fact]
+        public void CustomerOrderNumberTest()
+        {
+            // TODO unit test for the property 'CustomerOrderNumber'
+        }
+
+        /// <summary>
+        /// Test the property 'EndCustomerOrderNumber'
+        /// </summary>
+        [Fact]
+        public void EndCustomerOrderNumberTest()
+        {
+            // TODO unit test for the property 'EndCustomerOrderNumber'
+        }
+
+        /// <summary>
+        /// Test the property 'OrderTotal'
+        /// </summary>
+        [Fact]
+        public void OrderTotalTest()
+        {
+            // TODO unit test for the property 'OrderTotal'
+        }
+
+        /// <summary>
+        /// Test the property 'Notes'
+        /// </summary>
+        [Fact]
+        public void NotesTest()
+        {
+            // TODO unit test for the property 'Notes'
+        }
+
+        /// <summary>
+        /// Test the property 'OrderSubTotal'
+        /// </summary>
+        [Fact]
+        public void OrderSubTotalTest()
+        {
+            // TODO unit test for the property 'OrderSubTotal'
+        }
+
+        /// <summary>
+        /// Test the property 'FreightCharges'
+        /// </summary>
+        [Fact]
+        public void FreightChargesTest()
+        {
+            // TODO unit test for the property 'FreightCharges'
+        }
+
+        /// <summary>
+        /// Test the property 'TotalTax'
+        /// </summary>
+        [Fact]
+        public void TotalTaxTest()
+        {
+            // TODO unit test for the property 'TotalTax'
+        }
+
+        /// <summary>
+        /// Test the property 'OrderStatus'
+        /// </summary>
+        [Fact]
+        public void OrderStatusTest()
+        {
+            // TODO unit test for the property 'OrderStatus'
+        }
+
+        /// <summary>
+        /// Test the property 'BillToAddressId'
+        /// </summary>
+        [Fact]
+        public void BillToAddressIdTest()
+        {
+            // TODO unit test for the property 'BillToAddressId'
+        }
+
+        /// <summary>
+        /// Test the property 'ShipToInfo'
+        /// </summary>
+        [Fact]
+        public void ShipToInfoTest()
+        {
+            // TODO unit test for the property 'ShipToInfo'
+        }
+
+        /// <summary>
+        /// Test the property 'Lines'
+        /// </summary>
+        [Fact]
+        public void LinesTest()
+        {
+            // TODO unit test for the property 'Lines'
+        }
+
+        /// <summary>
+        /// Test the property 'RejectedLineItems'
+        /// </summary>
+        [Fact]
+        public void RejectedLineItemsTest()
+        {
+            // TODO unit test for the property 'RejectedLineItems'
+        }
+
+        /// <summary>
+        /// Test the property 'AdditionalAttributes'
+        /// </summary>
+        [Fact]
+        public void AdditionalAttributesTest()
+        {
+            // TODO unit test for the property 'AdditionalAttributes'
         }
     }
 }

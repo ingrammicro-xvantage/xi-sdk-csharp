@@ -1,5 +1,5 @@
 /*
- * XI SDK Resellers
+ * XI Sdk Resellers
  *
  * For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
  *
@@ -27,25 +27,52 @@ using OpenAPIDateConverter = xi.sdk.resellers.Client.OpenAPIDateConverter;
 namespace xi.sdk.resellers.Model
 {
     /// <summary>
-    /// Request schema for order modify endpoint
+    /// OrderModifyRequest
     /// </summary>
-    [DataContract(Name = "orderModifyRequest")]
+    [DataContract(Name = "OrderModifyRequest")]
     public partial class OrderModifyRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderModifyRequest" /> class.
         /// </summary>
-        /// <param name="servicerequest">servicerequest.</param>
-        public OrderModifyRequest(OrderModifyRequestServicerequest servicerequest = default(OrderModifyRequestServicerequest))
+        /// <param name="notes">Shipment-level notes..</param>
+        /// <param name="shipToInfo">shipToInfo.</param>
+        /// <param name="lines">The order line items..</param>
+        /// <param name="additionalAttributes">Header-level additional attributes..</param>
+        public OrderModifyRequest(string notes = default(string), OrderModifyRequestShipToInfo shipToInfo = default(OrderModifyRequestShipToInfo), List<OrderModifyRequestLinesInner> lines = default(List<OrderModifyRequestLinesInner>), List<OrderModifyRequestAdditionalAttributesInner> additionalAttributes = default(List<OrderModifyRequestAdditionalAttributesInner>))
         {
-            this.Servicerequest = servicerequest;
+            this.Notes = notes;
+            this.ShipToInfo = shipToInfo;
+            this.Lines = lines;
+            this.AdditionalAttributes = additionalAttributes;
         }
 
         /// <summary>
-        /// Gets or Sets Servicerequest
+        /// Shipment-level notes.
         /// </summary>
-        [DataMember(Name = "servicerequest", EmitDefaultValue = false)]
-        public OrderModifyRequestServicerequest Servicerequest { get; set; }
+        /// <value>Shipment-level notes.</value>
+        [DataMember(Name = "notes", EmitDefaultValue = false)]
+        public string Notes { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ShipToInfo
+        /// </summary>
+        [DataMember(Name = "shipToInfo", EmitDefaultValue = false)]
+        public OrderModifyRequestShipToInfo ShipToInfo { get; set; }
+
+        /// <summary>
+        /// The order line items.
+        /// </summary>
+        /// <value>The order line items.</value>
+        [DataMember(Name = "lines", EmitDefaultValue = false)]
+        public List<OrderModifyRequestLinesInner> Lines { get; set; }
+
+        /// <summary>
+        /// Header-level additional attributes.
+        /// </summary>
+        /// <value>Header-level additional attributes.</value>
+        [DataMember(Name = "additionalAttributes", EmitDefaultValue = false)]
+        public List<OrderModifyRequestAdditionalAttributesInner> AdditionalAttributes { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -55,7 +82,10 @@ namespace xi.sdk.resellers.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class OrderModifyRequest {\n");
-            sb.Append("  Servicerequest: ").Append(Servicerequest).Append("\n");
+            sb.Append("  Notes: ").Append(Notes).Append("\n");
+            sb.Append("  ShipToInfo: ").Append(ShipToInfo).Append("\n");
+            sb.Append("  Lines: ").Append(Lines).Append("\n");
+            sb.Append("  AdditionalAttributes: ").Append(AdditionalAttributes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -76,6 +106,12 @@ namespace xi.sdk.resellers.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            // Notes (string) maxLength
+            if (this.Notes != null && this.Notes.Length > 132)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Notes, length must be less than 132.", new [] { "Notes" });
+            }
+
             yield break;
         }
     }

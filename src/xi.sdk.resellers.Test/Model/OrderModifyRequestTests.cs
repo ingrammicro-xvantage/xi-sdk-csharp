@@ -1,5 +1,5 @@
 /*
- * XI SDK Resellers
+ * XI Sdk Resellers
  *
  * For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
  *
@@ -55,12 +55,39 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'Servicerequest'
+        /// Test the property 'Notes'
         /// </summary>
         [Fact]
-        public void ServicerequestTest()
+        public void NotesTest()
         {
-            // TODO unit test for the property 'Servicerequest'
+            // TODO unit test for the property 'Notes'
+        }
+
+        /// <summary>
+        /// Test the property 'ShipToInfo'
+        /// </summary>
+        [Fact]
+        public void ShipToInfoTest()
+        {
+            // TODO unit test for the property 'ShipToInfo'
+        }
+
+        /// <summary>
+        /// Test the property 'Lines'
+        /// </summary>
+        [Fact]
+        public void LinesTest()
+        {
+            // TODO unit test for the property 'Lines'
+        }
+
+        /// <summary>
+        /// Test the property 'AdditionalAttributes'
+        /// </summary>
+        [Fact]
+        public void AdditionalAttributesTest()
+        {
+            // TODO unit test for the property 'AdditionalAttributes'
         }
     }
 }

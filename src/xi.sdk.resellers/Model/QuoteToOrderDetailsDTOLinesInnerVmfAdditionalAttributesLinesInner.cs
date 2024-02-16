@@ -1,5 +1,5 @@
 /*
- * XI SDK Resellers
+ * XI Sdk Resellers
  *
  * For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
  *
@@ -27,42 +27,44 @@ using OpenAPIDateConverter = xi.sdk.resellers.Client.OpenAPIDateConverter;
 namespace xi.sdk.resellers.Model
 {
     /// <summary>
-    /// QuoteListResponseQuoteSearchResponse
+    /// QuoteToOrderDetailsDTOLinesInnerVmfAdditionalAttributesLinesInner
     /// </summary>
-    [DataContract(Name = "quoteListResponse_quoteSearchResponse")]
-    public partial class QuoteListResponseQuoteSearchResponse : IValidatableObject
+    [DataContract(Name = "QuoteToOrderDetailsDTO_lines_inner_vmfAdditionalAttributesLines_inner")]
+    public partial class QuoteToOrderDetailsDTOLinesInnerVmfAdditionalAttributesLinesInner : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="QuoteListResponseQuoteSearchResponse" /> class.
+        /// Initializes a new instance of the <see cref="QuoteToOrderDetailsDTOLinesInnerVmfAdditionalAttributesLinesInner" /> class.
         /// </summary>
-        /// <param name="responsePreamble">responsePreamble.</param>
-        /// <param name="quoteList">quoteList.</param>
-        /// <param name="totalCount">Total count of quotes retrieved in the request response..</param>
-        public QuoteListResponseQuoteSearchResponse(QuoteListResponseQuoteSearchResponseResponsePreamble responsePreamble = default(QuoteListResponseQuoteSearchResponseResponsePreamble), List<QuoteListResponseQuoteSearchResponseQuoteListInner> quoteList = default(List<QuoteListResponseQuoteSearchResponseQuoteListInner>), int totalCount = default(int))
+        /// <param name="attributeName">The name of the line level field..</param>
+        /// <param name="attributeValue">The value of the line level field..</param>
+        /// <param name="attributeDescription">The description of the line level field..</param>
+        public QuoteToOrderDetailsDTOLinesInnerVmfAdditionalAttributesLinesInner(string attributeName = default(string), string attributeValue = default(string), string attributeDescription = default(string))
         {
-            this.ResponsePreamble = responsePreamble;
-            this.QuoteList = quoteList;
-            this.TotalCount = totalCount;
+            this.AttributeName = attributeName;
+            this.AttributeValue = attributeValue;
+            this.AttributeDescription = attributeDescription;
         }
 
         /// <summary>
-        /// Gets or Sets ResponsePreamble
+        /// The name of the line level field.
         /// </summary>
-        [DataMember(Name = "responsePreamble", EmitDefaultValue = false)]
-        public QuoteListResponseQuoteSearchResponseResponsePreamble ResponsePreamble { get; set; }
+        /// <value>The name of the line level field.</value>
+        [DataMember(Name = "attributeName", EmitDefaultValue = false)]
+        public string AttributeName { get; set; }
 
         /// <summary>
-        /// Gets or Sets QuoteList
+        /// The value of the line level field.
         /// </summary>
-        [DataMember(Name = "quoteList", EmitDefaultValue = false)]
-        public List<QuoteListResponseQuoteSearchResponseQuoteListInner> QuoteList { get; set; }
+        /// <value>The value of the line level field.</value>
+        [DataMember(Name = "attributeValue", EmitDefaultValue = false)]
+        public string AttributeValue { get; set; }
 
         /// <summary>
-        /// Total count of quotes retrieved in the request response.
+        /// The description of the line level field.
         /// </summary>
-        /// <value>Total count of quotes retrieved in the request response.</value>
-        [DataMember(Name = "totalCount", EmitDefaultValue = false)]
-        public int TotalCount { get; set; }
+        /// <value>The description of the line level field.</value>
+        [DataMember(Name = "attributeDescription", EmitDefaultValue = false)]
+        public string AttributeDescription { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -71,10 +73,10 @@ namespace xi.sdk.resellers.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class QuoteListResponseQuoteSearchResponse {\n");
-            sb.Append("  ResponsePreamble: ").Append(ResponsePreamble).Append("\n");
-            sb.Append("  QuoteList: ").Append(QuoteList).Append("\n");
-            sb.Append("  TotalCount: ").Append(TotalCount).Append("\n");
+            sb.Append("class QuoteToOrderDetailsDTOLinesInnerVmfAdditionalAttributesLinesInner {\n");
+            sb.Append("  AttributeName: ").Append(AttributeName).Append("\n");
+            sb.Append("  AttributeValue: ").Append(AttributeValue).Append("\n");
+            sb.Append("  AttributeDescription: ").Append(AttributeDescription).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

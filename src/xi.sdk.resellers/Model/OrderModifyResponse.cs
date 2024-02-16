@@ -1,5 +1,5 @@
 /*
- * XI SDK Resellers
+ * XI Sdk Resellers
  *
  * For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
  *
@@ -27,25 +27,160 @@ using OpenAPIDateConverter = xi.sdk.resellers.Client.OpenAPIDateConverter;
 namespace xi.sdk.resellers.Model
 {
     /// <summary>
-    /// Response schema for order modify endpoint
+    /// OrderModifyResponse
     /// </summary>
-    [DataContract(Name = "orderModifyResponse")]
+    [DataContract(Name = "OrderModifyResponse")]
     public partial class OrderModifyResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderModifyResponse" /> class.
         /// </summary>
-        /// <param name="serviceresponse">serviceresponse.</param>
-        public OrderModifyResponse(OrderModifyResponseServiceresponse serviceresponse = default(OrderModifyResponseServiceresponse))
+        /// <param name="ingramOrderNumber">The IngramMicro order number..</param>
+        /// <param name="changeDescription">The description of the change..</param>
+        /// <param name="orderModifiedDate">The date the order was modified..</param>
+        /// <param name="customerOrderNumber">The reseller&#39;s order number for reference in their system..</param>
+        /// <param name="endCustomerOrderNumber">The end user/customer&#39;s order number for reference in their system..</param>
+        /// <param name="orderTotal">The total for the order..</param>
+        /// <param name="notes">Order-level notes..</param>
+        /// <param name="orderSubTotal">The sub total for the order..</param>
+        /// <param name="freightCharges">The freight charges for the order..</param>
+        /// <param name="totalTax">The total tax for the order..</param>
+        /// <param name="orderStatus">The status of the order. One of the following. Backordered, In Progress, Shipped, Delivered, Canceled, On Hold.</param>
+        /// <param name="billToAddressId">Suffix used to identify billing address. Created during onboarding. Resellers are provided with one or more address IDs depending on how many bill to addresses they need for various flooring companies they are using for credit..</param>
+        /// <param name="shipToInfo">shipToInfo.</param>
+        /// <param name="lines">The line-level details for the order..</param>
+        /// <param name="rejectedLineItems">Details for failed lines in the order..</param>
+        /// <param name="additionalAttributes">Header-level additional attributes..</param>
+        public OrderModifyResponse(string ingramOrderNumber = default(string), string changeDescription = default(string), string orderModifiedDate = default(string), string customerOrderNumber = default(string), string endCustomerOrderNumber = default(string), decimal orderTotal = default(decimal), string notes = default(string), decimal orderSubTotal = default(decimal), decimal freightCharges = default(decimal), decimal totalTax = default(decimal), string orderStatus = default(string), string billToAddressId = default(string), OrderModifyResponseShipToInfo shipToInfo = default(OrderModifyResponseShipToInfo), List<OrderModifyResponseLinesInner> lines = default(List<OrderModifyResponseLinesInner>), List<OrderModifyResponseRejectedLineItemsInner> rejectedLineItems = default(List<OrderModifyResponseRejectedLineItemsInner>), List<OrderModifyResponseLinesInnerAdditionalAttributesInner> additionalAttributes = default(List<OrderModifyResponseLinesInnerAdditionalAttributesInner>))
         {
-            this.Serviceresponse = serviceresponse;
+            this.IngramOrderNumber = ingramOrderNumber;
+            this.ChangeDescription = changeDescription;
+            this.OrderModifiedDate = orderModifiedDate;
+            this.CustomerOrderNumber = customerOrderNumber;
+            this.EndCustomerOrderNumber = endCustomerOrderNumber;
+            this.OrderTotal = orderTotal;
+            this.Notes = notes;
+            this.OrderSubTotal = orderSubTotal;
+            this.FreightCharges = freightCharges;
+            this.TotalTax = totalTax;
+            this.OrderStatus = orderStatus;
+            this.BillToAddressId = billToAddressId;
+            this.ShipToInfo = shipToInfo;
+            this.Lines = lines;
+            this.RejectedLineItems = rejectedLineItems;
+            this.AdditionalAttributes = additionalAttributes;
         }
 
         /// <summary>
-        /// Gets or Sets Serviceresponse
+        /// The IngramMicro order number.
         /// </summary>
-        [DataMember(Name = "serviceresponse", EmitDefaultValue = false)]
-        public OrderModifyResponseServiceresponse Serviceresponse { get; set; }
+        /// <value>The IngramMicro order number.</value>
+        [DataMember(Name = "ingramOrderNumber", EmitDefaultValue = false)]
+        public string IngramOrderNumber { get; set; }
+
+        /// <summary>
+        /// The description of the change.
+        /// </summary>
+        /// <value>The description of the change.</value>
+        [DataMember(Name = "changeDescription", EmitDefaultValue = false)]
+        public string ChangeDescription { get; set; }
+
+        /// <summary>
+        /// The date the order was modified.
+        /// </summary>
+        /// <value>The date the order was modified.</value>
+        [DataMember(Name = "orderModifiedDate", EmitDefaultValue = false)]
+        public string OrderModifiedDate { get; set; }
+
+        /// <summary>
+        /// The reseller&#39;s order number for reference in their system.
+        /// </summary>
+        /// <value>The reseller&#39;s order number for reference in their system.</value>
+        [DataMember(Name = "customerOrderNumber", EmitDefaultValue = false)]
+        public string CustomerOrderNumber { get; set; }
+
+        /// <summary>
+        /// The end user/customer&#39;s order number for reference in their system.
+        /// </summary>
+        /// <value>The end user/customer&#39;s order number for reference in their system.</value>
+        [DataMember(Name = "endCustomerOrderNumber", EmitDefaultValue = false)]
+        public string EndCustomerOrderNumber { get; set; }
+
+        /// <summary>
+        /// The total for the order.
+        /// </summary>
+        /// <value>The total for the order.</value>
+        [DataMember(Name = "orderTotal", EmitDefaultValue = false)]
+        public decimal OrderTotal { get; set; }
+
+        /// <summary>
+        /// Order-level notes.
+        /// </summary>
+        /// <value>Order-level notes.</value>
+        [DataMember(Name = "notes", EmitDefaultValue = false)]
+        public string Notes { get; set; }
+
+        /// <summary>
+        /// The sub total for the order.
+        /// </summary>
+        /// <value>The sub total for the order.</value>
+        [DataMember(Name = "orderSubTotal", EmitDefaultValue = false)]
+        public decimal OrderSubTotal { get; set; }
+
+        /// <summary>
+        /// The freight charges for the order.
+        /// </summary>
+        /// <value>The freight charges for the order.</value>
+        [DataMember(Name = "freightCharges", EmitDefaultValue = false)]
+        public decimal FreightCharges { get; set; }
+
+        /// <summary>
+        /// The total tax for the order.
+        /// </summary>
+        /// <value>The total tax for the order.</value>
+        [DataMember(Name = "totalTax", EmitDefaultValue = false)]
+        public decimal TotalTax { get; set; }
+
+        /// <summary>
+        /// The status of the order. One of the following. Backordered, In Progress, Shipped, Delivered, Canceled, On Hold
+        /// </summary>
+        /// <value>The status of the order. One of the following. Backordered, In Progress, Shipped, Delivered, Canceled, On Hold</value>
+        [DataMember(Name = "orderStatus", EmitDefaultValue = false)]
+        public string OrderStatus { get; set; }
+
+        /// <summary>
+        /// Suffix used to identify billing address. Created during onboarding. Resellers are provided with one or more address IDs depending on how many bill to addresses they need for various flooring companies they are using for credit.
+        /// </summary>
+        /// <value>Suffix used to identify billing address. Created during onboarding. Resellers are provided with one or more address IDs depending on how many bill to addresses they need for various flooring companies they are using for credit.</value>
+        [DataMember(Name = "billToAddressId", EmitDefaultValue = false)]
+        public string BillToAddressId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ShipToInfo
+        /// </summary>
+        [DataMember(Name = "shipToInfo", EmitDefaultValue = false)]
+        public OrderModifyResponseShipToInfo ShipToInfo { get; set; }
+
+        /// <summary>
+        /// The line-level details for the order.
+        /// </summary>
+        /// <value>The line-level details for the order.</value>
+        [DataMember(Name = "lines", EmitDefaultValue = false)]
+        public List<OrderModifyResponseLinesInner> Lines { get; set; }
+
+        /// <summary>
+        /// Details for failed lines in the order.
+        /// </summary>
+        /// <value>Details for failed lines in the order.</value>
+        [DataMember(Name = "rejectedLineItems", EmitDefaultValue = false)]
+        public List<OrderModifyResponseRejectedLineItemsInner> RejectedLineItems { get; set; }
+
+        /// <summary>
+        /// Header-level additional attributes.
+        /// </summary>
+        /// <value>Header-level additional attributes.</value>
+        [DataMember(Name = "additionalAttributes", EmitDefaultValue = false)]
+        public List<OrderModifyResponseLinesInnerAdditionalAttributesInner> AdditionalAttributes { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -55,7 +190,22 @@ namespace xi.sdk.resellers.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class OrderModifyResponse {\n");
-            sb.Append("  Serviceresponse: ").Append(Serviceresponse).Append("\n");
+            sb.Append("  IngramOrderNumber: ").Append(IngramOrderNumber).Append("\n");
+            sb.Append("  ChangeDescription: ").Append(ChangeDescription).Append("\n");
+            sb.Append("  OrderModifiedDate: ").Append(OrderModifiedDate).Append("\n");
+            sb.Append("  CustomerOrderNumber: ").Append(CustomerOrderNumber).Append("\n");
+            sb.Append("  EndCustomerOrderNumber: ").Append(EndCustomerOrderNumber).Append("\n");
+            sb.Append("  OrderTotal: ").Append(OrderTotal).Append("\n");
+            sb.Append("  Notes: ").Append(Notes).Append("\n");
+            sb.Append("  OrderSubTotal: ").Append(OrderSubTotal).Append("\n");
+            sb.Append("  FreightCharges: ").Append(FreightCharges).Append("\n");
+            sb.Append("  TotalTax: ").Append(TotalTax).Append("\n");
+            sb.Append("  OrderStatus: ").Append(OrderStatus).Append("\n");
+            sb.Append("  BillToAddressId: ").Append(BillToAddressId).Append("\n");
+            sb.Append("  ShipToInfo: ").Append(ShipToInfo).Append("\n");
+            sb.Append("  Lines: ").Append(Lines).Append("\n");
+            sb.Append("  RejectedLineItems: ").Append(RejectedLineItems).Append("\n");
+            sb.Append("  AdditionalAttributes: ").Append(AdditionalAttributes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
