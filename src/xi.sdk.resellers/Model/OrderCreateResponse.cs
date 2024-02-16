@@ -1,5 +1,5 @@
 /*
- * XI Sdk Resellers
+ * XI SDK Resellers
  *
  * For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
  *
@@ -27,25 +27,105 @@ using OpenAPIDateConverter = xi.sdk.resellers.Client.OpenAPIDateConverter;
 namespace xi.sdk.resellers.Model
 {
     /// <summary>
-    /// Response schema for order create endpoint
+    /// OrderCreateResponse
     /// </summary>
-    [DataContract(Name = "orderCreateResponse")]
+    [DataContract(Name = "OrderCreateResponse")]
     public partial class OrderCreateResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderCreateResponse" /> class.
         /// </summary>
-        /// <param name="serviceresponse">serviceresponse.</param>
-        public OrderCreateResponse(OrderCreateResponseServiceresponse serviceresponse = default(OrderCreateResponseServiceresponse))
+        /// <param name="customerOrderNumber">The reseller&#39;s unique PO/Order number..</param>
+        /// <param name="endCustomerOrderNumber">The end user/customer&#39;s Purchase Order number..</param>
+        /// <param name="billToAddressId">Suffix used to identify billing address. Created during onboarding. Resellers are provided with one or more address IDs depending on how many bill to addresses they need for various flooring companies they are using for credit.</param>
+        /// <param name="specialBidNumber">The bid number provided to the reseller by the vendor for special pricing and discounts. Line-level bid numbers take precedence over header-level bid numbers..</param>
+        /// <param name="orderSplit">true for multiple orders.</param>
+        /// <param name="processedPartially">true for partial order succesfully placed.</param>
+        /// <param name="purchaseOrderTotal">Total of all the orders including taxes and fees..</param>
+        /// <param name="shipToInfo">shipToInfo.</param>
+        /// <param name="endUserInfo">endUserInfo.</param>
+        /// <param name="orders">Order-level details..</param>
+        public OrderCreateResponse(string customerOrderNumber = default(string), string endCustomerOrderNumber = default(string), string billToAddressId = default(string), string specialBidNumber = default(string), bool orderSplit = default(bool), bool processedPartially = default(bool), decimal purchaseOrderTotal = default(decimal), OrderCreateResponseShipToInfo shipToInfo = default(OrderCreateResponseShipToInfo), OrderCreateResponseEndUserInfo endUserInfo = default(OrderCreateResponseEndUserInfo), List<OrderCreateResponseOrdersInner> orders = default(List<OrderCreateResponseOrdersInner>))
         {
-            this.Serviceresponse = serviceresponse;
+            this.CustomerOrderNumber = customerOrderNumber;
+            this.EndCustomerOrderNumber = endCustomerOrderNumber;
+            this.BillToAddressId = billToAddressId;
+            this.SpecialBidNumber = specialBidNumber;
+            this.OrderSplit = orderSplit;
+            this.ProcessedPartially = processedPartially;
+            this.PurchaseOrderTotal = purchaseOrderTotal;
+            this.ShipToInfo = shipToInfo;
+            this.EndUserInfo = endUserInfo;
+            this.Orders = orders;
         }
 
         /// <summary>
-        /// Gets or Sets Serviceresponse
+        /// The reseller&#39;s unique PO/Order number.
         /// </summary>
-        [DataMember(Name = "serviceresponse", EmitDefaultValue = false)]
-        public OrderCreateResponseServiceresponse Serviceresponse { get; set; }
+        /// <value>The reseller&#39;s unique PO/Order number.</value>
+        [DataMember(Name = "customerOrderNumber", EmitDefaultValue = false)]
+        public string CustomerOrderNumber { get; set; }
+
+        /// <summary>
+        /// The end user/customer&#39;s Purchase Order number.
+        /// </summary>
+        /// <value>The end user/customer&#39;s Purchase Order number.</value>
+        [DataMember(Name = "endCustomerOrderNumber", EmitDefaultValue = false)]
+        public string EndCustomerOrderNumber { get; set; }
+
+        /// <summary>
+        /// Suffix used to identify billing address. Created during onboarding. Resellers are provided with one or more address IDs depending on how many bill to addresses they need for various flooring companies they are using for credit
+        /// </summary>
+        /// <value>Suffix used to identify billing address. Created during onboarding. Resellers are provided with one or more address IDs depending on how many bill to addresses they need for various flooring companies they are using for credit</value>
+        [DataMember(Name = "billToAddressId", EmitDefaultValue = false)]
+        public string BillToAddressId { get; set; }
+
+        /// <summary>
+        /// The bid number provided to the reseller by the vendor for special pricing and discounts. Line-level bid numbers take precedence over header-level bid numbers.
+        /// </summary>
+        /// <value>The bid number provided to the reseller by the vendor for special pricing and discounts. Line-level bid numbers take precedence over header-level bid numbers.</value>
+        [DataMember(Name = "specialBidNumber", EmitDefaultValue = false)]
+        public string SpecialBidNumber { get; set; }
+
+        /// <summary>
+        /// true for multiple orders
+        /// </summary>
+        /// <value>true for multiple orders</value>
+        [DataMember(Name = "orderSplit", EmitDefaultValue = true)]
+        public bool OrderSplit { get; set; }
+
+        /// <summary>
+        /// true for partial order succesfully placed
+        /// </summary>
+        /// <value>true for partial order succesfully placed</value>
+        [DataMember(Name = "processedPartially", EmitDefaultValue = true)]
+        public bool ProcessedPartially { get; set; }
+
+        /// <summary>
+        /// Total of all the orders including taxes and fees.
+        /// </summary>
+        /// <value>Total of all the orders including taxes and fees.</value>
+        [DataMember(Name = "purchaseOrderTotal", EmitDefaultValue = false)]
+        public decimal PurchaseOrderTotal { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ShipToInfo
+        /// </summary>
+        [DataMember(Name = "shipToInfo", EmitDefaultValue = false)]
+        public OrderCreateResponseShipToInfo ShipToInfo { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EndUserInfo
+        /// </summary>
+        [DataMember(Name = "endUserInfo", EmitDefaultValue = false)]
+        public OrderCreateResponseEndUserInfo EndUserInfo { get; set; }
+
+        /// <summary>
+        /// Order-level details.
+        /// </summary>
+        /// <value>Order-level details.</value>
+        [DataMember(Name = "orders", EmitDefaultValue = false)]
+        public List<OrderCreateResponseOrdersInner> Orders { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -55,7 +135,16 @@ namespace xi.sdk.resellers.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class OrderCreateResponse {\n");
-            sb.Append("  Serviceresponse: ").Append(Serviceresponse).Append("\n");
+            sb.Append("  CustomerOrderNumber: ").Append(CustomerOrderNumber).Append("\n");
+            sb.Append("  EndCustomerOrderNumber: ").Append(EndCustomerOrderNumber).Append("\n");
+            sb.Append("  BillToAddressId: ").Append(BillToAddressId).Append("\n");
+            sb.Append("  SpecialBidNumber: ").Append(SpecialBidNumber).Append("\n");
+            sb.Append("  OrderSplit: ").Append(OrderSplit).Append("\n");
+            sb.Append("  ProcessedPartially: ").Append(ProcessedPartially).Append("\n");
+            sb.Append("  PurchaseOrderTotal: ").Append(PurchaseOrderTotal).Append("\n");
+            sb.Append("  ShipToInfo: ").Append(ShipToInfo).Append("\n");
+            sb.Append("  EndUserInfo: ").Append(EndUserInfo).Append("\n");
+            sb.Append("  Orders: ").Append(Orders).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

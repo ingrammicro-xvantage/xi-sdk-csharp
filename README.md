@@ -1,4 +1,4 @@
-# xi.sdk.resellers - the C# library for the XI Sdk Resellers
+# xi.sdk.resellers - the C# library for the XI SDK Resellers
 
 For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
 
@@ -151,8 +151,6 @@ Class | Method | HTTP request | Description
 *FreightEstimateApi* | [**PostFreightestimate**](docs/FreightEstimateApi.md#postfreightestimate) | **POST** /resellers/v6/freightestimate | Freight Estimate
 *InvoicesApi* | [**GetInvoicedetailsV61**](docs/InvoicesApi.md#getinvoicedetailsv61) | **GET** /resellers/v6.1/invoices/{invoiceNumber} | Get Invoice Details v6.1
 *InvoicesApi* | [**GetResellersV6Invoicesearch**](docs/InvoicesApi.md#getresellersv6invoicesearch) | **GET** /resellers/v6/invoices | Search your invoice
-*InvoicesV4Api* | [**PostV4Invoicedetails**](docs/InvoicesV4Api.md#postv4invoicedetails) | **POST** /invoices/v4/invoicedetails | Get Invoice Details
-*InvoicesV5Api* | [**GetInvoices**](docs/InvoicesV5Api.md#getinvoices) | **GET** /resellers/v5/invoices/{invoiceNumber} | Get Invoice Details
 *InvoicesV6Api* | [**GetInvoicedetailsV6**](docs/InvoicesV6Api.md#getinvoicedetailsv6) | **GET** /resellers/v6/invoices/{invoicenumber} | Get Invoice Details v6
 *OrderStatusApi* | [**ResellersV1WebhooksOrderstatuseventPost**](docs/OrderStatusApi.md#resellersv1webhooksorderstatuseventpost) | **POST** /resellers/v1/webhooks/orderstatusevent | Order Status
 *OrdersApi* | [**DeleteOrdercancel**](docs/OrdersApi.md#deleteordercancel) | **DELETE** /resellers/v6/orders/{OrderNumber} | Cancel your Order
@@ -160,31 +158,14 @@ Class | Method | HTTP request | Description
 *OrdersApi* | [**GetResellersV6Ordersearch**](docs/OrdersApi.md#getresellersv6ordersearch) | **GET** /resellers/v6/orders/search | Search your Orders
 *OrdersApi* | [**PostCreateorderV6**](docs/OrdersApi.md#postcreateorderv6) | **POST** /resellers/v6/orders | Create your Order
 *OrdersApi* | [**PutOrdermodify**](docs/OrdersApi.md#putordermodify) | **PUT** /resellers/v6/orders/{orderNumber} | Modify your Order
-*OrdersV4Api* | [**PostV4Ordercreate**](docs/OrdersV4Api.md#postv4ordercreate) | **POST** /orders/v4/ordercreate | Create a new Order
-*OrdersV4Api* | [**PostV4Orderdelete**](docs/OrdersV4Api.md#postv4orderdelete) | **POST** /orders/v4/orderdelete | Delete an Order
-*OrdersV4Api* | [**PostV4Orderdetails**](docs/OrdersV4Api.md#postv4orderdetails) | **POST** /orders/v4/orderdetails | Get Order Details
-*OrdersV4Api* | [**PostV4Ordermodify**](docs/OrdersV4Api.md#postv4ordermodify) | **POST** /orders/v4/ordermodify | Modify an Existing Order
-*OrdersV4Api* | [**PostV4Ordersearch**](docs/OrdersV4Api.md#postv4ordersearch) | **POST** /orders/v4/orderlookup | Order Search
-*OrdersV5Api* | [**DeleteOrdersOrderNumber**](docs/OrdersV5Api.md#deleteordersordernumber) | **DELETE** /resellers/v5/Orders/{ordernumber} | Cancel an Existing Order
-*OrdersV5Api* | [**GetOrdersSearch**](docs/OrdersV5Api.md#getorderssearch) | **GET** /resellers/v5/Orders/search | Search your Orders
-*OrdersV5Api* | [**GetV5OrdersDetails**](docs/OrdersV5Api.md#getv5ordersdetails) | **GET** /resellers/v5/Orders/{ordernumber} | Get Order Details
-*OrdersV5Api* | [**PostV5OrdersCreate**](docs/OrdersV5Api.md#postv5orderscreate) | **POST** /resellers/v5/Orders | Create a New Order
 *OrdersV6Api* | [**GetOrderdetailsV6**](docs/OrdersV6Api.md#getorderdetailsv6) | **GET** /resellers/v6/orders/{ordernumber} | Get Order Details v6
 *ProductCatalogApi* | [**GetResellerV6Productdetail**](docs/ProductCatalogApi.md#getresellerv6productdetail) | **GET** /resellers/v6/catalog/details/{ingramPartNumber} | Product Details
 *ProductCatalogApi* | [**GetResellerV6Productsearch**](docs/ProductCatalogApi.md#getresellerv6productsearch) | **GET** /resellers/v6/catalog | Search Products
 *ProductCatalogApi* | [**PostPriceandavailability**](docs/ProductCatalogApi.md#postpriceandavailability) | **POST** /resellers/v6/catalog/priceandavailability | Price and Availability
-*ProductCatalogV4Api* | [**PostV4Multiskupriceandstock**](docs/ProductCatalogV4Api.md#postv4multiskupriceandstock) | **POST** /products/v4/multiskupriceandstock | Product availability for upto 50 SKUs
-*ProductCatalogV4Api* | [**PostV4Productsearch**](docs/ProductCatalogV4Api.md#postv4productsearch) | **POST** /products/v4/productsearch | Real-time Product Search
-*ProductCatalogV5Api* | [**GetV5CatalogProductsearch**](docs/ProductCatalogV5Api.md#getv5catalogproductsearch) | **GET** /resellers/v5/Catalog | Search Product Catalog
-*ProductCatalogV5Api* | [**MultiSKUPriceAndStock**](docs/ProductCatalogV5Api.md#multiskupriceandstock) | **POST** /resellers/v5/Catalog/priceandavailability | Find availability of upto 50 SKUs
 *QuoteToOrderApi* | [**PostQuoteToOrderV6**](docs/QuoteToOrderApi.md#postquotetoorderv6) | **POST** /resellers/v6/q2o/orders | Quote To Order
 *QuotesApi* | [**GetQuotessearchV6**](docs/QuotesApi.md#getquotessearchv6) | **GET** /resellers/v6/quotes/search | Quote Search
 *QuotesApi* | [**GetResellerV6ValidateQuote**](docs/QuotesApi.md#getresellerv6validatequote) | **GET** /resellers/v6/q2o/validatequote | Validate Quote
 *QuotesApi* | [**GetResellersV6Quotes**](docs/QuotesApi.md#getresellersv6quotes) | **GET** /resellers/v6/quotes/{quoteNumber} | Get Quote Details
-*QuotesV4Api* | [**PostV4Quotedetails**](docs/QuotesV4Api.md#postv4quotedetails) | **POST** /quotes/v1/quotedetails | Get Quote Details
-*QuotesV4Api* | [**PostV4Quotesearch**](docs/QuotesV4Api.md#postv4quotesearch) | **POST** /quotes/v1/quotes | Get Quote List
-*QuotesV5Api* | [**GetV5QuotesDetails**](docs/QuotesV5Api.md#getv5quotesdetails) | **GET** /resellers/v5/quote/{quoteNumber} | Get Quote Details
-*QuotesV5Api* | [**PostV5QuotesSearch**](docs/QuotesV5Api.md#postv5quotessearch) | **POST** /resellers/v5/quote/search | Search Quotes
 *RenewalsApi* | [**GetResellersV6Renewalsdetails**](docs/RenewalsApi.md#getresellersv6renewalsdetails) | **GET** /resellers/v6/renewals/{renewalId} | Renewals Details
 *RenewalsApi* | [**PostRenewalssearch**](docs/RenewalsApi.md#postrenewalssearch) | **POST** /resellers/v6/renewals/search | Renewals Search
 *ReturnsApi* | [**GetResellersV6Returnsdetails**](docs/ReturnsApi.md#getresellersv6returnsdetails) | **GET** /resellers/v6/returns/{caseRequestNumber} | Returns Details
@@ -231,7 +212,6 @@ Class | Method | HTTP request | Description
  - [Model.InvoiceDetailResponseServiceresponseInvoicedetailresponseExtendedspecsInner](docs/InvoiceDetailResponseServiceresponseInvoicedetailresponseExtendedspecsInner.md)
  - [Model.InvoiceDetailResponseServiceresponseInvoicedetailresponseMiscfeelineInner](docs/InvoiceDetailResponseServiceresponseInvoicedetailresponseMiscfeelineInner.md)
  - [Model.InvoiceDetailResponseServiceresponseResponsepreamble](docs/InvoiceDetailResponseServiceresponseResponsepreamble.md)
- - [Model.InvoiceDetails](docs/InvoiceDetails.md)
  - [Model.InvoiceDetailsv61Response](docs/InvoiceDetailsv61Response.md)
  - [Model.InvoiceDetailsv61ResponseBillToInfo](docs/InvoiceDetailsv61ResponseBillToInfo.md)
  - [Model.InvoiceDetailsv61ResponseFxRateInfo](docs/InvoiceDetailsv61ResponseFxRateInfo.md)
@@ -256,9 +236,7 @@ Class | Method | HTTP request | Description
  - [Model.MultiSKUPriceAndStockResponseServiceresponsePriceandstockresponse](docs/MultiSKUPriceAndStockResponseServiceresponsePriceandstockresponse.md)
  - [Model.MultiSKUPriceAndStockResponseServiceresponsePriceandstockresponseDetailsInner](docs/MultiSKUPriceAndStockResponseServiceresponsePriceandstockresponseDetailsInner.md)
  - [Model.MultiSKUPriceAndStockResponseServiceresponsePriceandstockresponseDetailsInnerWarehousedetailsInner](docs/MultiSKUPriceAndStockResponseServiceresponsePriceandstockresponseDetailsInnerWarehousedetailsInner.md)
- - [Model.OrderCancelResponse](docs/OrderCancelResponse.md)
- - [Model.OrderCancelResponseServiceresponse](docs/OrderCancelResponseServiceresponse.md)
- - [Model.OrderCancelResponseServiceresponseResponsepreamble](docs/OrderCancelResponseServiceresponseResponsepreamble.md)
+ - [Model.MultiSKUPriceAndStockResponseServiceresponseResponsepreamble](docs/MultiSKUPriceAndStockResponseServiceresponseResponsepreamble.md)
  - [Model.OrderCreateRequest](docs/OrderCreateRequest.md)
  - [Model.OrderCreateRequestAdditionalAttributesInner](docs/OrderCreateRequestAdditionalAttributesInner.md)
  - [Model.OrderCreateRequestEndUserInfo](docs/OrderCreateRequestEndUserInfo.md)
@@ -267,14 +245,6 @@ Class | Method | HTTP request | Description
  - [Model.OrderCreateRequestLinesInnerEndUserInfoInner](docs/OrderCreateRequestLinesInnerEndUserInfoInner.md)
  - [Model.OrderCreateRequestLinesInnerWarrantyInfoInner](docs/OrderCreateRequestLinesInnerWarrantyInfoInner.md)
  - [Model.OrderCreateRequestLinesInnerWarrantyInfoInnerSerialInfoInner](docs/OrderCreateRequestLinesInnerWarrantyInfoInnerSerialInfoInner.md)
- - [Model.OrderCreateRequestOrdercreaterequest](docs/OrderCreateRequestOrdercreaterequest.md)
- - [Model.OrderCreateRequestOrdercreaterequestOrdercreatedetails](docs/OrderCreateRequestOrdercreaterequestOrdercreatedetails.md)
- - [Model.OrderCreateRequestOrdercreaterequestOrdercreatedetailsExtendedspecsInner](docs/OrderCreateRequestOrdercreaterequestOrdercreatedetailsExtendedspecsInner.md)
- - [Model.OrderCreateRequestOrdercreaterequestOrdercreatedetailsLinesInner](docs/OrderCreateRequestOrdercreaterequestOrdercreatedetailsLinesInner.md)
- - [Model.OrderCreateRequestOrdercreaterequestOrdercreatedetailsLinesInnerEnduser](docs/OrderCreateRequestOrdercreaterequestOrdercreatedetailsLinesInnerEnduser.md)
- - [Model.OrderCreateRequestOrdercreaterequestOrdercreatedetailsLinesInnerProductextendedspecsInner](docs/OrderCreateRequestOrdercreaterequestOrdercreatedetailsLinesInnerProductextendedspecsInner.md)
- - [Model.OrderCreateRequestOrdercreaterequestOrdercreatedetailsShiptoaddress](docs/OrderCreateRequestOrdercreaterequestOrdercreatedetailsShiptoaddress.md)
- - [Model.OrderCreateRequestOrdercreaterequestRequestpreamble](docs/OrderCreateRequestOrdercreaterequestRequestpreamble.md)
  - [Model.OrderCreateRequestResellerInfo](docs/OrderCreateRequestResellerInfo.md)
  - [Model.OrderCreateRequestShipToInfo](docs/OrderCreateRequestShipToInfo.md)
  - [Model.OrderCreateRequestShipmentDetails](docs/OrderCreateRequestShipmentDetails.md)
@@ -289,17 +259,14 @@ Class | Method | HTTP request | Description
  - [Model.OrderCreateResponseOrdersInnerLinksInner](docs/OrderCreateResponseOrdersInnerLinksInner.md)
  - [Model.OrderCreateResponseOrdersInnerMiscellaneousChargesInner](docs/OrderCreateResponseOrdersInnerMiscellaneousChargesInner.md)
  - [Model.OrderCreateResponseOrdersInnerRejectedLineItemsInner](docs/OrderCreateResponseOrdersInnerRejectedLineItemsInner.md)
- - [Model.OrderCreateResponseServiceresponse](docs/OrderCreateResponseServiceresponse.md)
- - [Model.OrderCreateResponseServiceresponseOrdercreateresponseInner](docs/OrderCreateResponseServiceresponseOrdercreateresponseInner.md)
- - [Model.OrderCreateResponseServiceresponseOrdercreateresponseInnerLinesInner](docs/OrderCreateResponseServiceresponseOrdercreateresponseInnerLinesInner.md)
- - [Model.OrderCreateResponseServiceresponseOrdersummary](docs/OrderCreateResponseServiceresponseOrdersummary.md)
- - [Model.OrderCreateResponseServiceresponseOrdersummaryShiptoaddress](docs/OrderCreateResponseServiceresponseOrdersummaryShiptoaddress.md)
  - [Model.OrderCreateResponseShipToInfo](docs/OrderCreateResponseShipToInfo.md)
  - [Model.OrderDeleteRequest](docs/OrderDeleteRequest.md)
  - [Model.OrderDeleteRequestServicerequest](docs/OrderDeleteRequestServicerequest.md)
  - [Model.OrderDeleteRequestServicerequestOrderDeleteRequestDetails](docs/OrderDeleteRequestServicerequestOrderDeleteRequestDetails.md)
  - [Model.OrderDeleteRequestServicerequestRequestpreamble](docs/OrderDeleteRequestServicerequestRequestpreamble.md)
  - [Model.OrderDeleteResponse](docs/OrderDeleteResponse.md)
+ - [Model.OrderDeleteResponseServiceresponse](docs/OrderDeleteResponseServiceresponse.md)
+ - [Model.OrderDeleteResponseServiceresponseResponsepreamble](docs/OrderDeleteResponseServiceresponseResponsepreamble.md)
  - [Model.OrderDetailB2B](docs/OrderDetailB2B.md)
  - [Model.OrderDetailB2BAdditionalAttributesInner](docs/OrderDetailB2BAdditionalAttributesInner.md)
  - [Model.OrderDetailB2BBillToInfo](docs/OrderDetailB2BBillToInfo.md)
@@ -338,18 +305,6 @@ Class | Method | HTTP request | Description
  - [Model.OrderDetailResponseLinesInnerShipmentDetailsInnerCarrierDetailsTrackingDetailsInner](docs/OrderDetailResponseLinesInnerShipmentDetailsInnerCarrierDetailsTrackingDetailsInner.md)
  - [Model.OrderDetailResponseLinesInnerShipmentDetailsInnerCarrierDetailsTrackingDetailsInnerSerialNumbersInner](docs/OrderDetailResponseLinesInnerShipmentDetailsInnerCarrierDetailsTrackingDetailsInnerSerialNumbersInner.md)
  - [Model.OrderDetailResponseMiscellaneousChargesInner](docs/OrderDetailResponseMiscellaneousChargesInner.md)
- - [Model.OrderDetailResponseServiceresponse](docs/OrderDetailResponseServiceresponse.md)
- - [Model.OrderDetailResponseServiceresponseOrderdetailresponse](docs/OrderDetailResponseServiceresponseOrderdetailresponse.md)
- - [Model.OrderDetailResponseServiceresponseOrderdetailresponseBilltoaddress](docs/OrderDetailResponseServiceresponseOrderdetailresponseBilltoaddress.md)
- - [Model.OrderDetailResponseServiceresponseOrderdetailresponseCommentlinesInner](docs/OrderDetailResponseServiceresponseOrderdetailresponseCommentlinesInner.md)
- - [Model.OrderDetailResponseServiceresponseOrderdetailresponseEnduserinfo](docs/OrderDetailResponseServiceresponseOrderdetailresponseEnduserinfo.md)
- - [Model.OrderDetailResponseServiceresponseOrderdetailresponseExtendedspecsInner](docs/OrderDetailResponseServiceresponseOrderdetailresponseExtendedspecsInner.md)
- - [Model.OrderDetailResponseServiceresponseOrderdetailresponseLinesInner](docs/OrderDetailResponseServiceresponseOrderdetailresponseLinesInner.md)
- - [Model.OrderDetailResponseServiceresponseOrderdetailresponseLinesInnerSerialnumberdetailsInner](docs/OrderDetailResponseServiceresponseOrderdetailresponseLinesInnerSerialnumberdetailsInner.md)
- - [Model.OrderDetailResponseServiceresponseOrderdetailresponseLinesInnerShipmentdetailsInner](docs/OrderDetailResponseServiceresponseOrderdetailresponseLinesInnerShipmentdetailsInner.md)
- - [Model.OrderDetailResponseServiceresponseOrderdetailresponseLinesInnerShipmentdetailsInnerPackagedetails](docs/OrderDetailResponseServiceresponseOrderdetailresponseLinesInnerShipmentdetailsInnerPackagedetails.md)
- - [Model.OrderDetailResponseServiceresponseOrderdetailresponseMiscfeelineInner](docs/OrderDetailResponseServiceresponseOrderdetailresponseMiscfeelineInner.md)
- - [Model.OrderDetailResponseServiceresponseOrderdetailresponseShiptoaddress](docs/OrderDetailResponseServiceresponseOrderdetailresponseShiptoaddress.md)
  - [Model.OrderDetailResponseShipToInfo](docs/OrderDetailResponseShipToInfo.md)
  - [Model.OrderModifyRequest](docs/OrderModifyRequest.md)
  - [Model.OrderModifyRequestAdditionalAttributesInner](docs/OrderModifyRequestAdditionalAttributesInner.md)
@@ -381,13 +336,6 @@ Class | Method | HTTP request | Description
  - [Model.OrderSearchResponseOrdersInnerLinks](docs/OrderSearchResponseOrdersInnerLinks.md)
  - [Model.OrderSearchResponseOrdersInnerSubOrdersInner](docs/OrderSearchResponseOrdersInnerSubOrdersInner.md)
  - [Model.OrderSearchResponseOrdersInnerSubOrdersInnerLinksInner](docs/OrderSearchResponseOrdersInnerSubOrdersInnerLinksInner.md)
- - [Model.OrderSearchResponseServiceResponse](docs/OrderSearchResponseServiceResponse.md)
- - [Model.OrderSearchResponseServiceResponseOrdersearchresponse](docs/OrderSearchResponseServiceResponseOrdersearchresponse.md)
- - [Model.OrderSearchResponseServiceResponseOrdersearchresponseOrdersInner](docs/OrderSearchResponseServiceResponseOrdersearchresponseOrdersInner.md)
- - [Model.OrderSearchResponseServiceResponseOrdersearchresponseOrdersInnerLinks](docs/OrderSearchResponseServiceResponseOrdersearchresponseOrdersInnerLinks.md)
- - [Model.OrderSearchResponseServiceResponseOrdersearchresponseOrdersInnerSubordersInner](docs/OrderSearchResponseServiceResponseOrdersearchresponseOrdersInnerSubordersInner.md)
- - [Model.OrderSearchResponseServiceResponseOrdersearchresponseOrdersInnerSubordersInnerLinksInner](docs/OrderSearchResponseServiceResponseOrdersearchresponseOrdersInnerSubordersInnerLinksInner.md)
- - [Model.OrderSearchResponseServiceResponseResponsepreamble](docs/OrderSearchResponseServiceResponseResponsepreamble.md)
  - [Model.OrderStatusAsyncNotificationRequest](docs/OrderStatusAsyncNotificationRequest.md)
  - [Model.OrderStatusAsyncNotificationRequestResourceInner](docs/OrderStatusAsyncNotificationRequestResourceInner.md)
  - [Model.OrderStatusAsyncNotificationRequestResourceInnerLinesInner](docs/OrderStatusAsyncNotificationRequestResourceInnerLinesInner.md)
@@ -403,11 +351,6 @@ Class | Method | HTTP request | Description
  - [Model.PriceAndAvailabilityRequestAvailabilityByWarehouseInner](docs/PriceAndAvailabilityRequestAvailabilityByWarehouseInner.md)
  - [Model.PriceAndAvailabilityRequestProductsInner](docs/PriceAndAvailabilityRequestProductsInner.md)
  - [Model.PriceAndAvailabilityRequestProductsInnerAdditionalAttributesInner](docs/PriceAndAvailabilityRequestProductsInnerAdditionalAttributesInner.md)
- - [Model.PriceAndAvailabilityRequestServicerequest](docs/PriceAndAvailabilityRequestServicerequest.md)
- - [Model.PriceAndAvailabilityRequestServicerequestPriceandstockrequest](docs/PriceAndAvailabilityRequestServicerequestPriceandstockrequest.md)
- - [Model.PriceAndAvailabilityRequestServicerequestPriceandstockrequestItemInner](docs/PriceAndAvailabilityRequestServicerequestPriceandstockrequestItemInner.md)
- - [Model.PriceAndAvailabilityRequestServicerequestRequestpreamble](docs/PriceAndAvailabilityRequestServicerequestRequestpreamble.md)
- - [Model.PriceAndAvailabilityResponse](docs/PriceAndAvailabilityResponse.md)
  - [Model.PriceAndAvailabilityResponseInner](docs/PriceAndAvailabilityResponseInner.md)
  - [Model.PriceAndAvailabilityResponseInnerAvailability](docs/PriceAndAvailabilityResponseInnerAvailability.md)
  - [Model.PriceAndAvailabilityResponseInnerAvailabilityAvailabilityByWarehouseInner](docs/PriceAndAvailabilityResponseInnerAvailabilityAvailabilityByWarehouseInner.md)
@@ -418,10 +361,6 @@ Class | Method | HTTP request | Description
  - [Model.PriceAndAvailabilityResponseInnerPricing](docs/PriceAndAvailabilityResponseInnerPricing.md)
  - [Model.PriceAndAvailabilityResponseInnerReserveInventoryDetailsInner](docs/PriceAndAvailabilityResponseInnerReserveInventoryDetailsInner.md)
  - [Model.PriceAndAvailabilityResponseInnerServiceFeesInner](docs/PriceAndAvailabilityResponseInnerServiceFeesInner.md)
- - [Model.PriceAndAvailabilityResponseServiceresponse](docs/PriceAndAvailabilityResponseServiceresponse.md)
- - [Model.PriceAndAvailabilityResponseServiceresponsePriceandstockresponse](docs/PriceAndAvailabilityResponseServiceresponsePriceandstockresponse.md)
- - [Model.PriceAndAvailabilityResponseServiceresponsePriceandstockresponseDetailsInner](docs/PriceAndAvailabilityResponseServiceresponsePriceandstockresponseDetailsInner.md)
- - [Model.PriceAndAvailabilityResponseServiceresponseResponsepreamble](docs/PriceAndAvailabilityResponseServiceresponseResponsepreamble.md)
  - [Model.ProductDetailResponse](docs/ProductDetailResponse.md)
  - [Model.ProductDetailResponseAdditionalInformation](docs/ProductDetailResponseAdditionalInformation.md)
  - [Model.ProductDetailResponseAdditionalInformationProductWeightInner](docs/ProductDetailResponseAdditionalInformationProductWeightInner.md)
@@ -439,10 +378,6 @@ Class | Method | HTTP request | Description
  - [Model.ProductSearchResponse](docs/ProductSearchResponse.md)
  - [Model.ProductSearchResponseCatalogInner](docs/ProductSearchResponseCatalogInner.md)
  - [Model.ProductSearchResponseCatalogInnerLinksInner](docs/ProductSearchResponseCatalogInnerLinksInner.md)
- - [Model.ProductSearchResponseServiceresponse](docs/ProductSearchResponseServiceresponse.md)
- - [Model.ProductSearchResponseServiceresponseProductsearchresponseInner](docs/ProductSearchResponseServiceresponseProductsearchresponseInner.md)
- - [Model.ProductSearchResponseServiceresponseProductsearchresponseInnerPartnumbersInner](docs/ProductSearchResponseServiceresponseProductsearchresponseInnerPartnumbersInner.md)
- - [Model.ProductSearchResponseServiceresponseResponsepreamble](docs/ProductSearchResponseServiceresponseResponsepreamble.md)
  - [Model.QuoteDetails](docs/QuoteDetails.md)
  - [Model.QuoteDetailsQuoteDetailResponse](docs/QuoteDetailsQuoteDetailResponse.md)
  - [Model.QuoteDetailsQuoteDetailResponseResponsePreamble](docs/QuoteDetailsQuoteDetailResponseResponsePreamble.md)
@@ -463,10 +398,6 @@ Class | Method | HTTP request | Description
  - [Model.QuoteDetailsResponseQuoteDetailResponse](docs/QuoteDetailsResponseQuoteDetailResponse.md)
  - [Model.QuoteDetailsResponseQuoteDetailResponseRetrieveQuoteResponse](docs/QuoteDetailsResponseQuoteDetailResponseRetrieveQuoteResponse.md)
  - [Model.QuoteDetailsResponseResellerInfo](docs/QuoteDetailsResponseResellerInfo.md)
- - [Model.QuoteListRequest](docs/QuoteListRequest.md)
- - [Model.QuoteListRequestQuoteSearchRequest](docs/QuoteListRequestQuoteSearchRequest.md)
- - [Model.QuoteListRequestQuoteSearchRequestRequestPreamble](docs/QuoteListRequestQuoteSearchRequestRequestPreamble.md)
- - [Model.QuoteListRequestQuoteSearchRequestRetrieveQuoteRequest](docs/QuoteListRequestQuoteSearchRequestRetrieveQuoteRequest.md)
  - [Model.QuoteListResponse](docs/QuoteListResponse.md)
  - [Model.QuoteListResponseQuoteSearchResponse](docs/QuoteListResponseQuoteSearchResponse.md)
  - [Model.QuoteListResponseQuoteSearchResponseQuoteListInner](docs/QuoteListResponseQuoteSearchResponseQuoteListInner.md)
@@ -512,7 +443,6 @@ Class | Method | HTTP request | Description
  - [Model.ValidateQuoteResponseLinesInner](docs/ValidateQuoteResponseLinesInner.md)
  - [Model.ValidateQuoteResponseLinesInnerVmfAdditionalAttributesLinesInner](docs/ValidateQuoteResponseLinesInnerVmfAdditionalAttributesLinesInner.md)
  - [Model.ValidateQuoteResponseVmfAdditionalAttributesInner](docs/ValidateQuoteResponseVmfAdditionalAttributesInner.md)
- - [Model.WarehouseListType](docs/WarehouseListType.md)
 
 
 <a id="documentation-for-authorization"></a>

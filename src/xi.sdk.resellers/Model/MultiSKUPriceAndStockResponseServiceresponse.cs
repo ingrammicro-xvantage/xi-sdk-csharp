@@ -1,5 +1,5 @@
 /*
- * XI Sdk Resellers
+ * XI SDK Resellers
  *
  * For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
  *
@@ -37,7 +37,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <param name="responsepreamble">responsepreamble.</param>
         /// <param name="priceandstockresponse">priceandstockresponse.</param>
-        public MultiSKUPriceAndStockResponseServiceresponse(PriceAndAvailabilityResponseServiceresponseResponsepreamble responsepreamble = default(PriceAndAvailabilityResponseServiceresponseResponsepreamble), MultiSKUPriceAndStockResponseServiceresponsePriceandstockresponse priceandstockresponse = default(MultiSKUPriceAndStockResponseServiceresponsePriceandstockresponse))
+        public MultiSKUPriceAndStockResponseServiceresponse(MultiSKUPriceAndStockResponseServiceresponseResponsepreamble responsepreamble = default(MultiSKUPriceAndStockResponseServiceresponseResponsepreamble), MultiSKUPriceAndStockResponseServiceresponsePriceandstockresponse priceandstockresponse = default(MultiSKUPriceAndStockResponseServiceresponsePriceandstockresponse))
         {
             this.Responsepreamble = responsepreamble;
             this.Priceandstockresponse = priceandstockresponse;
@@ -47,7 +47,7 @@ namespace xi.sdk.resellers.Model
         /// Gets or Sets Responsepreamble
         /// </summary>
         [DataMember(Name = "responsepreamble", EmitDefaultValue = false)]
-        public PriceAndAvailabilityResponseServiceresponseResponsepreamble Responsepreamble { get; set; }
+        public MultiSKUPriceAndStockResponseServiceresponseResponsepreamble Responsepreamble { get; set; }
 
         /// <summary>
         /// Gets or Sets Priceandstockresponse

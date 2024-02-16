@@ -1,5 +1,5 @@
 /*
- * XI Sdk Resellers
+ * XI SDK Resellers
  *
  * For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
  *
@@ -55,12 +55,57 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'Servicerequest'
+        /// Test the property 'ShowAvailableDiscounts'
         /// </summary>
         [Fact]
-        public void ServicerequestTest()
+        public void ShowAvailableDiscountsTest()
         {
-            // TODO unit test for the property 'Servicerequest'
+            // TODO unit test for the property 'ShowAvailableDiscounts'
+        }
+
+        /// <summary>
+        /// Test the property 'ShowReserveInventoryDetails'
+        /// </summary>
+        [Fact]
+        public void ShowReserveInventoryDetailsTest()
+        {
+            // TODO unit test for the property 'ShowReserveInventoryDetails'
+        }
+
+        /// <summary>
+        /// Test the property 'SpecialBidNumber'
+        /// </summary>
+        [Fact]
+        public void SpecialBidNumberTest()
+        {
+            // TODO unit test for the property 'SpecialBidNumber'
+        }
+
+        /// <summary>
+        /// Test the property 'AvailabilityByWarehouse'
+        /// </summary>
+        [Fact]
+        public void AvailabilityByWarehouseTest()
+        {
+            // TODO unit test for the property 'AvailabilityByWarehouse'
+        }
+
+        /// <summary>
+        /// Test the property 'Products'
+        /// </summary>
+        [Fact]
+        public void ProductsTest()
+        {
+            // TODO unit test for the property 'Products'
+        }
+
+        /// <summary>
+        /// Test the property 'AdditionalAttributes'
+        /// </summary>
+        [Fact]
+        public void AdditionalAttributesTest()
+        {
+            // TODO unit test for the property 'AdditionalAttributes'
         }
     }
 }

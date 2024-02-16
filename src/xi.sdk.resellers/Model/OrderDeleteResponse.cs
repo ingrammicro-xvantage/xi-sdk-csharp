@@ -1,5 +1,5 @@
 /*
- * XI Sdk Resellers
+ * XI SDK Resellers
  *
  * For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
  *
@@ -36,7 +36,7 @@ namespace xi.sdk.resellers.Model
         /// Initializes a new instance of the <see cref="OrderDeleteResponse" /> class.
         /// </summary>
         /// <param name="serviceresponse">serviceresponse.</param>
-        public OrderDeleteResponse(OrderCancelResponseServiceresponse serviceresponse = default(OrderCancelResponseServiceresponse))
+        public OrderDeleteResponse(OrderDeleteResponseServiceresponse serviceresponse = default(OrderDeleteResponseServiceresponse))
         {
             this.Serviceresponse = serviceresponse;
         }
@@ -45,7 +45,7 @@ namespace xi.sdk.resellers.Model
         /// Gets or Sets Serviceresponse
         /// </summary>
         [DataMember(Name = "serviceresponse", EmitDefaultValue = false)]
-        public OrderCancelResponseServiceresponse Serviceresponse { get; set; }
+        public OrderDeleteResponseServiceresponse Serviceresponse { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

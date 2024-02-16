@@ -1,5 +1,5 @@
 /*
- * XI Sdk Resellers
+ * XI SDK Resellers
  *
  * For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
  *
@@ -27,25 +27,68 @@ using OpenAPIDateConverter = xi.sdk.resellers.Client.OpenAPIDateConverter;
 namespace xi.sdk.resellers.Model
 {
     /// <summary>
-    /// Request object model for the multi sku price and stock API endpoint
+    /// PriceAndAvailabilityRequest
     /// </summary>
-    [DataContract(Name = "priceAndAvailabilityRequest")]
+    [DataContract(Name = "PriceAndAvailabilityRequest")]
     public partial class PriceAndAvailabilityRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="PriceAndAvailabilityRequest" /> class.
         /// </summary>
-        /// <param name="servicerequest">servicerequest.</param>
-        public PriceAndAvailabilityRequest(PriceAndAvailabilityRequestServicerequest servicerequest = default(PriceAndAvailabilityRequestServicerequest))
+        /// <param name="showAvailableDiscounts">Boolean value that will display Discount details in the response when true..</param>
+        /// <param name="showReserveInventoryDetails">Boolean value that will display reserve inventory details in the response when true..</param>
+        /// <param name="specialBidNumber">Pre-approved special pricing/bid number provided to the reseller by the vendor for special pricing and discounts. Used to track the bid number where different line items have different bid numbers..</param>
+        /// <param name="availabilityByWarehouse">availabilityByWarehouse.</param>
+        /// <param name="products">products.</param>
+        /// <param name="additionalAttributes">additionalAttributes.</param>
+        public PriceAndAvailabilityRequest(bool showAvailableDiscounts = default(bool), bool showReserveInventoryDetails = default(bool), string specialBidNumber = default(string), List<PriceAndAvailabilityRequestAvailabilityByWarehouseInner> availabilityByWarehouse = default(List<PriceAndAvailabilityRequestAvailabilityByWarehouseInner>), List<PriceAndAvailabilityRequestProductsInner> products = default(List<PriceAndAvailabilityRequestProductsInner>), List<PriceAndAvailabilityRequestAdditionalAttributesInner> additionalAttributes = default(List<PriceAndAvailabilityRequestAdditionalAttributesInner>))
         {
-            this.Servicerequest = servicerequest;
+            this.ShowAvailableDiscounts = showAvailableDiscounts;
+            this.ShowReserveInventoryDetails = showReserveInventoryDetails;
+            this.SpecialBidNumber = specialBidNumber;
+            this.AvailabilityByWarehouse = availabilityByWarehouse;
+            this.Products = products;
+            this.AdditionalAttributes = additionalAttributes;
         }
 
         /// <summary>
-        /// Gets or Sets Servicerequest
+        /// Boolean value that will display Discount details in the response when true.
         /// </summary>
-        [DataMember(Name = "servicerequest", EmitDefaultValue = false)]
-        public PriceAndAvailabilityRequestServicerequest Servicerequest { get; set; }
+        /// <value>Boolean value that will display Discount details in the response when true.</value>
+        [DataMember(Name = "showAvailableDiscounts", EmitDefaultValue = true)]
+        public bool ShowAvailableDiscounts { get; set; }
+
+        /// <summary>
+        /// Boolean value that will display reserve inventory details in the response when true.
+        /// </summary>
+        /// <value>Boolean value that will display reserve inventory details in the response when true.</value>
+        [DataMember(Name = "showReserveInventoryDetails", EmitDefaultValue = true)]
+        public bool ShowReserveInventoryDetails { get; set; }
+
+        /// <summary>
+        /// Pre-approved special pricing/bid number provided to the reseller by the vendor for special pricing and discounts. Used to track the bid number where different line items have different bid numbers.
+        /// </summary>
+        /// <value>Pre-approved special pricing/bid number provided to the reseller by the vendor for special pricing and discounts. Used to track the bid number where different line items have different bid numbers.</value>
+        [DataMember(Name = "specialBidNumber", EmitDefaultValue = false)]
+        public string SpecialBidNumber { get; set; }
+
+        /// <summary>
+        /// Gets or Sets AvailabilityByWarehouse
+        /// </summary>
+        [DataMember(Name = "availabilityByWarehouse", EmitDefaultValue = false)]
+        public List<PriceAndAvailabilityRequestAvailabilityByWarehouseInner> AvailabilityByWarehouse { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Products
+        /// </summary>
+        [DataMember(Name = "products", EmitDefaultValue = false)]
+        public List<PriceAndAvailabilityRequestProductsInner> Products { get; set; }
+
+        /// <summary>
+        /// Gets or Sets AdditionalAttributes
+        /// </summary>
+        [DataMember(Name = "additionalAttributes", EmitDefaultValue = false)]
+        public List<PriceAndAvailabilityRequestAdditionalAttributesInner> AdditionalAttributes { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -55,7 +98,12 @@ namespace xi.sdk.resellers.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class PriceAndAvailabilityRequest {\n");
-            sb.Append("  Servicerequest: ").Append(Servicerequest).Append("\n");
+            sb.Append("  ShowAvailableDiscounts: ").Append(ShowAvailableDiscounts).Append("\n");
+            sb.Append("  ShowReserveInventoryDetails: ").Append(ShowReserveInventoryDetails).Append("\n");
+            sb.Append("  SpecialBidNumber: ").Append(SpecialBidNumber).Append("\n");
+            sb.Append("  AvailabilityByWarehouse: ").Append(AvailabilityByWarehouse).Append("\n");
+            sb.Append("  Products: ").Append(Products).Append("\n");
+            sb.Append("  AdditionalAttributes: ").Append(AdditionalAttributes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

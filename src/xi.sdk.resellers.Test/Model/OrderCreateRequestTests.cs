@@ -1,5 +1,5 @@
 /*
- * XI Sdk Resellers
+ * XI SDK Resellers
  *
  * For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
  *
@@ -55,12 +55,120 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'VarOrdercreaterequest'
+        /// Test the property 'CustomerOrderNumber'
         /// </summary>
         [Fact]
-        public void VarOrdercreaterequestTest()
+        public void CustomerOrderNumberTest()
         {
-            // TODO unit test for the property 'VarOrdercreaterequest'
+            // TODO unit test for the property 'CustomerOrderNumber'
+        }
+
+        /// <summary>
+        /// Test the property 'EndCustomerOrderNumber'
+        /// </summary>
+        [Fact]
+        public void EndCustomerOrderNumberTest()
+        {
+            // TODO unit test for the property 'EndCustomerOrderNumber'
+        }
+
+        /// <summary>
+        /// Test the property 'BillToAddressId'
+        /// </summary>
+        [Fact]
+        public void BillToAddressIdTest()
+        {
+            // TODO unit test for the property 'BillToAddressId'
+        }
+
+        /// <summary>
+        /// Test the property 'SpecialBidNumber'
+        /// </summary>
+        [Fact]
+        public void SpecialBidNumberTest()
+        {
+            // TODO unit test for the property 'SpecialBidNumber'
+        }
+
+        /// <summary>
+        /// Test the property 'Notes'
+        /// </summary>
+        [Fact]
+        public void NotesTest()
+        {
+            // TODO unit test for the property 'Notes'
+        }
+
+        /// <summary>
+        /// Test the property 'AcceptBackOrder'
+        /// </summary>
+        [Fact]
+        public void AcceptBackOrderTest()
+        {
+            // TODO unit test for the property 'AcceptBackOrder'
+        }
+
+        /// <summary>
+        /// Test the property 'ResellerInfo'
+        /// </summary>
+        [Fact]
+        public void ResellerInfoTest()
+        {
+            // TODO unit test for the property 'ResellerInfo'
+        }
+
+        /// <summary>
+        /// Test the property 'Vmf'
+        /// </summary>
+        [Fact]
+        public void VmfTest()
+        {
+            // TODO unit test for the property 'Vmf'
+        }
+
+        /// <summary>
+        /// Test the property 'ShipToInfo'
+        /// </summary>
+        [Fact]
+        public void ShipToInfoTest()
+        {
+            // TODO unit test for the property 'ShipToInfo'
+        }
+
+        /// <summary>
+        /// Test the property 'EndUserInfo'
+        /// </summary>
+        [Fact]
+        public void EndUserInfoTest()
+        {
+            // TODO unit test for the property 'EndUserInfo'
+        }
+
+        /// <summary>
+        /// Test the property 'Lines'
+        /// </summary>
+        [Fact]
+        public void LinesTest()
+        {
+            // TODO unit test for the property 'Lines'
+        }
+
+        /// <summary>
+        /// Test the property 'ShipmentDetails'
+        /// </summary>
+        [Fact]
+        public void ShipmentDetailsTest()
+        {
+            // TODO unit test for the property 'ShipmentDetails'
+        }
+
+        /// <summary>
+        /// Test the property 'AdditionalAttributes'
+        /// </summary>
+        [Fact]
+        public void AdditionalAttributesTest()
+        {
+            // TODO unit test for the property 'AdditionalAttributes'
         }
     }
 }

@@ -1,5 +1,5 @@
 /*
- * XI Sdk Resellers
+ * XI SDK Resellers
  *
  * For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
  *
@@ -27,25 +27,200 @@ using OpenAPIDateConverter = xi.sdk.resellers.Client.OpenAPIDateConverter;
 namespace xi.sdk.resellers.Model
 {
     /// <summary>
-    /// Response schema for order details endpoint
+    /// OrderDetailResponse
     /// </summary>
-    [DataContract(Name = "orderDetailResponse")]
+    [DataContract(Name = "OrderDetailResponse")]
     public partial class OrderDetailResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderDetailResponse" /> class.
         /// </summary>
-        /// <param name="serviceresponse">serviceresponse.</param>
-        public OrderDetailResponse(OrderDetailResponseServiceresponse serviceresponse = default(OrderDetailResponseServiceresponse))
+        /// <param name="ingramOrderNumber">The IngramMicro sales order number..</param>
+        /// <param name="ingramOrderDate">The date and time in UTC format that the order was created..</param>
+        /// <param name="orderType">The order type. One of B &#x3D; Branch Transfer, C &#x3D; COD, D &#x3D; Direct Ship, F &#x3D; Future Order, P &#x3D; Special Order, M &#x3D; Memo, Q &#x3D; Quote, S &#x3D; Sales Order..</param>
+        /// <param name="customerOrderNumber">The reseller&#39;s order number for reference in their system..</param>
+        /// <param name="endCustomerOrderNumber">The end user/customer&#39;s order number for reference in their system..</param>
+        /// <param name="vendorSalesOrderNumber">The vendor&#39;s order number for reference in their system..</param>
+        /// <param name="orderStatus">The header-level status of the order. One of- Shipped, Canceled, Backordered, Processing, On Hold, Delivered..</param>
+        /// <param name="orderTotal">The total cost for the order, includes subtotal, freight charges, and tax..</param>
+        /// <param name="orderSubTotal">The sub total cost for the order, not including tax and freight..</param>
+        /// <param name="freightCharges">The freight charges for the order..</param>
+        /// <param name="currencyCode">The country-specific three digit ISO 4217 currency code for the order..</param>
+        /// <param name="totalWeight">The total weight of the order. Pounds in North America, KG in all other countries..</param>
+        /// <param name="totalTax">The total tax for the order..</param>
+        /// <param name="paymentTerms">The payment terms of the order. (Ex- Net 30 days)..</param>
+        /// <param name="notes">The header-level notes for the order..</param>
+        /// <param name="billToInfo">billToInfo.</param>
+        /// <param name="shipToInfo">shipToInfo.</param>
+        /// <param name="endUserInfo">endUserInfo.</param>
+        /// <param name="lines">lines.</param>
+        /// <param name="miscellaneousCharges">miscellaneousCharges.</param>
+        /// <param name="additionalAttributes">additionalAttributes.</param>
+        public OrderDetailResponse(string ingramOrderNumber = default(string), string ingramOrderDate = default(string), string orderType = default(string), string customerOrderNumber = default(string), string endCustomerOrderNumber = default(string), string vendorSalesOrderNumber = default(string), string orderStatus = default(string), decimal orderTotal = default(decimal), decimal orderSubTotal = default(decimal), decimal freightCharges = default(decimal), string currencyCode = default(string), decimal totalWeight = default(decimal), decimal totalTax = default(decimal), string paymentTerms = default(string), string notes = default(string), OrderDetailResponseBillToInfo billToInfo = default(OrderDetailResponseBillToInfo), OrderDetailResponseShipToInfo shipToInfo = default(OrderDetailResponseShipToInfo), OrderDetailResponseEndUserInfo endUserInfo = default(OrderDetailResponseEndUserInfo), List<OrderDetailResponseLinesInner> lines = default(List<OrderDetailResponseLinesInner>), List<OrderDetailResponseMiscellaneousChargesInner> miscellaneousCharges = default(List<OrderDetailResponseMiscellaneousChargesInner>), List<OrderDetailResponseLinesInnerAdditionalAttributesInner> additionalAttributes = default(List<OrderDetailResponseLinesInnerAdditionalAttributesInner>))
         {
-            this.Serviceresponse = serviceresponse;
+            this.IngramOrderNumber = ingramOrderNumber;
+            this.IngramOrderDate = ingramOrderDate;
+            this.OrderType = orderType;
+            this.CustomerOrderNumber = customerOrderNumber;
+            this.EndCustomerOrderNumber = endCustomerOrderNumber;
+            this.VendorSalesOrderNumber = vendorSalesOrderNumber;
+            this.OrderStatus = orderStatus;
+            this.OrderTotal = orderTotal;
+            this.OrderSubTotal = orderSubTotal;
+            this.FreightCharges = freightCharges;
+            this.CurrencyCode = currencyCode;
+            this.TotalWeight = totalWeight;
+            this.TotalTax = totalTax;
+            this.PaymentTerms = paymentTerms;
+            this.Notes = notes;
+            this.BillToInfo = billToInfo;
+            this.ShipToInfo = shipToInfo;
+            this.EndUserInfo = endUserInfo;
+            this.Lines = lines;
+            this.MiscellaneousCharges = miscellaneousCharges;
+            this.AdditionalAttributes = additionalAttributes;
         }
 
         /// <summary>
-        /// Gets or Sets Serviceresponse
+        /// The IngramMicro sales order number.
         /// </summary>
-        [DataMember(Name = "serviceresponse", EmitDefaultValue = false)]
-        public OrderDetailResponseServiceresponse Serviceresponse { get; set; }
+        /// <value>The IngramMicro sales order number.</value>
+        [DataMember(Name = "ingramOrderNumber", EmitDefaultValue = false)]
+        public string IngramOrderNumber { get; set; }
+
+        /// <summary>
+        /// The date and time in UTC format that the order was created.
+        /// </summary>
+        /// <value>The date and time in UTC format that the order was created.</value>
+        [DataMember(Name = "ingramOrderDate", EmitDefaultValue = false)]
+        public string IngramOrderDate { get; set; }
+
+        /// <summary>
+        /// The order type. One of B &#x3D; Branch Transfer, C &#x3D; COD, D &#x3D; Direct Ship, F &#x3D; Future Order, P &#x3D; Special Order, M &#x3D; Memo, Q &#x3D; Quote, S &#x3D; Sales Order.
+        /// </summary>
+        /// <value>The order type. One of B &#x3D; Branch Transfer, C &#x3D; COD, D &#x3D; Direct Ship, F &#x3D; Future Order, P &#x3D; Special Order, M &#x3D; Memo, Q &#x3D; Quote, S &#x3D; Sales Order.</value>
+        [DataMember(Name = "orderType", EmitDefaultValue = false)]
+        public string OrderType { get; set; }
+
+        /// <summary>
+        /// The reseller&#39;s order number for reference in their system.
+        /// </summary>
+        /// <value>The reseller&#39;s order number for reference in their system.</value>
+        [DataMember(Name = "customerOrderNumber", EmitDefaultValue = false)]
+        public string CustomerOrderNumber { get; set; }
+
+        /// <summary>
+        /// The end user/customer&#39;s order number for reference in their system.
+        /// </summary>
+        /// <value>The end user/customer&#39;s order number for reference in their system.</value>
+        [DataMember(Name = "endCustomerOrderNumber", EmitDefaultValue = false)]
+        public string EndCustomerOrderNumber { get; set; }
+
+        /// <summary>
+        /// The vendor&#39;s order number for reference in their system.
+        /// </summary>
+        /// <value>The vendor&#39;s order number for reference in their system.</value>
+        [DataMember(Name = "vendorSalesOrderNumber", EmitDefaultValue = false)]
+        public string VendorSalesOrderNumber { get; set; }
+
+        /// <summary>
+        /// The header-level status of the order. One of- Shipped, Canceled, Backordered, Processing, On Hold, Delivered.
+        /// </summary>
+        /// <value>The header-level status of the order. One of- Shipped, Canceled, Backordered, Processing, On Hold, Delivered.</value>
+        [DataMember(Name = "orderStatus", EmitDefaultValue = false)]
+        public string OrderStatus { get; set; }
+
+        /// <summary>
+        /// The total cost for the order, includes subtotal, freight charges, and tax.
+        /// </summary>
+        /// <value>The total cost for the order, includes subtotal, freight charges, and tax.</value>
+        [DataMember(Name = "orderTotal", EmitDefaultValue = false)]
+        public decimal OrderTotal { get; set; }
+
+        /// <summary>
+        /// The sub total cost for the order, not including tax and freight.
+        /// </summary>
+        /// <value>The sub total cost for the order, not including tax and freight.</value>
+        [DataMember(Name = "orderSubTotal", EmitDefaultValue = false)]
+        public decimal OrderSubTotal { get; set; }
+
+        /// <summary>
+        /// The freight charges for the order.
+        /// </summary>
+        /// <value>The freight charges for the order.</value>
+        [DataMember(Name = "freightCharges", EmitDefaultValue = false)]
+        public decimal FreightCharges { get; set; }
+
+        /// <summary>
+        /// The country-specific three digit ISO 4217 currency code for the order.
+        /// </summary>
+        /// <value>The country-specific three digit ISO 4217 currency code for the order.</value>
+        [DataMember(Name = "currencyCode", EmitDefaultValue = false)]
+        public string CurrencyCode { get; set; }
+
+        /// <summary>
+        /// The total weight of the order. Pounds in North America, KG in all other countries.
+        /// </summary>
+        /// <value>The total weight of the order. Pounds in North America, KG in all other countries.</value>
+        [DataMember(Name = "totalWeight", EmitDefaultValue = false)]
+        public decimal TotalWeight { get; set; }
+
+        /// <summary>
+        /// The total tax for the order.
+        /// </summary>
+        /// <value>The total tax for the order.</value>
+        [DataMember(Name = "totalTax", EmitDefaultValue = false)]
+        public decimal TotalTax { get; set; }
+
+        /// <summary>
+        /// The payment terms of the order. (Ex- Net 30 days).
+        /// </summary>
+        /// <value>The payment terms of the order. (Ex- Net 30 days).</value>
+        [DataMember(Name = "paymentTerms", EmitDefaultValue = false)]
+        public string PaymentTerms { get; set; }
+
+        /// <summary>
+        /// The header-level notes for the order.
+        /// </summary>
+        /// <value>The header-level notes for the order.</value>
+        [DataMember(Name = "notes", EmitDefaultValue = false)]
+        public string Notes { get; set; }
+
+        /// <summary>
+        /// Gets or Sets BillToInfo
+        /// </summary>
+        [DataMember(Name = "billToInfo", EmitDefaultValue = false)]
+        public OrderDetailResponseBillToInfo BillToInfo { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ShipToInfo
+        /// </summary>
+        [DataMember(Name = "shipToInfo", EmitDefaultValue = false)]
+        public OrderDetailResponseShipToInfo ShipToInfo { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EndUserInfo
+        /// </summary>
+        [DataMember(Name = "endUserInfo", EmitDefaultValue = false)]
+        public OrderDetailResponseEndUserInfo EndUserInfo { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Lines
+        /// </summary>
+        [DataMember(Name = "lines", EmitDefaultValue = false)]
+        public List<OrderDetailResponseLinesInner> Lines { get; set; }
+
+        /// <summary>
+        /// Gets or Sets MiscellaneousCharges
+        /// </summary>
+        [DataMember(Name = "miscellaneousCharges", EmitDefaultValue = false)]
+        public List<OrderDetailResponseMiscellaneousChargesInner> MiscellaneousCharges { get; set; }
+
+        /// <summary>
+        /// Gets or Sets AdditionalAttributes
+        /// </summary>
+        [DataMember(Name = "additionalAttributes", EmitDefaultValue = false)]
+        public List<OrderDetailResponseLinesInnerAdditionalAttributesInner> AdditionalAttributes { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -55,7 +230,27 @@ namespace xi.sdk.resellers.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class OrderDetailResponse {\n");
-            sb.Append("  Serviceresponse: ").Append(Serviceresponse).Append("\n");
+            sb.Append("  IngramOrderNumber: ").Append(IngramOrderNumber).Append("\n");
+            sb.Append("  IngramOrderDate: ").Append(IngramOrderDate).Append("\n");
+            sb.Append("  OrderType: ").Append(OrderType).Append("\n");
+            sb.Append("  CustomerOrderNumber: ").Append(CustomerOrderNumber).Append("\n");
+            sb.Append("  EndCustomerOrderNumber: ").Append(EndCustomerOrderNumber).Append("\n");
+            sb.Append("  VendorSalesOrderNumber: ").Append(VendorSalesOrderNumber).Append("\n");
+            sb.Append("  OrderStatus: ").Append(OrderStatus).Append("\n");
+            sb.Append("  OrderTotal: ").Append(OrderTotal).Append("\n");
+            sb.Append("  OrderSubTotal: ").Append(OrderSubTotal).Append("\n");
+            sb.Append("  FreightCharges: ").Append(FreightCharges).Append("\n");
+            sb.Append("  CurrencyCode: ").Append(CurrencyCode).Append("\n");
+            sb.Append("  TotalWeight: ").Append(TotalWeight).Append("\n");
+            sb.Append("  TotalTax: ").Append(TotalTax).Append("\n");
+            sb.Append("  PaymentTerms: ").Append(PaymentTerms).Append("\n");
+            sb.Append("  Notes: ").Append(Notes).Append("\n");
+            sb.Append("  BillToInfo: ").Append(BillToInfo).Append("\n");
+            sb.Append("  ShipToInfo: ").Append(ShipToInfo).Append("\n");
+            sb.Append("  EndUserInfo: ").Append(EndUserInfo).Append("\n");
+            sb.Append("  Lines: ").Append(Lines).Append("\n");
+            sb.Append("  MiscellaneousCharges: ").Append(MiscellaneousCharges).Append("\n");
+            sb.Append("  AdditionalAttributes: ").Append(AdditionalAttributes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

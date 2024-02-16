@@ -1,5 +1,5 @@
 /*
- * XI Sdk Resellers
+ * XI SDK Resellers
  *
  * For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks to create a seamless experience for your customers.
  *
@@ -27,25 +27,71 @@ using OpenAPIDateConverter = xi.sdk.resellers.Client.OpenAPIDateConverter;
 namespace xi.sdk.resellers.Model
 {
     /// <summary>
-    /// Response schema for order search endpoint
+    /// OrderSearchResponse
     /// </summary>
-    [DataContract(Name = "orderSearchResponse")]
+    [DataContract(Name = "OrderSearch_Response")]
     public partial class OrderSearchResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderSearchResponse" /> class.
         /// </summary>
-        /// <param name="serviceResponse">serviceResponse.</param>
-        public OrderSearchResponse(OrderSearchResponseServiceResponse serviceResponse = default(OrderSearchResponseServiceResponse))
+        /// <param name="recordsFound">No of recourds found for the search..</param>
+        /// <param name="pageSize">No of results per page.(default is 25).</param>
+        /// <param name="pageNumber">Current page number.(default is 1).</param>
+        /// <param name="orders">The details for the order..</param>
+        /// <param name="nextPage">link/URL for accessing next page..</param>
+        /// <param name="previousPage">link/URL for accessing previous page..</param>
+        public OrderSearchResponse(int recordsFound = default(int), int pageSize = default(int), int pageNumber = default(int), List<OrderSearchResponseOrdersInner> orders = default(List<OrderSearchResponseOrdersInner>), string nextPage = default(string), string previousPage = default(string))
         {
-            this.ServiceResponse = serviceResponse;
+            this.RecordsFound = recordsFound;
+            this.PageSize = pageSize;
+            this.PageNumber = pageNumber;
+            this.Orders = orders;
+            this.NextPage = nextPage;
+            this.PreviousPage = previousPage;
         }
 
         /// <summary>
-        /// Gets or Sets ServiceResponse
+        /// No of recourds found for the search.
         /// </summary>
-        [DataMember(Name = "serviceResponse", EmitDefaultValue = false)]
-        public OrderSearchResponseServiceResponse ServiceResponse { get; set; }
+        /// <value>No of recourds found for the search.</value>
+        [DataMember(Name = "recordsFound", EmitDefaultValue = false)]
+        public int RecordsFound { get; set; }
+
+        /// <summary>
+        /// No of results per page.(default is 25)
+        /// </summary>
+        /// <value>No of results per page.(default is 25)</value>
+        [DataMember(Name = "pageSize", EmitDefaultValue = false)]
+        public int PageSize { get; set; }
+
+        /// <summary>
+        /// Current page number.(default is 1)
+        /// </summary>
+        /// <value>Current page number.(default is 1)</value>
+        [DataMember(Name = "pageNumber", EmitDefaultValue = false)]
+        public int PageNumber { get; set; }
+
+        /// <summary>
+        /// The details for the order.
+        /// </summary>
+        /// <value>The details for the order.</value>
+        [DataMember(Name = "orders", EmitDefaultValue = false)]
+        public List<OrderSearchResponseOrdersInner> Orders { get; set; }
+
+        /// <summary>
+        /// link/URL for accessing next page.
+        /// </summary>
+        /// <value>link/URL for accessing next page.</value>
+        [DataMember(Name = "nextPage", EmitDefaultValue = false)]
+        public string NextPage { get; set; }
+
+        /// <summary>
+        /// link/URL for accessing previous page.
+        /// </summary>
+        /// <value>link/URL for accessing previous page.</value>
+        [DataMember(Name = "previousPage", EmitDefaultValue = false)]
+        public string PreviousPage { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -55,7 +101,12 @@ namespace xi.sdk.resellers.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class OrderSearchResponse {\n");
-            sb.Append("  ServiceResponse: ").Append(ServiceResponse).Append("\n");
+            sb.Append("  RecordsFound: ").Append(RecordsFound).Append("\n");
+            sb.Append("  PageSize: ").Append(PageSize).Append("\n");
+            sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
+            sb.Append("  Orders: ").Append(Orders).Append("\n");
+            sb.Append("  NextPage: ").Append(NextPage).Append("\n");
+            sb.Append("  PreviousPage: ").Append(PreviousPage).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
