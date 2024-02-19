@@ -151,6 +151,7 @@ docs/QuoteDetailsResponseProductsInnerPrice.md
 docs/QuoteDetailsResponseResellerInfo.md
 docs/QuoteSearchResponse.md
 docs/QuoteSearchResponseQuotesInner.md
+docs/QuoteSearchResponseQuotesInnerLinksInner.md
 docs/QuoteToOrderApi.md
 docs/QuoteToOrderDetailsDTO.md
 docs/QuoteToOrderDetailsDTOAdditionalAttributesInner.md
@@ -345,6 +346,7 @@ src/xi.sdk.resellers.Test/Model/QuoteDetailsResponseProductsInnerPriceTests.cs
 src/xi.sdk.resellers.Test/Model/QuoteDetailsResponseProductsInnerTests.cs
 src/xi.sdk.resellers.Test/Model/QuoteDetailsResponseResellerInfoTests.cs
 src/xi.sdk.resellers.Test/Model/QuoteDetailsResponseTests.cs
+src/xi.sdk.resellers.Test/Model/QuoteSearchResponseQuotesInnerLinksInnerTests.cs
 src/xi.sdk.resellers.Test/Model/QuoteSearchResponseQuotesInnerTests.cs
 src/xi.sdk.resellers.Test/Model/QuoteSearchResponseTests.cs
 src/xi.sdk.resellers.Test/Model/QuoteToOrderDetailsDTOAdditionalAttributesInnerTests.cs
@@ -556,6 +558,7 @@ src/xi.sdk.resellers/Model/QuoteDetailsResponseProductsInnerPrice.cs
 src/xi.sdk.resellers/Model/QuoteDetailsResponseResellerInfo.cs
 src/xi.sdk.resellers/Model/QuoteSearchResponse.cs
 src/xi.sdk.resellers/Model/QuoteSearchResponseQuotesInner.cs
+src/xi.sdk.resellers/Model/QuoteSearchResponseQuotesInnerLinksInner.cs
 src/xi.sdk.resellers/Model/QuoteToOrderDetailsDTO.cs
 src/xi.sdk.resellers/Model/QuoteToOrderDetailsDTOAdditionalAttributesInner.cs
 src/xi.sdk.resellers/Model/QuoteToOrderDetailsDTOEndUserInfoInner.cs

@@ -40,14 +40,16 @@ namespace xi.sdk.resellers.Model
         /// <param name="quantityAvailable">The quantity of the product available in a given warehouse..</param>
         /// <param name="quantityBackordered">The quantity of a product backordered in a given warehouse..</param>
         /// <param name="quantityBackorderedEta">The estimated time of arrival of a product that has been backordered in a given warehouse..</param>
+        /// <param name="quantityOnOrder">The quantity of the product on order..</param>
         /// <param name="backOrderInfo">*Currently, this feature is not available in these countries (Mexico, Turkey, New Zealand, Colombia, Chile, Brazil, Peru, Western Sahara)..</param>
-        public PriceAndAvailabilityResponseInnerAvailabilityAvailabilityByWarehouseInner(string location = default(string), string warehouseId = default(string), int quantityAvailable = default(int), int quantityBackordered = default(int), string quantityBackorderedEta = default(string), List<PriceAndAvailabilityResponseInnerAvailabilityAvailabilityByWarehouseInnerBackOrderInfoInner> backOrderInfo = default(List<PriceAndAvailabilityResponseInnerAvailabilityAvailabilityByWarehouseInnerBackOrderInfoInner>))
+        public PriceAndAvailabilityResponseInnerAvailabilityAvailabilityByWarehouseInner(string location = default(string), string warehouseId = default(string), int quantityAvailable = default(int), int quantityBackordered = default(int), string quantityBackorderedEta = default(string), int quantityOnOrder = default(int), List<PriceAndAvailabilityResponseInnerAvailabilityAvailabilityByWarehouseInnerBackOrderInfoInner> backOrderInfo = default(List<PriceAndAvailabilityResponseInnerAvailabilityAvailabilityByWarehouseInnerBackOrderInfoInner>))
         {
             this.Location = location;
             this.WarehouseId = warehouseId;
             this.QuantityAvailable = quantityAvailable;
             this.QuantityBackordered = quantityBackordered;
             this.QuantityBackorderedEta = quantityBackorderedEta;
+            this.QuantityOnOrder = quantityOnOrder;
             this.BackOrderInfo = backOrderInfo;
         }
 
@@ -87,6 +89,13 @@ namespace xi.sdk.resellers.Model
         public string QuantityBackorderedEta { get; set; }
 
         /// <summary>
+        /// The quantity of the product on order.
+        /// </summary>
+        /// <value>The quantity of the product on order.</value>
+        [DataMember(Name = "quantityOnOrder", EmitDefaultValue = false)]
+        public int QuantityOnOrder { get; set; }
+
+        /// <summary>
         /// *Currently, this feature is not available in these countries (Mexico, Turkey, New Zealand, Colombia, Chile, Brazil, Peru, Western Sahara).
         /// </summary>
         /// <value>*Currently, this feature is not available in these countries (Mexico, Turkey, New Zealand, Colombia, Chile, Brazil, Peru, Western Sahara).</value>
@@ -106,6 +115,7 @@ namespace xi.sdk.resellers.Model
             sb.Append("  QuantityAvailable: ").Append(QuantityAvailable).Append("\n");
             sb.Append("  QuantityBackordered: ").Append(QuantityBackordered).Append("\n");
             sb.Append("  QuantityBackorderedEta: ").Append(QuantityBackorderedEta).Append("\n");
+            sb.Append("  QuantityOnOrder: ").Append(QuantityOnOrder).Append("\n");
             sb.Append("  BackOrderInfo: ").Append(BackOrderInfo).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

@@ -9463,7 +9463,7 @@ components:
           email: email
         dealId: dealId
         vendor: vendor
-        dealReceivedOn: 2000-01-23
+        dealReceivedOn: dealReceivedOn
         version: version
         extendedMsrp: 0.8008281904610115
         currencyCode: currencyCode
@@ -9516,7 +9516,6 @@ components:
           type: string
         dealReceivedOn:
           description: The date on which the deal starts.
-          format: date
           type: string
         dealExpiryDate:
           description: Expiration date of the deal/Special bid.
@@ -9602,7 +9601,7 @@ components:
         returnWarehouseAddress: returnWarehouseAddress
         tax: 2.3021358869347655
         subTotal: 5.637376656633329
-        createdOn: 2000-01-23
+        createdOn: createdOn
         rmaClaimId: rmaClaimId
         products:
         - ingramPartNumber: ingramPartNumber
@@ -9654,7 +9653,6 @@ components:
           type: string
         createdOn:
           description: The date on which the return request was created.
-          format: date
           type: string
         returnReason:
           description: The reason for the return.
@@ -9834,29 +9832,49 @@ components:
         pageSize: 6
         recordsFound: 0
         quotes:
-        - specialBidNumber: specialBidNumber
-          lastModifiedDate: lastModifiedDate
-          createdBy: createdBy
-          vendor: vendor
-          ingramQuoteExpiryDate: ingramQuoteExpiryDate
-          quoteTotal: 5.962133916683182
+        - lastModifiedDate: lastModifiedDate
+          endUserName: endUserName
+          quoteType: quoteType
           quoteNumber: quoteNumber
           endUserContact: endUserContact
           quoteStatus: quoteStatus
-          quoteName: quoteName
           revision: revision
+          quoteGuid: quoteGuid
+          specialBidNumber: specialBidNumber
+          createdBy: createdBy
+          vendor: vendor
+          ingramQuoteExpiryDate: ingramQuoteExpiryDate
+          links:
+          - topic: topic
+            href: href
+            type: type
+          - topic: topic
+            href: href
+            type: type
+          quoteTotal: 5.962133916683182
+          quoteName: quoteName
           ingramQuoteDate: ingramQuoteDate
-        - specialBidNumber: specialBidNumber
-          lastModifiedDate: lastModifiedDate
-          createdBy: createdBy
-          vendor: vendor
-          ingramQuoteExpiryDate: ingramQuoteExpiryDate
-          quoteTotal: 5.962133916683182
+        - lastModifiedDate: lastModifiedDate
+          endUserName: endUserName
+          quoteType: quoteType
           quoteNumber: quoteNumber
           endUserContact: endUserContact
           quoteStatus: quoteStatus
-          quoteName: quoteName
           revision: revision
+          quoteGuid: quoteGuid
+          specialBidNumber: specialBidNumber
+          createdBy: createdBy
+          vendor: vendor
+          ingramQuoteExpiryDate: ingramQuoteExpiryDate
+          links:
+          - topic: topic
+            href: href
+            type: type
+          - topic: topic
+            href: href
+            type: type
+          quoteTotal: 5.962133916683182
+          quoteName: quoteName
           ingramQuoteDate: ingramQuoteDate
       properties:
         recordsFound:
@@ -9955,6 +9973,7 @@ components:
           customerNumber: customerNumber
           email: email
         ingramQuoteExpiryDate: ingramQuoteExpiryDate
+        closingReason: closingReason
         purchaseInstructions: purchaseInstructions
         proposedSolution: proposedSolution
         currencyCode: currencyCode
@@ -9996,6 +10015,9 @@ components:
           type: string
         currencyCode:
           description: Three letter currency code.
+          type: string
+        closingReason:
+          description: Closing Reason for quote.
           type: string
         specialBidId:
           description: Price discount identifyer to specify  a pricing discount that
@@ -10401,13 +10423,13 @@ components:
           lines:
             productLineCount: 4
             productLineTotalQuantity: 7
+        orderNumber: orderNumber
         notes: notes
         endCustomerOrderNumber: endCustomerOrderNumber
         invoiceDate: 2000-01-23
         customerNumber: customerNumber
         customerOrderNumber: customerOrderNumber
         invoiceDueDate: invoiceDueDate
-        OrderDate: 2000-01-23
         customerCountryCode: customerCountryCode
         ingramOrderNumber: ingramOrderNumber
         paymentTermsInfo:
@@ -10490,6 +10512,7 @@ components:
           taxAmount: 7.061401241503109
           currencyCode: currencyCode
           productDescription: productDescription
+        orderDate: 2000-01-23
       properties:
         invoiceNumber:
           description: The Invoice number for the order.
@@ -10507,7 +10530,10 @@ components:
         endCustomerOrderNumber:
           description: The end customer's order number for reference in their system.
           type: string
-        OrderDate:
+        orderNumber:
+          description: The end customer's order number for reference in their system.
+          type: string
+        orderDate:
           description: The date and time in UTC format that the order was created.
           format: date
           type: string
@@ -10679,6 +10705,7 @@ components:
       additionalProperties: false
       example:
         orderType: orderType
+        totalFees: 2.3021358869347655
         miscellaneousCharges:
         - chargeLineReference: chargeLineReference
           subOrderNumber: subOrderNumber
@@ -10737,7 +10764,7 @@ components:
         ingramPurchaseOrderNumber: ingramPurchaseOrderNumber
         totalWeight: 5.962133916683182
         lines:
-        - unitWeight: 2.3021358869347655
+        - unitWeight: 7.061401241503109
           vendorSalesOrderLineNumber: vendorSalesOrderLineNumber
           requestedDeliverydate: requestedDeliverydate
           multipleShipments:
@@ -10763,10 +10790,10 @@ components:
             lineNumber: lineNumber
             deliveryDate: deliveryDate
             confirmedQuantity: confirmedQuantity
-          quantityOrdered: 2
+          quantityOrdered: 4
           customerLineNumber: customerLineNumber
           lineStatus: lineStatus
-          extendedPrice: 9.301444243932576
+          extendedPrice: 3.616076749251911
           scheduleLines:
           - goodsIssueDate: goodsIssueDate
             scheduleLineDate: scheduleLineDate
@@ -10788,7 +10815,7 @@ components:
             type: type
           upcCode: upcCode
           ingramPartNumber: ingramPartNumber
-          unitPrice: 7.061401241503109
+          unitPrice: 9.301444243932576
           ingramOrderLineNumber: ingramOrderLineNumber
           estimatedDates:
           - delivery:
@@ -10848,7 +10875,7 @@ components:
               licenseEndDate: licenseEndDate
           vendorName: vendorName
           lineNotes: lineNotes
-          quantityBackOrdered: 7
+          quantityBackOrdered: 1
           specialBidNumber: specialBidNumber
           shipmentDetails:
           - quantity: 1
@@ -10966,16 +10993,16 @@ components:
           promisedDeliveryDate: promisedDeliveryDate
           subOrderNumber: subOrderNumber
           partDescription: partDescription
-          quantityConfirmed: 4
+          quantityConfirmed: 7
           weightUom: weightUom
-          taxAmount: 3.616076749251911
+          taxAmount: 2.027123023002322
           currencyCode: currencyCode
           additionalAttributes:
           - attributeValue: attributeValue
             attributeName: attributeName
           - attributeValue: attributeValue
             attributeName: attributeName
-        - unitWeight: 2.3021358869347655
+        - unitWeight: 7.061401241503109
           vendorSalesOrderLineNumber: vendorSalesOrderLineNumber
           requestedDeliverydate: requestedDeliverydate
           multipleShipments:
@@ -11001,10 +11028,10 @@ components:
             lineNumber: lineNumber
             deliveryDate: deliveryDate
             confirmedQuantity: confirmedQuantity
-          quantityOrdered: 2
+          quantityOrdered: 4
           customerLineNumber: customerLineNumber
           lineStatus: lineStatus
-          extendedPrice: 9.301444243932576
+          extendedPrice: 3.616076749251911
           scheduleLines:
           - goodsIssueDate: goodsIssueDate
             scheduleLineDate: scheduleLineDate
@@ -11026,7 +11053,7 @@ components:
             type: type
           upcCode: upcCode
           ingramPartNumber: ingramPartNumber
-          unitPrice: 7.061401241503109
+          unitPrice: 9.301444243932576
           ingramOrderLineNumber: ingramOrderLineNumber
           estimatedDates:
           - delivery:
@@ -11086,7 +11113,7 @@ components:
               licenseEndDate: licenseEndDate
           vendorName: vendorName
           lineNotes: lineNotes
-          quantityBackOrdered: 7
+          quantityBackOrdered: 1
           specialBidNumber: specialBidNumber
           shipmentDetails:
           - quantity: 1
@@ -11204,9 +11231,9 @@ components:
           promisedDeliveryDate: promisedDeliveryDate
           subOrderNumber: subOrderNumber
           partDescription: partDescription
-          quantityConfirmed: 4
+          quantityConfirmed: 7
           weightUom: weightUom
-          taxAmount: 3.616076749251911
+          taxAmount: 2.027123023002322
           currencyCode: currencyCode
           additionalAttributes:
           - attributeValue: attributeValue
@@ -11276,6 +11303,10 @@ components:
           type: number
         totalTax:
           description: Total tax on the orders placed.
+          format: double
+          type: number
+        totalFees:
+          description: Total fees on the orders placed.
           format: double
           type: number
         paymentTerms:
@@ -13337,6 +13368,7 @@ components:
         - quantity: 5
           etaDate: etaDate
         warehouseId: warehouseId
+        quantityOnOrder: 5
         location: location
         quantityBackordered: 1
         quantityBackorderedEta: quantityBackorderedEta
@@ -13357,6 +13389,9 @@ components:
           description: The estimated time of arrival of a product that has been backordered
             in a given warehouse.
           type: string
+        quantityOnOrder:
+          description: The quantity of the product on order.
+          type: integer
         backOrderInfo:
           description: "*Currently, this feature is not available in these countries\
             \ (Mexico, Turkey, New Zealand, Colombia, Chile, Brazil, Peru, Western\
@@ -13376,6 +13411,7 @@ components:
           - quantity: 5
             etaDate: etaDate
           warehouseId: warehouseId
+          quantityOnOrder: 5
           location: location
           quantityBackordered: 1
           quantityBackorderedEta: quantityBackorderedEta
@@ -13386,6 +13422,7 @@ components:
           - quantity: 5
             etaDate: etaDate
           warehouseId: warehouseId
+          quantityOnOrder: 5
           location: location
           quantityBackordered: 1
           quantityBackorderedEta: quantityBackorderedEta
@@ -13405,8 +13442,8 @@ components:
     PriceAndAvailabilityResponse_inner_reserveInventoryDetails_inner:
       example:
         expirydate: expirydate
-        quantityAvailable: 2
-        quantityReserved: 5
+        quantityAvailable: 7
+        quantityReserved: 2
         effectivedate: effectivedate
       properties:
         quantityReserved:
@@ -13427,12 +13464,12 @@ components:
       type: object
     PriceAndAvailabilityResponse_inner_pricing:
       example:
-        mapPrice: 9.301444243932576
+        mapPrice: 3.616076749251911
         webDiscountsAvailable: true
         specialBidPricingAvailable: true
         currencyCode: currencyCode
-        retailPrice: 7.061401241503109
-        customerPrice: 3.616076749251911
+        retailPrice: 9.301444243932576
+        customerPrice: 2.027123023002322
       properties:
         currencyCode:
           description: The 3-digit ISO currency code.
@@ -13463,14 +13500,14 @@ components:
     PriceAndAvailabilityResponse_inner_discounts_inner_specialPricing_inner:
       example:
         specialBidNumer: specialBidNumer
-        specialPricingAvailableQuantity: 4
+        specialPricingAvailableQuantity: 7
         specialPricingExpirationDate: 2000-01-23
-        specialPricingMinQuantity: 7
-        governmentDiscountedCustomerPrice: 1.2315135367772556
+        specialPricingMinQuantity: 1
+        governmentDiscountedCustomerPrice: 1.0246457001441578
         specialPricingEffectiveDate: 2000-01-23
         governmentDiscountType: governmentDiscountType
         discountType: "Special Bid, Promo Discount"
-        specialPricingDiscount: 2.027123023002322
+        specialPricingDiscount: 4.145608029883936
       properties:
         discountType:
           description: The type of discount being given to the customer.
@@ -13516,7 +13553,7 @@ components:
     PriceAndAvailabilityResponse_inner_discounts_inner_quantityDiscounts_inner:
       example:
         currencyType: currencyType
-        amount: 1.4894159098541704
+        amount: 6.84685269835264
         quantity: 1
         conditionType: Total fee
         currencyCode: currencyCode
@@ -13544,31 +13581,31 @@ components:
       example:
         specialPricing:
         - specialBidNumer: specialBidNumer
-          specialPricingAvailableQuantity: 4
+          specialPricingAvailableQuantity: 7
           specialPricingExpirationDate: 2000-01-23
-          specialPricingMinQuantity: 7
-          governmentDiscountedCustomerPrice: 1.2315135367772556
+          specialPricingMinQuantity: 1
+          governmentDiscountedCustomerPrice: 1.0246457001441578
           specialPricingEffectiveDate: 2000-01-23
           governmentDiscountType: governmentDiscountType
           discountType: "Special Bid, Promo Discount"
-          specialPricingDiscount: 2.027123023002322
+          specialPricingDiscount: 4.145608029883936
         - specialBidNumer: specialBidNumer
-          specialPricingAvailableQuantity: 4
+          specialPricingAvailableQuantity: 7
           specialPricingExpirationDate: 2000-01-23
-          specialPricingMinQuantity: 7
-          governmentDiscountedCustomerPrice: 1.2315135367772556
+          specialPricingMinQuantity: 1
+          governmentDiscountedCustomerPrice: 1.0246457001441578
           specialPricingEffectiveDate: 2000-01-23
           governmentDiscountType: governmentDiscountType
           discountType: "Special Bid, Promo Discount"
-          specialPricingDiscount: 2.027123023002322
+          specialPricingDiscount: 4.145608029883936
         quantityDiscounts:
         - currencyType: currencyType
-          amount: 1.4894159098541704
+          amount: 6.84685269835264
           quantity: 1
           conditionType: Total fee
           currencyCode: currencyCode
         - currencyType: currencyType
-          amount: 1.4894159098541704
+          amount: 6.84685269835264
           quantity: 1
           conditionType: Total fee
           currencyCode: currencyCode
@@ -13584,7 +13621,7 @@ components:
       type: object
     PriceAndAvailabilityResponse_inner_serviceFees_inner:
       example:
-        amount: 6.84685269835264
+        amount: 7.457744773683766
         endDate: endDate
         description: description
         conditionType: conditionType
@@ -13614,12 +13651,12 @@ components:
         description: description
         productAuthorized: true
         serviceFees:
-        - amount: 6.84685269835264
+        - amount: 7.457744773683766
           endDate: endDate
           description: description
           conditionType: conditionType
           currencyCode: currencyCode
-        - amount: 6.84685269835264
+        - amount: 7.457744773683766
           endDate: endDate
           description: description
           conditionType: conditionType
@@ -13634,6 +13671,7 @@ components:
             - quantity: 5
               etaDate: etaDate
             warehouseId: warehouseId
+            quantityOnOrder: 5
             location: location
             quantityBackordered: 1
             quantityBackorderedEta: quantityBackorderedEta
@@ -13644,6 +13682,7 @@ components:
             - quantity: 5
               etaDate: etaDate
             warehouseId: warehouseId
+            quantityOnOrder: 5
             location: location
             quantityBackordered: 1
             quantityBackorderedEta: quantityBackorderedEta
@@ -13652,61 +13691,61 @@ components:
         discounts:
         - specialPricing:
           - specialBidNumer: specialBidNumer
-            specialPricingAvailableQuantity: 4
+            specialPricingAvailableQuantity: 7
             specialPricingExpirationDate: 2000-01-23
-            specialPricingMinQuantity: 7
-            governmentDiscountedCustomerPrice: 1.2315135367772556
+            specialPricingMinQuantity: 1
+            governmentDiscountedCustomerPrice: 1.0246457001441578
             specialPricingEffectiveDate: 2000-01-23
             governmentDiscountType: governmentDiscountType
             discountType: "Special Bid, Promo Discount"
-            specialPricingDiscount: 2.027123023002322
+            specialPricingDiscount: 4.145608029883936
           - specialBidNumer: specialBidNumer
-            specialPricingAvailableQuantity: 4
+            specialPricingAvailableQuantity: 7
             specialPricingExpirationDate: 2000-01-23
-            specialPricingMinQuantity: 7
-            governmentDiscountedCustomerPrice: 1.2315135367772556
+            specialPricingMinQuantity: 1
+            governmentDiscountedCustomerPrice: 1.0246457001441578
             specialPricingEffectiveDate: 2000-01-23
             governmentDiscountType: governmentDiscountType
             discountType: "Special Bid, Promo Discount"
-            specialPricingDiscount: 2.027123023002322
+            specialPricingDiscount: 4.145608029883936
           quantityDiscounts:
           - currencyType: currencyType
-            amount: 1.4894159098541704
+            amount: 6.84685269835264
             quantity: 1
             conditionType: Total fee
             currencyCode: currencyCode
           - currencyType: currencyType
-            amount: 1.4894159098541704
+            amount: 6.84685269835264
             quantity: 1
             conditionType: Total fee
             currencyCode: currencyCode
         - specialPricing:
           - specialBidNumer: specialBidNumer
-            specialPricingAvailableQuantity: 4
+            specialPricingAvailableQuantity: 7
             specialPricingExpirationDate: 2000-01-23
-            specialPricingMinQuantity: 7
-            governmentDiscountedCustomerPrice: 1.2315135367772556
+            specialPricingMinQuantity: 1
+            governmentDiscountedCustomerPrice: 1.0246457001441578
             specialPricingEffectiveDate: 2000-01-23
             governmentDiscountType: governmentDiscountType
             discountType: "Special Bid, Promo Discount"
-            specialPricingDiscount: 2.027123023002322
+            specialPricingDiscount: 4.145608029883936
           - specialBidNumer: specialBidNumer
-            specialPricingAvailableQuantity: 4
+            specialPricingAvailableQuantity: 7
             specialPricingExpirationDate: 2000-01-23
-            specialPricingMinQuantity: 7
-            governmentDiscountedCustomerPrice: 1.2315135367772556
+            specialPricingMinQuantity: 1
+            governmentDiscountedCustomerPrice: 1.0246457001441578
             specialPricingEffectiveDate: 2000-01-23
             governmentDiscountType: governmentDiscountType
             discountType: "Special Bid, Promo Discount"
-            specialPricingDiscount: 2.027123023002322
+            specialPricingDiscount: 4.145608029883936
           quantityDiscounts:
           - currencyType: currencyType
-            amount: 1.4894159098541704
+            amount: 6.84685269835264
             quantity: 1
             conditionType: Total fee
             currencyCode: currencyCode
           - currencyType: currencyType
-            amount: 1.4894159098541704
+            amount: 6.84685269835264
             quantity: 1
             conditionType: Total fee
             currencyCode: currencyCode
@@ -13729,20 +13768,20 @@ components:
         vendorNumber: vendorNumber
         reserveInventoryDetails:
         - expirydate: expirydate
-          quantityAvailable: 2
-          quantityReserved: 5
+          quantityAvailable: 7
+          quantityReserved: 2
           effectivedate: effectivedate
         - expirydate: expirydate
-          quantityAvailable: 2
-          quantityReserved: 5
+          quantityAvailable: 7
+          quantityReserved: 2
           effectivedate: effectivedate
         pricing:
-          mapPrice: 9.301444243932576
+          mapPrice: 3.616076749251911
           webDiscountsAvailable: true
           specialBidPricingAvailable: true
           currencyCode: currencyCode
-          retailPrice: 7.061401241503109
-          customerPrice: 3.616076749251911
+          retailPrice: 9.301444243932576
+          customerPrice: 2.027123023002322
       properties:
         productStatusCode:
           description: Codes signifying whether the sku is active or not.
@@ -15117,21 +15156,45 @@ components:
             $ref: '#/components/schemas/freightResponse_freightEstimateResponse_lines_inner'
           type: array
       type: object
+    QuoteSearchResponse_quotes_inner_links_inner:
+      example:
+        topic: topic
+        href: href
+        type: type
+      properties:
+        topic:
+          type: string
+        href:
+          type: string
+        type:
+          type: string
     QuoteSearchResponse_quotes_inner:
       example:
-        specialBidNumber: specialBidNumber
         lastModifiedDate: lastModifiedDate
-        createdBy: createdBy
-        vendor: vendor
-        ingramQuoteExpiryDate: ingramQuoteExpiryDate
-        quoteTotal: 5.962133916683182
+        endUserName: endUserName
+        quoteType: quoteType
         quoteNumber: quoteNumber
         endUserContact: endUserContact
         quoteStatus: quoteStatus
-        quoteName: quoteName
         revision: revision
+        quoteGuid: quoteGuid
+        specialBidNumber: specialBidNumber
+        createdBy: createdBy
+        vendor: vendor
+        ingramQuoteExpiryDate: ingramQuoteExpiryDate
+        links:
+        - topic: topic
+          href: href
+          type: type
+        - topic: topic
+          href: href
+          type: type
+        quoteTotal: 5.962133916683182
+        quoteName: quoteName
         ingramQuoteDate: ingramQuoteDate
       properties:
+        quoteGuid:
+          type: string
         quoteName:
           description: Quote Name given to quote by sales team or system generated.  Generally
             used as a reference to identify the quote.
@@ -15173,12 +15236,22 @@ components:
         ingramQuoteExpiryDate:
           description: Date when the Quote Expires.
           type: string
+        endUserName:
+          description: End User Name
+          type: string
         vendor:
           description: Name of the vendor.
           type: string
         createdBy:
           description: Name of the end user/customer who created a quote.
           type: string
+        quoteType:
+          description: Type of quote
+          type: string
+        links:
+          items:
+            $ref: '#/components/schemas/QuoteSearchResponse_quotes_inner_links_inner'
+          type: array
     QuoteDetailsResponse_resellerInfo:
       example:
         phoneNumber: phoneNumber
@@ -16868,7 +16941,7 @@ components:
     OrderDetailB2B_lines_inner:
       additionalProperties: false
       example:
-        unitWeight: 2.3021358869347655
+        unitWeight: 7.061401241503109
         vendorSalesOrderLineNumber: vendorSalesOrderLineNumber
         requestedDeliverydate: requestedDeliverydate
         multipleShipments:
@@ -16894,10 +16967,10 @@ components:
           lineNumber: lineNumber
           deliveryDate: deliveryDate
           confirmedQuantity: confirmedQuantity
-        quantityOrdered: 2
+        quantityOrdered: 4
         customerLineNumber: customerLineNumber
         lineStatus: lineStatus
-        extendedPrice: 9.301444243932576
+        extendedPrice: 3.616076749251911
         scheduleLines:
         - goodsIssueDate: goodsIssueDate
           scheduleLineDate: scheduleLineDate
@@ -16919,7 +16992,7 @@ components:
           type: type
         upcCode: upcCode
         ingramPartNumber: ingramPartNumber
-        unitPrice: 7.061401241503109
+        unitPrice: 9.301444243932576
         ingramOrderLineNumber: ingramOrderLineNumber
         estimatedDates:
         - delivery:
@@ -16979,7 +17052,7 @@ components:
             licenseEndDate: licenseEndDate
         vendorName: vendorName
         lineNotes: lineNotes
-        quantityBackOrdered: 7
+        quantityBackOrdered: 1
         specialBidNumber: specialBidNumber
         shipmentDetails:
         - quantity: 1
@@ -17097,9 +17170,9 @@ components:
         promisedDeliveryDate: promisedDeliveryDate
         subOrderNumber: subOrderNumber
         partDescription: partDescription
-        quantityConfirmed: 4
+        quantityConfirmed: 7
         weightUom: weightUom
-        taxAmount: 3.616076749251911
+        taxAmount: 2.027123023002322
         currencyCode: currencyCode
         additionalAttributes:
         - attributeValue: attributeValue

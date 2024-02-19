@@ -317,6 +317,7 @@ Class | Method | HTTP request | Description
  - [Model.QuoteDetailsResponseResellerInfo](docs/QuoteDetailsResponseResellerInfo.md)
  - [Model.QuoteSearchResponse](docs/QuoteSearchResponse.md)
  - [Model.QuoteSearchResponseQuotesInner](docs/QuoteSearchResponseQuotesInner.md)
+ - [Model.QuoteSearchResponseQuotesInnerLinksInner](docs/QuoteSearchResponseQuotesInnerLinksInner.md)
  - [Model.QuoteToOrderDetailsDTO](docs/QuoteToOrderDetailsDTO.md)
  - [Model.QuoteToOrderDetailsDTOAdditionalAttributesInner](docs/QuoteToOrderDetailsDTOAdditionalAttributesInner.md)
  - [Model.QuoteToOrderDetailsDTOEndUserInfoInner](docs/QuoteToOrderDetailsDTOEndUserInfoInner.md)

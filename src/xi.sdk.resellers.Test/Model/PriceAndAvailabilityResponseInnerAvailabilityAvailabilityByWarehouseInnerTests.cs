@@ -100,6 +100,15 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'QuantityOnOrder'
+        /// </summary>
+        [Fact]
+        public void QuantityOnOrderTest()
+        {
+            // TODO unit test for the property 'QuantityOnOrder'
+        }
+
+        /// <summary>
         /// Test the property 'BackOrderInfo'
         /// </summary>
         [Fact]

@@ -50,6 +50,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="currencyCode">The country-specific three digit ISO 4217 currency code for the order..</param>
         /// <param name="totalWeight">Total order weight. unit - - North america - Pounds , other countries will be KG..</param>
         /// <param name="totalTax">Total tax on the orders placed..</param>
+        /// <param name="totalFees">Total fees on the orders placed..</param>
         /// <param name="paymentTerms">The payment terms of the order. (Ex- Net 30 days)..</param>
         /// <param name="notes">The header-level notes for the order..</param>
         /// <param name="billToInfo">billToInfo.</param>
@@ -58,7 +59,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="lines">lines.</param>
         /// <param name="miscellaneousCharges">miscellaneousCharges.</param>
         /// <param name="additionalAttributes">additionalAttributes.</param>
-        public OrderDetailB2B(string ingramOrderNumber = default(string), DateTime ingramOrderDate = default(DateTime), string orderType = default(string), string customerOrderNumber = default(string), string endCustomerOrderNumber = default(string), string webOrderId = default(string), string vendorSalesOrderNumber = default(string), string ingramPurchaseOrderNumber = default(string), string orderStatus = default(string), double orderTotal = default(double), double orderSubTotal = default(double), double freightCharges = default(double), string currencyCode = default(string), double totalWeight = default(double), double totalTax = default(double), string paymentTerms = default(string), string notes = default(string), OrderDetailB2BBillToInfo billToInfo = default(OrderDetailB2BBillToInfo), OrderDetailB2BShipToInfo shipToInfo = default(OrderDetailB2BShipToInfo), OrderDetailB2BEndUserInfo endUserInfo = default(OrderDetailB2BEndUserInfo), List<OrderDetailB2BLinesInner> lines = default(List<OrderDetailB2BLinesInner>), List<OrderDetailB2BMiscellaneousChargesInner> miscellaneousCharges = default(List<OrderDetailB2BMiscellaneousChargesInner>), List<OrderDetailB2BAdditionalAttributesInner> additionalAttributes = default(List<OrderDetailB2BAdditionalAttributesInner>))
+        public OrderDetailB2B(string ingramOrderNumber = default(string), DateTime ingramOrderDate = default(DateTime), string orderType = default(string), string customerOrderNumber = default(string), string endCustomerOrderNumber = default(string), string webOrderId = default(string), string vendorSalesOrderNumber = default(string), string ingramPurchaseOrderNumber = default(string), string orderStatus = default(string), double orderTotal = default(double), double orderSubTotal = default(double), double freightCharges = default(double), string currencyCode = default(string), double totalWeight = default(double), double totalTax = default(double), double totalFees = default(double), string paymentTerms = default(string), string notes = default(string), OrderDetailB2BBillToInfo billToInfo = default(OrderDetailB2BBillToInfo), OrderDetailB2BShipToInfo shipToInfo = default(OrderDetailB2BShipToInfo), OrderDetailB2BEndUserInfo endUserInfo = default(OrderDetailB2BEndUserInfo), List<OrderDetailB2BLinesInner> lines = default(List<OrderDetailB2BLinesInner>), List<OrderDetailB2BMiscellaneousChargesInner> miscellaneousCharges = default(List<OrderDetailB2BMiscellaneousChargesInner>), List<OrderDetailB2BAdditionalAttributesInner> additionalAttributes = default(List<OrderDetailB2BAdditionalAttributesInner>))
         {
             this.IngramOrderNumber = ingramOrderNumber;
             this.IngramOrderDate = ingramOrderDate;
@@ -75,6 +76,7 @@ namespace xi.sdk.resellers.Model
             this.CurrencyCode = currencyCode;
             this.TotalWeight = totalWeight;
             this.TotalTax = totalTax;
+            this.TotalFees = totalFees;
             this.PaymentTerms = paymentTerms;
             this.Notes = notes;
             this.BillToInfo = billToInfo;
@@ -191,6 +193,13 @@ namespace xi.sdk.resellers.Model
         public double TotalTax { get; set; }
 
         /// <summary>
+        /// Total fees on the orders placed.
+        /// </summary>
+        /// <value>Total fees on the orders placed.</value>
+        [DataMember(Name = "totalFees", EmitDefaultValue = false)]
+        public double TotalFees { get; set; }
+
+        /// <summary>
         /// The payment terms of the order. (Ex- Net 30 days).
         /// </summary>
         /// <value>The payment terms of the order. (Ex- Net 30 days).</value>
@@ -263,6 +272,7 @@ namespace xi.sdk.resellers.Model
             sb.Append("  CurrencyCode: ").Append(CurrencyCode).Append("\n");
             sb.Append("  TotalWeight: ").Append(TotalWeight).Append("\n");
             sb.Append("  TotalTax: ").Append(TotalTax).Append("\n");
+            sb.Append("  TotalFees: ").Append(TotalFees).Append("\n");
             sb.Append("  PaymentTerms: ").Append(PaymentTerms).Append("\n");
             sb.Append("  Notes: ").Append(Notes).Append("\n");
             sb.Append("  BillToInfo: ").Append(BillToInfo).Append("\n");

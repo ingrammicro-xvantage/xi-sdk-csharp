@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **EndUser** | **string** | The end user/customer&#39;s name. | [optional] 
 **ExtendedMsrp** | **decimal** | Extended MSRP - Manufacturer Suggested Retail Price X Quantity. | [optional] 
 **Vendor** | **string** | The vendor&#39;s name. | [optional] 
-**DealReceivedOn** | **DateOnly** | The date on which the deal starts. | [optional] 
+**DealReceivedOn** | **string** | The date on which the deal starts. | [optional] 
 **DealExpiryDate** | **string** | Expiration date of the deal/Special bid. | [optional] 
 **PriceProtectionEndDate** | **string** | The date on which the price protection will end. | [optional] 
 **CurrencyCode** | **string** | Country specific currency code. | [optional] 
