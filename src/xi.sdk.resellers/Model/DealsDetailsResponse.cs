@@ -46,7 +46,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="currencyCode">Country specific currency code..</param>
         /// <param name="endUserInfo">endUserInfo.</param>
         /// <param name="products">products.</param>
-        public DealsDetailsResponse(string dealId = default(string), string varVersion = default(string), string endUser = default(string), decimal extendedMsrp = default(decimal), string vendor = default(string), DateOnly dealReceivedOn = default(DateOnly), DateOnly dealExpiryDate = default(DateOnly), DateOnly priceProtectionEndDate = default(DateOnly), string currencyCode = default(string), RenewalsDetailsResponseEndUserInfoInner endUserInfo = default(RenewalsDetailsResponseEndUserInfoInner), List<DealsDetailsResponseProductsInner> products = default(List<DealsDetailsResponseProductsInner>))
+        public DealsDetailsResponse(string dealId = default(string), string varVersion = default(string), string endUser = default(string), decimal extendedMsrp = default(decimal), string vendor = default(string), string dealReceivedOn = default(string), string dealExpiryDate = default(string), string priceProtectionEndDate = default(string), string currencyCode = default(string), RenewalsDetailsResponseEndUserInfoInner endUserInfo = default(RenewalsDetailsResponseEndUserInfoInner), List<DealsDetailsResponseProductsInner> products = default(List<DealsDetailsResponseProductsInner>))
         {
             this.DealId = dealId;
             this.VarVersion = varVersion;
@@ -101,24 +101,21 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>The date on which the deal starts.</value>
         [DataMember(Name = "dealReceivedOn", EmitDefaultValue = false)]
-        [JsonConverter(typeof(OpenAPIDateConverter))]
-        public DateOnly DealReceivedOn { get; set; }
+        public string DealReceivedOn { get; set; }
 
         /// <summary>
         /// Expiration date of the deal/Special bid.
         /// </summary>
         /// <value>Expiration date of the deal/Special bid.</value>
         [DataMember(Name = "dealExpiryDate", EmitDefaultValue = false)]
-        [JsonConverter(typeof(OpenAPIDateConverter))]
-        public DateOnly DealExpiryDate { get; set; }
+        public string DealExpiryDate { get; set; }
 
         /// <summary>
         /// The date on which the price protection will end.
         /// </summary>
         /// <value>The date on which the price protection will end.</value>
         [DataMember(Name = "priceProtectionEndDate", EmitDefaultValue = false)]
-        [JsonConverter(typeof(OpenAPIDateConverter))]
-        public DateOnly PriceProtectionEndDate { get; set; }
+        public string PriceProtectionEndDate { get; set; }
 
         /// <summary>
         /// Country specific currency code.

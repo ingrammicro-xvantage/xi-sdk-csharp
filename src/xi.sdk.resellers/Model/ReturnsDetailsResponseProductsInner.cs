@@ -50,7 +50,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="status">The status of the line item..</param>
         /// <param name="returnBranch">The code of the return branch..</param>
         /// <param name="shipFromBranch">The code of the ship from branch..</param>
-        public ReturnsDetailsResponseProductsInner(string ingramLineNumber = default(string), string description = default(string), string ingramPartNumber = default(string), string vendorPartNumber = default(string), string upc = default(string), DateOnly invoiceDate = default(DateOnly), string invoiceNumber = default(string), string customerOrderNumber = default(string), string requestDetails = default(string), decimal quantity = default(decimal), decimal unitPrice = default(decimal), decimal extendedPrice = default(decimal), string status = default(string), int returnBranch = default(int), int shipFromBranch = default(int))
+        public ReturnsDetailsResponseProductsInner(int ingramLineNumber = default(int), string description = default(string), string ingramPartNumber = default(string), string vendorPartNumber = default(string), string upc = default(string), DateOnly invoiceDate = default(DateOnly), string invoiceNumber = default(string), string customerOrderNumber = default(string), string requestDetails = default(string), decimal quantity = default(decimal), decimal unitPrice = default(decimal), decimal extendedPrice = default(decimal), string status = default(string), string returnBranch = default(string), string shipFromBranch = default(string))
         {
             this.IngramLineNumber = ingramLineNumber;
             this.Description = description;
@@ -74,7 +74,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>Unique Ingram Micro line number.</value>
         [DataMember(Name = "ingramLineNumber", EmitDefaultValue = false)]
-        public string IngramLineNumber { get; set; }
+        public int IngramLineNumber { get; set; }
 
         /// <summary>
         /// The description of the line item product.
@@ -166,14 +166,14 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>The code of the return branch.</value>
         [DataMember(Name = "returnBranch", EmitDefaultValue = false)]
-        public int ReturnBranch { get; set; }
+        public string ReturnBranch { get; set; }
 
         /// <summary>
         /// The code of the ship from branch.
         /// </summary>
         /// <value>The code of the ship from branch.</value>
         [DataMember(Name = "shipFromBranch", EmitDefaultValue = false)]
-        public int ShipFromBranch { get; set; }
+        public string ShipFromBranch { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

@@ -190,6 +190,15 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'TotalFees'
+        /// </summary>
+        [Fact]
+        public void TotalFeesTest()
+        {
+            // TODO unit test for the property 'TotalFees'
+        }
+
+        /// <summary>
         /// Test the property 'PaymentTerms'
         /// </summary>
         [Fact]

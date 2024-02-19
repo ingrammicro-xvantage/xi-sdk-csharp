@@ -55,6 +55,15 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'QuoteGuid'
+        /// </summary>
+        [Fact]
+        public void QuoteGuidTest()
+        {
+            // TODO unit test for the property 'QuoteGuid'
+        }
+
+        /// <summary>
         /// Test the property 'QuoteName'
         /// </summary>
         [Fact]
@@ -145,6 +154,15 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'EndUserName'
+        /// </summary>
+        [Fact]
+        public void EndUserNameTest()
+        {
+            // TODO unit test for the property 'EndUserName'
+        }
+
+        /// <summary>
         /// Test the property 'Vendor'
         /// </summary>
         [Fact]
@@ -160,6 +178,24 @@ namespace xi.sdk.resellers.Test.Model
         public void CreatedByTest()
         {
             // TODO unit test for the property 'CreatedBy'
+        }
+
+        /// <summary>
+        /// Test the property 'QuoteType'
+        /// </summary>
+        [Fact]
+        public void QuoteTypeTest()
+        {
+            // TODO unit test for the property 'QuoteType'
+        }
+
+        /// <summary>
+        /// Test the property 'Links'
+        /// </summary>
+        [Fact]
+        public void LinksTest()
+        {
+            // TODO unit test for the property 'Links'
         }
     }
 }

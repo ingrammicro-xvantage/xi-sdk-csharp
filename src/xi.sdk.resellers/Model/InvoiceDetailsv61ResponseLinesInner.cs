@@ -54,7 +54,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="serialNumbers">serialNumbers.</param>
         /// <param name="quantityOrdered">Quantity ordered by the customer..</param>
         /// <param name="quantityShipped">Quantity shipped to the customer..</param>
-        public InvoiceDetailsv61ResponseLinesInner(string ingramLineNumber = default(string), string customerLineNumber = @"0", string ingramPartNumber = default(string), string vendorPartNumber = default(string), string customerPartNumber = default(string), string vendorName = default(string), string productDescription = default(string), string unitWeight = default(string), int quantity = default(int), double unitPrice = default(double), string unitOfMeasure = default(string), string currencyCode = default(string), double extendedPrice = default(double), double taxPercentage = default(double), double taxRate = default(double), double taxAmount = default(double), List<InvoiceDetailsv61ResponseLinesInnerSerialNumbersInner> serialNumbers = default(List<InvoiceDetailsv61ResponseLinesInnerSerialNumbersInner>), int quantityOrdered = default(int), int quantityShipped = default(int))
+        public InvoiceDetailsv61ResponseLinesInner(string ingramLineNumber = default(string), string customerLineNumber = @"0", string ingramPartNumber = default(string), string vendorPartNumber = default(string), string customerPartNumber = default(string), string vendorName = default(string), string productDescription = default(string), decimal unitWeight = default(decimal), int quantity = default(int), double unitPrice = default(double), string unitOfMeasure = default(string), string currencyCode = default(string), double extendedPrice = default(double), double taxPercentage = default(double), double taxRate = default(double), double taxAmount = default(double), List<InvoiceDetailsv61ResponseLinesInnerSerialNumbersInner> serialNumbers = default(List<InvoiceDetailsv61ResponseLinesInnerSerialNumbersInner>), int quantityOrdered = default(int), int quantityShipped = default(int))
         {
             this.IngramLineNumber = ingramLineNumber;
             // use default value if no "customerLineNumber" provided
@@ -132,7 +132,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>Weight of the product.</value>
         [DataMember(Name = "unitWeight", EmitDefaultValue = false)]
-        public string UnitWeight { get; set; }
+        public decimal UnitWeight { get; set; }
 
         /// <summary>
         /// Quantity of the product.

@@ -118,6 +118,15 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'ClosingReason'
+        /// </summary>
+        [Fact]
+        public void ClosingReasonTest()
+        {
+            // TODO unit test for the property 'ClosingReason'
+        }
+
+        /// <summary>
         /// Test the property 'SpecialBidId'
         /// </summary>
         [Fact]

@@ -27,35 +27,41 @@ using OpenAPIDateConverter = xi.sdk.resellers.Client.OpenAPIDateConverter;
 namespace xi.sdk.resellers.Model
 {
     /// <summary>
-    /// OrderDetailResponseLinesInnerAdditionalAttributesInner
+    /// QuoteSearchResponseQuotesInnerLinksInner
     /// </summary>
-    [DataContract(Name = "OrderDetailResponse_lines_inner_additionalAttributes_inner")]
-    public partial class OrderDetailResponseLinesInnerAdditionalAttributesInner : IValidatableObject
+    [DataContract(Name = "QuoteSearchResponse_quotes_inner_links_inner")]
+    public partial class QuoteSearchResponseQuotesInnerLinksInner : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="OrderDetailResponseLinesInnerAdditionalAttributesInner" /> class.
+        /// Initializes a new instance of the <see cref="QuoteSearchResponseQuotesInnerLinksInner" /> class.
         /// </summary>
-        /// <param name="attributeName">Line level custom field names..</param>
-        /// <param name="attributeValue">Value of the custom fields..</param>
-        public OrderDetailResponseLinesInnerAdditionalAttributesInner(string attributeName = default(string), string attributeValue = default(string))
+        /// <param name="topic">topic.</param>
+        /// <param name="href">href.</param>
+        /// <param name="type">type.</param>
+        public QuoteSearchResponseQuotesInnerLinksInner(string topic = default(string), string href = default(string), string type = default(string))
         {
-            this.AttributeName = attributeName;
-            this.AttributeValue = attributeValue;
+            this.Topic = topic;
+            this.Href = href;
+            this.Type = type;
         }
 
         /// <summary>
-        /// Line level custom field names.
+        /// Gets or Sets Topic
         /// </summary>
-        /// <value>Line level custom field names.</value>
-        [DataMember(Name = "attributeName", EmitDefaultValue = false)]
-        public string AttributeName { get; set; }
+        [DataMember(Name = "topic", EmitDefaultValue = false)]
+        public string Topic { get; set; }
 
         /// <summary>
-        /// Value of the custom fields.
+        /// Gets or Sets Href
         /// </summary>
-        /// <value>Value of the custom fields.</value>
-        [DataMember(Name = "attributeValue", EmitDefaultValue = false)]
-        public string AttributeValue { get; set; }
+        [DataMember(Name = "href", EmitDefaultValue = false)]
+        public string Href { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [DataMember(Name = "type", EmitDefaultValue = false)]
+        public string Type { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -64,9 +70,10 @@ namespace xi.sdk.resellers.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class OrderDetailResponseLinesInnerAdditionalAttributesInner {\n");
-            sb.Append("  AttributeName: ").Append(AttributeName).Append("\n");
-            sb.Append("  AttributeValue: ").Append(AttributeValue).Append("\n");
+            sb.Append("class QuoteSearchResponseQuotesInnerLinksInner {\n");
+            sb.Append("  Topic: ").Append(Topic).Append("\n");
+            sb.Append("  Href: ").Append(Href).Append("\n");
+            sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

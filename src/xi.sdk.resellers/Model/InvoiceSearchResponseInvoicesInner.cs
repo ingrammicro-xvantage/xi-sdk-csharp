@@ -46,7 +46,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="orderCreateDate">Order Create Date..</param>
         /// <param name="endCustomerOrderNumber">End Customer Order number..</param>
         /// <param name="invoiceAmountInclTax">Invoice Amount Inclusive of Taxes.</param>
-        public InvoiceSearchResponseInvoicesInner(string paymentTermsDueDate = default(string), string erpOrderNumber = default(string), string invoiceNumber = default(string), string invoiceStatus = default(string), string invoiceDate = default(string), string invoiceDueDate = default(string), string invoicedAmountDue = default(string), string customerOrderNumber = default(string), string orderCreateDate = default(string), string endCustomerOrderNumber = default(string), string invoiceAmountInclTax = default(string))
+        public InvoiceSearchResponseInvoicesInner(string paymentTermsDueDate = default(string), string erpOrderNumber = default(string), string invoiceNumber = default(string), string invoiceStatus = default(string), string invoiceDate = default(string), string invoiceDueDate = default(string), decimal invoicedAmountDue = default(decimal), string customerOrderNumber = default(string), string orderCreateDate = default(string), string endCustomerOrderNumber = default(string), decimal invoiceAmountInclTax = default(decimal))
         {
             this.PaymentTermsDueDate = paymentTermsDueDate;
             this.ErpOrderNumber = erpOrderNumber;
@@ -108,7 +108,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>Invoice Amount.</value>
         [DataMember(Name = "invoicedAmountDue", EmitDefaultValue = false)]
-        public string InvoicedAmountDue { get; set; }
+        public decimal InvoicedAmountDue { get; set; }
 
         /// <summary>
         /// Customer Order No.
@@ -136,7 +136,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>Invoice Amount Inclusive of Taxes</value>
         [DataMember(Name = "invoiceAmountInclTax", EmitDefaultValue = false)]
-        public string InvoiceAmountInclTax { get; set; }
+        public decimal InvoiceAmountInclTax { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

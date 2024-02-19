@@ -42,6 +42,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="lastModifiedDate">Date the Quote was last updated or modified..</param>
         /// <param name="ingramQuoteExpiryDate">Quote expiration date..</param>
         /// <param name="currencyCode">Three letter currency code..</param>
+        /// <param name="closingReason">Closing Reason for quote..</param>
         /// <param name="specialBidId">Price discount identifyer to specify  a pricing discount that has been applied to the quote. If present - the priceDeviationStartDate and priceDeviationExpiryDate must be presented. Cisco refers to this as a Dart.</param>
         /// <param name="specialBidEffectiveDate">If price discount has been applied to the quote - the starting date the discount begins..</param>
         /// <param name="specialBidExpirationDate">If a price discount has been applied to the quote - The date the discount expires and will no longer be applicable..</param>
@@ -61,7 +62,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="quantityTotal">Total quantity of all items in the quote..</param>
         /// <param name="extendedQuotePriceTotal">Total amount of quoted price for all products in the quote including both solution products and suggested products..</param>
         /// <param name="additionalAttributes">additionalAttributes.</param>
-        public QuoteDetailsResponse(string quoteName = default(string), string quoteNumber = default(string), string revision = default(string), string ingramQuoteDate = default(string), string lastModifiedDate = default(string), string ingramQuoteExpiryDate = default(string), string currencyCode = default(string), string specialBidId = default(string), string specialBidEffectiveDate = default(string), string specialBidExpirationDate = default(string), string status = default(string), string customerNeed = default(string), string proposedSolution = default(string), string introPreamble = default(string), string purchaseInstructions = default(string), string legalTerms = default(string), string leaseInfo = default(string), string leasingInstructions = default(string), QuoteDetailsResponseResellerInfo resellerInfo = default(QuoteDetailsResponseResellerInfo), QuoteDetailsResponseEndUserInfo endUserInfo = default(QuoteDetailsResponseEndUserInfo), List<QuoteDetailsResponseProductsInner> products = default(List<QuoteDetailsResponseProductsInner>), int productsCount = default(int), int extendedMsrpTotal = default(int), int quantityTotal = default(int), int extendedQuotePriceTotal = default(int), List<QuoteDetailsResponseAdditionalAttributesInner> additionalAttributes = default(List<QuoteDetailsResponseAdditionalAttributesInner>))
+        public QuoteDetailsResponse(string quoteName = default(string), string quoteNumber = default(string), string revision = default(string), string ingramQuoteDate = default(string), string lastModifiedDate = default(string), string ingramQuoteExpiryDate = default(string), string currencyCode = default(string), string closingReason = default(string), string specialBidId = default(string), string specialBidEffectiveDate = default(string), string specialBidExpirationDate = default(string), string status = default(string), string customerNeed = default(string), string proposedSolution = default(string), string introPreamble = default(string), string purchaseInstructions = default(string), string legalTerms = default(string), string leaseInfo = default(string), string leasingInstructions = default(string), QuoteDetailsResponseResellerInfo resellerInfo = default(QuoteDetailsResponseResellerInfo), QuoteDetailsResponseEndUserInfo endUserInfo = default(QuoteDetailsResponseEndUserInfo), List<QuoteDetailsResponseProductsInner> products = default(List<QuoteDetailsResponseProductsInner>), int productsCount = default(int), int extendedMsrpTotal = default(int), int quantityTotal = default(int), int extendedQuotePriceTotal = default(int), List<QuoteDetailsResponseAdditionalAttributesInner> additionalAttributes = default(List<QuoteDetailsResponseAdditionalAttributesInner>))
         {
             this.QuoteName = quoteName;
             this.QuoteNumber = quoteNumber;
@@ -70,6 +71,7 @@ namespace xi.sdk.resellers.Model
             this.LastModifiedDate = lastModifiedDate;
             this.IngramQuoteExpiryDate = ingramQuoteExpiryDate;
             this.CurrencyCode = currencyCode;
+            this.ClosingReason = closingReason;
             this.SpecialBidId = specialBidId;
             this.SpecialBidEffectiveDate = specialBidEffectiveDate;
             this.SpecialBidExpirationDate = specialBidExpirationDate;
@@ -139,6 +141,13 @@ namespace xi.sdk.resellers.Model
         /// <value>Three letter currency code.</value>
         [DataMember(Name = "currencyCode", EmitDefaultValue = false)]
         public string CurrencyCode { get; set; }
+
+        /// <summary>
+        /// Closing Reason for quote.
+        /// </summary>
+        /// <value>Closing Reason for quote.</value>
+        [DataMember(Name = "closingReason", EmitDefaultValue = false)]
+        public string ClosingReason { get; set; }
 
         /// <summary>
         /// Price discount identifyer to specify  a pricing discount that has been applied to the quote. If present - the priceDeviationStartDate and priceDeviationExpiryDate must be presented. Cisco refers to this as a Dart
@@ -284,6 +293,7 @@ namespace xi.sdk.resellers.Model
             sb.Append("  LastModifiedDate: ").Append(LastModifiedDate).Append("\n");
             sb.Append("  IngramQuoteExpiryDate: ").Append(IngramQuoteExpiryDate).Append("\n");
             sb.Append("  CurrencyCode: ").Append(CurrencyCode).Append("\n");
+            sb.Append("  ClosingReason: ").Append(ClosingReason).Append("\n");
             sb.Append("  SpecialBidId: ").Append(SpecialBidId).Append("\n");
             sb.Append("  SpecialBidEffectiveDate: ").Append(SpecialBidEffectiveDate).Append("\n");
             sb.Append("  SpecialBidExpirationDate: ").Append(SpecialBidExpirationDate).Append("\n");

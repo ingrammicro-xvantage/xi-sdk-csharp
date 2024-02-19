@@ -100,6 +100,15 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'OrderNumber'
+        /// </summary>
+        [Fact]
+        public void OrderNumberTest()
+        {
+            // TODO unit test for the property 'OrderNumber'
+        }
+
+        /// <summary>
         /// Test the property 'OrderDate'
         /// </summary>
         [Fact]

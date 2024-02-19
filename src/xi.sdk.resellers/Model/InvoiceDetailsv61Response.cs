@@ -40,6 +40,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="invoiceDate">Date of an Invoice..</param>
         /// <param name="customerOrderNumber">The reseller&#39;s order number for reference in their system..</param>
         /// <param name="endCustomerOrderNumber">The end customer&#39;s order number for reference in their system..</param>
+        /// <param name="orderNumber">The end customer&#39;s order number for reference in their system..</param>
         /// <param name="orderDate">The date and time in UTC format that the order was created..</param>
         /// <param name="billToID">Bill to party.</param>
         /// <param name="invoiceType">Type of the Invoice.</param>
@@ -54,13 +55,14 @@ namespace xi.sdk.resellers.Model
         /// <param name="lines">lines.</param>
         /// <param name="fxRateInfo">fxRateInfo.</param>
         /// <param name="summary">summary.</param>
-        public InvoiceDetailsv61Response(string invoiceNumber = default(string), string invoiceStatus = default(string), DateOnly invoiceDate = default(DateOnly), string customerOrderNumber = default(string), string endCustomerOrderNumber = default(string), DateOnly orderDate = default(DateOnly), string billToID = default(string), string invoiceType = default(string), string invoiceDueDate = default(string), string customerCountryCode = default(string), string customerNumber = default(string), string ingramOrderNumber = default(string), string notes = default(string), InvoiceDetailsv61ResponsePaymentTermsInfo paymentTermsInfo = default(InvoiceDetailsv61ResponsePaymentTermsInfo), InvoiceDetailsv61ResponseBillToInfo billToInfo = default(InvoiceDetailsv61ResponseBillToInfo), InvoiceDetailsv61ResponseShipToInfo shipToInfo = default(InvoiceDetailsv61ResponseShipToInfo), List<InvoiceDetailsv61ResponseLinesInner> lines = default(List<InvoiceDetailsv61ResponseLinesInner>), InvoiceDetailsv61ResponseFxRateInfo fxRateInfo = default(InvoiceDetailsv61ResponseFxRateInfo), InvoiceDetailsv61ResponseSummary summary = default(InvoiceDetailsv61ResponseSummary))
+        public InvoiceDetailsv61Response(string invoiceNumber = default(string), string invoiceStatus = default(string), DateOnly invoiceDate = default(DateOnly), string customerOrderNumber = default(string), string endCustomerOrderNumber = default(string), string orderNumber = default(string), DateOnly orderDate = default(DateOnly), string billToID = default(string), string invoiceType = default(string), string invoiceDueDate = default(string), string customerCountryCode = default(string), string customerNumber = default(string), string ingramOrderNumber = default(string), string notes = default(string), InvoiceDetailsv61ResponsePaymentTermsInfo paymentTermsInfo = default(InvoiceDetailsv61ResponsePaymentTermsInfo), InvoiceDetailsv61ResponseBillToInfo billToInfo = default(InvoiceDetailsv61ResponseBillToInfo), InvoiceDetailsv61ResponseShipToInfo shipToInfo = default(InvoiceDetailsv61ResponseShipToInfo), List<InvoiceDetailsv61ResponseLinesInner> lines = default(List<InvoiceDetailsv61ResponseLinesInner>), InvoiceDetailsv61ResponseFxRateInfo fxRateInfo = default(InvoiceDetailsv61ResponseFxRateInfo), InvoiceDetailsv61ResponseSummary summary = default(InvoiceDetailsv61ResponseSummary))
         {
             this.InvoiceNumber = invoiceNumber;
             this.InvoiceStatus = invoiceStatus;
             this.InvoiceDate = invoiceDate;
             this.CustomerOrderNumber = customerOrderNumber;
             this.EndCustomerOrderNumber = endCustomerOrderNumber;
+            this.OrderNumber = orderNumber;
             this.OrderDate = orderDate;
             this.BillToID = billToID;
             this.InvoiceType = invoiceType;
@@ -114,10 +116,17 @@ namespace xi.sdk.resellers.Model
         public string EndCustomerOrderNumber { get; set; }
 
         /// <summary>
+        /// The end customer&#39;s order number for reference in their system.
+        /// </summary>
+        /// <value>The end customer&#39;s order number for reference in their system.</value>
+        [DataMember(Name = "orderNumber", EmitDefaultValue = false)]
+        public string OrderNumber { get; set; }
+
+        /// <summary>
         /// The date and time in UTC format that the order was created.
         /// </summary>
         /// <value>The date and time in UTC format that the order was created.</value>
-        [DataMember(Name = "OrderDate", EmitDefaultValue = false)]
+        [DataMember(Name = "orderDate", EmitDefaultValue = false)]
         [JsonConverter(typeof(OpenAPIDateConverter))]
         public DateOnly OrderDate { get; set; }
 
@@ -219,6 +228,7 @@ namespace xi.sdk.resellers.Model
             sb.Append("  InvoiceDate: ").Append(InvoiceDate).Append("\n");
             sb.Append("  CustomerOrderNumber: ").Append(CustomerOrderNumber).Append("\n");
             sb.Append("  EndCustomerOrderNumber: ").Append(EndCustomerOrderNumber).Append("\n");
+            sb.Append("  OrderNumber: ").Append(OrderNumber).Append("\n");
             sb.Append("  OrderDate: ").Append(OrderDate).Append("\n");
             sb.Append("  BillToID: ").Append(BillToID).Append("\n");
             sb.Append("  InvoiceType: ").Append(InvoiceType).Append("\n");

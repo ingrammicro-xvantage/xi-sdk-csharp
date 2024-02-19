@@ -48,7 +48,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="tax">The tax amount of the return request..</param>
         /// <param name="additionalFees">The additional fees for the return request..</param>
         /// <param name="estimatedTotal">The total estimated amount for the return request..</param>
-        public ReturnsDetailsResponse(string typeOfDetails = default(string), string rmaClaimId = default(string), string caseRequestNumber = default(string), DateOnly createdOn = default(DateOnly), string returnReason = default(string), string referenceNumber = default(string), string status = default(string), string returnWarehouseAddress = default(string), List<ReturnsDetailsResponseProductsInner> products = default(List<ReturnsDetailsResponseProductsInner>), decimal subTotal = default(decimal), decimal tax = default(decimal), decimal additionalFees = default(decimal), decimal estimatedTotal = default(decimal))
+        public ReturnsDetailsResponse(string typeOfDetails = default(string), string rmaClaimId = default(string), string caseRequestNumber = default(string), string createdOn = default(string), string returnReason = default(string), string referenceNumber = default(string), string status = default(string), string returnWarehouseAddress = default(string), List<ReturnsDetailsResponseProductsInner> products = default(List<ReturnsDetailsResponseProductsInner>), decimal subTotal = default(decimal), decimal tax = default(decimal), decimal additionalFees = default(decimal), decimal estimatedTotal = default(decimal))
         {
             this.TypeOfDetails = typeOfDetails;
             this.RmaClaimId = rmaClaimId;
@@ -91,8 +91,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>The date on which the return request was created.</value>
         [DataMember(Name = "createdOn", EmitDefaultValue = false)]
-        [JsonConverter(typeof(OpenAPIDateConverter))]
-        public DateOnly CreatedOn { get; set; }
+        public string CreatedOn { get; set; }
 
         /// <summary>
         /// The reason for the return.

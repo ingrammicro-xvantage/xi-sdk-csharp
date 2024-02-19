@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IngramLineNumber** | **string** | Unique Ingram Micro line number. | [optional] 
+**IngramLineNumber** | **int** | Unique Ingram Micro line number. | [optional] 
 **Description** | **string** | The description of the line item product. | [optional] 
 **IngramPartNumber** | **string** | Unique IngramMicro part number. | [optional] 
 **VendorPartNumber** | **string** | The vendor&#39;s part number for the line item. | [optional] 
@@ -17,8 +17,8 @@ Name | Type | Description | Notes
 **UnitPrice** | **decimal** | The unit price of the line item. | [optional] 
 **ExtendedPrice** | **decimal** | Unit price X quantity for the line item. | [optional] 
 **Status** | **string** | The status of the line item. | [optional] 
-**ReturnBranch** | **int** | The code of the return branch. | [optional] 
-**ShipFromBranch** | **int** | The code of the ship from branch. | [optional] 
+**ReturnBranch** | **string** | The code of the return branch. | [optional] 
+**ShipFromBranch** | **string** | The code of the ship from branch. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
