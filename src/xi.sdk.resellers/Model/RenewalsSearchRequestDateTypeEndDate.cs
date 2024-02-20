@@ -27,33 +27,33 @@ using OpenAPIDateConverter = xi.sdk.resellers.Client.OpenAPIDateConverter;
 namespace xi.sdk.resellers.Model
 {
     /// <summary>
-    /// RenewalsSearchRequestDataTypeStartDate
+    /// RenewalsSearchRequestDateTypeEndDate
     /// </summary>
-    [DataContract(Name = "renewalsSearchRequest_dataType_startDate")]
-    public partial class RenewalsSearchRequestDataTypeStartDate : IValidatableObject
+    [DataContract(Name = "renewalsSearchRequest_dateType_endDate")]
+    public partial class RenewalsSearchRequestDateTypeEndDate : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="RenewalsSearchRequestDataTypeStartDate" /> class.
+        /// Initializes a new instance of the <see cref="RenewalsSearchRequestDateTypeEndDate" /> class.
         /// </summary>
-        /// <param name="customStartDate">Custom from date for Renewal Start date..</param>
-        /// <param name="customEndDate">Custom to date for Renewal Start date..</param>
-        public RenewalsSearchRequestDataTypeStartDate(string customStartDate = default(string), string customEndDate = default(string))
+        /// <param name="customStartDate">Custom from date for Renewal end date..</param>
+        /// <param name="customEndDate">Custom to date for Renewal end date..</param>
+        public RenewalsSearchRequestDateTypeEndDate(string customStartDate = default(string), string customEndDate = default(string))
         {
             this.CustomStartDate = customStartDate;
             this.CustomEndDate = customEndDate;
         }
 
         /// <summary>
-        /// Custom from date for Renewal Start date.
+        /// Custom from date for Renewal end date.
         /// </summary>
-        /// <value>Custom from date for Renewal Start date.</value>
+        /// <value>Custom from date for Renewal end date.</value>
         [DataMember(Name = "customStartDate", EmitDefaultValue = false)]
         public string CustomStartDate { get; set; }
 
         /// <summary>
-        /// Custom to date for Renewal Start date.
+        /// Custom to date for Renewal end date.
         /// </summary>
-        /// <value>Custom to date for Renewal Start date.</value>
+        /// <value>Custom to date for Renewal end date.</value>
         [DataMember(Name = "customEndDate", EmitDefaultValue = false)]
         public string CustomEndDate { get; set; }
 
@@ -64,7 +64,7 @@ namespace xi.sdk.resellers.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class RenewalsSearchRequestDataTypeStartDate {\n");
+            sb.Append("class RenewalsSearchRequestDateTypeEndDate {\n");
             sb.Append("  CustomStartDate: ").Append(CustomStartDate).Append("\n");
             sb.Append("  CustomEndDate: ").Append(CustomEndDate).Append("\n");
             sb.Append("}\n");

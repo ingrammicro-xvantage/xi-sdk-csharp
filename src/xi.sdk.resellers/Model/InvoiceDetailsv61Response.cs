@@ -55,7 +55,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="lines">lines.</param>
         /// <param name="fxRateInfo">fxRateInfo.</param>
         /// <param name="summary">summary.</param>
-        public InvoiceDetailsv61Response(string invoiceNumber = default(string), string invoiceStatus = default(string), DateOnly invoiceDate = default(DateOnly), string customerOrderNumber = default(string), string endCustomerOrderNumber = default(string), string orderNumber = default(string), DateOnly orderDate = default(DateOnly), string billToID = default(string), string invoiceType = default(string), string invoiceDueDate = default(string), string customerCountryCode = default(string), string customerNumber = default(string), string ingramOrderNumber = default(string), string notes = default(string), InvoiceDetailsv61ResponsePaymentTermsInfo paymentTermsInfo = default(InvoiceDetailsv61ResponsePaymentTermsInfo), InvoiceDetailsv61ResponseBillToInfo billToInfo = default(InvoiceDetailsv61ResponseBillToInfo), InvoiceDetailsv61ResponseShipToInfo shipToInfo = default(InvoiceDetailsv61ResponseShipToInfo), List<InvoiceDetailsv61ResponseLinesInner> lines = default(List<InvoiceDetailsv61ResponseLinesInner>), InvoiceDetailsv61ResponseFxRateInfo fxRateInfo = default(InvoiceDetailsv61ResponseFxRateInfo), InvoiceDetailsv61ResponseSummary summary = default(InvoiceDetailsv61ResponseSummary))
+        public InvoiceDetailsv61Response(string invoiceNumber = default(string), string invoiceStatus = default(string), string invoiceDate = default(string), string customerOrderNumber = default(string), string endCustomerOrderNumber = default(string), string orderNumber = default(string), string orderDate = default(string), string billToID = default(string), string invoiceType = default(string), string invoiceDueDate = default(string), string customerCountryCode = default(string), string customerNumber = default(string), string ingramOrderNumber = default(string), string notes = default(string), InvoiceDetailsv61ResponsePaymentTermsInfo paymentTermsInfo = default(InvoiceDetailsv61ResponsePaymentTermsInfo), InvoiceDetailsv61ResponseBillToInfo billToInfo = default(InvoiceDetailsv61ResponseBillToInfo), InvoiceDetailsv61ResponseShipToInfo shipToInfo = default(InvoiceDetailsv61ResponseShipToInfo), List<InvoiceDetailsv61ResponseLinesInner> lines = default(List<InvoiceDetailsv61ResponseLinesInner>), InvoiceDetailsv61ResponseFxRateInfo fxRateInfo = default(InvoiceDetailsv61ResponseFxRateInfo), InvoiceDetailsv61ResponseSummary summary = default(InvoiceDetailsv61ResponseSummary))
         {
             this.InvoiceNumber = invoiceNumber;
             this.InvoiceStatus = invoiceStatus;
@@ -98,8 +98,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>Date of an Invoice.</value>
         [DataMember(Name = "invoiceDate", EmitDefaultValue = false)]
-        [JsonConverter(typeof(OpenAPIDateConverter))]
-        public DateOnly InvoiceDate { get; set; }
+        public string InvoiceDate { get; set; }
 
         /// <summary>
         /// The reseller&#39;s order number for reference in their system.
@@ -127,8 +126,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>The date and time in UTC format that the order was created.</value>
         [DataMember(Name = "orderDate", EmitDefaultValue = false)]
-        [JsonConverter(typeof(OpenAPIDateConverter))]
-        public DateOnly OrderDate { get; set; }
+        public string OrderDate { get; set; }
 
         /// <summary>
         /// Bill to party
