@@ -9271,7 +9271,7 @@ components:
       type: object
     renewalsDetailsResponse:
       example:
-        renewalId: renewalId
+        renewalId: 0
         endUserInfo:
         - city: city
           companyName: companyName
@@ -9305,7 +9305,7 @@ components:
         customerOrderNumber: customerOrderNumber
         products:
         - ingramPartNumber: ingramPartNumber
-          unitPrice: 6.027456183070403
+          unitPrice: 1.4658129805029452
           manufacturerPartNumber: manufacturerPartNumber
           isConsolidated: isConsolidated
           quantity: quantity
@@ -9313,7 +9313,7 @@ components:
           vendorPartNumber: vendorPartNumber
           productDescription: productDescription
         - ingramPartNumber: ingramPartNumber
-          unitPrice: 6.027456183070403
+          unitPrice: 1.4658129805029452
           manufacturerPartNumber: manufacturerPartNumber
           isConsolidated: isConsolidated
           quantity: quantity
@@ -9329,7 +9329,7 @@ components:
         - notificationId: notificationId
           quoteNumber: quoteNumber
         vendor: vendor
-        renewalValue: 0.8008281904610115
+        renewalValue: 6.027456183070403
         ingramOrderDate: 2000-01-23
         expirationDate: 2000-01-23
         status: status
@@ -9347,7 +9347,7 @@ components:
       properties:
         renewalId:
           description: Unique Ingram renewal ID.
-          type: string
+          type: integer
         ingramOrderNumber:
           description: The IngramMicro sales order number.
           type: string
@@ -9370,7 +9370,7 @@ components:
           type: string
         renewalValue:
           description: The value of the renewal.
-          format: decimal
+          format: double
           type: number
         endUser:
           description: The company name for the end user/customer.
@@ -10356,28 +10356,34 @@ components:
       example:
         pageNumber: 1
         invoices:
-        - orderCreateDate: orderCreateDate
-          paymentTermsDueDate: paymentTermsDueDate
+        - gstInvoiceNumber: gstInvoiceNumber
           invoicedAmountDue: 5.962133916683182
           endCustomerOrderNumber: endCustomerOrderNumber
           invoiceAmountInclTax: 5.637376656633329
-          invoiceNumber: invoiceNumber
-          erpOrderNumber: erpOrderNumber
-          invoiceStatus: invoiceStatus
+          isfeccenabled: true
           invoiceDate: invoiceDate
           customerOrderNumber: customerOrderNumber
           invoiceDueDate: invoiceDueDate
-        - orderCreateDate: orderCreateDate
+          orderCreateDate: orderCreateDate
           paymentTermsDueDate: paymentTermsDueDate
+          forgntotalamount: 2.3021358869347655
+          invoiceNumber: invoiceNumber
+          erpOrderNumber: erpOrderNumber
+          invoiceStatus: invoiceStatus
+        - gstInvoiceNumber: gstInvoiceNumber
           invoicedAmountDue: 5.962133916683182
           endCustomerOrderNumber: endCustomerOrderNumber
           invoiceAmountInclTax: 5.637376656633329
-          invoiceNumber: invoiceNumber
-          erpOrderNumber: erpOrderNumber
-          invoiceStatus: invoiceStatus
+          isfeccenabled: true
           invoiceDate: invoiceDate
           customerOrderNumber: customerOrderNumber
           invoiceDueDate: invoiceDueDate
+          orderCreateDate: orderCreateDate
+          paymentTermsDueDate: paymentTermsDueDate
+          forgntotalamount: 2.3021358869347655
+          invoiceNumber: invoiceNumber
+          erpOrderNumber: erpOrderNumber
+          invoiceStatus: invoiceStatus
         nextPage: nextPage
         pageSize: 6
         recordsFound: 0
@@ -14460,7 +14466,7 @@ components:
     renewalsDetailsResponse_products_inner:
       example:
         ingramPartNumber: ingramPartNumber
-        unitPrice: 6.027456183070403
+        unitPrice: 1.4658129805029452
         manufacturerPartNumber: manufacturerPartNumber
         isConsolidated: isConsolidated
         quantity: quantity
@@ -15804,17 +15810,20 @@ components:
       type: object
     InvoiceSearchResponse_invoices_inner:
       example:
-        orderCreateDate: orderCreateDate
-        paymentTermsDueDate: paymentTermsDueDate
+        gstInvoiceNumber: gstInvoiceNumber
         invoicedAmountDue: 5.962133916683182
         endCustomerOrderNumber: endCustomerOrderNumber
         invoiceAmountInclTax: 5.637376656633329
-        invoiceNumber: invoiceNumber
-        erpOrderNumber: erpOrderNumber
-        invoiceStatus: invoiceStatus
+        isfeccenabled: true
         invoiceDate: invoiceDate
         customerOrderNumber: customerOrderNumber
         invoiceDueDate: invoiceDueDate
+        orderCreateDate: orderCreateDate
+        paymentTermsDueDate: paymentTermsDueDate
+        forgntotalamount: 2.3021358869347655
+        invoiceNumber: invoiceNumber
+        erpOrderNumber: erpOrderNumber
+        invoiceStatus: invoiceStatus
       properties:
         paymentTermsDueDate:
           description: Payment Terms Due date.
@@ -15841,16 +15850,23 @@ components:
         customerOrderNumber:
           description: Customer Order No.
           type: string
-        orderCreateDate:
-          description: Order Create Date.
-          type: string
         endCustomerOrderNumber:
           description: End Customer Order number.
+          type: string
+        orderCreateDate:
+          description: Order Create Date.
           type: string
         invoiceAmountInclTax:
           description: Invoice Amount Inclusive of Taxes
           format: decimal
           type: number
+        forgntotalamount:
+          format: decimal
+          type: number
+        gstInvoiceNumber:
+          type: string
+        isfeccenabled:
+          type: boolean
     InvoiceDetailsv6_1Response_paymentTermsInfo:
       additionalProperties: false
       description: Payment terms is the agreement between Ingram and the customer
