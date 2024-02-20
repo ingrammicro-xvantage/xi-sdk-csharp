@@ -66,7 +66,6 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
-        /// <param name="contentType">The media type for JSON Request.</param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="customerOrderNumber">The reseller&#39;s unique PO/Order number. (optional)</param>
         /// <param name="ingramPurchaseOrderNumber">Sales order number. (optional)</param>
@@ -76,7 +75,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="sort">Refers to the column selected to apply the sorting criteria. (optional)</param>
         /// <param name="renewalsSearchRequest"> (optional)</param>
         /// <returns>RenewalsSearchResponse</returns>
-        RenewalsSearchResponse PostRenewalssearch(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string contentType, string? iMSenderID = default(string?), string? customerOrderNumber = default(string?), string? ingramPurchaseOrderNumber = default(string?), string? serialNumber = default(string?), string? page = default(string?), string? size = default(string?), string? sort = default(string?), RenewalsSearchRequest? renewalsSearchRequest = default(RenewalsSearchRequest?));
+        RenewalsSearchResponse PostRenewalssearch(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? customerOrderNumber = default(string?), string? ingramPurchaseOrderNumber = default(string?), string? serialNumber = default(string?), string? page = default(string?), string? size = default(string?), string? sort = default(string?), RenewalsSearchRequest? renewalsSearchRequest = default(RenewalsSearchRequest?));
 
         /// <summary>
         /// Renewals Search
@@ -88,7 +87,6 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
-        /// <param name="contentType">The media type for JSON Request.</param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="customerOrderNumber">The reseller&#39;s unique PO/Order number. (optional)</param>
         /// <param name="ingramPurchaseOrderNumber">Sales order number. (optional)</param>
@@ -98,7 +96,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="sort">Refers to the column selected to apply the sorting criteria. (optional)</param>
         /// <param name="renewalsSearchRequest"> (optional)</param>
         /// <returns>ApiResponse of RenewalsSearchResponse</returns>
-        ApiResponse<RenewalsSearchResponse> PostRenewalssearchWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string contentType, string? iMSenderID = default(string?), string? customerOrderNumber = default(string?), string? ingramPurchaseOrderNumber = default(string?), string? serialNumber = default(string?), string? page = default(string?), string? size = default(string?), string? sort = default(string?), RenewalsSearchRequest? renewalsSearchRequest = default(RenewalsSearchRequest?));
+        ApiResponse<RenewalsSearchResponse> PostRenewalssearchWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? customerOrderNumber = default(string?), string? ingramPurchaseOrderNumber = default(string?), string? serialNumber = default(string?), string? page = default(string?), string? size = default(string?), string? sort = default(string?), RenewalsSearchRequest? renewalsSearchRequest = default(RenewalsSearchRequest?));
         #endregion Synchronous Operations
     }
 
@@ -149,7 +147,6 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
-        /// <param name="contentType">The media type for JSON Request.</param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="customerOrderNumber">The reseller&#39;s unique PO/Order number. (optional)</param>
         /// <param name="ingramPurchaseOrderNumber">Sales order number. (optional)</param>
@@ -160,7 +157,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="renewalsSearchRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RenewalsSearchResponse</returns>
-        System.Threading.Tasks.Task<RenewalsSearchResponse> PostRenewalssearchAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string contentType, string? iMSenderID = default(string?), string? customerOrderNumber = default(string?), string? ingramPurchaseOrderNumber = default(string?), string? serialNumber = default(string?), string? page = default(string?), string? size = default(string?), string? sort = default(string?), RenewalsSearchRequest? renewalsSearchRequest = default(RenewalsSearchRequest?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RenewalsSearchResponse> PostRenewalssearchAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? customerOrderNumber = default(string?), string? ingramPurchaseOrderNumber = default(string?), string? serialNumber = default(string?), string? page = default(string?), string? size = default(string?), string? sort = default(string?), RenewalsSearchRequest? renewalsSearchRequest = default(RenewalsSearchRequest?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Renewals Search
@@ -172,7 +169,6 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
-        /// <param name="contentType">The media type for JSON Request.</param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="customerOrderNumber">The reseller&#39;s unique PO/Order number. (optional)</param>
         /// <param name="ingramPurchaseOrderNumber">Sales order number. (optional)</param>
@@ -183,7 +179,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="renewalsSearchRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RenewalsSearchResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RenewalsSearchResponse>> PostRenewalssearchWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string contentType, string? iMSenderID = default(string?), string? customerOrderNumber = default(string?), string? ingramPurchaseOrderNumber = default(string?), string? serialNumber = default(string?), string? page = default(string?), string? size = default(string?), string? sort = default(string?), RenewalsSearchRequest? renewalsSearchRequest = default(RenewalsSearchRequest?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RenewalsSearchResponse>> PostRenewalssearchWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? customerOrderNumber = default(string?), string? ingramPurchaseOrderNumber = default(string?), string? serialNumber = default(string?), string? page = default(string?), string? size = default(string?), string? sort = default(string?), RenewalsSearchRequest? renewalsSearchRequest = default(RenewalsSearchRequest?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -585,7 +581,6 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
-        /// <param name="contentType">The media type for JSON Request.</param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="customerOrderNumber">The reseller&#39;s unique PO/Order number. (optional)</param>
         /// <param name="ingramPurchaseOrderNumber">Sales order number. (optional)</param>
@@ -595,9 +590,9 @@ namespace xi.sdk.resellers.Api
         /// <param name="sort">Refers to the column selected to apply the sorting criteria. (optional)</param>
         /// <param name="renewalsSearchRequest"> (optional)</param>
         /// <returns>RenewalsSearchResponse</returns>
-        public RenewalsSearchResponse PostRenewalssearch(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string contentType, string? iMSenderID = default(string?), string? customerOrderNumber = default(string?), string? ingramPurchaseOrderNumber = default(string?), string? serialNumber = default(string?), string? page = default(string?), string? size = default(string?), string? sort = default(string?), RenewalsSearchRequest? renewalsSearchRequest = default(RenewalsSearchRequest?))
+        public RenewalsSearchResponse PostRenewalssearch(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? customerOrderNumber = default(string?), string? ingramPurchaseOrderNumber = default(string?), string? serialNumber = default(string?), string? page = default(string?), string? size = default(string?), string? sort = default(string?), RenewalsSearchRequest? renewalsSearchRequest = default(RenewalsSearchRequest?))
         {
-            xi.sdk.resellers.Client.ApiResponse<RenewalsSearchResponse> localVarResponse = PostRenewalssearchWithHttpInfo(iMCustomerNumber, iMCountryCode, iMCorrelationID, contentType, iMSenderID, customerOrderNumber, ingramPurchaseOrderNumber, serialNumber, page, size, sort, renewalsSearchRequest);
+            xi.sdk.resellers.Client.ApiResponse<RenewalsSearchResponse> localVarResponse = PostRenewalssearchWithHttpInfo(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMSenderID, customerOrderNumber, ingramPurchaseOrderNumber, serialNumber, page, size, sort, renewalsSearchRequest);
             return localVarResponse.Data;
         }
 
@@ -608,7 +603,6 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
-        /// <param name="contentType">The media type for JSON Request.</param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="customerOrderNumber">The reseller&#39;s unique PO/Order number. (optional)</param>
         /// <param name="ingramPurchaseOrderNumber">Sales order number. (optional)</param>
@@ -618,7 +612,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="sort">Refers to the column selected to apply the sorting criteria. (optional)</param>
         /// <param name="renewalsSearchRequest"> (optional)</param>
         /// <returns>ApiResponse of RenewalsSearchResponse</returns>
-        public xi.sdk.resellers.Client.ApiResponse<RenewalsSearchResponse> PostRenewalssearchWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string contentType, string? iMSenderID = default(string?), string? customerOrderNumber = default(string?), string? ingramPurchaseOrderNumber = default(string?), string? serialNumber = default(string?), string? page = default(string?), string? size = default(string?), string? sort = default(string?), RenewalsSearchRequest? renewalsSearchRequest = default(RenewalsSearchRequest?))
+        public xi.sdk.resellers.Client.ApiResponse<RenewalsSearchResponse> PostRenewalssearchWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? customerOrderNumber = default(string?), string? ingramPurchaseOrderNumber = default(string?), string? serialNumber = default(string?), string? page = default(string?), string? size = default(string?), string? sort = default(string?), RenewalsSearchRequest? renewalsSearchRequest = default(RenewalsSearchRequest?))
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)
@@ -631,10 +625,6 @@ namespace xi.sdk.resellers.Api
             // verify the required parameter 'iMCorrelationID' is set
             if (iMCorrelationID == null)
                 throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCorrelationID' when calling RenewalsApi->PostRenewalssearch");
-
-            // verify the required parameter 'contentType' is set
-            if (contentType == null)
-                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'contentType' when calling RenewalsApi->PostRenewalssearch");
 
             xi.sdk.resellers.Client.RequestOptions localVarRequestOptions = new xi.sdk.resellers.Client.RequestOptions();
 
@@ -684,7 +674,6 @@ namespace xi.sdk.resellers.Api
             {
                 localVarRequestOptions.HeaderParameters.Add("IM-SenderID", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMSenderID)); // header parameter
             }
-            localVarRequestOptions.HeaderParameters.Add("Content Type", xi.sdk.resellers.Client.ClientUtils.ParameterToString(contentType)); // header parameter
             localVarRequestOptions.Data = renewalsSearchRequest;
 
             // authentication (application) required
@@ -713,7 +702,6 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
-        /// <param name="contentType">The media type for JSON Request.</param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="customerOrderNumber">The reseller&#39;s unique PO/Order number. (optional)</param>
         /// <param name="ingramPurchaseOrderNumber">Sales order number. (optional)</param>
@@ -724,9 +712,9 @@ namespace xi.sdk.resellers.Api
         /// <param name="renewalsSearchRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RenewalsSearchResponse</returns>
-        public async System.Threading.Tasks.Task<RenewalsSearchResponse> PostRenewalssearchAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string contentType, string? iMSenderID = default(string?), string? customerOrderNumber = default(string?), string? ingramPurchaseOrderNumber = default(string?), string? serialNumber = default(string?), string? page = default(string?), string? size = default(string?), string? sort = default(string?), RenewalsSearchRequest? renewalsSearchRequest = default(RenewalsSearchRequest?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RenewalsSearchResponse> PostRenewalssearchAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? customerOrderNumber = default(string?), string? ingramPurchaseOrderNumber = default(string?), string? serialNumber = default(string?), string? page = default(string?), string? size = default(string?), string? sort = default(string?), RenewalsSearchRequest? renewalsSearchRequest = default(RenewalsSearchRequest?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            xi.sdk.resellers.Client.ApiResponse<RenewalsSearchResponse> localVarResponse = await PostRenewalssearchWithHttpInfoAsync(iMCustomerNumber, iMCountryCode, iMCorrelationID, contentType, iMSenderID, customerOrderNumber, ingramPurchaseOrderNumber, serialNumber, page, size, sort, renewalsSearchRequest, cancellationToken).ConfigureAwait(false);
+            xi.sdk.resellers.Client.ApiResponse<RenewalsSearchResponse> localVarResponse = await PostRenewalssearchWithHttpInfoAsync(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMSenderID, customerOrderNumber, ingramPurchaseOrderNumber, serialNumber, page, size, sort, renewalsSearchRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -737,7 +725,6 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
-        /// <param name="contentType">The media type for JSON Request.</param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="customerOrderNumber">The reseller&#39;s unique PO/Order number. (optional)</param>
         /// <param name="ingramPurchaseOrderNumber">Sales order number. (optional)</param>
@@ -748,7 +735,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="renewalsSearchRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RenewalsSearchResponse)</returns>
-        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<RenewalsSearchResponse>> PostRenewalssearchWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string contentType, string? iMSenderID = default(string?), string? customerOrderNumber = default(string?), string? ingramPurchaseOrderNumber = default(string?), string? serialNumber = default(string?), string? page = default(string?), string? size = default(string?), string? sort = default(string?), RenewalsSearchRequest? renewalsSearchRequest = default(RenewalsSearchRequest?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<RenewalsSearchResponse>> PostRenewalssearchWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? customerOrderNumber = default(string?), string? ingramPurchaseOrderNumber = default(string?), string? serialNumber = default(string?), string? page = default(string?), string? size = default(string?), string? sort = default(string?), RenewalsSearchRequest? renewalsSearchRequest = default(RenewalsSearchRequest?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)
@@ -761,10 +748,6 @@ namespace xi.sdk.resellers.Api
             // verify the required parameter 'iMCorrelationID' is set
             if (iMCorrelationID == null)
                 throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCorrelationID' when calling RenewalsApi->PostRenewalssearch");
-
-            // verify the required parameter 'contentType' is set
-            if (contentType == null)
-                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'contentType' when calling RenewalsApi->PostRenewalssearch");
 
 
             xi.sdk.resellers.Client.RequestOptions localVarRequestOptions = new xi.sdk.resellers.Client.RequestOptions();
@@ -816,7 +799,6 @@ namespace xi.sdk.resellers.Api
             {
                 localVarRequestOptions.HeaderParameters.Add("IM-SenderID", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMSenderID)); // header parameter
             }
-            localVarRequestOptions.HeaderParameters.Add("Content Type", xi.sdk.resellers.Client.ClientUtils.ParameterToString(contentType)); // header parameter
             localVarRequestOptions.Data = renewalsSearchRequest;
 
             // authentication (application) required

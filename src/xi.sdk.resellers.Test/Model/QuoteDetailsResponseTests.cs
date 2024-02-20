@@ -208,6 +208,15 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'QuoteType'
+        /// </summary>
+        [Fact]
+        public void QuoteTypeTest()
+        {
+            // TODO unit test for the property 'QuoteType'
+        }
+
+        /// <summary>
         /// Test the property 'LeaseInfo'
         /// </summary>
         [Fact]

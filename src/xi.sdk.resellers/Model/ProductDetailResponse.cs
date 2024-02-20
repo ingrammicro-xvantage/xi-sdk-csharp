@@ -43,7 +43,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="productDetailDescription">The detailed description given for the product..</param>
         /// <param name="upc">The UPC code for the product. Consists of 12 numeric digits that are uniquely assigned to each trade item..</param>
         /// <param name="productCategory">The category of the product..</param>
-        /// <param name="productSubcategory">The sub-category of the product..</param>
+        /// <param name="productSubCategory">The sub-category of the product..</param>
         /// <param name="vendorName">Vendor name for the order..</param>
         /// <param name="vendorNumber">Vendor number that identifies the product..</param>
         /// <param name="productStatusCode">Status code of the product..</param>
@@ -53,7 +53,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="technicalSpecifications">Technical specifications of the product..</param>
         /// <param name="warrantyInformation">Warranty information related to the product..</param>
         /// <param name="additionalInformation">additionalInformation.</param>
-        public ProductDetailResponse(string ingramPartNumber = default(string), string vendorPartNumber = default(string), string customerPartNumber = default(string), string productAuthorized = default(string), string description = default(string), string productDetailDescription = default(string), string upc = default(string), string productCategory = default(string), string productSubcategory = default(string), string vendorName = default(string), string vendorNumber = default(string), string productStatusCode = default(string), string productClass = default(string), ProductDetailResponseIndicators indicators = default(ProductDetailResponseIndicators), ProductDetailResponseCiscoFields ciscoFields = default(ProductDetailResponseCiscoFields), List<ProductDetailResponseTechnicalSpecificationsInner> technicalSpecifications = default(List<ProductDetailResponseTechnicalSpecificationsInner>), List<Object> warrantyInformation = default(List<Object>), ProductDetailResponseAdditionalInformation additionalInformation = default(ProductDetailResponseAdditionalInformation))
+        public ProductDetailResponse(string ingramPartNumber = default(string), string vendorPartNumber = default(string), string customerPartNumber = default(string), string productAuthorized = default(string), string description = default(string), string productDetailDescription = default(string), string upc = default(string), string productCategory = default(string), string productSubCategory = default(string), string vendorName = default(string), string vendorNumber = default(string), string productStatusCode = default(string), string productClass = default(string), ProductDetailResponseIndicators indicators = default(ProductDetailResponseIndicators), ProductDetailResponseCiscoFields ciscoFields = default(ProductDetailResponseCiscoFields), List<ProductDetailResponseTechnicalSpecificationsInner> technicalSpecifications = default(List<ProductDetailResponseTechnicalSpecificationsInner>), List<Object> warrantyInformation = default(List<Object>), ProductDetailResponseAdditionalInformation additionalInformation = default(ProductDetailResponseAdditionalInformation))
         {
             this.IngramPartNumber = ingramPartNumber;
             this.VendorPartNumber = vendorPartNumber;
@@ -63,7 +63,7 @@ namespace xi.sdk.resellers.Model
             this.ProductDetailDescription = productDetailDescription;
             this.Upc = upc;
             this.ProductCategory = productCategory;
-            this.ProductSubcategory = productSubcategory;
+            this.ProductSubCategory = productSubCategory;
             this.VendorName = vendorName;
             this.VendorNumber = vendorNumber;
             this.ProductStatusCode = productStatusCode;
@@ -135,8 +135,8 @@ namespace xi.sdk.resellers.Model
         /// The sub-category of the product.
         /// </summary>
         /// <value>The sub-category of the product.</value>
-        [DataMember(Name = "productSubcategory", EmitDefaultValue = false)]
-        public string ProductSubcategory { get; set; }
+        [DataMember(Name = "productSubCategory", EmitDefaultValue = false)]
+        public string ProductSubCategory { get; set; }
 
         /// <summary>
         /// Vendor name for the order.
@@ -214,7 +214,7 @@ namespace xi.sdk.resellers.Model
             sb.Append("  ProductDetailDescription: ").Append(ProductDetailDescription).Append("\n");
             sb.Append("  Upc: ").Append(Upc).Append("\n");
             sb.Append("  ProductCategory: ").Append(ProductCategory).Append("\n");
-            sb.Append("  ProductSubcategory: ").Append(ProductSubcategory).Append("\n");
+            sb.Append("  ProductSubCategory: ").Append(ProductSubCategory).Append("\n");
             sb.Append("  VendorName: ").Append(VendorName).Append("\n");
             sb.Append("  VendorNumber: ").Append(VendorNumber).Append("\n");
             sb.Append("  ProductStatusCode: ").Append(ProductStatusCode).Append("\n");

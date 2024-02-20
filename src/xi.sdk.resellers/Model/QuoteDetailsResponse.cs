@@ -52,6 +52,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="introPreamble">Introductory paragraph included in each quote.  Legally required - must be included when presenting the quote details..</param>
         /// <param name="purchaseInstructions">Purchase instructions.  Legally required - must be included when presenting the quote details..</param>
         /// <param name="legalTerms">Legal terms -  Legally required - must be included when presenting the quote details..</param>
+        /// <param name="quoteType">quoteType.</param>
         /// <param name="leaseInfo">Lease information..</param>
         /// <param name="leasingInstructions">Leasing information.</param>
         /// <param name="resellerInfo">resellerInfo.</param>
@@ -62,7 +63,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="quantityTotal">Total quantity of all items in the quote..</param>
         /// <param name="extendedQuotePriceTotal">Total amount of quoted price for all products in the quote including both solution products and suggested products..</param>
         /// <param name="additionalAttributes">additionalAttributes.</param>
-        public QuoteDetailsResponse(string quoteName = default(string), string quoteNumber = default(string), string revision = default(string), string ingramQuoteDate = default(string), string lastModifiedDate = default(string), string ingramQuoteExpiryDate = default(string), string currencyCode = default(string), string closingReason = default(string), string specialBidId = default(string), string specialBidEffectiveDate = default(string), string specialBidExpirationDate = default(string), string status = default(string), string customerNeed = default(string), string proposedSolution = default(string), string introPreamble = default(string), string purchaseInstructions = default(string), string legalTerms = default(string), string leaseInfo = default(string), string leasingInstructions = default(string), QuoteDetailsResponseResellerInfo resellerInfo = default(QuoteDetailsResponseResellerInfo), QuoteDetailsResponseEndUserInfo endUserInfo = default(QuoteDetailsResponseEndUserInfo), List<QuoteDetailsResponseProductsInner> products = default(List<QuoteDetailsResponseProductsInner>), int productsCount = default(int), int extendedMsrpTotal = default(int), int quantityTotal = default(int), int extendedQuotePriceTotal = default(int), List<QuoteDetailsResponseAdditionalAttributesInner> additionalAttributes = default(List<QuoteDetailsResponseAdditionalAttributesInner>))
+        public QuoteDetailsResponse(string quoteName = default(string), string quoteNumber = default(string), string revision = default(string), string ingramQuoteDate = default(string), string lastModifiedDate = default(string), string ingramQuoteExpiryDate = default(string), string currencyCode = default(string), string closingReason = default(string), string specialBidId = default(string), string specialBidEffectiveDate = default(string), string specialBidExpirationDate = default(string), string status = default(string), string customerNeed = default(string), string proposedSolution = default(string), string introPreamble = default(string), string purchaseInstructions = default(string), string legalTerms = default(string), string quoteType = default(string), string leaseInfo = default(string), string leasingInstructions = default(string), QuoteDetailsResponseResellerInfo resellerInfo = default(QuoteDetailsResponseResellerInfo), QuoteDetailsResponseEndUserInfo endUserInfo = default(QuoteDetailsResponseEndUserInfo), List<QuoteDetailsResponseProductsInner> products = default(List<QuoteDetailsResponseProductsInner>), int productsCount = default(int), int extendedMsrpTotal = default(int), int quantityTotal = default(int), int extendedQuotePriceTotal = default(int), List<QuoteDetailsResponseAdditionalAttributesInner> additionalAttributes = default(List<QuoteDetailsResponseAdditionalAttributesInner>))
         {
             this.QuoteName = quoteName;
             this.QuoteNumber = quoteNumber;
@@ -81,6 +82,7 @@ namespace xi.sdk.resellers.Model
             this.IntroPreamble = introPreamble;
             this.PurchaseInstructions = purchaseInstructions;
             this.LegalTerms = legalTerms;
+            this.QuoteType = quoteType;
             this.LeaseInfo = leaseInfo;
             this.LeasingInstructions = leasingInstructions;
             this.ResellerInfo = resellerInfo;
@@ -213,6 +215,12 @@ namespace xi.sdk.resellers.Model
         public string LegalTerms { get; set; }
 
         /// <summary>
+        /// Gets or Sets QuoteType
+        /// </summary>
+        [DataMember(Name = "quoteType", EmitDefaultValue = false)]
+        public string QuoteType { get; set; }
+
+        /// <summary>
         /// Lease information.
         /// </summary>
         /// <value>Lease information.</value>
@@ -303,6 +311,7 @@ namespace xi.sdk.resellers.Model
             sb.Append("  IntroPreamble: ").Append(IntroPreamble).Append("\n");
             sb.Append("  PurchaseInstructions: ").Append(PurchaseInstructions).Append("\n");
             sb.Append("  LegalTerms: ").Append(LegalTerms).Append("\n");
+            sb.Append("  QuoteType: ").Append(QuoteType).Append("\n");
             sb.Append("  LeaseInfo: ").Append(LeaseInfo).Append("\n");
             sb.Append("  LeasingInstructions: ").Append(LeasingInstructions).Append("\n");
             sb.Append("  ResellerInfo: ").Append(ResellerInfo).Append("\n");

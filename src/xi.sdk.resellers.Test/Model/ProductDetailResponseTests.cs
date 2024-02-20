@@ -127,12 +127,12 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'ProductSubcategory'
+        /// Test the property 'ProductSubCategory'
         /// </summary>
         [Fact]
-        public void ProductSubcategoryTest()
+        public void ProductSubCategoryTest()
         {
-            // TODO unit test for the property 'ProductSubcategory'
+            // TODO unit test for the property 'ProductSubCategory'
         }
 
         /// <summary>

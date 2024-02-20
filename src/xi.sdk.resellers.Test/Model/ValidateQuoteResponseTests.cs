@@ -89,5 +89,41 @@ namespace xi.sdk.resellers.Test.Model
         {
             // TODO unit test for the property 'Lines'
         }
+
+        /// <summary>
+        /// Test the property 'QuoteType'
+        /// </summary>
+        [Fact]
+        public void QuoteTypeTest()
+        {
+            // TODO unit test for the property 'QuoteType'
+        }
+
+        /// <summary>
+        /// Test the property 'VendorGroupName'
+        /// </summary>
+        [Fact]
+        public void VendorGroupNameTest()
+        {
+            // TODO unit test for the property 'VendorGroupName'
+        }
+
+        /// <summary>
+        /// Test the property 'VendorQuoteNumber'
+        /// </summary>
+        [Fact]
+        public void VendorQuoteNumberTest()
+        {
+            // TODO unit test for the property 'VendorQuoteNumber'
+        }
+
+        /// <summary>
+        /// Test the property 'VendorMasterNumber'
+        /// </summary>
+        [Fact]
+        public void VendorMasterNumberTest()
+        {
+            // TODO unit test for the property 'VendorMasterNumber'
+        }
     }
 }

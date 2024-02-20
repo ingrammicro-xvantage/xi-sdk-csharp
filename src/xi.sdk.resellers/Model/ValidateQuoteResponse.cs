@@ -39,12 +39,20 @@ namespace xi.sdk.resellers.Model
         /// <param name="vendorName">The name of the vendor..</param>
         /// <param name="vmfAdditionalAttributes">The object containing the list of fields required at a header level by the vendor..</param>
         /// <param name="lines">The object containing the lines from the quote..</param>
-        public ValidateQuoteResponse(string quoteNumber = default(string), string vendorName = default(string), List<ValidateQuoteResponseVmfAdditionalAttributesInner> vmfAdditionalAttributes = default(List<ValidateQuoteResponseVmfAdditionalAttributesInner>), List<ValidateQuoteResponseLinesInner> lines = default(List<ValidateQuoteResponseLinesInner>))
+        /// <param name="quoteType">quoteType.</param>
+        /// <param name="vendorGroupName">vendorGroupName.</param>
+        /// <param name="vendorQuoteNumber">vendorQuoteNumber.</param>
+        /// <param name="vendorMasterNumber">vendorMasterNumber.</param>
+        public ValidateQuoteResponse(string quoteNumber = default(string), string vendorName = default(string), List<ValidateQuoteResponseVmfAdditionalAttributesInner> vmfAdditionalAttributes = default(List<ValidateQuoteResponseVmfAdditionalAttributesInner>), List<ValidateQuoteResponseLinesInner> lines = default(List<ValidateQuoteResponseLinesInner>), int quoteType = default(int), string vendorGroupName = default(string), string vendorQuoteNumber = default(string), string vendorMasterNumber = default(string))
         {
             this.QuoteNumber = quoteNumber;
             this.VendorName = vendorName;
             this.VmfAdditionalAttributes = vmfAdditionalAttributes;
             this.Lines = lines;
+            this.QuoteType = quoteType;
+            this.VendorGroupName = vendorGroupName;
+            this.VendorQuoteNumber = vendorQuoteNumber;
+            this.VendorMasterNumber = vendorMasterNumber;
         }
 
         /// <summary>
@@ -78,6 +86,30 @@ namespace xi.sdk.resellers.Model
         public List<ValidateQuoteResponseLinesInner> Lines { get; set; }
 
         /// <summary>
+        /// Gets or Sets QuoteType
+        /// </summary>
+        [DataMember(Name = "quoteType", EmitDefaultValue = false)]
+        public int QuoteType { get; set; }
+
+        /// <summary>
+        /// Gets or Sets VendorGroupName
+        /// </summary>
+        [DataMember(Name = "vendorGroupName", EmitDefaultValue = false)]
+        public string VendorGroupName { get; set; }
+
+        /// <summary>
+        /// Gets or Sets VendorQuoteNumber
+        /// </summary>
+        [DataMember(Name = "vendorQuoteNumber", EmitDefaultValue = false)]
+        public string VendorQuoteNumber { get; set; }
+
+        /// <summary>
+        /// Gets or Sets VendorMasterNumber
+        /// </summary>
+        [DataMember(Name = "vendorMasterNumber", EmitDefaultValue = false)]
+        public string VendorMasterNumber { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -89,6 +121,10 @@ namespace xi.sdk.resellers.Model
             sb.Append("  VendorName: ").Append(VendorName).Append("\n");
             sb.Append("  VmfAdditionalAttributes: ").Append(VmfAdditionalAttributes).Append("\n");
             sb.Append("  Lines: ").Append(Lines).Append("\n");
+            sb.Append("  QuoteType: ").Append(QuoteType).Append("\n");
+            sb.Append("  VendorGroupName: ").Append(VendorGroupName).Append("\n");
+            sb.Append("  VendorQuoteNumber: ").Append(VendorQuoteNumber).Append("\n");
+            sb.Append("  VendorMasterNumber: ").Append(VendorMasterNumber).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
