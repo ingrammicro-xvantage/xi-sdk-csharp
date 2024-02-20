@@ -44,7 +44,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="renewalValue">The value of the renewal..</param>
         /// <param name="status">The status of the renewal..</param>
         /// <param name="links">links.</param>
-        public RenewalsSearchResponseRenewalsInner(string renewalId = default(string), string customerOrderNumber = default(string), string referenceNumber = default(string), string endUser = default(string), string vendor = default(string), string expirationDate = default(string), string renewalValue = default(string), string status = default(string), List<RenewalsSearchResponseRenewalsInnerLinksInner> links = default(List<RenewalsSearchResponseRenewalsInnerLinksInner>))
+        public RenewalsSearchResponseRenewalsInner(int renewalId = default(int), string customerOrderNumber = default(string), string referenceNumber = default(string), string endUser = default(string), string vendor = default(string), string expirationDate = default(string), double renewalValue = default(double), string status = default(string), List<RenewalsSearchResponseRenewalsInnerLinksInner> links = default(List<RenewalsSearchResponseRenewalsInnerLinksInner>))
         {
             this.RenewalId = renewalId;
             this.CustomerOrderNumber = customerOrderNumber;
@@ -62,7 +62,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>Unique renewal ID.</value>
         [DataMember(Name = "renewalId", EmitDefaultValue = false)]
-        public string RenewalId { get; set; }
+        public int RenewalId { get; set; }
 
         /// <summary>
         /// The reseller&#39;s order number for reference in their system.
@@ -104,7 +104,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>The value of the renewal.</value>
         [DataMember(Name = "renewalValue", EmitDefaultValue = false)]
-        public string RenewalValue { get; set; }
+        public double RenewalValue { get; set; }
 
         /// <summary>
         /// The status of the renewal.

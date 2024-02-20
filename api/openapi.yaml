@@ -9218,11 +9218,11 @@ components:
         pageSize: 6
         recordsFound: 0
         renewals:
-        - renewalId: renewalId
+        - renewalId: 5
           endUser: endUser
           referenceNumber: referenceNumber
           vendor: vendor
-          renewalValue: renewalValue
+          renewalValue: 5.637376656633329
           links:
           - topic: topic
             href: href
@@ -9233,11 +9233,11 @@ components:
           customerOrderNumber: customerOrderNumber
           expirationDate: expirationDate
           status: status
-        - renewalId: renewalId
+        - renewalId: 5
           endUser: endUser
           referenceNumber: referenceNumber
           vendor: vendor
-          renewalValue: renewalValue
+          renewalValue: 5.637376656633329
           links:
           - topic: topic
             href: href
@@ -10778,6 +10778,7 @@ components:
         lines:
         - unitWeight: 7.061401241503109
           vendorSalesOrderLineNumber: vendorSalesOrderLineNumber
+          backOrderETADate: backOrderETADate
           requestedDeliverydate: requestedDeliverydate
           multipleShipments:
           - date: date
@@ -10804,7 +10805,6 @@ components:
             confirmedQuantity: confirmedQuantity
           quantityOrdered: 4
           customerLineNumber: customerLineNumber
-          backOrderETAData: backOrderETAData
           lineStatus: lineStatus
           extendedPrice: 3.616076749251911
           scheduleLines:
@@ -11017,6 +11017,7 @@ components:
             attributeName: attributeName
         - unitWeight: 7.061401241503109
           vendorSalesOrderLineNumber: vendorSalesOrderLineNumber
+          backOrderETADate: backOrderETADate
           requestedDeliverydate: requestedDeliverydate
           multipleShipments:
           - date: date
@@ -11043,7 +11044,6 @@ components:
             confirmedQuantity: confirmedQuantity
           quantityOrdered: 4
           customerLineNumber: customerLineNumber
-          backOrderETAData: backOrderETAData
           lineStatus: lineStatus
           extendedPrice: 3.616076749251911
           scheduleLines:
@@ -14345,11 +14345,11 @@ components:
       type: object
     renewalsSearchResponse_renewals_inner:
       example:
-        renewalId: renewalId
+        renewalId: 5
         endUser: endUser
         referenceNumber: referenceNumber
         vendor: vendor
-        renewalValue: renewalValue
+        renewalValue: 5.637376656633329
         links:
         - topic: topic
           href: href
@@ -14363,7 +14363,7 @@ components:
       properties:
         renewalId:
           description: Unique renewal ID.
-          type: string
+          type: integer
         customerOrderNumber:
           description: The reseller's order number for reference in their system.
           type: string
@@ -14382,7 +14382,8 @@ components:
           type: string
         renewalValue:
           description: The value of the renewal.
-          type: string
+          format: double
+          type: number
         status:
           description: The status of the renewal.
           type: string
@@ -16968,6 +16969,7 @@ components:
       example:
         unitWeight: 7.061401241503109
         vendorSalesOrderLineNumber: vendorSalesOrderLineNumber
+        backOrderETADate: backOrderETADate
         requestedDeliverydate: requestedDeliverydate
         multipleShipments:
         - date: date
@@ -16994,7 +16996,6 @@ components:
           confirmedQuantity: confirmedQuantity
         quantityOrdered: 4
         customerLineNumber: customerLineNumber
-        backOrderETAData: backOrderETAData
         lineStatus: lineStatus
         extendedPrice: 3.616076749251911
         scheduleLines:
@@ -17287,7 +17288,7 @@ components:
         promisedDeliveryDate:
           description: The delivery date promised by IngramMicro.
           type: string
-        backOrderETAData:
+        backOrderETADate:
           description: Backorder ETA date
           type: string
         lineNotes:

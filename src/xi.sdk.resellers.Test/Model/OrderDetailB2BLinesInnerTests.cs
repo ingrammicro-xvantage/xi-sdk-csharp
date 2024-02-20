@@ -253,12 +253,12 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'BackOrderETAData'
+        /// Test the property 'BackOrderETADate'
         /// </summary>
         [Fact]
-        public void BackOrderETADataTest()
+        public void BackOrderETADateTest()
         {
-            // TODO unit test for the property 'BackOrderETAData'
+            // TODO unit test for the property 'BackOrderETADate'
         }
 
         /// <summary>

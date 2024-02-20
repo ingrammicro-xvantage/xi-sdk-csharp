@@ -26,7 +26,7 @@ Name | Type | Description | Notes
 **SpecialBidNumber** | **string** | The line-level bid number provided to the reseller by the vendor for special pricing and discounts. Used to track the bid number in the case of split orders or where different line items have different bid numbers. Line-level bid numbers take precedence over header-level bid numbers. | [optional] 
 **RequestedDeliverydate** | **string** | Reseller-requested delivery date. Delivery date is not guaranteed. | [optional] 
 **PromisedDeliveryDate** | **string** | The delivery date promised by IngramMicro. | [optional] 
-**BackOrderETAData** | **string** | Backorder ETA date | [optional] 
+**BackOrderETADate** | **string** | Backorder ETA date | [optional] 
 **LineNotes** | **string** | Line-level notes for the order. | [optional] 
 **ShipmentDetails** | [**List&lt;OrderDetailB2BLinesInnerShipmentDetailsInner&gt;**](OrderDetailB2BLinesInnerShipmentDetailsInner.md) | Shipping details for the line item. | [optional] 
 **ServiceContractInfo** | [**OrderDetailB2BLinesInnerServiceContractInfo**](OrderDetailB2BLinesInnerServiceContractInfo.md) |  | [optional] 
