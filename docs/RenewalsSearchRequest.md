@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Status** | [**RenewalsSearchRequestStatus**](RenewalsSearchRequestStatus.md) |  | [optional] 
-**DataType** | [**RenewalsSearchRequestDataType**](RenewalsSearchRequestDataType.md) |  | [optional] 
+**DateType** | [**RenewalsSearchRequestDateType**](RenewalsSearchRequestDateType.md) |  | [optional] 
 **Vendor** | **string** | The name of the Vendor. | [optional] 
 **EndUser** | **string** | The name of the enduser.  | [optional] 
 

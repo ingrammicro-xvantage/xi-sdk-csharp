@@ -684,7 +684,7 @@ namespace xi.sdk.resellers.Api
             {
                 localVarRequestOptions.HeaderParameters.Add("IM-SenderID", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMSenderID)); // header parameter
             }
-            localVarRequestOptions.HeaderParameters.Add("Content type", xi.sdk.resellers.Client.ClientUtils.ParameterToString(contentType)); // header parameter
+            localVarRequestOptions.HeaderParameters.Add("Content Type", xi.sdk.resellers.Client.ClientUtils.ParameterToString(contentType)); // header parameter
             localVarRequestOptions.Data = renewalsSearchRequest;
 
             // authentication (application) required
@@ -816,7 +816,7 @@ namespace xi.sdk.resellers.Api
             {
                 localVarRequestOptions.HeaderParameters.Add("IM-SenderID", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMSenderID)); // header parameter
             }
-            localVarRequestOptions.HeaderParameters.Add("Content type", xi.sdk.resellers.Client.ClientUtils.ParameterToString(contentType)); // header parameter
+            localVarRequestOptions.HeaderParameters.Add("Content Type", xi.sdk.resellers.Client.ClientUtils.ParameterToString(contentType)); // header parameter
             localVarRequestOptions.Data = renewalsSearchRequest;
 
             // authentication (application) required

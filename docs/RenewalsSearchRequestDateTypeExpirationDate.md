@@ -1,11 +1,11 @@
-# xi.sdk.resellers.Model.RenewalsSearchRequestDataTypeInvoiceDate
+# xi.sdk.resellers.Model.RenewalsSearchRequestDateTypeExpirationDate
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CustomStartDate** | **string** | Custom start date for invoice date. | [optional] 
-**CustomEndDate** | **string** | Custom end date for invoice date. | [optional] 
+**CustomStartDate** | **string** | Custom start date for expiration date. | [optional] 
+**CustomEndDate** | **string** | Custom end date for expiration date. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

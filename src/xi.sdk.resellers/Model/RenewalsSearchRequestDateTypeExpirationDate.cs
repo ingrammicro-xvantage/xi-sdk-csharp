@@ -27,17 +27,17 @@ using OpenAPIDateConverter = xi.sdk.resellers.Client.OpenAPIDateConverter;
 namespace xi.sdk.resellers.Model
 {
     /// <summary>
-    /// RenewalsSearchRequestDataTypeExpirationDate
+    /// RenewalsSearchRequestDateTypeExpirationDate
     /// </summary>
-    [DataContract(Name = "renewalsSearchRequest_dataType_expirationDate")]
-    public partial class RenewalsSearchRequestDataTypeExpirationDate : IValidatableObject
+    [DataContract(Name = "renewalsSearchRequest_dateType_expirationDate")]
+    public partial class RenewalsSearchRequestDateTypeExpirationDate : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="RenewalsSearchRequestDataTypeExpirationDate" /> class.
+        /// Initializes a new instance of the <see cref="RenewalsSearchRequestDateTypeExpirationDate" /> class.
         /// </summary>
         /// <param name="customStartDate">Custom start date for expiration date..</param>
         /// <param name="customEndDate">Custom end date for expiration date..</param>
-        public RenewalsSearchRequestDataTypeExpirationDate(string customStartDate = default(string), string customEndDate = default(string))
+        public RenewalsSearchRequestDateTypeExpirationDate(string customStartDate = default(string), string customEndDate = default(string))
         {
             this.CustomStartDate = customStartDate;
             this.CustomEndDate = customEndDate;
@@ -64,7 +64,7 @@ namespace xi.sdk.resellers.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class RenewalsSearchRequestDataTypeExpirationDate {\n");
+            sb.Append("class RenewalsSearchRequestDateTypeExpirationDate {\n");
             sb.Append("  CustomStartDate: ").Append(CustomStartDate).Append("\n");
             sb.Append("  CustomEndDate: ").Append(CustomEndDate).Append("\n");
             sb.Append("}\n");

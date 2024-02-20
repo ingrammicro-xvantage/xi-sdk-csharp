@@ -36,13 +36,13 @@ namespace xi.sdk.resellers.Model
         /// Initializes a new instance of the <see cref="RenewalsSearchRequest" /> class.
         /// </summary>
         /// <param name="status">status.</param>
-        /// <param name="dataType">dataType.</param>
+        /// <param name="dateType">dateType.</param>
         /// <param name="vendor">The name of the Vendor..</param>
         /// <param name="endUser">The name of the enduser. .</param>
-        public RenewalsSearchRequest(RenewalsSearchRequestStatus status = default(RenewalsSearchRequestStatus), RenewalsSearchRequestDataType dataType = default(RenewalsSearchRequestDataType), string vendor = default(string), string endUser = default(string))
+        public RenewalsSearchRequest(RenewalsSearchRequestStatus status = default(RenewalsSearchRequestStatus), RenewalsSearchRequestDateType dateType = default(RenewalsSearchRequestDateType), string vendor = default(string), string endUser = default(string))
         {
             this.Status = status;
-            this.DataType = dataType;
+            this.DateType = dateType;
             this.Vendor = vendor;
             this.EndUser = endUser;
         }
@@ -54,10 +54,10 @@ namespace xi.sdk.resellers.Model
         public RenewalsSearchRequestStatus Status { get; set; }
 
         /// <summary>
-        /// Gets or Sets DataType
+        /// Gets or Sets DateType
         /// </summary>
-        [DataMember(Name = "dataType", EmitDefaultValue = false)]
-        public RenewalsSearchRequestDataType DataType { get; set; }
+        [DataMember(Name = "dateType", EmitDefaultValue = false)]
+        public RenewalsSearchRequestDateType DateType { get; set; }
 
         /// <summary>
         /// The name of the Vendor.
@@ -82,7 +82,7 @@ namespace xi.sdk.resellers.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class RenewalsSearchRequest {\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
-            sb.Append("  DataType: ").Append(DataType).Append("\n");
+            sb.Append("  DateType: ").Append(DateType).Append("\n");
             sb.Append("  Vendor: ").Append(Vendor).Append("\n");
             sb.Append("  EndUser: ").Append(EndUser).Append("\n");
             sb.Append("}\n");

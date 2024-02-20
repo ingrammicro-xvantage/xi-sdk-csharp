@@ -332,11 +332,11 @@ Class | Method | HTTP request | Description
  - [Model.RenewalsDetailsResponseProductsInner](docs/RenewalsDetailsResponseProductsInner.md)
  - [Model.RenewalsDetailsResponseReferenceNumberInner](docs/RenewalsDetailsResponseReferenceNumberInner.md)
  - [Model.RenewalsSearchRequest](docs/RenewalsSearchRequest.md)
- - [Model.RenewalsSearchRequestDataType](docs/RenewalsSearchRequestDataType.md)
- - [Model.RenewalsSearchRequestDataTypeEndDate](docs/RenewalsSearchRequestDataTypeEndDate.md)
- - [Model.RenewalsSearchRequestDataTypeExpirationDate](docs/RenewalsSearchRequestDataTypeExpirationDate.md)
- - [Model.RenewalsSearchRequestDataTypeInvoiceDate](docs/RenewalsSearchRequestDataTypeInvoiceDate.md)
- - [Model.RenewalsSearchRequestDataTypeStartDate](docs/RenewalsSearchRequestDataTypeStartDate.md)
+ - [Model.RenewalsSearchRequestDateType](docs/RenewalsSearchRequestDateType.md)
+ - [Model.RenewalsSearchRequestDateTypeEndDate](docs/RenewalsSearchRequestDateTypeEndDate.md)
+ - [Model.RenewalsSearchRequestDateTypeExpirationDate](docs/RenewalsSearchRequestDateTypeExpirationDate.md)
+ - [Model.RenewalsSearchRequestDateTypeInvoiceDate](docs/RenewalsSearchRequestDateTypeInvoiceDate.md)
+ - [Model.RenewalsSearchRequestDateTypeStartDate](docs/RenewalsSearchRequestDateTypeStartDate.md)
  - [Model.RenewalsSearchRequestStatus](docs/RenewalsSearchRequestStatus.md)
  - [Model.RenewalsSearchRequestStatusOpporutinyStatus](docs/RenewalsSearchRequestStatusOpporutinyStatus.md)
  - [Model.RenewalsSearchResponse](docs/RenewalsSearchResponse.md)
@@ -372,11 +372,3 @@ Authentication schemes defined for the API:
   - write: allows modifying resources
   - read: allows reading resources
 
-## Author
--[Ingram Micro Xvantage](https://github.com/ingrammicro-xvantage)
-
-## Contact
-
-For any inquiries or support, please feel free to contact us at:
-
-- Email: [xi_support@ingrammicro.com](xi_support@ingrammicro.com)

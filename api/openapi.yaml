@@ -6462,7 +6462,7 @@ paths:
       - description: The media type for JSON Request.
         explode: false
         in: header
-        name: Content type
+        name: Content Type
         required: true
         schema:
           example: application/json
@@ -9198,8 +9198,8 @@ components:
       properties:
         status:
           $ref: '#/components/schemas/renewalsSearchRequest_status'
-        dataType:
-          $ref: '#/components/schemas/renewalsSearchRequest_dataType'
+        dateType:
+          $ref: '#/components/schemas/renewalsSearchRequest_dateType'
         vendor:
           description: The name of the Vendor.
           type: string
@@ -10426,7 +10426,7 @@ components:
         orderNumber: orderNumber
         notes: notes
         endCustomerOrderNumber: endCustomerOrderNumber
-        invoiceDate: 2000-01-23
+        invoiceDate: invoiceDate
         customerNumber: customerNumber
         customerOrderNumber: customerOrderNumber
         invoiceDueDate: invoiceDueDate
@@ -10512,7 +10512,7 @@ components:
           taxAmount: 7.061401241503109
           currencyCode: currencyCode
           productDescription: productDescription
-        orderDate: 2000-01-23
+        orderDate: orderDate
       properties:
         invoiceNumber:
           description: The Invoice number for the order.
@@ -10522,7 +10522,6 @@ components:
           type: string
         invoiceDate:
           description: Date of an Invoice.
-          format: date
           type: string
         customerOrderNumber:
           description: The reseller's order number for reference in their system.
@@ -10535,7 +10534,6 @@ components:
           type: string
         orderDate:
           description: The date and time in UTC format that the order was created.
-          format: date
           type: string
         billToID:
           description: Bill to party
@@ -14266,7 +14264,7 @@ components:
         OpporutinyStatus:
           $ref: '#/components/schemas/renewalsSearchRequest_status_OpporutinyStatus'
       type: object
-    renewalsSearchRequest_dataType_startDate:
+    renewalsSearchRequest_dateType_startDate:
       properties:
         customStartDate:
           description: Custom from date for Renewal Start date.
@@ -14275,7 +14273,7 @@ components:
           description: Custom to date for Renewal Start date.
           type: string
       type: object
-    renewalsSearchRequest_dataType_endDate:
+    renewalsSearchRequest_dateType_endDate:
       properties:
         customStartDate:
           description: Custom from date for Renewal end date.
@@ -14284,7 +14282,7 @@ components:
           description: Custom to date for Renewal end date.
           type: string
       type: object
-    renewalsSearchRequest_dataType_invoiceDate:
+    renewalsSearchRequest_dateType_invoiceDate:
       properties:
         customStartDate:
           description: Custom start date for invoice date.
@@ -14293,7 +14291,7 @@ components:
           description: Custom end date for invoice date.
           type: string
       type: object
-    renewalsSearchRequest_dataType_expirationDate:
+    renewalsSearchRequest_dateType_expirationDate:
       properties:
         customStartDate:
           description: Custom start date for expiration date.
@@ -14302,16 +14300,16 @@ components:
           description: Custom end date for expiration date.
           type: string
       type: object
-    renewalsSearchRequest_dataType:
+    renewalsSearchRequest_dateType:
       properties:
         startDate:
-          $ref: '#/components/schemas/renewalsSearchRequest_dataType_startDate'
+          $ref: '#/components/schemas/renewalsSearchRequest_dateType_startDate'
         endDate:
-          $ref: '#/components/schemas/renewalsSearchRequest_dataType_endDate'
+          $ref: '#/components/schemas/renewalsSearchRequest_dateType_endDate'
         invoiceDate:
-          $ref: '#/components/schemas/renewalsSearchRequest_dataType_invoiceDate'
+          $ref: '#/components/schemas/renewalsSearchRequest_dateType_invoiceDate'
         expirationDate:
-          $ref: '#/components/schemas/renewalsSearchRequest_dataType_expirationDate'
+          $ref: '#/components/schemas/renewalsSearchRequest_dateType_expirationDate'
       type: object
     renewalsSearchResponse_renewals_inner_links_inner:
       example:

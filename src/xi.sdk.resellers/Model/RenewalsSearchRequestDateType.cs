@@ -27,19 +27,19 @@ using OpenAPIDateConverter = xi.sdk.resellers.Client.OpenAPIDateConverter;
 namespace xi.sdk.resellers.Model
 {
     /// <summary>
-    /// RenewalsSearchRequestDataType
+    /// RenewalsSearchRequestDateType
     /// </summary>
-    [DataContract(Name = "renewalsSearchRequest_dataType")]
-    public partial class RenewalsSearchRequestDataType : IValidatableObject
+    [DataContract(Name = "renewalsSearchRequest_dateType")]
+    public partial class RenewalsSearchRequestDateType : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="RenewalsSearchRequestDataType" /> class.
+        /// Initializes a new instance of the <see cref="RenewalsSearchRequestDateType" /> class.
         /// </summary>
         /// <param name="startDate">startDate.</param>
         /// <param name="endDate">endDate.</param>
         /// <param name="invoiceDate">invoiceDate.</param>
         /// <param name="expirationDate">expirationDate.</param>
-        public RenewalsSearchRequestDataType(RenewalsSearchRequestDataTypeStartDate startDate = default(RenewalsSearchRequestDataTypeStartDate), RenewalsSearchRequestDataTypeEndDate endDate = default(RenewalsSearchRequestDataTypeEndDate), RenewalsSearchRequestDataTypeInvoiceDate invoiceDate = default(RenewalsSearchRequestDataTypeInvoiceDate), RenewalsSearchRequestDataTypeExpirationDate expirationDate = default(RenewalsSearchRequestDataTypeExpirationDate))
+        public RenewalsSearchRequestDateType(RenewalsSearchRequestDateTypeStartDate startDate = default(RenewalsSearchRequestDateTypeStartDate), RenewalsSearchRequestDateTypeEndDate endDate = default(RenewalsSearchRequestDateTypeEndDate), RenewalsSearchRequestDateTypeInvoiceDate invoiceDate = default(RenewalsSearchRequestDateTypeInvoiceDate), RenewalsSearchRequestDateTypeExpirationDate expirationDate = default(RenewalsSearchRequestDateTypeExpirationDate))
         {
             this.StartDate = startDate;
             this.EndDate = endDate;
@@ -51,25 +51,25 @@ namespace xi.sdk.resellers.Model
         /// Gets or Sets StartDate
         /// </summary>
         [DataMember(Name = "startDate", EmitDefaultValue = false)]
-        public RenewalsSearchRequestDataTypeStartDate StartDate { get; set; }
+        public RenewalsSearchRequestDateTypeStartDate StartDate { get; set; }
 
         /// <summary>
         /// Gets or Sets EndDate
         /// </summary>
         [DataMember(Name = "endDate", EmitDefaultValue = false)]
-        public RenewalsSearchRequestDataTypeEndDate EndDate { get; set; }
+        public RenewalsSearchRequestDateTypeEndDate EndDate { get; set; }
 
         /// <summary>
         /// Gets or Sets InvoiceDate
         /// </summary>
         [DataMember(Name = "invoiceDate", EmitDefaultValue = false)]
-        public RenewalsSearchRequestDataTypeInvoiceDate InvoiceDate { get; set; }
+        public RenewalsSearchRequestDateTypeInvoiceDate InvoiceDate { get; set; }
 
         /// <summary>
         /// Gets or Sets ExpirationDate
         /// </summary>
         [DataMember(Name = "expirationDate", EmitDefaultValue = false)]
-        public RenewalsSearchRequestDataTypeExpirationDate ExpirationDate { get; set; }
+        public RenewalsSearchRequestDateTypeExpirationDate ExpirationDate { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -78,7 +78,7 @@ namespace xi.sdk.resellers.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class RenewalsSearchRequestDataType {\n");
+            sb.Append("class RenewalsSearchRequestDateType {\n");
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
             sb.Append("  InvoiceDate: ").Append(InvoiceDate).Append("\n");

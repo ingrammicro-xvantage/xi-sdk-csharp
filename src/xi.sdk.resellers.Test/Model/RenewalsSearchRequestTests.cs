@@ -64,12 +64,12 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'DataType'
+        /// Test the property 'DateType'
         /// </summary>
         [Fact]
-        public void DataTypeTest()
+        public void DateTypeTest()
         {
-            // TODO unit test for the property 'DataType'
+            // TODO unit test for the property 'DateType'
         }
 
         /// <summary>
