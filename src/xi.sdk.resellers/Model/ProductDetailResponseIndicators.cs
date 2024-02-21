@@ -119,7 +119,7 @@ namespace xi.sdk.resellers.Model
         /// Boolean that indicates whether there is any limit to return the product.
         /// </summary>
         /// <value>Boolean that indicates whether there is any limit to return the product.</value>
-        [DataMember(Name = "HasReturnLimits", EmitDefaultValue = true)]
+        [DataMember(Name = "hasReturnLimits", EmitDefaultValue = true)]
         public bool HasReturnLimits { get; set; }
 
         /// <summary>

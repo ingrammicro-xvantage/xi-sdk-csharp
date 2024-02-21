@@ -1,4 +1,4 @@
-# xi.sdk.resellers.Model.RenewalsDetailsResponseEndUserInfoInner
+# xi.sdk.resellers.Model.RenewalsDetailsResponseEndUserInfo
 
 ## Properties
 

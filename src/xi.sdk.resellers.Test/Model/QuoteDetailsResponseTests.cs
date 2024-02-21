@@ -235,6 +235,15 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'QuoteSybType'
+        /// </summary>
+        [Fact]
+        public void QuoteSybTypeTest()
+        {
+            // TODO unit test for the property 'QuoteSybType'
+        }
+
+        /// <summary>
         /// Test the property 'ResellerInfo'
         /// </summary>
         [Fact]

@@ -27,31 +27,31 @@ using OpenAPIDateConverter = xi.sdk.resellers.Client.OpenAPIDateConverter;
 namespace xi.sdk.resellers.Model
 {
     /// <summary>
-    /// RenewalsDetailsResponseProductsInner
+    /// RenewalsDetailsResponseProducts
     /// </summary>
-    [DataContract(Name = "renewalsDetailsResponse_products_inner")]
-    public partial class RenewalsDetailsResponseProductsInner : IValidatableObject
+    [DataContract(Name = "renewalsDetailsResponse_products")]
+    public partial class RenewalsDetailsResponseProducts : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="RenewalsDetailsResponseProductsInner" /> class.
+        /// Initializes a new instance of the <see cref="RenewalsDetailsResponseProducts" /> class.
         /// </summary>
         /// <param name="ingramLineNumber">Unique Ingram Micro line number..</param>
         /// <param name="productDescription">The description of the product..</param>
         /// <param name="vendorPartNumber">The vendor&#39;s part number for the line item..</param>
         /// <param name="ingramPartNumber">Unique IngramMicro part number..</param>
         /// <param name="manufacturerPartNumber">The manufacturer&#39;s part number for the line item..</param>
-        /// <param name="quantity">The quantity of the line item..</param>
         /// <param name="unitPrice">The unit price of the line item..</param>
+        /// <param name="quantity">The quantity of the line item..</param>
         /// <param name="isConsolidated">Is the line item consolidated? Yes or No..</param>
-        public RenewalsDetailsResponseProductsInner(string ingramLineNumber = default(string), string productDescription = default(string), string vendorPartNumber = default(string), string ingramPartNumber = default(string), string manufacturerPartNumber = default(string), string quantity = default(string), decimal unitPrice = default(decimal), string isConsolidated = default(string))
+        public RenewalsDetailsResponseProducts(string ingramLineNumber = default(string), string productDescription = default(string), string vendorPartNumber = default(string), string ingramPartNumber = default(string), string manufacturerPartNumber = default(string), decimal unitPrice = default(decimal), int quantity = default(int), string isConsolidated = default(string))
         {
             this.IngramLineNumber = ingramLineNumber;
             this.ProductDescription = productDescription;
             this.VendorPartNumber = vendorPartNumber;
             this.IngramPartNumber = ingramPartNumber;
             this.ManufacturerPartNumber = manufacturerPartNumber;
-            this.Quantity = quantity;
             this.UnitPrice = unitPrice;
+            this.Quantity = quantity;
             this.IsConsolidated = isConsolidated;
         }
 
@@ -91,18 +91,18 @@ namespace xi.sdk.resellers.Model
         public string ManufacturerPartNumber { get; set; }
 
         /// <summary>
-        /// The quantity of the line item.
-        /// </summary>
-        /// <value>The quantity of the line item.</value>
-        [DataMember(Name = "quantity", EmitDefaultValue = false)]
-        public string Quantity { get; set; }
-
-        /// <summary>
         /// The unit price of the line item.
         /// </summary>
         /// <value>The unit price of the line item.</value>
         [DataMember(Name = "unitPrice", EmitDefaultValue = false)]
         public decimal UnitPrice { get; set; }
+
+        /// <summary>
+        /// The quantity of the line item.
+        /// </summary>
+        /// <value>The quantity of the line item.</value>
+        [DataMember(Name = "quantity", EmitDefaultValue = false)]
+        public int Quantity { get; set; }
 
         /// <summary>
         /// Is the line item consolidated? Yes or No.
@@ -118,14 +118,14 @@ namespace xi.sdk.resellers.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class RenewalsDetailsResponseProductsInner {\n");
+            sb.Append("class RenewalsDetailsResponseProducts {\n");
             sb.Append("  IngramLineNumber: ").Append(IngramLineNumber).Append("\n");
             sb.Append("  ProductDescription: ").Append(ProductDescription).Append("\n");
             sb.Append("  VendorPartNumber: ").Append(VendorPartNumber).Append("\n");
             sb.Append("  IngramPartNumber: ").Append(IngramPartNumber).Append("\n");
             sb.Append("  ManufacturerPartNumber: ").Append(ManufacturerPartNumber).Append("\n");
-            sb.Append("  Quantity: ").Append(Quantity).Append("\n");
             sb.Append("  UnitPrice: ").Append(UnitPrice).Append("\n");
+            sb.Append("  Quantity: ").Append(Quantity).Append("\n");
             sb.Append("  IsConsolidated: ").Append(IsConsolidated).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

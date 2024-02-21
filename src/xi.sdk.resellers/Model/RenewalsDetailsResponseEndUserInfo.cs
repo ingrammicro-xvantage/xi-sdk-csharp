@@ -27,13 +27,13 @@ using OpenAPIDateConverter = xi.sdk.resellers.Client.OpenAPIDateConverter;
 namespace xi.sdk.resellers.Model
 {
     /// <summary>
-    /// RenewalsDetailsResponseEndUserInfoInner
+    /// RenewalsDetailsResponseEndUserInfo
     /// </summary>
-    [DataContract(Name = "renewalsDetailsResponse_endUserInfo_inner")]
-    public partial class RenewalsDetailsResponseEndUserInfoInner : IValidatableObject
+    [DataContract(Name = "renewalsDetailsResponse_endUserInfo")]
+    public partial class RenewalsDetailsResponseEndUserInfo : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="RenewalsDetailsResponseEndUserInfoInner" /> class.
+        /// Initializes a new instance of the <see cref="RenewalsDetailsResponseEndUserInfo" /> class.
         /// </summary>
         /// <param name="contact">The contact name for the end user/customer..</param>
         /// <param name="name1">The name1 for the end user/customer..</param>
@@ -49,7 +49,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="countryCode">The end user/customer&#39;s two character ISO country code..</param>
         /// <param name="phoneNumber">The end user/customer&#39;s phone number..</param>
         /// <param name="email">The end user/customer&#39;s email..</param>
-        public RenewalsDetailsResponseEndUserInfoInner(string contact = default(string), string name1 = default(string), string name2 = default(string), string companyName = default(string), string addressLine1 = default(string), string addressLine2 = default(string), string addressLine3 = default(string), string addressLine4 = default(string), string city = default(string), string state = default(string), string postalCode = default(string), string countryCode = default(string), string phoneNumber = default(string), string email = default(string))
+        public RenewalsDetailsResponseEndUserInfo(string contact = default(string), string name1 = default(string), string name2 = default(string), string companyName = default(string), string addressLine1 = default(string), string addressLine2 = default(string), string addressLine3 = default(string), string addressLine4 = default(string), string city = default(string), string state = default(string), string postalCode = default(string), string countryCode = default(string), string phoneNumber = default(string), string email = default(string))
         {
             this.Contact = contact;
             this.Name1 = name1;
@@ -172,7 +172,7 @@ namespace xi.sdk.resellers.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class RenewalsDetailsResponseEndUserInfoInner {\n");
+            sb.Append("class RenewalsDetailsResponseEndUserInfo {\n");
             sb.Append("  Contact: ").Append(Contact).Append("\n");
             sb.Append("  Name1: ").Append(Name1).Append("\n");
             sb.Append("  Name2: ").Append(Name2).Append("\n");

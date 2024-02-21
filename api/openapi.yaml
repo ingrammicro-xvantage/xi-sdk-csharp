@@ -9096,12 +9096,12 @@ components:
           hasAcopSpecialPrice: true
           isRefurbishedProduct: true
           isLicenseProduct: true
-          HasReturnLimits: true
           skuType: skuType
           isDiscontinuedProduct: true
           hasLtl: true
           isServiceSku: true
           hasBundle: true
+          hasReturnLimits: true
           isDirectship: true
         productCategory: productCategory
         ciscoFields:
@@ -9271,23 +9271,9 @@ components:
       type: object
     renewalsDetailsResponse:
       example:
-        renewalId: 0
+        renewalId: renewalId
         endUserInfo:
-        - city: city
-          companyName: companyName
-          postalCode: postalCode
-          phoneNumber: phoneNumber
-          countryCode: countryCode
-          contact: contact
-          addressLine1: addressLine1
-          addressLine2: addressLine2
-          addressLine3: addressLine3
-          state: state
-          name2: name2
-          addressLine4: addressLine4
-          name1: name1
-          email: email
-        - city: city
+          city: city
           companyName: companyName
           postalCode: postalCode
           phoneNumber: phoneNumber
@@ -9304,19 +9290,11 @@ components:
         endCustomerOrderNumber: endCustomerOrderNumber
         customerOrderNumber: customerOrderNumber
         products:
-        - ingramPartNumber: ingramPartNumber
-          unitPrice: 1.4658129805029452
+          ingramPartNumber: ingramPartNumber
+          unitPrice: 0.8008281904610115
           manufacturerPartNumber: manufacturerPartNumber
           isConsolidated: isConsolidated
-          quantity: quantity
-          ingramLineNumber: ingramLineNumber
-          vendorPartNumber: vendorPartNumber
-          productDescription: productDescription
-        - ingramPartNumber: ingramPartNumber
-          unitPrice: 1.4658129805029452
-          manufacturerPartNumber: manufacturerPartNumber
-          isConsolidated: isConsolidated
-          quantity: quantity
+          quantity: 6
           ingramLineNumber: ingramLineNumber
           vendorPartNumber: vendorPartNumber
           productDescription: productDescription
@@ -9324,14 +9302,12 @@ components:
         endUser: endUser
         ingramPurchaseOrderNumber: ingramPurchaseOrderNumber
         referenceNumber:
-        - notificationId: notificationId
-          quoteNumber: quoteNumber
-        - notificationId: notificationId
+          notificationId: notificationId
           quoteNumber: quoteNumber
         vendor: vendor
-        renewalValue: 6.027456183070403
-        ingramOrderDate: 2000-01-23
-        expirationDate: 2000-01-23
+        renewalValue: renewalValue
+        ingramOrderDate: ingramOrderDate
+        expirationDate: expirationDate
         status: status
         additionalAttributes:
         - isConsolidated: isConsolidated
@@ -9347,17 +9323,15 @@ components:
       properties:
         renewalId:
           description: Unique Ingram renewal ID.
-          type: integer
+          type: string
         ingramOrderNumber:
           description: The IngramMicro sales order number.
           type: string
         ingramOrderDate:
           description: The IngramMicro sales order date.
-          format: date
           type: string
         expirationDate:
           description: Renewal expiration date.
-          format: date
           type: string
         ingramPurchaseOrderNumber:
           description: Ingram purchase order number.
@@ -9370,8 +9344,7 @@ components:
           type: string
         renewalValue:
           description: The value of the renewal.
-          format: double
-          type: number
+          type: string
         endUser:
           description: The company name for the end user/customer.
           type: string
@@ -9382,17 +9355,11 @@ components:
           description: The status of the renewal.
           type: string
         endUserInfo:
-          items:
-            $ref: '#/components/schemas/renewalsDetailsResponse_endUserInfo_inner'
-          type: array
+          $ref: '#/components/schemas/renewalsDetailsResponse_endUserInfo'
         referenceNumber:
-          items:
-            $ref: '#/components/schemas/renewalsDetailsResponse_referenceNumber_inner'
-          type: array
+          $ref: '#/components/schemas/renewalsDetailsResponse_referenceNumber'
         products:
-          items:
-            $ref: '#/components/schemas/renewalsDetailsResponse_products_inner'
-          type: array
+          $ref: '#/components/schemas/renewalsDetailsResponse_products'
         additionalAttributes:
           items:
             $ref: '#/components/schemas/renewalsDetailsResponse_additionalAttributes_inner'
@@ -9530,7 +9497,7 @@ components:
           description: Country specific currency code.
           type: string
         endUserInfo:
-          $ref: '#/components/schemas/renewalsDetailsResponse_endUserInfo_inner'
+          $ref: '#/components/schemas/renewalsDetailsResponse_endUserInfo'
         products:
           items:
             $ref: '#/components/schemas/dealsDetailsResponse_products_inner'
@@ -9850,10 +9817,7 @@ components:
           vendor: vendor
           ingramQuoteExpiryDate: ingramQuoteExpiryDate
           links:
-          - topic: topic
-            href: href
-            type: type
-          - topic: topic
+            topic: topic
             href: href
             type: type
           quoteTotal: 5.962133916683182
@@ -9872,10 +9836,7 @@ components:
           vendor: vendor
           ingramQuoteExpiryDate: ingramQuoteExpiryDate
           links:
-          - topic: topic
-            href: href
-            type: type
-          - topic: topic
+            topic: topic
             href: href
             type: type
           quoteTotal: 5.962133916683182
@@ -9978,6 +9939,7 @@ components:
           companyName: companyName
           customerNumber: customerNumber
           email: email
+        quoteSybType: quoteSybType
         ingramQuoteExpiryDate: ingramQuoteExpiryDate
         closingReason: closingReason
         purchaseInstructions: purchaseInstructions
@@ -10069,6 +10031,8 @@ components:
           type: string
         leasingInstructions:
           description: Leasing information
+          type: string
+        quoteSybType:
           type: string
         resellerInfo:
           $ref: '#/components/schemas/QuoteDetailsResponse_resellerInfo'
@@ -10360,7 +10324,6 @@ components:
           invoicedAmountDue: 5.962133916683182
           endCustomerOrderNumber: endCustomerOrderNumber
           invoiceAmountInclTax: 5.637376656633329
-          isfeccenabled: true
           invoiceDate: invoiceDate
           customerOrderNumber: customerOrderNumber
           invoiceDueDate: invoiceDueDate
@@ -10370,11 +10333,11 @@ components:
           invoiceNumber: invoiceNumber
           erpOrderNumber: erpOrderNumber
           invoiceStatus: invoiceStatus
+          isfseccenabled: true
         - gstInvoiceNumber: gstInvoiceNumber
           invoicedAmountDue: 5.962133916683182
           endCustomerOrderNumber: endCustomerOrderNumber
           invoiceAmountInclTax: 5.637376656633329
-          isfeccenabled: true
           invoiceDate: invoiceDate
           customerOrderNumber: customerOrderNumber
           invoiceDueDate: invoiceDueDate
@@ -10384,6 +10347,7 @@ components:
           invoiceNumber: invoiceNumber
           erpOrderNumber: erpOrderNumber
           invoiceStatus: invoiceStatus
+          isfseccenabled: true
         nextPage: nextPage
         pageSize: 6
         recordsFound: 0
@@ -10895,6 +10859,8 @@ components:
             invoiceNumber: invoiceNumber
             estimatedShipDate: estimatedShipDate
             invoiceDate: invoiceDate
+            shippedDate: shippedDate
+            estimatedDeliveryDate: estimatedDeliveryDate
             deliveryNumber: deliveryNumber
             shipFromWarehouseId: shipFromWarehouseId
             carrierDetails:
@@ -10951,6 +10917,8 @@ components:
             invoiceNumber: invoiceNumber
             estimatedShipDate: estimatedShipDate
             invoiceDate: invoiceDate
+            shippedDate: shippedDate
+            estimatedDeliveryDate: estimatedDeliveryDate
             deliveryNumber: deliveryNumber
             shipFromWarehouseId: shipFromWarehouseId
             carrierDetails:
@@ -11134,6 +11102,8 @@ components:
             invoiceNumber: invoiceNumber
             estimatedShipDate: estimatedShipDate
             invoiceDate: invoiceDate
+            shippedDate: shippedDate
+            estimatedDeliveryDate: estimatedDeliveryDate
             deliveryNumber: deliveryNumber
             shipFromWarehouseId: shipFromWarehouseId
             carrierDetails:
@@ -11190,6 +11160,8 @@ components:
             invoiceNumber: invoiceNumber
             estimatedShipDate: estimatedShipDate
             invoiceDate: invoiceDate
+            shippedDate: shippedDate
+            estimatedDeliveryDate: estimatedDeliveryDate
             deliveryNumber: deliveryNumber
             shipFromWarehouseId: shipFromWarehouseId
             carrierDetails:
@@ -14040,12 +14012,12 @@ components:
         hasAcopSpecialPrice: true
         isRefurbishedProduct: true
         isLicenseProduct: true
-        HasReturnLimits: true
         skuType: skuType
         isDiscontinuedProduct: true
         hasLtl: true
         isServiceSku: true
         hasBundle: true
+        hasReturnLimits: true
         isDirectship: true
       properties:
         hasWarranty:
@@ -14054,7 +14026,7 @@ components:
         isNewProduct:
           description: 'Boolean that indicates whether it’s a new product. '
           type: boolean
-        HasReturnLimits:
+        hasReturnLimits:
           description: Boolean that indicates whether there is any limit to return
             the product.
           type: boolean
@@ -14392,7 +14364,7 @@ components:
             $ref: '#/components/schemas/renewalsSearchResponse_renewals_inner_links_inner'
           type: array
       type: object
-    renewalsDetailsResponse_endUserInfo_inner:
+    renewalsDetailsResponse_endUserInfo:
       example:
         city: city
         companyName: companyName
@@ -14452,7 +14424,7 @@ components:
           description: The end user/customer's email.
           type: string
       type: object
-    renewalsDetailsResponse_referenceNumber_inner:
+    renewalsDetailsResponse_referenceNumber:
       example:
         notificationId: notificationId
         quoteNumber: quoteNumber
@@ -14464,13 +14436,13 @@ components:
           description: Quote number for the renewal.
           type: string
       type: object
-    renewalsDetailsResponse_products_inner:
+    renewalsDetailsResponse_products:
       example:
         ingramPartNumber: ingramPartNumber
-        unitPrice: 1.4658129805029452
+        unitPrice: 0.8008281904610115
         manufacturerPartNumber: manufacturerPartNumber
         isConsolidated: isConsolidated
-        quantity: quantity
+        quantity: 6
         ingramLineNumber: ingramLineNumber
         vendorPartNumber: vendorPartNumber
         productDescription: productDescription
@@ -14490,13 +14462,13 @@ components:
         manufacturerPartNumber:
           description: The manufacturer's part number for the line item.
           type: string
-        quantity:
-          description: The quantity of the line item.
-          type: string
         unitPrice:
           description: The unit price of the line item.
           format: decimal
           type: number
+        quantity:
+          description: The quantity of the line item.
+          type: integer
         isConsolidated:
           description: Is the line item consolidated? Yes or No.
           type: string
@@ -15171,7 +15143,7 @@ components:
             $ref: '#/components/schemas/freightResponse_freightEstimateResponse_lines_inner'
           type: array
       type: object
-    QuoteSearchResponse_quotes_inner_links_inner:
+    QuoteSearchResponse_quotes_inner_links:
       example:
         topic: topic
         href: href
@@ -15183,6 +15155,7 @@ components:
           type: string
         type:
           type: string
+      type: object
     QuoteSearchResponse_quotes_inner:
       example:
         lastModifiedDate: lastModifiedDate
@@ -15198,10 +15171,7 @@ components:
         vendor: vendor
         ingramQuoteExpiryDate: ingramQuoteExpiryDate
         links:
-        - topic: topic
-          href: href
-          type: type
-        - topic: topic
+          topic: topic
           href: href
           type: type
         quoteTotal: 5.962133916683182
@@ -15264,9 +15234,7 @@ components:
           description: Type of quote
           type: string
         links:
-          items:
-            $ref: '#/components/schemas/QuoteSearchResponse_quotes_inner_links_inner'
-          type: array
+          $ref: '#/components/schemas/QuoteSearchResponse_quotes_inner_links'
       type: object
     QuoteDetailsResponse_resellerInfo:
       example:
@@ -15815,7 +15783,6 @@ components:
         invoicedAmountDue: 5.962133916683182
         endCustomerOrderNumber: endCustomerOrderNumber
         invoiceAmountInclTax: 5.637376656633329
-        isfeccenabled: true
         invoiceDate: invoiceDate
         customerOrderNumber: customerOrderNumber
         invoiceDueDate: invoiceDueDate
@@ -15825,6 +15792,7 @@ components:
         invoiceNumber: invoiceNumber
         erpOrderNumber: erpOrderNumber
         invoiceStatus: invoiceStatus
+        isfseccenabled: true
       properties:
         paymentTermsDueDate:
           description: Payment Terms Due date.
@@ -15866,7 +15834,7 @@ components:
           type: number
         gstInvoiceNumber:
           type: string
-        isfeccenabled:
+        isfseccenabled:
           type: boolean
     InvoiceDetailsv6_1Response_paymentTermsInfo:
       additionalProperties: false
@@ -16566,6 +16534,8 @@ components:
         invoiceNumber: invoiceNumber
         estimatedShipDate: estimatedShipDate
         invoiceDate: invoiceDate
+        shippedDate: shippedDate
+        estimatedDeliveryDate: estimatedDeliveryDate
         deliveryNumber: deliveryNumber
         shipFromWarehouseId: shipFromWarehouseId
         carrierDetails:
@@ -16628,6 +16598,10 @@ components:
           type: string
         estimatedShipDate:
           description: The date the line item is expected to be shipped.
+          type: string
+        shippedDate:
+          type: string
+        estimatedDeliveryDate:
           type: string
         shipFromWarehouseId:
           description: The ID of the warehouse the product will ship from.
@@ -17086,6 +17060,8 @@ components:
           invoiceNumber: invoiceNumber
           estimatedShipDate: estimatedShipDate
           invoiceDate: invoiceDate
+          shippedDate: shippedDate
+          estimatedDeliveryDate: estimatedDeliveryDate
           deliveryNumber: deliveryNumber
           shipFromWarehouseId: shipFromWarehouseId
           carrierDetails:
@@ -17142,6 +17118,8 @@ components:
           invoiceNumber: invoiceNumber
           estimatedShipDate: estimatedShipDate
           invoiceDate: invoiceDate
+          shippedDate: shippedDate
+          estimatedDeliveryDate: estimatedDeliveryDate
           deliveryNumber: deliveryNumber
           shipFromWarehouseId: shipFromWarehouseId
           carrierDetails:

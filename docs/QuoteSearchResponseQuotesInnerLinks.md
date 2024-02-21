@@ -1,4 +1,4 @@
-# xi.sdk.resellers.Model.QuoteSearchResponseQuotesInnerLinksInner
+# xi.sdk.resellers.Model.QuoteSearchResponseQuotesInnerLinks
 
 ## Properties
 

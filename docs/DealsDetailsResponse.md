@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **DealExpiryDate** | **string** | Expiration date of the deal/Special bid. | [optional] 
 **PriceProtectionEndDate** | **string** | The date on which the price protection will end. | [optional] 
 **CurrencyCode** | **string** | Country specific currency code. | [optional] 
-**EndUserInfo** | [**RenewalsDetailsResponseEndUserInfoInner**](RenewalsDetailsResponseEndUserInfoInner.md) |  | [optional] 
+**EndUserInfo** | [**RenewalsDetailsResponseEndUserInfo**](RenewalsDetailsResponseEndUserInfo.md) |  | [optional] 
 **Products** | [**List&lt;DealsDetailsResponseProductsInner&gt;**](DealsDetailsResponseProductsInner.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

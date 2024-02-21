@@ -48,8 +48,8 @@ namespace xi.sdk.resellers.Model
         /// <param name="invoiceAmountInclTax">Invoice Amount Inclusive of Taxes.</param>
         /// <param name="forgntotalamount">forgntotalamount.</param>
         /// <param name="gstInvoiceNumber">gstInvoiceNumber.</param>
-        /// <param name="isfeccenabled">isfeccenabled.</param>
-        public InvoiceSearchResponseInvoicesInner(string paymentTermsDueDate = default(string), string erpOrderNumber = default(string), string invoiceNumber = default(string), string invoiceStatus = default(string), string invoiceDate = default(string), string invoiceDueDate = default(string), decimal invoicedAmountDue = default(decimal), string customerOrderNumber = default(string), string endCustomerOrderNumber = default(string), string orderCreateDate = default(string), decimal invoiceAmountInclTax = default(decimal), decimal forgntotalamount = default(decimal), string gstInvoiceNumber = default(string), bool isfeccenabled = default(bool))
+        /// <param name="isfseccenabled">isfseccenabled.</param>
+        public InvoiceSearchResponseInvoicesInner(string paymentTermsDueDate = default(string), string erpOrderNumber = default(string), string invoiceNumber = default(string), string invoiceStatus = default(string), string invoiceDate = default(string), string invoiceDueDate = default(string), decimal invoicedAmountDue = default(decimal), string customerOrderNumber = default(string), string endCustomerOrderNumber = default(string), string orderCreateDate = default(string), decimal invoiceAmountInclTax = default(decimal), decimal forgntotalamount = default(decimal), string gstInvoiceNumber = default(string), bool isfseccenabled = default(bool))
         {
             this.PaymentTermsDueDate = paymentTermsDueDate;
             this.ErpOrderNumber = erpOrderNumber;
@@ -64,7 +64,7 @@ namespace xi.sdk.resellers.Model
             this.InvoiceAmountInclTax = invoiceAmountInclTax;
             this.Forgntotalamount = forgntotalamount;
             this.GstInvoiceNumber = gstInvoiceNumber;
-            this.Isfeccenabled = isfeccenabled;
+            this.Isfseccenabled = isfseccenabled;
         }
 
         /// <summary>
@@ -157,10 +157,10 @@ namespace xi.sdk.resellers.Model
         public string GstInvoiceNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets Isfeccenabled
+        /// Gets or Sets Isfseccenabled
         /// </summary>
-        [DataMember(Name = "isfeccenabled", EmitDefaultValue = true)]
-        public bool Isfeccenabled { get; set; }
+        [DataMember(Name = "isfseccenabled", EmitDefaultValue = true)]
+        public bool Isfseccenabled { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -183,7 +183,7 @@ namespace xi.sdk.resellers.Model
             sb.Append("  InvoiceAmountInclTax: ").Append(InvoiceAmountInclTax).Append("\n");
             sb.Append("  Forgntotalamount: ").Append(Forgntotalamount).Append("\n");
             sb.Append("  GstInvoiceNumber: ").Append(GstInvoiceNumber).Append("\n");
-            sb.Append("  Isfeccenabled: ").Append(Isfeccenabled).Append("\n");
+            sb.Append("  Isfseccenabled: ").Append(Isfseccenabled).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

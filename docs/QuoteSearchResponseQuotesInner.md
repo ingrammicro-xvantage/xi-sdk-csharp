@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **Vendor** | **string** | Name of the vendor. | [optional] 
 **CreatedBy** | **string** | Name of the end user/customer who created a quote. | [optional] 
 **QuoteType** | **string** | Type of quote | [optional] 
-**Links** | [**List&lt;QuoteSearchResponseQuotesInnerLinksInner&gt;**](QuoteSearchResponseQuotesInnerLinksInner.md) |  | [optional] 
+**Links** | [**QuoteSearchResponseQuotesInnerLinks**](QuoteSearchResponseQuotesInnerLinks.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

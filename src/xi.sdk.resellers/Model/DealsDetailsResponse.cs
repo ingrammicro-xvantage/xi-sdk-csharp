@@ -46,7 +46,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="currencyCode">Country specific currency code..</param>
         /// <param name="endUserInfo">endUserInfo.</param>
         /// <param name="products">products.</param>
-        public DealsDetailsResponse(string dealId = default(string), string varVersion = default(string), string endUser = default(string), decimal extendedMsrp = default(decimal), string vendor = default(string), string dealReceivedOn = default(string), string dealExpiryDate = default(string), string priceProtectionEndDate = default(string), string currencyCode = default(string), RenewalsDetailsResponseEndUserInfoInner endUserInfo = default(RenewalsDetailsResponseEndUserInfoInner), List<DealsDetailsResponseProductsInner> products = default(List<DealsDetailsResponseProductsInner>))
+        public DealsDetailsResponse(string dealId = default(string), string varVersion = default(string), string endUser = default(string), decimal extendedMsrp = default(decimal), string vendor = default(string), string dealReceivedOn = default(string), string dealExpiryDate = default(string), string priceProtectionEndDate = default(string), string currencyCode = default(string), RenewalsDetailsResponseEndUserInfo endUserInfo = default(RenewalsDetailsResponseEndUserInfo), List<DealsDetailsResponseProductsInner> products = default(List<DealsDetailsResponseProductsInner>))
         {
             this.DealId = dealId;
             this.VarVersion = varVersion;
@@ -128,7 +128,7 @@ namespace xi.sdk.resellers.Model
         /// Gets or Sets EndUserInfo
         /// </summary>
         [DataMember(Name = "endUserInfo", EmitDefaultValue = false)]
-        public RenewalsDetailsResponseEndUserInfoInner EndUserInfo { get; set; }
+        public RenewalsDetailsResponseEndUserInfo EndUserInfo { get; set; }
 
         /// <summary>
         /// Gets or Sets Products

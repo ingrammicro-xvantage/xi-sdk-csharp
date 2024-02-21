@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **InvoiceAmountInclTax** | **decimal** | Invoice Amount Inclusive of Taxes | [optional] 
 **Forgntotalamount** | **decimal** |  | [optional] 
 **GstInvoiceNumber** | **string** |  | [optional] 
-**Isfeccenabled** | **bool** |  | [optional] 
+**Isfseccenabled** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

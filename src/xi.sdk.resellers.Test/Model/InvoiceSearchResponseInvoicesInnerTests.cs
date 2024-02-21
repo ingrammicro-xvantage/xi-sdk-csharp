@@ -172,12 +172,12 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'Isfeccenabled'
+        /// Test the property 'Isfseccenabled'
         /// </summary>
         [Fact]
-        public void IsfeccenabledTest()
+        public void IsfseccenabledTest()
         {
-            // TODO unit test for the property 'Isfeccenabled'
+            // TODO unit test for the property 'Isfseccenabled'
         }
     }
 }
