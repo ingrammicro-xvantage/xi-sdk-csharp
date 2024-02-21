@@ -9116,13 +9116,13 @@ components:
           itemCatalogCategory: itemCatalogCategory
         technicalSpecifications:
         - headerName: headerName
-          attributevalue: attributevalue
-          attributedisplay: attributedisplay
-          attributename: attributename
+          attributeValue: attributeValue
+          attributeName: attributeName
+          attributeDisplay: attributeDisplay
         - headerName: headerName
-          attributevalue: attributevalue
-          attributedisplay: attributedisplay
-          attributename: attributename
+          attributeValue: attributeValue
+          attributeName: attributeName
+          attributeDisplay: attributeDisplay
         productSubCategory: productSubCategory
         productDetailDescription: productDetailDescription
         vendorPartNumber: vendorPartNumber
@@ -14174,21 +14174,21 @@ components:
     ProductDetailResponse_technicalSpecifications_inner:
       example:
         headerName: headerName
-        attributevalue: attributevalue
-        attributedisplay: attributedisplay
-        attributename: attributename
+        attributeValue: attributeValue
+        attributeName: attributeName
+        attributeDisplay: attributeDisplay
       properties:
         headerName:
           description: "Example : 'Basic'"
           type: string
-        attributevalue:
-          description: "Example : 'LCD Monitor'"
+        attributeName:
+          description: "Example : 'Product Type'"
           type: string
-        attributedisplay:
+        attributeDisplay:
           description: "Example : 'Basic|Product Type|LCD Monitor'"
           type: string
-        attributename:
-          description: "Example : 'Product Type'"
+        attributeValue:
+          description: "Example : 'LCD Monitor'"
           type: string
       type: object
     ProductDetailResponse_additionalInformation_productWeight_inner:
