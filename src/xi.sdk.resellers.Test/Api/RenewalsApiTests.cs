@@ -79,7 +79,6 @@ namespace xi.sdk.resellers.Test.Api
             //string iMCustomerNumber = null;
             //string iMCountryCode = null;
             //string iMCorrelationID = null;
-            //string contentType = null;
             //string? iMSenderID = null;
             //string? customerOrderNumber = null;
             //string? ingramPurchaseOrderNumber = null;
@@ -88,7 +87,7 @@ namespace xi.sdk.resellers.Test.Api
             //string? size = null;
             //string? sort = null;
             //RenewalsSearchRequest? renewalsSearchRequest = null;
-            //var response = instance.PostRenewalssearch(iMCustomerNumber, iMCountryCode, iMCorrelationID, contentType, iMSenderID, customerOrderNumber, ingramPurchaseOrderNumber, serialNumber, page, size, sort, renewalsSearchRequest);
+            //var response = instance.PostRenewalssearch(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMSenderID, customerOrderNumber, ingramPurchaseOrderNumber, serialNumber, page, size, sort, renewalsSearchRequest);
             //Assert.IsType<RenewalsSearchResponse>(response);
         }
     }

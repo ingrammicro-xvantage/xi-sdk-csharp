@@ -8,6 +8,10 @@ Name | Type | Description | Notes
 **VendorName** | **string** | The name of the vendor. | [optional] 
 **VmfAdditionalAttributes** | [**List&lt;ValidateQuoteResponseVmfAdditionalAttributesInner&gt;**](ValidateQuoteResponseVmfAdditionalAttributesInner.md) | The object containing the list of fields required at a header level by the vendor. | [optional] 
 **Lines** | [**List&lt;ValidateQuoteResponseLinesInner&gt;**](ValidateQuoteResponseLinesInner.md) | The object containing the lines from the quote. | [optional] 
+**QuoteType** | **int** |  | [optional] 
+**VendorGroupName** | **string** |  | [optional] 
+**VendorQuoteNumber** | **string** |  | [optional] 
+**VendorMasterNumber** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

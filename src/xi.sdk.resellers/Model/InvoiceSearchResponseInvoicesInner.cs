@@ -43,10 +43,13 @@ namespace xi.sdk.resellers.Model
         /// <param name="invoiceDueDate">Invoice Due Date..</param>
         /// <param name="invoicedAmountDue">Invoice Amount..</param>
         /// <param name="customerOrderNumber">Customer Order No..</param>
-        /// <param name="orderCreateDate">Order Create Date..</param>
         /// <param name="endCustomerOrderNumber">End Customer Order number..</param>
+        /// <param name="orderCreateDate">Order Create Date..</param>
         /// <param name="invoiceAmountInclTax">Invoice Amount Inclusive of Taxes.</param>
-        public InvoiceSearchResponseInvoicesInner(string paymentTermsDueDate = default(string), string erpOrderNumber = default(string), string invoiceNumber = default(string), string invoiceStatus = default(string), string invoiceDate = default(string), string invoiceDueDate = default(string), decimal invoicedAmountDue = default(decimal), string customerOrderNumber = default(string), string orderCreateDate = default(string), string endCustomerOrderNumber = default(string), decimal invoiceAmountInclTax = default(decimal))
+        /// <param name="forgntotalamount">forgntotalamount.</param>
+        /// <param name="gstInvoiceNumber">gstInvoiceNumber.</param>
+        /// <param name="isfseccenabled">isfseccenabled.</param>
+        public InvoiceSearchResponseInvoicesInner(string paymentTermsDueDate = default(string), string erpOrderNumber = default(string), string invoiceNumber = default(string), string invoiceStatus = default(string), string invoiceDate = default(string), string invoiceDueDate = default(string), decimal invoicedAmountDue = default(decimal), string customerOrderNumber = default(string), string endCustomerOrderNumber = default(string), string orderCreateDate = default(string), decimal invoiceAmountInclTax = default(decimal), decimal forgntotalamount = default(decimal), string gstInvoiceNumber = default(string), bool isfseccenabled = default(bool))
         {
             this.PaymentTermsDueDate = paymentTermsDueDate;
             this.ErpOrderNumber = erpOrderNumber;
@@ -56,9 +59,12 @@ namespace xi.sdk.resellers.Model
             this.InvoiceDueDate = invoiceDueDate;
             this.InvoicedAmountDue = invoicedAmountDue;
             this.CustomerOrderNumber = customerOrderNumber;
-            this.OrderCreateDate = orderCreateDate;
             this.EndCustomerOrderNumber = endCustomerOrderNumber;
+            this.OrderCreateDate = orderCreateDate;
             this.InvoiceAmountInclTax = invoiceAmountInclTax;
+            this.Forgntotalamount = forgntotalamount;
+            this.GstInvoiceNumber = gstInvoiceNumber;
+            this.Isfseccenabled = isfseccenabled;
         }
 
         /// <summary>
@@ -118,13 +124,6 @@ namespace xi.sdk.resellers.Model
         public string CustomerOrderNumber { get; set; }
 
         /// <summary>
-        /// Order Create Date.
-        /// </summary>
-        /// <value>Order Create Date.</value>
-        [DataMember(Name = "orderCreateDate", EmitDefaultValue = false)]
-        public string OrderCreateDate { get; set; }
-
-        /// <summary>
         /// End Customer Order number.
         /// </summary>
         /// <value>End Customer Order number.</value>
@@ -132,11 +131,36 @@ namespace xi.sdk.resellers.Model
         public string EndCustomerOrderNumber { get; set; }
 
         /// <summary>
+        /// Order Create Date.
+        /// </summary>
+        /// <value>Order Create Date.</value>
+        [DataMember(Name = "orderCreateDate", EmitDefaultValue = false)]
+        public string OrderCreateDate { get; set; }
+
+        /// <summary>
         /// Invoice Amount Inclusive of Taxes
         /// </summary>
         /// <value>Invoice Amount Inclusive of Taxes</value>
         [DataMember(Name = "invoiceAmountInclTax", EmitDefaultValue = false)]
         public decimal InvoiceAmountInclTax { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Forgntotalamount
+        /// </summary>
+        [DataMember(Name = "forgntotalamount", EmitDefaultValue = false)]
+        public decimal Forgntotalamount { get; set; }
+
+        /// <summary>
+        /// Gets or Sets GstInvoiceNumber
+        /// </summary>
+        [DataMember(Name = "gstInvoiceNumber", EmitDefaultValue = false)]
+        public string GstInvoiceNumber { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Isfseccenabled
+        /// </summary>
+        [DataMember(Name = "isfseccenabled", EmitDefaultValue = true)]
+        public bool Isfseccenabled { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -154,9 +178,12 @@ namespace xi.sdk.resellers.Model
             sb.Append("  InvoiceDueDate: ").Append(InvoiceDueDate).Append("\n");
             sb.Append("  InvoicedAmountDue: ").Append(InvoicedAmountDue).Append("\n");
             sb.Append("  CustomerOrderNumber: ").Append(CustomerOrderNumber).Append("\n");
-            sb.Append("  OrderCreateDate: ").Append(OrderCreateDate).Append("\n");
             sb.Append("  EndCustomerOrderNumber: ").Append(EndCustomerOrderNumber).Append("\n");
+            sb.Append("  OrderCreateDate: ").Append(OrderCreateDate).Append("\n");
             sb.Append("  InvoiceAmountInclTax: ").Append(InvoiceAmountInclTax).Append("\n");
+            sb.Append("  Forgntotalamount: ").Append(Forgntotalamount).Append("\n");
+            sb.Append("  GstInvoiceNumber: ").Append(GstInvoiceNumber).Append("\n");
+            sb.Append("  Isfseccenabled: ").Append(Isfseccenabled).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

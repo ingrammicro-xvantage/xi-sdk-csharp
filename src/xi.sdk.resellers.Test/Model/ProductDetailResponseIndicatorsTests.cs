@@ -109,6 +109,15 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'ReplacementType'
+        /// </summary>
+        [Fact]
+        public void ReplacementTypeTest()
+        {
+            // TODO unit test for the property 'ReplacementType'
+        }
+
+        /// <summary>
         /// Test the property 'IsDirectship'
         /// </summary>
         [Fact]
@@ -181,6 +190,15 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'HasAcopWebDiscount'
+        /// </summary>
+        [Fact]
+        public void HasAcopWebDiscountTest()
+        {
+            // TODO unit test for the property 'HasAcopWebDiscount'
+        }
+
+        /// <summary>
         /// Test the property 'HasSpecialBid'
         /// </summary>
         [Fact]
@@ -208,12 +226,12 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'IsRefurbishedProduct'
+        /// Test the property 'IsRefurbished'
         /// </summary>
         [Fact]
-        public void IsRefurbishedProductTest()
+        public void IsRefurbishedTest()
         {
-            // TODO unit test for the property 'IsRefurbishedProduct'
+            // TODO unit test for the property 'IsRefurbished'
         }
 
         /// <summary>

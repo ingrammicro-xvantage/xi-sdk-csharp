@@ -50,7 +50,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="referenceNumber">referenceNumber.</param>
         /// <param name="products">products.</param>
         /// <param name="additionalAttributes">additionalAttributes.</param>
-        public RenewalsDetailsResponse(string renewalId = default(string), string ingramOrderNumber = default(string), DateOnly ingramOrderDate = default(DateOnly), DateOnly expirationDate = default(DateOnly), string ingramPurchaseOrderNumber = default(string), string customerOrderNumber = default(string), string endCustomerOrderNumber = default(string), decimal renewalValue = default(decimal), string endUser = default(string), string vendor = default(string), string status = default(string), List<RenewalsDetailsResponseEndUserInfoInner> endUserInfo = default(List<RenewalsDetailsResponseEndUserInfoInner>), List<RenewalsDetailsResponseReferenceNumberInner> referenceNumber = default(List<RenewalsDetailsResponseReferenceNumberInner>), List<RenewalsDetailsResponseProductsInner> products = default(List<RenewalsDetailsResponseProductsInner>), List<RenewalsDetailsResponseAdditionalAttributesInner> additionalAttributes = default(List<RenewalsDetailsResponseAdditionalAttributesInner>))
+        public RenewalsDetailsResponse(string renewalId = default(string), string ingramOrderNumber = default(string), string ingramOrderDate = default(string), string expirationDate = default(string), string ingramPurchaseOrderNumber = default(string), string customerOrderNumber = default(string), string endCustomerOrderNumber = default(string), string renewalValue = default(string), string endUser = default(string), string vendor = default(string), string status = default(string), RenewalsDetailsResponseEndUserInfo endUserInfo = default(RenewalsDetailsResponseEndUserInfo), RenewalsDetailsResponseReferenceNumber referenceNumber = default(RenewalsDetailsResponseReferenceNumber), List<RenewalsDetailsResponseProductsInner> products = default(List<RenewalsDetailsResponseProductsInner>), List<RenewalsDetailsResponseAdditionalAttributesInner> additionalAttributes = default(List<RenewalsDetailsResponseAdditionalAttributesInner>))
         {
             this.RenewalId = renewalId;
             this.IngramOrderNumber = ingramOrderNumber;
@@ -88,16 +88,14 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>The IngramMicro sales order date.</value>
         [DataMember(Name = "ingramOrderDate", EmitDefaultValue = false)]
-        [JsonConverter(typeof(OpenAPIDateConverter))]
-        public DateOnly IngramOrderDate { get; set; }
+        public string IngramOrderDate { get; set; }
 
         /// <summary>
         /// Renewal expiration date.
         /// </summary>
         /// <value>Renewal expiration date.</value>
         [DataMember(Name = "expirationDate", EmitDefaultValue = false)]
-        [JsonConverter(typeof(OpenAPIDateConverter))]
-        public DateOnly ExpirationDate { get; set; }
+        public string ExpirationDate { get; set; }
 
         /// <summary>
         /// Ingram purchase order number.
@@ -125,7 +123,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>The value of the renewal.</value>
         [DataMember(Name = "renewalValue", EmitDefaultValue = false)]
-        public decimal RenewalValue { get; set; }
+        public string RenewalValue { get; set; }
 
         /// <summary>
         /// The company name for the end user/customer.
@@ -152,13 +150,13 @@ namespace xi.sdk.resellers.Model
         /// Gets or Sets EndUserInfo
         /// </summary>
         [DataMember(Name = "endUserInfo", EmitDefaultValue = false)]
-        public List<RenewalsDetailsResponseEndUserInfoInner> EndUserInfo { get; set; }
+        public RenewalsDetailsResponseEndUserInfo EndUserInfo { get; set; }
 
         /// <summary>
         /// Gets or Sets ReferenceNumber
         /// </summary>
         [DataMember(Name = "referenceNumber", EmitDefaultValue = false)]
-        public List<RenewalsDetailsResponseReferenceNumberInner> ReferenceNumber { get; set; }
+        public RenewalsDetailsResponseReferenceNumber ReferenceNumber { get; set; }
 
         /// <summary>
         /// Gets or Sets Products

@@ -127,15 +127,6 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'RequestDetails'
-        /// </summary>
-        [Fact]
-        public void RequestDetailsTest()
-        {
-            // TODO unit test for the property 'RequestDetails'
-        }
-
-        /// <summary>
         /// Test the property 'Quantity'
         /// </summary>
         [Fact]
@@ -187,6 +178,24 @@ namespace xi.sdk.resellers.Test.Model
         public void ShipFromBranchTest()
         {
             // TODO unit test for the property 'ShipFromBranch'
+        }
+
+        /// <summary>
+        /// Test the property 'RequestDetails'
+        /// </summary>
+        [Fact]
+        public void RequestDetailsTest()
+        {
+            // TODO unit test for the property 'RequestDetails'
+        }
+
+        /// <summary>
+        /// Test the property 'AdditionalDetails'
+        /// </summary>
+        [Fact]
+        public void AdditionalDetailsTest()
+        {
+            // TODO unit test for the property 'AdditionalDetails'
         }
     }
 }

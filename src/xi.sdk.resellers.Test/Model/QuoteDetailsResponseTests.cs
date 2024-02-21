@@ -208,6 +208,15 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'QuoteType'
+        /// </summary>
+        [Fact]
+        public void QuoteTypeTest()
+        {
+            // TODO unit test for the property 'QuoteType'
+        }
+
+        /// <summary>
         /// Test the property 'LeaseInfo'
         /// </summary>
         [Fact]
@@ -223,6 +232,15 @@ namespace xi.sdk.resellers.Test.Model
         public void LeasingInstructionsTest()
         {
             // TODO unit test for the property 'LeasingInstructions'
+        }
+
+        /// <summary>
+        /// Test the property 'QuoteSybType'
+        /// </summary>
+        [Fact]
+        public void QuoteSybTypeTest()
+        {
+            // TODO unit test for the property 'QuoteSybType'
         }
 
         /// <summary>

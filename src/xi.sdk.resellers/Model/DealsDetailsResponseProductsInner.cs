@@ -49,7 +49,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="startDate">Start Date..</param>
         /// <param name="expirationDate">Expiration date..</param>
         /// <param name="daysRemaining">Number of days remaining before the deal expires..</param>
-        public DealsDetailsResponseProductsInner(string ingramPartNumber = default(string), string vendorPartNumber = default(string), string upc = default(string), string productDescription = default(string), decimal msrp = default(decimal), decimal extendedMSRP = default(decimal), decimal standardPrice = default(decimal), int approvedQuantity = default(int), int remainingQuantity = default(int), string comments = default(string), string specialConditions = default(string), DateOnly startDate = default(DateOnly), DateOnly expirationDate = default(DateOnly), int daysRemaining = default(int))
+        public DealsDetailsResponseProductsInner(string ingramPartNumber = default(string), string vendorPartNumber = default(string), string upc = default(string), string productDescription = default(string), decimal msrp = default(decimal), decimal extendedMSRP = default(decimal), decimal standardPrice = default(decimal), int approvedQuantity = default(int), int remainingQuantity = default(int), string comments = default(string), string specialConditions = default(string), string startDate = default(string), string expirationDate = default(string), int daysRemaining = default(int))
         {
             this.IngramPartNumber = ingramPartNumber;
             this.VendorPartNumber = vendorPartNumber;
@@ -149,16 +149,14 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>Start Date.</value>
         [DataMember(Name = "startDate", EmitDefaultValue = false)]
-        [JsonConverter(typeof(OpenAPIDateConverter))]
-        public DateOnly StartDate { get; set; }
+        public string StartDate { get; set; }
 
         /// <summary>
         /// Expiration date.
         /// </summary>
         /// <value>Expiration date.</value>
         [DataMember(Name = "expirationDate", EmitDefaultValue = false)]
-        [JsonConverter(typeof(OpenAPIDateConverter))]
-        public DateOnly ExpirationDate { get; set; }
+        public string ExpirationDate { get; set; }
 
         /// <summary>
         /// Number of days remaining before the deal expires.

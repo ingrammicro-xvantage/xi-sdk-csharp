@@ -55,39 +55,39 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'Headername'
+        /// Test the property 'HeaderName'
         /// </summary>
         [Fact]
-        public void HeadernameTest()
+        public void HeaderNameTest()
         {
-            // TODO unit test for the property 'Headername'
+            // TODO unit test for the property 'HeaderName'
         }
 
         /// <summary>
-        /// Test the property 'Attributevalue'
+        /// Test the property 'AttributeName'
         /// </summary>
         [Fact]
-        public void AttributevalueTest()
+        public void AttributeNameTest()
         {
-            // TODO unit test for the property 'Attributevalue'
+            // TODO unit test for the property 'AttributeName'
         }
 
         /// <summary>
-        /// Test the property 'Attributedisplay'
+        /// Test the property 'AttributeDisplay'
         /// </summary>
         [Fact]
-        public void AttributedisplayTest()
+        public void AttributeDisplayTest()
         {
-            // TODO unit test for the property 'Attributedisplay'
+            // TODO unit test for the property 'AttributeDisplay'
         }
 
         /// <summary>
-        /// Test the property 'Attributename'
+        /// Test the property 'AttributeValue'
         /// </summary>
         [Fact]
-        public void AttributenameTest()
+        public void AttributeValueTest()
         {
-            // TODO unit test for the property 'Attributename'
+            // TODO unit test for the property 'AttributeValue'
         }
     }
 }

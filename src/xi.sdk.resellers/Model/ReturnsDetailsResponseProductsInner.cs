@@ -43,14 +43,15 @@ namespace xi.sdk.resellers.Model
         /// <param name="invoiceDate">The date of the invoice..</param>
         /// <param name="invoiceNumber">Ingram micro Invoice number..</param>
         /// <param name="customerOrderNumber">The reseller&#39;s order number for reference in their system..</param>
-        /// <param name="requestDetails">Request details..</param>
         /// <param name="quantity">The quantity of the line item..</param>
         /// <param name="unitPrice">The unit price of the line item..</param>
         /// <param name="extendedPrice">Unit price X quantity for the line item..</param>
         /// <param name="status">The status of the line item..</param>
         /// <param name="returnBranch">The code of the return branch..</param>
         /// <param name="shipFromBranch">The code of the ship from branch..</param>
-        public ReturnsDetailsResponseProductsInner(int ingramLineNumber = default(int), string description = default(string), string ingramPartNumber = default(string), string vendorPartNumber = default(string), string upc = default(string), DateOnly invoiceDate = default(DateOnly), string invoiceNumber = default(string), string customerOrderNumber = default(string), string requestDetails = default(string), decimal quantity = default(decimal), decimal unitPrice = default(decimal), decimal extendedPrice = default(decimal), string status = default(string), string returnBranch = default(string), string shipFromBranch = default(string))
+        /// <param name="requestDetails">Request details..</param>
+        /// <param name="additionalDetails">additionalDetails.</param>
+        public ReturnsDetailsResponseProductsInner(int ingramLineNumber = default(int), string description = default(string), string ingramPartNumber = default(string), string vendorPartNumber = default(string), string upc = default(string), string invoiceDate = default(string), string invoiceNumber = default(string), string customerOrderNumber = default(string), decimal quantity = default(decimal), decimal unitPrice = default(decimal), decimal extendedPrice = default(decimal), string status = default(string), string returnBranch = default(string), string shipFromBranch = default(string), string requestDetails = default(string), string additionalDetails = default(string))
         {
             this.IngramLineNumber = ingramLineNumber;
             this.Description = description;
@@ -60,13 +61,14 @@ namespace xi.sdk.resellers.Model
             this.InvoiceDate = invoiceDate;
             this.InvoiceNumber = invoiceNumber;
             this.CustomerOrderNumber = customerOrderNumber;
-            this.RequestDetails = requestDetails;
             this.Quantity = quantity;
             this.UnitPrice = unitPrice;
             this.ExtendedPrice = extendedPrice;
             this.Status = status;
             this.ReturnBranch = returnBranch;
             this.ShipFromBranch = shipFromBranch;
+            this.RequestDetails = requestDetails;
+            this.AdditionalDetails = additionalDetails;
         }
 
         /// <summary>
@@ -109,8 +111,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>The date of the invoice.</value>
         [DataMember(Name = "invoiceDate", EmitDefaultValue = false)]
-        [JsonConverter(typeof(OpenAPIDateConverter))]
-        public DateOnly InvoiceDate { get; set; }
+        public string InvoiceDate { get; set; }
 
         /// <summary>
         /// Ingram micro Invoice number.
@@ -125,13 +126,6 @@ namespace xi.sdk.resellers.Model
         /// <value>The reseller&#39;s order number for reference in their system.</value>
         [DataMember(Name = "customerOrderNumber", EmitDefaultValue = false)]
         public string CustomerOrderNumber { get; set; }
-
-        /// <summary>
-        /// Request details.
-        /// </summary>
-        /// <value>Request details.</value>
-        [DataMember(Name = "requestDetails", EmitDefaultValue = false)]
-        public string RequestDetails { get; set; }
 
         /// <summary>
         /// The quantity of the line item.
@@ -176,6 +170,19 @@ namespace xi.sdk.resellers.Model
         public string ShipFromBranch { get; set; }
 
         /// <summary>
+        /// Request details.
+        /// </summary>
+        /// <value>Request details.</value>
+        [DataMember(Name = "requestDetails", EmitDefaultValue = false)]
+        public string RequestDetails { get; set; }
+
+        /// <summary>
+        /// Gets or Sets AdditionalDetails
+        /// </summary>
+        [DataMember(Name = "additionalDetails", EmitDefaultValue = false)]
+        public string AdditionalDetails { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -191,13 +198,14 @@ namespace xi.sdk.resellers.Model
             sb.Append("  InvoiceDate: ").Append(InvoiceDate).Append("\n");
             sb.Append("  InvoiceNumber: ").Append(InvoiceNumber).Append("\n");
             sb.Append("  CustomerOrderNumber: ").Append(CustomerOrderNumber).Append("\n");
-            sb.Append("  RequestDetails: ").Append(RequestDetails).Append("\n");
             sb.Append("  Quantity: ").Append(Quantity).Append("\n");
             sb.Append("  UnitPrice: ").Append(UnitPrice).Append("\n");
             sb.Append("  ExtendedPrice: ").Append(ExtendedPrice).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  ReturnBranch: ").Append(ReturnBranch).Append("\n");
             sb.Append("  ShipFromBranch: ").Append(ShipFromBranch).Append("\n");
+            sb.Append("  RequestDetails: ").Append(RequestDetails).Append("\n");
+            sb.Append("  AdditionalDetails: ").Append(AdditionalDetails).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

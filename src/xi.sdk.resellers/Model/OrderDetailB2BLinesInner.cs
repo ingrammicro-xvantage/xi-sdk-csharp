@@ -57,6 +57,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="specialBidNumber">The line-level bid number provided to the reseller by the vendor for special pricing and discounts. Used to track the bid number in the case of split orders or where different line items have different bid numbers. Line-level bid numbers take precedence over header-level bid numbers..</param>
         /// <param name="requestedDeliverydate">Reseller-requested delivery date. Delivery date is not guaranteed..</param>
         /// <param name="promisedDeliveryDate">The delivery date promised by IngramMicro..</param>
+        /// <param name="backOrderETADate">Backorder ETA date.</param>
         /// <param name="lineNotes">Line-level notes for the order..</param>
         /// <param name="shipmentDetails">Shipping details for the line item..</param>
         /// <param name="serviceContractInfo">serviceContractInfo.</param>
@@ -65,7 +66,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="estimatedDates">estimatedDates.</param>
         /// <param name="scheduleLines">scheduleLines.</param>
         /// <param name="multipleShipments">multipleShipments.</param>
-        public OrderDetailB2BLinesInner(string subOrderNumber = default(string), string ingramOrderLineNumber = default(string), string vendorSalesOrderLineNumber = default(string), string customerLineNumber = default(string), string lineStatus = default(string), string ingramPartNumber = default(string), string vendorPartNumber = default(string), string vendorName = default(string), string partDescription = default(string), double unitWeight = default(double), string weightUom = default(string), double unitPrice = default(double), string upcCode = default(string), double extendedPrice = default(double), double taxAmount = default(double), string currencyCode = default(string), int quantityOrdered = default(int), int quantityConfirmed = default(int), int quantityBackOrdered = default(int), string specialBidNumber = default(string), string requestedDeliverydate = default(string), string promisedDeliveryDate = default(string), string lineNotes = default(string), List<OrderDetailB2BLinesInnerShipmentDetailsInner> shipmentDetails = default(List<OrderDetailB2BLinesInnerShipmentDetailsInner>), OrderDetailB2BLinesInnerServiceContractInfo serviceContractInfo = default(OrderDetailB2BLinesInnerServiceContractInfo), List<OrderDetailB2BLinesInnerAdditionalAttributesInner> additionalAttributes = default(List<OrderDetailB2BLinesInnerAdditionalAttributesInner>), List<OrderDetailB2BLinesInnerLinksInner> links = default(List<OrderDetailB2BLinesInnerLinksInner>), List<OrderDetailB2BLinesInnerEstimatedDatesInner> estimatedDates = default(List<OrderDetailB2BLinesInnerEstimatedDatesInner>), List<OrderDetailB2BLinesInnerScheduleLinesInner> scheduleLines = default(List<OrderDetailB2BLinesInnerScheduleLinesInner>), List<OrderDetailB2BLinesInnerMultipleShipmentsInner> multipleShipments = default(List<OrderDetailB2BLinesInnerMultipleShipmentsInner>))
+        public OrderDetailB2BLinesInner(string subOrderNumber = default(string), string ingramOrderLineNumber = default(string), string vendorSalesOrderLineNumber = default(string), string customerLineNumber = default(string), string lineStatus = default(string), string ingramPartNumber = default(string), string vendorPartNumber = default(string), string vendorName = default(string), string partDescription = default(string), double unitWeight = default(double), string weightUom = default(string), double unitPrice = default(double), string upcCode = default(string), double extendedPrice = default(double), double taxAmount = default(double), string currencyCode = default(string), int quantityOrdered = default(int), int quantityConfirmed = default(int), int quantityBackOrdered = default(int), string specialBidNumber = default(string), string requestedDeliverydate = default(string), string promisedDeliveryDate = default(string), string backOrderETADate = default(string), string lineNotes = default(string), List<OrderDetailB2BLinesInnerShipmentDetailsInner> shipmentDetails = default(List<OrderDetailB2BLinesInnerShipmentDetailsInner>), OrderDetailB2BLinesInnerServiceContractInfo serviceContractInfo = default(OrderDetailB2BLinesInnerServiceContractInfo), List<OrderDetailB2BLinesInnerAdditionalAttributesInner> additionalAttributes = default(List<OrderDetailB2BLinesInnerAdditionalAttributesInner>), List<OrderDetailB2BLinesInnerLinksInner> links = default(List<OrderDetailB2BLinesInnerLinksInner>), List<OrderDetailB2BLinesInnerEstimatedDatesInner> estimatedDates = default(List<OrderDetailB2BLinesInnerEstimatedDatesInner>), List<OrderDetailB2BLinesInnerScheduleLinesInner> scheduleLines = default(List<OrderDetailB2BLinesInnerScheduleLinesInner>), List<OrderDetailB2BLinesInnerMultipleShipmentsInner> multipleShipments = default(List<OrderDetailB2BLinesInnerMultipleShipmentsInner>))
         {
             this.SubOrderNumber = subOrderNumber;
             this.IngramOrderLineNumber = ingramOrderLineNumber;
@@ -89,6 +90,7 @@ namespace xi.sdk.resellers.Model
             this.SpecialBidNumber = specialBidNumber;
             this.RequestedDeliverydate = requestedDeliverydate;
             this.PromisedDeliveryDate = promisedDeliveryDate;
+            this.BackOrderETADate = backOrderETADate;
             this.LineNotes = lineNotes;
             this.ShipmentDetails = shipmentDetails;
             this.ServiceContractInfo = serviceContractInfo;
@@ -254,6 +256,13 @@ namespace xi.sdk.resellers.Model
         public string PromisedDeliveryDate { get; set; }
 
         /// <summary>
+        /// Backorder ETA date
+        /// </summary>
+        /// <value>Backorder ETA date</value>
+        [DataMember(Name = "backOrderETADate", EmitDefaultValue = false)]
+        public string BackOrderETADate { get; set; }
+
+        /// <summary>
         /// Line-level notes for the order.
         /// </summary>
         /// <value>Line-level notes for the order.</value>
@@ -333,6 +342,7 @@ namespace xi.sdk.resellers.Model
             sb.Append("  SpecialBidNumber: ").Append(SpecialBidNumber).Append("\n");
             sb.Append("  RequestedDeliverydate: ").Append(RequestedDeliverydate).Append("\n");
             sb.Append("  PromisedDeliveryDate: ").Append(PromisedDeliveryDate).Append("\n");
+            sb.Append("  BackOrderETADate: ").Append(BackOrderETADate).Append("\n");
             sb.Append("  LineNotes: ").Append(LineNotes).Append("\n");
             sb.Append("  ShipmentDetails: ").Append(ShipmentDetails).Append("\n");
             sb.Append("  ServiceContractInfo: ").Append(ServiceContractInfo).Append("\n");

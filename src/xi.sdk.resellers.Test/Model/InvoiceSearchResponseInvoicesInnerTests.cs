@@ -127,15 +127,6 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'OrderCreateDate'
-        /// </summary>
-        [Fact]
-        public void OrderCreateDateTest()
-        {
-            // TODO unit test for the property 'OrderCreateDate'
-        }
-
-        /// <summary>
         /// Test the property 'EndCustomerOrderNumber'
         /// </summary>
         [Fact]
@@ -145,12 +136,48 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'OrderCreateDate'
+        /// </summary>
+        [Fact]
+        public void OrderCreateDateTest()
+        {
+            // TODO unit test for the property 'OrderCreateDate'
+        }
+
+        /// <summary>
         /// Test the property 'InvoiceAmountInclTax'
         /// </summary>
         [Fact]
         public void InvoiceAmountInclTaxTest()
         {
             // TODO unit test for the property 'InvoiceAmountInclTax'
+        }
+
+        /// <summary>
+        /// Test the property 'Forgntotalamount'
+        /// </summary>
+        [Fact]
+        public void ForgntotalamountTest()
+        {
+            // TODO unit test for the property 'Forgntotalamount'
+        }
+
+        /// <summary>
+        /// Test the property 'GstInvoiceNumber'
+        /// </summary>
+        [Fact]
+        public void GstInvoiceNumberTest()
+        {
+            // TODO unit test for the property 'GstInvoiceNumber'
+        }
+
+        /// <summary>
+        /// Test the property 'Isfseccenabled'
+        /// </summary>
+        [Fact]
+        public void IsfseccenabledTest()
+        {
+            // TODO unit test for the property 'Isfseccenabled'
         }
     }
 }

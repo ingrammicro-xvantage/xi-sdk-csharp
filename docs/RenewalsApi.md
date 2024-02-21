@@ -117,7 +117,7 @@ catch (ApiException e)
 
 <a id="postrenewalssearch"></a>
 # **PostRenewalssearch**
-> RenewalsSearchResponse PostRenewalssearch (string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string contentType, string? iMSenderID = null, string? customerOrderNumber = null, string? ingramPurchaseOrderNumber = null, string? serialNumber = null, string? page = null, string? size = null, string? sort = null, RenewalsSearchRequest? renewalsSearchRequest = null)
+> RenewalsSearchResponse PostRenewalssearch (string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = null, string? customerOrderNumber = null, string? ingramPurchaseOrderNumber = null, string? serialNumber = null, string? page = null, string? size = null, string? sort = null, RenewalsSearchRequest? renewalsSearchRequest = null)
 
 Renewals Search
 
@@ -150,7 +150,6 @@ namespace Example
             var iMCustomerNumber = 20-222222;  // string | Your unique Ingram Micro customer number.
             var iMCountryCode = US;  // string | Two-character ISO country code.
             var iMCorrelationID = fbac82ba-cf0a-4bcf-fc03-0c5084;  // string | Unique transaction number to identify each transaction across all the systems.
-            var contentType = application/json;  // string | The media type for JSON Request.
             var iMSenderID = MyCompany;  // string? | Unique value used to identify the sender of the transaction. Example: MyCompany (optional) 
             var customerOrderNumber = "customerOrderNumber_example";  // string? | The reseller's unique PO/Order number. (optional) 
             var ingramPurchaseOrderNumber = "ingramPurchaseOrderNumber_example";  // string? | Sales order number. (optional) 
@@ -163,7 +162,7 @@ namespace Example
             try
             {
                 // Renewals Search
-                RenewalsSearchResponse result = apiInstance.PostRenewalssearch(iMCustomerNumber, iMCountryCode, iMCorrelationID, contentType, iMSenderID, customerOrderNumber, ingramPurchaseOrderNumber, serialNumber, page, size, sort, renewalsSearchRequest);
+                RenewalsSearchResponse result = apiInstance.PostRenewalssearch(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMSenderID, customerOrderNumber, ingramPurchaseOrderNumber, serialNumber, page, size, sort, renewalsSearchRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -184,7 +183,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Renewals Search
-    ApiResponse<RenewalsSearchResponse> response = apiInstance.PostRenewalssearchWithHttpInfo(iMCustomerNumber, iMCountryCode, iMCorrelationID, contentType, iMSenderID, customerOrderNumber, ingramPurchaseOrderNumber, serialNumber, page, size, sort, renewalsSearchRequest);
+    ApiResponse<RenewalsSearchResponse> response = apiInstance.PostRenewalssearchWithHttpInfo(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMSenderID, customerOrderNumber, ingramPurchaseOrderNumber, serialNumber, page, size, sort, renewalsSearchRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -204,7 +203,6 @@ catch (ApiException e)
 | **iMCustomerNumber** | **string** | Your unique Ingram Micro customer number. |  |
 | **iMCountryCode** | **string** | Two-character ISO country code. |  |
 | **iMCorrelationID** | **string** | Unique transaction number to identify each transaction across all the systems. |  |
-| **contentType** | **string** | The media type for JSON Request. |  |
 | **iMSenderID** | **string?** | Unique value used to identify the sender of the transaction. Example: MyCompany | [optional]  |
 | **customerOrderNumber** | **string?** | The reseller&#39;s unique PO/Order number. | [optional]  |
 | **ingramPurchaseOrderNumber** | **string?** | Sales order number. | [optional]  |

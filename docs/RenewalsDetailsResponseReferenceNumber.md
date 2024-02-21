@@ -1,4 +1,4 @@
-# xi.sdk.resellers.Model.RenewalsDetailsResponseReferenceNumberInner
+# xi.sdk.resellers.Model.RenewalsDetailsResponseReferenceNumber
 
 ## Properties
 

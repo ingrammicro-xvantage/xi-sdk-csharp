@@ -82,6 +82,24 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'ShippedDate'
+        /// </summary>
+        [Fact]
+        public void ShippedDateTest()
+        {
+            // TODO unit test for the property 'ShippedDate'
+        }
+
+        /// <summary>
+        /// Test the property 'EstimatedDeliveryDate'
+        /// </summary>
+        [Fact]
+        public void EstimatedDeliveryDateTest()
+        {
+            // TODO unit test for the property 'EstimatedDeliveryDate'
+        }
+
+        /// <summary>
         /// Test the property 'ShipFromWarehouseId'
         /// </summary>
         [Fact]

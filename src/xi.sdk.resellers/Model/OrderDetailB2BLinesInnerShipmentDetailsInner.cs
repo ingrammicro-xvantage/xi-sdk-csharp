@@ -38,16 +38,20 @@ namespace xi.sdk.resellers.Model
         /// <param name="quantity">The quantity shipped of the line item..</param>
         /// <param name="deliveryNumber">The actual date of delivery of the line item..</param>
         /// <param name="estimatedShipDate">The date the line item is expected to be shipped..</param>
+        /// <param name="shippedDate">shippedDate.</param>
+        /// <param name="estimatedDeliveryDate">estimatedDeliveryDate.</param>
         /// <param name="shipFromWarehouseId">The ID of the warehouse the product will ship from..</param>
         /// <param name="shipFromLocation">The city and state the line item ships from..</param>
         /// <param name="invoiceNumber">The Ingram Micro invoice number for the line item..</param>
         /// <param name="invoiceDate">The date the IngramMicro invoice was created for the line item..</param>
         /// <param name="carrierDetails">The shipment carrier details for the line item..</param>
-        public OrderDetailB2BLinesInnerShipmentDetailsInner(int quantity = default(int), string deliveryNumber = default(string), string estimatedShipDate = default(string), string shipFromWarehouseId = default(string), string shipFromLocation = default(string), string invoiceNumber = default(string), string invoiceDate = default(string), List<OrderDetailB2BLinesInnerShipmentDetailsInnerCarrierDetailsInner> carrierDetails = default(List<OrderDetailB2BLinesInnerShipmentDetailsInnerCarrierDetailsInner>))
+        public OrderDetailB2BLinesInnerShipmentDetailsInner(int quantity = default(int), string deliveryNumber = default(string), string estimatedShipDate = default(string), string shippedDate = default(string), string estimatedDeliveryDate = default(string), string shipFromWarehouseId = default(string), string shipFromLocation = default(string), string invoiceNumber = default(string), string invoiceDate = default(string), List<OrderDetailB2BLinesInnerShipmentDetailsInnerCarrierDetailsInner> carrierDetails = default(List<OrderDetailB2BLinesInnerShipmentDetailsInnerCarrierDetailsInner>))
         {
             this.Quantity = quantity;
             this.DeliveryNumber = deliveryNumber;
             this.EstimatedShipDate = estimatedShipDate;
+            this.ShippedDate = shippedDate;
+            this.EstimatedDeliveryDate = estimatedDeliveryDate;
             this.ShipFromWarehouseId = shipFromWarehouseId;
             this.ShipFromLocation = shipFromLocation;
             this.InvoiceNumber = invoiceNumber;
@@ -75,6 +79,18 @@ namespace xi.sdk.resellers.Model
         /// <value>The date the line item is expected to be shipped.</value>
         [DataMember(Name = "estimatedShipDate", EmitDefaultValue = false)]
         public string EstimatedShipDate { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ShippedDate
+        /// </summary>
+        [DataMember(Name = "shippedDate", EmitDefaultValue = false)]
+        public string ShippedDate { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EstimatedDeliveryDate
+        /// </summary>
+        [DataMember(Name = "estimatedDeliveryDate", EmitDefaultValue = false)]
+        public string EstimatedDeliveryDate { get; set; }
 
         /// <summary>
         /// The ID of the warehouse the product will ship from.
@@ -122,6 +138,8 @@ namespace xi.sdk.resellers.Model
             sb.Append("  Quantity: ").Append(Quantity).Append("\n");
             sb.Append("  DeliveryNumber: ").Append(DeliveryNumber).Append("\n");
             sb.Append("  EstimatedShipDate: ").Append(EstimatedShipDate).Append("\n");
+            sb.Append("  ShippedDate: ").Append(ShippedDate).Append("\n");
+            sb.Append("  EstimatedDeliveryDate: ").Append(EstimatedDeliveryDate).Append("\n");
             sb.Append("  ShipFromWarehouseId: ").Append(ShipFromWarehouseId).Append("\n");
             sb.Append("  ShipFromLocation: ").Append(ShipFromLocation).Append("\n");
             sb.Append("  InvoiceNumber: ").Append(InvoiceNumber).Append("\n");

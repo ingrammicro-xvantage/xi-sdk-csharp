@@ -12,9 +12,12 @@ Name | Type | Description | Notes
 **InvoiceDueDate** | **string** | Invoice Due Date. | [optional] 
 **InvoicedAmountDue** | **decimal** | Invoice Amount. | [optional] 
 **CustomerOrderNumber** | **string** | Customer Order No. | [optional] 
-**OrderCreateDate** | **string** | Order Create Date. | [optional] 
 **EndCustomerOrderNumber** | **string** | End Customer Order number. | [optional] 
+**OrderCreateDate** | **string** | Order Create Date. | [optional] 
 **InvoiceAmountInclTax** | **decimal** | Invoice Amount Inclusive of Taxes | [optional] 
+**Forgntotalamount** | **decimal** |  | [optional] 
+**GstInvoiceNumber** | **string** |  | [optional] 
+**Isfseccenabled** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

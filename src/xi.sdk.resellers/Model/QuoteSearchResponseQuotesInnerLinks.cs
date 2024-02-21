@@ -27,35 +27,41 @@ using OpenAPIDateConverter = xi.sdk.resellers.Client.OpenAPIDateConverter;
 namespace xi.sdk.resellers.Model
 {
     /// <summary>
-    /// RenewalsDetailsResponseReferenceNumberInner
+    /// QuoteSearchResponseQuotesInnerLinks
     /// </summary>
-    [DataContract(Name = "renewalsDetailsResponse_referenceNumber_inner")]
-    public partial class RenewalsDetailsResponseReferenceNumberInner : IValidatableObject
+    [DataContract(Name = "QuoteSearchResponse_quotes_inner_links")]
+    public partial class QuoteSearchResponseQuotesInnerLinks : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="RenewalsDetailsResponseReferenceNumberInner" /> class.
+        /// Initializes a new instance of the <see cref="QuoteSearchResponseQuotesInnerLinks" /> class.
         /// </summary>
-        /// <param name="notificationId">Notification id of the communication sent from Ingram..</param>
-        /// <param name="quoteNumber">Quote number for the renewal..</param>
-        public RenewalsDetailsResponseReferenceNumberInner(string notificationId = default(string), string quoteNumber = default(string))
+        /// <param name="topic">topic.</param>
+        /// <param name="href">href.</param>
+        /// <param name="type">type.</param>
+        public QuoteSearchResponseQuotesInnerLinks(string topic = default(string), string href = default(string), string type = default(string))
         {
-            this.NotificationId = notificationId;
-            this.QuoteNumber = quoteNumber;
+            this.Topic = topic;
+            this.Href = href;
+            this.Type = type;
         }
 
         /// <summary>
-        /// Notification id of the communication sent from Ingram.
+        /// Gets or Sets Topic
         /// </summary>
-        /// <value>Notification id of the communication sent from Ingram.</value>
-        [DataMember(Name = "notificationId", EmitDefaultValue = false)]
-        public string NotificationId { get; set; }
+        [DataMember(Name = "topic", EmitDefaultValue = false)]
+        public string Topic { get; set; }
 
         /// <summary>
-        /// Quote number for the renewal.
+        /// Gets or Sets Href
         /// </summary>
-        /// <value>Quote number for the renewal.</value>
-        [DataMember(Name = "quoteNumber", EmitDefaultValue = false)]
-        public string QuoteNumber { get; set; }
+        [DataMember(Name = "href", EmitDefaultValue = false)]
+        public string Href { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [DataMember(Name = "type", EmitDefaultValue = false)]
+        public string Type { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -64,9 +70,10 @@ namespace xi.sdk.resellers.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class RenewalsDetailsResponseReferenceNumberInner {\n");
-            sb.Append("  NotificationId: ").Append(NotificationId).Append("\n");
-            sb.Append("  QuoteNumber: ").Append(QuoteNumber).Append("\n");
+            sb.Append("class QuoteSearchResponseQuotesInnerLinks {\n");
+            sb.Append("  Topic: ").Append(Topic).Append("\n");
+            sb.Append("  Href: ").Append(Href).Append("\n");
+            sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

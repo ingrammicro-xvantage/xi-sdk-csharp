@@ -151,7 +151,7 @@ docs/QuoteDetailsResponseProductsInnerPrice.md
 docs/QuoteDetailsResponseResellerInfo.md
 docs/QuoteSearchResponse.md
 docs/QuoteSearchResponseQuotesInner.md
-docs/QuoteSearchResponseQuotesInnerLinksInner.md
+docs/QuoteSearchResponseQuotesInnerLinks.md
 docs/QuoteToOrderApi.md
 docs/QuoteToOrderDetailsDTO.md
 docs/QuoteToOrderDetailsDTOAdditionalAttributesInner.md
@@ -165,9 +165,9 @@ docs/QuotesApi.md
 docs/RenewalsApi.md
 docs/RenewalsDetailsResponse.md
 docs/RenewalsDetailsResponseAdditionalAttributesInner.md
-docs/RenewalsDetailsResponseEndUserInfoInner.md
+docs/RenewalsDetailsResponseEndUserInfo.md
 docs/RenewalsDetailsResponseProductsInner.md
-docs/RenewalsDetailsResponseReferenceNumberInner.md
+docs/RenewalsDetailsResponseReferenceNumber.md
 docs/RenewalsSearchRequest.md
 docs/RenewalsSearchRequestDateType.md
 docs/RenewalsSearchRequestDateTypeEndDate.md
@@ -346,7 +346,7 @@ src/xi.sdk.resellers.Test/Model/QuoteDetailsResponseProductsInnerPriceTests.cs
 src/xi.sdk.resellers.Test/Model/QuoteDetailsResponseProductsInnerTests.cs
 src/xi.sdk.resellers.Test/Model/QuoteDetailsResponseResellerInfoTests.cs
 src/xi.sdk.resellers.Test/Model/QuoteDetailsResponseTests.cs
-src/xi.sdk.resellers.Test/Model/QuoteSearchResponseQuotesInnerLinksInnerTests.cs
+src/xi.sdk.resellers.Test/Model/QuoteSearchResponseQuotesInnerLinksTests.cs
 src/xi.sdk.resellers.Test/Model/QuoteSearchResponseQuotesInnerTests.cs
 src/xi.sdk.resellers.Test/Model/QuoteSearchResponseTests.cs
 src/xi.sdk.resellers.Test/Model/QuoteToOrderDetailsDTOAdditionalAttributesInnerTests.cs
@@ -358,9 +358,9 @@ src/xi.sdk.resellers.Test/Model/QuoteToOrderDetailsDTOTests.cs
 src/xi.sdk.resellers.Test/Model/QuoteToOrderDetailsDTOVmfadditionalAttributesInnerTests.cs
 src/xi.sdk.resellers.Test/Model/QuoteToOrderResponseTests.cs
 src/xi.sdk.resellers.Test/Model/RenewalsDetailsResponseAdditionalAttributesInnerTests.cs
-src/xi.sdk.resellers.Test/Model/RenewalsDetailsResponseEndUserInfoInnerTests.cs
+src/xi.sdk.resellers.Test/Model/RenewalsDetailsResponseEndUserInfoTests.cs
 src/xi.sdk.resellers.Test/Model/RenewalsDetailsResponseProductsInnerTests.cs
-src/xi.sdk.resellers.Test/Model/RenewalsDetailsResponseReferenceNumberInnerTests.cs
+src/xi.sdk.resellers.Test/Model/RenewalsDetailsResponseReferenceNumberTests.cs
 src/xi.sdk.resellers.Test/Model/RenewalsDetailsResponseTests.cs
 src/xi.sdk.resellers.Test/Model/RenewalsSearchRequestDateTypeEndDateTests.cs
 src/xi.sdk.resellers.Test/Model/RenewalsSearchRequestDateTypeExpirationDateTests.cs
@@ -558,7 +558,7 @@ src/xi.sdk.resellers/Model/QuoteDetailsResponseProductsInnerPrice.cs
 src/xi.sdk.resellers/Model/QuoteDetailsResponseResellerInfo.cs
 src/xi.sdk.resellers/Model/QuoteSearchResponse.cs
 src/xi.sdk.resellers/Model/QuoteSearchResponseQuotesInner.cs
-src/xi.sdk.resellers/Model/QuoteSearchResponseQuotesInnerLinksInner.cs
+src/xi.sdk.resellers/Model/QuoteSearchResponseQuotesInnerLinks.cs
 src/xi.sdk.resellers/Model/QuoteToOrderDetailsDTO.cs
 src/xi.sdk.resellers/Model/QuoteToOrderDetailsDTOAdditionalAttributesInner.cs
 src/xi.sdk.resellers/Model/QuoteToOrderDetailsDTOEndUserInfoInner.cs
@@ -569,9 +569,9 @@ src/xi.sdk.resellers/Model/QuoteToOrderDetailsDTOVmfadditionalAttributesInner.cs
 src/xi.sdk.resellers/Model/QuoteToOrderResponse.cs
 src/xi.sdk.resellers/Model/RenewalsDetailsResponse.cs
 src/xi.sdk.resellers/Model/RenewalsDetailsResponseAdditionalAttributesInner.cs
-src/xi.sdk.resellers/Model/RenewalsDetailsResponseEndUserInfoInner.cs
+src/xi.sdk.resellers/Model/RenewalsDetailsResponseEndUserInfo.cs
 src/xi.sdk.resellers/Model/RenewalsDetailsResponseProductsInner.cs
-src/xi.sdk.resellers/Model/RenewalsDetailsResponseReferenceNumberInner.cs
+src/xi.sdk.resellers/Model/RenewalsDetailsResponseReferenceNumber.cs
 src/xi.sdk.resellers/Model/RenewalsSearchRequest.cs
 src/xi.sdk.resellers/Model/RenewalsSearchRequestDateType.cs
 src/xi.sdk.resellers/Model/RenewalsSearchRequestDateTypeEndDate.cs
