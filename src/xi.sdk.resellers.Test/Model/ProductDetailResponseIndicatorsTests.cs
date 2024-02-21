@@ -109,6 +109,15 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'ReplacementType'
+        /// </summary>
+        [Fact]
+        public void ReplacementTypeTest()
+        {
+            // TODO unit test for the property 'ReplacementType'
+        }
+
+        /// <summary>
         /// Test the property 'IsDirectship'
         /// </summary>
         [Fact]

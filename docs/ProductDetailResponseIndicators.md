@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **IsBackOrderAllowed** | **bool** | Boolean that indicates whether back order is allowed for the product. | [optional] 
 **IsShippedFromPartner** | **bool** | Boolean that indicates whether product is shipped from the partner. | [optional] 
 **IsReplacementProduct** | **bool** | Boolean that indicates whether product is a replacement product. | [optional] 
+**ReplacementType** | **string** |  | [optional] 
 **IsDirectship** | **bool** | Boolean that indicates whether it’s a direct ship product. | [optional] 
 **IsDownloadable** | **bool** | Boolean that indicates whether product is downloadable. | [optional] 
 **IsDigitalType** | **bool** | Boolean that indicates whether it’s a digital product.  | [optional] 

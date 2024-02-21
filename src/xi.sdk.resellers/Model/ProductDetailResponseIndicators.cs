@@ -41,6 +41,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="isBackOrderAllowed">Boolean that indicates whether back order is allowed for the product..</param>
         /// <param name="isShippedFromPartner">Boolean that indicates whether product is shipped from the partner..</param>
         /// <param name="isReplacementProduct">Boolean that indicates whether product is a replacement product..</param>
+        /// <param name="replacementType">replacementType.</param>
         /// <param name="isDirectship">Boolean that indicates whether it’s a direct ship product..</param>
         /// <param name="isDownloadable">Boolean that indicates whether product is downloadable..</param>
         /// <param name="isDigitalType">Boolean that indicates whether it’s a digital product. .</param>
@@ -66,7 +67,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="isDirectshipOrderable">Boolean that indicates whether product is directship orderable..</param>
         /// <param name="isServiceSku">Boolean that indicates whether product is service SKU..</param>
         /// <param name="isConfigurable">Boolean that indicates whether product is configurable..</param>
-        public ProductDetailResponseIndicators(bool hasWarranty = default(bool), bool isNewProduct = default(bool), bool hasReturnLimits = default(bool), bool isBackOrderAllowed = default(bool), bool isShippedFromPartner = default(bool), bool isReplacementProduct = default(bool), bool isDirectship = default(bool), bool isDownloadable = default(bool), bool isDigitalType = default(bool), string skuType = default(string), bool hasStdSpecialPrice = default(bool), bool hasAcopSpecialPrice = default(bool), bool hasAcopQuantityBreak = default(bool), bool hasStdWebDiscount = default(bool), bool hasSpecialBid = default(bool), bool isExportableToCountry = default(bool), bool isDiscontinuedProduct = default(bool), bool isRefurbishedProduct = default(bool), bool isReturnableProduct = default(bool), bool isIngramShip = default(bool), bool isEnduserRequired = default(bool), bool isHeavyWeight = default(bool), bool hasLtl = default(bool), bool isClearanceProduct = default(bool), bool hasBundle = default(bool), bool isOversizeProduct = default(bool), bool isPreorderProduct = default(bool), bool isLicenseProduct = default(bool), bool isDirectshipOrderable = default(bool), bool isServiceSku = default(bool), bool isConfigurable = default(bool))
+        public ProductDetailResponseIndicators(bool hasWarranty = default(bool), bool isNewProduct = default(bool), bool hasReturnLimits = default(bool), bool isBackOrderAllowed = default(bool), bool isShippedFromPartner = default(bool), bool isReplacementProduct = default(bool), string replacementType = default(string), bool isDirectship = default(bool), bool isDownloadable = default(bool), bool isDigitalType = default(bool), string skuType = default(string), bool hasStdSpecialPrice = default(bool), bool hasAcopSpecialPrice = default(bool), bool hasAcopQuantityBreak = default(bool), bool hasStdWebDiscount = default(bool), bool hasSpecialBid = default(bool), bool isExportableToCountry = default(bool), bool isDiscontinuedProduct = default(bool), bool isRefurbishedProduct = default(bool), bool isReturnableProduct = default(bool), bool isIngramShip = default(bool), bool isEnduserRequired = default(bool), bool isHeavyWeight = default(bool), bool hasLtl = default(bool), bool isClearanceProduct = default(bool), bool hasBundle = default(bool), bool isOversizeProduct = default(bool), bool isPreorderProduct = default(bool), bool isLicenseProduct = default(bool), bool isDirectshipOrderable = default(bool), bool isServiceSku = default(bool), bool isConfigurable = default(bool))
         {
             this.HasWarranty = hasWarranty;
             this.IsNewProduct = isNewProduct;
@@ -74,6 +75,7 @@ namespace xi.sdk.resellers.Model
             this.IsBackOrderAllowed = isBackOrderAllowed;
             this.IsShippedFromPartner = isShippedFromPartner;
             this.IsReplacementProduct = isReplacementProduct;
+            this.ReplacementType = replacementType;
             this.IsDirectship = isDirectship;
             this.IsDownloadable = isDownloadable;
             this.IsDigitalType = isDigitalType;
@@ -142,6 +144,12 @@ namespace xi.sdk.resellers.Model
         /// <value>Boolean that indicates whether product is a replacement product.</value>
         [DataMember(Name = "isReplacementProduct", EmitDefaultValue = true)]
         public bool IsReplacementProduct { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ReplacementType
+        /// </summary>
+        [DataMember(Name = "replacementType", EmitDefaultValue = false)]
+        public string ReplacementType { get; set; }
 
         /// <summary>
         /// Boolean that indicates whether it’s a direct ship product.
@@ -332,6 +340,7 @@ namespace xi.sdk.resellers.Model
             sb.Append("  IsBackOrderAllowed: ").Append(IsBackOrderAllowed).Append("\n");
             sb.Append("  IsShippedFromPartner: ").Append(IsShippedFromPartner).Append("\n");
             sb.Append("  IsReplacementProduct: ").Append(IsReplacementProduct).Append("\n");
+            sb.Append("  ReplacementType: ").Append(ReplacementType).Append("\n");
             sb.Append("  IsDirectship: ").Append(IsDirectship).Append("\n");
             sb.Append("  IsDownloadable: ").Append(IsDownloadable).Append("\n");
             sb.Append("  IsDigitalType: ").Append(IsDigitalType).Append("\n");

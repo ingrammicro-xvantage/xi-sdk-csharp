@@ -9079,6 +9079,7 @@ components:
           isPreorderProduct: true
           hasWarranty: true
           isDirectshipOrderable: true
+          replacementType: replacementType
           isNewProduct: true
           isDownloadable: true
           isClearanceProduct: true
@@ -14004,6 +14005,7 @@ components:
         isPreorderProduct: true
         hasWarranty: true
         isDirectshipOrderable: true
+        replacementType: replacementType
         isNewProduct: true
         isDownloadable: true
         isClearanceProduct: true
@@ -14050,6 +14052,8 @@ components:
         isReplacementProduct:
           description: Boolean that indicates whether product is a replacement product.
           type: boolean
+        replacementType:
+          type: string
         isDirectship:
           description: Boolean that indicates whether it’s a direct ship product.
           type: boolean
