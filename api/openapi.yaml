@@ -9115,11 +9115,11 @@ components:
           globalListPrice: globalListPrice
           itemCatalogCategory: itemCatalogCategory
         technicalSpecifications:
-        - headername: headername
+        - headerName: headerName
           attributevalue: attributevalue
           attributedisplay: attributedisplay
           attributename: attributename
-        - headername: headername
+        - headerName: headerName
           attributevalue: attributevalue
           attributedisplay: attributedisplay
           attributename: attributename
@@ -14173,12 +14173,12 @@ components:
       type: object
     ProductDetailResponse_technicalSpecifications_inner:
       example:
-        headername: headername
+        headerName: headerName
         attributevalue: attributevalue
         attributedisplay: attributedisplay
         attributename: attributename
       properties:
-        headername:
+        headerName:
           description: "Example : 'Basic'"
           type: string
         attributevalue:

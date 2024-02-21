@@ -35,13 +35,13 @@ namespace xi.sdk.resellers.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ProductDetailResponseTechnicalSpecificationsInner" /> class.
         /// </summary>
-        /// <param name="headername">Example : &#39;Basic&#39;.</param>
+        /// <param name="headerName">Example : &#39;Basic&#39;.</param>
         /// <param name="attributevalue">Example : &#39;LCD Monitor&#39;.</param>
         /// <param name="attributedisplay">Example : &#39;Basic|Product Type|LCD Monitor&#39;.</param>
         /// <param name="attributename">Example : &#39;Product Type&#39;.</param>
-        public ProductDetailResponseTechnicalSpecificationsInner(string headername = default(string), string attributevalue = default(string), string attributedisplay = default(string), string attributename = default(string))
+        public ProductDetailResponseTechnicalSpecificationsInner(string headerName = default(string), string attributevalue = default(string), string attributedisplay = default(string), string attributename = default(string))
         {
-            this.Headername = headername;
+            this.HeaderName = headerName;
             this.Attributevalue = attributevalue;
             this.Attributedisplay = attributedisplay;
             this.Attributename = attributename;
@@ -51,8 +51,8 @@ namespace xi.sdk.resellers.Model
         /// Example : &#39;Basic&#39;
         /// </summary>
         /// <value>Example : &#39;Basic&#39;</value>
-        [DataMember(Name = "headername", EmitDefaultValue = false)]
-        public string Headername { get; set; }
+        [DataMember(Name = "headerName", EmitDefaultValue = false)]
+        public string HeaderName { get; set; }
 
         /// <summary>
         /// Example : &#39;LCD Monitor&#39;
@@ -83,7 +83,7 @@ namespace xi.sdk.resellers.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class ProductDetailResponseTechnicalSpecificationsInner {\n");
-            sb.Append("  Headername: ").Append(Headername).Append("\n");
+            sb.Append("  HeaderName: ").Append(HeaderName).Append("\n");
             sb.Append("  Attributevalue: ").Append(Attributevalue).Append("\n");
             sb.Append("  Attributedisplay: ").Append(Attributedisplay).Append("\n");
             sb.Append("  Attributename: ").Append(Attributename).Append("\n");

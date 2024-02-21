@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Headername** | **string** | Example : &#39;Basic&#39; | [optional] 
+**HeaderName** | **string** | Example : &#39;Basic&#39; | [optional] 
 **Attributevalue** | **string** | Example : &#39;LCD Monitor&#39; | [optional] 
 **Attributedisplay** | **string** | Example : &#39;Basic|Product Type|LCD Monitor&#39; | [optional] 
 **Attributename** | **string** | Example : &#39;Product Type&#39; | [optional] 

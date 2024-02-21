@@ -55,12 +55,12 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'Headername'
+        /// Test the property 'HeaderName'
         /// </summary>
         [Fact]
-        public void HeadernameTest()
+        public void HeaderNameTest()
         {
-            // TODO unit test for the property 'Headername'
+            // TODO unit test for the property 'HeaderName'
         }
 
         /// <summary>
