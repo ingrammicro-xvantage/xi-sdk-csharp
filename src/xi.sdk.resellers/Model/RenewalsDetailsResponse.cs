@@ -50,7 +50,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="referenceNumber">referenceNumber.</param>
         /// <param name="products">products.</param>
         /// <param name="additionalAttributes">additionalAttributes.</param>
-        public RenewalsDetailsResponse(string renewalId = default(string), string ingramOrderNumber = default(string), string ingramOrderDate = default(string), string expirationDate = default(string), string ingramPurchaseOrderNumber = default(string), string customerOrderNumber = default(string), string endCustomerOrderNumber = default(string), string renewalValue = default(string), string endUser = default(string), string vendor = default(string), string status = default(string), RenewalsDetailsResponseEndUserInfo endUserInfo = default(RenewalsDetailsResponseEndUserInfo), RenewalsDetailsResponseReferenceNumber referenceNumber = default(RenewalsDetailsResponseReferenceNumber), RenewalsDetailsResponseProducts products = default(RenewalsDetailsResponseProducts), List<RenewalsDetailsResponseAdditionalAttributesInner> additionalAttributes = default(List<RenewalsDetailsResponseAdditionalAttributesInner>))
+        public RenewalsDetailsResponse(string renewalId = default(string), string ingramOrderNumber = default(string), string ingramOrderDate = default(string), string expirationDate = default(string), string ingramPurchaseOrderNumber = default(string), string customerOrderNumber = default(string), string endCustomerOrderNumber = default(string), string renewalValue = default(string), string endUser = default(string), string vendor = default(string), string status = default(string), RenewalsDetailsResponseEndUserInfo endUserInfo = default(RenewalsDetailsResponseEndUserInfo), RenewalsDetailsResponseReferenceNumber referenceNumber = default(RenewalsDetailsResponseReferenceNumber), List<RenewalsDetailsResponseProductsInner> products = default(List<RenewalsDetailsResponseProductsInner>), List<RenewalsDetailsResponseAdditionalAttributesInner> additionalAttributes = default(List<RenewalsDetailsResponseAdditionalAttributesInner>))
         {
             this.RenewalId = renewalId;
             this.IngramOrderNumber = ingramOrderNumber;
@@ -162,7 +162,7 @@ namespace xi.sdk.resellers.Model
         /// Gets or Sets Products
         /// </summary>
         [DataMember(Name = "products", EmitDefaultValue = false)]
-        public RenewalsDetailsResponseProducts Products { get; set; }
+        public List<RenewalsDetailsResponseProductsInner> Products { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalAttributes

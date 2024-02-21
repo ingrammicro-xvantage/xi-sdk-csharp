@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **Status** | **string** | The status of the renewal. | [optional] 
 **EndUserInfo** | [**RenewalsDetailsResponseEndUserInfo**](RenewalsDetailsResponseEndUserInfo.md) |  | [optional] 
 **ReferenceNumber** | [**RenewalsDetailsResponseReferenceNumber**](RenewalsDetailsResponseReferenceNumber.md) |  | [optional] 
-**Products** | [**RenewalsDetailsResponseProducts**](RenewalsDetailsResponseProducts.md) |  | [optional] 
+**Products** | [**List&lt;RenewalsDetailsResponseProductsInner&gt;**](RenewalsDetailsResponseProductsInner.md) |  | [optional] 
 **AdditionalAttributes** | [**List&lt;RenewalsDetailsResponseAdditionalAttributesInner&gt;**](RenewalsDetailsResponseAdditionalAttributesInner.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

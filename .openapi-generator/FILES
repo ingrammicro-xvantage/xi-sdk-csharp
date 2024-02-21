@@ -166,7 +166,7 @@ docs/RenewalsApi.md
 docs/RenewalsDetailsResponse.md
 docs/RenewalsDetailsResponseAdditionalAttributesInner.md
 docs/RenewalsDetailsResponseEndUserInfo.md
-docs/RenewalsDetailsResponseProducts.md
+docs/RenewalsDetailsResponseProductsInner.md
 docs/RenewalsDetailsResponseReferenceNumber.md
 docs/RenewalsSearchRequest.md
 docs/RenewalsSearchRequestDateType.md
@@ -359,7 +359,7 @@ src/xi.sdk.resellers.Test/Model/QuoteToOrderDetailsDTOVmfadditionalAttributesInn
 src/xi.sdk.resellers.Test/Model/QuoteToOrderResponseTests.cs
 src/xi.sdk.resellers.Test/Model/RenewalsDetailsResponseAdditionalAttributesInnerTests.cs
 src/xi.sdk.resellers.Test/Model/RenewalsDetailsResponseEndUserInfoTests.cs
-src/xi.sdk.resellers.Test/Model/RenewalsDetailsResponseProductsTests.cs
+src/xi.sdk.resellers.Test/Model/RenewalsDetailsResponseProductsInnerTests.cs
 src/xi.sdk.resellers.Test/Model/RenewalsDetailsResponseReferenceNumberTests.cs
 src/xi.sdk.resellers.Test/Model/RenewalsDetailsResponseTests.cs
 src/xi.sdk.resellers.Test/Model/RenewalsSearchRequestDateTypeEndDateTests.cs
@@ -570,7 +570,7 @@ src/xi.sdk.resellers/Model/QuoteToOrderResponse.cs
 src/xi.sdk.resellers/Model/RenewalsDetailsResponse.cs
 src/xi.sdk.resellers/Model/RenewalsDetailsResponseAdditionalAttributesInner.cs
 src/xi.sdk.resellers/Model/RenewalsDetailsResponseEndUserInfo.cs
-src/xi.sdk.resellers/Model/RenewalsDetailsResponseProducts.cs
+src/xi.sdk.resellers/Model/RenewalsDetailsResponseProductsInner.cs
 src/xi.sdk.resellers/Model/RenewalsDetailsResponseReferenceNumber.cs
 src/xi.sdk.resellers/Model/RenewalsSearchRequest.cs
 src/xi.sdk.resellers/Model/RenewalsSearchRequestDateType.cs

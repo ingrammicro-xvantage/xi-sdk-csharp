@@ -329,7 +329,7 @@ Class | Method | HTTP request | Description
  - [Model.RenewalsDetailsResponse](docs/RenewalsDetailsResponse.md)
  - [Model.RenewalsDetailsResponseAdditionalAttributesInner](docs/RenewalsDetailsResponseAdditionalAttributesInner.md)
  - [Model.RenewalsDetailsResponseEndUserInfo](docs/RenewalsDetailsResponseEndUserInfo.md)
- - [Model.RenewalsDetailsResponseProducts](docs/RenewalsDetailsResponseProducts.md)
+ - [Model.RenewalsDetailsResponseProductsInner](docs/RenewalsDetailsResponseProductsInner.md)
  - [Model.RenewalsDetailsResponseReferenceNumber](docs/RenewalsDetailsResponseReferenceNumber.md)
  - [Model.RenewalsSearchRequest](docs/RenewalsSearchRequest.md)
  - [Model.RenewalsSearchRequestDateType](docs/RenewalsSearchRequestDateType.md)

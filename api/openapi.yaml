@@ -9290,11 +9290,19 @@ components:
         endCustomerOrderNumber: endCustomerOrderNumber
         customerOrderNumber: customerOrderNumber
         products:
-          ingramPartNumber: ingramPartNumber
+        - ingramPartNumber: ingramPartNumber
           unitPrice: 0.8008281904610115
           manufacturerPartNumber: manufacturerPartNumber
           isConsolidated: isConsolidated
-          quantity: 6
+          quantity: quantity
+          ingramLineNumber: ingramLineNumber
+          vendorPartNumber: vendorPartNumber
+          productDescription: productDescription
+        - ingramPartNumber: ingramPartNumber
+          unitPrice: 0.8008281904610115
+          manufacturerPartNumber: manufacturerPartNumber
+          isConsolidated: isConsolidated
+          quantity: quantity
           ingramLineNumber: ingramLineNumber
           vendorPartNumber: vendorPartNumber
           productDescription: productDescription
@@ -9359,7 +9367,9 @@ components:
         referenceNumber:
           $ref: '#/components/schemas/renewalsDetailsResponse_referenceNumber'
         products:
-          $ref: '#/components/schemas/renewalsDetailsResponse_products'
+          items:
+            $ref: '#/components/schemas/renewalsDetailsResponse_products_inner'
+          type: array
         additionalAttributes:
           items:
             $ref: '#/components/schemas/renewalsDetailsResponse_additionalAttributes_inner'
@@ -14436,13 +14446,13 @@ components:
           description: Quote number for the renewal.
           type: string
       type: object
-    renewalsDetailsResponse_products:
+    renewalsDetailsResponse_products_inner:
       example:
         ingramPartNumber: ingramPartNumber
         unitPrice: 0.8008281904610115
         manufacturerPartNumber: manufacturerPartNumber
         isConsolidated: isConsolidated
-        quantity: 6
+        quantity: quantity
         ingramLineNumber: ingramLineNumber
         vendorPartNumber: vendorPartNumber
         productDescription: productDescription
@@ -14462,13 +14472,13 @@ components:
         manufacturerPartNumber:
           description: The manufacturer's part number for the line item.
           type: string
+        quantity:
+          description: The quantity of the line item.
+          type: string
         unitPrice:
           description: The unit price of the line item.
           format: decimal
           type: number
-        quantity:
-          description: The quantity of the line item.
-          type: integer
         isConsolidated:
           description: Is the line item consolidated? Yes or No.
           type: string
