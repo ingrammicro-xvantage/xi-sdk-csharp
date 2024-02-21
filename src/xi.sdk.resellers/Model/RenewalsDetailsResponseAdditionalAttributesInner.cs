@@ -40,7 +40,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="startDate">The attribute start date..</param>
         /// <param name="expirationDate">The attribute expiration date..</param>
         /// <param name="isConsolidated">Is the line item consolidated? Yes or No..</param>
-        public RenewalsDetailsResponseAdditionalAttributesInner(string attributeDescription = default(string), string attributeValue = default(string), DateOnly startDate = default(DateOnly), string expirationDate = default(string), string isConsolidated = default(string))
+        public RenewalsDetailsResponseAdditionalAttributesInner(string attributeDescription = default(string), string attributeValue = default(string), string startDate = default(string), string expirationDate = default(string), string isConsolidated = default(string))
         {
             this.AttributeDescription = attributeDescription;
             this.AttributeValue = attributeValue;
@@ -68,8 +68,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>The attribute start date.</value>
         [DataMember(Name = "startDate", EmitDefaultValue = false)]
-        [JsonConverter(typeof(OpenAPIDateConverter))]
-        public DateOnly StartDate { get; set; }
+        public string StartDate { get; set; }
 
         /// <summary>
         /// The attribute expiration date.

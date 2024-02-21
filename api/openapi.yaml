@@ -9323,12 +9323,12 @@ components:
         - isConsolidated: isConsolidated
           attributeValue: attributeValue
           attributeDescription: attributeDescription
-          startDate: 2000-01-23
+          startDate: startDate
           expirationDate: expirationDate
         - isConsolidated: isConsolidated
           attributeValue: attributeValue
           attributeDescription: attributeDescription
-          startDate: 2000-01-23
+          startDate: startDate
           expirationDate: expirationDate
       properties:
         renewalId:
@@ -14498,7 +14498,7 @@ components:
         isConsolidated: isConsolidated
         attributeValue: attributeValue
         attributeDescription: attributeDescription
-        startDate: 2000-01-23
+        startDate: startDate
         expirationDate: expirationDate
       properties:
         attributeDescription:
@@ -14509,7 +14509,6 @@ components:
           type: string
         startDate:
           description: The attribute start date.
-          format: date
           type: string
         expirationDate:
           description: The attribute expiration date.

@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AttributeDescription** | **string** | The description of the additional attribute. | [optional] 
 **AttributeValue** | **string** | The value of the additional attribute. | [optional] 
-**StartDate** | **DateOnly** | The attribute start date. | [optional] 
+**StartDate** | **string** | The attribute start date. | [optional] 
 **ExpirationDate** | **string** | The attribute expiration date. | [optional] 
 **IsConsolidated** | **string** | Is the line item consolidated? Yes or No. | [optional] 
 
