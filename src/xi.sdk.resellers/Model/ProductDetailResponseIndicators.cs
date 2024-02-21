@@ -50,10 +50,11 @@ namespace xi.sdk.resellers.Model
         /// <param name="hasAcopSpecialPrice">Boolean that indicates whether product has any ACOP special price..</param>
         /// <param name="hasAcopQuantityBreak">Boolean that indicates whether product has any ACOP quantity break..</param>
         /// <param name="hasStdWebDiscount">Boolean that indicates whether product has any standard web discount..</param>
+        /// <param name="hasAcopWebDiscount">hasAcopWebDiscount.</param>
         /// <param name="hasSpecialBid">Boolean that indicates whether product has any special bid..</param>
         /// <param name="isExportableToCountry">Boolean that indicates whether product is exportable..</param>
         /// <param name="isDiscontinuedProduct">Boolean that indicates whether it’s a discontinued product..</param>
-        /// <param name="isRefurbishedProduct">Boolean that indicates whether product is refurbished..</param>
+        /// <param name="isRefurbished">Boolean that indicates whether product is refurbished..</param>
         /// <param name="isReturnableProduct">Boolean that indicates if the product can be returned..</param>
         /// <param name="isIngramShip">Boolean that indicates whether it’s a Ingram shipped product..</param>
         /// <param name="isEnduserRequired">Do vendor requires Enduser name required to create an order..</param>
@@ -67,7 +68,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="isDirectshipOrderable">Boolean that indicates whether product is directship orderable..</param>
         /// <param name="isServiceSku">Boolean that indicates whether product is service SKU..</param>
         /// <param name="isConfigurable">Boolean that indicates whether product is configurable..</param>
-        public ProductDetailResponseIndicators(bool hasWarranty = default(bool), bool isNewProduct = default(bool), bool hasReturnLimits = default(bool), bool isBackOrderAllowed = default(bool), bool isShippedFromPartner = default(bool), bool isReplacementProduct = default(bool), string replacementType = default(string), bool isDirectship = default(bool), bool isDownloadable = default(bool), bool isDigitalType = default(bool), string skuType = default(string), bool hasStdSpecialPrice = default(bool), bool hasAcopSpecialPrice = default(bool), bool hasAcopQuantityBreak = default(bool), bool hasStdWebDiscount = default(bool), bool hasSpecialBid = default(bool), bool isExportableToCountry = default(bool), bool isDiscontinuedProduct = default(bool), bool isRefurbishedProduct = default(bool), bool isReturnableProduct = default(bool), bool isIngramShip = default(bool), bool isEnduserRequired = default(bool), bool isHeavyWeight = default(bool), bool hasLtl = default(bool), bool isClearanceProduct = default(bool), bool hasBundle = default(bool), bool isOversizeProduct = default(bool), bool isPreorderProduct = default(bool), bool isLicenseProduct = default(bool), bool isDirectshipOrderable = default(bool), bool isServiceSku = default(bool), bool isConfigurable = default(bool))
+        public ProductDetailResponseIndicators(bool hasWarranty = default(bool), bool isNewProduct = default(bool), bool hasReturnLimits = default(bool), bool isBackOrderAllowed = default(bool), bool isShippedFromPartner = default(bool), bool isReplacementProduct = default(bool), string replacementType = default(string), bool isDirectship = default(bool), bool isDownloadable = default(bool), bool isDigitalType = default(bool), string skuType = default(string), bool hasStdSpecialPrice = default(bool), bool hasAcopSpecialPrice = default(bool), bool hasAcopQuantityBreak = default(bool), bool hasStdWebDiscount = default(bool), bool hasAcopWebDiscount = default(bool), bool hasSpecialBid = default(bool), bool isExportableToCountry = default(bool), bool isDiscontinuedProduct = default(bool), bool isRefurbished = default(bool), bool isReturnableProduct = default(bool), bool isIngramShip = default(bool), bool isEnduserRequired = default(bool), bool isHeavyWeight = default(bool), bool hasLtl = default(bool), bool isClearanceProduct = default(bool), bool hasBundle = default(bool), bool isOversizeProduct = default(bool), bool isPreorderProduct = default(bool), bool isLicenseProduct = default(bool), bool isDirectshipOrderable = default(bool), bool isServiceSku = default(bool), bool isConfigurable = default(bool))
         {
             this.HasWarranty = hasWarranty;
             this.IsNewProduct = isNewProduct;
@@ -84,10 +85,11 @@ namespace xi.sdk.resellers.Model
             this.HasAcopSpecialPrice = hasAcopSpecialPrice;
             this.HasAcopQuantityBreak = hasAcopQuantityBreak;
             this.HasStdWebDiscount = hasStdWebDiscount;
+            this.HasAcopWebDiscount = hasAcopWebDiscount;
             this.HasSpecialBid = hasSpecialBid;
             this.IsExportableToCountry = isExportableToCountry;
             this.IsDiscontinuedProduct = isDiscontinuedProduct;
-            this.IsRefurbishedProduct = isRefurbishedProduct;
+            this.IsRefurbished = isRefurbished;
             this.IsReturnableProduct = isReturnableProduct;
             this.IsIngramShip = isIngramShip;
             this.IsEnduserRequired = isEnduserRequired;
@@ -208,6 +210,12 @@ namespace xi.sdk.resellers.Model
         public bool HasStdWebDiscount { get; set; }
 
         /// <summary>
+        /// Gets or Sets HasAcopWebDiscount
+        /// </summary>
+        [DataMember(Name = "hasAcopWebDiscount", EmitDefaultValue = true)]
+        public bool HasAcopWebDiscount { get; set; }
+
+        /// <summary>
         /// Boolean that indicates whether product has any special bid.
         /// </summary>
         /// <value>Boolean that indicates whether product has any special bid.</value>
@@ -232,8 +240,8 @@ namespace xi.sdk.resellers.Model
         /// Boolean that indicates whether product is refurbished.
         /// </summary>
         /// <value>Boolean that indicates whether product is refurbished.</value>
-        [DataMember(Name = "isRefurbishedProduct", EmitDefaultValue = true)]
-        public bool IsRefurbishedProduct { get; set; }
+        [DataMember(Name = "isRefurbished", EmitDefaultValue = true)]
+        public bool IsRefurbished { get; set; }
 
         /// <summary>
         /// Boolean that indicates if the product can be returned.
@@ -349,10 +357,11 @@ namespace xi.sdk.resellers.Model
             sb.Append("  HasAcopSpecialPrice: ").Append(HasAcopSpecialPrice).Append("\n");
             sb.Append("  HasAcopQuantityBreak: ").Append(HasAcopQuantityBreak).Append("\n");
             sb.Append("  HasStdWebDiscount: ").Append(HasStdWebDiscount).Append("\n");
+            sb.Append("  HasAcopWebDiscount: ").Append(HasAcopWebDiscount).Append("\n");
             sb.Append("  HasSpecialBid: ").Append(HasSpecialBid).Append("\n");
             sb.Append("  IsExportableToCountry: ").Append(IsExportableToCountry).Append("\n");
             sb.Append("  IsDiscontinuedProduct: ").Append(IsDiscontinuedProduct).Append("\n");
-            sb.Append("  IsRefurbishedProduct: ").Append(IsRefurbishedProduct).Append("\n");
+            sb.Append("  IsRefurbished: ").Append(IsRefurbished).Append("\n");
             sb.Append("  IsReturnableProduct: ").Append(IsReturnableProduct).Append("\n");
             sb.Append("  IsIngramShip: ").Append(IsIngramShip).Append("\n");
             sb.Append("  IsEnduserRequired: ").Append(IsEnduserRequired).Append("\n");
