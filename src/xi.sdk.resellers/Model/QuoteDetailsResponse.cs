@@ -42,11 +42,12 @@ namespace xi.sdk.resellers.Model
         /// <param name="lastModifiedDate">Date the Quote was last updated or modified..</param>
         /// <param name="ingramQuoteExpiryDate">Quote expiration date..</param>
         /// <param name="currencyCode">Three letter currency code..</param>
-        /// <param name="closingReason">Closing Reason for quote..</param>
         /// <param name="specialBidId">Price discount identifyer to specify  a pricing discount that has been applied to the quote. If present - the priceDeviationStartDate and priceDeviationExpiryDate must be presented. Cisco refers to this as a Dart.</param>
         /// <param name="specialBidEffectiveDate">If price discount has been applied to the quote - the starting date the discount begins..</param>
         /// <param name="specialBidExpirationDate">If a price discount has been applied to the quote - The date the discount expires and will no longer be applicable..</param>
         /// <param name="status">This refers to the primary status of the quote.  API responses will return.</param>
+        /// <param name="closingReason">Closing Reason for quote..</param>
+        /// <param name="dateClosed">dateClosed.</param>
         /// <param name="customerNeed">Details related to the customer&#39;s request for the quote entered by the sales representative or system generated..</param>
         /// <param name="proposedSolution">Ingram Micro proposed solution and summary of quote..</param>
         /// <param name="introPreamble">Introductory paragraph included in each quote.  Legally required - must be included when presenting the quote details..</param>
@@ -55,7 +56,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="quoteType">quoteType.</param>
         /// <param name="leaseInfo">Lease information..</param>
         /// <param name="leasingInstructions">Leasing information.</param>
-        /// <param name="quoteSybType">quoteSybType.</param>
+        /// <param name="quoteSubType">quoteSubType.</param>
         /// <param name="resellerInfo">resellerInfo.</param>
         /// <param name="endUserInfo">endUserInfo.</param>
         /// <param name="products">products.</param>
@@ -64,7 +65,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="quantityTotal">Total quantity of all items in the quote..</param>
         /// <param name="extendedQuotePriceTotal">Total amount of quoted price for all products in the quote including both solution products and suggested products..</param>
         /// <param name="additionalAttributes">additionalAttributes.</param>
-        public QuoteDetailsResponse(string quoteName = default(string), string quoteNumber = default(string), string revision = default(string), string ingramQuoteDate = default(string), string lastModifiedDate = default(string), string ingramQuoteExpiryDate = default(string), string currencyCode = default(string), string closingReason = default(string), string specialBidId = default(string), string specialBidEffectiveDate = default(string), string specialBidExpirationDate = default(string), string status = default(string), string customerNeed = default(string), string proposedSolution = default(string), string introPreamble = default(string), string purchaseInstructions = default(string), string legalTerms = default(string), string quoteType = default(string), string leaseInfo = default(string), string leasingInstructions = default(string), string quoteSybType = default(string), QuoteDetailsResponseResellerInfo resellerInfo = default(QuoteDetailsResponseResellerInfo), QuoteDetailsResponseEndUserInfo endUserInfo = default(QuoteDetailsResponseEndUserInfo), List<QuoteDetailsResponseProductsInner> products = default(List<QuoteDetailsResponseProductsInner>), int productsCount = default(int), int extendedMsrpTotal = default(int), int quantityTotal = default(int), int extendedQuotePriceTotal = default(int), List<QuoteDetailsResponseAdditionalAttributesInner> additionalAttributes = default(List<QuoteDetailsResponseAdditionalAttributesInner>))
+        public QuoteDetailsResponse(string quoteName = default(string), string quoteNumber = default(string), string revision = default(string), string ingramQuoteDate = default(string), string lastModifiedDate = default(string), string ingramQuoteExpiryDate = default(string), string currencyCode = default(string), string specialBidId = default(string), string specialBidEffectiveDate = default(string), string specialBidExpirationDate = default(string), string status = default(string), string closingReason = default(string), string dateClosed = default(string), string customerNeed = default(string), string proposedSolution = default(string), string introPreamble = default(string), string purchaseInstructions = default(string), string legalTerms = default(string), string quoteType = default(string), string leaseInfo = default(string), string leasingInstructions = default(string), string quoteSubType = default(string), QuoteDetailsResponseResellerInfo resellerInfo = default(QuoteDetailsResponseResellerInfo), QuoteDetailsResponseEndUserInfo endUserInfo = default(QuoteDetailsResponseEndUserInfo), List<QuoteDetailsResponseProductsInner> products = default(List<QuoteDetailsResponseProductsInner>), int productsCount = default(int), int extendedMsrpTotal = default(int), int quantityTotal = default(int), int extendedQuotePriceTotal = default(int), List<QuoteDetailsResponseAdditionalAttributesInner> additionalAttributes = default(List<QuoteDetailsResponseAdditionalAttributesInner>))
         {
             this.QuoteName = quoteName;
             this.QuoteNumber = quoteNumber;
@@ -73,11 +74,12 @@ namespace xi.sdk.resellers.Model
             this.LastModifiedDate = lastModifiedDate;
             this.IngramQuoteExpiryDate = ingramQuoteExpiryDate;
             this.CurrencyCode = currencyCode;
-            this.ClosingReason = closingReason;
             this.SpecialBidId = specialBidId;
             this.SpecialBidEffectiveDate = specialBidEffectiveDate;
             this.SpecialBidExpirationDate = specialBidExpirationDate;
             this.Status = status;
+            this.ClosingReason = closingReason;
+            this.DateClosed = dateClosed;
             this.CustomerNeed = customerNeed;
             this.ProposedSolution = proposedSolution;
             this.IntroPreamble = introPreamble;
@@ -86,7 +88,7 @@ namespace xi.sdk.resellers.Model
             this.QuoteType = quoteType;
             this.LeaseInfo = leaseInfo;
             this.LeasingInstructions = leasingInstructions;
-            this.QuoteSybType = quoteSybType;
+            this.QuoteSubType = quoteSubType;
             this.ResellerInfo = resellerInfo;
             this.EndUserInfo = endUserInfo;
             this.Products = products;
@@ -147,13 +149,6 @@ namespace xi.sdk.resellers.Model
         public string CurrencyCode { get; set; }
 
         /// <summary>
-        /// Closing Reason for quote.
-        /// </summary>
-        /// <value>Closing Reason for quote.</value>
-        [DataMember(Name = "closingReason", EmitDefaultValue = false)]
-        public string ClosingReason { get; set; }
-
-        /// <summary>
         /// Price discount identifyer to specify  a pricing discount that has been applied to the quote. If present - the priceDeviationStartDate and priceDeviationExpiryDate must be presented. Cisco refers to this as a Dart
         /// </summary>
         /// <value>Price discount identifyer to specify  a pricing discount that has been applied to the quote. If present - the priceDeviationStartDate and priceDeviationExpiryDate must be presented. Cisco refers to this as a Dart</value>
@@ -180,6 +175,19 @@ namespace xi.sdk.resellers.Model
         /// <value>This refers to the primary status of the quote.  API responses will return</value>
         [DataMember(Name = "status", EmitDefaultValue = false)]
         public string Status { get; set; }
+
+        /// <summary>
+        /// Closing Reason for quote.
+        /// </summary>
+        /// <value>Closing Reason for quote.</value>
+        [DataMember(Name = "closingReason", EmitDefaultValue = false)]
+        public string ClosingReason { get; set; }
+
+        /// <summary>
+        /// Gets or Sets DateClosed
+        /// </summary>
+        [DataMember(Name = "dateClosed", EmitDefaultValue = false)]
+        public string DateClosed { get; set; }
 
         /// <summary>
         /// Details related to the customer&#39;s request for the quote entered by the sales representative or system generated.
@@ -237,10 +245,10 @@ namespace xi.sdk.resellers.Model
         public string LeasingInstructions { get; set; }
 
         /// <summary>
-        /// Gets or Sets QuoteSybType
+        /// Gets or Sets QuoteSubType
         /// </summary>
-        [DataMember(Name = "quoteSybType", EmitDefaultValue = false)]
-        public string QuoteSybType { get; set; }
+        [DataMember(Name = "quoteSubType", EmitDefaultValue = false)]
+        public string QuoteSubType { get; set; }
 
         /// <summary>
         /// Gets or Sets ResellerInfo
@@ -309,11 +317,12 @@ namespace xi.sdk.resellers.Model
             sb.Append("  LastModifiedDate: ").Append(LastModifiedDate).Append("\n");
             sb.Append("  IngramQuoteExpiryDate: ").Append(IngramQuoteExpiryDate).Append("\n");
             sb.Append("  CurrencyCode: ").Append(CurrencyCode).Append("\n");
-            sb.Append("  ClosingReason: ").Append(ClosingReason).Append("\n");
             sb.Append("  SpecialBidId: ").Append(SpecialBidId).Append("\n");
             sb.Append("  SpecialBidEffectiveDate: ").Append(SpecialBidEffectiveDate).Append("\n");
             sb.Append("  SpecialBidExpirationDate: ").Append(SpecialBidExpirationDate).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("  ClosingReason: ").Append(ClosingReason).Append("\n");
+            sb.Append("  DateClosed: ").Append(DateClosed).Append("\n");
             sb.Append("  CustomerNeed: ").Append(CustomerNeed).Append("\n");
             sb.Append("  ProposedSolution: ").Append(ProposedSolution).Append("\n");
             sb.Append("  IntroPreamble: ").Append(IntroPreamble).Append("\n");
@@ -322,7 +331,7 @@ namespace xi.sdk.resellers.Model
             sb.Append("  QuoteType: ").Append(QuoteType).Append("\n");
             sb.Append("  LeaseInfo: ").Append(LeaseInfo).Append("\n");
             sb.Append("  LeasingInstructions: ").Append(LeasingInstructions).Append("\n");
-            sb.Append("  QuoteSybType: ").Append(QuoteSybType).Append("\n");
+            sb.Append("  QuoteSubType: ").Append(QuoteSubType).Append("\n");
             sb.Append("  ResellerInfo: ").Append(ResellerInfo).Append("\n");
             sb.Append("  EndUserInfo: ").Append(EndUserInfo).Append("\n");
             sb.Append("  Products: ").Append(Products).Append("\n");

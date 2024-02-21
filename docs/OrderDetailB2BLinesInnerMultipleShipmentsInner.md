@@ -5,9 +5,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **LineNumber** | **string** | Line number. | [optional] 
-**RequestedQuantity** | **string** | Requested quantity. | [optional] 
-**ConfirmedQuantity** | **string** | Confirmed quantity. | [optional] 
-**DataType** | **string** | Date type. Example Single or multiple dates. | [optional] 
+**RequestedQuantity** | **int** | Requested quantity. | [optional] 
+**ConfirmedQuantity** | **int** | Confirmed quantity. | [optional] 
+**DateType** | **string** | Date type. Example Single or multiple dates. | [optional] 
 **DateRange** | [**OrderDetailB2BLinesInnerEstimatedDatesInnerShipShipDateRange**](OrderDetailB2BLinesInnerEstimatedDatesInnerShipShipDateRange.md) |  | [optional] 
 **Source** | **string** | Source. | [optional] 
 **Description** | **string** | Description. | [optional] 
