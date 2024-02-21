@@ -126,7 +126,7 @@ namespace xi.sdk.resellers.Model
         /// Boolean that indicates whether back order is allowed for the product.
         /// </summary>
         /// <value>Boolean that indicates whether back order is allowed for the product.</value>
-        [DataMember(Name = "IsBackOrderAllowed", EmitDefaultValue = true)]
+        [DataMember(Name = "isBackOrderAllowed", EmitDefaultValue = true)]
         public bool IsBackOrderAllowed { get; set; }
 
         /// <summary>
