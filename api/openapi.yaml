@@ -11239,7 +11239,7 @@ components:
         currencyCode: currencyCode
         freightCharges: 1.4658129805029452
         paymentTerms: paymentTerms
-        ingramOrderDate: 2000-01-23T04:56:07.000+00:00
+        ingramOrderDate: ingramOrderDate
         additionalAttributes:
         - attributeValue: attributeValue
           attributeName: attributeName
@@ -11251,7 +11251,6 @@ components:
           type: string
         ingramOrderDate:
           description: The IngramMicro sales order date.
-          format: date-time
           type: string
         orderType:
           description: The IngramMicro sales order type.

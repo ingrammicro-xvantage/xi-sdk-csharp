@@ -59,7 +59,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="lines">lines.</param>
         /// <param name="miscellaneousCharges">miscellaneousCharges.</param>
         /// <param name="additionalAttributes">additionalAttributes.</param>
-        public OrderDetailB2B(string ingramOrderNumber = default(string), DateTime ingramOrderDate = default(DateTime), string orderType = default(string), string customerOrderNumber = default(string), string endCustomerOrderNumber = default(string), string webOrderId = default(string), string vendorSalesOrderNumber = default(string), string ingramPurchaseOrderNumber = default(string), string orderStatus = default(string), double orderTotal = default(double), double orderSubTotal = default(double), double freightCharges = default(double), string currencyCode = default(string), double totalWeight = default(double), double totalTax = default(double), double totalFees = default(double), string paymentTerms = default(string), string notes = default(string), OrderDetailB2BBillToInfo billToInfo = default(OrderDetailB2BBillToInfo), OrderDetailB2BShipToInfo shipToInfo = default(OrderDetailB2BShipToInfo), OrderDetailB2BEndUserInfo endUserInfo = default(OrderDetailB2BEndUserInfo), List<OrderDetailB2BLinesInner> lines = default(List<OrderDetailB2BLinesInner>), List<OrderDetailB2BMiscellaneousChargesInner> miscellaneousCharges = default(List<OrderDetailB2BMiscellaneousChargesInner>), List<OrderDetailB2BAdditionalAttributesInner> additionalAttributes = default(List<OrderDetailB2BAdditionalAttributesInner>))
+        public OrderDetailB2B(string ingramOrderNumber = default(string), string ingramOrderDate = default(string), string orderType = default(string), string customerOrderNumber = default(string), string endCustomerOrderNumber = default(string), string webOrderId = default(string), string vendorSalesOrderNumber = default(string), string ingramPurchaseOrderNumber = default(string), string orderStatus = default(string), double orderTotal = default(double), double orderSubTotal = default(double), double freightCharges = default(double), string currencyCode = default(string), double totalWeight = default(double), double totalTax = default(double), double totalFees = default(double), string paymentTerms = default(string), string notes = default(string), OrderDetailB2BBillToInfo billToInfo = default(OrderDetailB2BBillToInfo), OrderDetailB2BShipToInfo shipToInfo = default(OrderDetailB2BShipToInfo), OrderDetailB2BEndUserInfo endUserInfo = default(OrderDetailB2BEndUserInfo), List<OrderDetailB2BLinesInner> lines = default(List<OrderDetailB2BLinesInner>), List<OrderDetailB2BMiscellaneousChargesInner> miscellaneousCharges = default(List<OrderDetailB2BMiscellaneousChargesInner>), List<OrderDetailB2BAdditionalAttributesInner> additionalAttributes = default(List<OrderDetailB2BAdditionalAttributesInner>))
         {
             this.IngramOrderNumber = ingramOrderNumber;
             this.IngramOrderDate = ingramOrderDate;
@@ -99,7 +99,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>The IngramMicro sales order date.</value>
         [DataMember(Name = "ingramOrderDate", EmitDefaultValue = false)]
-        public DateTime IngramOrderDate { get; set; }
+        public string IngramOrderDate { get; set; }
 
         /// <summary>
         /// The IngramMicro sales order type.
