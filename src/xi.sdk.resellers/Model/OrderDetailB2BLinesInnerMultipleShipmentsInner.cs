@@ -38,18 +38,18 @@ namespace xi.sdk.resellers.Model
         /// <param name="lineNumber">Line number..</param>
         /// <param name="requestedQuantity">Requested quantity..</param>
         /// <param name="confirmedQuantity">Confirmed quantity..</param>
-        /// <param name="dataType">Date type. Example Single or multiple dates..</param>
+        /// <param name="dateType">Date type. Example Single or multiple dates..</param>
         /// <param name="dateRange">dateRange.</param>
         /// <param name="source">Source..</param>
         /// <param name="description">Description..</param>
         /// <param name="date">Date..</param>
         /// <param name="deliveryDate">Delivery date..</param>
-        public OrderDetailB2BLinesInnerMultipleShipmentsInner(string lineNumber = default(string), string requestedQuantity = default(string), string confirmedQuantity = default(string), string dataType = default(string), OrderDetailB2BLinesInnerEstimatedDatesInnerShipShipDateRange dateRange = default(OrderDetailB2BLinesInnerEstimatedDatesInnerShipShipDateRange), string source = default(string), string description = default(string), string date = default(string), string deliveryDate = default(string))
+        public OrderDetailB2BLinesInnerMultipleShipmentsInner(string lineNumber = default(string), int requestedQuantity = default(int), int confirmedQuantity = default(int), string dateType = default(string), OrderDetailB2BLinesInnerEstimatedDatesInnerShipShipDateRange dateRange = default(OrderDetailB2BLinesInnerEstimatedDatesInnerShipShipDateRange), string source = default(string), string description = default(string), string date = default(string), string deliveryDate = default(string))
         {
             this.LineNumber = lineNumber;
             this.RequestedQuantity = requestedQuantity;
             this.ConfirmedQuantity = confirmedQuantity;
-            this.DataType = dataType;
+            this.DateType = dateType;
             this.DateRange = dateRange;
             this.Source = source;
             this.Description = description;
@@ -69,21 +69,21 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>Requested quantity.</value>
         [DataMember(Name = "requestedQuantity", EmitDefaultValue = false)]
-        public string RequestedQuantity { get; set; }
+        public int RequestedQuantity { get; set; }
 
         /// <summary>
         /// Confirmed quantity.
         /// </summary>
         /// <value>Confirmed quantity.</value>
         [DataMember(Name = "confirmedQuantity", EmitDefaultValue = false)]
-        public string ConfirmedQuantity { get; set; }
+        public int ConfirmedQuantity { get; set; }
 
         /// <summary>
         /// Date type. Example Single or multiple dates.
         /// </summary>
         /// <value>Date type. Example Single or multiple dates.</value>
-        [DataMember(Name = "dataType", EmitDefaultValue = false)]
-        public string DataType { get; set; }
+        [DataMember(Name = "dateType", EmitDefaultValue = false)]
+        public string DateType { get; set; }
 
         /// <summary>
         /// Gets or Sets DateRange
@@ -130,7 +130,7 @@ namespace xi.sdk.resellers.Model
             sb.Append("  LineNumber: ").Append(LineNumber).Append("\n");
             sb.Append("  RequestedQuantity: ").Append(RequestedQuantity).Append("\n");
             sb.Append("  ConfirmedQuantity: ").Append(ConfirmedQuantity).Append("\n");
-            sb.Append("  DataType: ").Append(DataType).Append("\n");
+            sb.Append("  DateType: ").Append(DateType).Append("\n");
             sb.Append("  DateRange: ").Append(DateRange).Append("\n");
             sb.Append("  Source: ").Append(Source).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");

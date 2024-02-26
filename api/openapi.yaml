@@ -8095,18 +8095,7 @@ components:
       additionalProperties: false
       example:
         endUserInfo:
-        - phoneNumber: phoneNumber
-          city: city
-          countryCode: countryCode
-          companyName: companyName
-          contact: contact
-          postalCode: postalCode
-          addressLine1: addressLine1
-          addressLine2: addressLine2
-          addressLine3: addressLine3
-          state: state
-          email: email
-        - phoneNumber: phoneNumber
+          phoneNumber: phoneNumber
           city: city
           countryCode: countryCode
           companyName: companyName
@@ -8118,18 +8107,7 @@ components:
           state: state
           email: email
         shipToInfo:
-        - city: city
-          countryCode: countryCode
-          companyName: companyName
-          contact: contact
-          postalCode: postalCode
-          addressLine1: addressLine1
-          addressLine2: addressLine2
-          addressLine3: addressLine3
-          state: state
-          email: email
-          addressId: addressId
-        - city: city
+          city: city
           countryCode: countryCode
           companyName: companyName
           contact: contact
@@ -8202,17 +8180,9 @@ components:
           nullable: true
           type: string
         endUserInfo:
-          description: The contact information for the end user/customer provided
-            by the reseller. Used to determine pricing and discounts.
-          items:
-            $ref: '#/components/schemas/QuoteToOrderDetailsDTO_endUserInfo_inner'
-          type: array
+          $ref: '#/components/schemas/QuoteToOrderDetailsDTO_endUserInfo'
         shipToInfo:
-          description: The shipping information provided by the reseller for order
-            delivery.
-          items:
-            $ref: '#/components/schemas/QuoteToOrderDetailsDTO_shipToInfo_inner'
-          type: array
+          $ref: '#/components/schemas/QuoteToOrderDetailsDTO_shipToInfo'
         additionalAttributes:
           description: Additional order create attributes.
           items:
@@ -9323,13 +9293,13 @@ components:
         - isConsolidated: isConsolidated
           attributeValue: attributeValue
           attributeDescription: attributeDescription
-          startDate: 2000-01-23
-          expirationDate: 2000-01-23
+          startDate: startDate
+          expirationDate: expirationDate
         - isConsolidated: isConsolidated
           attributeValue: attributeValue
           attributeDescription: attributeDescription
-          startDate: 2000-01-23
-          expirationDate: 2000-01-23
+          startDate: startDate
+          expirationDate: expirationDate
       properties:
         renewalId:
           description: Unique Ingram renewal ID.
@@ -9874,18 +9844,20 @@ components:
     QuoteDetailsResponse:
       example:
         quantityTotal: 2
+        quoteSubType: quoteSubType
         leaseInfo: leaseInfo
+        dateClosed: dateClosed
         quoteType: quoteType
         products:
         - ingramPartNumber: ingramPartNumber
-          CoO: CoO
+          coo: coo
           vpnCategory: vpnCategory
           quantity: 0
           notes: notes
           description: description
           weight: 6
           vendorName: vendorName
-          EAN: EAN
+          ean: ean
           terms: terms
           price:
             quotePrice: 1
@@ -9900,14 +9872,14 @@ components:
           quoteProductsSupplierPartAuxiliaryId: quoteProductsSupplierPartAuxiliaryId
           isSuggestionProduct: true
         - ingramPartNumber: ingramPartNumber
-          CoO: CoO
+          coo: coo
           vpnCategory: vpnCategory
           quantity: 0
           notes: notes
           description: description
           weight: 6
           vendorName: vendorName
-          EAN: EAN
+          ean: ean
           terms: terms
           price:
             quotePrice: 1
@@ -9951,8 +9923,8 @@ components:
           companyName: companyName
           customerNumber: customerNumber
           email: email
-        quoteSybType: quoteSybType
         ingramQuoteExpiryDate: ingramQuoteExpiryDate
+        totalQuoteAmount: totalQuoteAmount
         closingReason: closingReason
         purchaseInstructions: purchaseInstructions
         proposedSolution: proposedSolution
@@ -9996,9 +9968,6 @@ components:
         currencyCode:
           description: Three letter currency code.
           type: string
-        closingReason:
-          description: Closing Reason for quote.
-          type: string
         specialBidId:
           description: Price discount identifyer to specify  a pricing discount that
             has been applied to the quote. If present - the priceDeviationStartDate
@@ -10016,6 +9985,11 @@ components:
         status:
           description: This refers to the primary status of the quote.  API responses
             will return
+          type: string
+        closingReason:
+          description: Closing Reason for quote.
+          type: string
+        dateClosed:
           type: string
         customerNeed:
           description: Details related to the customer's request for the quote entered
@@ -10044,7 +10018,7 @@ components:
         leasingInstructions:
           description: Leasing information
           type: string
-        quoteSybType:
+        quoteSubType:
           type: string
         resellerInfo:
           $ref: '#/components/schemas/QuoteDetailsResponse_resellerInfo'
@@ -10067,6 +10041,8 @@ components:
           description: Total amount of quoted price for all products in the quote
             including both solution products and suggested products.
           type: integer
+        totalQuoteAmount:
+          type: string
         additionalAttributes:
           items:
             $ref: '#/components/schemas/QuoteDetailsResponse_additionalAttributes_inner'
@@ -10400,7 +10376,7 @@ components:
           totals:
             netInvoiceAmount: 1.4894159098541704
             freightAmount: 4.965218492984954
-            invoicedAmountDue: 1.1730742509559433
+            invoicesAmountDue: 1.1730742509559433
             discountAmount: 6.84685269835264
             discountType: discountType
             totalTaxAmount: 7.457744773683766
@@ -10470,6 +10446,7 @@ components:
           serialNumbers:
           - serialNumber: serialNumber
           - serialNumber: serialNumber
+          upc: upc
           ingramLineNumber: ingramLineNumber
           quantityOrdered: 9
           vendorName: vendorName
@@ -10491,6 +10468,7 @@ components:
           serialNumbers:
           - serialNumber: serialNumber
           - serialNumber: serialNumber
+          upc: upc
           ingramLineNumber: ingramLineNumber
           quantityOrdered: 9
           vendorName: vendorName
@@ -10758,27 +10736,27 @@ components:
           requestedDeliverydate: requestedDeliverydate
           multipleShipments:
           - date: date
+            dateType: dateType
             dateRange:
               endDate: endDate
               startDate: startDate
-            dataType: dataType
-            requestedQuantity: requestedQuantity
+            requestedQuantity: 6
             description: description
             source: source
             lineNumber: lineNumber
             deliveryDate: deliveryDate
-            confirmedQuantity: confirmedQuantity
+            confirmedQuantity: 7
           - date: date
+            dateType: dateType
             dateRange:
               endDate: endDate
               startDate: startDate
-            dataType: dataType
-            requestedQuantity: requestedQuantity
+            requestedQuantity: 6
             description: description
             source: source
             lineNumber: lineNumber
             deliveryDate: deliveryDate
-            confirmedQuantity: confirmedQuantity
+            confirmedQuantity: 7
           quantityOrdered: 4
           customerLineNumber: customerLineNumber
           lineStatus: lineStatus
@@ -11001,27 +10979,27 @@ components:
           requestedDeliverydate: requestedDeliverydate
           multipleShipments:
           - date: date
+            dateType: dateType
             dateRange:
               endDate: endDate
               startDate: startDate
-            dataType: dataType
-            requestedQuantity: requestedQuantity
+            requestedQuantity: 6
             description: description
             source: source
             lineNumber: lineNumber
             deliveryDate: deliveryDate
-            confirmedQuantity: confirmedQuantity
+            confirmedQuantity: 7
           - date: date
+            dateType: dateType
             dateRange:
               endDate: endDate
               startDate: startDate
-            dataType: dataType
-            requestedQuantity: requestedQuantity
+            requestedQuantity: 6
             description: description
             source: source
             lineNumber: lineNumber
             deliveryDate: deliveryDate
-            confirmedQuantity: confirmedQuantity
+            confirmedQuantity: 7
           quantityOrdered: 4
           customerLineNumber: customerLineNumber
           lineStatus: lineStatus
@@ -12050,7 +12028,9 @@ components:
           description: attributefield data
           type: string
       type: object
-    QuoteToOrderDetailsDTO_endUserInfo_inner:
+    QuoteToOrderDetailsDTO_endUserInfo:
+      description: The contact information for the end user/customer provided by the
+        reseller. Used to determine pricing and discounts.
       example:
         phoneNumber: phoneNumber
         city: city
@@ -12098,7 +12078,8 @@ components:
           description: The end user/customer's phone number.
           type: string
       type: object
-    QuoteToOrderDetailsDTO_shipToInfo_inner:
+    QuoteToOrderDetailsDTO_shipToInfo:
+      description: The shipping information provided by the reseller for order delivery.
       example:
         city: city
         countryCode: countryCode
@@ -14495,8 +14476,8 @@ components:
         isConsolidated: isConsolidated
         attributeValue: attributeValue
         attributeDescription: attributeDescription
-        startDate: 2000-01-23
-        expirationDate: 2000-01-23
+        startDate: startDate
+        expirationDate: expirationDate
       properties:
         attributeDescription:
           description: The description of the additional attribute.
@@ -14506,11 +14487,9 @@ components:
           type: string
         startDate:
           description: The attribute start date.
-          format: date
           type: string
         expirationDate:
           description: The attribute expiration date.
-          format: date
           type: string
         isConsolidated:
           description: Is the line item consolidated? Yes or No.
@@ -15357,14 +15336,14 @@ components:
     QuoteDetailsResponse_products_inner:
       example:
         ingramPartNumber: ingramPartNumber
-        CoO: CoO
+        coo: coo
         vpnCategory: vpnCategory
         quantity: 0
         notes: notes
         description: description
         weight: 6
         vendorName: vendorName
-        EAN: EAN
+        ean: ean
         terms: terms
         price:
           quotePrice: 1
@@ -15394,10 +15373,10 @@ components:
         notes:
           description: Product line item comments.
           type: string
-        EAN:
+        ean:
           description: EANUPC
           type: string
-        CoO:
+        coo:
           description: Country of Origin.
           type: string
         ingramPartNumber:
@@ -15993,6 +15972,7 @@ components:
         serialNumbers:
         - serialNumber: serialNumber
         - serialNumber: serialNumber
+        upc: upc
         ingramLineNumber: ingramLineNumber
         quantityOrdered: 9
         vendorName: vendorName
@@ -16016,6 +15996,8 @@ components:
           description: "Ingram Micro SKU (stock keeping unit). An identification,\
             \ usually alphanumeric, of a particular product that allows it to be tracked\
             \ for inventory purposes."
+          type: string
+        upc:
           type: string
         vendorPartNumber:
           description: Vendor Part Number.
@@ -16146,7 +16128,7 @@ components:
       example:
         netInvoiceAmount: 1.4894159098541704
         freightAmount: 4.965218492984954
-        invoicedAmountDue: 1.1730742509559433
+        invoicesAmountDue: 1.1730742509559433
         discountAmount: 6.84685269835264
         discountType: discountType
         totalTaxAmount: 7.457744773683766
@@ -16166,7 +16148,7 @@ components:
           description: Total Tax amount.
           format: double
           type: number
-        invoicedAmountDue:
+        invoicesAmountDue:
           description: Total amount due for the invoice.
           format: double
           type: number
@@ -16219,7 +16201,7 @@ components:
         totals:
           netInvoiceAmount: 1.4894159098541704
           freightAmount: 4.965218492984954
-          invoicedAmountDue: 1.1730742509559433
+          invoicesAmountDue: 1.1730742509559433
           discountAmount: 6.84685269835264
           discountType: discountType
           totalTaxAmount: 7.457744773683766
@@ -16917,27 +16899,27 @@ components:
     OrderDetailB2B_lines_inner_multipleShipments_inner:
       example:
         date: date
+        dateType: dateType
         dateRange:
           endDate: endDate
           startDate: startDate
-        dataType: dataType
-        requestedQuantity: requestedQuantity
+        requestedQuantity: 6
         description: description
         source: source
         lineNumber: lineNumber
         deliveryDate: deliveryDate
-        confirmedQuantity: confirmedQuantity
+        confirmedQuantity: 7
       properties:
         lineNumber:
           description: Line number.
           type: string
         requestedQuantity:
           description: Requested quantity.
-          type: string
+          type: integer
         confirmedQuantity:
           description: Confirmed quantity.
-          type: string
-        dataType:
+          type: integer
+        dateType:
           description: Date type. Example Single or multiple dates.
           type: string
         dateRange:
@@ -16964,27 +16946,27 @@ components:
         requestedDeliverydate: requestedDeliverydate
         multipleShipments:
         - date: date
+          dateType: dateType
           dateRange:
             endDate: endDate
             startDate: startDate
-          dataType: dataType
-          requestedQuantity: requestedQuantity
+          requestedQuantity: 6
           description: description
           source: source
           lineNumber: lineNumber
           deliveryDate: deliveryDate
-          confirmedQuantity: confirmedQuantity
+          confirmedQuantity: 7
         - date: date
+          dateType: dateType
           dateRange:
             endDate: endDate
             startDate: startDate
-          dataType: dataType
-          requestedQuantity: requestedQuantity
+          requestedQuantity: 6
           description: description
           source: source
           lineNumber: lineNumber
           deliveryDate: deliveryDate
-          confirmedQuantity: confirmedQuantity
+          confirmedQuantity: 7
         quantityOrdered: 4
         customerLineNumber: customerLineNumber
         lineStatus: lineStatus
@@ -17358,7 +17340,6 @@ components:
       type: object
   securitySchemes:
     application:
-      description: ""
       flows:
         clientCredentials:
           scopes:

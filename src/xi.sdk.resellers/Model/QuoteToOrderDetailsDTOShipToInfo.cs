@@ -27,13 +27,13 @@ using OpenAPIDateConverter = xi.sdk.resellers.Client.OpenAPIDateConverter;
 namespace xi.sdk.resellers.Model
 {
     /// <summary>
-    /// QuoteToOrderDetailsDTOShipToInfoInner
+    /// The shipping information provided by the reseller for order delivery.
     /// </summary>
-    [DataContract(Name = "QuoteToOrderDetailsDTO_shipToInfo_inner")]
-    public partial class QuoteToOrderDetailsDTOShipToInfoInner : IValidatableObject
+    [DataContract(Name = "QuoteToOrderDetailsDTO_shipToInfo")]
+    public partial class QuoteToOrderDetailsDTOShipToInfo : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="QuoteToOrderDetailsDTOShipToInfoInner" /> class.
+        /// Initializes a new instance of the <see cref="QuoteToOrderDetailsDTOShipToInfo" /> class.
         /// </summary>
         /// <param name="addressId">The company contact provided by the reseller..</param>
         /// <param name="companyName">The name of the company the order will be shipped to..</param>
@@ -46,7 +46,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="postalCode">The zip or postal code the order will be shipped to..</param>
         /// <param name="countryCode">The two-character ISO country code the order will be shipped to..</param>
         /// <param name="email">The company contact email address..</param>
-        public QuoteToOrderDetailsDTOShipToInfoInner(string addressId = default(string), string companyName = default(string), string contact = default(string), string addressLine1 = default(string), string addressLine2 = default(string), string addressLine3 = default(string), string city = default(string), string state = default(string), string postalCode = default(string), string countryCode = default(string), string email = default(string))
+        public QuoteToOrderDetailsDTOShipToInfo(string addressId = default(string), string companyName = default(string), string contact = default(string), string addressLine1 = default(string), string addressLine2 = default(string), string addressLine3 = default(string), string city = default(string), string state = default(string), string postalCode = default(string), string countryCode = default(string), string email = default(string))
         {
             this.AddressId = addressId;
             this.CompanyName = companyName;
@@ -145,7 +145,7 @@ namespace xi.sdk.resellers.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class QuoteToOrderDetailsDTOShipToInfoInner {\n");
+            sb.Append("class QuoteToOrderDetailsDTOShipToInfo {\n");
             sb.Append("  AddressId: ").Append(AddressId).Append("\n");
             sb.Append("  CompanyName: ").Append(CompanyName).Append("\n");
             sb.Append("  Contact: ").Append(Contact).Append("\n");

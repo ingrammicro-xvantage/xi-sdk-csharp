@@ -38,6 +38,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="ingramLineNumber">Unique line number from Ingram..</param>
         /// <param name="customerLineNumber">Line number passes by customer while creating an order. (default to &quot;0&quot;).</param>
         /// <param name="ingramPartNumber">Ingram Micro SKU (stock keeping unit). An identification, usually alphanumeric, of a particular product that allows it to be tracked for inventory purposes..</param>
+        /// <param name="upc">upc.</param>
         /// <param name="vendorPartNumber">Vendor Part Number..</param>
         /// <param name="customerPartNumber">Part number from customer&#39;s system..</param>
         /// <param name="vendorName">Name of the vendor..</param>
@@ -54,12 +55,13 @@ namespace xi.sdk.resellers.Model
         /// <param name="serialNumbers">serialNumbers.</param>
         /// <param name="quantityOrdered">Quantity ordered by the customer..</param>
         /// <param name="quantityShipped">Quantity shipped to the customer..</param>
-        public InvoiceDetailsv61ResponseLinesInner(string ingramLineNumber = default(string), string customerLineNumber = @"0", string ingramPartNumber = default(string), string vendorPartNumber = default(string), string customerPartNumber = default(string), string vendorName = default(string), string productDescription = default(string), decimal unitWeight = default(decimal), int quantity = default(int), double unitPrice = default(double), string unitOfMeasure = default(string), string currencyCode = default(string), double extendedPrice = default(double), double taxPercentage = default(double), double taxRate = default(double), double taxAmount = default(double), List<InvoiceDetailsv61ResponseLinesInnerSerialNumbersInner> serialNumbers = default(List<InvoiceDetailsv61ResponseLinesInnerSerialNumbersInner>), int quantityOrdered = default(int), int quantityShipped = default(int))
+        public InvoiceDetailsv61ResponseLinesInner(string ingramLineNumber = default(string), string customerLineNumber = @"0", string ingramPartNumber = default(string), string upc = default(string), string vendorPartNumber = default(string), string customerPartNumber = default(string), string vendorName = default(string), string productDescription = default(string), decimal unitWeight = default(decimal), int quantity = default(int), double unitPrice = default(double), string unitOfMeasure = default(string), string currencyCode = default(string), double extendedPrice = default(double), double taxPercentage = default(double), double taxRate = default(double), double taxAmount = default(double), List<InvoiceDetailsv61ResponseLinesInnerSerialNumbersInner> serialNumbers = default(List<InvoiceDetailsv61ResponseLinesInnerSerialNumbersInner>), int quantityOrdered = default(int), int quantityShipped = default(int))
         {
             this.IngramLineNumber = ingramLineNumber;
             // use default value if no "customerLineNumber" provided
             this.CustomerLineNumber = customerLineNumber ?? @"0";
             this.IngramPartNumber = ingramPartNumber;
+            this.Upc = upc;
             this.VendorPartNumber = vendorPartNumber;
             this.CustomerPartNumber = customerPartNumber;
             this.VendorName = vendorName;
@@ -98,6 +100,12 @@ namespace xi.sdk.resellers.Model
         /// <value>Ingram Micro SKU (stock keeping unit). An identification, usually alphanumeric, of a particular product that allows it to be tracked for inventory purposes.</value>
         [DataMember(Name = "ingramPartNumber", EmitDefaultValue = false)]
         public string IngramPartNumber { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Upc
+        /// </summary>
+        [DataMember(Name = "upc", EmitDefaultValue = false)]
+        public string Upc { get; set; }
 
         /// <summary>
         /// Vendor Part Number.
@@ -221,6 +229,7 @@ namespace xi.sdk.resellers.Model
             sb.Append("  IngramLineNumber: ").Append(IngramLineNumber).Append("\n");
             sb.Append("  CustomerLineNumber: ").Append(CustomerLineNumber).Append("\n");
             sb.Append("  IngramPartNumber: ").Append(IngramPartNumber).Append("\n");
+            sb.Append("  Upc: ").Append(Upc).Append("\n");
             sb.Append("  VendorPartNumber: ").Append(VendorPartNumber).Append("\n");
             sb.Append("  CustomerPartNumber: ").Append(CustomerPartNumber).Append("\n");
             sb.Append("  VendorName: ").Append(VendorName).Append("\n");

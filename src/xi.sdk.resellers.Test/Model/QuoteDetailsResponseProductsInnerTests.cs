@@ -91,21 +91,21 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'EAN'
+        /// Test the property 'Ean'
         /// </summary>
         [Fact]
-        public void EANTest()
+        public void EanTest()
         {
-            // TODO unit test for the property 'EAN'
+            // TODO unit test for the property 'Ean'
         }
 
         /// <summary>
-        /// Test the property 'CoO'
+        /// Test the property 'Coo'
         /// </summary>
         [Fact]
-        public void CoOTest()
+        public void CooTest()
         {
-            // TODO unit test for the property 'CoO'
+            // TODO unit test for the property 'Coo'
         }
 
         /// <summary>

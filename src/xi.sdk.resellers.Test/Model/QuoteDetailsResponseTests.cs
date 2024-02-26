@@ -118,15 +118,6 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'ClosingReason'
-        /// </summary>
-        [Fact]
-        public void ClosingReasonTest()
-        {
-            // TODO unit test for the property 'ClosingReason'
-        }
-
-        /// <summary>
         /// Test the property 'SpecialBidId'
         /// </summary>
         [Fact]
@@ -160,6 +151,24 @@ namespace xi.sdk.resellers.Test.Model
         public void StatusTest()
         {
             // TODO unit test for the property 'Status'
+        }
+
+        /// <summary>
+        /// Test the property 'ClosingReason'
+        /// </summary>
+        [Fact]
+        public void ClosingReasonTest()
+        {
+            // TODO unit test for the property 'ClosingReason'
+        }
+
+        /// <summary>
+        /// Test the property 'DateClosed'
+        /// </summary>
+        [Fact]
+        public void DateClosedTest()
+        {
+            // TODO unit test for the property 'DateClosed'
         }
 
         /// <summary>
@@ -235,12 +244,12 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'QuoteSybType'
+        /// Test the property 'QuoteSubType'
         /// </summary>
         [Fact]
-        public void QuoteSybTypeTest()
+        public void QuoteSubTypeTest()
         {
-            // TODO unit test for the property 'QuoteSybType'
+            // TODO unit test for the property 'QuoteSubType'
         }
 
         /// <summary>
@@ -304,6 +313,15 @@ namespace xi.sdk.resellers.Test.Model
         public void ExtendedQuotePriceTotalTest()
         {
             // TODO unit test for the property 'ExtendedQuotePriceTotal'
+        }
+
+        /// <summary>
+        /// Test the property 'TotalQuoteAmount'
+        /// </summary>
+        [Fact]
+        public void TotalQuoteAmountTest()
+        {
+            // TODO unit test for the property 'TotalQuoteAmount'
         }
 
         /// <summary>

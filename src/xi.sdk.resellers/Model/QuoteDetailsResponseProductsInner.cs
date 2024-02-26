@@ -39,8 +39,8 @@ namespace xi.sdk.resellers.Model
         /// <param name="lineNumber">Line number which the product will appear in the quote.  Line number is manditory when unique configurations are included in a quote and mainting the item line order is required..</param>
         /// <param name="quantity">Quantity of product line item quoted..</param>
         /// <param name="notes">Product line item comments..</param>
-        /// <param name="eAN">EANUPC.</param>
-        /// <param name="coO">Country of Origin..</param>
+        /// <param name="ean">EANUPC.</param>
+        /// <param name="coo">Country of Origin..</param>
         /// <param name="ingramPartNumber">Ingram Micro SKU (stock keeping unit). An identification, usually alphanumeric, of a particular product that allows it to be tracked for inventory purposes.</param>
         /// <param name="vendorPartNumber">Vendor Part Number.</param>
         /// <param name="description">Product description.  Note - The quote view api returns only the product short description as maintained in Ingram Micro&#39;s crm system.  For long descriptions, please refer to alternative information sources..</param>
@@ -52,14 +52,14 @@ namespace xi.sdk.resellers.Model
         /// <param name="vendorName">Vendor name of the product.</param>
         /// <param name="terms">Terms of the quote.</param>
         /// <param name="price">price.</param>
-        public QuoteDetailsResponseProductsInner(string quoteProductGuid = default(string), string lineNumber = default(string), int quantity = default(int), string notes = default(string), string eAN = default(string), string coO = default(string), string ingramPartNumber = default(string), string vendorPartNumber = default(string), string description = default(string), int weight = default(int), string weightUom = default(string), bool isSuggestionProduct = default(bool), string vpnCategory = default(string), string quoteProductsSupplierPartAuxiliaryId = default(string), string vendorName = default(string), string terms = default(string), QuoteDetailsResponseProductsInnerPrice price = default(QuoteDetailsResponseProductsInnerPrice))
+        public QuoteDetailsResponseProductsInner(string quoteProductGuid = default(string), string lineNumber = default(string), int quantity = default(int), string notes = default(string), string ean = default(string), string coo = default(string), string ingramPartNumber = default(string), string vendorPartNumber = default(string), string description = default(string), int weight = default(int), string weightUom = default(string), bool isSuggestionProduct = default(bool), string vpnCategory = default(string), string quoteProductsSupplierPartAuxiliaryId = default(string), string vendorName = default(string), string terms = default(string), QuoteDetailsResponseProductsInnerPrice price = default(QuoteDetailsResponseProductsInnerPrice))
         {
             this.QuoteProductGuid = quoteProductGuid;
             this.LineNumber = lineNumber;
             this.Quantity = quantity;
             this.Notes = notes;
-            this.EAN = eAN;
-            this.CoO = coO;
+            this.Ean = ean;
+            this.Coo = coo;
             this.IngramPartNumber = ingramPartNumber;
             this.VendorPartNumber = vendorPartNumber;
             this.Description = description;
@@ -105,15 +105,15 @@ namespace xi.sdk.resellers.Model
         /// EANUPC
         /// </summary>
         /// <value>EANUPC</value>
-        [DataMember(Name = "EAN", EmitDefaultValue = false)]
-        public string EAN { get; set; }
+        [DataMember(Name = "ean", EmitDefaultValue = false)]
+        public string Ean { get; set; }
 
         /// <summary>
         /// Country of Origin.
         /// </summary>
         /// <value>Country of Origin.</value>
-        [DataMember(Name = "CoO", EmitDefaultValue = false)]
-        public string CoO { get; set; }
+        [DataMember(Name = "coo", EmitDefaultValue = false)]
+        public string Coo { get; set; }
 
         /// <summary>
         /// Ingram Micro SKU (stock keeping unit). An identification, usually alphanumeric, of a particular product that allows it to be tracked for inventory purposes
@@ -203,8 +203,8 @@ namespace xi.sdk.resellers.Model
             sb.Append("  LineNumber: ").Append(LineNumber).Append("\n");
             sb.Append("  Quantity: ").Append(Quantity).Append("\n");
             sb.Append("  Notes: ").Append(Notes).Append("\n");
-            sb.Append("  EAN: ").Append(EAN).Append("\n");
-            sb.Append("  CoO: ").Append(CoO).Append("\n");
+            sb.Append("  Ean: ").Append(Ean).Append("\n");
+            sb.Append("  Coo: ").Append(Coo).Append("\n");
             sb.Append("  IngramPartNumber: ").Append(IngramPartNumber).Append("\n");
             sb.Append("  VendorPartNumber: ").Append(VendorPartNumber).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
