@@ -39,15 +39,15 @@ namespace xi.sdk.resellers.Model
         /// <param name="discountAmount">Discount amount..</param>
         /// <param name="discountType">Type of discount..</param>
         /// <param name="totalTaxAmount">Total Tax amount..</param>
-        /// <param name="invoicedAmountDue">Total amount due for the invoice..</param>
+        /// <param name="invoicesAmountDue">Total amount due for the invoice..</param>
         /// <param name="freightAmount">Freight amount.</param>
-        public InvoiceDetailsv61ResponseSummaryTotals(double netInvoiceAmount = default(double), double discountAmount = default(double), string discountType = default(string), double totalTaxAmount = default(double), double invoicedAmountDue = default(double), double freightAmount = default(double))
+        public InvoiceDetailsv61ResponseSummaryTotals(double netInvoiceAmount = default(double), double discountAmount = default(double), string discountType = default(string), double totalTaxAmount = default(double), double invoicesAmountDue = default(double), double freightAmount = default(double))
         {
             this.NetInvoiceAmount = netInvoiceAmount;
             this.DiscountAmount = discountAmount;
             this.DiscountType = discountType;
             this.TotalTaxAmount = totalTaxAmount;
-            this.InvoicedAmountDue = invoicedAmountDue;
+            this.InvoicesAmountDue = invoicesAmountDue;
             this.FreightAmount = freightAmount;
         }
 
@@ -83,8 +83,8 @@ namespace xi.sdk.resellers.Model
         /// Total amount due for the invoice.
         /// </summary>
         /// <value>Total amount due for the invoice.</value>
-        [DataMember(Name = "invoicedAmountDue", EmitDefaultValue = false)]
-        public double InvoicedAmountDue { get; set; }
+        [DataMember(Name = "invoicesAmountDue", EmitDefaultValue = false)]
+        public double InvoicesAmountDue { get; set; }
 
         /// <summary>
         /// Freight amount
@@ -105,7 +105,7 @@ namespace xi.sdk.resellers.Model
             sb.Append("  DiscountAmount: ").Append(DiscountAmount).Append("\n");
             sb.Append("  DiscountType: ").Append(DiscountType).Append("\n");
             sb.Append("  TotalTaxAmount: ").Append(TotalTaxAmount).Append("\n");
-            sb.Append("  InvoicedAmountDue: ").Append(InvoicedAmountDue).Append("\n");
+            sb.Append("  InvoicesAmountDue: ").Append(InvoicesAmountDue).Append("\n");
             sb.Append("  FreightAmount: ").Append(FreightAmount).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

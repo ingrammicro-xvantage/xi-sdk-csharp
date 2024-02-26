@@ -9850,14 +9850,14 @@ components:
         quoteType: quoteType
         products:
         - ingramPartNumber: ingramPartNumber
-          CoO: CoO
+          coo: coo
           vpnCategory: vpnCategory
           quantity: 0
           notes: notes
           description: description
           weight: 6
           vendorName: vendorName
-          EAN: EAN
+          ean: ean
           terms: terms
           price:
             quotePrice: 1
@@ -9872,14 +9872,14 @@ components:
           quoteProductsSupplierPartAuxiliaryId: quoteProductsSupplierPartAuxiliaryId
           isSuggestionProduct: true
         - ingramPartNumber: ingramPartNumber
-          CoO: CoO
+          coo: coo
           vpnCategory: vpnCategory
           quantity: 0
           notes: notes
           description: description
           weight: 6
           vendorName: vendorName
-          EAN: EAN
+          ean: ean
           terms: terms
           price:
             quotePrice: 1
@@ -10376,7 +10376,7 @@ components:
           totals:
             netInvoiceAmount: 1.4894159098541704
             freightAmount: 4.965218492984954
-            invoicedAmountDue: 1.1730742509559433
+            invoicesAmountDue: 1.1730742509559433
             discountAmount: 6.84685269835264
             discountType: discountType
             totalTaxAmount: 7.457744773683766
@@ -15336,14 +15336,14 @@ components:
     QuoteDetailsResponse_products_inner:
       example:
         ingramPartNumber: ingramPartNumber
-        CoO: CoO
+        coo: coo
         vpnCategory: vpnCategory
         quantity: 0
         notes: notes
         description: description
         weight: 6
         vendorName: vendorName
-        EAN: EAN
+        ean: ean
         terms: terms
         price:
           quotePrice: 1
@@ -15373,10 +15373,10 @@ components:
         notes:
           description: Product line item comments.
           type: string
-        EAN:
+        ean:
           description: EANUPC
           type: string
-        CoO:
+        coo:
           description: Country of Origin.
           type: string
         ingramPartNumber:
@@ -16128,7 +16128,7 @@ components:
       example:
         netInvoiceAmount: 1.4894159098541704
         freightAmount: 4.965218492984954
-        invoicedAmountDue: 1.1730742509559433
+        invoicesAmountDue: 1.1730742509559433
         discountAmount: 6.84685269835264
         discountType: discountType
         totalTaxAmount: 7.457744773683766
@@ -16148,7 +16148,7 @@ components:
           description: Total Tax amount.
           format: double
           type: number
-        invoicedAmountDue:
+        invoicesAmountDue:
           description: Total amount due for the invoice.
           format: double
           type: number
@@ -16201,7 +16201,7 @@ components:
         totals:
           netInvoiceAmount: 1.4894159098541704
           freightAmount: 4.965218492984954
-          invoicedAmountDue: 1.1730742509559433
+          invoicesAmountDue: 1.1730742509559433
           discountAmount: 6.84685269835264
           discountType: discountType
           totalTaxAmount: 7.457744773683766

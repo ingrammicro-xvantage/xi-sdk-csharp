@@ -91,12 +91,12 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'InvoicedAmountDue'
+        /// Test the property 'InvoicesAmountDue'
         /// </summary>
         [Fact]
-        public void InvoicedAmountDueTest()
+        public void InvoicesAmountDueTest()
         {
-            // TODO unit test for the property 'InvoicedAmountDue'
+            // TODO unit test for the property 'InvoicesAmountDue'
         }
 
         /// <summary>
