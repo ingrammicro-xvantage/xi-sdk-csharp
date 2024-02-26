@@ -82,6 +82,15 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'Upc'
+        /// </summary>
+        [Fact]
+        public void UpcTest()
+        {
+            // TODO unit test for the property 'Upc'
+        }
+
+        /// <summary>
         /// Test the property 'VendorPartNumber'
         /// </summary>
         [Fact]

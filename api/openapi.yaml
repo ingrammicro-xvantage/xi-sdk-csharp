@@ -8095,18 +8095,7 @@ components:
       additionalProperties: false
       example:
         endUserInfo:
-        - phoneNumber: phoneNumber
-          city: city
-          countryCode: countryCode
-          companyName: companyName
-          contact: contact
-          postalCode: postalCode
-          addressLine1: addressLine1
-          addressLine2: addressLine2
-          addressLine3: addressLine3
-          state: state
-          email: email
-        - phoneNumber: phoneNumber
+          phoneNumber: phoneNumber
           city: city
           countryCode: countryCode
           companyName: companyName
@@ -8118,18 +8107,7 @@ components:
           state: state
           email: email
         shipToInfo:
-        - city: city
-          countryCode: countryCode
-          companyName: companyName
-          contact: contact
-          postalCode: postalCode
-          addressLine1: addressLine1
-          addressLine2: addressLine2
-          addressLine3: addressLine3
-          state: state
-          email: email
-          addressId: addressId
-        - city: city
+          city: city
           countryCode: countryCode
           companyName: companyName
           contact: contact
@@ -8202,17 +8180,9 @@ components:
           nullable: true
           type: string
         endUserInfo:
-          description: The contact information for the end user/customer provided
-            by the reseller. Used to determine pricing and discounts.
-          items:
-            $ref: '#/components/schemas/QuoteToOrderDetailsDTO_endUserInfo_inner'
-          type: array
+          $ref: '#/components/schemas/QuoteToOrderDetailsDTO_endUserInfo'
         shipToInfo:
-          description: The shipping information provided by the reseller for order
-            delivery.
-          items:
-            $ref: '#/components/schemas/QuoteToOrderDetailsDTO_shipToInfo_inner'
-          type: array
+          $ref: '#/components/schemas/QuoteToOrderDetailsDTO_shipToInfo'
         additionalAttributes:
           description: Additional order create attributes.
           items:
@@ -9954,6 +9924,7 @@ components:
           customerNumber: customerNumber
           email: email
         ingramQuoteExpiryDate: ingramQuoteExpiryDate
+        totalQuoteAmount: totalQuoteAmount
         closingReason: closingReason
         purchaseInstructions: purchaseInstructions
         proposedSolution: proposedSolution
@@ -10070,6 +10041,8 @@ components:
           description: Total amount of quoted price for all products in the quote
             including both solution products and suggested products.
           type: integer
+        totalQuoteAmount:
+          type: string
         additionalAttributes:
           items:
             $ref: '#/components/schemas/QuoteDetailsResponse_additionalAttributes_inner'
@@ -10473,6 +10446,7 @@ components:
           serialNumbers:
           - serialNumber: serialNumber
           - serialNumber: serialNumber
+          upc: upc
           ingramLineNumber: ingramLineNumber
           quantityOrdered: 9
           vendorName: vendorName
@@ -10494,6 +10468,7 @@ components:
           serialNumbers:
           - serialNumber: serialNumber
           - serialNumber: serialNumber
+          upc: upc
           ingramLineNumber: ingramLineNumber
           quantityOrdered: 9
           vendorName: vendorName
@@ -12053,7 +12028,9 @@ components:
           description: attributefield data
           type: string
       type: object
-    QuoteToOrderDetailsDTO_endUserInfo_inner:
+    QuoteToOrderDetailsDTO_endUserInfo:
+      description: The contact information for the end user/customer provided by the
+        reseller. Used to determine pricing and discounts.
       example:
         phoneNumber: phoneNumber
         city: city
@@ -12101,7 +12078,8 @@ components:
           description: The end user/customer's phone number.
           type: string
       type: object
-    QuoteToOrderDetailsDTO_shipToInfo_inner:
+    QuoteToOrderDetailsDTO_shipToInfo:
+      description: The shipping information provided by the reseller for order delivery.
       example:
         city: city
         countryCode: countryCode
@@ -15994,6 +15972,7 @@ components:
         serialNumbers:
         - serialNumber: serialNumber
         - serialNumber: serialNumber
+        upc: upc
         ingramLineNumber: ingramLineNumber
         quantityOrdered: 9
         vendorName: vendorName
@@ -16017,6 +15996,8 @@ components:
           description: "Ingram Micro SKU (stock keeping unit). An identification,\
             \ usually alphanumeric, of a particular product that allows it to be tracked\
             \ for inventory purposes."
+          type: string
+        upc:
           type: string
         vendorPartNumber:
           description: Vendor Part Number.
@@ -17359,7 +17340,6 @@ components:
       type: object
   securitySchemes:
     application:
-      description: ""
       flows:
         clientCredentials:
           scopes:

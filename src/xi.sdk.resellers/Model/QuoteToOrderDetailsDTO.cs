@@ -39,12 +39,12 @@ namespace xi.sdk.resellers.Model
         /// <param name="customerOrderNumber">The reseller&#39;s order number for reference in their system..</param>
         /// <param name="enduserOrderNumber">The end customer&#39;s order number for reference in their system..</param>
         /// <param name="billToAddressId">Suffix used to identify billing address. Created during onboarding. Resellers are provided with one or more address IDs depending on how many bill to addresses they need for various flooring companies they are using for credit..</param>
-        /// <param name="endUserInfo">The contact information for the end user/customer provided by the reseller. Used to determine pricing and discounts..</param>
-        /// <param name="shipToInfo">The shipping information provided by the reseller for order delivery..</param>
+        /// <param name="endUserInfo">endUserInfo.</param>
+        /// <param name="shipToInfo">shipToInfo.</param>
         /// <param name="additionalAttributes">Additional order create attributes..</param>
         /// <param name="vmfadditionalAttributes">The object containing the list of fields required at a header level by the vendor..</param>
         /// <param name="lines">The object containing the lines that require vendor mandatory fields..</param>
-        public QuoteToOrderDetailsDTO(string quoteNumber = default(string), string customerOrderNumber = default(string), string enduserOrderNumber = default(string), string billToAddressId = default(string), List<QuoteToOrderDetailsDTOEndUserInfoInner> endUserInfo = default(List<QuoteToOrderDetailsDTOEndUserInfoInner>), List<QuoteToOrderDetailsDTOShipToInfoInner> shipToInfo = default(List<QuoteToOrderDetailsDTOShipToInfoInner>), List<QuoteToOrderDetailsDTOAdditionalAttributesInner> additionalAttributes = default(List<QuoteToOrderDetailsDTOAdditionalAttributesInner>), List<QuoteToOrderDetailsDTOVmfadditionalAttributesInner> vmfadditionalAttributes = default(List<QuoteToOrderDetailsDTOVmfadditionalAttributesInner>), List<QuoteToOrderDetailsDTOLinesInner> lines = default(List<QuoteToOrderDetailsDTOLinesInner>))
+        public QuoteToOrderDetailsDTO(string quoteNumber = default(string), string customerOrderNumber = default(string), string enduserOrderNumber = default(string), string billToAddressId = default(string), QuoteToOrderDetailsDTOEndUserInfo endUserInfo = default(QuoteToOrderDetailsDTOEndUserInfo), QuoteToOrderDetailsDTOShipToInfo shipToInfo = default(QuoteToOrderDetailsDTOShipToInfo), List<QuoteToOrderDetailsDTOAdditionalAttributesInner> additionalAttributes = default(List<QuoteToOrderDetailsDTOAdditionalAttributesInner>), List<QuoteToOrderDetailsDTOVmfadditionalAttributesInner> vmfadditionalAttributes = default(List<QuoteToOrderDetailsDTOVmfadditionalAttributesInner>), List<QuoteToOrderDetailsDTOLinesInner> lines = default(List<QuoteToOrderDetailsDTOLinesInner>))
         {
             this.QuoteNumber = quoteNumber;
             this.CustomerOrderNumber = customerOrderNumber;
@@ -86,18 +86,16 @@ namespace xi.sdk.resellers.Model
         public string BillToAddressId { get; set; }
 
         /// <summary>
-        /// The contact information for the end user/customer provided by the reseller. Used to determine pricing and discounts.
+        /// Gets or Sets EndUserInfo
         /// </summary>
-        /// <value>The contact information for the end user/customer provided by the reseller. Used to determine pricing and discounts.</value>
         [DataMember(Name = "endUserInfo", EmitDefaultValue = false)]
-        public List<QuoteToOrderDetailsDTOEndUserInfoInner> EndUserInfo { get; set; }
+        public QuoteToOrderDetailsDTOEndUserInfo EndUserInfo { get; set; }
 
         /// <summary>
-        /// The shipping information provided by the reseller for order delivery.
+        /// Gets or Sets ShipToInfo
         /// </summary>
-        /// <value>The shipping information provided by the reseller for order delivery.</value>
         [DataMember(Name = "shipToInfo", EmitDefaultValue = false)]
-        public List<QuoteToOrderDetailsDTOShipToInfoInner> ShipToInfo { get; set; }
+        public QuoteToOrderDetailsDTOShipToInfo ShipToInfo { get; set; }
 
         /// <summary>
         /// Additional order create attributes.

@@ -64,8 +64,9 @@ namespace xi.sdk.resellers.Model
         /// <param name="extendedMsrpTotal">Total extended MSRP for all products included in the quote.</param>
         /// <param name="quantityTotal">Total quantity of all items in the quote..</param>
         /// <param name="extendedQuotePriceTotal">Total amount of quoted price for all products in the quote including both solution products and suggested products..</param>
+        /// <param name="totalQuoteAmount">totalQuoteAmount.</param>
         /// <param name="additionalAttributes">additionalAttributes.</param>
-        public QuoteDetailsResponse(string quoteName = default(string), string quoteNumber = default(string), string revision = default(string), string ingramQuoteDate = default(string), string lastModifiedDate = default(string), string ingramQuoteExpiryDate = default(string), string currencyCode = default(string), string specialBidId = default(string), string specialBidEffectiveDate = default(string), string specialBidExpirationDate = default(string), string status = default(string), string closingReason = default(string), string dateClosed = default(string), string customerNeed = default(string), string proposedSolution = default(string), string introPreamble = default(string), string purchaseInstructions = default(string), string legalTerms = default(string), string quoteType = default(string), string leaseInfo = default(string), string leasingInstructions = default(string), string quoteSubType = default(string), QuoteDetailsResponseResellerInfo resellerInfo = default(QuoteDetailsResponseResellerInfo), QuoteDetailsResponseEndUserInfo endUserInfo = default(QuoteDetailsResponseEndUserInfo), List<QuoteDetailsResponseProductsInner> products = default(List<QuoteDetailsResponseProductsInner>), int productsCount = default(int), int extendedMsrpTotal = default(int), int quantityTotal = default(int), int extendedQuotePriceTotal = default(int), List<QuoteDetailsResponseAdditionalAttributesInner> additionalAttributes = default(List<QuoteDetailsResponseAdditionalAttributesInner>))
+        public QuoteDetailsResponse(string quoteName = default(string), string quoteNumber = default(string), string revision = default(string), string ingramQuoteDate = default(string), string lastModifiedDate = default(string), string ingramQuoteExpiryDate = default(string), string currencyCode = default(string), string specialBidId = default(string), string specialBidEffectiveDate = default(string), string specialBidExpirationDate = default(string), string status = default(string), string closingReason = default(string), string dateClosed = default(string), string customerNeed = default(string), string proposedSolution = default(string), string introPreamble = default(string), string purchaseInstructions = default(string), string legalTerms = default(string), string quoteType = default(string), string leaseInfo = default(string), string leasingInstructions = default(string), string quoteSubType = default(string), QuoteDetailsResponseResellerInfo resellerInfo = default(QuoteDetailsResponseResellerInfo), QuoteDetailsResponseEndUserInfo endUserInfo = default(QuoteDetailsResponseEndUserInfo), List<QuoteDetailsResponseProductsInner> products = default(List<QuoteDetailsResponseProductsInner>), int productsCount = default(int), int extendedMsrpTotal = default(int), int quantityTotal = default(int), int extendedQuotePriceTotal = default(int), string totalQuoteAmount = default(string), List<QuoteDetailsResponseAdditionalAttributesInner> additionalAttributes = default(List<QuoteDetailsResponseAdditionalAttributesInner>))
         {
             this.QuoteName = quoteName;
             this.QuoteNumber = quoteNumber;
@@ -96,6 +97,7 @@ namespace xi.sdk.resellers.Model
             this.ExtendedMsrpTotal = extendedMsrpTotal;
             this.QuantityTotal = quantityTotal;
             this.ExtendedQuotePriceTotal = extendedQuotePriceTotal;
+            this.TotalQuoteAmount = totalQuoteAmount;
             this.AdditionalAttributes = additionalAttributes;
         }
 
@@ -297,6 +299,12 @@ namespace xi.sdk.resellers.Model
         public int ExtendedQuotePriceTotal { get; set; }
 
         /// <summary>
+        /// Gets or Sets TotalQuoteAmount
+        /// </summary>
+        [DataMember(Name = "totalQuoteAmount", EmitDefaultValue = false)]
+        public string TotalQuoteAmount { get; set; }
+
+        /// <summary>
         /// Gets or Sets AdditionalAttributes
         /// </summary>
         [DataMember(Name = "additionalAttributes", EmitDefaultValue = false)]
@@ -339,6 +347,7 @@ namespace xi.sdk.resellers.Model
             sb.Append("  ExtendedMsrpTotal: ").Append(ExtendedMsrpTotal).Append("\n");
             sb.Append("  QuantityTotal: ").Append(QuantityTotal).Append("\n");
             sb.Append("  ExtendedQuotePriceTotal: ").Append(ExtendedQuotePriceTotal).Append("\n");
+            sb.Append("  TotalQuoteAmount: ").Append(TotalQuoteAmount).Append("\n");
             sb.Append("  AdditionalAttributes: ").Append(AdditionalAttributes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

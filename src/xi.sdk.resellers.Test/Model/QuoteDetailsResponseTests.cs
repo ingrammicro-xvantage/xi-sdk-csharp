@@ -316,6 +316,15 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'TotalQuoteAmount'
+        /// </summary>
+        [Fact]
+        public void TotalQuoteAmountTest()
+        {
+            // TODO unit test for the property 'TotalQuoteAmount'
+        }
+
+        /// <summary>
         /// Test the property 'AdditionalAttributes'
         /// </summary>
         [Fact]

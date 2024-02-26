@@ -33,6 +33,7 @@ Name | Type | Description | Notes
 **ExtendedMsrpTotal** | **int** | Total extended MSRP for all products included in the quote | [optional] 
 **QuantityTotal** | **int** | Total quantity of all items in the quote. | [optional] 
 **ExtendedQuotePriceTotal** | **int** | Total amount of quoted price for all products in the quote including both solution products and suggested products. | [optional] 
+**TotalQuoteAmount** | **string** |  | [optional] 
 **AdditionalAttributes** | [**List&lt;QuoteDetailsResponseAdditionalAttributesInner&gt;**](QuoteDetailsResponseAdditionalAttributesInner.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
