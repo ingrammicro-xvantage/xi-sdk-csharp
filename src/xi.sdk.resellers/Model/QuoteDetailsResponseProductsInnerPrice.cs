@@ -39,14 +39,24 @@ namespace xi.sdk.resellers.Model
         /// <param name="msrp">Manufacturer Suggested Retail Price.</param>
         /// <param name="extendedMsrp">Extended MSRP - Manufacturer Suggested Retail Price X Quantity.</param>
         /// <param name="extendedQuotePrice">Extended reseller quoted price (cost to reseller) X Quantity.</param>
-        /// <param name="discountOffList">Discount off list percentage.</param>
-        public QuoteDetailsResponseProductsInnerPrice(int quotePrice = default(int), int msrp = default(int), int extendedMsrp = default(int), int extendedQuotePrice = default(int), decimal discountOffList = default(decimal))
+        /// <param name="discountOffList">Discount off list percentage extended.</param>
+        /// <param name="vendorprice">vendorprice.</param>
+        /// <param name="extendedvendorprice">extendedvendorprice.</param>
+        /// <param name="totalVisibleReserveQuantity">totalVisibleReserveQuantity.</param>
+        /// <param name="type">type.</param>
+        /// <param name="recurringPriceModel">recurringPriceModel.</param>
+        public QuoteDetailsResponseProductsInnerPrice(int quotePrice = default(int), int msrp = default(int), int extendedMsrp = default(int), int extendedQuotePrice = default(int), string discountOffList = default(string), decimal vendorprice = default(decimal), decimal extendedvendorprice = default(decimal), int totalVisibleReserveQuantity = default(int), string type = default(string), string recurringPriceModel = default(string))
         {
             this.QuotePrice = quotePrice;
             this.Msrp = msrp;
             this.ExtendedMsrp = extendedMsrp;
             this.ExtendedQuotePrice = extendedQuotePrice;
             this.DiscountOffList = discountOffList;
+            this.Vendorprice = vendorprice;
+            this.Extendedvendorprice = extendedvendorprice;
+            this.TotalVisibleReserveQuantity = totalVisibleReserveQuantity;
+            this.Type = type;
+            this.RecurringPriceModel = recurringPriceModel;
         }
 
         /// <summary>
@@ -78,11 +88,41 @@ namespace xi.sdk.resellers.Model
         public int ExtendedQuotePrice { get; set; }
 
         /// <summary>
-        /// Discount off list percentage
+        /// Discount off list percentage extended
         /// </summary>
-        /// <value>Discount off list percentage</value>
+        /// <value>Discount off list percentage extended</value>
         [DataMember(Name = "discountOffList", EmitDefaultValue = false)]
-        public decimal DiscountOffList { get; set; }
+        public string DiscountOffList { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Vendorprice
+        /// </summary>
+        [DataMember(Name = "vendorprice", EmitDefaultValue = false)]
+        public decimal Vendorprice { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Extendedvendorprice
+        /// </summary>
+        [DataMember(Name = "extendedvendorprice", EmitDefaultValue = false)]
+        public decimal Extendedvendorprice { get; set; }
+
+        /// <summary>
+        /// Gets or Sets TotalVisibleReserveQuantity
+        /// </summary>
+        [DataMember(Name = "totalVisibleReserveQuantity", EmitDefaultValue = false)]
+        public int TotalVisibleReserveQuantity { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [DataMember(Name = "type", EmitDefaultValue = false)]
+        public string Type { get; set; }
+
+        /// <summary>
+        /// Gets or Sets RecurringPriceModel
+        /// </summary>
+        [DataMember(Name = "recurringPriceModel", EmitDefaultValue = false)]
+        public string RecurringPriceModel { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -97,6 +137,11 @@ namespace xi.sdk.resellers.Model
             sb.Append("  ExtendedMsrp: ").Append(ExtendedMsrp).Append("\n");
             sb.Append("  ExtendedQuotePrice: ").Append(ExtendedQuotePrice).Append("\n");
             sb.Append("  DiscountOffList: ").Append(DiscountOffList).Append("\n");
+            sb.Append("  Vendorprice: ").Append(Vendorprice).Append("\n");
+            sb.Append("  Extendedvendorprice: ").Append(Extendedvendorprice).Append("\n");
+            sb.Append("  TotalVisibleReserveQuantity: ").Append(TotalVisibleReserveQuantity).Append("\n");
+            sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  RecurringPriceModel: ").Append(RecurringPriceModel).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

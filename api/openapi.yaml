@@ -65,63 +65,58 @@ tags:
   name: Returns
 - description: ' '
   name: Freight Estimate
-- description: |2
-
-    Ingram Micro’s Orders v5 API endpoints support both standard products and direct-ship products, including licensing and warranties SKUs. Users can:
-      - Search existing orders by Ingram Micro sales order number.
-      - View order details.
-      - Create and place new orders.
-      - Cancel orders, as permitted by order status.
-
-
-    *Host Production URL - https://api.ingrammicro.com:443/resellers/v5*
-  name: Orders v5
-- description: |2
-
-    The Ingram Micro Product Catalog v6 API endpoints enable users to:
-      - Search products by SKU or additional criteria.
-      - Find price and availability for up to 50 SKUs at one time.
-      - View inventory by location in the product catalog.
-
-
-    *Host Production URL - https://api.ingrammicro.com:443/resellers/v5*
-  name: Product Catalog v5
-- description: |2
-
-    The Ingram Micro Quotes v5 API endpoints enable users to:
-      - Obtain a list of all quotes.
-      - View details for each quote, including: quote name, quote number, expiration date, product quantity and product price.
-      - Ingram Micro does not currently offer an API to create a quote.
-
-
-    *Host Production URL - https://api.ingrammicro.com:443/resellers/v5*
-  name: Quotes v5
-- description: |2
-
-    The Ingram Micro Invoice v5 API endpoint provide real-time information for invoices and corresponding orders. Users can:
-      - Get invoice information for an open order or shipped order.
-      - View invoice information is available for orders placed in the last 9 months, by providing a sales order number.
-
-
-    *Host Production URL - https://api.ingrammicro.com:443/resellers/v5*
-  name: Invoices V5
-- description: |2-
-
-    All our archived API endpoints, these APIs will be deprecated in 2021. We recommend using the latest version 6.0 endpoints.
-  name: Invoices v4
-- description: |2-
-
-    All our archived API endpoints, these APIs will be deprecated in 2021. We recommend using the latest version 6.0 endpoints.
-  name: Orders v4
-- description: |2-
-
-    All our archived API endpoints, these APIs will be deprecated in 2021. We recommend using the latest version 6.0 endpoints.
-  name: Product Catalog v4
-- description: |2-
-
-    All our archived API endpoints, these APIs will be deprecated in 2021. We recommend using the latest version 6.0 endpoints.
-  name: Quotes v4
 paths:
+  /oauth/oauth20/token:
+    get:
+      description: The Authentication endpoint will provide an access token to access
+        the API.
+      operationId: get-accesstoken
+      parameters:
+      - description: Keep grant_type as client_credentials only.
+        explode: true
+        in: query
+        name: grant_type
+        required: true
+        schema:
+          example: client_credentials
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: client_id
+        required: true
+        schema:
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: client_secret
+        required: true
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccesstokenResponse'
+          description: OK
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/get_accesstoken_400_response'
+          description: Bad Request
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/get_accesstoken_500_response'
+          description: Internal Server Error
+      summary: Accesstoken
+      tags:
+      - Accesstoken
   /resellers/v6/catalog/priceandavailability:
     post:
       description: "The PriceAndAvailability API, will retrieve Pricing, Availability,\
@@ -7832,6 +7827,19 @@ paths:
       - Freight Estimate
 components:
   schemas:
+    AccesstokenResponse:
+      example:
+        access_token: access_token
+        token_type: token_type
+        expires_in: expires_in
+      properties:
+        access_token:
+          type: string
+        token_type:
+          type: string
+        expires_in:
+          type: string
+      type: object
     OrderCreateRequest:
       example:
         notes: notes
@@ -9843,7 +9851,7 @@ components:
       type: object
     QuoteDetailsResponse:
       example:
-        quantityTotal: 2
+        quantityTotal: 7
         quoteSubType: quoteSubType
         leaseInfo: leaseInfo
         dateClosed: dateClosed
@@ -9854,17 +9862,24 @@ components:
           vpnCategory: vpnCategory
           quantity: 0
           notes: notes
+          resellerMargin: resellerMargin
           description: description
           weight: 6
           vendorName: vendorName
+          isSubscription: true
           ean: ean
           terms: terms
           price:
             quotePrice: 1
+            totalVisibleReserveQuantity: 3
+            extendedvendorprice: 9.301444243932576
             msrp: 5
             extendedQuotePrice: 2
+            recurringPriceModel: recurringPriceModel
+            vendorprice: 7.061401241503109
+            type: type
             extendedMsrp: 5
-            discountOffList: 7.061401241503109
+            discountOffList: discountOffList
           quoteProductGuid: quoteProductGuid
           vendorPartNumber: vendorPartNumber
           lineNumber: lineNumber
@@ -9876,17 +9891,24 @@ components:
           vpnCategory: vpnCategory
           quantity: 0
           notes: notes
+          resellerMargin: resellerMargin
           description: description
           weight: 6
           vendorName: vendorName
+          isSubscription: true
           ean: ean
           terms: terms
           price:
             quotePrice: 1
+            totalVisibleReserveQuantity: 3
+            extendedvendorprice: 9.301444243932576
             msrp: 5
             extendedQuotePrice: 2
+            recurringPriceModel: recurringPriceModel
+            vendorprice: 7.061401241503109
+            type: type
             extendedMsrp: 5
-            discountOffList: 7.061401241503109
+            discountOffList: discountOffList
           quoteProductGuid: quoteProductGuid
           vendorPartNumber: vendorPartNumber
           lineNumber: lineNumber
@@ -9894,7 +9916,7 @@ components:
           quoteProductsSupplierPartAuxiliaryId: quoteProductsSupplierPartAuxiliaryId
           isSuggestionProduct: true
         leasingInstructions: leasingInstructions
-        productsCount: 9
+        productsCount: 2
         specialBidEffectiveDate: specialBidEffectiveDate
         endUserInfo:
           phoneNumber: phoneNumber
@@ -9909,13 +9931,13 @@ components:
           email: email
           marketSegment: marketSegment
         introPreamble: introPreamble
-        extendedMsrpTotal: 3
+        extendedMsrpTotal: 4
         lastModifiedDate: lastModifiedDate
         legalTerms: legalTerms
         specialBidExpirationDate: specialBidExpirationDate
         quoteNumber: quoteNumber
         revision: revision
-        extendedQuotePriceTotal: 4
+        extendedQuotePriceTotal: 1
         customerNeed: customerNeed
         resellerInfo:
           phoneNumber: phoneNumber
@@ -10573,7 +10595,7 @@ components:
       type: object
     QuoteToOrderResponse:
       example:
-        confirmationNumber: 987654322
+        confirmationNumber: "987654322"
         message: message
         quoteNumber: QUO-14551943-D2Y9L9
       properties:
@@ -10584,8 +10606,8 @@ components:
           type: string
         confirmationNumber:
           description: A unique confirmation number for tracking purposes.
-          example: 987654322
-          type: number
+          example: "987654322"
+          type: string
         message:
           description: A confirmation message.
           type: string
@@ -11311,6 +11333,41 @@ components:
             $ref: '#/components/schemas/OrderDetailB2B_additionalAttributes_inner'
           nullable: true
           type: array
+      type: object
+    get_accesstoken_400_response:
+      example:
+        message: message
+      properties:
+        message:
+          type: string
+      type: object
+    get_accesstoken_500_response_fault_detail:
+      example:
+        errorcode: errorcode
+      properties:
+        errorcode:
+          type: string
+      type: object
+    get_accesstoken_500_response_fault:
+      example:
+        faultstring: faultstring
+        detail:
+          errorcode: errorcode
+      properties:
+        faultstring:
+          type: string
+        detail:
+          $ref: '#/components/schemas/get_accesstoken_500_response_fault_detail'
+      type: object
+    get_accesstoken_500_response:
+      example:
+        fault:
+          faultstring: faultstring
+          detail:
+            errorcode: errorcode
+      properties:
+        fault:
+          $ref: '#/components/schemas/get_accesstoken_500_response_fault'
       type: object
     get_reseller_v6_validateQuote_400_response_fields_inner:
       example:
@@ -15311,10 +15368,15 @@ components:
     QuoteDetailsResponse_products_inner_price:
       example:
         quotePrice: 1
+        totalVisibleReserveQuantity: 3
+        extendedvendorprice: 9.301444243932576
         msrp: 5
         extendedQuotePrice: 2
+        recurringPriceModel: recurringPriceModel
+        vendorprice: 7.061401241503109
+        type: type
         extendedMsrp: 5
-        discountOffList: 7.061401241503109
+        discountOffList: discountOffList
       properties:
         quotePrice:
           description: Ingram Micro quoted price specific to the reseller and quote.
@@ -15329,9 +15391,20 @@ components:
           description: Extended reseller quoted price (cost to reseller) X Quantity
           type: integer
         discountOffList:
-          description: Discount off list percentage
+          description: Discount off list percentage extended
+          type: string
+        vendorprice:
           format: decimal
           type: number
+        extendedvendorprice:
+          format: decimal
+          type: number
+        totalVisibleReserveQuantity:
+          type: integer
+        type:
+          type: string
+        recurringPriceModel:
+          type: string
       type: object
     QuoteDetailsResponse_products_inner:
       example:
@@ -15340,17 +15413,24 @@ components:
         vpnCategory: vpnCategory
         quantity: 0
         notes: notes
+        resellerMargin: resellerMargin
         description: description
         weight: 6
         vendorName: vendorName
+        isSubscription: true
         ean: ean
         terms: terms
         price:
           quotePrice: 1
+          totalVisibleReserveQuantity: 3
+          extendedvendorprice: 9.301444243932576
           msrp: 5
           extendedQuotePrice: 2
+          recurringPriceModel: recurringPriceModel
+          vendorprice: 7.061401241503109
+          type: type
           extendedMsrp: 5
-          discountOffList: 7.061401241503109
+          discountOffList: discountOffList
         quoteProductGuid: quoteProductGuid
         vendorPartNumber: vendorPartNumber
         lineNumber: lineNumber
@@ -15419,6 +15499,10 @@ components:
           type: string
         terms:
           description: Terms of the quote
+          type: string
+        isSubscription:
+          type: boolean
+        resellerMargin:
           type: string
         price:
           $ref: '#/components/schemas/QuoteDetailsResponse_products_inner_price'
@@ -17345,6 +17429,7 @@ components:
           scopes:
             write: allows modifying resources
             read: allows reading resources
+            description: ""
           tokenUrl: https://api.ingrammicro.com:443/oauth/oauth30/token
       type: oauth2
 x-tagGroups:
@@ -17367,16 +17452,7 @@ x-tagGroups:
   tags:
   - Orders v6
   - Invoices v6
-- name: Legacy APIs (Version 5)
+- name: Accesstoken
   tags:
-  - Product Catalog v5
-  - Orders v5
-  - Quotes v5
-  - Invoices V5
-- name: Legacy APIs (Version 4)
-  tags:
-  - Product Catalog v4
-  - Orders v4
-  - Quotes v4
-  - Invoices v4
+  - Accesstoken
 

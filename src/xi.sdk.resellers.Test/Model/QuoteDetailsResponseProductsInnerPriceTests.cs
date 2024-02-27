@@ -98,5 +98,50 @@ namespace xi.sdk.resellers.Test.Model
         {
             // TODO unit test for the property 'DiscountOffList'
         }
+
+        /// <summary>
+        /// Test the property 'Vendorprice'
+        /// </summary>
+        [Fact]
+        public void VendorpriceTest()
+        {
+            // TODO unit test for the property 'Vendorprice'
+        }
+
+        /// <summary>
+        /// Test the property 'Extendedvendorprice'
+        /// </summary>
+        [Fact]
+        public void ExtendedvendorpriceTest()
+        {
+            // TODO unit test for the property 'Extendedvendorprice'
+        }
+
+        /// <summary>
+        /// Test the property 'TotalVisibleReserveQuantity'
+        /// </summary>
+        [Fact]
+        public void TotalVisibleReserveQuantityTest()
+        {
+            // TODO unit test for the property 'TotalVisibleReserveQuantity'
+        }
+
+        /// <summary>
+        /// Test the property 'Type'
+        /// </summary>
+        [Fact]
+        public void TypeTest()
+        {
+            // TODO unit test for the property 'Type'
+        }
+
+        /// <summary>
+        /// Test the property 'RecurringPriceModel'
+        /// </summary>
+        [Fact]
+        public void RecurringPriceModelTest()
+        {
+            // TODO unit test for the property 'RecurringPriceModel'
+        }
     }
 }
