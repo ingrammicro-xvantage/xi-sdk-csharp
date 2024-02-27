@@ -3,6 +3,8 @@
 README.md
 api/openapi.yaml
 appveyor.yml
+docs/AccesstokenApi.md
+docs/AccesstokenResponse.md
 docs/AvailabilityAsyncNotificationRequest.md
 docs/AvailabilityAsyncNotificationRequestResourceInner.md
 docs/AvailabilityAsyncNotificationRequestResourceInnerLinksInner.md
@@ -26,6 +28,10 @@ docs/FreightResponseFreightEstimateResponse.md
 docs/FreightResponseFreightEstimateResponseDistributionInner.md
 docs/FreightResponseFreightEstimateResponseDistributionInnerCarrierListInner.md
 docs/FreightResponseFreightEstimateResponseLinesInner.md
+docs/GetAccesstoken400Response.md
+docs/GetAccesstoken500Response.md
+docs/GetAccesstoken500ResponseFault.md
+docs/GetAccesstoken500ResponseFaultDetail.md
 docs/GetResellerV6ValidateQuote400Response.md
 docs/GetResellerV6ValidateQuote400ResponseFieldsInner.md
 docs/GetResellerV6ValidateQuote500Response.md
@@ -195,6 +201,7 @@ docs/ValidateQuoteResponse.md
 docs/ValidateQuoteResponseLinesInner.md
 docs/ValidateQuoteResponseVmfAdditionalAttributesInner.md
 git_push.sh
+src/xi.sdk.resellers.Test/Api/AccesstokenApiTests.cs
 src/xi.sdk.resellers.Test/Api/DealsApiTests.cs
 src/xi.sdk.resellers.Test/Api/FreightEstimateApiTests.cs
 src/xi.sdk.resellers.Test/Api/InvoicesApiTests.cs
@@ -206,6 +213,7 @@ src/xi.sdk.resellers.Test/Api/QuotesApiTests.cs
 src/xi.sdk.resellers.Test/Api/RenewalsApiTests.cs
 src/xi.sdk.resellers.Test/Api/ReturnsApiTests.cs
 src/xi.sdk.resellers.Test/Api/StockUpdateApiTests.cs
+src/xi.sdk.resellers.Test/Model/AccesstokenResponseTests.cs
 src/xi.sdk.resellers.Test/Model/AvailabilityAsyncNotificationRequestResourceInnerLinksInnerTests.cs
 src/xi.sdk.resellers.Test/Model/AvailabilityAsyncNotificationRequestResourceInnerTests.cs
 src/xi.sdk.resellers.Test/Model/AvailabilityAsyncNotificationRequestTests.cs
@@ -227,6 +235,10 @@ src/xi.sdk.resellers.Test/Model/FreightResponseFreightEstimateResponseDistributi
 src/xi.sdk.resellers.Test/Model/FreightResponseFreightEstimateResponseLinesInnerTests.cs
 src/xi.sdk.resellers.Test/Model/FreightResponseFreightEstimateResponseTests.cs
 src/xi.sdk.resellers.Test/Model/FreightResponseTests.cs
+src/xi.sdk.resellers.Test/Model/GetAccesstoken400ResponseTests.cs
+src/xi.sdk.resellers.Test/Model/GetAccesstoken500ResponseFaultDetailTests.cs
+src/xi.sdk.resellers.Test/Model/GetAccesstoken500ResponseFaultTests.cs
+src/xi.sdk.resellers.Test/Model/GetAccesstoken500ResponseTests.cs
 src/xi.sdk.resellers.Test/Model/GetResellerV6ValidateQuote400ResponseFieldsInnerTests.cs
 src/xi.sdk.resellers.Test/Model/GetResellerV6ValidateQuote400ResponseTests.cs
 src/xi.sdk.resellers.Test/Model/GetResellerV6ValidateQuote500ResponseTests.cs
@@ -387,6 +399,7 @@ src/xi.sdk.resellers.Test/Model/ValidateQuoteResponseLinesInnerTests.cs
 src/xi.sdk.resellers.Test/Model/ValidateQuoteResponseTests.cs
 src/xi.sdk.resellers.Test/Model/ValidateQuoteResponseVmfAdditionalAttributesInnerTests.cs
 src/xi.sdk.resellers.Test/xi.sdk.resellers.Test.csproj
+src/xi.sdk.resellers/Api/AccesstokenApi.cs
 src/xi.sdk.resellers/Api/DealsApi.cs
 src/xi.sdk.resellers/Api/FreightEstimateApi.cs
 src/xi.sdk.resellers/Api/InvoicesApi.cs
@@ -416,6 +429,7 @@ src/xi.sdk.resellers/Client/RequestOptions.cs
 src/xi.sdk.resellers/Client/RetryConfiguration.cs
 src/xi.sdk.resellers/Client/WebRequestPathBuilder.cs
 src/xi.sdk.resellers/Model/AbstractOpenAPISchema.cs
+src/xi.sdk.resellers/Model/AccesstokenResponse.cs
 src/xi.sdk.resellers/Model/AvailabilityAsyncNotificationRequest.cs
 src/xi.sdk.resellers/Model/AvailabilityAsyncNotificationRequestResourceInner.cs
 src/xi.sdk.resellers/Model/AvailabilityAsyncNotificationRequestResourceInnerLinksInner.cs
@@ -437,6 +451,10 @@ src/xi.sdk.resellers/Model/FreightResponseFreightEstimateResponse.cs
 src/xi.sdk.resellers/Model/FreightResponseFreightEstimateResponseDistributionInner.cs
 src/xi.sdk.resellers/Model/FreightResponseFreightEstimateResponseDistributionInnerCarrierListInner.cs
 src/xi.sdk.resellers/Model/FreightResponseFreightEstimateResponseLinesInner.cs
+src/xi.sdk.resellers/Model/GetAccesstoken400Response.cs
+src/xi.sdk.resellers/Model/GetAccesstoken500Response.cs
+src/xi.sdk.resellers/Model/GetAccesstoken500ResponseFault.cs
+src/xi.sdk.resellers/Model/GetAccesstoken500ResponseFaultDetail.cs
 src/xi.sdk.resellers/Model/GetResellerV6ValidateQuote400Response.cs
 src/xi.sdk.resellers/Model/GetResellerV6ValidateQuote400ResponseFieldsInner.cs
 src/xi.sdk.resellers/Model/GetResellerV6ValidateQuote500Response.cs

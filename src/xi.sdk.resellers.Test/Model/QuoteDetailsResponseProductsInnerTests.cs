@@ -199,6 +199,24 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'IsSubscription'
+        /// </summary>
+        [Fact]
+        public void IsSubscriptionTest()
+        {
+            // TODO unit test for the property 'IsSubscription'
+        }
+
+        /// <summary>
+        /// Test the property 'ResellerMargin'
+        /// </summary>
+        [Fact]
+        public void ResellerMarginTest()
+        {
+            // TODO unit test for the property 'ResellerMargin'
+        }
+
+        /// <summary>
         /// Test the property 'Price'
         /// </summary>
         [Fact]

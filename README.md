@@ -107,29 +107,23 @@ namespace Example
 
             Configuration config = new Configuration();
             config.BasePath = "https://api.ingrammicro.com:443";
-            // Configure OAuth2 access token for authorization: application
-            config.AccessToken = "YOUR_ACCESS_TOKEN";
-
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new DealsApi(httpClient, config, httpClientHandler);
-            var iMCustomerNumber = 20-222222;  // string | Your unique Ingram Micro customer number.
-            var iMCountryCode = US;  // string | Two-character ISO country code.
-            var iMCorrelationID = fbac82ba-cf0a-4bcf-fc03-0c5084;  // string | Unique transaction number to identify each transaction across all the systems.
-            var iMApplicationId = MyCompany;  // string | Unique value used to identify the sender of the transaction. Example: MyCompany
-            var iMEnvironment = prodChicago;  // string | Environment name.
-            var dealId = 12345678;  // string | Unique deal ID.
+            var apiInstance = new AccesstokenApi(httpClient, config, httpClientHandler);
+            var grantType = client_credentials;  // string | Keep grant_type as client_credentials only.
+            var clientId = "clientId_example";  // string | 
+            var clientSecret = "clientSecret_example";  // string | 
 
             try
             {
-                // Deals Details
-                DealsDetailsResponse result = apiInstance.GetResellersV6Dealsdetails(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMApplicationId, iMEnvironment, dealId);
+                // Accesstoken
+                AccesstokenResponse result = apiInstance.GetAccesstoken(grantType, clientId, clientSecret);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling DealsApi.GetResellersV6Dealsdetails: " + e.Message );
+                Debug.Print("Exception when calling AccesstokenApi.GetAccesstoken: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -146,6 +140,7 @@ All URIs are relative to *https://api.ingrammicro.com:443*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AccesstokenApi* | [**GetAccesstoken**](docs/AccesstokenApi.md#getaccesstoken) | **GET** /oauth/oauth20/token | Accesstoken
 *DealsApi* | [**GetResellersV6Dealsdetails**](docs/DealsApi.md#getresellersv6dealsdetails) | **GET** /resellers/v6/deals/{dealId} | Deals Details
 *DealsApi* | [**GetResellersV6Dealssearch**](docs/DealsApi.md#getresellersv6dealssearch) | **GET** /resellers/v6/deals/search | Deals Search
 *FreightEstimateApi* | [**PostFreightestimate**](docs/FreightEstimateApi.md#postfreightestimate) | **POST** /resellers/v6/freightestimate | Freight Estimate
@@ -175,6 +170,7 @@ Class | Method | HTTP request | Description
 <a id="documentation-for-models"></a>
 ## Documentation for Models
 
+ - [Model.AccesstokenResponse](docs/AccesstokenResponse.md)
  - [Model.AvailabilityAsyncNotificationRequest](docs/AvailabilityAsyncNotificationRequest.md)
  - [Model.AvailabilityAsyncNotificationRequestResourceInner](docs/AvailabilityAsyncNotificationRequestResourceInner.md)
  - [Model.AvailabilityAsyncNotificationRequestResourceInnerLinksInner](docs/AvailabilityAsyncNotificationRequestResourceInnerLinksInner.md)
@@ -196,6 +192,10 @@ Class | Method | HTTP request | Description
  - [Model.FreightResponseFreightEstimateResponseDistributionInner](docs/FreightResponseFreightEstimateResponseDistributionInner.md)
  - [Model.FreightResponseFreightEstimateResponseDistributionInnerCarrierListInner](docs/FreightResponseFreightEstimateResponseDistributionInnerCarrierListInner.md)
  - [Model.FreightResponseFreightEstimateResponseLinesInner](docs/FreightResponseFreightEstimateResponseLinesInner.md)
+ - [Model.GetAccesstoken400Response](docs/GetAccesstoken400Response.md)
+ - [Model.GetAccesstoken500Response](docs/GetAccesstoken500Response.md)
+ - [Model.GetAccesstoken500ResponseFault](docs/GetAccesstoken500ResponseFault.md)
+ - [Model.GetAccesstoken500ResponseFaultDetail](docs/GetAccesstoken500ResponseFaultDetail.md)
  - [Model.GetResellerV6ValidateQuote400Response](docs/GetResellerV6ValidateQuote400Response.md)
  - [Model.GetResellerV6ValidateQuote400ResponseFieldsInner](docs/GetResellerV6ValidateQuote400ResponseFieldsInner.md)
  - [Model.GetResellerV6ValidateQuote500Response](docs/GetResellerV6ValidateQuote500Response.md)
@@ -371,12 +371,5 @@ Authentication schemes defined for the API:
 - **Scopes**: 
   - write: allows modifying resources
   - read: allows reading resources
+  - description: 
 
-## Author
--[Ingram Micro Xvantage](https://github.com/ingrammicro-xvantage)
-
-## Contact
-
-For any inquiries or support, please feel free to contact us at:
-
-- Email: [xi_support@ingrammicro.com](xi_support@ingrammicro.com)

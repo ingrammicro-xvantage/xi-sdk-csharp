@@ -51,8 +51,10 @@ namespace xi.sdk.resellers.Model
         /// <param name="quoteProductsSupplierPartAuxiliaryId">Vendor product configuration ID specific to Cisco..</param>
         /// <param name="vendorName">Vendor name of the product.</param>
         /// <param name="terms">Terms of the quote.</param>
+        /// <param name="isSubscription">isSubscription.</param>
+        /// <param name="resellerMargin">resellerMargin.</param>
         /// <param name="price">price.</param>
-        public QuoteDetailsResponseProductsInner(string quoteProductGuid = default(string), string lineNumber = default(string), int quantity = default(int), string notes = default(string), string ean = default(string), string coo = default(string), string ingramPartNumber = default(string), string vendorPartNumber = default(string), string description = default(string), int weight = default(int), string weightUom = default(string), bool isSuggestionProduct = default(bool), string vpnCategory = default(string), string quoteProductsSupplierPartAuxiliaryId = default(string), string vendorName = default(string), string terms = default(string), QuoteDetailsResponseProductsInnerPrice price = default(QuoteDetailsResponseProductsInnerPrice))
+        public QuoteDetailsResponseProductsInner(string quoteProductGuid = default(string), string lineNumber = default(string), int quantity = default(int), string notes = default(string), string ean = default(string), string coo = default(string), string ingramPartNumber = default(string), string vendorPartNumber = default(string), string description = default(string), int weight = default(int), string weightUom = default(string), bool isSuggestionProduct = default(bool), string vpnCategory = default(string), string quoteProductsSupplierPartAuxiliaryId = default(string), string vendorName = default(string), string terms = default(string), bool isSubscription = default(bool), string resellerMargin = default(string), QuoteDetailsResponseProductsInnerPrice price = default(QuoteDetailsResponseProductsInnerPrice))
         {
             this.QuoteProductGuid = quoteProductGuid;
             this.LineNumber = lineNumber;
@@ -70,6 +72,8 @@ namespace xi.sdk.resellers.Model
             this.QuoteProductsSupplierPartAuxiliaryId = quoteProductsSupplierPartAuxiliaryId;
             this.VendorName = vendorName;
             this.Terms = terms;
+            this.IsSubscription = isSubscription;
+            this.ResellerMargin = resellerMargin;
             this.Price = price;
         }
 
@@ -186,6 +190,18 @@ namespace xi.sdk.resellers.Model
         public string Terms { get; set; }
 
         /// <summary>
+        /// Gets or Sets IsSubscription
+        /// </summary>
+        [DataMember(Name = "isSubscription", EmitDefaultValue = true)]
+        public bool IsSubscription { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ResellerMargin
+        /// </summary>
+        [DataMember(Name = "resellerMargin", EmitDefaultValue = false)]
+        public string ResellerMargin { get; set; }
+
+        /// <summary>
         /// Gets or Sets Price
         /// </summary>
         [DataMember(Name = "price", EmitDefaultValue = false)]
@@ -215,6 +231,8 @@ namespace xi.sdk.resellers.Model
             sb.Append("  QuoteProductsSupplierPartAuxiliaryId: ").Append(QuoteProductsSupplierPartAuxiliaryId).Append("\n");
             sb.Append("  VendorName: ").Append(VendorName).Append("\n");
             sb.Append("  Terms: ").Append(Terms).Append("\n");
+            sb.Append("  IsSubscription: ").Append(IsSubscription).Append("\n");
+            sb.Append("  ResellerMargin: ").Append(ResellerMargin).Append("\n");
             sb.Append("  Price: ").Append(Price).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
