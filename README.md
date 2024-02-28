@@ -129,35 +129,36 @@ namespace Example
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://api.ingrammicro.com:443*
+All URIs are relative to [https://api.ingrammicro.com:443](https://api.ingrammicro.com:443)
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AccesstokenApi* | [**GetAccesstoken**](docs/AccesstokenApi.md#getaccesstoken) | **GET** /oauth/oauth20/token | Accesstoken
-*DealsApi* | [**GetResellersV6Dealsdetails**](docs/DealsApi.md#getresellersv6dealsdetails) | **GET** /resellers/v6/deals/{dealId} | Deals Details
-*DealsApi* | [**GetResellersV6Dealssearch**](docs/DealsApi.md#getresellersv6dealssearch) | **GET** /resellers/v6/deals/search | Deals Search
-*FreightEstimateApi* | [**PostFreightestimate**](docs/FreightEstimateApi.md#postfreightestimate) | **POST** /resellers/v6/freightestimate | Freight Estimate
-*InvoicesApi* | [**GetInvoicedetailsV61**](docs/InvoicesApi.md#getinvoicedetailsv61) | **GET** /resellers/v6.1/invoices/{invoiceNumber} | Get Invoice Details v6.1
-*InvoicesApi* | [**GetResellersV6Invoicesearch**](docs/InvoicesApi.md#getresellersv6invoicesearch) | **GET** /resellers/v6/invoices | Search your invoice
-*OrderStatusApi* | [**ResellersV1WebhooksOrderstatuseventPost**](docs/OrderStatusApi.md#resellersv1webhooksorderstatuseventpost) | **POST** /resellers/v1/webhooks/orderstatusevent | Order Status
-*OrdersApi* | [**DeleteOrdercancel**](docs/OrdersApi.md#deleteordercancel) | **DELETE** /resellers/v6/orders/{OrderNumber} | Cancel your Order
-*OrdersApi* | [**GetOrderdetailsV61**](docs/OrdersApi.md#getorderdetailsv61) | **GET** /resellers/v6.1/orders/{ordernumber} | Get Order Details v6.1
-*OrdersApi* | [**GetResellersV6Ordersearch**](docs/OrdersApi.md#getresellersv6ordersearch) | **GET** /resellers/v6/orders/search | Search your Orders
-*OrdersApi* | [**PostCreateorderV6**](docs/OrdersApi.md#postcreateorderv6) | **POST** /resellers/v6/orders | Create your Order
-*OrdersApi* | [**PutOrdermodify**](docs/OrdersApi.md#putordermodify) | **PUT** /resellers/v6/orders/{orderNumber} | Modify your Order
-*ProductCatalogApi* | [**GetResellerV6Productdetail**](docs/ProductCatalogApi.md#getresellerv6productdetail) | **GET** /resellers/v6/catalog/details/{ingramPartNumber} | Product Details
-*ProductCatalogApi* | [**GetResellerV6Productsearch**](docs/ProductCatalogApi.md#getresellerv6productsearch) | **GET** /resellers/v6/catalog | Search Products
-*ProductCatalogApi* | [**PostPriceandavailability**](docs/ProductCatalogApi.md#postpriceandavailability) | **POST** /resellers/v6/catalog/priceandavailability | Price and Availability
-*QuoteToOrderApi* | [**PostQuoteToOrderV6**](docs/QuoteToOrderApi.md#postquotetoorderv6) | **POST** /resellers/v6/q2o/orders | Quote To Order
-*QuotesApi* | [**GetQuotessearchV6**](docs/QuotesApi.md#getquotessearchv6) | **GET** /resellers/v6/quotes/search | Quote Search
-*QuotesApi* | [**GetResellerV6ValidateQuote**](docs/QuotesApi.md#getresellerv6validatequote) | **GET** /resellers/v6/q2o/validatequote | Validate Quote
-*QuotesApi* | [**GetResellersV6Quotes**](docs/QuotesApi.md#getresellersv6quotes) | **GET** /resellers/v6/quotes/{quoteNumber} | Get Quote Details
-*RenewalsApi* | [**GetResellersV6Renewalsdetails**](docs/RenewalsApi.md#getresellersv6renewalsdetails) | **GET** /resellers/v6/renewals/{renewalId} | Renewals Details
-*RenewalsApi* | [**PostRenewalssearch**](docs/RenewalsApi.md#postrenewalssearch) | **POST** /resellers/v6/renewals/search | Renewals Search
-*ReturnsApi* | [**GetResellersV6Returnsdetails**](docs/ReturnsApi.md#getresellersv6returnsdetails) | **GET** /resellers/v6/returns/{caseRequestNumber} | Returns Details
-*ReturnsApi* | [**GetResellersV6Returnssearch**](docs/ReturnsApi.md#getresellersv6returnssearch) | **GET** /resellers/v6/returns/search | Returns Search
-*ReturnsApi* | [**PostReturnscreate**](docs/ReturnsApi.md#postreturnscreate) | **POST** /resellers/v6/returns/create | Returns Create
-*StockUpdateApi* | [**ResellersV1WebhooksAvailabilityupdatePost**](docs/StockUpdateApi.md#resellersv1webhooksavailabilityupdatepost) | **POST** /resellers/v1/webhooks/availabilityupdate | Stock Update
+*AccesstokenApi* | [**GetAccesstoken**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp/tree/main/docs/AccesstokenApi.md#getaccesstoken) | **GET** /oauth/oauth20/token | Accesstoken
+*DealsApi* | [**GetResellersV6Dealsdetails**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp/tree/main/docs/DealsApi.md#getresellersv6dealsdetails) | **GET** /resellers/v6/deals/{dealId} | Deals Details
+*DealsApi* | [**GetResellersV6Dealssearch**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp/tree/main/docs/DealsApi.md#getresellersv6dealssearch) | **GET** /resellers/v6/deals/search | Deals Search
+*FreightEstimateApi* | [**PostFreightestimate**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp/tree/main/docs/FreightEstimateApi.md#postfreightestimate) | **POST** /resellers/v6/freightestimate | Freight Estimate
+*InvoicesApi* | [**GetInvoicedetailsV61**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp/tree/main/docs/InvoicesApi.md#getinvoicedetailsv61) | **GET** /resellers/v6.1/invoices/{invoiceNumber} | Get Invoice Details v6.1
+*InvoicesApi* | [**GetResellersV6Invoicesearch**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp/tree/main/docs/InvoicesApi.md#getresellersv6invoicesearch) | **GET** /resellers/v6/invoices | Search your invoice
+*OrderStatusApi* | [**ResellersV1WebhooksOrderstatuseventPost**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp/tree/main/docs/OrderStatusApi.md#resellersv1webhooksorderstatuseventpost) | **POST** /resellers/v1/webhooks/orderstatusevent | Order Status
+*OrdersApi* | [**DeleteOrdercancel**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp/tree/main/docs/OrdersApi.md#deleteordercancel) | **DELETE** /resellers/v6/orders/{OrderNumber} | Cancel your Order
+*OrdersApi* | [**GetOrderdetailsV61**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp/tree/main/docs/OrdersApi.md#getorderdetailsv61) | **GET** /resellers/v6.1/orders/{ordernumber} | Get Order Details v6.1
+*OrdersApi* | [**GetResellersV6Ordersearch**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp/tree/main/docs/OrdersApi.md#getresellersv6ordersearch) | **GET** /resellers/v6/orders/search | Search your Orders
+*OrdersApi* | [**PostCreateorderV6**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp/tree/main/docs/OrdersApi.md#postcreateorderv6) | **POST** /resellers/v6/orders | Create your Order
+*OrdersApi* | [**PutOrdermodify**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp/tree/main/docs/OrdersApi.md#putordermodify) | **PUT** /resellers/v6/orders/{orderNumber} | Modify your Order
+*ProductCatalogApi* | [**GetResellerV6Productdetail**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp/tree/main/docs/ProductCatalogApi.md#getresellerv6productdetail) | **GET** /resellers/v6/catalog/details/{ingramPartNumber} | Product Details
+*ProductCatalogApi* | [**GetResellerV6Productsearch**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp/tree/main/docs/ProductCatalogApi.md#getresellerv6productsearch) | **GET** /resellers/v6/catalog | Search Products
+*ProductCatalogApi* | [**PostPriceandavailability**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp/tree/main/docs/ProductCatalogApi.md#postpriceandavailability) | **POST** /resellers/v6/catalog/priceandavailability | Price and Availability
+*QuoteToOrderApi* | [**PostQuoteToOrderV6**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp/tree/main/docs/QuoteToOrderApi.md#postquotetoorderv6) | **POST** /resellers/v6/q2o/orders | Quote To Order
+*QuotesApi* | [**GetQuotessearchV6**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp/tree/main/docs/QuotesApi.md#getquotessearchv6) | **GET** /resellers/v6/quotes/search | Quote Search
+*QuotesApi* | [**GetResellerV6ValidateQuote**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp/tree/main/docs/QuotesApi.md#getresellerv6validatequote) | **GET** /resellers/v6/q2o/validatequote | Validate Quote
+*QuotesApi* | [**GetResellersV6Quotes**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp/tree/main/docs/QuotesApi.md#getresellersv6quotes) | **GET** /resellers/v6/quotes/{quoteNumber} | Get Quote Details
+*RenewalsApi* | [**GetResellersV6Renewalsdetails**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp/tree/main/docs/RenewalsApi.md#getresellersv6renewalsdetails) | **GET** /resellers/v6/renewals/{renewalId} | Renewals Details
+*RenewalsApi* | [**PostRenewalssearch**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp/tree/main/docs/RenewalsApi.md#postrenewalssearch) | **POST** /resellers/v6/renewals/search | Renewals Search
+*ReturnsApi* | [**GetResellersV6Returnsdetails**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp/tree/main/docs/ReturnsApi.md#getresellersv6returnsdetails) | **GET** /resellers/v6/returns/{caseRequestNumber} | Returns Details
+*ReturnsApi* | [**GetResellersV6Returnssearch**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp/tree/main/docs/ReturnsApi.md#getresellersv6returnssearch) | **GET** /resellers/v6/returns/search | Returns Search
+*ReturnsApi* | [**PostReturnscreate**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp/tree/main/docs/ReturnsApi.md#postreturnscreate) | **POST** /resellers/v6/returns/create | Returns Create
+*StockUpdateApi* | [**ResellersV1WebhooksAvailabilityupdatePost**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp/tree/main/docs/StockUpdateApi.md#resellersv1webhooksavailabilityupdatepost) | **POST** /resellers/v1/webhooks/availabilityupdate | Stock Update
+
 
 
 
