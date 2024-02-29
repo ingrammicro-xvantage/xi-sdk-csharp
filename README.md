@@ -11,7 +11,7 @@ For Resellers. Who are looking to Innovate with Ingram Micro's API SolutionsAuto
 The DLLs included in the package may not be the latest version. We recommend using [NuGet](https://docs.nuget.org/consume/installing-nuget) to obtain the latest version of the packages:
 ```
 Install-Package Newtonsoft.Json
-<!-- Install-Package JsonSubTypes -->
+Install-Package JsonSubTypes
 Install-Package System.ComponentModel.Annotations
 ```
 
