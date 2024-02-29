@@ -83,6 +83,8 @@ services.AddHttpClient<YourApiClass>(httpClient =>
 
 ## Getting Started
 
+Quickstart on creating an application can be found [here](getting-started.md)
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
