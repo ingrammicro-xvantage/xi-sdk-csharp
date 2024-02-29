@@ -1,6 +1,6 @@
 # XI SDK Quickstart for C#
 
-![C# icon](./assets/images/C#-icon.png)
+![C# icon](./assets/images/Csharp-icon.png)
 
 [Repository GitHub](https://github.com/ingrammicro-xvantage/xi-sdk-openapispec)
 
@@ -33,7 +33,7 @@ To create a new Console application. Open your visual studio and follow below st
 Install packages using the Nuget package manager GUI:
 * Right click on your project and Select “Manage Nuget Packages“
 
-![Open Nuget Manager](./assets/images/quickstart-open-nuget-package-maanger.png.png)
+![Open Nuget Manager](./assets/images/quickstart-open-nuget-package-maanger.png)
 
 * Search for “xi.sdk.resellers” and click the “Install” button → Then click “Apply” button in the next dialog.
 
