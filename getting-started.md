@@ -33,7 +33,7 @@ To create a new Console application. Open your visual studio and follow below st
 Install packages using the Nuget package manager GUI:
 * Right click on your project and Select “Manage Nuget Packages“
 
-![Open Nuget Manager](./assets/images/quickstart-open-nuget-package-maanger.png)
+![Open Nuget Manager](./assets/images/quickstart-open-nuget-package-manger.png)
 
 * Search for “xi.sdk.resellers” and click the “Install” button → Then click “Apply” button in the next dialog.
 
