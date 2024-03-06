@@ -362,7 +362,8 @@ Authentication schemes defined for the API:
 
 - **Type**: OAuth
 - **Flow**: application
-- **Authorization URL**: 
+- **Authorization URL**: https://api.ingrammicro.com:443/oauth/oauth20/token?grant_type=client_credentials&client_id={ClientId}&client_secret={clientSecret}
+- **Method**: Get
 - **Scopes**: 
   - write: allows modifying resources
   - read: allows reading resources
