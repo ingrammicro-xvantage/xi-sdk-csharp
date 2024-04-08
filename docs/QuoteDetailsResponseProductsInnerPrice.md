@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**QuotePrice** | **int** | Ingram Micro quoted price specific to the reseller and quote. | [optional] 
-**Msrp** | **int** | Manufacturer Suggested Retail Price | [optional] 
-**ExtendedMsrp** | **int** | Extended MSRP - Manufacturer Suggested Retail Price X Quantity | [optional] 
-**ExtendedQuotePrice** | **int** | Extended reseller quoted price (cost to reseller) X Quantity | [optional] 
+**QuotePrice** | **decimal** | Ingram Micro quoted price specific to the reseller and quote. | [optional] 
+**Msrp** | **decimal** | Manufacturer Suggested Retail Price | [optional] 
+**ExtendedMsrp** | **decimal** | Extended MSRP - Manufacturer Suggested Retail Price X Quantity | [optional] 
+**ExtendedQuotePrice** | **decimal** | Extended reseller quoted price (cost to reseller) X Quantity | [optional] 
 **DiscountOffList** | **string** | Discount off list percentage extended | [optional] 
 **Vendorprice** | **decimal** |  | [optional] 
 **Extendedvendorprice** | **decimal** |  | [optional] 

@@ -119,7 +119,7 @@ catch (ApiException e)
 
 <a id="getresellersv6dealssearch"></a>
 # **GetResellersV6Dealssearch**
-> DealsSearchResponse GetResellersV6Dealssearch (string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = null, string? endUser = null, string? vendor = null, string? dealId = null)
+> DealsSearchResponse GetResellersV6Dealssearch (string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = null, string? endUser = null, string? vendor = null, string? dealId = null, int? size = null, int? page = null)
 
 Deals Search
 
@@ -156,11 +156,13 @@ namespace Example
             var endUser = EnduserCompany;  // string? | The end user/customer's name. (optional) 
             var vendor = Cisco;  // string? | The vendor's name. (optional) 
             var dealId = 12345678;  // string? | Deal/Special bid number. (optional) 
+            var size = 56;  // int? | The number of records required in the call - max records 100 per page. (optional) 
+            var page = 56;  // int? | The page number reference. (optional) 
 
             try
             {
                 // Deals Search
-                DealsSearchResponse result = apiInstance.GetResellersV6Dealssearch(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMSenderID, endUser, vendor, dealId);
+                DealsSearchResponse result = apiInstance.GetResellersV6Dealssearch(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMSenderID, endUser, vendor, dealId, size, page);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -181,7 +183,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Deals Search
-    ApiResponse<DealsSearchResponse> response = apiInstance.GetResellersV6DealssearchWithHttpInfo(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMSenderID, endUser, vendor, dealId);
+    ApiResponse<DealsSearchResponse> response = apiInstance.GetResellersV6DealssearchWithHttpInfo(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMSenderID, endUser, vendor, dealId, size, page);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -205,6 +207,8 @@ catch (ApiException e)
 | **endUser** | **string?** | The end user/customer&#39;s name. | [optional]  |
 | **vendor** | **string?** | The vendor&#39;s name. | [optional]  |
 | **dealId** | **string?** | Deal/Special bid number. | [optional]  |
+| **size** | **int?** | The number of records required in the call - max records 100 per page. | [optional]  |
+| **page** | **int?** | The page number reference. | [optional]  |
 
 ### Return type
 

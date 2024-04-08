@@ -1,8 +1,8 @@
 openapi: 3.0.0
 info:
-  description: For Ingram Micro Resellers. Who are looking to Innovate with Ingram
-    Micro's API SolutionsAutomate your eCommerce with our offering of APIs and Webhooks
-    to create a seamless experience for your customers.
+  description: "For resellers seeking to innovate with Ingram Micro's API solutions,\
+    \ automate your eCommerce experience with our array of APIs and webhooks to craft\
+    \ a seamless journey for your customers."
   title: XI Sdk Resellers
   version: 1.0.0
 servers:
@@ -33,8 +33,12 @@ tags:
     \ not accessible through this API.\n  \n*Host Production URL - https://api.ingrammicro.com:443/resellers/v6*\
     \  "
   name: Quotes
-- description: ' '
-  name: Quote To Order
+- description: |
+    This API will allow customers to perform both standard ordering and quote to order functionality via a single API enabling them to have a single endpoint to cater to all types of orders.
+
+    This approach will standardize the ordering flow for customers where they will get the response for all orders on to their webhooks.
+    It provides the much-awaited async ordering flow for Reseller API where large orders can also be placed via a single API with guaranteed delivery.
+  name: AsyncOrderCreate
 - description: |2
 
     The Ingram Micro Invoice v6 API endpoint provide real-time information for invoices. Users can:
@@ -5643,33 +5647,15 @@ paths:
       summary: Validate Quote
       tags:
       - Quotes
-  /resellers/v6/q2o/orders:
+  /resellers/v7/orders:
     post:
-      description: "The “Quote to Order” (QTO) endpoint allows a customer to create\
-        \ an order using the existing quote which is in “Ready to Order” status. A\
-        \ customer can create an order using Configure to order (CTO) quote or a non-configure\
-        \ to order (Non-CTO) quote. Upon successful submission of the order create\
-        \ request, a confirmation message will be returned as an API response. <br\
-        \ > <br >Ingram Micro offers webhooks as a method to send notifications to\
-        \ Resellers once the order creation request is received. All the updates related\
-        \ to Order creation will be pushed as a notification to the customer via a\
-        \ pre-defined callback URL as an HTTP post. <br > <br > **Prerequisite:**\
-        \ Pre-defined callback URL <br > <br > Before creating an order using the\
-        \ quote, it’s recommended to validate the quote using the “Validate Quote”\
-        \ endpoint. Validate Quote endpoint will not only validate the quote but also\
-        \ outline all the mandatory fields required by the vendor at a header level\
-        \ and at the line level which a customer need to pass to the Quote To Order\
-        \ endpoint request.  For a detailed understanding of the “Validate Quote”\
-        \ endpoint, review the “Validate Quote” endpoint documentation. <br ><br >\
-        \ **How it works:** <br ><br > - The customer validates the quote with a quote\
-        \ number from Validate Quote endpoint. <br > - The customer copies all the\
-        \ mandatory fields required by the vendor and adds them to the QTO request\
-        \ body. <br > - The customer provides all the values for Vendor mandatory\
-        \ fields along with other required information for QTO to create an order.\
-        \ <br > - After the order creation request receipt acknowledgment from the\
-        \ QTO endpoint, all further order creation updates will be provided via webhook\
-        \ push notification."
-      operationId: post-QuoteToOrder_v6
+      description: |
+        This API will allow customers to perform both standard ordering and quote to order functionality via a single API enabling them to have a single endpoint to cater to all types of orders.
+
+        This approach will standardize the ordering flow for customers where they will get the response for all orders on to their webhooks.
+
+        It provides the much-awaited async ordering flow for Reseller API where large orders can also be placed via a single API with guaranteed delivery.
+      operationId: post-AsyncOrderCreate_v7
       parameters:
       - description: Your unique Ingram Micro customer number.
         explode: false
@@ -5763,7 +5749,7 @@ paths:
                       attributeValue: ""
                       attributeDescription: ""
             schema:
-              $ref: '#/components/schemas/QuoteToOrderDetailsDTO'
+              $ref: '#/components/schemas/AsyncOrderCreateDTO'
         required: true
       responses:
         "200":
@@ -5779,7 +5765,7 @@ paths:
                       \ under process.We will notify you of the status via the Order\
                       \ Status webhook."
               schema:
-                $ref: '#/components/schemas/QuoteToOrderResponse'
+                $ref: '#/components/schemas/AsyncOrderCreateResponse'
           description: Success
         "400":
           content:
@@ -5797,7 +5783,7 @@ paths:
                         message: Required field is missing
                         value: null
               schema:
-                $ref: '#/components/schemas/post_QuoteToOrder_v6_400_response'
+                $ref: '#/components/schemas/post_AsyncOrderCreate_v7_400_response'
           description: Bad Request
         "500":
           content:
@@ -5817,9 +5803,9 @@ paths:
       security:
       - application:
         - read
-      summary: Quote To Order
+      summary: Async Order Create
       tags:
-      - Quote To Order
+      - AsyncOrderCreate
   /resellers/v6/invoices:
     get:
       description: Search your Ingram Micro invoices. This endpoint searches by multiple
@@ -6842,6 +6828,25 @@ paths:
         schema:
           example: "12345678"
           type: string
+        style: form
+      - description: The number of records required in the call - max records 100
+          per page.
+        explode: true
+        in: query
+        name: Size
+        required: false
+        schema:
+          format: int32
+          type: integer
+        style: form
+      - description: The page number reference.
+        explode: true
+        in: query
+        name: Page
+        required: false
+        schema:
+          format: int32
+          type: integer
         style: form
       responses:
         "200":
@@ -8099,65 +8104,198 @@ components:
       required:
       - customerOrderNumber
       type: object
-    QuoteToOrderDetailsDTO:
-      additionalProperties: false
+    AsyncOrderCreateDTO:
       example:
+        internalComments: internalComments
+        notes: notes
         endUserInfo:
+          endUserId: endUserId
+          contactId: contactId
+          city: city
+          companyName: companyName
+          postalCode: postalCode
           phoneNumber: phoneNumber
-          city: city
           countryCode: countryCode
-          companyName: companyName
           contact: contact
-          postalCode: postalCode
           addressLine1: addressLine1
           addressLine2: addressLine2
           addressLine3: addressLine3
           state: state
+          endUserType: endUserType
+          name2: name2
+          addressLine4: addressLine4
+          name1: name1
           email: email
-        shipToInfo:
-          city: city
-          countryCode: countryCode
-          companyName: companyName
-          contact: contact
-          postalCode: postalCode
-          addressLine1: addressLine1
-          addressLine2: addressLine2
-          addressLine3: addressLine3
-          state: state
-          email: email
-          addressId: addressId
+        vendAuthNumber: vendAuthNumber
         billToAddressId: billToAddressId
-        enduserOrderNumber: enduserOrderNumber
-        lines:
-        - ingramPartNumber: ingramPartNumber
+        warrantyInfo:
+        - hardwareLineLink: hardwareLineLink
           vmfAdditionalAttributesLines:
           - attributeValue: attributeValue
             attributeName: attributeName
-            attributeDescription: attributeDescription
           - attributeValue: attributeValue
             attributeName: attributeName
-            attributeDescription: attributeDescription
-          quantity: quantity
-          customerLineNumber: customerLineNumber
-        - ingramPartNumber: ingramPartNumber
+          warrantyLineLink: warrantyLineLink
+          directLineLink: directLineLink
+          serialInfo:
+          - dateOfPurchase: dateOfPurchase
+            primarySerialNumber: primarySerialNumber
+            secondarySerialNumber: secondarySerialNumber
+            shipDate: shipDate
+          - dateOfPurchase: dateOfPurchase
+            primarySerialNumber: primarySerialNumber
+            secondarySerialNumber: secondarySerialNumber
+            shipDate: shipDate
+        - hardwareLineLink: hardwareLineLink
           vmfAdditionalAttributesLines:
           - attributeValue: attributeValue
             attributeName: attributeName
-            attributeDescription: attributeDescription
           - attributeValue: attributeValue
             attributeName: attributeName
-            attributeDescription: attributeDescription
-          quantity: quantity
-          customerLineNumber: customerLineNumber
+          warrantyLineLink: warrantyLineLink
+          directLineLink: directLineLink
+          serialInfo:
+          - dateOfPurchase: dateOfPurchase
+            primarySerialNumber: primarySerialNumber
+            secondarySerialNumber: secondarySerialNumber
+            shipDate: shipDate
+          - dateOfPurchase: dateOfPurchase
+            primarySerialNumber: primarySerialNumber
+            secondarySerialNumber: secondarySerialNumber
+            shipDate: shipDate
         customerOrderNumber: customerOrderNumber
         vmfadditionalAttributes:
         - attributeValue: attributeValue
           attributeName: attributeName
-          attributeDescription: attributeDescription
         - attributeValue: attributeValue
           attributeName: attributeName
-          attributeDescription: attributeDescription
         quoteNumber: quoteNumber
+        specialBidNumber: specialBidNumber
+        shipToInfo:
+          shippingNotes: shippingNotes
+          city: city
+          companyName: companyName
+          postalCode: postalCode
+          addressId: addressId
+          phoneNumber: phoneNumber
+          countryCode: countryCode
+          contact: contact
+          addressLine1: addressLine1
+          addressLine2: addressLine2
+          addressLine3: addressLine3
+          state: state
+          addressLine4: addressLine4
+          name2: name2
+          name1: name1
+          email: email
+        shipmentDetails:
+          shipComplete: shipComplete
+          freightAccountNumber: freightAccountNumber
+          shippingInstructions: shippingInstructions
+          carrierCode: carrierCode
+          signatureRequired: true
+          requestedDeliveryDate: requestedDeliveryDate
+        endcustomerOrderNumber: endcustomerOrderNumber
+        resellerInfo:
+          city: city
+          companyName: companyName
+          postalCode: postalCode
+          resellerId: resellerId
+          phoneNumber: phoneNumber
+          countryCode: countryCode
+          contact: contact
+          addressLine1: addressLine1
+          addressLine2: addressLine2
+          addressLine3: addressLine3
+          state: state
+          addressLine4: addressLine4
+          email: email
+        acceptBackOrder: true
+        lines:
+        - ingramPartNumber: ingramPartNumber
+          unitPrice: unitPrice
+          quantity: quantity
+          specialBidNumber: specialBidNumber
+          notes: notes
+          endUserInfo:
+          - endUserId: endUserId
+            contactId: contactId
+            city: city
+            companyName: companyName
+            postalCode: postalCode
+            phoneNumber: phoneNumber
+            countryCode: countryCode
+            contact: contact
+            addressLine1: addressLine1
+            addressLine2: addressLine2
+            addressLine3: addressLine3
+            state: state
+            endUserType: endUserType
+            name2: name2
+            addressLine4: addressLine4
+            name1: name1
+            email: email
+          - endUserId: endUserId
+            contactId: contactId
+            city: city
+            companyName: companyName
+            postalCode: postalCode
+            phoneNumber: phoneNumber
+            countryCode: countryCode
+            contact: contact
+            addressLine1: addressLine1
+            addressLine2: addressLine2
+            addressLine3: addressLine3
+            state: state
+            endUserType: endUserType
+            name2: name2
+            addressLine4: addressLine4
+            name1: name1
+            email: email
+          endUserPrice: endUserPrice
+          customerLineNumber: customerLineNumber
+        - ingramPartNumber: ingramPartNumber
+          unitPrice: unitPrice
+          quantity: quantity
+          specialBidNumber: specialBidNumber
+          notes: notes
+          endUserInfo:
+          - endUserId: endUserId
+            contactId: contactId
+            city: city
+            companyName: companyName
+            postalCode: postalCode
+            phoneNumber: phoneNumber
+            countryCode: countryCode
+            contact: contact
+            addressLine1: addressLine1
+            addressLine2: addressLine2
+            addressLine3: addressLine3
+            state: state
+            endUserType: endUserType
+            name2: name2
+            addressLine4: addressLine4
+            name1: name1
+            email: email
+          - endUserId: endUserId
+            contactId: contactId
+            city: city
+            companyName: companyName
+            postalCode: postalCode
+            phoneNumber: phoneNumber
+            countryCode: countryCode
+            contact: contact
+            addressLine1: addressLine1
+            addressLine2: addressLine2
+            addressLine3: addressLine3
+            state: state
+            endUserType: endUserType
+            name2: name2
+            addressLine4: addressLine4
+            name1: name1
+            email: email
+          endUserPrice: endUserPrice
+          customerLineNumber: customerLineNumber
         additionalAttributes:
         - attributeValue: attributeValue
           attributeName: attributeName
@@ -8175,10 +8313,13 @@ components:
           maxLength: 35
           nullable: true
           type: string
-        enduserOrderNumber:
+        endcustomerOrderNumber:
           description: The end customer's order number for reference in their system.
           maxLength: 35
           nullable: true
+          type: string
+        notes:
+          description: Order header level notes.
           type: string
         billToAddressId:
           description: Suffix used to identify billing address. Created during onboarding.
@@ -8187,26 +8328,54 @@ components:
             for credit.
           nullable: true
           type: string
+        specialBidNumber:
+          description: The bid number is provided to the reseller by the vendor for
+            special pricing and discounts. Line-level bid numbers take precedence
+            over header-level bid numbers.
+          type: string
+        internalComments:
+          description: need to replace with actual description
+          type: string
+        acceptBackOrder:
+          description: "ENUM [\"true\",\"false\"] - accept order if this item is backordered.\
+            \ This field along with shipComplete field decides the value of backorderflag.\
+            \ The value of this field is ignored when shipComplete field is present."
+          type: boolean
+        vendAuthNumber:
+          description: "Authorization number provided by vendor to Ingram's reseller.\
+            \ Orders will be placed on hold without this value, vendor specific mandatory\
+            \ field - please reach out Ingram Sales team for list of vendor for whom\
+            \ this is mandatory."
+          type: string
+        resellerInfo:
+          $ref: '#/components/schemas/AsyncOrderCreateDTO_resellerInfo'
         endUserInfo:
-          $ref: '#/components/schemas/QuoteToOrderDetailsDTO_endUserInfo'
+          $ref: '#/components/schemas/AsyncOrderCreateDTO_endUserInfo'
         shipToInfo:
-          $ref: '#/components/schemas/QuoteToOrderDetailsDTO_shipToInfo'
+          $ref: '#/components/schemas/AsyncOrderCreateDTO_shipToInfo'
+        shipmentDetails:
+          $ref: '#/components/schemas/AsyncOrderCreateDTO_shipmentDetails'
         additionalAttributes:
           description: Additional order create attributes.
           items:
-            $ref: '#/components/schemas/QuoteToOrderDetailsDTO_additionalAttributes_inner'
+            $ref: '#/components/schemas/AsyncOrderCreateDTO_additionalAttributes_inner'
           type: array
         vmfadditionalAttributes:
           description: The object containing the list of fields required at a header
             level by the vendor.
           items:
-            $ref: '#/components/schemas/QuoteToOrderDetailsDTO_vmfadditionalAttributes_inner'
+            $ref: '#/components/schemas/AsyncOrderCreateDTO_vmfadditionalAttributes_inner'
           type: array
         lines:
           description: The object containing the lines that require vendor mandatory
             fields.
           items:
-            $ref: '#/components/schemas/QuoteToOrderDetailsDTO_lines_inner'
+            $ref: '#/components/schemas/AsyncOrderCreateDTO_lines_inner'
+          type: array
+        warrantyInfo:
+          description: Warranty Information
+          items:
+            $ref: '#/components/schemas/AsyncOrderCreateDTO_warrantyInfo_inner'
           type: array
       type: object
     ValidateQuoteResponse:
@@ -8229,7 +8398,7 @@ components:
           - attributeValue: attributeValue
             attributeName: attributeName
             attributeDescription: attributeDescription
-          quantity: "1"
+          quantity: 1
           customerLineNumber: "11"
         - ingramPartNumber: YN6551
           vmfAdditionalAttributesLines:
@@ -8239,7 +8408,7 @@ components:
           - attributeValue: attributeValue
             attributeName: attributeName
             attributeDescription: attributeDescription
-          quantity: "1"
+          quantity: 1
           customerLineNumber: "11"
         quoteType: 0
         quoteNumber: QUO-14551943-D2Y9L9
@@ -9737,15 +9906,15 @@ components:
           totalTaxAmount: 6.027456183070403
           distribution:
           - carrierList:
-            - daysInTransit: 2
+            - daysInTransit: daysInTransit
               shipVia: shipVia
               carrierCode: carrierCode
-              estimatedFreightCharge: 3.616076749251911
+              estimatedFreightCharge: estimatedFreightCharge
               carrierMode: carrierMode
-            - daysInTransit: 2
+            - daysInTransit: daysInTransit
               shipVia: shipVia
               carrierCode: carrierCode
-              estimatedFreightCharge: 3.616076749251911
+              estimatedFreightCharge: estimatedFreightCharge
               carrierMode: carrierMode
             freightRate: 2.3021358869347655
             shipVia: shipVia
@@ -9754,15 +9923,15 @@ components:
             shipFromBranchNumber: shipFromBranchNumber
             transitDays: 9
           - carrierList:
-            - daysInTransit: 2
+            - daysInTransit: daysInTransit
               shipVia: shipVia
               carrierCode: carrierCode
-              estimatedFreightCharge: 3.616076749251911
+              estimatedFreightCharge: estimatedFreightCharge
               carrierMode: carrierMode
-            - daysInTransit: 2
+            - daysInTransit: daysInTransit
               shipVia: shipVia
               carrierCode: carrierCode
-              estimatedFreightCharge: 3.616076749251911
+              estimatedFreightCharge: estimatedFreightCharge
               carrierMode: carrierMode
             freightRate: 2.3021358869347655
             shipVia: shipVia
@@ -9772,16 +9941,16 @@ components:
             transitDays: 9
           lines:
           - ingramPartNumber: ingramPartNumber
-            unitPrice: 7.386281948385884
-            quantity: 4
+            unitPrice: 2.027123023002322
+            quantity: 3
             warehouseId: warehouseId
-            netAmount: 1.2315135367772556
+            netAmount: 4.145608029883936
             vendorPartNumber: vendorPartNumber
           - ingramPartNumber: ingramPartNumber
-            unitPrice: 7.386281948385884
-            quantity: 4
+            unitPrice: 2.027123023002322
+            quantity: 3
             warehouseId: warehouseId
-            netAmount: 1.2315135367772556
+            netAmount: 4.145608029883936
             vendorPartNumber: vendorPartNumber
           currencyCode: currencyCode
       properties:
@@ -9870,15 +10039,15 @@ components:
           ean: ean
           terms: terms
           price:
-            quotePrice: 1
+            quotePrice: 1.4658129805029452
             totalVisibleReserveQuantity: 3
             extendedvendorprice: 9.301444243932576
-            msrp: 5
-            extendedQuotePrice: 2
+            msrp: 5.962133916683182
+            extendedQuotePrice: 2.3021358869347655
             recurringPriceModel: recurringPriceModel
             vendorprice: 7.061401241503109
             type: type
-            extendedMsrp: 5
+            extendedMsrp: 5.637376656633329
             discountOffList: discountOffList
           quoteProductGuid: quoteProductGuid
           vendorPartNumber: vendorPartNumber
@@ -9899,15 +10068,15 @@ components:
           ean: ean
           terms: terms
           price:
-            quotePrice: 1
+            quotePrice: 1.4658129805029452
             totalVisibleReserveQuantity: 3
             extendedvendorprice: 9.301444243932576
-            msrp: 5
-            extendedQuotePrice: 2
+            msrp: 5.962133916683182
+            extendedQuotePrice: 2.3021358869347655
             recurringPriceModel: recurringPriceModel
             vendorprice: 7.061401241503109
             type: type
-            extendedMsrp: 5
+            extendedMsrp: 5.637376656633329
             discountOffList: discountOffList
           quoteProductGuid: quoteProductGuid
           vendorPartNumber: vendorPartNumber
@@ -9931,13 +10100,13 @@ components:
           email: email
           marketSegment: marketSegment
         introPreamble: introPreamble
-        extendedMsrpTotal: 4
+        extendedMsrpTotal: 4.145608029883936
         lastModifiedDate: lastModifiedDate
         legalTerms: legalTerms
         specialBidExpirationDate: specialBidExpirationDate
         quoteNumber: quoteNumber
         revision: revision
-        extendedQuotePriceTotal: 1
+        extendedQuotePriceTotal: 1.2315135367772556
         customerNeed: customerNeed
         resellerInfo:
           phoneNumber: phoneNumber
@@ -10055,14 +10224,16 @@ components:
           type: integer
         extendedMsrpTotal:
           description: Total extended MSRP for all products included in the quote
-          type: integer
+          format: decimal
+          type: number
         quantityTotal:
           description: Total quantity of all items in the quote.
           type: integer
         extendedQuotePriceTotal:
           description: Total amount of quoted price for all products in the quote
             including both solution products and suggested products.
-          type: integer
+          format: decimal
+          type: number
         totalQuoteAmount:
           type: string
         additionalAttributes:
@@ -10398,7 +10569,7 @@ components:
           totals:
             netInvoiceAmount: 1.4894159098541704
             freightAmount: 4.965218492984954
-            invoicesAmountDue: 1.1730742509559433
+            invoicedAmountDue: 1.1730742509559433
             discountAmount: 6.84685269835264
             discountType: discountType
             totalTaxAmount: 7.457744773683766
@@ -10593,7 +10764,7 @@ components:
             $ref: '#/components/schemas/ErrorResponse_errors_inner'
           type: array
       type: object
-    QuoteToOrderResponse:
+    AsyncOrderCreateResponse:
       example:
         confirmationNumber: "987654322"
         message: message
@@ -10808,10 +10979,10 @@ components:
           ingramOrderLineNumber: ingramOrderLineNumber
           estimatedDates:
           - delivery:
-              deliveredDate: deliveredDate
               deliveryDescription: deliveryDescription
               deliveryDateType: deliveryDateType
               deliverySource: deliverySource
+              deliveryDate: deliveryDate
               deliveryDateRange:
                 endDate: endDate
                 startDate: startDate
@@ -10824,10 +10995,10 @@ components:
               shipDateType: shipDateType
               shipDescription: shipDescription
           - delivery:
-              deliveredDate: deliveredDate
               deliveryDescription: deliveryDescription
               deliveryDateType: deliveryDateType
               deliverySource: deliverySource
+              deliveryDate: deliveryDate
               deliveryDateRange:
                 endDate: endDate
                 startDate: startDate
@@ -10839,6 +11010,7 @@ components:
               shipDate: shipDate
               shipDateType: shipDateType
               shipDescription: shipDescription
+          defaultCarrierName: FEDEX GROUND
           serviceContractInfo:
             subscriptions:
               renewalTerm: renewalTerm
@@ -11051,10 +11223,10 @@ components:
           ingramOrderLineNumber: ingramOrderLineNumber
           estimatedDates:
           - delivery:
-              deliveredDate: deliveredDate
               deliveryDescription: deliveryDescription
               deliveryDateType: deliveryDateType
               deliverySource: deliverySource
+              deliveryDate: deliveryDate
               deliveryDateRange:
                 endDate: endDate
                 startDate: startDate
@@ -11067,10 +11239,10 @@ components:
               shipDateType: shipDateType
               shipDescription: shipDescription
           - delivery:
-              deliveredDate: deliveredDate
               deliveryDescription: deliveryDescription
               deliveryDateType: deliveryDateType
               deliverySource: deliverySource
+              deliveryDate: deliveryDate
               deliveryDateRange:
                 endDate: endDate
                 startDate: startDate
@@ -11082,6 +11254,7 @@ components:
               shipDate: shipDate
               shipDateType: shipDateType
               shipDescription: shipDescription
+          defaultCarrierName: FEDEX GROUND
           serviceContractInfo:
             subscriptions:
               renewalTerm: renewalTerm
@@ -11435,7 +11608,7 @@ components:
             type: object
           type: array
       type: object
-    post_QuoteToOrder_v6_400_response_fields_inner:
+    post_AsyncOrderCreate_v7_400_response_fields_inner:
       example:
         field: field
         message: message
@@ -11451,7 +11624,7 @@ components:
           description: Value of the message.
           type: string
       type: object
-    post_QuoteToOrder_v6_400_response:
+    post_AsyncOrderCreate_v7_400_response:
       example:
         traceid: traceid
         type: type
@@ -11475,7 +11648,7 @@ components:
           type: string
         fields:
           items:
-            $ref: '#/components/schemas/post_QuoteToOrder_v6_400_response_fields_inner'
+            $ref: '#/components/schemas/post_AsyncOrderCreate_v7_400_response_fields_inner'
           type: array
       type: object
     post_renewalssearch_400_response:
@@ -12085,27 +12258,100 @@ components:
           description: attributefield data
           type: string
       type: object
-    QuoteToOrderDetailsDTO_endUserInfo:
-      description: The contact information for the end user/customer provided by the
-        reseller. Used to determine pricing and discounts.
+    AsyncOrderCreateDTO_resellerInfo:
+      description: The address and contact information provided by the reseller.
       example:
-        phoneNumber: phoneNumber
         city: city
-        countryCode: countryCode
         companyName: companyName
-        contact: contact
         postalCode: postalCode
+        resellerId: resellerId
+        phoneNumber: phoneNumber
+        countryCode: countryCode
+        contact: contact
         addressLine1: addressLine1
         addressLine2: addressLine2
         addressLine3: addressLine3
         state: state
+        addressLine4: addressLine4
         email: email
       properties:
+        resellerId:
+          description: The reseller's Id.
+          type: string
+        companyName:
+          description: The reseller's company name.
+          type: string
+        contact:
+          description: The reseller's contact name.
+          type: string
+        addressLine1:
+          description: The reseller's address line 1.
+          type: string
+        addressLine2:
+          description: The reseller's address line 2.
+          type: string
+        addressLine3:
+          description: The reseller's address line 3.
+          type: string
+        addressLine4:
+          description: The reseller's address line 4.
+          type: string
+        city:
+          description: The reseller's city.
+          type: string
+        state:
+          description: The reseller's state.
+          type: string
+        postalCode:
+          description: The reseller's zip or postal code.
+          type: string
+        countryCode:
+          description: The reseller's two-character ISO country code.
+          type: string
+        phoneNumber:
+          description: The reseller's phone number.
+          type: string
+        email:
+          description: The reseller's Email Address.
+          type: string
+      type: object
+    AsyncOrderCreateDTO_endUserInfo:
+      description: The contact information for the end user/customer provided by the
+        reseller. Used to determine pricing and discounts.
+      example:
+        endUserId: endUserId
+        contactId: contactId
+        city: city
+        companyName: companyName
+        postalCode: postalCode
+        phoneNumber: phoneNumber
+        countryCode: countryCode
+        contact: contact
+        addressLine1: addressLine1
+        addressLine2: addressLine2
+        addressLine3: addressLine3
+        state: state
+        endUserType: endUserType
+        name2: name2
+        addressLine4: addressLine4
+        name1: name1
+        email: email
+      properties:
+        endUserId:
+          description: ID for the end user/customer in Ingram Micro's system.
+          type: string
+        endUserType:
+          description: End user type
+          type: string
         companyName:
           description: The company name for the end user/customer.
           type: string
-        contact:
-          description: The contact name for the end user/customer.
+        name1:
+          type: string
+        name2:
+          type: string
+        contactId:
+          description: The contact Id for the end user/customer.
           type: string
         addressLine1:
           description: The address line 1 for the end user/customer.
@@ -12116,6 +12362,9 @@ components:
         addressLine3:
           description: The address line 3 for the end user/customer.
           type: string
+        contact:
+          description: The contact name for the end user/customer.
+          type: string
         city:
           description: The end user/customer's city.
           type: string
@@ -12125,39 +12374,47 @@ components:
         postalCode:
           description: The end user/customer's zip or postal code.
           type: string
+        addressLine4:
+          description: The address line 4 for the end user/customer.
+          type: string
         countryCode:
           description: The end user/customer's two character ISO country code.
-          type: string
-        email:
-          description: The end user/customer's phone number.
           type: string
         phoneNumber:
           description: The end user/customer's phone number.
           type: string
+        email:
+          description: The end user/customer's phone number.
+          type: string
       type: object
-    QuoteToOrderDetailsDTO_shipToInfo:
+    AsyncOrderCreateDTO_shipToInfo:
       description: The shipping information provided by the reseller for order delivery.
       example:
+        shippingNotes: shippingNotes
         city: city
-        countryCode: countryCode
         companyName: companyName
-        contact: contact
         postalCode: postalCode
+        addressId: addressId
+        phoneNumber: phoneNumber
+        countryCode: countryCode
+        contact: contact
         addressLine1: addressLine1
         addressLine2: addressLine2
         addressLine3: addressLine3
         state: state
+        addressLine4: addressLine4
+        name2: name2
+        name1: name1
         email: email
-        addressId: addressId
       properties:
         addressId:
           description: The company contact provided by the reseller.
           type: string
-        companyName:
-          description: The name of the company the order will be shipped to.
-          type: string
         contact:
           description: The contact name for the order will be shipped to.
+          type: string
+        companyName:
+          description: The name of the company the order will be shipped to.
           type: string
         addressLine1:
           description: The address line 1 the order will be shipped to.
@@ -12168,6 +12425,16 @@ components:
         addressLine3:
           description: The address line 3 the order will be shipped to.
           nullable: true
+          type: string
+        addressLine4:
+          description: The address line 4 the order will be shipped to.
+          nullable: true
+          type: string
+        name1:
+          description: Need description
+          type: string
+        name2:
+          description: Need description
           type: string
         city:
           description: The city the order will be shipped to.
@@ -12186,8 +12453,50 @@ components:
           description: The company contact email address.
           nullable: true
           type: string
+        shippingNotes:
+          description: Shipping Notes
+          type: string
+        phoneNumber:
+          description: Phone number for shipping
+          type: string
       type: object
-    QuoteToOrderDetailsDTO_additionalAttributes_inner:
+    AsyncOrderCreateDTO_shipmentDetails:
+      description: Shipping details for the order provided by the customer.
+      example:
+        shipComplete: shipComplete
+        freightAccountNumber: freightAccountNumber
+        shippingInstructions: shippingInstructions
+        carrierCode: carrierCode
+        signatureRequired: true
+        requestedDeliveryDate: requestedDeliveryDate
+      properties:
+        carrierCode:
+          description: The code for the shipping carrier for the line item.
+          type: string
+        requestedDeliveryDate:
+          description: The reseller-requested delivery date in UTC format. Delivery
+            date is not guaranteed.
+          type: string
+        shipComplete:
+          description: "Specifies whether the shipment will be shipped only when all\
+            \ products are fulfilled. The value of this field along with acceptBackOrder\
+            \ field decides the value of backorderflag. If this field is set, acceptBackOrder\
+            \ field is ignored. Possible values for this field are true, C, P, E."
+          type: string
+        shippingInstructions:
+          description: Any special shipping instructions for the order.
+          type: string
+        freightAccountNumber:
+          description: The reseller 's shipping account number with carrier. Used
+            to bill the shipping carrier directly from the reseller's account with
+            the carrier.
+          type: string
+        signatureRequired:
+          description: Specifies whether a signature is required for delivery. Default
+            is False.
+          type: boolean
+      type: object
+    AsyncOrderCreateDTO_additionalAttributes_inner:
       example:
         attributeValue: attributeValue
         attributeName: attributeName
@@ -12201,12 +12510,10 @@ components:
         attributeValue:
           description: The attribute field data.
           type: string
-    QuoteToOrderDetailsDTO_vmfadditionalAttributes_inner:
-      additionalProperties: false
+    AsyncOrderCreateDTO_vmfadditionalAttributes_inner:
       example:
         attributeValue: attributeValue
         attributeName: attributeName
-        attributeDescription: attributeDescription
       properties:
         attributeName:
           description: The name of the header level field.
@@ -12214,37 +12521,120 @@ components:
         attributeValue:
           description: The value of the header level field.
           type: string
-        attributeDescription:
-          description: The description of the header level field.
-          type: string
       type: object
-    QuoteToOrderDetailsDTO_lines_inner_vmfAdditionalAttributesLines_inner:
+    AsyncOrderCreateDTO_lines_inner_endUserInfo_inner:
       example:
-        attributeValue: attributeValue
-        attributeName: attributeName
-        attributeDescription: attributeDescription
+        endUserId: endUserId
+        contactId: contactId
+        city: city
+        companyName: companyName
+        postalCode: postalCode
+        phoneNumber: phoneNumber
+        countryCode: countryCode
+        contact: contact
+        addressLine1: addressLine1
+        addressLine2: addressLine2
+        addressLine3: addressLine3
+        state: state
+        endUserType: endUserType
+        name2: name2
+        addressLine4: addressLine4
+        name1: name1
+        email: email
       properties:
-        attributeName:
-          description: The name of the line level field.
+        endUserId:
+          description: ID for the end user/customer in Ingram Micro's system.
           type: string
-        attributeValue:
-          description: The value of the line level field.
+        endUserType:
+          description: End user type
           type: string
-        attributeDescription:
-          description: The description of the line level field.
+        companyName:
+          description: The company name for the end user/customer.
+          type: string
+        name1:
+          type: string
+        name2:
+          type: string
+        contactId:
+          description: The contact Id for the end user/customer.
+          type: string
+        addressLine1:
+          description: The address line 1 for the end user/customer.
+          type: string
+        addressLine2:
+          description: The address line 2 for the end user/customer.
+          type: string
+        addressLine3:
+          description: The address line 3 for the end user/customer.
+          type: string
+        contact:
+          description: The contact name for the end user/customer.
+          type: string
+        city:
+          description: The end user/customer's city.
+          type: string
+        state:
+          description: The end user/customer's state.
+          type: string
+        postalCode:
+          description: The end user/customer's zip or postal code.
+          type: string
+        addressLine4:
+          description: The address line 4 for the end user/customer.
+          type: string
+        countryCode:
+          description: The end user/customer's two character ISO country code.
+          type: string
+        phoneNumber:
+          description: The end user/customer's phone number.
+          type: string
+        email:
+          description: The end user/customer's phone number.
           type: string
       type: object
-    QuoteToOrderDetailsDTO_lines_inner:
+    AsyncOrderCreateDTO_lines_inner:
       example:
         ingramPartNumber: ingramPartNumber
-        vmfAdditionalAttributesLines:
-        - attributeValue: attributeValue
-          attributeName: attributeName
-          attributeDescription: attributeDescription
-        - attributeValue: attributeValue
-          attributeName: attributeName
-          attributeDescription: attributeDescription
+        unitPrice: unitPrice
         quantity: quantity
+        specialBidNumber: specialBidNumber
+        notes: notes
+        endUserInfo:
+        - endUserId: endUserId
+          contactId: contactId
+          city: city
+          companyName: companyName
+          postalCode: postalCode
+          phoneNumber: phoneNumber
+          countryCode: countryCode
+          contact: contact
+          addressLine1: addressLine1
+          addressLine2: addressLine2
+          addressLine3: addressLine3
+          state: state
+          endUserType: endUserType
+          name2: name2
+          addressLine4: addressLine4
+          name1: name1
+          email: email
+        - endUserId: endUserId
+          contactId: contactId
+          city: city
+          companyName: companyName
+          postalCode: postalCode
+          phoneNumber: phoneNumber
+          countryCode: countryCode
+          contact: contact
+          addressLine1: addressLine1
+          addressLine2: addressLine2
+          addressLine3: addressLine3
+          state: state
+          endUserType: endUserType
+          name2: name2
+          addressLine4: addressLine4
+          name1: name1
+          email: email
+        endUserPrice: endUserPrice
         customerLineNumber: customerLineNumber
       properties:
         customerLineNumber:
@@ -12256,11 +12646,85 @@ components:
         quantity:
           description: The quantity of the line item.
           type: string
+        unitPrice:
+          description: Unit Price of Item
+          type: string
+        specialBidNumber:
+          type: string
+        endUserPrice:
+          type: string
+        notes:
+          type: string
+        endUserInfo:
+          description: The contact information for the end user/customer provided
+            by the reseller. Used to determine pricing and discounts.
+          items:
+            $ref: '#/components/schemas/AsyncOrderCreateDTO_lines_inner_endUserInfo_inner'
+          type: array
+      type: object
+    AsyncOrderCreateDTO_warrantyInfo_inner_serialInfo_inner:
+      example:
+        dateOfPurchase: dateOfPurchase
+        primarySerialNumber: primarySerialNumber
+        secondarySerialNumber: secondarySerialNumber
+        shipDate: shipDate
+      properties:
+        dateOfPurchase:
+          type: string
+        shipDate:
+          type: string
+        primarySerialNumber:
+          type: string
+        secondarySerialNumber:
+          type: string
+      type: object
+    AsyncOrderCreateDTO_warrantyInfo_inner_vmfAdditionalAttributesLines_inner:
+      example:
+        attributeValue: attributeValue
+        attributeName: attributeName
+      properties:
+        attributeName:
+          description: The name of the line level field.
+          type: string
+        attributeValue:
+          description: The value of the line level field.
+          type: string
+      type: object
+    AsyncOrderCreateDTO_warrantyInfo_inner:
+      example:
+        hardwareLineLink: hardwareLineLink
+        vmfAdditionalAttributesLines:
+        - attributeValue: attributeValue
+          attributeName: attributeName
+        - attributeValue: attributeValue
+          attributeName: attributeName
+        warrantyLineLink: warrantyLineLink
+        directLineLink: directLineLink
+        serialInfo:
+        - dateOfPurchase: dateOfPurchase
+          primarySerialNumber: primarySerialNumber
+          secondarySerialNumber: secondarySerialNumber
+          shipDate: shipDate
+        - dateOfPurchase: dateOfPurchase
+          primarySerialNumber: primarySerialNumber
+          secondarySerialNumber: secondarySerialNumber
+          shipDate: shipDate
+      properties:
+        hardwareLineLink:
+          type: string
+        warrantyLineLink:
+          type: string
+        directLineLink:
+          type: string
+        serialInfo:
+          items:
+            $ref: '#/components/schemas/AsyncOrderCreateDTO_warrantyInfo_inner_serialInfo_inner'
+          type: array
         vmfAdditionalAttributesLines:
           description: The object containing the list of fields required at a line
             level by the vendor.
           items:
-            $ref: '#/components/schemas/QuoteToOrderDetailsDTO_lines_inner_vmfAdditionalAttributesLines_inner'
+            $ref: '#/components/schemas/AsyncOrderCreateDTO_warrantyInfo_inner_vmfAdditionalAttributesLines_inner'
           type: array
       type: object
     ValidateQuoteResponse_vmfAdditionalAttributes_inner:
@@ -12282,6 +12746,22 @@ components:
           example: Authorization Number
           type: string
       type: object
+    ValidateQuoteResponse_lines_inner_vmfAdditionalAttributesLines_inner:
+      example:
+        attributeValue: attributeValue
+        attributeName: attributeName
+        attributeDescription: attributeDescription
+      properties:
+        attributeName:
+          description: The name of the line level field.
+          type: string
+        attributeValue:
+          description: The value of the line level field.
+          type: string
+        attributeDescription:
+          description: The description of the line level field.
+          type: string
+      type: object
     ValidateQuoteResponse_lines_inner:
       example:
         ingramPartNumber: YN6551
@@ -12292,7 +12772,7 @@ components:
         - attributeValue: attributeValue
           attributeName: attributeName
           attributeDescription: attributeDescription
-        quantity: "1"
+        quantity: 1
         customerLineNumber: "11"
       properties:
         customerLineNumber:
@@ -12305,13 +12785,13 @@ components:
           type: string
         quantity:
           description: The quantity of the line item.
-          example: "1"
-          type: string
+          example: 1
+          type: integer
         vmfAdditionalAttributesLines:
           description: The object containing the list of fields required at a line
             level by the vendor.
           items:
-            $ref: '#/components/schemas/QuoteToOrderDetailsDTO_lines_inner_vmfAdditionalAttributesLines_inner'
+            $ref: '#/components/schemas/ValidateQuoteResponse_lines_inner_vmfAdditionalAttributesLines_inner'
           type: array
       type: object
     OrderCreateResponse_shipToInfo:
@@ -15008,10 +15488,10 @@ components:
       type: object
     freightResponse_freightEstimateResponse_distribution_inner_carrierList_inner:
       example:
-        daysInTransit: 2
+        daysInTransit: daysInTransit
         shipVia: shipVia
         carrierCode: carrierCode
-        estimatedFreightCharge: 3.616076749251911
+        estimatedFreightCharge: estimatedFreightCharge
         carrierMode: carrierMode
       properties:
         carrierCode:
@@ -15025,24 +15505,23 @@ components:
           type: string
         estimatedFreightCharge:
           description: Estimated freight charge.
-          format: decimal
-          type: number
+          type: string
         daysInTransit:
           description: Number of transit days.
-          type: integer
+          type: string
       type: object
     freightResponse_freightEstimateResponse_distribution_inner:
       example:
         carrierList:
-        - daysInTransit: 2
+        - daysInTransit: daysInTransit
           shipVia: shipVia
           carrierCode: carrierCode
-          estimatedFreightCharge: 3.616076749251911
+          estimatedFreightCharge: estimatedFreightCharge
           carrierMode: carrierMode
-        - daysInTransit: 2
+        - daysInTransit: daysInTransit
           shipVia: shipVia
           carrierCode: carrierCode
-          estimatedFreightCharge: 3.616076749251911
+          estimatedFreightCharge: estimatedFreightCharge
           carrierMode: carrierMode
         freightRate: 2.3021358869347655
         shipVia: shipVia
@@ -15079,10 +15558,10 @@ components:
     freightResponse_freightEstimateResponse_lines_inner:
       example:
         ingramPartNumber: ingramPartNumber
-        unitPrice: 7.386281948385884
-        quantity: 4
+        unitPrice: 2.027123023002322
+        quantity: 3
         warehouseId: warehouseId
-        netAmount: 1.2315135367772556
+        netAmount: 4.145608029883936
         vendorPartNumber: vendorPartNumber
       properties:
         ingramPartNumber:
@@ -15115,15 +15594,15 @@ components:
         totalTaxAmount: 6.027456183070403
         distribution:
         - carrierList:
-          - daysInTransit: 2
+          - daysInTransit: daysInTransit
             shipVia: shipVia
             carrierCode: carrierCode
-            estimatedFreightCharge: 3.616076749251911
+            estimatedFreightCharge: estimatedFreightCharge
             carrierMode: carrierMode
-          - daysInTransit: 2
+          - daysInTransit: daysInTransit
             shipVia: shipVia
             carrierCode: carrierCode
-            estimatedFreightCharge: 3.616076749251911
+            estimatedFreightCharge: estimatedFreightCharge
             carrierMode: carrierMode
           freightRate: 2.3021358869347655
           shipVia: shipVia
@@ -15132,15 +15611,15 @@ components:
           shipFromBranchNumber: shipFromBranchNumber
           transitDays: 9
         - carrierList:
-          - daysInTransit: 2
+          - daysInTransit: daysInTransit
             shipVia: shipVia
             carrierCode: carrierCode
-            estimatedFreightCharge: 3.616076749251911
+            estimatedFreightCharge: estimatedFreightCharge
             carrierMode: carrierMode
-          - daysInTransit: 2
+          - daysInTransit: daysInTransit
             shipVia: shipVia
             carrierCode: carrierCode
-            estimatedFreightCharge: 3.616076749251911
+            estimatedFreightCharge: estimatedFreightCharge
             carrierMode: carrierMode
           freightRate: 2.3021358869347655
           shipVia: shipVia
@@ -15150,16 +15629,16 @@ components:
           transitDays: 9
         lines:
         - ingramPartNumber: ingramPartNumber
-          unitPrice: 7.386281948385884
-          quantity: 4
+          unitPrice: 2.027123023002322
+          quantity: 3
           warehouseId: warehouseId
-          netAmount: 1.2315135367772556
+          netAmount: 4.145608029883936
           vendorPartNumber: vendorPartNumber
         - ingramPartNumber: ingramPartNumber
-          unitPrice: 7.386281948385884
-          quantity: 4
+          unitPrice: 2.027123023002322
+          quantity: 3
           warehouseId: warehouseId
-          netAmount: 1.2315135367772556
+          netAmount: 4.145608029883936
           vendorPartNumber: vendorPartNumber
         currencyCode: currencyCode
       properties:
@@ -15367,29 +15846,33 @@ components:
       type: object
     QuoteDetailsResponse_products_inner_price:
       example:
-        quotePrice: 1
+        quotePrice: 1.4658129805029452
         totalVisibleReserveQuantity: 3
         extendedvendorprice: 9.301444243932576
-        msrp: 5
-        extendedQuotePrice: 2
+        msrp: 5.962133916683182
+        extendedQuotePrice: 2.3021358869347655
         recurringPriceModel: recurringPriceModel
         vendorprice: 7.061401241503109
         type: type
-        extendedMsrp: 5
+        extendedMsrp: 5.637376656633329
         discountOffList: discountOffList
       properties:
         quotePrice:
           description: Ingram Micro quoted price specific to the reseller and quote.
-          type: integer
+          format: decimal
+          type: number
         msrp:
           description: Manufacturer Suggested Retail Price
-          type: integer
+          format: decimal
+          type: number
         extendedMsrp:
           description: Extended MSRP - Manufacturer Suggested Retail Price X Quantity
-          type: integer
+          format: decimal
+          type: number
         extendedQuotePrice:
           description: Extended reseller quoted price (cost to reseller) X Quantity
-          type: integer
+          format: decimal
+          type: number
         discountOffList:
           description: Discount off list percentage extended
           type: string
@@ -15421,15 +15904,15 @@ components:
         ean: ean
         terms: terms
         price:
-          quotePrice: 1
+          quotePrice: 1.4658129805029452
           totalVisibleReserveQuantity: 3
           extendedvendorprice: 9.301444243932576
-          msrp: 5
-          extendedQuotePrice: 2
+          msrp: 5.962133916683182
+          extendedQuotePrice: 2.3021358869347655
           recurringPriceModel: recurringPriceModel
           vendorprice: 7.061401241503109
           type: type
-          extendedMsrp: 5
+          extendedMsrp: 5.637376656633329
           discountOffList: discountOffList
         quoteProductGuid: quoteProductGuid
         vendorPartNumber: vendorPartNumber
@@ -16212,7 +16695,7 @@ components:
       example:
         netInvoiceAmount: 1.4894159098541704
         freightAmount: 4.965218492984954
-        invoicesAmountDue: 1.1730742509559433
+        invoicedAmountDue: 1.1730742509559433
         discountAmount: 6.84685269835264
         discountType: discountType
         totalTaxAmount: 7.457744773683766
@@ -16232,7 +16715,7 @@ components:
           description: Total Tax amount.
           format: double
           type: number
-        invoicesAmountDue:
+        invoicedAmountDue:
           description: Total amount due for the invoice.
           format: double
           type: number
@@ -16285,7 +16768,7 @@ components:
         totals:
           netInvoiceAmount: 1.4894159098541704
           freightAmount: 4.965218492984954
-          invoicesAmountDue: 1.1730742509559433
+          invoicedAmountDue: 1.1730742509559433
           discountAmount: 6.84685269835264
           discountType: discountType
           totalTaxAmount: 7.457744773683766
@@ -16909,10 +17392,10 @@ components:
           type: string
     OrderDetailB2B_lines_inner_estimatedDates_inner_delivery:
       example:
-        deliveredDate: deliveredDate
         deliveryDescription: deliveryDescription
         deliveryDateType: deliveryDateType
         deliverySource: deliverySource
+        deliveryDate: deliveryDate
         deliveryDateRange:
           endDate: endDate
           startDate: startDate
@@ -16928,17 +17411,17 @@ components:
         deliveryDescription:
           description: Delivery description.
           type: string
-        deliveredDate:
+        deliveryDate:
           description: Delivery date.
           type: string
       type: object
     OrderDetailB2B_lines_inner_estimatedDates_inner:
       example:
         delivery:
-          deliveredDate: deliveredDate
           deliveryDescription: deliveryDescription
           deliveryDateType: deliveryDateType
           deliverySource: deliverySource
+          deliveryDate: deliveryDate
           deliveryDateRange:
             endDate: endDate
             startDate: startDate
@@ -17080,10 +17563,10 @@ components:
         ingramOrderLineNumber: ingramOrderLineNumber
         estimatedDates:
         - delivery:
-            deliveredDate: deliveredDate
             deliveryDescription: deliveryDescription
             deliveryDateType: deliveryDateType
             deliverySource: deliverySource
+            deliveryDate: deliveryDate
             deliveryDateRange:
               endDate: endDate
               startDate: startDate
@@ -17096,10 +17579,10 @@ components:
             shipDateType: shipDateType
             shipDescription: shipDescription
         - delivery:
-            deliveredDate: deliveredDate
             deliveryDescription: deliveryDescription
             deliveryDateType: deliveryDateType
             deliverySource: deliverySource
+            deliveryDate: deliveryDate
             deliveryDateRange:
               endDate: endDate
               startDate: startDate
@@ -17111,6 +17594,7 @@ components:
             shipDate: shipDate
             shipDateType: shipDateType
             shipDescription: shipDescription
+        defaultCarrierName: FEDEX GROUND
         serviceContractInfo:
           subscriptions:
             renewalTerm: renewalTerm
@@ -17385,6 +17869,9 @@ components:
           items:
             $ref: '#/components/schemas/OrderDetailB2B_lines_inner_multipleShipments_inner'
           type: array
+        defaultCarrierName:
+          example: FEDEX GROUND
+          type: string
       type: object
     OrderDetailB2B_miscellaneousCharges_inner:
       additionalProperties: false
@@ -17433,12 +17920,14 @@ components:
           tokenUrl: https://api.ingrammicro.com:443/oauth/oauth30/token
       type: oauth2
 x-tagGroups:
+- name: Reseller API (Version 7)
+  tags:
+  - AyncOrderCreate
 - name: Reseller API (Version 6)
   tags:
   - Product Catalog
   - Orders
   - Quotes
-  - Quote To Order
   - Invoices
   - Renewals
   - Deals

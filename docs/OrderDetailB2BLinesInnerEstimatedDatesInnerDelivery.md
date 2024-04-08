@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **DeliveryDateRange** | [**OrderDetailB2BLinesInnerEstimatedDatesInnerDeliveryDeliveryDateRange**](OrderDetailB2BLinesInnerEstimatedDatesInnerDeliveryDeliveryDateRange.md) |  | [optional] 
 **DeliverySource** | **string** | Source of the delivery. | [optional] 
 **DeliveryDescription** | **string** | Delivery description. | [optional] 
-**DeliveredDate** | **string** | Delivery date. | [optional] 
+**DeliveryDate** | **string** | Delivery date. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

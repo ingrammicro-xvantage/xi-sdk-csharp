@@ -30,9 +30,9 @@ Name | Type | Description | Notes
 **EndUserInfo** | [**QuoteDetailsResponseEndUserInfo**](QuoteDetailsResponseEndUserInfo.md) |  | [optional] 
 **Products** | [**List&lt;QuoteDetailsResponseProductsInner&gt;**](QuoteDetailsResponseProductsInner.md) |  | [optional] 
 **ProductsCount** | **int** | Total number of products included in the quote | [optional] 
-**ExtendedMsrpTotal** | **int** | Total extended MSRP for all products included in the quote | [optional] 
+**ExtendedMsrpTotal** | **decimal** | Total extended MSRP for all products included in the quote | [optional] 
 **QuantityTotal** | **int** | Total quantity of all items in the quote. | [optional] 
-**ExtendedQuotePriceTotal** | **int** | Total amount of quoted price for all products in the quote including both solution products and suggested products. | [optional] 
+**ExtendedQuotePriceTotal** | **decimal** | Total amount of quoted price for all products in the quote including both solution products and suggested products. | [optional] 
 **TotalQuoteAmount** | **string** |  | [optional] 
 **AdditionalAttributes** | [**List&lt;QuoteDetailsResponseAdditionalAttributesInner&gt;**](QuoteDetailsResponseAdditionalAttributesInner.md) |  | [optional] 
 
