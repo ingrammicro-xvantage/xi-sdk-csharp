@@ -4,7 +4,6 @@ For resellers seeking to innovate with Ingram Micro's API solutions, automate yo
 
 
 
-
 ## Dependencies
 
 - [Json.NET](https://www.nuget.org/packages/Newtonsoft.Json/) - 13.0.2 or later
@@ -381,4 +380,6 @@ Authentication schemes defined for the API:
 
 For any inquiries or support, please feel free to contact us at:
 
+
 - Email: xi_support@ingrammicro.com
+
