@@ -11,7 +11,7 @@
     <AssemblyTitle>xi.sdk.resellers</AssemblyTitle>
     <Description>Ingram Micro - Xvantage Integration (XI) C# Server-side SDK.</Description>
     <RootNamespace>xi.sdk.resellers.csharp</RootNamespace>
-    <Version>0.0.4</Version>
+    <Version>1.0.1</Version>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\xi.sdk.resellers.csharp.xml</DocumentationFile>
     <RepositoryUrl>https://github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
