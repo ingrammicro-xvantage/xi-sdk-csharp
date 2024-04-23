@@ -87,6 +87,8 @@ services.AddHttpClient<YourApiClass>(httpClient =>
 <a id="getting-started"></a>
 ## Getting Started
 
+Quickstart on creating an application can be found [here](getting-started.md)
+
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
