@@ -84,7 +84,6 @@ services.AddHttpClient<YourApiClass>(httpClient =>
 ```
 
 
-<a id="getting-started"></a>
 ## Getting Started
 
 Quickstart on creating an application can be found [here](getting-started.md)
@@ -138,7 +137,7 @@ All URIs are relative to [https://api.ingrammicro.com:443](https://api.ingrammic
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *AccesstokenApi* | [**GetAccesstoken**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp/tree/main/docs/AccesstokenApi.md#getaccesstoken) | **GET** /oauth/oauth20/token | Accesstoken
-*AsyncOrderCreateApi* | [**PostAsyncOrderCreateV7**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp/tree/main/docs/AsyncOrderCreateApi.md#postasyncordercreatev7) | **POST** /resellers/v7/orders | Async Order Create
+*AsyncOrderCreateApi* | [**PostAsyncOrderCreateV7**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp/tree/feature/docs/AsyncOrderCreateApi.md#postasyncordercreatev7) | **POST** /resellers/v7/orders | Async Order Create
 *DealsApi* | [**GetResellersV6Dealsdetails**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp/tree/main/docs/DealsApi.md#getresellersv6dealsdetails) | **GET** /resellers/v6/deals/{dealId} | Deals Details
 *DealsApi* | [**GetResellersV6Dealssearch**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp/tree/main/docs/DealsApi.md#getresellersv6dealssearch) | **GET** /resellers/v6/deals/search | Deals Search
 *FreightEstimateApi* | [**PostFreightestimate**](https://github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp/tree/main/docs/FreightEstimateApi.md#postfreightestimate) | **POST** /resellers/v6/freightestimate | Freight Estimate
