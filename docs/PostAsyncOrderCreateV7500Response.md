@@ -1,4 +1,4 @@
-# xi.sdk.resellers.Model.GetResellerV6ValidateQuote500Response
+# xi.sdk.resellers.Model.PostAsyncOrderCreateV7500Response
 
 ## Properties
 

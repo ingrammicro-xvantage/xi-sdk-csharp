@@ -27,19 +27,19 @@ using OpenAPIDateConverter = xi.sdk.resellers.Client.OpenAPIDateConverter;
 namespace xi.sdk.resellers.Model
 {
     /// <summary>
-    /// GetResellerV6ValidateQuote500Response
+    /// PostAsyncOrderCreateV7500Response
     /// </summary>
-    [DataContract(Name = "get_reseller_v6_validateQuote_500_response")]
-    public partial class GetResellerV6ValidateQuote500Response : IValidatableObject
+    [DataContract(Name = "post_AsyncOrderCreate_v7_500_response")]
+    public partial class PostAsyncOrderCreateV7500Response : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="GetResellerV6ValidateQuote500Response" /> class.
+        /// Initializes a new instance of the <see cref="PostAsyncOrderCreateV7500Response" /> class.
         /// </summary>
         /// <param name="traceid">Unique Id to identify error..</param>
         /// <param name="type">Describes the type of the error..</param>
         /// <param name="message">Describes the error message..</param>
         /// <param name="fields">fields.</param>
-        public GetResellerV6ValidateQuote500Response(string traceid = default(string), string type = default(string), string message = default(string), List<Object> fields = default(List<Object>))
+        public PostAsyncOrderCreateV7500Response(string traceid = default(string), string type = default(string), string message = default(string), List<Object> fields = default(List<Object>))
         {
             this.Traceid = traceid;
             this.Type = type;
@@ -81,7 +81,7 @@ namespace xi.sdk.resellers.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class GetResellerV6ValidateQuote500Response {\n");
+            sb.Append("class PostAsyncOrderCreateV7500Response {\n");
             sb.Append("  Traceid: ").Append(Traceid).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Message: ").Append(Message).Append("\n");

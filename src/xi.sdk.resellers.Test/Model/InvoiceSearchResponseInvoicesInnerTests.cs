@@ -64,6 +64,15 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'SpecialBidNumbers'
+        /// </summary>
+        [Fact]
+        public void SpecialBidNumbersTest()
+        {
+            // TODO unit test for the property 'SpecialBidNumbers'
+        }
+
+        /// <summary>
         /// Test the property 'ErpOrderNumber'
         /// </summary>
         [Fact]

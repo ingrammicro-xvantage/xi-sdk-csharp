@@ -43,7 +43,7 @@ namespace xi.sdk.resellers.Model
         public AvailabilityAsyncNotificationRequest(string topic = default(string), string varEvent = default(string), string eventTimeStamp = default(string), string eventId = default(string), List<AvailabilityAsyncNotificationRequestResourceInner> resource = default(List<AvailabilityAsyncNotificationRequestResourceInner>))
         {
             this.Topic = topic;
-            this.VarEvent = varEvent;
+            this.Event = varEvent;
             this.EventTimeStamp = eventTimeStamp;
             this.EventId = eventId;
             this.Resource = resource;
@@ -61,7 +61,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>The event sent in the request. For eg, im::create.</value>
         [DataMember(Name = "event", EmitDefaultValue = false)]
-        public string VarEvent { get; set; }
+        public string Event { get; set; }
 
         /// <summary>
         /// The timestamp at which the event was sent.
@@ -92,7 +92,7 @@ namespace xi.sdk.resellers.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class AvailabilityAsyncNotificationRequest {\n");
             sb.Append("  Topic: ").Append(Topic).Append("\n");
-            sb.Append("  VarEvent: ").Append(VarEvent).Append("\n");
+            sb.Append("  Event: ").Append(Event).Append("\n");
             sb.Append("  EventTimeStamp: ").Append(EventTimeStamp).Append("\n");
             sb.Append("  EventId: ").Append(EventId).Append("\n");
             sb.Append("  Resource: ").Append(Resource).Append("\n");

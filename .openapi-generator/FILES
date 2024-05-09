@@ -5,7 +5,6 @@ api/openapi.yaml
 appveyor.yml
 docs/AccesstokenApi.md
 docs/AccesstokenResponse.md
-docs/AsyncOrderCreateApi.md
 docs/AsyncOrderCreateDTO.md
 docs/AsyncOrderCreateDTOAdditionalAttributesInner.md
 docs/AsyncOrderCreateDTOEndUserInfo.md
@@ -48,7 +47,6 @@ docs/GetAccesstoken500ResponseFault.md
 docs/GetAccesstoken500ResponseFaultDetail.md
 docs/GetResellerV6ValidateQuote400Response.md
 docs/GetResellerV6ValidateQuote400ResponseFieldsInner.md
-docs/GetResellerV6ValidateQuote500Response.md
 docs/InvoiceDetailsv61Response.md
 docs/InvoiceDetailsv61ResponseBillToInfo.md
 docs/InvoiceDetailsv61ResponseFxRateInfo.md
@@ -137,6 +135,7 @@ docs/OrderStatusAsyncNotificationRequestResourceInnerLinksInner.md
 docs/OrdersApi.md
 docs/PostAsyncOrderCreateV7400Response.md
 docs/PostAsyncOrderCreateV7400ResponseFieldsInner.md
+docs/PostAsyncOrderCreateV7500Response.md
 docs/PostRenewalssearch400Response.md
 docs/PriceAndAvailabilityRequest.md
 docs/PriceAndAvailabilityRequestAdditionalAttributesInner.md
@@ -208,7 +207,6 @@ docs/ValidateQuoteResponseLinesInnerVmfAdditionalAttributesLinesInner.md
 docs/ValidateQuoteResponseVmfAdditionalAttributesInner.md
 git_push.sh
 src/xi.sdk.resellers.Test/Api/AccesstokenApiTests.cs
-src/xi.sdk.resellers.Test/Api/AsyncOrderCreateApiTests.cs
 src/xi.sdk.resellers.Test/Api/DealsApiTests.cs
 src/xi.sdk.resellers.Test/Api/FreightEstimateApiTests.cs
 src/xi.sdk.resellers.Test/Api/InvoicesApiTests.cs
@@ -260,7 +258,6 @@ src/xi.sdk.resellers.Test/Model/GetAccesstoken500ResponseFaultTests.cs
 src/xi.sdk.resellers.Test/Model/GetAccesstoken500ResponseTests.cs
 src/xi.sdk.resellers.Test/Model/GetResellerV6ValidateQuote400ResponseFieldsInnerTests.cs
 src/xi.sdk.resellers.Test/Model/GetResellerV6ValidateQuote400ResponseTests.cs
-src/xi.sdk.resellers.Test/Model/GetResellerV6ValidateQuote500ResponseTests.cs
 src/xi.sdk.resellers.Test/Model/InvoiceDetailsv61ResponseBillToInfoTests.cs
 src/xi.sdk.resellers.Test/Model/InvoiceDetailsv61ResponseFxRateInfoTests.cs
 src/xi.sdk.resellers.Test/Model/InvoiceDetailsv61ResponseLinesInnerSerialNumbersInnerTests.cs
@@ -346,6 +343,7 @@ src/xi.sdk.resellers.Test/Model/OrderStatusAsyncNotificationRequestResourceInner
 src/xi.sdk.resellers.Test/Model/OrderStatusAsyncNotificationRequestTests.cs
 src/xi.sdk.resellers.Test/Model/PostAsyncOrderCreateV7400ResponseFieldsInnerTests.cs
 src/xi.sdk.resellers.Test/Model/PostAsyncOrderCreateV7400ResponseTests.cs
+src/xi.sdk.resellers.Test/Model/PostAsyncOrderCreateV7500ResponseTests.cs
 src/xi.sdk.resellers.Test/Model/PostRenewalssearch400ResponseTests.cs
 src/xi.sdk.resellers.Test/Model/PriceAndAvailabilityRequestAdditionalAttributesInnerTests.cs
 src/xi.sdk.resellers.Test/Model/PriceAndAvailabilityRequestAvailabilityByWarehouseInnerTests.cs
@@ -412,7 +410,6 @@ src/xi.sdk.resellers.Test/Model/ValidateQuoteResponseTests.cs
 src/xi.sdk.resellers.Test/Model/ValidateQuoteResponseVmfAdditionalAttributesInnerTests.cs
 src/xi.sdk.resellers.Test/xi.sdk.resellers.Test.csproj
 src/xi.sdk.resellers/Api/AccesstokenApi.cs
-src/xi.sdk.resellers/Api/AsyncOrderCreateApi.cs
 src/xi.sdk.resellers/Api/DealsApi.cs
 src/xi.sdk.resellers/Api/FreightEstimateApi.cs
 src/xi.sdk.resellers/Api/InvoicesApi.cs
@@ -482,7 +479,6 @@ src/xi.sdk.resellers/Model/GetAccesstoken500ResponseFault.cs
 src/xi.sdk.resellers/Model/GetAccesstoken500ResponseFaultDetail.cs
 src/xi.sdk.resellers/Model/GetResellerV6ValidateQuote400Response.cs
 src/xi.sdk.resellers/Model/GetResellerV6ValidateQuote400ResponseFieldsInner.cs
-src/xi.sdk.resellers/Model/GetResellerV6ValidateQuote500Response.cs
 src/xi.sdk.resellers/Model/InvoiceDetailsv61Response.cs
 src/xi.sdk.resellers/Model/InvoiceDetailsv61ResponseBillToInfo.cs
 src/xi.sdk.resellers/Model/InvoiceDetailsv61ResponseFxRateInfo.cs
@@ -568,6 +564,7 @@ src/xi.sdk.resellers/Model/OrderStatusAsyncNotificationRequestResourceInnerLines
 src/xi.sdk.resellers/Model/OrderStatusAsyncNotificationRequestResourceInnerLinksInner.cs
 src/xi.sdk.resellers/Model/PostAsyncOrderCreateV7400Response.cs
 src/xi.sdk.resellers/Model/PostAsyncOrderCreateV7400ResponseFieldsInner.cs
+src/xi.sdk.resellers/Model/PostAsyncOrderCreateV7500Response.cs
 src/xi.sdk.resellers/Model/PostRenewalssearch400Response.cs
 src/xi.sdk.resellers/Model/PriceAndAvailabilityRequest.cs
 src/xi.sdk.resellers/Model/PriceAndAvailabilityRequestAdditionalAttributesInner.cs

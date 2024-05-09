@@ -64,12 +64,12 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'VarEvent'
+        /// Test the property 'Event'
         /// </summary>
         [Fact]
-        public void VarEventTest()
+        public void EventTest()
         {
-            // TODO unit test for the property 'VarEvent'
+            // TODO unit test for the property 'Event'
         }
 
         /// <summary>
