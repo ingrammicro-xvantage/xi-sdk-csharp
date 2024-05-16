@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **State** | **string** | The end user/customer&#39;s state. Required for Impulse countries but optional for EMEA countries. | [optional] 
 **PostalCode** | **string** | The end user/customer&#39;s zip or postal code. Required for Impulse countries. | [optional] 
 **CountryCode** | **string** | The end user/customer&#39;s two-character ISO country code. | [optional] 
-**PhoneNumber** | **int** | The end user/customer&#39;s phone number. | [optional] 
+**PhoneNumber** | **string** | The end user/customer&#39;s phone number. | [optional] 
 **Email** | **string** | The end user/customer&#39;s email. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

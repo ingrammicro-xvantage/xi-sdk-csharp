@@ -50,7 +50,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="countryCode">The end user/customer&#39;s two-character ISO country code..</param>
         /// <param name="phoneNumber">The end user/customer&#39;s phone number..</param>
         /// <param name="email">The end user/customer&#39;s email..</param>
-        public OrderCreateRequestEndUserInfo(string endUserId = default(string), string contact = default(string), string companyName = default(string), string name1 = default(string), string name2 = default(string), string addressLine1 = default(string), string addressLine2 = default(string), string addressLine3 = default(string), string addressLine4 = default(string), string city = default(string), string state = default(string), string postalCode = default(string), string countryCode = default(string), int phoneNumber = default(int), string email = default(string))
+        public OrderCreateRequestEndUserInfo(string endUserId = default(string), string contact = default(string), string companyName = default(string), string name1 = default(string), string name2 = default(string), string addressLine1 = default(string), string addressLine2 = default(string), string addressLine3 = default(string), string addressLine4 = default(string), string city = default(string), string state = default(string), string postalCode = default(string), string countryCode = default(string), string phoneNumber = default(string), string email = default(string))
         {
             this.EndUserId = endUserId;
             this.Contact = contact;
@@ -165,7 +165,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>The end user/customer&#39;s phone number.</value>
         [DataMember(Name = "phoneNumber", EmitDefaultValue = false)]
-        public int PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
 
         /// <summary>
         /// The end user/customer&#39;s email.
