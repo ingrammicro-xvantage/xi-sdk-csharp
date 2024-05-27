@@ -40,23 +40,27 @@ namespace xi.sdk.resellers.Model
         /// <param name="extendedMsrp">Extended MSRP - Manufacturer Suggested Retail Price X Quantity.</param>
         /// <param name="extendedQuotePrice">Extended reseller quoted price (cost to reseller) X Quantity.</param>
         /// <param name="discountOffList">Discount off list percentage extended.</param>
-        /// <param name="vendorprice">vendorprice.</param>
-        /// <param name="extendedvendorprice">extendedvendorprice.</param>
-        /// <param name="totalVisibleReserveQuantity">totalVisibleReserveQuantity.</param>
         /// <param name="type">type.</param>
         /// <param name="recurringPriceModel">recurringPriceModel.</param>
-        public QuoteDetailsResponseProductsInnerPrice(decimal quotePrice = default(decimal), decimal msrp = default(decimal), decimal extendedMsrp = default(decimal), decimal extendedQuotePrice = default(decimal), string discountOffList = default(string), decimal vendorprice = default(decimal), decimal extendedvendorprice = default(decimal), int totalVisibleReserveQuantity = default(int), string type = default(string), string recurringPriceModel = default(string))
+        /// <param name="unitOfMeasure">unitOfMeasure.</param>
+        /// <param name="tax">tax.</param>
+        /// <param name="extrafees">extrafees.</param>
+        /// <param name="extraFeesDetails">extraFeesDetails.</param>
+        /// <param name="discounts">discounts.</param>
+        public QuoteDetailsResponseProductsInnerPrice(decimal quotePrice = default(decimal), decimal msrp = default(decimal), decimal extendedMsrp = default(decimal), decimal extendedQuotePrice = default(decimal), string discountOffList = default(string), string type = default(string), string recurringPriceModel = default(string), string unitOfMeasure = default(string), string tax = default(string), decimal extrafees = default(decimal), List<QuoteDetailsResponseProductsInnerPriceExtraFeesDetailsInner> extraFeesDetails = default(List<QuoteDetailsResponseProductsInnerPriceExtraFeesDetailsInner>), List<QuoteDetailsResponseProductsInnerPriceDiscountsInner> discounts = default(List<QuoteDetailsResponseProductsInnerPriceDiscountsInner>))
         {
             this.QuotePrice = quotePrice;
             this.Msrp = msrp;
             this.ExtendedMsrp = extendedMsrp;
             this.ExtendedQuotePrice = extendedQuotePrice;
             this.DiscountOffList = discountOffList;
-            this.Vendorprice = vendorprice;
-            this.Extendedvendorprice = extendedvendorprice;
-            this.TotalVisibleReserveQuantity = totalVisibleReserveQuantity;
             this.Type = type;
             this.RecurringPriceModel = recurringPriceModel;
+            this.UnitOfMeasure = unitOfMeasure;
+            this.Tax = tax;
+            this.Extrafees = extrafees;
+            this.ExtraFeesDetails = extraFeesDetails;
+            this.Discounts = discounts;
         }
 
         /// <summary>
@@ -95,24 +99,6 @@ namespace xi.sdk.resellers.Model
         public string DiscountOffList { get; set; }
 
         /// <summary>
-        /// Gets or Sets Vendorprice
-        /// </summary>
-        [DataMember(Name = "vendorprice", EmitDefaultValue = false)]
-        public decimal Vendorprice { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Extendedvendorprice
-        /// </summary>
-        [DataMember(Name = "extendedvendorprice", EmitDefaultValue = false)]
-        public decimal Extendedvendorprice { get; set; }
-
-        /// <summary>
-        /// Gets or Sets TotalVisibleReserveQuantity
-        /// </summary>
-        [DataMember(Name = "totalVisibleReserveQuantity", EmitDefaultValue = false)]
-        public int TotalVisibleReserveQuantity { get; set; }
-
-        /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name = "type", EmitDefaultValue = false)]
@@ -123,6 +109,36 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         [DataMember(Name = "recurringPriceModel", EmitDefaultValue = false)]
         public string RecurringPriceModel { get; set; }
+
+        /// <summary>
+        /// Gets or Sets UnitOfMeasure
+        /// </summary>
+        [DataMember(Name = "unitOfMeasure", EmitDefaultValue = false)]
+        public string UnitOfMeasure { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Tax
+        /// </summary>
+        [DataMember(Name = "tax", EmitDefaultValue = false)]
+        public string Tax { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Extrafees
+        /// </summary>
+        [DataMember(Name = "extrafees", EmitDefaultValue = false)]
+        public decimal Extrafees { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ExtraFeesDetails
+        /// </summary>
+        [DataMember(Name = "extraFeesDetails", EmitDefaultValue = false)]
+        public List<QuoteDetailsResponseProductsInnerPriceExtraFeesDetailsInner> ExtraFeesDetails { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Discounts
+        /// </summary>
+        [DataMember(Name = "discounts", EmitDefaultValue = false)]
+        public List<QuoteDetailsResponseProductsInnerPriceDiscountsInner> Discounts { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -137,11 +153,13 @@ namespace xi.sdk.resellers.Model
             sb.Append("  ExtendedMsrp: ").Append(ExtendedMsrp).Append("\n");
             sb.Append("  ExtendedQuotePrice: ").Append(ExtendedQuotePrice).Append("\n");
             sb.Append("  DiscountOffList: ").Append(DiscountOffList).Append("\n");
-            sb.Append("  Vendorprice: ").Append(Vendorprice).Append("\n");
-            sb.Append("  Extendedvendorprice: ").Append(Extendedvendorprice).Append("\n");
-            sb.Append("  TotalVisibleReserveQuantity: ").Append(TotalVisibleReserveQuantity).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  RecurringPriceModel: ").Append(RecurringPriceModel).Append("\n");
+            sb.Append("  UnitOfMeasure: ").Append(UnitOfMeasure).Append("\n");
+            sb.Append("  Tax: ").Append(Tax).Append("\n");
+            sb.Append("  Extrafees: ").Append(Extrafees).Append("\n");
+            sb.Append("  ExtraFeesDetails: ").Append(ExtraFeesDetails).Append("\n");
+            sb.Append("  Discounts: ").Append(Discounts).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -1,4 +1,4 @@
-# xi.sdk.resellers.Model.PostAsyncOrderCreateV7500Response
+# xi.sdk.resellers.Model.PostCreateorderV7500Response
 
 ## Properties
 

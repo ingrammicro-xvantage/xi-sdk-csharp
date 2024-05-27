@@ -124,22 +124,6 @@ namespace xi.sdk.resellers.Test.Api
         }
 
         /// <summary>
-        /// Test PostAsyncOrderCreateV7
-        /// </summary>
-        [Fact]
-        public void PostAsyncOrderCreateV7Test()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string iMCustomerNumber = null;
-            //string iMCountryCode = null;
-            //string iMCorrelationID = null;
-            //AsyncOrderCreateDTO asyncOrderCreateDTO = null;
-            //string? iMSenderID = null;
-            //var response = instance.PostAsyncOrderCreateV7(iMCustomerNumber, iMCountryCode, iMCorrelationID, asyncOrderCreateDTO, iMSenderID);
-            //Assert.IsType<AsyncOrderCreateResponse>(response);
-        }
-
-        /// <summary>
         /// Test PostCreateorderV6
         /// </summary>
         [Fact]
@@ -153,6 +137,22 @@ namespace xi.sdk.resellers.Test.Api
             //string? iMSenderID = null;
             //var response = instance.PostCreateorderV6(iMCustomerNumber, iMCountryCode, iMCorrelationID, orderCreateRequest, iMSenderID);
             //Assert.IsType<OrderCreateResponse>(response);
+        }
+
+        /// <summary>
+        /// Test PostCreateorderV7
+        /// </summary>
+        [Fact]
+        public void PostCreateorderV7Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string iMCustomerNumber = null;
+            //string iMCountryCode = null;
+            //string iMCorrelationID = null;
+            //AsyncOrderCreateDTO asyncOrderCreateDTO = null;
+            //string? iMSenderID = null;
+            //var response = instance.PostCreateorderV7(iMCustomerNumber, iMCountryCode, iMCorrelationID, asyncOrderCreateDTO, iMSenderID);
+            //Assert.IsType<AsyncOrderCreateResponse>(response);
         }
 
         /// <summary>

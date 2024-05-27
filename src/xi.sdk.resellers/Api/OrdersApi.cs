@@ -161,35 +161,6 @@ namespace xi.sdk.resellers.Api
         /// <returns>ApiResponse of OrderSearchResponse</returns>
         ApiResponse<OrderSearchResponse> GetResellersV6OrdersearchWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? ingramOrderNumber = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIn = default(List<string>?), string? ingramOrderDate = default(string?), List<string>? ingramOrderDateBt = default(List<string>?), string? iMSenderID = default(string?), string? customerOrderNumber = default(string?), int? pageSize = default(int?), int? pageNumber = default(int?), string? endCustomerOrderNumber = default(string?), List<string>? invoiceDateBt = default(List<string>?), List<string>? shipDateBt = default(List<string>?), List<string>? deliveryDateBt = default(List<string>?), string? ingramPartNumber = default(string?), string? vendorPartNumber = default(string?), string? serialNumber = default(string?), string? trackingNumber = default(string?), string? vendorName = default(string?), string? specialBidNumber = default(string?));
         /// <summary>
-        /// Async Order Create
-        /// </summary>
-        /// <remarks>
-        /// This API will allow customers to perform both standard ordering and quote to order functionality via a single API enabling them to have a single endpoint to cater to all types of orders.  This approach will standardize the ordering flow for customers where they will get the response for all orders on to their webhooks.  It provides the much-awaited async ordering flow for Reseller API where large orders can also be placed via a single API with guaranteed delivery. 
-        /// </remarks>
-        /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
-        /// <param name="iMCountryCode">Two-character ISO country code.</param>
-        /// <param name="iMCorrelationID">Unique transaction number to identify each transaction accross all the systems.</param>
-        /// <param name="asyncOrderCreateDTO"></param>
-        /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. (optional)</param>
-        /// <returns>AsyncOrderCreateResponse</returns>
-        AsyncOrderCreateResponse PostAsyncOrderCreateV7(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, AsyncOrderCreateDTO asyncOrderCreateDTO, string? iMSenderID = default(string?));
-
-        /// <summary>
-        /// Async Order Create
-        /// </summary>
-        /// <remarks>
-        /// This API will allow customers to perform both standard ordering and quote to order functionality via a single API enabling them to have a single endpoint to cater to all types of orders.  This approach will standardize the ordering flow for customers where they will get the response for all orders on to their webhooks.  It provides the much-awaited async ordering flow for Reseller API where large orders can also be placed via a single API with guaranteed delivery. 
-        /// </remarks>
-        /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
-        /// <param name="iMCountryCode">Two-character ISO country code.</param>
-        /// <param name="iMCorrelationID">Unique transaction number to identify each transaction accross all the systems.</param>
-        /// <param name="asyncOrderCreateDTO"></param>
-        /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. (optional)</param>
-        /// <returns>ApiResponse of AsyncOrderCreateResponse</returns>
-        ApiResponse<AsyncOrderCreateResponse> PostAsyncOrderCreateV7WithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, AsyncOrderCreateDTO asyncOrderCreateDTO, string? iMSenderID = default(string?));
-        /// <summary>
         /// Create your Order
         /// </summary>
         /// <remarks>
@@ -218,6 +189,35 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <returns>ApiResponse of OrderCreateResponse</returns>
         ApiResponse<OrderCreateResponse> PostCreateorderV6WithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderCreateRequest orderCreateRequest, string? iMSenderID = default(string?));
+        /// <summary>
+        /// Create your Order v7
+        /// </summary>
+        /// <remarks>
+        /// This API will allow customers to perform both standard ordering and quote to order functionality via a single API enabling them to have a single endpoint to cater to all types of orders.  This approach will standardize the ordering flow for customers where they will get the response for all orders on to their webhooks.  It provides the much-awaited async ordering flow for Reseller API where large orders can also be placed via a single API with guaranteed delivery. 
+        /// </remarks>
+        /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
+        /// <param name="iMCountryCode">Two-character ISO country code.</param>
+        /// <param name="iMCorrelationID">Unique transaction number to identify each transaction accross all the systems.</param>
+        /// <param name="asyncOrderCreateDTO"></param>
+        /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. (optional)</param>
+        /// <returns>AsyncOrderCreateResponse</returns>
+        AsyncOrderCreateResponse PostCreateorderV7(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, AsyncOrderCreateDTO asyncOrderCreateDTO, string? iMSenderID = default(string?));
+
+        /// <summary>
+        /// Create your Order v7
+        /// </summary>
+        /// <remarks>
+        /// This API will allow customers to perform both standard ordering and quote to order functionality via a single API enabling them to have a single endpoint to cater to all types of orders.  This approach will standardize the ordering flow for customers where they will get the response for all orders on to their webhooks.  It provides the much-awaited async ordering flow for Reseller API where large orders can also be placed via a single API with guaranteed delivery. 
+        /// </remarks>
+        /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
+        /// <param name="iMCountryCode">Two-character ISO country code.</param>
+        /// <param name="iMCorrelationID">Unique transaction number to identify each transaction accross all the systems.</param>
+        /// <param name="asyncOrderCreateDTO"></param>
+        /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. (optional)</param>
+        /// <returns>ApiResponse of AsyncOrderCreateResponse</returns>
+        ApiResponse<AsyncOrderCreateResponse> PostCreateorderV7WithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, AsyncOrderCreateDTO asyncOrderCreateDTO, string? iMSenderID = default(string?));
         /// <summary>
         /// Modify your Order
         /// </summary>
@@ -402,37 +402,6 @@ namespace xi.sdk.resellers.Api
         /// <returns>Task of ApiResponse (OrderSearchResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<OrderSearchResponse>> GetResellersV6OrdersearchWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? ingramOrderNumber = default(string?), string? orderStatus = default(string?), List<string>? orderStatusIn = default(List<string>?), string? ingramOrderDate = default(string?), List<string>? ingramOrderDateBt = default(List<string>?), string? iMSenderID = default(string?), string? customerOrderNumber = default(string?), int? pageSize = default(int?), int? pageNumber = default(int?), string? endCustomerOrderNumber = default(string?), List<string>? invoiceDateBt = default(List<string>?), List<string>? shipDateBt = default(List<string>?), List<string>? deliveryDateBt = default(List<string>?), string? ingramPartNumber = default(string?), string? vendorPartNumber = default(string?), string? serialNumber = default(string?), string? trackingNumber = default(string?), string? vendorName = default(string?), string? specialBidNumber = default(string?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// Async Order Create
-        /// </summary>
-        /// <remarks>
-        /// This API will allow customers to perform both standard ordering and quote to order functionality via a single API enabling them to have a single endpoint to cater to all types of orders.  This approach will standardize the ordering flow for customers where they will get the response for all orders on to their webhooks.  It provides the much-awaited async ordering flow for Reseller API where large orders can also be placed via a single API with guaranteed delivery. 
-        /// </remarks>
-        /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
-        /// <param name="iMCountryCode">Two-character ISO country code.</param>
-        /// <param name="iMCorrelationID">Unique transaction number to identify each transaction accross all the systems.</param>
-        /// <param name="asyncOrderCreateDTO"></param>
-        /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AsyncOrderCreateResponse</returns>
-        System.Threading.Tasks.Task<AsyncOrderCreateResponse> PostAsyncOrderCreateV7Async(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, AsyncOrderCreateDTO asyncOrderCreateDTO, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// Async Order Create
-        /// </summary>
-        /// <remarks>
-        /// This API will allow customers to perform both standard ordering and quote to order functionality via a single API enabling them to have a single endpoint to cater to all types of orders.  This approach will standardize the ordering flow for customers where they will get the response for all orders on to their webhooks.  It provides the much-awaited async ordering flow for Reseller API where large orders can also be placed via a single API with guaranteed delivery. 
-        /// </remarks>
-        /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
-        /// <param name="iMCountryCode">Two-character ISO country code.</param>
-        /// <param name="iMCorrelationID">Unique transaction number to identify each transaction accross all the systems.</param>
-        /// <param name="asyncOrderCreateDTO"></param>
-        /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AsyncOrderCreateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AsyncOrderCreateResponse>> PostAsyncOrderCreateV7WithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, AsyncOrderCreateDTO asyncOrderCreateDTO, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
         /// Create your Order
         /// </summary>
         /// <remarks>
@@ -463,6 +432,37 @@ namespace xi.sdk.resellers.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderCreateResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<OrderCreateResponse>> PostCreateorderV6WithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, OrderCreateRequest orderCreateRequest, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Create your Order v7
+        /// </summary>
+        /// <remarks>
+        /// This API will allow customers to perform both standard ordering and quote to order functionality via a single API enabling them to have a single endpoint to cater to all types of orders.  This approach will standardize the ordering flow for customers where they will get the response for all orders on to their webhooks.  It provides the much-awaited async ordering flow for Reseller API where large orders can also be placed via a single API with guaranteed delivery. 
+        /// </remarks>
+        /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
+        /// <param name="iMCountryCode">Two-character ISO country code.</param>
+        /// <param name="iMCorrelationID">Unique transaction number to identify each transaction accross all the systems.</param>
+        /// <param name="asyncOrderCreateDTO"></param>
+        /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AsyncOrderCreateResponse</returns>
+        System.Threading.Tasks.Task<AsyncOrderCreateResponse> PostCreateorderV7Async(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, AsyncOrderCreateDTO asyncOrderCreateDTO, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Create your Order v7
+        /// </summary>
+        /// <remarks>
+        /// This API will allow customers to perform both standard ordering and quote to order functionality via a single API enabling them to have a single endpoint to cater to all types of orders.  This approach will standardize the ordering flow for customers where they will get the response for all orders on to their webhooks.  It provides the much-awaited async ordering flow for Reseller API where large orders can also be placed via a single API with guaranteed delivery. 
+        /// </remarks>
+        /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
+        /// <param name="iMCountryCode">Two-character ISO country code.</param>
+        /// <param name="iMCorrelationID">Unique transaction number to identify each transaction accross all the systems.</param>
+        /// <param name="asyncOrderCreateDTO"></param>
+        /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AsyncOrderCreateResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AsyncOrderCreateResponse>> PostCreateorderV7WithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, AsyncOrderCreateDTO asyncOrderCreateDTO, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Modify your Order
         /// </summary>
@@ -1529,189 +1529,6 @@ namespace xi.sdk.resellers.Api
         }
 
         /// <summary>
-        /// Async Order Create This API will allow customers to perform both standard ordering and quote to order functionality via a single API enabling them to have a single endpoint to cater to all types of orders.  This approach will standardize the ordering flow for customers where they will get the response for all orders on to their webhooks.  It provides the much-awaited async ordering flow for Reseller API where large orders can also be placed via a single API with guaranteed delivery. 
-        /// </summary>
-        /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
-        /// <param name="iMCountryCode">Two-character ISO country code.</param>
-        /// <param name="iMCorrelationID">Unique transaction number to identify each transaction accross all the systems.</param>
-        /// <param name="asyncOrderCreateDTO"></param>
-        /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. (optional)</param>
-        /// <returns>AsyncOrderCreateResponse</returns>
-        public AsyncOrderCreateResponse PostAsyncOrderCreateV7(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, AsyncOrderCreateDTO asyncOrderCreateDTO, string? iMSenderID = default(string?))
-        {
-            xi.sdk.resellers.Client.ApiResponse<AsyncOrderCreateResponse> localVarResponse = PostAsyncOrderCreateV7WithHttpInfo(iMCustomerNumber, iMCountryCode, iMCorrelationID, asyncOrderCreateDTO, iMSenderID);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Async Order Create This API will allow customers to perform both standard ordering and quote to order functionality via a single API enabling them to have a single endpoint to cater to all types of orders.  This approach will standardize the ordering flow for customers where they will get the response for all orders on to their webhooks.  It provides the much-awaited async ordering flow for Reseller API where large orders can also be placed via a single API with guaranteed delivery. 
-        /// </summary>
-        /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
-        /// <param name="iMCountryCode">Two-character ISO country code.</param>
-        /// <param name="iMCorrelationID">Unique transaction number to identify each transaction accross all the systems.</param>
-        /// <param name="asyncOrderCreateDTO"></param>
-        /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. (optional)</param>
-        /// <returns>ApiResponse of AsyncOrderCreateResponse</returns>
-        public xi.sdk.resellers.Client.ApiResponse<AsyncOrderCreateResponse> PostAsyncOrderCreateV7WithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, AsyncOrderCreateDTO asyncOrderCreateDTO, string? iMSenderID = default(string?))
-        {
-            // verify the required parameter 'iMCustomerNumber' is set
-            if (iMCustomerNumber == null)
-                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCustomerNumber' when calling OrdersApi->PostAsyncOrderCreateV7");
-
-            // verify the required parameter 'iMCountryCode' is set
-            if (iMCountryCode == null)
-                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCountryCode' when calling OrdersApi->PostAsyncOrderCreateV7");
-
-            // verify the required parameter 'iMCorrelationID' is set
-            if (iMCorrelationID == null)
-                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCorrelationID' when calling OrdersApi->PostAsyncOrderCreateV7");
-
-            // verify the required parameter 'asyncOrderCreateDTO' is set
-            if (asyncOrderCreateDTO == null)
-                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'asyncOrderCreateDTO' when calling OrdersApi->PostAsyncOrderCreateV7");
-
-            xi.sdk.resellers.Client.RequestOptions localVarRequestOptions = new xi.sdk.resellers.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = xi.sdk.resellers.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-
-            var localVarAccept = xi.sdk.resellers.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.HeaderParameters.Add("IM-CustomerNumber", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCustomerNumber)); // header parameter
-            localVarRequestOptions.HeaderParameters.Add("IM-CountryCode", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCountryCode)); // header parameter
-            if (iMSenderID != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("IM-SenderID", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMSenderID)); // header parameter
-            }
-            localVarRequestOptions.HeaderParameters.Add("IM-CorrelationID", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCorrelationID)); // header parameter
-            localVarRequestOptions.Data = asyncOrderCreateDTO;
-
-            // authentication (application) required
-            // oauth required
-            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
-            }
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Post<AsyncOrderCreateResponse>("/resellers/v7/orders", localVarRequestOptions, this.Configuration);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("PostAsyncOrderCreateV7", localVarResponse);
-                if (_exception != null) throw _exception;
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Async Order Create This API will allow customers to perform both standard ordering and quote to order functionality via a single API enabling them to have a single endpoint to cater to all types of orders.  This approach will standardize the ordering flow for customers where they will get the response for all orders on to their webhooks.  It provides the much-awaited async ordering flow for Reseller API where large orders can also be placed via a single API with guaranteed delivery. 
-        /// </summary>
-        /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
-        /// <param name="iMCountryCode">Two-character ISO country code.</param>
-        /// <param name="iMCorrelationID">Unique transaction number to identify each transaction accross all the systems.</param>
-        /// <param name="asyncOrderCreateDTO"></param>
-        /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AsyncOrderCreateResponse</returns>
-        public async System.Threading.Tasks.Task<AsyncOrderCreateResponse> PostAsyncOrderCreateV7Async(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, AsyncOrderCreateDTO asyncOrderCreateDTO, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            xi.sdk.resellers.Client.ApiResponse<AsyncOrderCreateResponse> localVarResponse = await PostAsyncOrderCreateV7WithHttpInfoAsync(iMCustomerNumber, iMCountryCode, iMCorrelationID, asyncOrderCreateDTO, iMSenderID, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Async Order Create This API will allow customers to perform both standard ordering and quote to order functionality via a single API enabling them to have a single endpoint to cater to all types of orders.  This approach will standardize the ordering flow for customers where they will get the response for all orders on to their webhooks.  It provides the much-awaited async ordering flow for Reseller API where large orders can also be placed via a single API with guaranteed delivery. 
-        /// </summary>
-        /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
-        /// <param name="iMCountryCode">Two-character ISO country code.</param>
-        /// <param name="iMCorrelationID">Unique transaction number to identify each transaction accross all the systems.</param>
-        /// <param name="asyncOrderCreateDTO"></param>
-        /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AsyncOrderCreateResponse)</returns>
-        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<AsyncOrderCreateResponse>> PostAsyncOrderCreateV7WithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, AsyncOrderCreateDTO asyncOrderCreateDTO, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            // verify the required parameter 'iMCustomerNumber' is set
-            if (iMCustomerNumber == null)
-                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCustomerNumber' when calling OrdersApi->PostAsyncOrderCreateV7");
-
-            // verify the required parameter 'iMCountryCode' is set
-            if (iMCountryCode == null)
-                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCountryCode' when calling OrdersApi->PostAsyncOrderCreateV7");
-
-            // verify the required parameter 'iMCorrelationID' is set
-            if (iMCorrelationID == null)
-                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCorrelationID' when calling OrdersApi->PostAsyncOrderCreateV7");
-
-            // verify the required parameter 'asyncOrderCreateDTO' is set
-            if (asyncOrderCreateDTO == null)
-                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'asyncOrderCreateDTO' when calling OrdersApi->PostAsyncOrderCreateV7");
-
-
-            xi.sdk.resellers.Client.RequestOptions localVarRequestOptions = new xi.sdk.resellers.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-
-            var localVarContentType = xi.sdk.resellers.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-
-            var localVarAccept = xi.sdk.resellers.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.HeaderParameters.Add("IM-CustomerNumber", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCustomerNumber)); // header parameter
-            localVarRequestOptions.HeaderParameters.Add("IM-CountryCode", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCountryCode)); // header parameter
-            if (iMSenderID != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("IM-SenderID", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMSenderID)); // header parameter
-            }
-            localVarRequestOptions.HeaderParameters.Add("IM-CorrelationID", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCorrelationID)); // header parameter
-            localVarRequestOptions.Data = asyncOrderCreateDTO;
-
-            // authentication (application) required
-            // oauth required
-            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
-            }
-
-            // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PostAsync<AsyncOrderCreateResponse>("/resellers/v7/orders", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("PostAsyncOrderCreateV7", localVarResponse);
-                if (_exception != null) throw _exception;
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
         /// Create your Order Instantly create and place orders. The POST API supports stocked SKUs as well as licensing and warranties SKUs. IM-CustomerNumber, IM-CountryCode, IM-SenderID and IM-CorrelationID are required parameters. Ingram Micro recommends that you provide the ingrampartnumber for each SKU contained in each order. NOTE: You must have net terms to use the Ingram Micro Order Create API. Ingram Micro offers trade credit when using our APIs, and repayment is based on net terms. For example, if your net terms agreement is net-30, you will have 30 days to make a full payment. Ingram Micro does not allow credit card transactions for API ordering. 
         /// </summary>
         /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1888,6 +1705,189 @@ namespace xi.sdk.resellers.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PostCreateorderV6", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Create your Order v7 This API will allow customers to perform both standard ordering and quote to order functionality via a single API enabling them to have a single endpoint to cater to all types of orders.  This approach will standardize the ordering flow for customers where they will get the response for all orders on to their webhooks.  It provides the much-awaited async ordering flow for Reseller API where large orders can also be placed via a single API with guaranteed delivery. 
+        /// </summary>
+        /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
+        /// <param name="iMCountryCode">Two-character ISO country code.</param>
+        /// <param name="iMCorrelationID">Unique transaction number to identify each transaction accross all the systems.</param>
+        /// <param name="asyncOrderCreateDTO"></param>
+        /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. (optional)</param>
+        /// <returns>AsyncOrderCreateResponse</returns>
+        public AsyncOrderCreateResponse PostCreateorderV7(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, AsyncOrderCreateDTO asyncOrderCreateDTO, string? iMSenderID = default(string?))
+        {
+            xi.sdk.resellers.Client.ApiResponse<AsyncOrderCreateResponse> localVarResponse = PostCreateorderV7WithHttpInfo(iMCustomerNumber, iMCountryCode, iMCorrelationID, asyncOrderCreateDTO, iMSenderID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create your Order v7 This API will allow customers to perform both standard ordering and quote to order functionality via a single API enabling them to have a single endpoint to cater to all types of orders.  This approach will standardize the ordering flow for customers where they will get the response for all orders on to their webhooks.  It provides the much-awaited async ordering flow for Reseller API where large orders can also be placed via a single API with guaranteed delivery. 
+        /// </summary>
+        /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
+        /// <param name="iMCountryCode">Two-character ISO country code.</param>
+        /// <param name="iMCorrelationID">Unique transaction number to identify each transaction accross all the systems.</param>
+        /// <param name="asyncOrderCreateDTO"></param>
+        /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. (optional)</param>
+        /// <returns>ApiResponse of AsyncOrderCreateResponse</returns>
+        public xi.sdk.resellers.Client.ApiResponse<AsyncOrderCreateResponse> PostCreateorderV7WithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, AsyncOrderCreateDTO asyncOrderCreateDTO, string? iMSenderID = default(string?))
+        {
+            // verify the required parameter 'iMCustomerNumber' is set
+            if (iMCustomerNumber == null)
+                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCustomerNumber' when calling OrdersApi->PostCreateorderV7");
+
+            // verify the required parameter 'iMCountryCode' is set
+            if (iMCountryCode == null)
+                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCountryCode' when calling OrdersApi->PostCreateorderV7");
+
+            // verify the required parameter 'iMCorrelationID' is set
+            if (iMCorrelationID == null)
+                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCorrelationID' when calling OrdersApi->PostCreateorderV7");
+
+            // verify the required parameter 'asyncOrderCreateDTO' is set
+            if (asyncOrderCreateDTO == null)
+                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'asyncOrderCreateDTO' when calling OrdersApi->PostCreateorderV7");
+
+            xi.sdk.resellers.Client.RequestOptions localVarRequestOptions = new xi.sdk.resellers.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = xi.sdk.resellers.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = xi.sdk.resellers.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.HeaderParameters.Add("IM-CustomerNumber", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCustomerNumber)); // header parameter
+            localVarRequestOptions.HeaderParameters.Add("IM-CountryCode", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCountryCode)); // header parameter
+            if (iMSenderID != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("IM-SenderID", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMSenderID)); // header parameter
+            }
+            localVarRequestOptions.HeaderParameters.Add("IM-CorrelationID", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCorrelationID)); // header parameter
+            localVarRequestOptions.Data = asyncOrderCreateDTO;
+
+            // authentication (application) required
+            // oauth required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<AsyncOrderCreateResponse>("/resellers/v7/orders", localVarRequestOptions, this.Configuration);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("PostCreateorderV7", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Create your Order v7 This API will allow customers to perform both standard ordering and quote to order functionality via a single API enabling them to have a single endpoint to cater to all types of orders.  This approach will standardize the ordering flow for customers where they will get the response for all orders on to their webhooks.  It provides the much-awaited async ordering flow for Reseller API where large orders can also be placed via a single API with guaranteed delivery. 
+        /// </summary>
+        /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
+        /// <param name="iMCountryCode">Two-character ISO country code.</param>
+        /// <param name="iMCorrelationID">Unique transaction number to identify each transaction accross all the systems.</param>
+        /// <param name="asyncOrderCreateDTO"></param>
+        /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AsyncOrderCreateResponse</returns>
+        public async System.Threading.Tasks.Task<AsyncOrderCreateResponse> PostCreateorderV7Async(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, AsyncOrderCreateDTO asyncOrderCreateDTO, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            xi.sdk.resellers.Client.ApiResponse<AsyncOrderCreateResponse> localVarResponse = await PostCreateorderV7WithHttpInfoAsync(iMCustomerNumber, iMCountryCode, iMCorrelationID, asyncOrderCreateDTO, iMSenderID, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create your Order v7 This API will allow customers to perform both standard ordering and quote to order functionality via a single API enabling them to have a single endpoint to cater to all types of orders.  This approach will standardize the ordering flow for customers where they will get the response for all orders on to their webhooks.  It provides the much-awaited async ordering flow for Reseller API where large orders can also be placed via a single API with guaranteed delivery. 
+        /// </summary>
+        /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
+        /// <param name="iMCountryCode">Two-character ISO country code.</param>
+        /// <param name="iMCorrelationID">Unique transaction number to identify each transaction accross all the systems.</param>
+        /// <param name="asyncOrderCreateDTO"></param>
+        /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AsyncOrderCreateResponse)</returns>
+        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<AsyncOrderCreateResponse>> PostCreateorderV7WithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, AsyncOrderCreateDTO asyncOrderCreateDTO, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'iMCustomerNumber' is set
+            if (iMCustomerNumber == null)
+                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCustomerNumber' when calling OrdersApi->PostCreateorderV7");
+
+            // verify the required parameter 'iMCountryCode' is set
+            if (iMCountryCode == null)
+                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCountryCode' when calling OrdersApi->PostCreateorderV7");
+
+            // verify the required parameter 'iMCorrelationID' is set
+            if (iMCorrelationID == null)
+                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCorrelationID' when calling OrdersApi->PostCreateorderV7");
+
+            // verify the required parameter 'asyncOrderCreateDTO' is set
+            if (asyncOrderCreateDTO == null)
+                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'asyncOrderCreateDTO' when calling OrdersApi->PostCreateorderV7");
+
+
+            xi.sdk.resellers.Client.RequestOptions localVarRequestOptions = new xi.sdk.resellers.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+
+            var localVarContentType = xi.sdk.resellers.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = xi.sdk.resellers.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.HeaderParameters.Add("IM-CustomerNumber", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCustomerNumber)); // header parameter
+            localVarRequestOptions.HeaderParameters.Add("IM-CountryCode", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCountryCode)); // header parameter
+            if (iMSenderID != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("IM-SenderID", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMSenderID)); // header parameter
+            }
+            localVarRequestOptions.HeaderParameters.Add("IM-CorrelationID", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCorrelationID)); // header parameter
+            localVarRequestOptions.Data = asyncOrderCreateDTO;
+
+            // authentication (application) required
+            // oauth required
+            if (!string.IsNullOrEmpty(this.Configuration.AccessToken) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Bearer " + this.Configuration.AccessToken);
+            }
+
+            // make the HTTP request
+
+            var localVarResponse = await this.AsynchronousClient.PostAsync<AsyncOrderCreateResponse>("/resellers/v7/orders", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("PostCreateorderV7", localVarResponse);
                 if (_exception != null) throw _exception;
             }
 

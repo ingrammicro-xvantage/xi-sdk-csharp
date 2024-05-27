@@ -100,33 +100,6 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'Vendorprice'
-        /// </summary>
-        [Fact]
-        public void VendorpriceTest()
-        {
-            // TODO unit test for the property 'Vendorprice'
-        }
-
-        /// <summary>
-        /// Test the property 'Extendedvendorprice'
-        /// </summary>
-        [Fact]
-        public void ExtendedvendorpriceTest()
-        {
-            // TODO unit test for the property 'Extendedvendorprice'
-        }
-
-        /// <summary>
-        /// Test the property 'TotalVisibleReserveQuantity'
-        /// </summary>
-        [Fact]
-        public void TotalVisibleReserveQuantityTest()
-        {
-            // TODO unit test for the property 'TotalVisibleReserveQuantity'
-        }
-
-        /// <summary>
         /// Test the property 'Type'
         /// </summary>
         [Fact]
@@ -142,6 +115,51 @@ namespace xi.sdk.resellers.Test.Model
         public void RecurringPriceModelTest()
         {
             // TODO unit test for the property 'RecurringPriceModel'
+        }
+
+        /// <summary>
+        /// Test the property 'UnitOfMeasure'
+        /// </summary>
+        [Fact]
+        public void UnitOfMeasureTest()
+        {
+            // TODO unit test for the property 'UnitOfMeasure'
+        }
+
+        /// <summary>
+        /// Test the property 'Tax'
+        /// </summary>
+        [Fact]
+        public void TaxTest()
+        {
+            // TODO unit test for the property 'Tax'
+        }
+
+        /// <summary>
+        /// Test the property 'Extrafees'
+        /// </summary>
+        [Fact]
+        public void ExtrafeesTest()
+        {
+            // TODO unit test for the property 'Extrafees'
+        }
+
+        /// <summary>
+        /// Test the property 'ExtraFeesDetails'
+        /// </summary>
+        [Fact]
+        public void ExtraFeesDetailsTest()
+        {
+            // TODO unit test for the property 'ExtraFeesDetails'
+        }
+
+        /// <summary>
+        /// Test the property 'Discounts'
+        /// </summary>
+        [Fact]
+        public void DiscountsTest()
+        {
+            // TODO unit test for the property 'Discounts'
         }
     }
 }

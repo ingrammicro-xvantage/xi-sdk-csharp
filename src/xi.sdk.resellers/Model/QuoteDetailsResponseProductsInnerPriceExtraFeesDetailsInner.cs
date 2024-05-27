@@ -27,44 +27,33 @@ using OpenAPIDateConverter = xi.sdk.resellers.Client.OpenAPIDateConverter;
 namespace xi.sdk.resellers.Model
 {
     /// <summary>
-    /// PostAsyncOrderCreateV7400ResponseFieldsInner
+    /// QuoteDetailsResponseProductsInnerPriceExtraFeesDetailsInner
     /// </summary>
-    [DataContract(Name = "post_AsyncOrderCreate_v7_400_response_fields_inner")]
-    public partial class PostAsyncOrderCreateV7400ResponseFieldsInner : IValidatableObject
+    [DataContract(Name = "QuoteDetailsResponse_products_inner_price_extraFeesDetails_inner")]
+    public partial class QuoteDetailsResponseProductsInnerPriceExtraFeesDetailsInner : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PostAsyncOrderCreateV7400ResponseFieldsInner" /> class.
+        /// Initializes a new instance of the <see cref="QuoteDetailsResponseProductsInnerPriceExtraFeesDetailsInner" /> class.
         /// </summary>
-        /// <param name="field">Name of the field..</param>
-        /// <param name="message">A filed level error message..</param>
-        /// <param name="value">Value of the message..</param>
-        public PostAsyncOrderCreateV7400ResponseFieldsInner(string field = default(string), string message = default(string), string value = default(string))
+        /// <param name="extraFeesDescription">extraFeesDescription.</param>
+        /// <param name="extraFeesAmount">extraFeesAmount.</param>
+        public QuoteDetailsResponseProductsInnerPriceExtraFeesDetailsInner(string extraFeesDescription = default(string), decimal extraFeesAmount = default(decimal))
         {
-            this.Field = field;
-            this.Message = message;
-            this.Value = value;
+            this.ExtraFeesDescription = extraFeesDescription;
+            this.ExtraFeesAmount = extraFeesAmount;
         }
 
         /// <summary>
-        /// Name of the field.
+        /// Gets or Sets ExtraFeesDescription
         /// </summary>
-        /// <value>Name of the field.</value>
-        [DataMember(Name = "field", EmitDefaultValue = false)]
-        public string Field { get; set; }
+        [DataMember(Name = "extraFeesDescription", EmitDefaultValue = false)]
+        public string ExtraFeesDescription { get; set; }
 
         /// <summary>
-        /// A filed level error message.
+        /// Gets or Sets ExtraFeesAmount
         /// </summary>
-        /// <value>A filed level error message.</value>
-        [DataMember(Name = "message", EmitDefaultValue = false)]
-        public string Message { get; set; }
-
-        /// <summary>
-        /// Value of the message.
-        /// </summary>
-        /// <value>Value of the message.</value>
-        [DataMember(Name = "value", EmitDefaultValue = false)]
-        public string Value { get; set; }
+        [DataMember(Name = "extraFeesAmount", EmitDefaultValue = false)]
+        public decimal ExtraFeesAmount { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -73,10 +62,9 @@ namespace xi.sdk.resellers.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class PostAsyncOrderCreateV7400ResponseFieldsInner {\n");
-            sb.Append("  Field: ").Append(Field).Append("\n");
-            sb.Append("  Message: ").Append(Message).Append("\n");
-            sb.Append("  Value: ").Append(Value).Append("\n");
+            sb.Append("class QuoteDetailsResponseProductsInnerPriceExtraFeesDetailsInner {\n");
+            sb.Append("  ExtraFeesDescription: ").Append(ExtraFeesDescription).Append("\n");
+            sb.Append("  ExtraFeesAmount: ").Append(ExtraFeesAmount).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

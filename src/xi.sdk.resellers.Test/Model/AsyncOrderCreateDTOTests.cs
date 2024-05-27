@@ -73,12 +73,12 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'EndcustomerOrderNumber'
+        /// Test the property 'EndCustomerOrderNumber'
         /// </summary>
         [Fact]
-        public void EndcustomerOrderNumberTest()
+        public void EndCustomerOrderNumberTest()
         {
-            // TODO unit test for the property 'EndcustomerOrderNumber'
+            // TODO unit test for the property 'EndCustomerOrderNumber'
         }
 
         /// <summary>

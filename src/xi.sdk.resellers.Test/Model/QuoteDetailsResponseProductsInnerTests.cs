@@ -199,6 +199,15 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'PlanDescription'
+        /// </summary>
+        [Fact]
+        public void PlanDescriptionTest()
+        {
+            // TODO unit test for the property 'PlanDescription'
+        }
+
+        /// <summary>
         /// Test the property 'IsSubscription'
         /// </summary>
         [Fact]
@@ -217,12 +226,57 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'RequestedStartDate'
+        /// </summary>
+        [Fact]
+        public void RequestedStartDateTest()
+        {
+            // TODO unit test for the property 'RequestedStartDate'
+        }
+
+        /// <summary>
+        /// Test the property 'StartDate'
+        /// </summary>
+        [Fact]
+        public void StartDateTest()
+        {
+            // TODO unit test for the property 'StartDate'
+        }
+
+        /// <summary>
+        /// Test the property 'EndDate'
+        /// </summary>
+        [Fact]
+        public void EndDateTest()
+        {
+            // TODO unit test for the property 'EndDate'
+        }
+
+        /// <summary>
+        /// Test the property 'SerialNumber'
+        /// </summary>
+        [Fact]
+        public void SerialNumberTest()
+        {
+            // TODO unit test for the property 'SerialNumber'
+        }
+
+        /// <summary>
         /// Test the property 'Price'
         /// </summary>
         [Fact]
         public void PriceTest()
         {
             // TODO unit test for the property 'Price'
+        }
+
+        /// <summary>
+        /// Test the property 'BillDetails'
+        /// </summary>
+        [Fact]
+        public void BillDetailsTest()
+        {
+            // TODO unit test for the property 'BillDetails'
         }
     }
 }

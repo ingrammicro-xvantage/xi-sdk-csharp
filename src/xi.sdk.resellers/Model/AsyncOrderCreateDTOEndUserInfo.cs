@@ -40,11 +40,11 @@ namespace xi.sdk.resellers.Model
         /// <param name="companyName">The company name for the end user/customer..</param>
         /// <param name="name1">name1.</param>
         /// <param name="name2">name2.</param>
-        /// <param name="contactId">The contact Id for the end user/customer..</param>
         /// <param name="addressLine1">The address line 1 for the end user/customer..</param>
         /// <param name="addressLine2">The address line 2 for the end user/customer..</param>
         /// <param name="addressLine3">The address line 3 for the end user/customer..</param>
         /// <param name="contact">The contact name for the end user/customer..</param>
+        /// <param name="name3">name3.</param>
         /// <param name="city">The end user/customer&#39;s city..</param>
         /// <param name="state">The end user/customer&#39;s state..</param>
         /// <param name="postalCode">The end user/customer&#39;s zip or postal code..</param>
@@ -52,18 +52,18 @@ namespace xi.sdk.resellers.Model
         /// <param name="countryCode">The end user/customer&#39;s two character ISO country code..</param>
         /// <param name="phoneNumber">The end user/customer&#39;s phone number..</param>
         /// <param name="email">The end user/customer&#39;s phone number..</param>
-        public AsyncOrderCreateDTOEndUserInfo(string endUserId = default(string), string endUserType = default(string), string companyName = default(string), string name1 = default(string), string name2 = default(string), string contactId = default(string), string addressLine1 = default(string), string addressLine2 = default(string), string addressLine3 = default(string), string contact = default(string), string city = default(string), string state = default(string), string postalCode = default(string), string addressLine4 = default(string), string countryCode = default(string), string phoneNumber = default(string), string email = default(string))
+        public AsyncOrderCreateDTOEndUserInfo(string endUserId = default(string), string endUserType = default(string), string companyName = default(string), string name1 = default(string), string name2 = default(string), string addressLine1 = default(string), string addressLine2 = default(string), string addressLine3 = default(string), string contact = default(string), string name3 = default(string), string city = default(string), string state = default(string), string postalCode = default(string), string addressLine4 = default(string), string countryCode = default(string), string phoneNumber = default(string), string email = default(string))
         {
             this.EndUserId = endUserId;
             this.EndUserType = endUserType;
             this.CompanyName = companyName;
             this.Name1 = name1;
             this.Name2 = name2;
-            this.ContactId = contactId;
             this.AddressLine1 = addressLine1;
             this.AddressLine2 = addressLine2;
             this.AddressLine3 = addressLine3;
             this.Contact = contact;
+            this.Name3 = name3;
             this.City = city;
             this.State = state;
             this.PostalCode = postalCode;
@@ -107,13 +107,6 @@ namespace xi.sdk.resellers.Model
         public string Name2 { get; set; }
 
         /// <summary>
-        /// The contact Id for the end user/customer.
-        /// </summary>
-        /// <value>The contact Id for the end user/customer.</value>
-        [DataMember(Name = "contactId", EmitDefaultValue = false)]
-        public string ContactId { get; set; }
-
-        /// <summary>
         /// The address line 1 for the end user/customer.
         /// </summary>
         /// <value>The address line 1 for the end user/customer.</value>
@@ -140,6 +133,12 @@ namespace xi.sdk.resellers.Model
         /// <value>The contact name for the end user/customer.</value>
         [DataMember(Name = "contact", EmitDefaultValue = false)]
         public string Contact { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Name3
+        /// </summary>
+        [DataMember(Name = "name3", EmitDefaultValue = false)]
+        public string Name3 { get; set; }
 
         /// <summary>
         /// The end user/customer&#39;s city.
@@ -203,11 +202,11 @@ namespace xi.sdk.resellers.Model
             sb.Append("  CompanyName: ").Append(CompanyName).Append("\n");
             sb.Append("  Name1: ").Append(Name1).Append("\n");
             sb.Append("  Name2: ").Append(Name2).Append("\n");
-            sb.Append("  ContactId: ").Append(ContactId).Append("\n");
             sb.Append("  AddressLine1: ").Append(AddressLine1).Append("\n");
             sb.Append("  AddressLine2: ").Append(AddressLine2).Append("\n");
             sb.Append("  AddressLine3: ").Append(AddressLine3).Append("\n");
             sb.Append("  Contact: ").Append(Contact).Append("\n");
+            sb.Append("  Name3: ").Append(Name3).Append("\n");
             sb.Append("  City: ").Append(City).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  PostalCode: ").Append(PostalCode).Append("\n");

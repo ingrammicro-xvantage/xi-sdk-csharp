@@ -27,52 +27,49 @@ using OpenAPIDateConverter = xi.sdk.resellers.Client.OpenAPIDateConverter;
 namespace xi.sdk.resellers.Model
 {
     /// <summary>
-    /// PostAsyncOrderCreateV7400Response
+    /// QuoteDetailsResponseProductsInnerBillDetailsInner
     /// </summary>
-    [DataContract(Name = "post_AsyncOrderCreate_v7_400_response")]
-    public partial class PostAsyncOrderCreateV7400Response : IValidatableObject
+    [DataContract(Name = "QuoteDetailsResponse_products_inner_billDetails_inner")]
+    public partial class QuoteDetailsResponseProductsInnerBillDetailsInner : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PostAsyncOrderCreateV7400Response" /> class.
+        /// Initializes a new instance of the <see cref="QuoteDetailsResponseProductsInnerBillDetailsInner" /> class.
         /// </summary>
-        /// <param name="traceid">A unique trace id to identify the issue..</param>
-        /// <param name="type">Type of the error message..</param>
-        /// <param name="message">A detailed error message..</param>
-        /// <param name="fields">fields.</param>
-        public PostAsyncOrderCreateV7400Response(string traceid = default(string), string type = default(string), string message = default(string), List<PostAsyncOrderCreateV7400ResponseFieldsInner> fields = default(List<PostAsyncOrderCreateV7400ResponseFieldsInner>))
+        /// <param name="type">type.</param>
+        /// <param name="unit">unit.</param>
+        /// <param name="frequency">frequency.</param>
+        /// <param name="unitValue">unitValue.</param>
+        public QuoteDetailsResponseProductsInnerBillDetailsInner(string type = default(string), string unit = default(string), int frequency = default(int), string unitValue = default(string))
         {
-            this.Traceid = traceid;
             this.Type = type;
-            this.Message = message;
-            this.Fields = fields;
+            this.Unit = unit;
+            this.Frequency = frequency;
+            this.UnitValue = unitValue;
         }
 
         /// <summary>
-        /// A unique trace id to identify the issue.
+        /// Gets or Sets Type
         /// </summary>
-        /// <value>A unique trace id to identify the issue.</value>
-        [DataMember(Name = "traceid", EmitDefaultValue = false)]
-        public string Traceid { get; set; }
-
-        /// <summary>
-        /// Type of the error message.
-        /// </summary>
-        /// <value>Type of the error message.</value>
         [DataMember(Name = "type", EmitDefaultValue = false)]
         public string Type { get; set; }
 
         /// <summary>
-        /// A detailed error message.
+        /// Gets or Sets Unit
         /// </summary>
-        /// <value>A detailed error message.</value>
-        [DataMember(Name = "message", EmitDefaultValue = false)]
-        public string Message { get; set; }
+        [DataMember(Name = "unit", EmitDefaultValue = false)]
+        public string Unit { get; set; }
 
         /// <summary>
-        /// Gets or Sets Fields
+        /// Gets or Sets Frequency
         /// </summary>
-        [DataMember(Name = "fields", EmitDefaultValue = false)]
-        public List<PostAsyncOrderCreateV7400ResponseFieldsInner> Fields { get; set; }
+        [DataMember(Name = "frequency", EmitDefaultValue = false)]
+        public int Frequency { get; set; }
+
+        /// <summary>
+        /// Gets or Sets UnitValue
+        /// </summary>
+        [DataMember(Name = "unitValue", EmitDefaultValue = false)]
+        public string UnitValue { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -81,11 +78,11 @@ namespace xi.sdk.resellers.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class PostAsyncOrderCreateV7400Response {\n");
-            sb.Append("  Traceid: ").Append(Traceid).Append("\n");
+            sb.Append("class QuoteDetailsResponseProductsInnerBillDetailsInner {\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
-            sb.Append("  Message: ").Append(Message).Append("\n");
-            sb.Append("  Fields: ").Append(Fields).Append("\n");
+            sb.Append("  Unit: ").Append(Unit).Append("\n");
+            sb.Append("  Frequency: ").Append(Frequency).Append("\n");
+            sb.Append("  UnitValue: ").Append(UnitValue).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

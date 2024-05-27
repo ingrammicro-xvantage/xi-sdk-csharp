@@ -100,15 +100,6 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'ContactId'
-        /// </summary>
-        [Fact]
-        public void ContactIdTest()
-        {
-            // TODO unit test for the property 'ContactId'
-        }
-
-        /// <summary>
         /// Test the property 'AddressLine1'
         /// </summary>
         [Fact]
@@ -142,6 +133,15 @@ namespace xi.sdk.resellers.Test.Model
         public void ContactTest()
         {
             // TODO unit test for the property 'Contact'
+        }
+
+        /// <summary>
+        /// Test the property 'Name3'
+        /// </summary>
+        [Fact]
+        public void Name3Test()
+        {
+            // TODO unit test for the property 'Name3'
         }
 
         /// <summary>

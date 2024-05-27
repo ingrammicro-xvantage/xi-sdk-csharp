@@ -20,9 +20,15 @@ Name | Type | Description | Notes
 **QuoteProductsSupplierPartAuxiliaryId** | **string** | Vendor product configuration ID specific to Cisco. | [optional] 
 **VendorName** | **string** | Vendor name of the product | [optional] 
 **Terms** | **string** | Terms of the quote | [optional] 
+**PlanDescription** | **string** |  | [optional] 
 **IsSubscription** | **bool** |  | [optional] 
 **ResellerMargin** | **string** |  | [optional] 
+**RequestedStartDate** | **string** |  | [optional] 
+**StartDate** | **string** |  | [optional] 
+**EndDate** | **string** |  | [optional] 
+**SerialNumber** | **string** |  | [optional] 
 **Price** | [**QuoteDetailsResponseProductsInnerPrice**](QuoteDetailsResponseProductsInnerPrice.md) |  | [optional] 
+**BillDetails** | [**List&lt;QuoteDetailsResponseProductsInnerBillDetailsInner&gt;**](QuoteDetailsResponseProductsInnerBillDetailsInner.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
