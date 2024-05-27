@@ -35,6 +35,7 @@ Name | Type | Description | Notes
 **EstimatedDates** | [**List&lt;OrderDetailB2BLinesInnerEstimatedDatesInner&gt;**](OrderDetailB2BLinesInnerEstimatedDatesInner.md) |  | [optional] 
 **ScheduleLines** | [**List&lt;OrderDetailB2BLinesInnerScheduleLinesInner&gt;**](OrderDetailB2BLinesInnerScheduleLinesInner.md) |  | [optional] 
 **MultipleShipments** | [**List&lt;OrderDetailB2BLinesInnerMultipleShipmentsInner&gt;**](OrderDetailB2BLinesInnerMultipleShipmentsInner.md) |  | [optional] 
+**DefaultCarrierName** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
