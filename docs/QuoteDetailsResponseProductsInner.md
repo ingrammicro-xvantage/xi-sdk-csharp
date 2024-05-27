@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **IngramPartNumber** | **string** | Ingram Micro SKU (stock keeping unit). An identification, usually alphanumeric, of a particular product that allows it to be tracked for inventory purposes | [optional] 
 **VendorPartNumber** | **string** | Vendor Part Number | [optional] 
 **Description** | **string** | Product description.  Note - The quote view api returns only the product short description as maintained in Ingram Micro&#39;s crm system.  For long descriptions, please refer to alternative information sources. | [optional] 
-**Weight** | **int** | Weight is provided based on country standard.  For countries following Imperial standards - weight is presented as pounds with decimal.  In countries following metric standards, weight is provided as kilograms with decimal. | [optional] 
+**Weight** | **decimal** | Weight is provided based on country standard.  For countries following Imperial standards - weight is presented as pounds with decimal.  In countries following metric standards, weight is provided as kilograms with decimal. | [optional] 
 **WeightUom** | **string** | Unit of measure | [optional] 
 **IsSuggestionProduct** | **bool** | Flag to indicate if a product line item is a suggested product.  The suggested product is provided in addition to the requested quoted products and a suggested option.  Suggested products are grouped together for subtotal and total calculations. | [optional] 
 **VpnCategory** | **string** | Vendor product category specific to Cisco. HWDW (hardware) or service. | [optional] 

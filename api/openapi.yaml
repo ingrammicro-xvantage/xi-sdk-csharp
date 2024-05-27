@@ -10014,7 +10014,7 @@ components:
       type: object
     QuoteDetailsResponse:
       example:
-        quantityTotal: 6
+        quantityTotal: 7
         shippingInfo:
           phoneNumber: phoneNumber
           city: city
@@ -10026,7 +10026,7 @@ components:
           state: state
           shpToGstinNumber: shpToGstinNumber
           email: email
-        taxTotal: 1.1730742509559433
+        taxTotal: 4.965218492984954
         leaseInfo: leaseInfo
         dateClosed: dateClosed
         imWarehouse: imWarehouse
@@ -10043,40 +10043,40 @@ components:
           terms: terms
           price:
             quotePrice: 1.4658129805029452
-            extrafees: 7.061401241503109
+            extrafees: 9.301444243932576
             unitOfMeasure: unitOfMeasure
             discounts:
-            - amount: 3.616076749251911
+            - amount: 2.027123023002322
               description: description
-              avaliableQunatity: 2
+              avaliableQunatity: 4
               bidVersion: bidVersion
               validFrom: validFrom
               type: type
               bidNumber: bidNumber
-              minimumQuantity: 4
-              discountOffList: 7.386281948385884
+              minimumQuantity: 7
+              discountOffList: 1.2315135367772556
               expirationDate: expirationDate
               validTo: validTo
-            - amount: 3.616076749251911
+            - amount: 2.027123023002322
               description: description
-              avaliableQunatity: 2
+              avaliableQunatity: 4
               bidVersion: bidVersion
               validFrom: validFrom
               type: type
               bidNumber: bidNumber
-              minimumQuantity: 4
-              discountOffList: 7.386281948385884
+              minimumQuantity: 7
+              discountOffList: 1.2315135367772556
               expirationDate: expirationDate
               validTo: validTo
             msrp: 5.962133916683182
             extendedQuotePrice: 2.3021358869347655
             recurringPriceModel: recurringPriceModel
-            tax: tax
+            tax: 7.061401241503109
             type: type
             extraFeesDetails:
-            - extraFeesAmount: 9.301444243932576
+            - extraFeesAmount: 3.616076749251911
               extraFeesDescription: extraFeesDescription
-            - extraFeesAmount: 9.301444243932576
+            - extraFeesAmount: 3.616076749251911
               extraFeesDescription: extraFeesDescription
             extendedMsrp: 5.637376656633329
             discountOffList: discountOffList
@@ -10096,7 +10096,7 @@ components:
           quantity: 0
           serialNumber: serialNumber
           resellerMargin: resellerMargin
-          weight: 6
+          weight: 6.027456183070403
           vendorName: vendorName
           quoteProductGuid: quoteProductGuid
           planDescription: planDescription
@@ -10114,40 +10114,40 @@ components:
           terms: terms
           price:
             quotePrice: 1.4658129805029452
-            extrafees: 7.061401241503109
+            extrafees: 9.301444243932576
             unitOfMeasure: unitOfMeasure
             discounts:
-            - amount: 3.616076749251911
+            - amount: 2.027123023002322
               description: description
-              avaliableQunatity: 2
+              avaliableQunatity: 4
               bidVersion: bidVersion
               validFrom: validFrom
               type: type
               bidNumber: bidNumber
-              minimumQuantity: 4
-              discountOffList: 7.386281948385884
+              minimumQuantity: 7
+              discountOffList: 1.2315135367772556
               expirationDate: expirationDate
               validTo: validTo
-            - amount: 3.616076749251911
+            - amount: 2.027123023002322
               description: description
-              avaliableQunatity: 2
+              avaliableQunatity: 4
               bidVersion: bidVersion
               validFrom: validFrom
               type: type
               bidNumber: bidNumber
-              minimumQuantity: 4
-              discountOffList: 7.386281948385884
+              minimumQuantity: 7
+              discountOffList: 1.2315135367772556
               expirationDate: expirationDate
               validTo: validTo
             msrp: 5.962133916683182
             extendedQuotePrice: 2.3021358869347655
             recurringPriceModel: recurringPriceModel
-            tax: tax
+            tax: 7.061401241503109
             type: type
             extraFeesDetails:
-            - extraFeesAmount: 9.301444243932576
+            - extraFeesAmount: 3.616076749251911
               extraFeesDescription: extraFeesDescription
-            - extraFeesAmount: 9.301444243932576
+            - extraFeesAmount: 3.616076749251911
               extraFeesDescription: extraFeesDescription
             extendedMsrp: 5.637376656633329
             discountOffList: discountOffList
@@ -10167,7 +10167,7 @@ components:
           quantity: 0
           serialNumber: serialNumber
           resellerMargin: resellerMargin
-          weight: 6
+          weight: 6.027456183070403
           vendorName: vendorName
           quoteProductGuid: quoteProductGuid
           planDescription: planDescription
@@ -10179,9 +10179,9 @@ components:
         leasingInstructions: leasingInstructions
         productsCount: 1
         extraFeesTotalDetails:
-        - extraFeesAmount: 9.301444243932576
+        - extraFeesAmount: 3.616076749251911
           extraFeesDescription: extraFeesDescription
-        - extraFeesAmount: 9.301444243932576
+        - extraFeesAmount: 3.616076749251911
           extraFeesDescription: extraFeesDescription
         vendorQuoteNumber: vendorQuoteNumber
         specialBidEffectiveDate: specialBidEffectiveDate
@@ -10198,16 +10198,16 @@ components:
           email: email
           marketSegment: marketSegment
         introPreamble: introPreamble
-        extendedMsrpTotal: 1.4894159098541704
-        freightAmount: 5.025004791520295
+        extendedMsrpTotal: 6.84685269835264
+        freightAmount: 9.965781217890562
         lastModifiedDate: lastModifiedDate
         legalTerms: legalTerms
         specialBidExpirationDate: specialBidExpirationDate
         quoteNumber: quoteNumber
-        extraFeesTotal: 7.457744773683766
+        extraFeesTotal: 1.1730742509559433
         revision: revision
         quoteGuid: quoteGuid
-        extendedQuotePriceTotal: 4.965218492984954
+        extendedQuotePriceTotal: 5.025004791520295
         customerNeed: customerNeed
         paymentTermsName: paymentTermsName
         resellerInfo:
@@ -16024,7 +16024,7 @@ components:
       type: object
     QuoteDetailsResponse_products_inner_price_extraFeesDetails_inner:
       example:
-        extraFeesAmount: 9.301444243932576
+        extraFeesAmount: 3.616076749251911
         extraFeesDescription: extraFeesDescription
       properties:
         extraFeesDescription:
@@ -16035,15 +16035,15 @@ components:
       type: object
     QuoteDetailsResponse_products_inner_price_discounts_inner:
       example:
-        amount: 3.616076749251911
+        amount: 2.027123023002322
         description: description
-        avaliableQunatity: 2
+        avaliableQunatity: 4
         bidVersion: bidVersion
         validFrom: validFrom
         type: type
         bidNumber: bidNumber
-        minimumQuantity: 4
-        discountOffList: 7.386281948385884
+        minimumQuantity: 7
+        discountOffList: 1.2315135367772556
         expirationDate: expirationDate
         validTo: validTo
       properties:
@@ -16075,40 +16075,40 @@ components:
     QuoteDetailsResponse_products_inner_price:
       example:
         quotePrice: 1.4658129805029452
-        extrafees: 7.061401241503109
+        extrafees: 9.301444243932576
         unitOfMeasure: unitOfMeasure
         discounts:
-        - amount: 3.616076749251911
+        - amount: 2.027123023002322
           description: description
-          avaliableQunatity: 2
+          avaliableQunatity: 4
           bidVersion: bidVersion
           validFrom: validFrom
           type: type
           bidNumber: bidNumber
-          minimumQuantity: 4
-          discountOffList: 7.386281948385884
+          minimumQuantity: 7
+          discountOffList: 1.2315135367772556
           expirationDate: expirationDate
           validTo: validTo
-        - amount: 3.616076749251911
+        - amount: 2.027123023002322
           description: description
-          avaliableQunatity: 2
+          avaliableQunatity: 4
           bidVersion: bidVersion
           validFrom: validFrom
           type: type
           bidNumber: bidNumber
-          minimumQuantity: 4
-          discountOffList: 7.386281948385884
+          minimumQuantity: 7
+          discountOffList: 1.2315135367772556
           expirationDate: expirationDate
           validTo: validTo
         msrp: 5.962133916683182
         extendedQuotePrice: 2.3021358869347655
         recurringPriceModel: recurringPriceModel
-        tax: tax
+        tax: 7.061401241503109
         type: type
         extraFeesDetails:
-        - extraFeesAmount: 9.301444243932576
+        - extraFeesAmount: 3.616076749251911
           extraFeesDescription: extraFeesDescription
-        - extraFeesAmount: 9.301444243932576
+        - extraFeesAmount: 3.616076749251911
           extraFeesDescription: extraFeesDescription
         extendedMsrp: 5.637376656633329
         discountOffList: discountOffList
@@ -16139,7 +16139,8 @@ components:
         unitOfMeasure:
           type: string
         tax:
-          type: string
+          format: decimal
+          type: number
         extrafees:
           format: decimal
           type: number
@@ -16181,40 +16182,40 @@ components:
         terms: terms
         price:
           quotePrice: 1.4658129805029452
-          extrafees: 7.061401241503109
+          extrafees: 9.301444243932576
           unitOfMeasure: unitOfMeasure
           discounts:
-          - amount: 3.616076749251911
+          - amount: 2.027123023002322
             description: description
-            avaliableQunatity: 2
+            avaliableQunatity: 4
             bidVersion: bidVersion
             validFrom: validFrom
             type: type
             bidNumber: bidNumber
-            minimumQuantity: 4
-            discountOffList: 7.386281948385884
+            minimumQuantity: 7
+            discountOffList: 1.2315135367772556
             expirationDate: expirationDate
             validTo: validTo
-          - amount: 3.616076749251911
+          - amount: 2.027123023002322
             description: description
-            avaliableQunatity: 2
+            avaliableQunatity: 4
             bidVersion: bidVersion
             validFrom: validFrom
             type: type
             bidNumber: bidNumber
-            minimumQuantity: 4
-            discountOffList: 7.386281948385884
+            minimumQuantity: 7
+            discountOffList: 1.2315135367772556
             expirationDate: expirationDate
             validTo: validTo
           msrp: 5.962133916683182
           extendedQuotePrice: 2.3021358869347655
           recurringPriceModel: recurringPriceModel
-          tax: tax
+          tax: 7.061401241503109
           type: type
           extraFeesDetails:
-          - extraFeesAmount: 9.301444243932576
+          - extraFeesAmount: 3.616076749251911
             extraFeesDescription: extraFeesDescription
-          - extraFeesAmount: 9.301444243932576
+          - extraFeesAmount: 3.616076749251911
             extraFeesDescription: extraFeesDescription
           extendedMsrp: 5.637376656633329
           discountOffList: discountOffList
@@ -16234,7 +16235,7 @@ components:
         quantity: 0
         serialNumber: serialNumber
         resellerMargin: resellerMargin
-        weight: 6
+        weight: 6.027456183070403
         vendorName: vendorName
         quoteProductGuid: quoteProductGuid
         planDescription: planDescription
@@ -16281,7 +16282,8 @@ components:
             \ following Imperial standards - weight is presented as pounds with decimal.\
             \  In countries following metric standards, weight is provided as kilograms\
             \ with decimal."
-          type: integer
+          format: decimal
+          type: number
         weightUom:
           description: Unit of measure
           type: string

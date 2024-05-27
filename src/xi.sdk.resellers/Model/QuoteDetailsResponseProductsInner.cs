@@ -60,7 +60,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="serialNumber">serialNumber.</param>
         /// <param name="price">price.</param>
         /// <param name="billDetails">billDetails.</param>
-        public QuoteDetailsResponseProductsInner(string quoteProductGuid = default(string), string lineNumber = default(string), int quantity = default(int), string notes = default(string), string ean = default(string), string coo = default(string), string ingramPartNumber = default(string), string vendorPartNumber = default(string), string description = default(string), int weight = default(int), string weightUom = default(string), bool isSuggestionProduct = default(bool), string vpnCategory = default(string), string quoteProductsSupplierPartAuxiliaryId = default(string), string vendorName = default(string), string terms = default(string), string planDescription = default(string), bool isSubscription = default(bool), string resellerMargin = default(string), string requestedStartDate = default(string), string startDate = default(string), string endDate = default(string), string serialNumber = default(string), QuoteDetailsResponseProductsInnerPrice price = default(QuoteDetailsResponseProductsInnerPrice), List<QuoteDetailsResponseProductsInnerBillDetailsInner> billDetails = default(List<QuoteDetailsResponseProductsInnerBillDetailsInner>))
+        public QuoteDetailsResponseProductsInner(string quoteProductGuid = default(string), string lineNumber = default(string), int quantity = default(int), string notes = default(string), string ean = default(string), string coo = default(string), string ingramPartNumber = default(string), string vendorPartNumber = default(string), string description = default(string), decimal weight = default(decimal), string weightUom = default(string), bool isSuggestionProduct = default(bool), string vpnCategory = default(string), string quoteProductsSupplierPartAuxiliaryId = default(string), string vendorName = default(string), string terms = default(string), string planDescription = default(string), bool isSubscription = default(bool), string resellerMargin = default(string), string requestedStartDate = default(string), string startDate = default(string), string endDate = default(string), string serialNumber = default(string), QuoteDetailsResponseProductsInnerPrice price = default(QuoteDetailsResponseProductsInnerPrice), List<QuoteDetailsResponseProductsInnerBillDetailsInner> billDetails = default(List<QuoteDetailsResponseProductsInnerBillDetailsInner>))
         {
             this.QuoteProductGuid = quoteProductGuid;
             this.LineNumber = lineNumber;
@@ -157,7 +157,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>Weight is provided based on country standard.  For countries following Imperial standards - weight is presented as pounds with decimal.  In countries following metric standards, weight is provided as kilograms with decimal.</value>
         [DataMember(Name = "weight", EmitDefaultValue = false)]
-        public int Weight { get; set; }
+        public decimal Weight { get; set; }
 
         /// <summary>
         /// Unit of measure
