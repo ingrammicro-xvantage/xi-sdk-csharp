@@ -35,7 +35,13 @@ jobs:
             echo "No changes to commit."
           else
             git commit -m "Update version in .csproj" || true
-            git push https://${{ secrets.WORKFLOW_TOKEN }}@github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp.git test_package
+            git push https://${{ secrets.WORKFLOW_TOKEN }}@github.com/ingrammicro-xvantage/xi-sdk-resellers-csharp.git main
+          fi
+          
+      - name: Create github-package directory if not present
+        run: |
+          if [ ! -d "github-package" ]; then
+            mkdir github-package
           fi
 
       - name: Build Package
