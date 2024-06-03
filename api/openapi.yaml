@@ -10354,6 +10354,7 @@ components:
           type: array
         taxTotal:
           format: decimal
+          nullable: true
           type: number
         extendedQuotePriceTotal:
           description: Total amount of quoted price for all products in the quote
@@ -10362,6 +10363,7 @@ components:
           type: number
         freightAmount:
           format: decimal
+          nullable: true
           type: number
         totalQuoteAmount:
           type: string
@@ -16140,9 +16142,11 @@ components:
           type: string
         tax:
           format: decimal
+          nullable: true
           type: number
         extrafees:
           format: decimal
+          nullable: true
           type: number
         extraFeesDetails:
           items:

@@ -76,7 +76,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="freightAmount">freightAmount.</param>
         /// <param name="totalQuoteAmount">totalQuoteAmount.</param>
         /// <param name="additionalAttributes">additionalAttributes.</param>
-        public QuoteDetailsResponse(string quoteName = default(string), string quoteNumber = default(string), string quoteGuid = default(string), string revision = default(string), string ingramQuoteDate = default(string), string lastModifiedDate = default(string), string ingramQuoteExpiryDate = default(string), string currencyCode = default(string), string specialBidId = default(string), string specialBidEffectiveDate = default(string), string specialBidExpirationDate = default(string), string vendorQuoteNumber = default(string), string status = default(string), string statusReason = default(string), string closingReason = default(string), string dateClosed = default(string), string customerNeed = default(string), string proposedSolution = default(string), string introPreamble = default(string), string purchaseInstructions = default(string), string legalTerms = default(string), string quoteType = default(string), string leaseInfo = default(string), string leasingInstructions = default(string), string imWarehouse = default(string), string imWarehouseGstNumber = default(string), string paymentTermsName = default(string), QuoteDetailsResponseResellerInfo resellerInfo = default(QuoteDetailsResponseResellerInfo), QuoteDetailsResponseEndUserInfo endUserInfo = default(QuoteDetailsResponseEndUserInfo), QuoteDetailsResponseShippingInfo shippingInfo = default(QuoteDetailsResponseShippingInfo), List<QuoteDetailsResponseProductsInner> products = default(List<QuoteDetailsResponseProductsInner>), int productsCount = default(int), decimal extendedMsrpTotal = default(decimal), int quantityTotal = default(int), decimal extraFeesTotal = default(decimal), List<QuoteDetailsResponseProductsInnerPriceExtraFeesDetailsInner> extraFeesTotalDetails = default(List<QuoteDetailsResponseProductsInnerPriceExtraFeesDetailsInner>), decimal taxTotal = default(decimal), decimal extendedQuotePriceTotal = default(decimal), decimal freightAmount = default(decimal), string totalQuoteAmount = default(string), List<QuoteDetailsResponseAdditionalAttributesInner> additionalAttributes = default(List<QuoteDetailsResponseAdditionalAttributesInner>))
+        public QuoteDetailsResponse(string quoteName = default(string), string quoteNumber = default(string), string quoteGuid = default(string), string revision = default(string), string ingramQuoteDate = default(string), string lastModifiedDate = default(string), string ingramQuoteExpiryDate = default(string), string currencyCode = default(string), string specialBidId = default(string), string specialBidEffectiveDate = default(string), string specialBidExpirationDate = default(string), string vendorQuoteNumber = default(string), string status = default(string), string statusReason = default(string), string closingReason = default(string), string dateClosed = default(string), string customerNeed = default(string), string proposedSolution = default(string), string introPreamble = default(string), string purchaseInstructions = default(string), string legalTerms = default(string), string quoteType = default(string), string leaseInfo = default(string), string leasingInstructions = default(string), string imWarehouse = default(string), string imWarehouseGstNumber = default(string), string paymentTermsName = default(string), QuoteDetailsResponseResellerInfo resellerInfo = default(QuoteDetailsResponseResellerInfo), QuoteDetailsResponseEndUserInfo endUserInfo = default(QuoteDetailsResponseEndUserInfo), QuoteDetailsResponseShippingInfo shippingInfo = default(QuoteDetailsResponseShippingInfo), List<QuoteDetailsResponseProductsInner> products = default(List<QuoteDetailsResponseProductsInner>), int productsCount = default(int), decimal extendedMsrpTotal = default(decimal), int quantityTotal = default(int), decimal extraFeesTotal = default(decimal), List<QuoteDetailsResponseProductsInnerPriceExtraFeesDetailsInner> extraFeesTotalDetails = default(List<QuoteDetailsResponseProductsInnerPriceExtraFeesDetailsInner>), decimal? taxTotal = default(decimal?), decimal extendedQuotePriceTotal = default(decimal), decimal? freightAmount = default(decimal?), string totalQuoteAmount = default(string), List<QuoteDetailsResponseAdditionalAttributesInner> additionalAttributes = default(List<QuoteDetailsResponseAdditionalAttributesInner>))
         {
             this.QuoteName = quoteName;
             this.QuoteNumber = quoteNumber;
@@ -364,8 +364,8 @@ namespace xi.sdk.resellers.Model
         /// <summary>
         /// Gets or Sets TaxTotal
         /// </summary>
-        [DataMember(Name = "taxTotal", EmitDefaultValue = false)]
-        public decimal TaxTotal { get; set; }
+        [DataMember(Name = "taxTotal", EmitDefaultValue = true)]
+        public decimal? TaxTotal { get; set; }
 
         /// <summary>
         /// Total amount of quoted price for all products in the quote including both solution products and suggested products.
@@ -377,8 +377,8 @@ namespace xi.sdk.resellers.Model
         /// <summary>
         /// Gets or Sets FreightAmount
         /// </summary>
-        [DataMember(Name = "freightAmount", EmitDefaultValue = false)]
-        public decimal FreightAmount { get; set; }
+        [DataMember(Name = "freightAmount", EmitDefaultValue = true)]
+        public decimal? FreightAmount { get; set; }
 
         /// <summary>
         /// Gets or Sets TotalQuoteAmount
