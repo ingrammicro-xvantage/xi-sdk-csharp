@@ -91,6 +91,15 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'CurrencyCode'
+        /// </summary>
+        [Fact]
+        public void CurrencyCodeTest()
+        {
+            // TODO unit test for the property 'CurrencyCode'
+        }
+
+        /// <summary>
         /// Test the property 'EndUserContact'
         /// </summary>
         [Fact]

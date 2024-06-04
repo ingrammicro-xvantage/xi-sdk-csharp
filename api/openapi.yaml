@@ -9954,8 +9954,10 @@ components:
     QuoteSearchResponse:
       example:
         pageNumber: 1
+        nextPage: nextPage
         pageSize: 6
         recordsFound: 0
+        prevPage: prevPage
         quotes:
         - lastModifiedDate: lastModifiedDate
           endUserName: endUserName
@@ -9974,6 +9976,7 @@ components:
             href: href
             type: type
           quoteTotal: 5.962133916683182
+          currencyCode: currencyCode
           quoteName: quoteName
           ingramQuoteDate: ingramQuoteDate
         - lastModifiedDate: lastModifiedDate
@@ -9993,6 +9996,7 @@ components:
             href: href
             type: type
           quoteTotal: 5.962133916683182
+          currencyCode: currencyCode
           quoteName: quoteName
           ingramQuoteDate: ingramQuoteDate
       properties:
@@ -10011,6 +10015,10 @@ components:
           items:
             $ref: '#/components/schemas/QuoteSearchResponse_quotes_inner'
           type: array
+        nextPage:
+          type: string
+        prevPage:
+          type: string
       type: object
     QuoteDetailsResponse:
       example:
@@ -15843,6 +15851,7 @@ components:
           href: href
           type: type
         quoteTotal: 5.962133916683182
+        currencyCode: currencyCode
         quoteName: quoteName
         ingramQuoteDate: ingramQuoteDate
       properties:
@@ -15864,6 +15873,10 @@ components:
             \ remains the same throughout the lifecycle of the quote, however, a Revision\
             \ number is updated for each revision of the quote.  The revision numbers\
             \ is associated with the Unique Quote Number."
+          type: string
+        currencyCode:
+          description: The country-specific three digit ISO 4217 currency code for
+            the order.
           type: string
         endUserContact:
           description: End User Name is the end customer name that is associated with

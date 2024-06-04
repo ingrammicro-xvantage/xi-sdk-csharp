@@ -89,5 +89,23 @@ namespace xi.sdk.resellers.Test.Model
         {
             // TODO unit test for the property 'Quotes'
         }
+
+        /// <summary>
+        /// Test the property 'NextPage'
+        /// </summary>
+        [Fact]
+        public void NextPageTest()
+        {
+            // TODO unit test for the property 'NextPage'
+        }
+
+        /// <summary>
+        /// Test the property 'PrevPage'
+        /// </summary>
+        [Fact]
+        public void PrevPageTest()
+        {
+            // TODO unit test for the property 'PrevPage'
+        }
     }
 }
