@@ -39,12 +39,16 @@ namespace xi.sdk.resellers.Model
         /// <param name="pageSize">Number of records (quotes) displayed per page in the quote list..</param>
         /// <param name="pageNumber">Page index or page number for the list of quotes being returned..</param>
         /// <param name="quotes">The quote details for the requested criteria..</param>
-        public QuoteSearchResponse(int recordsFound = default(int), int pageSize = default(int), int pageNumber = default(int), List<QuoteSearchResponseQuotesInner> quotes = default(List<QuoteSearchResponseQuotesInner>))
+        /// <param name="nextPage">nextPage.</param>
+        /// <param name="prevPage">prevPage.</param>
+        public QuoteSearchResponse(int recordsFound = default(int), int pageSize = default(int), int pageNumber = default(int), List<QuoteSearchResponseQuotesInner> quotes = default(List<QuoteSearchResponseQuotesInner>), string nextPage = default(string), string prevPage = default(string))
         {
             this.RecordsFound = recordsFound;
             this.PageSize = pageSize;
             this.PageNumber = pageNumber;
             this.Quotes = quotes;
+            this.NextPage = nextPage;
+            this.PrevPage = prevPage;
         }
 
         /// <summary>
@@ -76,6 +80,18 @@ namespace xi.sdk.resellers.Model
         public List<QuoteSearchResponseQuotesInner> Quotes { get; set; }
 
         /// <summary>
+        /// Gets or Sets NextPage
+        /// </summary>
+        [DataMember(Name = "nextPage", EmitDefaultValue = false)]
+        public string NextPage { get; set; }
+
+        /// <summary>
+        /// Gets or Sets PrevPage
+        /// </summary>
+        [DataMember(Name = "prevPage", EmitDefaultValue = false)]
+        public string PrevPage { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -87,6 +103,8 @@ namespace xi.sdk.resellers.Model
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
             sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
             sb.Append("  Quotes: ").Append(Quotes).Append("\n");
+            sb.Append("  NextPage: ").Append(NextPage).Append("\n");
+            sb.Append("  PrevPage: ").Append(PrevPage).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

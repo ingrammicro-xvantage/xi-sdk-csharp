@@ -47,7 +47,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="extrafees">extrafees.</param>
         /// <param name="extraFeesDetails">extraFeesDetails.</param>
         /// <param name="discounts">discounts.</param>
-        public QuoteDetailsResponseProductsInnerPrice(decimal quotePrice = default(decimal), decimal msrp = default(decimal), decimal extendedMsrp = default(decimal), decimal extendedQuotePrice = default(decimal), string discountOffList = default(string), string type = default(string), string recurringPriceModel = default(string), string unitOfMeasure = default(string), decimal tax = default(decimal), decimal extrafees = default(decimal), List<QuoteDetailsResponseProductsInnerPriceExtraFeesDetailsInner> extraFeesDetails = default(List<QuoteDetailsResponseProductsInnerPriceExtraFeesDetailsInner>), List<QuoteDetailsResponseProductsInnerPriceDiscountsInner> discounts = default(List<QuoteDetailsResponseProductsInnerPriceDiscountsInner>))
+        public QuoteDetailsResponseProductsInnerPrice(decimal quotePrice = default(decimal), decimal msrp = default(decimal), decimal extendedMsrp = default(decimal), decimal extendedQuotePrice = default(decimal), string discountOffList = default(string), string type = default(string), string recurringPriceModel = default(string), string unitOfMeasure = default(string), decimal? tax = default(decimal?), decimal? extrafees = default(decimal?), List<QuoteDetailsResponseProductsInnerPriceExtraFeesDetailsInner> extraFeesDetails = default(List<QuoteDetailsResponseProductsInnerPriceExtraFeesDetailsInner>), List<QuoteDetailsResponseProductsInnerPriceDiscountsInner> discounts = default(List<QuoteDetailsResponseProductsInnerPriceDiscountsInner>))
         {
             this.QuotePrice = quotePrice;
             this.Msrp = msrp;
@@ -119,14 +119,14 @@ namespace xi.sdk.resellers.Model
         /// <summary>
         /// Gets or Sets Tax
         /// </summary>
-        [DataMember(Name = "tax", EmitDefaultValue = false)]
-        public decimal Tax { get; set; }
+        [DataMember(Name = "tax", EmitDefaultValue = true)]
+        public decimal? Tax { get; set; }
 
         /// <summary>
         /// Gets or Sets Extrafees
         /// </summary>
-        [DataMember(Name = "extrafees", EmitDefaultValue = false)]
-        public decimal Extrafees { get; set; }
+        [DataMember(Name = "extrafees", EmitDefaultValue = true)]
+        public decimal? Extrafees { get; set; }
 
         /// <summary>
         /// Gets or Sets ExtraFeesDetails

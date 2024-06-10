@@ -12,8 +12,8 @@ Name | Type | Description | Notes
 **Type** | **string** |  | [optional] 
 **RecurringPriceModel** | **string** |  | [optional] 
 **UnitOfMeasure** | **string** |  | [optional] 
-**Tax** | **decimal** |  | [optional] 
-**Extrafees** | **decimal** |  | [optional] 
+**Tax** | **decimal?** |  | [optional] 
+**Extrafees** | **decimal?** |  | [optional] 
 **ExtraFeesDetails** | [**List&lt;QuoteDetailsResponseProductsInnerPriceExtraFeesDetailsInner&gt;**](QuoteDetailsResponseProductsInnerPriceExtraFeesDetailsInner.md) |  | [optional] 
 **Discounts** | [**List&lt;QuoteDetailsResponseProductsInnerPriceDiscountsInner&gt;**](QuoteDetailsResponseProductsInnerPriceDiscountsInner.md) |  | [optional] 
 

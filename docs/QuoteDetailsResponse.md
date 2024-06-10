@@ -40,9 +40,9 @@ Name | Type | Description | Notes
 **QuantityTotal** | **int** | Total quantity of all items in the quote. | [optional] 
 **ExtraFeesTotal** | **decimal** |  | [optional] 
 **ExtraFeesTotalDetails** | [**List&lt;QuoteDetailsResponseProductsInnerPriceExtraFeesDetailsInner&gt;**](QuoteDetailsResponseProductsInnerPriceExtraFeesDetailsInner.md) |  | [optional] 
-**TaxTotal** | **decimal** |  | [optional] 
+**TaxTotal** | **decimal?** |  | [optional] 
 **ExtendedQuotePriceTotal** | **decimal** | Total amount of quoted price for all products in the quote including both solution products and suggested products. | [optional] 
-**FreightAmount** | **decimal** |  | [optional] 
+**FreightAmount** | **decimal?** |  | [optional] 
 **TotalQuoteAmount** | **string** |  | [optional] 
 **AdditionalAttributes** | [**List&lt;QuoteDetailsResponseAdditionalAttributesInner&gt;**](QuoteDetailsResponseAdditionalAttributesInner.md) |  | [optional] 
 
