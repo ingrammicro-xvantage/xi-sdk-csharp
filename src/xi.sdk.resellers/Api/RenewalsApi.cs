@@ -120,7 +120,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RenewalsDetailsResponse</returns>
-        System.Threading.Tasks.Task<RenewalsDetailsResponse> GetResellersV6RenewalsdetailsAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string renewalId, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RenewalsDetailsResponse> GetResellersV6RenewalsdetailsAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string renewalId, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Renewals Details
@@ -136,7 +136,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RenewalsDetailsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RenewalsDetailsResponse>> GetResellersV6RenewalsdetailsWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string renewalId, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RenewalsDetailsResponse>> GetResellersV6RenewalsdetailsWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string renewalId, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Renewals Search
         /// </summary>
@@ -157,7 +157,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="renewalsSearchRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RenewalsSearchResponse</returns>
-        System.Threading.Tasks.Task<RenewalsSearchResponse> PostRenewalssearchAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? customerOrderNumber = default(string?), string? ingramPurchaseOrderNumber = default(string?), string? serialNumber = default(string?), string? page = default(string?), string? size = default(string?), string? sort = default(string?), RenewalsSearchRequest? renewalsSearchRequest = default(RenewalsSearchRequest?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RenewalsSearchResponse> PostRenewalssearchAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? customerOrderNumber = default(string?), string? ingramPurchaseOrderNumber = default(string?), string? serialNumber = default(string?), string? page = default(string?), string? size = default(string?), string? sort = default(string?), RenewalsSearchRequest? renewalsSearchRequest = default(RenewalsSearchRequest?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Renewals Search
@@ -179,7 +179,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="renewalsSearchRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RenewalsSearchResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RenewalsSearchResponse>> PostRenewalssearchWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? customerOrderNumber = default(string?), string? ingramPurchaseOrderNumber = default(string?), string? serialNumber = default(string?), string? page = default(string?), string? size = default(string?), string? sort = default(string?), RenewalsSearchRequest? renewalsSearchRequest = default(RenewalsSearchRequest?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RenewalsSearchResponse>> PostRenewalssearchWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? customerOrderNumber = default(string?), string? ingramPurchaseOrderNumber = default(string?), string? serialNumber = default(string?), string? page = default(string?), string? size = default(string?), string? sort = default(string?), RenewalsSearchRequest? renewalsSearchRequest = default(RenewalsSearchRequest?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -492,7 +492,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RenewalsDetailsResponse</returns>
-        public async System.Threading.Tasks.Task<RenewalsDetailsResponse> GetResellersV6RenewalsdetailsAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string renewalId, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RenewalsDetailsResponse> GetResellersV6RenewalsdetailsAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string renewalId, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             xi.sdk.resellers.Client.ApiResponse<RenewalsDetailsResponse> localVarResponse = await GetResellersV6RenewalsdetailsWithHttpInfoAsync(iMCustomerNumber, iMCountryCode, iMCorrelationID, renewalId, iMSenderID, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -509,7 +509,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RenewalsDetailsResponse)</returns>
-        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<RenewalsDetailsResponse>> GetResellersV6RenewalsdetailsWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string renewalId, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<RenewalsDetailsResponse>> GetResellersV6RenewalsdetailsWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string renewalId, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)
@@ -712,7 +712,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="renewalsSearchRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RenewalsSearchResponse</returns>
-        public async System.Threading.Tasks.Task<RenewalsSearchResponse> PostRenewalssearchAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? customerOrderNumber = default(string?), string? ingramPurchaseOrderNumber = default(string?), string? serialNumber = default(string?), string? page = default(string?), string? size = default(string?), string? sort = default(string?), RenewalsSearchRequest? renewalsSearchRequest = default(RenewalsSearchRequest?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RenewalsSearchResponse> PostRenewalssearchAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? customerOrderNumber = default(string?), string? ingramPurchaseOrderNumber = default(string?), string? serialNumber = default(string?), string? page = default(string?), string? size = default(string?), string? sort = default(string?), RenewalsSearchRequest? renewalsSearchRequest = default(RenewalsSearchRequest?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             xi.sdk.resellers.Client.ApiResponse<RenewalsSearchResponse> localVarResponse = await PostRenewalssearchWithHttpInfoAsync(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMSenderID, customerOrderNumber, ingramPurchaseOrderNumber, serialNumber, page, size, sort, renewalsSearchRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -735,7 +735,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="renewalsSearchRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RenewalsSearchResponse)</returns>
-        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<RenewalsSearchResponse>> PostRenewalssearchWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? customerOrderNumber = default(string?), string? ingramPurchaseOrderNumber = default(string?), string? serialNumber = default(string?), string? page = default(string?), string? size = default(string?), string? sort = default(string?), RenewalsSearchRequest? renewalsSearchRequest = default(RenewalsSearchRequest?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<RenewalsSearchResponse>> PostRenewalssearchWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? customerOrderNumber = default(string?), string? ingramPurchaseOrderNumber = default(string?), string? serialNumber = default(string?), string? page = default(string?), string? size = default(string?), string? sort = default(string?), RenewalsSearchRequest? renewalsSearchRequest = default(RenewalsSearchRequest?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)

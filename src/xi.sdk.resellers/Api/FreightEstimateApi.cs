@@ -82,7 +82,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="freightRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of FreightResponse</returns>
-        System.Threading.Tasks.Task<FreightResponse> PostFreightestimateAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMCustomerContact, string? iMSenderID = default(string?), FreightRequest? freightRequest = default(FreightRequest?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<FreightResponse> PostFreightestimateAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMCustomerContact, string? iMSenderID = default(string?), FreightRequest? freightRequest = default(FreightRequest?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Freight Estimate
@@ -99,7 +99,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="freightRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (FreightResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FreightResponse>> PostFreightestimateWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMCustomerContact, string? iMSenderID = default(string?), FreightRequest? freightRequest = default(FreightRequest?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<FreightResponse>> PostFreightestimateWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMCustomerContact, string? iMSenderID = default(string?), FreightRequest? freightRequest = default(FreightRequest?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -417,7 +417,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="freightRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of FreightResponse</returns>
-        public async System.Threading.Tasks.Task<FreightResponse> PostFreightestimateAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMCustomerContact, string? iMSenderID = default(string?), FreightRequest? freightRequest = default(FreightRequest?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<FreightResponse> PostFreightestimateAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMCustomerContact, string? iMSenderID = default(string?), FreightRequest? freightRequest = default(FreightRequest?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             xi.sdk.resellers.Client.ApiResponse<FreightResponse> localVarResponse = await PostFreightestimateWithHttpInfoAsync(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMCustomerContact, iMSenderID, freightRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -435,7 +435,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="freightRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (FreightResponse)</returns>
-        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<FreightResponse>> PostFreightestimateWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMCustomerContact, string? iMSenderID = default(string?), FreightRequest? freightRequest = default(FreightRequest?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<FreightResponse>> PostFreightestimateWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMCustomerContact, string? iMSenderID = default(string?), FreightRequest? freightRequest = default(FreightRequest?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)

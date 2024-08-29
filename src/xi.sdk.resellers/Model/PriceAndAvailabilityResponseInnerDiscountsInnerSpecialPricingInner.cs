@@ -84,7 +84,6 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>The effective date of the special pricing available to the customer.</value>
         [DataMember(Name = "specialPricingEffectiveDate", EmitDefaultValue = false)]
-        [JsonConverter(typeof(OpenAPIDateConverter))]
         public DateOnly SpecialPricingEffectiveDate { get; set; }
 
         /// <summary>
@@ -92,7 +91,6 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>The expiration date of the special pricing available to the customer.</value>
         [DataMember(Name = "specialPricingExpirationDate", EmitDefaultValue = false)]
-        [JsonConverter(typeof(OpenAPIDateConverter))]
         public DateOnly SpecialPricingExpirationDate { get; set; }
 
         /// <summary>
@@ -158,7 +156,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

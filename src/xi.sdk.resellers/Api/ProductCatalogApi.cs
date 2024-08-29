@@ -163,7 +163,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Sender Identification text (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductDetailResponse</returns>
-        System.Threading.Tasks.Task<ProductDetailResponse> GetResellerV6ProductdetailAsync(string ingramPartNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductDetailResponse> GetResellerV6ProductdetailAsync(string ingramPartNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Product Details
@@ -179,7 +179,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Sender Identification text (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductDetailResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductDetailResponse>> GetResellerV6ProductdetailWithHttpInfoAsync(string ingramPartNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ProductDetailResponse>> GetResellerV6ProductdetailWithHttpInfoAsync(string ingramPartNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Search Products
         /// </summary>
@@ -204,7 +204,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="skipAuthorisation">This parameter is True when you want Skip the authorization, so template will work like current B2b template. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductSearchResponse</returns>
-        System.Threading.Tasks.Task<ProductSearchResponse> GetResellerV6ProductsearchAsync(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, int? pageNumber = default(int?), int? pageSize = default(int?), string? iMSenderID = default(string?), string? type = default(string?), string? hasDiscounts = default(string?), List<string>? vendor = default(List<string>?), List<string>? vendorPartNumber = default(List<string>?), string? acceptLanguage = default(string?), string? vendorNumber = default(string?), List<string>? keyword = default(List<string>?), string? category = default(string?), string? skipAuthorisation = default(string?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductSearchResponse> GetResellerV6ProductsearchAsync(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, int? pageNumber = default(int?), int? pageSize = default(int?), string? iMSenderID = default(string?), string? type = default(string?), string? hasDiscounts = default(string?), List<string>? vendor = default(List<string>?), List<string>? vendorPartNumber = default(List<string>?), string? acceptLanguage = default(string?), string? vendorNumber = default(string?), List<string>? keyword = default(List<string>?), string? category = default(string?), string? skipAuthorisation = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Search Products
@@ -230,7 +230,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="skipAuthorisation">This parameter is True when you want Skip the authorization, so template will work like current B2b template. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductSearchResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductSearchResponse>> GetResellerV6ProductsearchWithHttpInfoAsync(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, int? pageNumber = default(int?), int? pageSize = default(int?), string? iMSenderID = default(string?), string? type = default(string?), string? hasDiscounts = default(string?), List<string>? vendor = default(List<string>?), List<string>? vendorPartNumber = default(List<string>?), string? acceptLanguage = default(string?), string? vendorNumber = default(string?), List<string>? keyword = default(List<string>?), string? category = default(string?), string? skipAuthorisation = default(string?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ProductSearchResponse>> GetResellerV6ProductsearchWithHttpInfoAsync(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, int? pageNumber = default(int?), int? pageSize = default(int?), string? iMSenderID = default(string?), string? type = default(string?), string? hasDiscounts = default(string?), List<string>? vendor = default(List<string>?), List<string>? vendorPartNumber = default(List<string>?), string? acceptLanguage = default(string?), string? vendorNumber = default(string?), List<string>? keyword = default(List<string>?), string? category = default(string?), string? skipAuthorisation = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Price and Availability
         /// </summary>
@@ -248,7 +248,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;PriceAndAvailabilityResponseInner&gt;</returns>
-        System.Threading.Tasks.Task<List<PriceAndAvailabilityResponseInner>> PostPriceandavailabilityAsync(bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, PriceAndAvailabilityRequest priceAndAvailabilityRequest, bool? includeProductAttributes = default(bool?), string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<PriceAndAvailabilityResponseInner>> PostPriceandavailabilityAsync(bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, PriceAndAvailabilityRequest priceAndAvailabilityRequest, bool? includeProductAttributes = default(bool?), string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Price and Availability
@@ -267,7 +267,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;PriceAndAvailabilityResponseInner&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<PriceAndAvailabilityResponseInner>>> PostPriceandavailabilityWithHttpInfoAsync(bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, PriceAndAvailabilityRequest priceAndAvailabilityRequest, bool? includeProductAttributes = default(bool?), string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<PriceAndAvailabilityResponseInner>>> PostPriceandavailabilityWithHttpInfoAsync(bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, PriceAndAvailabilityRequest priceAndAvailabilityRequest, bool? includeProductAttributes = default(bool?), string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -580,7 +580,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Sender Identification text (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductDetailResponse</returns>
-        public async System.Threading.Tasks.Task<ProductDetailResponse> GetResellerV6ProductdetailAsync(string ingramPartNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductDetailResponse> GetResellerV6ProductdetailAsync(string ingramPartNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             xi.sdk.resellers.Client.ApiResponse<ProductDetailResponse> localVarResponse = await GetResellerV6ProductdetailWithHttpInfoAsync(ingramPartNumber, iMCustomerNumber, iMCountryCode, iMCorrelationID, iMSenderID, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -597,7 +597,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Sender Identification text (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductDetailResponse)</returns>
-        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<ProductDetailResponse>> GetResellerV6ProductdetailWithHttpInfoAsync(string ingramPartNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<ProductDetailResponse>> GetResellerV6ProductdetailWithHttpInfoAsync(string ingramPartNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'ingramPartNumber' is set
             if (ingramPartNumber == null)
@@ -830,7 +830,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="skipAuthorisation">This parameter is True when you want Skip the authorization, so template will work like current B2b template. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductSearchResponse</returns>
-        public async System.Threading.Tasks.Task<ProductSearchResponse> GetResellerV6ProductsearchAsync(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, int? pageNumber = default(int?), int? pageSize = default(int?), string? iMSenderID = default(string?), string? type = default(string?), string? hasDiscounts = default(string?), List<string>? vendor = default(List<string>?), List<string>? vendorPartNumber = default(List<string>?), string? acceptLanguage = default(string?), string? vendorNumber = default(string?), List<string>? keyword = default(List<string>?), string? category = default(string?), string? skipAuthorisation = default(string?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductSearchResponse> GetResellerV6ProductsearchAsync(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, int? pageNumber = default(int?), int? pageSize = default(int?), string? iMSenderID = default(string?), string? type = default(string?), string? hasDiscounts = default(string?), List<string>? vendor = default(List<string>?), List<string>? vendorPartNumber = default(List<string>?), string? acceptLanguage = default(string?), string? vendorNumber = default(string?), List<string>? keyword = default(List<string>?), string? category = default(string?), string? skipAuthorisation = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             xi.sdk.resellers.Client.ApiResponse<ProductSearchResponse> localVarResponse = await GetResellerV6ProductsearchWithHttpInfoAsync(iMCustomerNumber, iMCorrelationID, iMCountryCode, pageNumber, pageSize, iMSenderID, type, hasDiscounts, vendor, vendorPartNumber, acceptLanguage, vendorNumber, keyword, category, skipAuthorisation, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -857,7 +857,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="skipAuthorisation">This parameter is True when you want Skip the authorization, so template will work like current B2b template. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductSearchResponse)</returns>
-        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<ProductSearchResponse>> GetResellerV6ProductsearchWithHttpInfoAsync(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, int? pageNumber = default(int?), int? pageSize = default(int?), string? iMSenderID = default(string?), string? type = default(string?), string? hasDiscounts = default(string?), List<string>? vendor = default(List<string>?), List<string>? vendorPartNumber = default(List<string>?), string? acceptLanguage = default(string?), string? vendorNumber = default(string?), List<string>? keyword = default(List<string>?), string? category = default(string?), string? skipAuthorisation = default(string?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<ProductSearchResponse>> GetResellerV6ProductsearchWithHttpInfoAsync(string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, int? pageNumber = default(int?), int? pageSize = default(int?), string? iMSenderID = default(string?), string? type = default(string?), string? hasDiscounts = default(string?), List<string>? vendor = default(List<string>?), List<string>? vendorPartNumber = default(List<string>?), string? acceptLanguage = default(string?), string? vendorNumber = default(string?), List<string>? keyword = default(List<string>?), string? category = default(string?), string? skipAuthorisation = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)
@@ -1076,7 +1076,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;PriceAndAvailabilityResponseInner&gt;</returns>
-        public async System.Threading.Tasks.Task<List<PriceAndAvailabilityResponseInner>> PostPriceandavailabilityAsync(bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, PriceAndAvailabilityRequest priceAndAvailabilityRequest, bool? includeProductAttributes = default(bool?), string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<PriceAndAvailabilityResponseInner>> PostPriceandavailabilityAsync(bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, PriceAndAvailabilityRequest priceAndAvailabilityRequest, bool? includeProductAttributes = default(bool?), string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             xi.sdk.resellers.Client.ApiResponse<List<PriceAndAvailabilityResponseInner>> localVarResponse = await PostPriceandavailabilityWithHttpInfoAsync(includeAvailability, includePricing, iMCustomerNumber, iMCountryCode, iMCorrelationID, priceAndAvailabilityRequest, includeProductAttributes, iMSenderID, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1096,7 +1096,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;PriceAndAvailabilityResponseInner&gt;)</returns>
-        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<List<PriceAndAvailabilityResponseInner>>> PostPriceandavailabilityWithHttpInfoAsync(bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, PriceAndAvailabilityRequest priceAndAvailabilityRequest, bool? includeProductAttributes = default(bool?), string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<List<PriceAndAvailabilityResponseInner>>> PostPriceandavailabilityWithHttpInfoAsync(bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, PriceAndAvailabilityRequest priceAndAvailabilityRequest, bool? includeProductAttributes = default(bool?), string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)

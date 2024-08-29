@@ -93,7 +93,6 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>The date on which the return request was created. </value>
         [DataMember(Name = "createdOn", EmitDefaultValue = false)]
-        [JsonConverter(typeof(OpenAPIDateConverter))]
         public DateOnly CreatedOn { get; set; }
 
         /// <summary>
@@ -205,7 +204,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

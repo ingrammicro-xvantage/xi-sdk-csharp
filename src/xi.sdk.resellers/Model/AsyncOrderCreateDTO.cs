@@ -231,24 +231,24 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // QuoteNumber (string) maxLength
             if (this.QuoteNumber != null && this.QuoteNumber.Length > 35)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for QuoteNumber, length must be less than 35.", new [] { "QuoteNumber" });
+                yield return new ValidationResult("Invalid value for QuoteNumber, length must be less than 35.", new [] { "QuoteNumber" });
             }
 
             // CustomerOrderNumber (string) maxLength
             if (this.CustomerOrderNumber != null && this.CustomerOrderNumber.Length > 35)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CustomerOrderNumber, length must be less than 35.", new [] { "CustomerOrderNumber" });
+                yield return new ValidationResult("Invalid value for CustomerOrderNumber, length must be less than 35.", new [] { "CustomerOrderNumber" });
             }
 
             // EndCustomerOrderNumber (string) maxLength
             if (this.EndCustomerOrderNumber != null && this.EndCustomerOrderNumber.Length > 35)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for EndCustomerOrderNumber, length must be less than 35.", new [] { "EndCustomerOrderNumber" });
+                yield return new ValidationResult("Invalid value for EndCustomerOrderNumber, length must be less than 35.", new [] { "EndCustomerOrderNumber" });
             }
 
             yield break;

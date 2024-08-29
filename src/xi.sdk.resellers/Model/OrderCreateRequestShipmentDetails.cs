@@ -77,7 +77,6 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>The reseller-requested delivery date in UTC format. Delivery date is not guaranteed.</value>
         [DataMember(Name = "requestedDeliveryDate", EmitDefaultValue = false)]
-        [JsonConverter(typeof(OpenAPIDateConverter))]
         public DateOnly RequestedDeliveryDate { get; set; }
 
         /// <summary>
@@ -125,24 +124,24 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // CarrierCode (string) maxLength
             if (this.CarrierCode != null && this.CarrierCode.Length > 10)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CarrierCode, length must be less than 10.", new [] { "CarrierCode" });
+                yield return new ValidationResult("Invalid value for CarrierCode, length must be less than 10.", new [] { "CarrierCode" });
             }
 
             // ShipComplete (string) maxLength
             if (this.ShipComplete != null && this.ShipComplete.Length > 1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ShipComplete, length must be less than 1.", new [] { "ShipComplete" });
+                yield return new ValidationResult("Invalid value for ShipComplete, length must be less than 1.", new [] { "ShipComplete" });
             }
 
             // ShippingInstructions (string) maxLength
             if (this.ShippingInstructions != null && this.ShippingInstructions.Length > 132)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ShippingInstructions, length must be less than 132.", new [] { "ShippingInstructions" });
+                yield return new ValidationResult("Invalid value for ShippingInstructions, length must be less than 132.", new [] { "ShippingInstructions" });
             }
 
             yield break;

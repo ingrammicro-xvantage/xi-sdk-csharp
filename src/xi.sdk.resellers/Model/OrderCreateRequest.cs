@@ -200,18 +200,18 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // CustomerOrderNumber (string) maxLength
             if (this.CustomerOrderNumber != null && this.CustomerOrderNumber.Length > 35)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CustomerOrderNumber, length must be less than 35.", new [] { "CustomerOrderNumber" });
+                yield return new ValidationResult("Invalid value for CustomerOrderNumber, length must be less than 35.", new [] { "CustomerOrderNumber" });
             }
 
             // BillToAddressId (string) maxLength
             if (this.BillToAddressId != null && this.BillToAddressId.Length > 10)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for BillToAddressId, length must be less than 10.", new [] { "BillToAddressId" });
+                yield return new ValidationResult("Invalid value for BillToAddressId, length must be less than 10.", new [] { "BillToAddressId" });
             }
 
             yield break;

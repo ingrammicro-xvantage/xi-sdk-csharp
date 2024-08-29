@@ -105,12 +105,12 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // DirectLineLink (string) maxLength
             if (this.DirectLineLink != null && this.DirectLineLink.Length > 25)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DirectLineLink, length must be less than 25.", new [] { "DirectLineLink" });
+                yield return new ValidationResult("Invalid value for DirectLineLink, length must be less than 25.", new [] { "DirectLineLink" });
             }
 
             yield break;

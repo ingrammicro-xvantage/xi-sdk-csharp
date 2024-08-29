@@ -70,7 +70,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="orderStatusAsyncNotificationRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task ResellersV1WebhooksOrderstatuseventPostAsync(string targeturl, string xHubSignature, OrderStatusAsyncNotificationRequest orderStatusAsyncNotificationRequest, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task ResellersV1WebhooksOrderstatuseventPostAsync(string targeturl, string xHubSignature, OrderStatusAsyncNotificationRequest orderStatusAsyncNotificationRequest, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Order Status
@@ -84,7 +84,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="orderStatusAsyncNotificationRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ResellersV1WebhooksOrderstatuseventPostWithHttpInfoAsync(string targeturl, string xHubSignature, OrderStatusAsyncNotificationRequest orderStatusAsyncNotificationRequest, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> ResellersV1WebhooksOrderstatuseventPostWithHttpInfoAsync(string targeturl, string xHubSignature, OrderStatusAsyncNotificationRequest orderStatusAsyncNotificationRequest, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -381,7 +381,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="orderStatusAsyncNotificationRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task ResellersV1WebhooksOrderstatuseventPostAsync(string targeturl, string xHubSignature, OrderStatusAsyncNotificationRequest orderStatusAsyncNotificationRequest, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task ResellersV1WebhooksOrderstatuseventPostAsync(string targeturl, string xHubSignature, OrderStatusAsyncNotificationRequest orderStatusAsyncNotificationRequest, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             await ResellersV1WebhooksOrderstatuseventPostWithHttpInfoAsync(targeturl, xHubSignature, orderStatusAsyncNotificationRequest, cancellationToken).ConfigureAwait(false);
         }
@@ -395,7 +395,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="orderStatusAsyncNotificationRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<Object>> ResellersV1WebhooksOrderstatuseventPostWithHttpInfoAsync(string targeturl, string xHubSignature, OrderStatusAsyncNotificationRequest orderStatusAsyncNotificationRequest, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<Object>> ResellersV1WebhooksOrderstatuseventPostWithHttpInfoAsync(string targeturl, string xHubSignature, OrderStatusAsyncNotificationRequest orderStatusAsyncNotificationRequest, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'targeturl' is set
             if (targeturl == null)

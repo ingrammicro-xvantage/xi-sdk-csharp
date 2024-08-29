@@ -163,24 +163,24 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // CustomerLineNumber (string) maxLength
             if (this.CustomerLineNumber != null && this.CustomerLineNumber.Length > 3)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CustomerLineNumber, length must be less than 3.", new [] { "CustomerLineNumber" });
+                yield return new ValidationResult("Invalid value for CustomerLineNumber, length must be less than 3.", new [] { "CustomerLineNumber" });
             }
 
             // IngramPartNumber (string) maxLength
             if (this.IngramPartNumber != null && this.IngramPartNumber.Length > 18)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IngramPartNumber, length must be less than 18.", new [] { "IngramPartNumber" });
+                yield return new ValidationResult("Invalid value for IngramPartNumber, length must be less than 18.", new [] { "IngramPartNumber" });
             }
 
             // SpecialBidNumber (string) maxLength
             if (this.SpecialBidNumber != null && this.SpecialBidNumber.Length > 36)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SpecialBidNumber, length must be less than 36.", new [] { "SpecialBidNumber" });
+                yield return new ValidationResult("Invalid value for SpecialBidNumber, length must be less than 36.", new [] { "SpecialBidNumber" });
             }
 
             yield break;

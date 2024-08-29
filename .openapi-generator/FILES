@@ -158,7 +158,6 @@ docs/ProductDetailResponseAdditionalInformation.md
 docs/ProductDetailResponseAdditionalInformationProductWeightInner.md
 docs/ProductDetailResponseCiscoFields.md
 docs/ProductDetailResponseIndicators.md
-docs/ProductDetailResponseTechnicalSpecificationsInner.md
 docs/ProductSearchResponse.md
 docs/ProductSearchResponseCatalogInner.md
 docs/ProductSearchResponseCatalogInnerLinksInner.md
@@ -368,7 +367,6 @@ src/xi.sdk.resellers.Test/Model/ProductDetailResponseAdditionalInformationProduc
 src/xi.sdk.resellers.Test/Model/ProductDetailResponseAdditionalInformationTests.cs
 src/xi.sdk.resellers.Test/Model/ProductDetailResponseCiscoFieldsTests.cs
 src/xi.sdk.resellers.Test/Model/ProductDetailResponseIndicatorsTests.cs
-src/xi.sdk.resellers.Test/Model/ProductDetailResponseTechnicalSpecificationsInnerTests.cs
 src/xi.sdk.resellers.Test/Model/ProductDetailResponseTests.cs
 src/xi.sdk.resellers.Test/Model/ProductSearchResponseCatalogInnerLinksInnerTests.cs
 src/xi.sdk.resellers.Test/Model/ProductSearchResponseCatalogInnerTests.cs
@@ -594,7 +592,6 @@ src/xi.sdk.resellers/Model/ProductDetailResponseAdditionalInformation.cs
 src/xi.sdk.resellers/Model/ProductDetailResponseAdditionalInformationProductWeightInner.cs
 src/xi.sdk.resellers/Model/ProductDetailResponseCiscoFields.cs
 src/xi.sdk.resellers/Model/ProductDetailResponseIndicators.cs
-src/xi.sdk.resellers/Model/ProductDetailResponseTechnicalSpecificationsInner.cs
 src/xi.sdk.resellers/Model/ProductSearchResponse.cs
 src/xi.sdk.resellers/Model/ProductSearchResponseCatalogInner.cs
 src/xi.sdk.resellers/Model/ProductSearchResponseCatalogInnerLinksInner.cs

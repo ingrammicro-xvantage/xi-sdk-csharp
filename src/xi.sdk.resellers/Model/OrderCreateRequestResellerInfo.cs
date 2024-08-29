@@ -185,54 +185,54 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // CompanyName (string) maxLength
             if (this.CompanyName != null && this.CompanyName.Length > 40)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CompanyName, length must be less than 40.", new [] { "CompanyName" });
+                yield return new ValidationResult("Invalid value for CompanyName, length must be less than 40.", new [] { "CompanyName" });
             }
 
             // AddressLine1 (string) maxLength
             if (this.AddressLine1 != null && this.AddressLine1.Length > 70)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for AddressLine1, length must be less than 70.", new [] { "AddressLine1" });
+                yield return new ValidationResult("Invalid value for AddressLine1, length must be less than 70.", new [] { "AddressLine1" });
             }
 
             // AddressLine2 (string) maxLength
             if (this.AddressLine2 != null && this.AddressLine2.Length > 70)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for AddressLine2, length must be less than 70.", new [] { "AddressLine2" });
+                yield return new ValidationResult("Invalid value for AddressLine2, length must be less than 70.", new [] { "AddressLine2" });
             }
 
             // AddressLine3 (string) maxLength
             if (this.AddressLine3 != null && this.AddressLine3.Length > 70)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for AddressLine3, length must be less than 70.", new [] { "AddressLine3" });
+                yield return new ValidationResult("Invalid value for AddressLine3, length must be less than 70.", new [] { "AddressLine3" });
             }
 
             // City (string) maxLength
             if (this.City != null && this.City.Length > 25)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for City, length must be less than 25.", new [] { "City" });
+                yield return new ValidationResult("Invalid value for City, length must be less than 25.", new [] { "City" });
             }
 
             // State (string) maxLength
             if (this.State != null && this.State.Length > 3)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for State, length must be less than 3.", new [] { "State" });
+                yield return new ValidationResult("Invalid value for State, length must be less than 3.", new [] { "State" });
             }
 
             // PostalCode (string) maxLength
             if (this.PostalCode != null && this.PostalCode.Length > 10)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PostalCode, length must be less than 10.", new [] { "PostalCode" });
+                yield return new ValidationResult("Invalid value for PostalCode, length must be less than 10.", new [] { "PostalCode" });
             }
 
             // CountryCode (string) maxLength
             if (this.CountryCode != null && this.CountryCode.Length > 10)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CountryCode, length must be less than 10.", new [] { "CountryCode" });
+                yield return new ValidationResult("Invalid value for CountryCode, length must be less than 10.", new [] { "CountryCode" });
             }
 
             yield break;

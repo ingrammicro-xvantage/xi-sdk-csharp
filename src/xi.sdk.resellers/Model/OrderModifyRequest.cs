@@ -104,12 +104,12 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // Notes (string) maxLength
             if (this.Notes != null && this.Notes.Length > 132)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Notes, length must be less than 132.", new [] { "Notes" });
+                yield return new ValidationResult("Invalid value for Notes, length must be less than 132.", new [] { "Notes" });
             }
 
             yield break;

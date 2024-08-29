@@ -173,7 +173,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of QuoteSearchResponse</returns>
-        System.Threading.Tasks.Task<QuoteSearchResponse> GetQuotessearchV6Async(string iMCustomerNumber, string iMCountryCode, string iMCustomerContact, string iMCorrelationID, List<string>? ingramOrderDateBt = default(List<string>?), string? quoteNumber = default(string?), string? specialBidNumber = default(string?), string? endUserContact = default(string?), string? sortingOrder = default(string?), string? sortBy = default(string?), int? pageSize = default(int?), int? pageNumber = default(int?), string? vendorName = default(string?), string? quoteName = default(string?), string? status = default(string?), string? quoteCreateDateBt = default(string?), string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<QuoteSearchResponse> GetQuotessearchV6Async(string iMCustomerNumber, string iMCountryCode, string iMCustomerContact, string iMCorrelationID, List<string>? ingramOrderDateBt = default(List<string>?), string? quoteNumber = default(string?), string? specialBidNumber = default(string?), string? endUserContact = default(string?), string? sortingOrder = default(string?), string? sortBy = default(string?), int? pageSize = default(int?), int? pageNumber = default(int?), string? vendorName = default(string?), string? quoteName = default(string?), string? status = default(string?), string? quoteCreateDateBt = default(string?), string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Quote Search
@@ -201,7 +201,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (QuoteSearchResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QuoteSearchResponse>> GetQuotessearchV6WithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCustomerContact, string iMCorrelationID, List<string>? ingramOrderDateBt = default(List<string>?), string? quoteNumber = default(string?), string? specialBidNumber = default(string?), string? endUserContact = default(string?), string? sortingOrder = default(string?), string? sortBy = default(string?), int? pageSize = default(int?), int? pageNumber = default(int?), string? vendorName = default(string?), string? quoteName = default(string?), string? status = default(string?), string? quoteCreateDateBt = default(string?), string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<QuoteSearchResponse>> GetQuotessearchV6WithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCustomerContact, string iMCorrelationID, List<string>? ingramOrderDateBt = default(List<string>?), string? quoteNumber = default(string?), string? specialBidNumber = default(string?), string? endUserContact = default(string?), string? sortingOrder = default(string?), string? sortBy = default(string?), int? pageSize = default(int?), int? pageNumber = default(int?), string? vendorName = default(string?), string? quoteName = default(string?), string? status = default(string?), string? quoteCreateDateBt = default(string?), string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Validate Quote
         /// </summary>
@@ -216,7 +216,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique identifier used to identify the third party source accessing the services. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ValidateQuoteResponse</returns>
-        System.Threading.Tasks.Task<ValidateQuoteResponse> GetResellerV6ValidateQuoteAsync(string quoteNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ValidateQuoteResponse> GetResellerV6ValidateQuoteAsync(string quoteNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Validate Quote
@@ -232,7 +232,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique identifier used to identify the third party source accessing the services. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ValidateQuoteResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ValidateQuoteResponse>> GetResellerV6ValidateQuoteWithHttpInfoAsync(string quoteNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ValidateQuoteResponse>> GetResellerV6ValidateQuoteWithHttpInfoAsync(string quoteNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Get Quote Details
         /// </summary>
@@ -247,7 +247,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique identifier used to identify the third party source accessing the services. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of QuoteDetailsResponse</returns>
-        System.Threading.Tasks.Task<QuoteDetailsResponse> GetResellersV6QuotesAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string quoteNumber, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<QuoteDetailsResponse> GetResellersV6QuotesAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string quoteNumber, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Quote Details
@@ -263,7 +263,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique identifier used to identify the third party source accessing the services. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (QuoteDetailsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QuoteDetailsResponse>> GetResellersV6QuotesWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string quoteNumber, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<QuoteDetailsResponse>> GetResellersV6QuotesWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string quoteNumber, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -660,7 +660,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of QuoteSearchResponse</returns>
-        public async System.Threading.Tasks.Task<QuoteSearchResponse> GetQuotessearchV6Async(string iMCustomerNumber, string iMCountryCode, string iMCustomerContact, string iMCorrelationID, List<string>? ingramOrderDateBt = default(List<string>?), string? quoteNumber = default(string?), string? specialBidNumber = default(string?), string? endUserContact = default(string?), string? sortingOrder = default(string?), string? sortBy = default(string?), int? pageSize = default(int?), int? pageNumber = default(int?), string? vendorName = default(string?), string? quoteName = default(string?), string? status = default(string?), string? quoteCreateDateBt = default(string?), string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<QuoteSearchResponse> GetQuotessearchV6Async(string iMCustomerNumber, string iMCountryCode, string iMCustomerContact, string iMCorrelationID, List<string>? ingramOrderDateBt = default(List<string>?), string? quoteNumber = default(string?), string? specialBidNumber = default(string?), string? endUserContact = default(string?), string? sortingOrder = default(string?), string? sortBy = default(string?), int? pageSize = default(int?), int? pageNumber = default(int?), string? vendorName = default(string?), string? quoteName = default(string?), string? status = default(string?), string? quoteCreateDateBt = default(string?), string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             xi.sdk.resellers.Client.ApiResponse<QuoteSearchResponse> localVarResponse = await GetQuotessearchV6WithHttpInfoAsync(iMCustomerNumber, iMCountryCode, iMCustomerContact, iMCorrelationID, ingramOrderDateBt, quoteNumber, specialBidNumber, endUserContact, sortingOrder, sortBy, pageSize, pageNumber, vendorName, quoteName, status, quoteCreateDateBt, iMSenderID, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -689,7 +689,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (QuoteSearchResponse)</returns>
-        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<QuoteSearchResponse>> GetQuotessearchV6WithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCustomerContact, string iMCorrelationID, List<string>? ingramOrderDateBt = default(List<string>?), string? quoteNumber = default(string?), string? specialBidNumber = default(string?), string? endUserContact = default(string?), string? sortingOrder = default(string?), string? sortBy = default(string?), int? pageSize = default(int?), int? pageNumber = default(int?), string? vendorName = default(string?), string? quoteName = default(string?), string? status = default(string?), string? quoteCreateDateBt = default(string?), string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<QuoteSearchResponse>> GetQuotessearchV6WithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCustomerContact, string iMCorrelationID, List<string>? ingramOrderDateBt = default(List<string>?), string? quoteNumber = default(string?), string? specialBidNumber = default(string?), string? endUserContact = default(string?), string? sortingOrder = default(string?), string? sortBy = default(string?), int? pageSize = default(int?), int? pageNumber = default(int?), string? vendorName = default(string?), string? quoteName = default(string?), string? status = default(string?), string? quoteCreateDateBt = default(string?), string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)
@@ -901,7 +901,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique identifier used to identify the third party source accessing the services. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ValidateQuoteResponse</returns>
-        public async System.Threading.Tasks.Task<ValidateQuoteResponse> GetResellerV6ValidateQuoteAsync(string quoteNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ValidateQuoteResponse> GetResellerV6ValidateQuoteAsync(string quoteNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             xi.sdk.resellers.Client.ApiResponse<ValidateQuoteResponse> localVarResponse = await GetResellerV6ValidateQuoteWithHttpInfoAsync(quoteNumber, iMCustomerNumber, iMCountryCode, iMCorrelationID, iMSenderID, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -918,7 +918,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique identifier used to identify the third party source accessing the services. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ValidateQuoteResponse)</returns>
-        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<ValidateQuoteResponse>> GetResellerV6ValidateQuoteWithHttpInfoAsync(string quoteNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<ValidateQuoteResponse>> GetResellerV6ValidateQuoteWithHttpInfoAsync(string quoteNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'quoteNumber' is set
             if (quoteNumber == null)
@@ -1082,7 +1082,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique identifier used to identify the third party source accessing the services. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of QuoteDetailsResponse</returns>
-        public async System.Threading.Tasks.Task<QuoteDetailsResponse> GetResellersV6QuotesAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string quoteNumber, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<QuoteDetailsResponse> GetResellersV6QuotesAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string quoteNumber, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             xi.sdk.resellers.Client.ApiResponse<QuoteDetailsResponse> localVarResponse = await GetResellersV6QuotesWithHttpInfoAsync(iMCustomerNumber, iMCountryCode, iMCorrelationID, quoteNumber, iMSenderID, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1099,7 +1099,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMSenderID">Unique identifier used to identify the third party source accessing the services. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (QuoteDetailsResponse)</returns>
-        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<QuoteDetailsResponse>> GetResellersV6QuotesWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string quoteNumber, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<QuoteDetailsResponse>> GetResellersV6QuotesWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string quoteNumber, string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)

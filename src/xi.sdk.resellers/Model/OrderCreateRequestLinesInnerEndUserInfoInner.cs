@@ -225,30 +225,30 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // EndUserId (string) maxLength
             if (this.EndUserId != null && this.EndUserId.Length > 10)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for EndUserId, length must be less than 10.", new [] { "EndUserId" });
+                yield return new ValidationResult("Invalid value for EndUserId, length must be less than 10.", new [] { "EndUserId" });
             }
 
             // Name1 (string) maxLength
             if (this.Name1 != null && this.Name1.Length > 35)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Name1, length must be less than 35.", new [] { "Name1" });
+                yield return new ValidationResult("Invalid value for Name1, length must be less than 35.", new [] { "Name1" });
             }
 
             // CountryCode (string) maxLength
             if (this.CountryCode != null && this.CountryCode.Length > 3)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CountryCode, length must be less than 3.", new [] { "CountryCode" });
+                yield return new ValidationResult("Invalid value for CountryCode, length must be less than 3.", new [] { "CountryCode" });
             }
 
             // Email (string) maxLength
             if (this.Email != null && this.Email.Length > 241)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Email, length must be less than 241.", new [] { "Email" });
+                yield return new ValidationResult("Invalid value for Email, length must be less than 241.", new [] { "Email" });
             }
 
             yield break;

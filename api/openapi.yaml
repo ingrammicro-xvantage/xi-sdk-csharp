@@ -9255,17 +9255,7 @@ components:
           serviceProgramName: serviceProgramName
           globalListPrice: globalListPrice
           itemCatalogCategory: itemCatalogCategory
-        technicalSpecifications:
-        - headerName: headerName
-          attributeValue: attributeValue
-          attributeName: attributeName
-          attributeDisplay: attributeDisplay
-        - headerName: headerName
-          attributeValue: attributeValue
-          attributeName: attributeName
-          attributeDisplay: attributeDisplay
         productSubCategory: productSubCategory
-        productDetailDescription: productDetailDescription
         vendorPartNumber: vendorPartNumber
         productStatusCode: productStatusCode
         vendorNumber: vendorNumber
@@ -9284,9 +9274,6 @@ components:
           type: string
         description:
           description: The description given for the product.
-          type: string
-        productDetailDescription:
-          description: The detailed description given for the product.
           type: string
         upc:
           description: The UPC code for the product. Consists of 12 numeric digits
@@ -9327,11 +9314,6 @@ components:
           $ref: '#/components/schemas/ProductDetailResponse_indicators'
         ciscoFields:
           $ref: '#/components/schemas/ProductDetailResponse_ciscoFields'
-        technicalSpecifications:
-          description: Technical specifications of the product.
-          items:
-            $ref: '#/components/schemas/ProductDetailResponse_technicalSpecifications_inner'
-          type: array
         warrantyInformation:
           description: Warranty information related to the product.
           items:
@@ -14831,26 +14813,6 @@ components:
           type: string
         globalListPrice:
           description: Cisco global list price
-          type: string
-      type: object
-    ProductDetailResponse_technicalSpecifications_inner:
-      example:
-        headerName: headerName
-        attributeValue: attributeValue
-        attributeName: attributeName
-        attributeDisplay: attributeDisplay
-      properties:
-        headerName:
-          description: "Example : 'Basic'"
-          type: string
-        attributeName:
-          description: "Example : 'Product Type'"
-          type: string
-        attributeDisplay:
-          description: "Example : 'Basic|Product Type|LCD Monitor'"
-          type: string
-        attributeValue:
-          description: "Example : 'LCD Monitor'"
           type: string
       type: object
     ProductDetailResponse_additionalInformation_productWeight_inner:

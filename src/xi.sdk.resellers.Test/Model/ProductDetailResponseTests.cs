@@ -100,15 +100,6 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'ProductDetailDescription'
-        /// </summary>
-        [Fact]
-        public void ProductDetailDescriptionTest()
-        {
-            // TODO unit test for the property 'ProductDetailDescription'
-        }
-
-        /// <summary>
         /// Test the property 'Upc'
         /// </summary>
         [Fact]
@@ -187,15 +178,6 @@ namespace xi.sdk.resellers.Test.Model
         public void CiscoFieldsTest()
         {
             // TODO unit test for the property 'CiscoFields'
-        }
-
-        /// <summary>
-        /// Test the property 'TechnicalSpecifications'
-        /// </summary>
-        [Fact]
-        public void TechnicalSpecificationsTest()
-        {
-            // TODO unit test for the property 'TechnicalSpecifications'
         }
 
         /// <summary>
