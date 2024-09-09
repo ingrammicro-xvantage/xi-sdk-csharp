@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **SpecialBidEffectiveDate** | **string** | If price discount has been applied to the quote - the starting date the discount begins. | [optional] 
 **SpecialBidExpirationDate** | **string** | If a price discount has been applied to the quote - The date the discount expires and will no longer be applicable. | [optional] 
 **VendorQuoteNumber** | **string** |  | [optional] 
+**IsPartialOrderAllowed** | **bool?** |  | [optional] 
 **Status** | **string** | This refers to the primary status of the quote.  API responses will return | [optional] 
 **StatusReason** | **string** |  | [optional] 
 **ClosingReason** | **string** | Closing Reason for quote. | [optional] 

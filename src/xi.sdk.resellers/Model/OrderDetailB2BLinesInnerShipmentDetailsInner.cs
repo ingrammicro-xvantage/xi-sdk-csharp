@@ -45,7 +45,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="invoiceNumber">The Ingram Micro invoice number for the line item..</param>
         /// <param name="invoiceDate">The date the IngramMicro invoice was created for the line item..</param>
         /// <param name="carrierDetails">The shipment carrier details for the line item..</param>
-        public OrderDetailB2BLinesInnerShipmentDetailsInner(int quantity = default(int), string deliveryNumber = default(string), string estimatedShipDate = default(string), string shippedDate = default(string), string estimatedDeliveryDate = default(string), string shipFromWarehouseId = default(string), string shipFromLocation = default(string), string invoiceNumber = default(string), string invoiceDate = default(string), List<OrderDetailB2BLinesInnerShipmentDetailsInnerCarrierDetailsInner> carrierDetails = default(List<OrderDetailB2BLinesInnerShipmentDetailsInnerCarrierDetailsInner>))
+        public OrderDetailB2BLinesInnerShipmentDetailsInner(int? quantity = default(int?), string deliveryNumber = default(string), string estimatedShipDate = default(string), string shippedDate = default(string), string estimatedDeliveryDate = default(string), string shipFromWarehouseId = default(string), string shipFromLocation = default(string), string invoiceNumber = default(string), string invoiceDate = default(string), List<OrderDetailB2BLinesInnerShipmentDetailsInnerCarrierDetailsInner> carrierDetails = default(List<OrderDetailB2BLinesInnerShipmentDetailsInnerCarrierDetailsInner>))
         {
             this.Quantity = quantity;
             this.DeliveryNumber = deliveryNumber;
@@ -63,8 +63,8 @@ namespace xi.sdk.resellers.Model
         /// The quantity shipped of the line item.
         /// </summary>
         /// <value>The quantity shipped of the line item.</value>
-        [DataMember(Name = "quantity", EmitDefaultValue = false)]
-        public int Quantity { get; set; }
+        [DataMember(Name = "quantity", EmitDefaultValue = true)]
+        public int? Quantity { get; set; }
 
         /// <summary>
         /// The actual date of delivery of the line item.

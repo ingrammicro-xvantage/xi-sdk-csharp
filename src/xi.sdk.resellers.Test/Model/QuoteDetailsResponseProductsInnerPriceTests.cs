@@ -91,6 +91,24 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'RemainingQuantityExtendedMsrp'
+        /// </summary>
+        [Fact]
+        public void RemainingQuantityExtendedMsrpTest()
+        {
+            // TODO unit test for the property 'RemainingQuantityExtendedMsrp'
+        }
+
+        /// <summary>
+        /// Test the property 'RemainingQuantityExtendedQuotePrice'
+        /// </summary>
+        [Fact]
+        public void RemainingQuantityExtendedQuotePriceTest()
+        {
+            // TODO unit test for the property 'RemainingQuantityExtendedQuotePrice'
+        }
+
+        /// <summary>
         /// Test the property 'DiscountOffList'
         /// </summary>
         [Fact]

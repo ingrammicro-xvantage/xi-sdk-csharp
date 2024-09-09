@@ -10004,7 +10004,7 @@ components:
       type: object
     QuoteDetailsResponse:
       example:
-        quantityTotal: 7
+        quantityTotal: 9
         shippingInfo:
           phoneNumber: phoneNumber
           city: city
@@ -10016,7 +10016,7 @@ components:
           state: state
           shpToGstinNumber: shpToGstinNumber
           email: email
-        taxTotal: 4.965218492984954
+        taxTotal: 6.683562403749608
         leaseInfo: leaseInfo
         dateClosed: dateClosed
         imWarehouse: imWarehouse
@@ -10032,46 +10032,49 @@ components:
           ean: ean
           terms: terms
           price:
-            quotePrice: 1.4658129805029452
-            extrafees: 9.301444243932576
             unitOfMeasure: unitOfMeasure
-            discounts:
-            - amount: 2.027123023002322
-              description: description
-              avaliableQunatity: 4
-              bidVersion: bidVersion
-              validFrom: validFrom
-              type: type
-              bidNumber: bidNumber
-              minimumQuantity: 7
-              discountOffList: 1.2315135367772556
-              expirationDate: expirationDate
-              validTo: validTo
-            - amount: 2.027123023002322
-              description: description
-              avaliableQunatity: 4
-              bidVersion: bidVersion
-              validFrom: validFrom
-              type: type
-              bidNumber: bidNumber
-              minimumQuantity: 7
-              discountOffList: 1.2315135367772556
-              expirationDate: expirationDate
-              validTo: validTo
-            msrp: 5.962133916683182
-            extendedQuotePrice: 2.3021358869347655
+            extendedQuotePrice: 9.301444243932576
             recurringPriceModel: recurringPriceModel
-            tax: 7.061401241503109
+            tax: 4.145608029883936
             type: type
             extraFeesDetails:
-            - extraFeesAmount: 3.616076749251911
+            - extraFeesAmount: 1.2315135367772556
               extraFeesDescription: extraFeesDescription
-            - extraFeesAmount: 3.616076749251911
+            - extraFeesAmount: 1.2315135367772556
               extraFeesDescription: extraFeesDescription
-            extendedMsrp: 5.637376656633329
             discountOffList: discountOffList
+            quotePrice: 5.637376656633329
+            extrafees: 7.386281948385884
+            discounts:
+            - amount: 1.0246457001441578
+              description: description
+              avaliableQunatity: 1
+              bidVersion: bidVersion
+              validFrom: validFrom
+              type: type
+              bidNumber: bidNumber
+              minimumQuantity: 6
+              discountOffList: 7.457744773683766
+              expirationDate: expirationDate
+              validTo: validTo
+            - amount: 1.0246457001441578
+              description: description
+              avaliableQunatity: 1
+              bidVersion: bidVersion
+              validFrom: validFrom
+              type: type
+              bidNumber: bidNumber
+              minimumQuantity: 6
+              discountOffList: 7.457744773683766
+              expirationDate: expirationDate
+              validTo: validTo
+            remainingQuantityExtendedQuotePrice: 2.027123023002322
+            msrp: 2.3021358869347655
+            remainingQuantityExtendedMsrp: 3.616076749251911
+            extendedMsrp: 7.061401241503109
           vendorPartNumber: vendorPartNumber
           quoteProductsSupplierPartAuxiliaryId: quoteProductsSupplierPartAuxiliaryId
+          minimumOrderAllowedQty: 1
           isSuggestionProduct: true
           ingramPartNumber: ingramPartNumber
           billDetails:
@@ -10083,10 +10086,11 @@ components:
             type: type
             frequency: 1
             unitValue: unitValue
+          remainingQuoteQty: 6
           quantity: 0
           serialNumber: serialNumber
           resellerMargin: resellerMargin
-          weight: 6.027456183070403
+          weight: 5.962133916683182
           vendorName: vendorName
           quoteProductGuid: quoteProductGuid
           planDescription: planDescription
@@ -10103,46 +10107,49 @@ components:
           ean: ean
           terms: terms
           price:
-            quotePrice: 1.4658129805029452
-            extrafees: 9.301444243932576
             unitOfMeasure: unitOfMeasure
-            discounts:
-            - amount: 2.027123023002322
-              description: description
-              avaliableQunatity: 4
-              bidVersion: bidVersion
-              validFrom: validFrom
-              type: type
-              bidNumber: bidNumber
-              minimumQuantity: 7
-              discountOffList: 1.2315135367772556
-              expirationDate: expirationDate
-              validTo: validTo
-            - amount: 2.027123023002322
-              description: description
-              avaliableQunatity: 4
-              bidVersion: bidVersion
-              validFrom: validFrom
-              type: type
-              bidNumber: bidNumber
-              minimumQuantity: 7
-              discountOffList: 1.2315135367772556
-              expirationDate: expirationDate
-              validTo: validTo
-            msrp: 5.962133916683182
-            extendedQuotePrice: 2.3021358869347655
+            extendedQuotePrice: 9.301444243932576
             recurringPriceModel: recurringPriceModel
-            tax: 7.061401241503109
+            tax: 4.145608029883936
             type: type
             extraFeesDetails:
-            - extraFeesAmount: 3.616076749251911
+            - extraFeesAmount: 1.2315135367772556
               extraFeesDescription: extraFeesDescription
-            - extraFeesAmount: 3.616076749251911
+            - extraFeesAmount: 1.2315135367772556
               extraFeesDescription: extraFeesDescription
-            extendedMsrp: 5.637376656633329
             discountOffList: discountOffList
+            quotePrice: 5.637376656633329
+            extrafees: 7.386281948385884
+            discounts:
+            - amount: 1.0246457001441578
+              description: description
+              avaliableQunatity: 1
+              bidVersion: bidVersion
+              validFrom: validFrom
+              type: type
+              bidNumber: bidNumber
+              minimumQuantity: 6
+              discountOffList: 7.457744773683766
+              expirationDate: expirationDate
+              validTo: validTo
+            - amount: 1.0246457001441578
+              description: description
+              avaliableQunatity: 1
+              bidVersion: bidVersion
+              validFrom: validFrom
+              type: type
+              bidNumber: bidNumber
+              minimumQuantity: 6
+              discountOffList: 7.457744773683766
+              expirationDate: expirationDate
+              validTo: validTo
+            remainingQuantityExtendedQuotePrice: 2.027123023002322
+            msrp: 2.3021358869347655
+            remainingQuantityExtendedMsrp: 3.616076749251911
+            extendedMsrp: 7.061401241503109
           vendorPartNumber: vendorPartNumber
           quoteProductsSupplierPartAuxiliaryId: quoteProductsSupplierPartAuxiliaryId
+          minimumOrderAllowedQty: 1
           isSuggestionProduct: true
           ingramPartNumber: ingramPartNumber
           billDetails:
@@ -10154,10 +10161,11 @@ components:
             type: type
             frequency: 1
             unitValue: unitValue
+          remainingQuoteQty: 6
           quantity: 0
           serialNumber: serialNumber
           resellerMargin: resellerMargin
-          weight: 6.027456183070403
+          weight: 5.962133916683182
           vendorName: vendorName
           quoteProductGuid: quoteProductGuid
           planDescription: planDescription
@@ -10166,12 +10174,13 @@ components:
           startDate: startDate
         statusReason: statusReason
         imWarehouseGstNumber: imWarehouseGstNumber
+        isPartialOrderAllowed: true
         leasingInstructions: leasingInstructions
-        productsCount: 1
+        productsCount: 4
         extraFeesTotalDetails:
-        - extraFeesAmount: 3.616076749251911
+        - extraFeesAmount: 1.2315135367772556
           extraFeesDescription: extraFeesDescription
-        - extraFeesAmount: 3.616076749251911
+        - extraFeesAmount: 1.2315135367772556
           extraFeesDescription: extraFeesDescription
         vendorQuoteNumber: vendorQuoteNumber
         specialBidEffectiveDate: specialBidEffectiveDate
@@ -10188,16 +10197,16 @@ components:
           email: email
           marketSegment: marketSegment
         introPreamble: introPreamble
-        extendedMsrpTotal: 6.84685269835264
-        freightAmount: 9.965781217890562
+        extendedMsrpTotal: 5.025004791520295
+        freightAmount: 9.018348186070783
         lastModifiedDate: lastModifiedDate
         legalTerms: legalTerms
         specialBidExpirationDate: specialBidExpirationDate
         quoteNumber: quoteNumber
-        extraFeesTotal: 1.1730742509559433
+        extraFeesTotal: 9.369310271410669
         revision: revision
         quoteGuid: quoteGuid
-        extendedQuotePriceTotal: 5.025004791520295
+        extendedQuotePriceTotal: 8.762042012749001
         customerNeed: customerNeed
         paymentTermsName: paymentTermsName
         resellerInfo:
@@ -10269,6 +10278,9 @@ components:
           type: string
         vendorQuoteNumber:
           type: string
+        isPartialOrderAllowed:
+          nullable: true
+          type: boolean
         status:
           description: This refers to the primary status of the quote.  API responses
             will return
@@ -16001,7 +16013,7 @@ components:
       type: object
     QuoteDetailsResponse_products_inner_price_extraFeesDetails_inner:
       example:
-        extraFeesAmount: 3.616076749251911
+        extraFeesAmount: 1.2315135367772556
         extraFeesDescription: extraFeesDescription
       properties:
         extraFeesDescription:
@@ -16012,15 +16024,15 @@ components:
       type: object
     QuoteDetailsResponse_products_inner_price_discounts_inner:
       example:
-        amount: 2.027123023002322
+        amount: 1.0246457001441578
         description: description
-        avaliableQunatity: 4
+        avaliableQunatity: 1
         bidVersion: bidVersion
         validFrom: validFrom
         type: type
         bidNumber: bidNumber
-        minimumQuantity: 7
-        discountOffList: 1.2315135367772556
+        minimumQuantity: 6
+        discountOffList: 7.457744773683766
         expirationDate: expirationDate
         validTo: validTo
       properties:
@@ -16051,63 +16063,78 @@ components:
       type: object
     QuoteDetailsResponse_products_inner_price:
       example:
-        quotePrice: 1.4658129805029452
-        extrafees: 9.301444243932576
         unitOfMeasure: unitOfMeasure
-        discounts:
-        - amount: 2.027123023002322
-          description: description
-          avaliableQunatity: 4
-          bidVersion: bidVersion
-          validFrom: validFrom
-          type: type
-          bidNumber: bidNumber
-          minimumQuantity: 7
-          discountOffList: 1.2315135367772556
-          expirationDate: expirationDate
-          validTo: validTo
-        - amount: 2.027123023002322
-          description: description
-          avaliableQunatity: 4
-          bidVersion: bidVersion
-          validFrom: validFrom
-          type: type
-          bidNumber: bidNumber
-          minimumQuantity: 7
-          discountOffList: 1.2315135367772556
-          expirationDate: expirationDate
-          validTo: validTo
-        msrp: 5.962133916683182
-        extendedQuotePrice: 2.3021358869347655
+        extendedQuotePrice: 9.301444243932576
         recurringPriceModel: recurringPriceModel
-        tax: 7.061401241503109
+        tax: 4.145608029883936
         type: type
         extraFeesDetails:
-        - extraFeesAmount: 3.616076749251911
+        - extraFeesAmount: 1.2315135367772556
           extraFeesDescription: extraFeesDescription
-        - extraFeesAmount: 3.616076749251911
+        - extraFeesAmount: 1.2315135367772556
           extraFeesDescription: extraFeesDescription
-        extendedMsrp: 5.637376656633329
         discountOffList: discountOffList
+        quotePrice: 5.637376656633329
+        extrafees: 7.386281948385884
+        discounts:
+        - amount: 1.0246457001441578
+          description: description
+          avaliableQunatity: 1
+          bidVersion: bidVersion
+          validFrom: validFrom
+          type: type
+          bidNumber: bidNumber
+          minimumQuantity: 6
+          discountOffList: 7.457744773683766
+          expirationDate: expirationDate
+          validTo: validTo
+        - amount: 1.0246457001441578
+          description: description
+          avaliableQunatity: 1
+          bidVersion: bidVersion
+          validFrom: validFrom
+          type: type
+          bidNumber: bidNumber
+          minimumQuantity: 6
+          discountOffList: 7.457744773683766
+          expirationDate: expirationDate
+          validTo: validTo
+        remainingQuantityExtendedQuotePrice: 2.027123023002322
+        msrp: 2.3021358869347655
+        remainingQuantityExtendedMsrp: 3.616076749251911
+        extendedMsrp: 7.061401241503109
       properties:
         quotePrice:
           description: Ingram Micro quoted price specific to the reseller and quote.
           format: decimal
+          nullable: true
           type: number
         msrp:
           description: Manufacturer Suggested Retail Price
           format: decimal
+          nullable: true
           type: number
         extendedMsrp:
           description: Extended MSRP - Manufacturer Suggested Retail Price X Quantity
           format: decimal
+          nullable: true
           type: number
         extendedQuotePrice:
           description: Extended reseller quoted price (cost to reseller) X Quantity
           format: decimal
+          nullable: true
+          type: number
+        remainingQuantityExtendedMsrp:
+          format: decimal
+          nullable: true
+          type: number
+        remainingQuantityExtendedQuotePrice:
+          format: decimal
+          nullable: true
           type: number
         discountOffList:
           description: Discount off list percentage extended
+          nullable: true
           type: string
         type:
           type: string
@@ -16160,46 +16187,49 @@ components:
         ean: ean
         terms: terms
         price:
-          quotePrice: 1.4658129805029452
-          extrafees: 9.301444243932576
           unitOfMeasure: unitOfMeasure
-          discounts:
-          - amount: 2.027123023002322
-            description: description
-            avaliableQunatity: 4
-            bidVersion: bidVersion
-            validFrom: validFrom
-            type: type
-            bidNumber: bidNumber
-            minimumQuantity: 7
-            discountOffList: 1.2315135367772556
-            expirationDate: expirationDate
-            validTo: validTo
-          - amount: 2.027123023002322
-            description: description
-            avaliableQunatity: 4
-            bidVersion: bidVersion
-            validFrom: validFrom
-            type: type
-            bidNumber: bidNumber
-            minimumQuantity: 7
-            discountOffList: 1.2315135367772556
-            expirationDate: expirationDate
-            validTo: validTo
-          msrp: 5.962133916683182
-          extendedQuotePrice: 2.3021358869347655
+          extendedQuotePrice: 9.301444243932576
           recurringPriceModel: recurringPriceModel
-          tax: 7.061401241503109
+          tax: 4.145608029883936
           type: type
           extraFeesDetails:
-          - extraFeesAmount: 3.616076749251911
+          - extraFeesAmount: 1.2315135367772556
             extraFeesDescription: extraFeesDescription
-          - extraFeesAmount: 3.616076749251911
+          - extraFeesAmount: 1.2315135367772556
             extraFeesDescription: extraFeesDescription
-          extendedMsrp: 5.637376656633329
           discountOffList: discountOffList
+          quotePrice: 5.637376656633329
+          extrafees: 7.386281948385884
+          discounts:
+          - amount: 1.0246457001441578
+            description: description
+            avaliableQunatity: 1
+            bidVersion: bidVersion
+            validFrom: validFrom
+            type: type
+            bidNumber: bidNumber
+            minimumQuantity: 6
+            discountOffList: 7.457744773683766
+            expirationDate: expirationDate
+            validTo: validTo
+          - amount: 1.0246457001441578
+            description: description
+            avaliableQunatity: 1
+            bidVersion: bidVersion
+            validFrom: validFrom
+            type: type
+            bidNumber: bidNumber
+            minimumQuantity: 6
+            discountOffList: 7.457744773683766
+            expirationDate: expirationDate
+            validTo: validTo
+          remainingQuantityExtendedQuotePrice: 2.027123023002322
+          msrp: 2.3021358869347655
+          remainingQuantityExtendedMsrp: 3.616076749251911
+          extendedMsrp: 7.061401241503109
         vendorPartNumber: vendorPartNumber
         quoteProductsSupplierPartAuxiliaryId: quoteProductsSupplierPartAuxiliaryId
+        minimumOrderAllowedQty: 1
         isSuggestionProduct: true
         ingramPartNumber: ingramPartNumber
         billDetails:
@@ -16211,10 +16241,11 @@ components:
           type: type
           frequency: 1
           unitValue: unitValue
+        remainingQuoteQty: 6
         quantity: 0
         serialNumber: serialNumber
         resellerMargin: resellerMargin
-        weight: 6.027456183070403
+        weight: 5.962133916683182
         vendorName: vendorName
         quoteProductGuid: quoteProductGuid
         planDescription: planDescription
@@ -16233,6 +16264,12 @@ components:
           type: string
         quantity:
           description: Quantity of product line item quoted.
+          type: integer
+        remainingQuoteQty:
+          nullable: true
+          type: integer
+        minimumOrderAllowedQty:
+          nullable: true
           type: integer
         notes:
           description: Product line item comments.
@@ -17482,6 +17519,7 @@ components:
         quantity:
           description: The quantity shipped of the line item.
           format: int32
+          nullable: true
           type: integer
         deliveryNumber:
           description: The actual date of delivery of the line item.

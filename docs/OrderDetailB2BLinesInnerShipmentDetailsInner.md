@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Quantity** | **int** | The quantity shipped of the line item. | [optional] 
+**Quantity** | **int?** | The quantity shipped of the line item. | [optional] 
 **DeliveryNumber** | **string** | The actual date of delivery of the line item. | [optional] 
 **EstimatedShipDate** | **string** | The date the line item is expected to be shipped. | [optional] 
 **ShippedDate** | **string** |  | [optional] 

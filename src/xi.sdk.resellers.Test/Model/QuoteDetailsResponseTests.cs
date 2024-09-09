@@ -163,6 +163,15 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'IsPartialOrderAllowed'
+        /// </summary>
+        [Fact]
+        public void IsPartialOrderAllowedTest()
+        {
+            // TODO unit test for the property 'IsPartialOrderAllowed'
+        }
+
+        /// <summary>
         /// Test the property 'Status'
         /// </summary>
         [Fact]

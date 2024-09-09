@@ -38,6 +38,8 @@ namespace xi.sdk.resellers.Model
         /// <param name="quoteProductGuid">Quote Product GUID  is the primary quote key in Ingram Micro&#39;s CRM - needed to retrieve quote details..</param>
         /// <param name="lineNumber">Line number which the product will appear in the quote.  Line number is manditory when unique configurations are included in a quote and mainting the item line order is required..</param>
         /// <param name="quantity">Quantity of product line item quoted..</param>
+        /// <param name="remainingQuoteQty">remainingQuoteQty.</param>
+        /// <param name="minimumOrderAllowedQty">minimumOrderAllowedQty.</param>
         /// <param name="notes">Product line item comments..</param>
         /// <param name="ean">EANUPC.</param>
         /// <param name="coo">Country of Origin..</param>
@@ -60,11 +62,13 @@ namespace xi.sdk.resellers.Model
         /// <param name="serialNumber">serialNumber.</param>
         /// <param name="price">price.</param>
         /// <param name="billDetails">billDetails.</param>
-        public QuoteDetailsResponseProductsInner(string quoteProductGuid = default(string), string lineNumber = default(string), int quantity = default(int), string notes = default(string), string ean = default(string), string coo = default(string), string ingramPartNumber = default(string), string vendorPartNumber = default(string), string description = default(string), decimal weight = default(decimal), string weightUom = default(string), bool isSuggestionProduct = default(bool), string vpnCategory = default(string), string quoteProductsSupplierPartAuxiliaryId = default(string), string vendorName = default(string), string terms = default(string), string planDescription = default(string), bool isSubscription = default(bool), string resellerMargin = default(string), string requestedStartDate = default(string), string startDate = default(string), string endDate = default(string), string serialNumber = default(string), QuoteDetailsResponseProductsInnerPrice price = default(QuoteDetailsResponseProductsInnerPrice), List<QuoteDetailsResponseProductsInnerBillDetailsInner> billDetails = default(List<QuoteDetailsResponseProductsInnerBillDetailsInner>))
+        public QuoteDetailsResponseProductsInner(string quoteProductGuid = default(string), string lineNumber = default(string), int quantity = default(int), int? remainingQuoteQty = default(int?), int? minimumOrderAllowedQty = default(int?), string notes = default(string), string ean = default(string), string coo = default(string), string ingramPartNumber = default(string), string vendorPartNumber = default(string), string description = default(string), decimal weight = default(decimal), string weightUom = default(string), bool isSuggestionProduct = default(bool), string vpnCategory = default(string), string quoteProductsSupplierPartAuxiliaryId = default(string), string vendorName = default(string), string terms = default(string), string planDescription = default(string), bool isSubscription = default(bool), string resellerMargin = default(string), string requestedStartDate = default(string), string startDate = default(string), string endDate = default(string), string serialNumber = default(string), QuoteDetailsResponseProductsInnerPrice price = default(QuoteDetailsResponseProductsInnerPrice), List<QuoteDetailsResponseProductsInnerBillDetailsInner> billDetails = default(List<QuoteDetailsResponseProductsInnerBillDetailsInner>))
         {
             this.QuoteProductGuid = quoteProductGuid;
             this.LineNumber = lineNumber;
             this.Quantity = quantity;
+            this.RemainingQuoteQty = remainingQuoteQty;
+            this.MinimumOrderAllowedQty = minimumOrderAllowedQty;
             this.Notes = notes;
             this.Ean = ean;
             this.Coo = coo;
@@ -109,6 +113,18 @@ namespace xi.sdk.resellers.Model
         /// <value>Quantity of product line item quoted.</value>
         [DataMember(Name = "quantity", EmitDefaultValue = false)]
         public int Quantity { get; set; }
+
+        /// <summary>
+        /// Gets or Sets RemainingQuoteQty
+        /// </summary>
+        [DataMember(Name = "remainingQuoteQty", EmitDefaultValue = true)]
+        public int? RemainingQuoteQty { get; set; }
+
+        /// <summary>
+        /// Gets or Sets MinimumOrderAllowedQty
+        /// </summary>
+        [DataMember(Name = "minimumOrderAllowedQty", EmitDefaultValue = true)]
+        public int? MinimumOrderAllowedQty { get; set; }
 
         /// <summary>
         /// Product line item comments.
@@ -266,6 +282,8 @@ namespace xi.sdk.resellers.Model
             sb.Append("  QuoteProductGuid: ").Append(QuoteProductGuid).Append("\n");
             sb.Append("  LineNumber: ").Append(LineNumber).Append("\n");
             sb.Append("  Quantity: ").Append(Quantity).Append("\n");
+            sb.Append("  RemainingQuoteQty: ").Append(RemainingQuoteQty).Append("\n");
+            sb.Append("  MinimumOrderAllowedQty: ").Append(MinimumOrderAllowedQty).Append("\n");
             sb.Append("  Notes: ").Append(Notes).Append("\n");
             sb.Append("  Ean: ").Append(Ean).Append("\n");
             sb.Append("  Coo: ").Append(Coo).Append("\n");

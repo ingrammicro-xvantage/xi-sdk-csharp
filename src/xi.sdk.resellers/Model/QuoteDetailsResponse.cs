@@ -47,6 +47,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="specialBidEffectiveDate">If price discount has been applied to the quote - the starting date the discount begins..</param>
         /// <param name="specialBidExpirationDate">If a price discount has been applied to the quote - The date the discount expires and will no longer be applicable..</param>
         /// <param name="vendorQuoteNumber">vendorQuoteNumber.</param>
+        /// <param name="isPartialOrderAllowed">isPartialOrderAllowed.</param>
         /// <param name="status">This refers to the primary status of the quote.  API responses will return.</param>
         /// <param name="statusReason">statusReason.</param>
         /// <param name="closingReason">Closing Reason for quote..</param>
@@ -76,7 +77,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="freightAmount">freightAmount.</param>
         /// <param name="totalQuoteAmount">totalQuoteAmount.</param>
         /// <param name="additionalAttributes">additionalAttributes.</param>
-        public QuoteDetailsResponse(string quoteName = default(string), string quoteNumber = default(string), string quoteGuid = default(string), string revision = default(string), string ingramQuoteDate = default(string), string lastModifiedDate = default(string), string ingramQuoteExpiryDate = default(string), string currencyCode = default(string), string specialBidId = default(string), string specialBidEffectiveDate = default(string), string specialBidExpirationDate = default(string), string vendorQuoteNumber = default(string), string status = default(string), string statusReason = default(string), string closingReason = default(string), string dateClosed = default(string), string customerNeed = default(string), string proposedSolution = default(string), string introPreamble = default(string), string purchaseInstructions = default(string), string legalTerms = default(string), string quoteType = default(string), string leaseInfo = default(string), string leasingInstructions = default(string), string imWarehouse = default(string), string imWarehouseGstNumber = default(string), string paymentTermsName = default(string), QuoteDetailsResponseResellerInfo resellerInfo = default(QuoteDetailsResponseResellerInfo), QuoteDetailsResponseEndUserInfo endUserInfo = default(QuoteDetailsResponseEndUserInfo), QuoteDetailsResponseShippingInfo shippingInfo = default(QuoteDetailsResponseShippingInfo), List<QuoteDetailsResponseProductsInner> products = default(List<QuoteDetailsResponseProductsInner>), int productsCount = default(int), decimal extendedMsrpTotal = default(decimal), int quantityTotal = default(int), decimal extraFeesTotal = default(decimal), List<QuoteDetailsResponseProductsInnerPriceExtraFeesDetailsInner> extraFeesTotalDetails = default(List<QuoteDetailsResponseProductsInnerPriceExtraFeesDetailsInner>), decimal? taxTotal = default(decimal?), decimal extendedQuotePriceTotal = default(decimal), decimal? freightAmount = default(decimal?), string totalQuoteAmount = default(string), List<QuoteDetailsResponseAdditionalAttributesInner> additionalAttributes = default(List<QuoteDetailsResponseAdditionalAttributesInner>))
+        public QuoteDetailsResponse(string quoteName = default(string), string quoteNumber = default(string), string quoteGuid = default(string), string revision = default(string), string ingramQuoteDate = default(string), string lastModifiedDate = default(string), string ingramQuoteExpiryDate = default(string), string currencyCode = default(string), string specialBidId = default(string), string specialBidEffectiveDate = default(string), string specialBidExpirationDate = default(string), string vendorQuoteNumber = default(string), bool? isPartialOrderAllowed = default(bool?), string status = default(string), string statusReason = default(string), string closingReason = default(string), string dateClosed = default(string), string customerNeed = default(string), string proposedSolution = default(string), string introPreamble = default(string), string purchaseInstructions = default(string), string legalTerms = default(string), string quoteType = default(string), string leaseInfo = default(string), string leasingInstructions = default(string), string imWarehouse = default(string), string imWarehouseGstNumber = default(string), string paymentTermsName = default(string), QuoteDetailsResponseResellerInfo resellerInfo = default(QuoteDetailsResponseResellerInfo), QuoteDetailsResponseEndUserInfo endUserInfo = default(QuoteDetailsResponseEndUserInfo), QuoteDetailsResponseShippingInfo shippingInfo = default(QuoteDetailsResponseShippingInfo), List<QuoteDetailsResponseProductsInner> products = default(List<QuoteDetailsResponseProductsInner>), int productsCount = default(int), decimal extendedMsrpTotal = default(decimal), int quantityTotal = default(int), decimal extraFeesTotal = default(decimal), List<QuoteDetailsResponseProductsInnerPriceExtraFeesDetailsInner> extraFeesTotalDetails = default(List<QuoteDetailsResponseProductsInnerPriceExtraFeesDetailsInner>), decimal? taxTotal = default(decimal?), decimal extendedQuotePriceTotal = default(decimal), decimal? freightAmount = default(decimal?), string totalQuoteAmount = default(string), List<QuoteDetailsResponseAdditionalAttributesInner> additionalAttributes = default(List<QuoteDetailsResponseAdditionalAttributesInner>))
         {
             this.QuoteName = quoteName;
             this.QuoteNumber = quoteNumber;
@@ -90,6 +91,7 @@ namespace xi.sdk.resellers.Model
             this.SpecialBidEffectiveDate = specialBidEffectiveDate;
             this.SpecialBidExpirationDate = specialBidExpirationDate;
             this.VendorQuoteNumber = vendorQuoteNumber;
+            this.IsPartialOrderAllowed = isPartialOrderAllowed;
             this.Status = status;
             this.StatusReason = statusReason;
             this.ClosingReason = closingReason;
@@ -202,6 +204,12 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         [DataMember(Name = "vendorQuoteNumber", EmitDefaultValue = false)]
         public string VendorQuoteNumber { get; set; }
+
+        /// <summary>
+        /// Gets or Sets IsPartialOrderAllowed
+        /// </summary>
+        [DataMember(Name = "isPartialOrderAllowed", EmitDefaultValue = true)]
+        public bool? IsPartialOrderAllowed { get; set; }
 
         /// <summary>
         /// This refers to the primary status of the quote.  API responses will return
@@ -412,6 +420,7 @@ namespace xi.sdk.resellers.Model
             sb.Append("  SpecialBidEffectiveDate: ").Append(SpecialBidEffectiveDate).Append("\n");
             sb.Append("  SpecialBidExpirationDate: ").Append(SpecialBidExpirationDate).Append("\n");
             sb.Append("  VendorQuoteNumber: ").Append(VendorQuoteNumber).Append("\n");
+            sb.Append("  IsPartialOrderAllowed: ").Append(IsPartialOrderAllowed).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  StatusReason: ").Append(StatusReason).Append("\n");
             sb.Append("  ClosingReason: ").Append(ClosingReason).Append("\n");

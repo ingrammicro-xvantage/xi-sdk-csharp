@@ -82,6 +82,24 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'RemainingQuoteQty'
+        /// </summary>
+        [Fact]
+        public void RemainingQuoteQtyTest()
+        {
+            // TODO unit test for the property 'RemainingQuoteQty'
+        }
+
+        /// <summary>
+        /// Test the property 'MinimumOrderAllowedQty'
+        /// </summary>
+        [Fact]
+        public void MinimumOrderAllowedQtyTest()
+        {
+            // TODO unit test for the property 'MinimumOrderAllowedQty'
+        }
+
+        /// <summary>
         /// Test the property 'Notes'
         /// </summary>
         [Fact]
