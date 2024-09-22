@@ -64,9 +64,8 @@ namespace xi.sdk.resellers.Test.Api
             //string iMCountryCode = null;
             //string iMCorrelationID = null;
             //string iMApplicationId = null;
-            //string iMEnvironment = null;
             //string dealId = null;
-            //var response = instance.GetResellersV6Dealsdetails(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMApplicationId, iMEnvironment, dealId);
+            //var response = instance.GetResellersV6Dealsdetails(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMApplicationId, dealId);
             //Assert.IsType<DealsDetailsResponse>(response);
         }
 

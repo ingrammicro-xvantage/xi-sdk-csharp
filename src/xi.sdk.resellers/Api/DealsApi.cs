@@ -38,10 +38,9 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
         /// <param name="iMApplicationId">Unique value used to identify the sender of the transaction. Example: MyCompany</param>
-        /// <param name="iMEnvironment">Environment name.</param>
         /// <param name="dealId">Unique deal ID.</param>
         /// <returns>DealsDetailsResponse</returns>
-        DealsDetailsResponse GetResellersV6Dealsdetails(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMApplicationId, string iMEnvironment, string dealId);
+        DealsDetailsResponse GetResellersV6Dealsdetails(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMApplicationId, string dealId);
 
         /// <summary>
         /// Deals Details
@@ -54,10 +53,9 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
         /// <param name="iMApplicationId">Unique value used to identify the sender of the transaction. Example: MyCompany</param>
-        /// <param name="iMEnvironment">Environment name.</param>
         /// <param name="dealId">Unique deal ID.</param>
         /// <returns>ApiResponse of DealsDetailsResponse</returns>
-        ApiResponse<DealsDetailsResponse> GetResellersV6DealsdetailsWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMApplicationId, string iMEnvironment, string dealId);
+        ApiResponse<DealsDetailsResponse> GetResellersV6DealsdetailsWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMApplicationId, string dealId);
         /// <summary>
         /// Deals Search
         /// </summary>
@@ -115,11 +113,10 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
         /// <param name="iMApplicationId">Unique value used to identify the sender of the transaction. Example: MyCompany</param>
-        /// <param name="iMEnvironment">Environment name.</param>
         /// <param name="dealId">Unique deal ID.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DealsDetailsResponse</returns>
-        System.Threading.Tasks.Task<DealsDetailsResponse> GetResellersV6DealsdetailsAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMApplicationId, string iMEnvironment, string dealId, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<DealsDetailsResponse> GetResellersV6DealsdetailsAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMApplicationId, string dealId, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Deals Details
@@ -132,11 +129,10 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
         /// <param name="iMApplicationId">Unique value used to identify the sender of the transaction. Example: MyCompany</param>
-        /// <param name="iMEnvironment">Environment name.</param>
         /// <param name="dealId">Unique deal ID.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DealsDetailsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DealsDetailsResponse>> GetResellersV6DealsdetailsWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMApplicationId, string iMEnvironment, string dealId, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<DealsDetailsResponse>> GetResellersV6DealsdetailsWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMApplicationId, string dealId, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Deals Search
         /// </summary>
@@ -397,12 +393,11 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
         /// <param name="iMApplicationId">Unique value used to identify the sender of the transaction. Example: MyCompany</param>
-        /// <param name="iMEnvironment">Environment name.</param>
         /// <param name="dealId">Unique deal ID.</param>
         /// <returns>DealsDetailsResponse</returns>
-        public DealsDetailsResponse GetResellersV6Dealsdetails(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMApplicationId, string iMEnvironment, string dealId)
+        public DealsDetailsResponse GetResellersV6Dealsdetails(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMApplicationId, string dealId)
         {
-            xi.sdk.resellers.Client.ApiResponse<DealsDetailsResponse> localVarResponse = GetResellersV6DealsdetailsWithHttpInfo(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMApplicationId, iMEnvironment, dealId);
+            xi.sdk.resellers.Client.ApiResponse<DealsDetailsResponse> localVarResponse = GetResellersV6DealsdetailsWithHttpInfo(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMApplicationId, dealId);
             return localVarResponse.Data;
         }
 
@@ -414,10 +409,9 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
         /// <param name="iMApplicationId">Unique value used to identify the sender of the transaction. Example: MyCompany</param>
-        /// <param name="iMEnvironment">Environment name.</param>
         /// <param name="dealId">Unique deal ID.</param>
         /// <returns>ApiResponse of DealsDetailsResponse</returns>
-        public xi.sdk.resellers.Client.ApiResponse<DealsDetailsResponse> GetResellersV6DealsdetailsWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMApplicationId, string iMEnvironment, string dealId)
+        public xi.sdk.resellers.Client.ApiResponse<DealsDetailsResponse> GetResellersV6DealsdetailsWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMApplicationId, string dealId)
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)
@@ -434,10 +428,6 @@ namespace xi.sdk.resellers.Api
             // verify the required parameter 'iMApplicationId' is set
             if (iMApplicationId == null)
                 throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMApplicationId' when calling DealsApi->GetResellersV6Dealsdetails");
-
-            // verify the required parameter 'iMEnvironment' is set
-            if (iMEnvironment == null)
-                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMEnvironment' when calling DealsApi->GetResellersV6Dealsdetails");
 
             // verify the required parameter 'dealId' is set
             if (dealId == null)
@@ -464,7 +454,6 @@ namespace xi.sdk.resellers.Api
             localVarRequestOptions.HeaderParameters.Add("IM-CountryCode", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCountryCode)); // header parameter
             localVarRequestOptions.HeaderParameters.Add("IM-CorrelationID", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCorrelationID)); // header parameter
             localVarRequestOptions.HeaderParameters.Add("IM-ApplicationId", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMApplicationId)); // header parameter
-            localVarRequestOptions.HeaderParameters.Add("IM-Environment", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMEnvironment)); // header parameter
 
             // authentication (application) required
             // oauth required
@@ -493,13 +482,12 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
         /// <param name="iMApplicationId">Unique value used to identify the sender of the transaction. Example: MyCompany</param>
-        /// <param name="iMEnvironment">Environment name.</param>
         /// <param name="dealId">Unique deal ID.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DealsDetailsResponse</returns>
-        public async System.Threading.Tasks.Task<DealsDetailsResponse> GetResellersV6DealsdetailsAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMApplicationId, string iMEnvironment, string dealId, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<DealsDetailsResponse> GetResellersV6DealsdetailsAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMApplicationId, string dealId, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            xi.sdk.resellers.Client.ApiResponse<DealsDetailsResponse> localVarResponse = await GetResellersV6DealsdetailsWithHttpInfoAsync(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMApplicationId, iMEnvironment, dealId, cancellationToken).ConfigureAwait(false);
+            xi.sdk.resellers.Client.ApiResponse<DealsDetailsResponse> localVarResponse = await GetResellersV6DealsdetailsWithHttpInfoAsync(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMApplicationId, dealId, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -511,11 +499,10 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
         /// <param name="iMApplicationId">Unique value used to identify the sender of the transaction. Example: MyCompany</param>
-        /// <param name="iMEnvironment">Environment name.</param>
         /// <param name="dealId">Unique deal ID.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DealsDetailsResponse)</returns>
-        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<DealsDetailsResponse>> GetResellersV6DealsdetailsWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMApplicationId, string iMEnvironment, string dealId, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<DealsDetailsResponse>> GetResellersV6DealsdetailsWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMApplicationId, string dealId, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)
@@ -532,10 +519,6 @@ namespace xi.sdk.resellers.Api
             // verify the required parameter 'iMApplicationId' is set
             if (iMApplicationId == null)
                 throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMApplicationId' when calling DealsApi->GetResellersV6Dealsdetails");
-
-            // verify the required parameter 'iMEnvironment' is set
-            if (iMEnvironment == null)
-                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMEnvironment' when calling DealsApi->GetResellersV6Dealsdetails");
 
             // verify the required parameter 'dealId' is set
             if (dealId == null)
@@ -564,7 +547,6 @@ namespace xi.sdk.resellers.Api
             localVarRequestOptions.HeaderParameters.Add("IM-CountryCode", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCountryCode)); // header parameter
             localVarRequestOptions.HeaderParameters.Add("IM-CorrelationID", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCorrelationID)); // header parameter
             localVarRequestOptions.HeaderParameters.Add("IM-ApplicationId", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMApplicationId)); // header parameter
-            localVarRequestOptions.HeaderParameters.Add("IM-Environment", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMEnvironment)); // header parameter
 
             // authentication (application) required
             // oauth required

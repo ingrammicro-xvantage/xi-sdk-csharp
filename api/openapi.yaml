@@ -6966,17 +6966,6 @@ paths:
           maxLength: 32
           type: string
         style: simple
-      - description: Environment name.
-        example: prodChicago
-        explode: false
-        in: header
-        name: IM-Environment
-        required: true
-        schema:
-          example: 20-222222
-          maxLength: 32
-          type: string
-        style: simple
       - description: Unique deal ID.
         explode: false
         in: path
