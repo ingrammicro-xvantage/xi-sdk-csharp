@@ -49,7 +49,9 @@ namespace xi.sdk.resellers.Model
         /// The name of the header level field.
         /// </summary>
         /// <value>The name of the header level field.</value>
-        /// <example>VEND_AUTH_NBR_FLG</example>
+        /*
+        <example>VEND_AUTH_NBR_FLG</example>
+        */
         [DataMember(Name = "attributeName", EmitDefaultValue = false)]
         public string AttributeName { get; set; }
 
@@ -57,7 +59,9 @@ namespace xi.sdk.resellers.Model
         /// The value of the header level field.
         /// </summary>
         /// <value>The value of the header level field.</value>
-        /// <example>ABC1234</example>
+        /*
+        <example>ABC1234</example>
+        */
         [DataMember(Name = "attributeValue", EmitDefaultValue = false)]
         public string AttributeValue { get; set; }
 
@@ -65,7 +69,9 @@ namespace xi.sdk.resellers.Model
         /// The description of the header level field.
         /// </summary>
         /// <value>The description of the header level field.</value>
-        /// <example>Authorization Number</example>
+        /*
+        <example>Authorization Number</example>
+        */
         [DataMember(Name = "attributeDescription", EmitDefaultValue = false)]
         public string AttributeDescription { get; set; }
 

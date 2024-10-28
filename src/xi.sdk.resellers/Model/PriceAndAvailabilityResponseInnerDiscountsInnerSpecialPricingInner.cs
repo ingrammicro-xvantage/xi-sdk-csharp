@@ -61,7 +61,9 @@ namespace xi.sdk.resellers.Model
         /// The type of discount being given to the customer.
         /// </summary>
         /// <value>The type of discount being given to the customer.</value>
-        /// <example>Special Bid, Promo Discount</example>
+        /*
+        <example>Special Bid, Promo Discount</example>
+        */
         [DataMember(Name = "discountType", EmitDefaultValue = false)]
         public string DiscountType { get; set; }
 

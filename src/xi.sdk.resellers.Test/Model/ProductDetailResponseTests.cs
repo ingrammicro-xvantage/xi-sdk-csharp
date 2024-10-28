@@ -73,15 +73,6 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'CustomerPartNumber'
-        /// </summary>
-        [Fact]
-        public void CustomerPartNumberTest()
-        {
-            // TODO unit test for the property 'CustomerPartNumber'
-        }
-
-        /// <summary>
         /// Test the property 'ProductAuthorized'
         /// </summary>
         [Fact]
@@ -118,12 +109,12 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'ProductSubCategory'
+        /// Test the property 'ProductSubcategory'
         /// </summary>
         [Fact]
-        public void ProductSubCategoryTest()
+        public void ProductSubcategoryTest()
         {
-            // TODO unit test for the property 'ProductSubCategory'
+            // TODO unit test for the property 'ProductSubcategory'
         }
 
         /// <summary>
@@ -163,6 +154,15 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'CustomerPartNumber'
+        /// </summary>
+        [Fact]
+        public void CustomerPartNumberTest()
+        {
+            // TODO unit test for the property 'CustomerPartNumber'
+        }
+
+        /// <summary>
         /// Test the property 'Indicators'
         /// </summary>
         [Fact]
@@ -196,6 +196,15 @@ namespace xi.sdk.resellers.Test.Model
         public void AdditionalInformationTest()
         {
             // TODO unit test for the property 'AdditionalInformation'
+        }
+
+        /// <summary>
+        /// Test the property 'SubscriptionDetails'
+        /// </summary>
+        [Fact]
+        public void SubscriptionDetailsTest()
+        {
+            // TODO unit test for the property 'SubscriptionDetails'
         }
     }
 }

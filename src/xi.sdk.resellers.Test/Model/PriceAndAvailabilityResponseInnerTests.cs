@@ -296,5 +296,14 @@ namespace xi.sdk.resellers.Test.Model
         {
             // TODO unit test for the property 'ServiceFees'
         }
+
+        /// <summary>
+        /// Test the property 'SubscriptionPrice'
+        /// </summary>
+        [Fact]
+        public void SubscriptionPriceTest()
+        {
+            // TODO unit test for the property 'SubscriptionPrice'
+        }
     }
 }

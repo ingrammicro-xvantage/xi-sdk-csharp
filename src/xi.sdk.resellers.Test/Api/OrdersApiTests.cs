@@ -149,10 +149,10 @@ namespace xi.sdk.resellers.Test.Api
             //string iMCustomerNumber = null;
             //string iMCountryCode = null;
             //string iMCorrelationID = null;
-            //AsyncOrderCreateDTO asyncOrderCreateDTO = null;
+            //OrderCreateV7Request orderCreateV7Request = null;
             //string? iMSenderID = null;
-            //var response = instance.PostCreateorderV7(iMCustomerNumber, iMCountryCode, iMCorrelationID, asyncOrderCreateDTO, iMSenderID);
-            //Assert.IsType<AsyncOrderCreateResponse>(response);
+            //var response = instance.PostCreateorderV7(iMCustomerNumber, iMCountryCode, iMCorrelationID, orderCreateV7Request, iMSenderID);
+            //Assert.IsType<OrderCreateV7Response201>(response);
         }
 
         /// <summary>

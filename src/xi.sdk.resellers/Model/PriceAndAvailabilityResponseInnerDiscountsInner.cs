@@ -52,7 +52,7 @@ namespace xi.sdk.resellers.Model
         /// <summary>
         /// Gets or Sets QuantityDiscounts
         /// </summary>
-        [DataMember(Name = "quantityDiscounts", EmitDefaultValue = false)]
+        [DataMember(Name = "quantityDiscounts", EmitDefaultValue = true)]
         public List<PriceAndAvailabilityResponseInnerDiscountsInnerQuantityDiscountsInner> QuantityDiscounts { get; set; }
 
         /// <summary>

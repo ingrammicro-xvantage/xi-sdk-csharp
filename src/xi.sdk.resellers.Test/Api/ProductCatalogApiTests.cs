@@ -70,6 +70,24 @@ namespace xi.sdk.resellers.Test.Api
         }
 
         /// <summary>
+        /// Test GetResellerV6ProductdetailCmp
+        /// </summary>
+        [Fact]
+        public void GetResellerV6ProductdetailCmpTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string iMCustomerNumber = null;
+            //string iMCountryCode = null;
+            //string iMCorrelationID = null;
+            //string? iMSenderID = null;
+            //string? vendorPartNumber = null;
+            //string? planName = null;
+            //string? planId = null;
+            //var response = instance.GetResellerV6ProductdetailCmp(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMSenderID, vendorPartNumber, planName, planId);
+            //Assert.IsType<ProductDetailResponse>(response);
+        }
+
+        /// <summary>
         /// Test GetResellerV6Productsearch
         /// </summary>
         [Fact]
@@ -91,7 +109,10 @@ namespace xi.sdk.resellers.Test.Api
             //List<string>? keyword = null;
             //string? category = null;
             //string? skipAuthorisation = null;
-            //var response = instance.GetResellerV6Productsearch(iMCustomerNumber, iMCorrelationID, iMCountryCode, pageNumber, pageSize, iMSenderID, type, hasDiscounts, vendor, vendorPartNumber, acceptLanguage, vendorNumber, keyword, category, skipAuthorisation);
+            //string? groupName = null;
+            //GetResellerV6ProductsearchPlanIDParameter? planID = null;
+            //bool? showGroupInfo = null;
+            //var response = instance.GetResellerV6Productsearch(iMCustomerNumber, iMCorrelationID, iMCountryCode, pageNumber, pageSize, iMSenderID, type, hasDiscounts, vendor, vendorPartNumber, acceptLanguage, vendorNumber, keyword, category, skipAuthorisation, groupName, planID, showGroupInfo);
             //Assert.IsType<ProductSearchResponse>(response);
         }
 

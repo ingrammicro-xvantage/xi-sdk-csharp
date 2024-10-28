@@ -91,6 +91,15 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'SubscriptionCatalog'
+        /// </summary>
+        [Fact]
+        public void SubscriptionCatalogTest()
+        {
+            // TODO unit test for the property 'SubscriptionCatalog'
+        }
+
+        /// <summary>
         /// Test the property 'NextPage'
         /// </summary>
         [Fact]

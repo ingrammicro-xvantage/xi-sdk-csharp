@@ -62,11 +62,6 @@ namespace xi.sdk.resellers.Model
                 throw new ArgumentNullException("invoiceNumber is a required property for ReturnsCreateRequestListInner and cannot be null");
             }
             this.InvoiceNumber = invoiceNumber;
-            // to ensure "invoiceDate" is required (not null)
-            if (invoiceDate == null)
-            {
-                throw new ArgumentNullException("invoiceDate is a required property for ReturnsCreateRequestListInner and cannot be null");
-            }
             this.InvoiceDate = invoiceDate;
             this.Quantity = quantity;
             // to ensure "primaryReason" is required (not null)

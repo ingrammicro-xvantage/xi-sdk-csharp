@@ -100,6 +100,15 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'PlanID'
+        /// </summary>
+        [Fact]
+        public void PlanIDTest()
+        {
+            // TODO unit test for the property 'PlanID'
+        }
+
+        /// <summary>
         /// Test the property 'AdditionalAttributes'
         /// </summary>
         [Fact]

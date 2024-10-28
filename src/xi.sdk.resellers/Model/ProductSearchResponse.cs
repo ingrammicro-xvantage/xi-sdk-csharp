@@ -39,14 +39,16 @@ namespace xi.sdk.resellers.Model
         /// <param name="pageSize">The number of results per page. Default is 25..</param>
         /// <param name="pageNumber">current page number default is 1.</param>
         /// <param name="catalog">catalog.</param>
+        /// <param name="subscriptionCatalog">subscriptionCatalog.</param>
         /// <param name="nextPage">link/URL for accessing next page..</param>
         /// <param name="previousPage">link/URL for accessing previous page..</param>
-        public ProductSearchResponse(int recordsFound = default(int), int pageSize = default(int), int pageNumber = default(int), List<ProductSearchResponseCatalogInner> catalog = default(List<ProductSearchResponseCatalogInner>), string nextPage = default(string), string previousPage = default(string))
+        public ProductSearchResponse(int recordsFound = default(int), int pageSize = default(int), int pageNumber = default(int), List<ProductSearchResponseCatalogInner> catalog = default(List<ProductSearchResponseCatalogInner>), List<ProductSearchResponseSubscriptionCatalogInner> subscriptionCatalog = default(List<ProductSearchResponseSubscriptionCatalogInner>), string nextPage = default(string), string previousPage = default(string))
         {
             this.RecordsFound = recordsFound;
             this.PageSize = pageSize;
             this.PageNumber = pageNumber;
             this.Catalog = catalog;
+            this.SubscriptionCatalog = subscriptionCatalog;
             this.NextPage = nextPage;
             this.PreviousPage = previousPage;
         }
@@ -79,6 +81,12 @@ namespace xi.sdk.resellers.Model
         public List<ProductSearchResponseCatalogInner> Catalog { get; set; }
 
         /// <summary>
+        /// Gets or Sets SubscriptionCatalog
+        /// </summary>
+        [DataMember(Name = "subscriptionCatalog", EmitDefaultValue = false)]
+        public List<ProductSearchResponseSubscriptionCatalogInner> SubscriptionCatalog { get; set; }
+
+        /// <summary>
         /// link/URL for accessing next page.
         /// </summary>
         /// <value>link/URL for accessing next page.</value>
@@ -104,6 +112,7 @@ namespace xi.sdk.resellers.Model
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
             sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
             sb.Append("  Catalog: ").Append(Catalog).Append("\n");
+            sb.Append("  SubscriptionCatalog: ").Append(SubscriptionCatalog).Append("\n");
             sb.Append("  NextPage: ").Append(NextPage).Append("\n");
             sb.Append("  PreviousPage: ").Append(PreviousPage).Append("\n");
             sb.Append("}\n");

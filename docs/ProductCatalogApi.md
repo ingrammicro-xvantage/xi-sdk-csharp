@@ -5,6 +5,7 @@ All URIs are relative to *https://api.ingrammicro.com:443*
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
 | [**GetResellerV6Productdetail**](ProductCatalogApi.md#getresellerv6productdetail) | **GET** /resellers/v6/catalog/details/{ingramPartNumber} | Product Details |
+| [**GetResellerV6ProductdetailCmp**](ProductCatalogApi.md#getresellerv6productdetailcmp) | **GET** /resellers/v6/catalog/details | Product Details |
 | [**GetResellerV6Productsearch**](ProductCatalogApi.md#getresellerv6productsearch) | **GET** /resellers/v6/catalog | Search Products |
 | [**PostPriceandavailability**](ProductCatalogApi.md#postpriceandavailability) | **POST** /resellers/v6/catalog/priceandavailability | Price and Availability |
 
@@ -117,9 +118,122 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a id="getresellerv6productdetailcmp"></a>
+# **GetResellerV6ProductdetailCmp**
+> ProductDetailResponse GetResellerV6ProductdetailCmp (string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = null, string? vendorPartNumber = null, string? planName = null, string? planId = null)
+
+Product Details
+
+Search all the product-related details using a unique Ingram Part Number.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using xi.sdk.resellers.Api;
+using xi.sdk.resellers.Client;
+using xi.sdk.resellers.Model;
+
+namespace Example
+{
+    public class GetResellerV6ProductdetailCmpExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.ingrammicro.com:443";
+            // Configure OAuth2 access token for authorization: application
+            config.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new ProductCatalogApi(httpClient, config, httpClientHandler);
+            var iMCustomerNumber = 20-222222;  // string | Your unique Ingram Micro customer number
+            var iMCountryCode = US;  // string | Two-character ISO country code.
+            var iMCorrelationID = fbac82ba-cf0a-4bcf-fc03-0c5084;  // string | Unique transaction number to identify each transaction across all the systems
+            var iMSenderID = MyCompany;  // string? | Sender Identification text (optional) 
+            var vendorPartNumber = "vendorPartNumber_example";  // string? | Vendor’s part number for the product. (optional) 
+            var planName = "planName_example";  // string? | Name of the subscription plan (optional) 
+            var planId = "planId_example";  // string? | Id of the subscription plan.   <span style='color:red'>To search for details of subscription products, customer must pass either vendorPartNumber, planName or planId.</span> (optional) 
+
+            try
+            {
+                // Product Details
+                ProductDetailResponse result = apiInstance.GetResellerV6ProductdetailCmp(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMSenderID, vendorPartNumber, planName, planId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ProductCatalogApi.GetResellerV6ProductdetailCmp: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the GetResellerV6ProductdetailCmpWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Product Details
+    ApiResponse<ProductDetailResponse> response = apiInstance.GetResellerV6ProductdetailCmpWithHttpInfo(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMSenderID, vendorPartNumber, planName, planId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ProductCatalogApi.GetResellerV6ProductdetailCmpWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **iMCustomerNumber** | **string** | Your unique Ingram Micro customer number |  |
+| **iMCountryCode** | **string** | Two-character ISO country code. |  |
+| **iMCorrelationID** | **string** | Unique transaction number to identify each transaction across all the systems |  |
+| **iMSenderID** | **string?** | Sender Identification text | [optional]  |
+| **vendorPartNumber** | **string?** | Vendor’s part number for the product. | [optional]  |
+| **planName** | **string?** | Name of the subscription plan | [optional]  |
+| **planId** | **string?** | Id of the subscription plan.   &lt;span style&#x3D;&#39;color:red&#39;&gt;To search for details of subscription products, customer must pass either vendorPartNumber, planName or planId.&lt;/span&gt; | [optional]  |
+
+### Return type
+
+[**ProductDetailResponse**](ProductDetailResponse.md)
+
+### Authorization
+
+[application](../README.md#application)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad Request |  -  |
+| **404** | No Content |  -  |
+| **500** | Internal Server Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a id="getresellerv6productsearch"></a>
 # **GetResellerV6Productsearch**
-> ProductSearchResponse GetResellerV6Productsearch (string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, int? pageNumber = null, int? pageSize = null, string? iMSenderID = null, string? type = null, string? hasDiscounts = null, List<string>? vendor = null, List<string>? vendorPartNumber = null, string? acceptLanguage = null, string? vendorNumber = null, List<string>? keyword = null, string? category = null, string? skipAuthorisation = null)
+> ProductSearchResponse GetResellerV6Productsearch (string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, int? pageNumber = null, int? pageSize = null, string? iMSenderID = null, string? type = null, string? hasDiscounts = null, List<string>? vendor = null, List<string>? vendorPartNumber = null, string? acceptLanguage = null, string? vendorNumber = null, List<string>? keyword = null, string? category = null, string? skipAuthorisation = null, string? groupName = null, GetResellerV6ProductsearchPlanIDParameter? planID = null, bool? showGroupInfo = null)
 
 Search Products
 
@@ -164,11 +278,14 @@ namespace Example
             var keyword = new List<string>?(); // List<string>? | Keyword search,can be ingram part number or vendor part number or product title or vendor nameKeyword search. Can be Ingram Micro part number, vender part number, product title, or vendor name. (optional) 
             var category = Accessories;  // string? | The category of the product. Example: Displays. (optional) 
             var skipAuthorisation = true;  // string? | This parameter is True when you want Skip the authorization, so template will work like current B2b template. (optional) 
+            var groupName = Microsoft Defender for Endpoint P2 (NCE COM MTH);  // string? | Name of the Product Group (optional) 
+            var planID = new GetResellerV6ProductsearchPlanIDParameter?(); // GetResellerV6ProductsearchPlanIDParameter? | ID of the plan (optional) 
+            var showGroupInfo = true;  // bool? | In case of value true, below Group related information will displayed without the plan info. Group Name, Group Description, Number of plans, link in the group. A link will be provided if customer want to see all the plans in that group. (optional) 
 
             try
             {
                 // Search Products
-                ProductSearchResponse result = apiInstance.GetResellerV6Productsearch(iMCustomerNumber, iMCorrelationID, iMCountryCode, pageNumber, pageSize, iMSenderID, type, hasDiscounts, vendor, vendorPartNumber, acceptLanguage, vendorNumber, keyword, category, skipAuthorisation);
+                ProductSearchResponse result = apiInstance.GetResellerV6Productsearch(iMCustomerNumber, iMCorrelationID, iMCountryCode, pageNumber, pageSize, iMSenderID, type, hasDiscounts, vendor, vendorPartNumber, acceptLanguage, vendorNumber, keyword, category, skipAuthorisation, groupName, planID, showGroupInfo);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -189,7 +306,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Search Products
-    ApiResponse<ProductSearchResponse> response = apiInstance.GetResellerV6ProductsearchWithHttpInfo(iMCustomerNumber, iMCorrelationID, iMCountryCode, pageNumber, pageSize, iMSenderID, type, hasDiscounts, vendor, vendorPartNumber, acceptLanguage, vendorNumber, keyword, category, skipAuthorisation);
+    ApiResponse<ProductSearchResponse> response = apiInstance.GetResellerV6ProductsearchWithHttpInfo(iMCustomerNumber, iMCorrelationID, iMCountryCode, pageNumber, pageSize, iMSenderID, type, hasDiscounts, vendor, vendorPartNumber, acceptLanguage, vendorNumber, keyword, category, skipAuthorisation, groupName, planID, showGroupInfo);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -221,6 +338,9 @@ catch (ApiException e)
 | **keyword** | [**List&lt;string&gt;?**](string.md) | Keyword search,can be ingram part number or vendor part number or product title or vendor nameKeyword search. Can be Ingram Micro part number, vender part number, product title, or vendor name. | [optional]  |
 | **category** | **string?** | The category of the product. Example: Displays. | [optional]  |
 | **skipAuthorisation** | **string?** | This parameter is True when you want Skip the authorization, so template will work like current B2b template. | [optional]  |
+| **groupName** | **string?** | Name of the Product Group | [optional]  |
+| **planID** | [**GetResellerV6ProductsearchPlanIDParameter?**](GetResellerV6ProductsearchPlanIDParameter?.md) | ID of the plan | [optional]  |
+| **showGroupInfo** | **bool?** | In case of value true, below Group related information will displayed without the plan info. Group Name, Group Description, Number of plans, link in the group. A link will be provided if customer want to see all the plans in that group. | [optional]  |
 
 ### Return type
 

@@ -317,7 +317,9 @@ namespace xi.sdk.resellers.Model
         /// <summary>
         /// Gets or Sets DefaultCarrierName
         /// </summary>
-        /// <example>FEDEX GROUND</example>
+        /*
+        <example>FEDEX GROUND</example>
+        */
         [DataMember(Name = "defaultCarrierName", EmitDefaultValue = false)]
         public string DefaultCarrierName { get; set; }
 

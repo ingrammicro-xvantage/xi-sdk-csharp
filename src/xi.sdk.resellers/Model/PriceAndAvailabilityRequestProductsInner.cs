@@ -39,15 +39,17 @@ namespace xi.sdk.resellers.Model
         /// <param name="vendorPartNumber">Vendor’s part number for the product..</param>
         /// <param name="customerPartNumber">Reseller/end-user’s part number for the product..</param>
         /// <param name="upc">The UPC code for the product. Consists of 12 numeric digits that are uniquely assigned to each trade item..</param>
-        /// <param name="quantityRequested">Number of quantity of the Product..</param>
+        /// <param name="quantityRequested">quantityRequested.</param>
+        /// <param name="planID">planID.</param>
         /// <param name="additionalAttributes">additionalAttributes.</param>
-        public PriceAndAvailabilityRequestProductsInner(string ingramPartNumber = default(string), string vendorPartNumber = default(string), string customerPartNumber = default(string), string upc = default(string), string quantityRequested = default(string), List<PriceAndAvailabilityRequestProductsInnerAdditionalAttributesInner> additionalAttributes = default(List<PriceAndAvailabilityRequestProductsInnerAdditionalAttributesInner>))
+        public PriceAndAvailabilityRequestProductsInner(string ingramPartNumber = default(string), string vendorPartNumber = default(string), string customerPartNumber = default(string), string upc = default(string), PriceAndAvailabilityRequestProductsInnerQuantityRequested quantityRequested = default(PriceAndAvailabilityRequestProductsInnerQuantityRequested), PriceAndAvailabilityRequestProductsInnerPlanID planID = default(PriceAndAvailabilityRequestProductsInnerPlanID), List<PriceAndAvailabilityRequestProductsInnerAdditionalAttributesInner> additionalAttributes = default(List<PriceAndAvailabilityRequestProductsInnerAdditionalAttributesInner>))
         {
             this.IngramPartNumber = ingramPartNumber;
             this.VendorPartNumber = vendorPartNumber;
             this.CustomerPartNumber = customerPartNumber;
             this.Upc = upc;
             this.QuantityRequested = quantityRequested;
+            this.PlanID = planID;
             this.AdditionalAttributes = additionalAttributes;
         }
 
@@ -55,36 +57,41 @@ namespace xi.sdk.resellers.Model
         /// Ingram Micro unique part number for the product.
         /// </summary>
         /// <value>Ingram Micro unique part number for the product.</value>
-        [DataMember(Name = "ingramPartNumber", EmitDefaultValue = false)]
+        [DataMember(Name = "ingramPartNumber", EmitDefaultValue = true)]
         public string IngramPartNumber { get; set; }
 
         /// <summary>
         /// Vendor’s part number for the product.
         /// </summary>
         /// <value>Vendor’s part number for the product.</value>
-        [DataMember(Name = "vendorPartNumber", EmitDefaultValue = false)]
+        [DataMember(Name = "vendorPartNumber", EmitDefaultValue = true)]
         public string VendorPartNumber { get; set; }
 
         /// <summary>
         /// Reseller/end-user’s part number for the product.
         /// </summary>
         /// <value>Reseller/end-user’s part number for the product.</value>
-        [DataMember(Name = "customerPartNumber", EmitDefaultValue = false)]
+        [DataMember(Name = "customerPartNumber", EmitDefaultValue = true)]
         public string CustomerPartNumber { get; set; }
 
         /// <summary>
         /// The UPC code for the product. Consists of 12 numeric digits that are uniquely assigned to each trade item.
         /// </summary>
         /// <value>The UPC code for the product. Consists of 12 numeric digits that are uniquely assigned to each trade item.</value>
-        [DataMember(Name = "upc", EmitDefaultValue = false)]
+        [DataMember(Name = "upc", EmitDefaultValue = true)]
         public string Upc { get; set; }
 
         /// <summary>
-        /// Number of quantity of the Product.
+        /// Gets or Sets QuantityRequested
         /// </summary>
-        /// <value>Number of quantity of the Product.</value>
-        [DataMember(Name = "quantityRequested", EmitDefaultValue = false)]
-        public string QuantityRequested { get; set; }
+        [DataMember(Name = "quantityRequested", EmitDefaultValue = true)]
+        public PriceAndAvailabilityRequestProductsInnerQuantityRequested QuantityRequested { get; set; }
+
+        /// <summary>
+        /// Gets or Sets PlanID
+        /// </summary>
+        [DataMember(Name = "planID", EmitDefaultValue = true)]
+        public PriceAndAvailabilityRequestProductsInnerPlanID PlanID { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalAttributes
@@ -105,6 +112,7 @@ namespace xi.sdk.resellers.Model
             sb.Append("  CustomerPartNumber: ").Append(CustomerPartNumber).Append("\n");
             sb.Append("  Upc: ").Append(Upc).Append("\n");
             sb.Append("  QuantityRequested: ").Append(QuantityRequested).Append("\n");
+            sb.Append("  PlanID: ").Append(PlanID).Append("\n");
             sb.Append("  AdditionalAttributes: ").Append(AdditionalAttributes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

@@ -62,7 +62,8 @@ namespace xi.sdk.resellers.Model
         /// <param name="discounts">discounts.</param>
         /// <param name="bundlePartIndicator">True of false value to indicate whether it’s bundle part. *Currently, this feature is not available in these countries (Mexico, Turkey, New Zealand, Colombia, Chile, Brazil, Peru, Western Sahara)..</param>
         /// <param name="serviceFees">*Currently, this feature is not available in these countries (Mexico, Turkey, New Zealand, Colombia, Chile, Brazil, Peru, Western Sahara)..</param>
-        public PriceAndAvailabilityResponseInner(string productStatusCode = default(string), string productStatusMessage = default(string), string ingramPartNumber = default(string), string vendorPartNumber = default(string), string extendedVendorPartNumber = default(string), string customerPartNumber = default(string), string upc = default(string), string partNumberType = default(string), string vendorNumber = default(string), string vendorName = default(string), string description = default(string), string productClass = default(string), string uom = default(string), string productStatus = default(string), bool acceptBackOrder = default(bool), bool productAuthorized = default(bool), bool returnableProduct = default(bool), bool endUserInfoRequired = default(bool), bool govtSpecialPriceAvailable = default(bool), string govtProgramType = default(string), string govtEndUserType = default(string), PriceAndAvailabilityResponseInnerAvailability availability = default(PriceAndAvailabilityResponseInnerAvailability), List<PriceAndAvailabilityResponseInnerReserveInventoryDetailsInner> reserveInventoryDetails = default(List<PriceAndAvailabilityResponseInnerReserveInventoryDetailsInner>), PriceAndAvailabilityResponseInnerPricing pricing = default(PriceAndAvailabilityResponseInnerPricing), List<PriceAndAvailabilityResponseInnerDiscountsInner> discounts = default(List<PriceAndAvailabilityResponseInnerDiscountsInner>), bool bundlePartIndicator = default(bool), List<PriceAndAvailabilityResponseInnerServiceFeesInner> serviceFees = default(List<PriceAndAvailabilityResponseInnerServiceFeesInner>))
+        /// <param name="subscriptionPrice">subscriptionPrice.</param>
+        public PriceAndAvailabilityResponseInner(string productStatusCode = default(string), string productStatusMessage = default(string), string ingramPartNumber = default(string), string vendorPartNumber = default(string), string extendedVendorPartNumber = default(string), string customerPartNumber = default(string), string upc = default(string), string partNumberType = default(string), string vendorNumber = default(string), string vendorName = default(string), string description = default(string), string productClass = default(string), string uom = default(string), string productStatus = default(string), bool? acceptBackOrder = default(bool?), bool? productAuthorized = default(bool?), bool? returnableProduct = default(bool?), bool? endUserInfoRequired = default(bool?), bool? govtSpecialPriceAvailable = default(bool?), string govtProgramType = default(string), string govtEndUserType = default(string), PriceAndAvailabilityResponseInnerAvailability availability = default(PriceAndAvailabilityResponseInnerAvailability), List<PriceAndAvailabilityResponseInnerReserveInventoryDetailsInner> reserveInventoryDetails = default(List<PriceAndAvailabilityResponseInnerReserveInventoryDetailsInner>), PriceAndAvailabilityResponseInnerPricing pricing = default(PriceAndAvailabilityResponseInnerPricing), List<PriceAndAvailabilityResponseInnerDiscountsInner> discounts = default(List<PriceAndAvailabilityResponseInnerDiscountsInner>), bool? bundlePartIndicator = default(bool?), List<PriceAndAvailabilityResponseInnerServiceFeesInner> serviceFees = default(List<PriceAndAvailabilityResponseInnerServiceFeesInner>), List<PriceAndAvailabilityResponseInnerSubscriptionPriceInner> subscriptionPrice = default(List<PriceAndAvailabilityResponseInnerSubscriptionPriceInner>))
         {
             this.ProductStatusCode = productStatusCode;
             this.ProductStatusMessage = productStatusMessage;
@@ -91,6 +92,7 @@ namespace xi.sdk.resellers.Model
             this.Discounts = discounts;
             this.BundlePartIndicator = bundlePartIndicator;
             this.ServiceFees = serviceFees;
+            this.SubscriptionPrice = subscriptionPrice;
         }
 
         /// <summary>
@@ -118,21 +120,21 @@ namespace xi.sdk.resellers.Model
         /// Vendor’s part number for the product.
         /// </summary>
         /// <value>Vendor’s part number for the product.</value>
-        [DataMember(Name = "vendorPartNumber", EmitDefaultValue = false)]
+        [DataMember(Name = "vendorPartNumber", EmitDefaultValue = true)]
         public string VendorPartNumber { get; set; }
 
         /// <summary>
         /// Extended Vendor Part Number. *Currently, this feature is not available in these countries (Mexico, Turkey, New Zealand, Colombia, Chile, Brazil, Peru, Western Sahara).
         /// </summary>
         /// <value>Extended Vendor Part Number. *Currently, this feature is not available in these countries (Mexico, Turkey, New Zealand, Colombia, Chile, Brazil, Peru, Western Sahara).</value>
-        [DataMember(Name = "extendedVendorPartNumber", EmitDefaultValue = false)]
+        [DataMember(Name = "extendedVendorPartNumber", EmitDefaultValue = true)]
         public string ExtendedVendorPartNumber { get; set; }
 
         /// <summary>
         /// Reseller / end-user’s part number for the product.
         /// </summary>
         /// <value>Reseller / end-user’s part number for the product.</value>
-        [DataMember(Name = "customerPartNumber", EmitDefaultValue = false)]
+        [DataMember(Name = "customerPartNumber", EmitDefaultValue = true)]
         public string CustomerPartNumber { get; set; }
 
         /// <summary>
@@ -146,49 +148,49 @@ namespace xi.sdk.resellers.Model
         /// Number type of the part.
         /// </summary>
         /// <value>Number type of the part.</value>
-        [DataMember(Name = "partNumberType", EmitDefaultValue = false)]
+        [DataMember(Name = "partNumberType", EmitDefaultValue = true)]
         public string PartNumberType { get; set; }
 
         /// <summary>
         /// Vendor number that identifies the product.
         /// </summary>
         /// <value>Vendor number that identifies the product.</value>
-        [DataMember(Name = "vendorNumber", EmitDefaultValue = false)]
+        [DataMember(Name = "vendorNumber", EmitDefaultValue = true)]
         public string VendorNumber { get; set; }
 
         /// <summary>
         /// Vendor name for the order.
         /// </summary>
         /// <value>Vendor name for the order.</value>
-        [DataMember(Name = "vendorName", EmitDefaultValue = false)]
+        [DataMember(Name = "vendorName", EmitDefaultValue = true)]
         public string VendorName { get; set; }
 
         /// <summary>
         /// The description given for the product.
         /// </summary>
         /// <value>The description given for the product.</value>
-        [DataMember(Name = "description", EmitDefaultValue = false)]
+        [DataMember(Name = "description", EmitDefaultValue = true)]
         public string Description { get; set; }
 
         /// <summary>
         /// Indicates whether the product is directly shipped from the vendor’s warehouse or if the product ships from Ingram Micro’s warehouse. Class Codes are Ingram classifications on how skus are stocked A &#x3D; Product that is stocked usually in all IM warehouses and replenished on a regular basis. B &#x3D; Product that is stocked in limited IM warehouses and replenished on a regular basis C &#x3D; Product that is stocked in fewer IM warehouses and replenished on a regular basis. D &#x3D; Product that Ingram Micro has elected to discontinue. E &#x3D; Product that will be phased out later, according to the vendor. You may not want to replenish this product, but instead sell down what is in stock. F &#x3D; Product that we carry for a specific customer or supplier under a contractual agreement. N &#x3D; New Sku. Classification before first receipt O &#x3D; Discontinued product to be liquidated S&#x3D; Order for Specialized Demand (Order to backorder) X&#x3D; direct ship from Vendor V &#x3D; product that vendor has elected to discontinue.
         /// </summary>
         /// <value>Indicates whether the product is directly shipped from the vendor’s warehouse or if the product ships from Ingram Micro’s warehouse. Class Codes are Ingram classifications on how skus are stocked A &#x3D; Product that is stocked usually in all IM warehouses and replenished on a regular basis. B &#x3D; Product that is stocked in limited IM warehouses and replenished on a regular basis C &#x3D; Product that is stocked in fewer IM warehouses and replenished on a regular basis. D &#x3D; Product that Ingram Micro has elected to discontinue. E &#x3D; Product that will be phased out later, according to the vendor. You may not want to replenish this product, but instead sell down what is in stock. F &#x3D; Product that we carry for a specific customer or supplier under a contractual agreement. N &#x3D; New Sku. Classification before first receipt O &#x3D; Discontinued product to be liquidated S&#x3D; Order for Specialized Demand (Order to backorder) X&#x3D; direct ship from Vendor V &#x3D; product that vendor has elected to discontinue.</value>
-        [DataMember(Name = "productClass", EmitDefaultValue = false)]
+        [DataMember(Name = "productClass", EmitDefaultValue = true)]
         public string ProductClass { get; set; }
 
         /// <summary>
         /// The description given for the product.
         /// </summary>
         /// <value>The description given for the product.</value>
-        [DataMember(Name = "uom", EmitDefaultValue = false)]
+        [DataMember(Name = "uom", EmitDefaultValue = true)]
         public string Uom { get; set; }
 
         /// <summary>
         /// Status that gives whether the product is Active.
         /// </summary>
         /// <value>Status that gives whether the product is Active.</value>
-        [DataMember(Name = "productStatus", EmitDefaultValue = false)]
+        [DataMember(Name = "productStatus", EmitDefaultValue = true)]
         public string ProductStatus { get; set; }
 
         /// <summary>
@@ -196,72 +198,72 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>Boolean that indicates if the product accepts backorder.</value>
         [DataMember(Name = "acceptBackOrder", EmitDefaultValue = true)]
-        public bool AcceptBackOrder { get; set; }
+        public bool? AcceptBackOrder { get; set; }
 
         /// <summary>
         /// Boolean that indicates whether a product is authorized.
         /// </summary>
         /// <value>Boolean that indicates whether a product is authorized.</value>
         [DataMember(Name = "productAuthorized", EmitDefaultValue = true)]
-        public bool ProductAuthorized { get; set; }
+        public bool? ProductAuthorized { get; set; }
 
         /// <summary>
         /// Boolean that indicates if the product can be returned.
         /// </summary>
         /// <value>Boolean that indicates if the product can be returned.</value>
         [DataMember(Name = "returnableProduct", EmitDefaultValue = true)]
-        public bool ReturnableProduct { get; set; }
+        public bool? ReturnableProduct { get; set; }
 
         /// <summary>
         /// Boolean that indicates  if end user information is required.
         /// </summary>
         /// <value>Boolean that indicates  if end user information is required.</value>
         [DataMember(Name = "endUserInfoRequired", EmitDefaultValue = true)]
-        public bool EndUserInfoRequired { get; set; }
+        public bool? EndUserInfoRequired { get; set; }
 
         /// <summary>
         /// Boolean that indicates if special pricing is available for the product.
         /// </summary>
         /// <value>Boolean that indicates if special pricing is available for the product.</value>
         [DataMember(Name = "govtSpecialPriceAvailable", EmitDefaultValue = true)]
-        public bool GovtSpecialPriceAvailable { get; set; }
+        public bool? GovtSpecialPriceAvailable { get; set; }
 
         /// <summary>
         /// Program type, “PA” for government orders, “ED” for education order.
         /// </summary>
         /// <value>Program type, “PA” for government orders, “ED” for education order.</value>
-        [DataMember(Name = "govtProgramType", EmitDefaultValue = false)]
+        [DataMember(Name = "govtProgramType", EmitDefaultValue = true)]
         public string GovtProgramType { get; set; }
 
         /// <summary>
         /// Type of end user of the program. F &#x3D; Federal, S &#x3D; State, E &#x3D; Local, K &#x3D; K-12 school, and H &#x3D; Higher Education.
         /// </summary>
         /// <value>Type of end user of the program. F &#x3D; Federal, S &#x3D; State, E &#x3D; Local, K &#x3D; K-12 school, and H &#x3D; Higher Education.</value>
-        [DataMember(Name = "govtEndUserType", EmitDefaultValue = false)]
+        [DataMember(Name = "govtEndUserType", EmitDefaultValue = true)]
         public string GovtEndUserType { get; set; }
 
         /// <summary>
         /// Gets or Sets Availability
         /// </summary>
-        [DataMember(Name = "availability", EmitDefaultValue = false)]
+        [DataMember(Name = "availability", EmitDefaultValue = true)]
         public PriceAndAvailabilityResponseInnerAvailability Availability { get; set; }
 
         /// <summary>
         /// Gets or Sets ReserveInventoryDetails
         /// </summary>
-        [DataMember(Name = "reserveInventoryDetails", EmitDefaultValue = false)]
+        [DataMember(Name = "reserveInventoryDetails", EmitDefaultValue = true)]
         public List<PriceAndAvailabilityResponseInnerReserveInventoryDetailsInner> ReserveInventoryDetails { get; set; }
 
         /// <summary>
         /// Gets or Sets Pricing
         /// </summary>
-        [DataMember(Name = "pricing", EmitDefaultValue = false)]
+        [DataMember(Name = "pricing", EmitDefaultValue = true)]
         public PriceAndAvailabilityResponseInnerPricing Pricing { get; set; }
 
         /// <summary>
         /// Gets or Sets Discounts
         /// </summary>
-        [DataMember(Name = "discounts", EmitDefaultValue = false)]
+        [DataMember(Name = "discounts", EmitDefaultValue = true)]
         public List<PriceAndAvailabilityResponseInnerDiscountsInner> Discounts { get; set; }
 
         /// <summary>
@@ -269,14 +271,20 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>True of false value to indicate whether it’s bundle part. *Currently, this feature is not available in these countries (Mexico, Turkey, New Zealand, Colombia, Chile, Brazil, Peru, Western Sahara).</value>
         [DataMember(Name = "bundlePartIndicator", EmitDefaultValue = true)]
-        public bool BundlePartIndicator { get; set; }
+        public bool? BundlePartIndicator { get; set; }
 
         /// <summary>
         /// *Currently, this feature is not available in these countries (Mexico, Turkey, New Zealand, Colombia, Chile, Brazil, Peru, Western Sahara).
         /// </summary>
         /// <value>*Currently, this feature is not available in these countries (Mexico, Turkey, New Zealand, Colombia, Chile, Brazil, Peru, Western Sahara).</value>
-        [DataMember(Name = "serviceFees", EmitDefaultValue = false)]
+        [DataMember(Name = "serviceFees", EmitDefaultValue = true)]
         public List<PriceAndAvailabilityResponseInnerServiceFeesInner> ServiceFees { get; set; }
+
+        /// <summary>
+        /// Gets or Sets SubscriptionPrice
+        /// </summary>
+        [DataMember(Name = "subscriptionPrice", EmitDefaultValue = false)]
+        public List<PriceAndAvailabilityResponseInnerSubscriptionPriceInner> SubscriptionPrice { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -313,6 +321,7 @@ namespace xi.sdk.resellers.Model
             sb.Append("  Discounts: ").Append(Discounts).Append("\n");
             sb.Append("  BundlePartIndicator: ").Append(BundlePartIndicator).Append("\n");
             sb.Append("  ServiceFees: ").Append(ServiceFees).Append("\n");
+            sb.Append("  SubscriptionPrice: ").Append(SubscriptionPrice).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

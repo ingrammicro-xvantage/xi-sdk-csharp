@@ -53,7 +53,9 @@ namespace xi.sdk.resellers.Model
         /// Indicates when the discount is applied after ordering the product.
         /// </summary>
         /// <value>Indicates when the discount is applied after ordering the product.</value>
-        /// <example>Total fee</example>
+        /*
+        <example>Total fee</example>
+        */
         [DataMember(Name = "conditionType", EmitDefaultValue = false)]
         public string ConditionType { get; set; }
 

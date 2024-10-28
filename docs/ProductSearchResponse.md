@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **PageSize** | **int** | The number of results per page. Default is 25. | [optional] 
 **PageNumber** | **int** | current page number default is 1 | [optional] 
 **Catalog** | [**List&lt;ProductSearchResponseCatalogInner&gt;**](ProductSearchResponseCatalogInner.md) |  | [optional] 
+**SubscriptionCatalog** | [**List&lt;ProductSearchResponseSubscriptionCatalogInner&gt;**](ProductSearchResponseSubscriptionCatalogInner.md) |  | [optional] 
 **NextPage** | **string** | link/URL for accessing next page. | [optional] 
 **PreviousPage** | **string** | link/URL for accessing previous page. | [optional] 
 

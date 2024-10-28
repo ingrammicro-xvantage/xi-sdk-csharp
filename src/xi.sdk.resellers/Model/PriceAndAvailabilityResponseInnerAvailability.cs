@@ -62,7 +62,7 @@ namespace xi.sdk.resellers.Model
         /// <summary>
         /// Gets or Sets AvailabilityByWarehouse
         /// </summary>
-        [DataMember(Name = "availabilityByWarehouse", EmitDefaultValue = false)]
+        [DataMember(Name = "availabilityByWarehouse", EmitDefaultValue = true)]
         public List<PriceAndAvailabilityResponseInnerAvailabilityAvailabilityByWarehouseInner> AvailabilityByWarehouse { get; set; }
 
         /// <summary>

@@ -51,7 +51,9 @@ namespace xi.sdk.resellers.Model
         /// The reseller&#39;s line item number for reference in their system.
         /// </summary>
         /// <value>The reseller&#39;s line item number for reference in their system.</value>
-        /// <example>11</example>
+        /*
+        <example>11</example>
+        */
         [DataMember(Name = "customerLineNumber", EmitDefaultValue = false)]
         public string CustomerLineNumber { get; set; }
 
@@ -59,7 +61,9 @@ namespace xi.sdk.resellers.Model
         /// Unique Ingram Micro part number.
         /// </summary>
         /// <value>Unique Ingram Micro part number.</value>
-        /// <example>YN6551</example>
+        /*
+        <example>YN6551</example>
+        */
         [DataMember(Name = "ingramPartNumber", EmitDefaultValue = false)]
         public string IngramPartNumber { get; set; }
 
@@ -67,7 +71,9 @@ namespace xi.sdk.resellers.Model
         /// The quantity of the line item.
         /// </summary>
         /// <value>The quantity of the line item.</value>
-        /// <example>1</example>
+        /*
+        <example>1</example>
+        */
         [DataMember(Name = "quantity", EmitDefaultValue = false)]
         public int Quantity { get; set; }
 
