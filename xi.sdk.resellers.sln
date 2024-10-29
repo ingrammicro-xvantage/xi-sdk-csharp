@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 VisualStudioVersion = 12.0.0.0
 MinimumVisualStudioVersion = 10.0.0.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xi.sdk.resellers", "src\xi.sdk.resellers\xi.sdk.resellers.csproj", "{C5133596-6383-4608-A215-7B689261E30F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xi.sdk.resellers", "src\xi.sdk.resellers\xi.sdk.resellers.csproj", "{9132967F-41A9-446D-A142-107CE8687B06}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xi.sdk.resellers.Test", "src\xi.sdk.resellers.Test\xi.sdk.resellers.Test.csproj", "{19F1DEBC-DE5E-4517-8062-F000CD499087}"
 EndProject
@@ -12,10 +12,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C5133596-6383-4608-A215-7B689261E30F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C5133596-6383-4608-A215-7B689261E30F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C5133596-6383-4608-A215-7B689261E30F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C5133596-6383-4608-A215-7B689261E30F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9132967F-41A9-446D-A142-107CE8687B06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9132967F-41A9-446D-A142-107CE8687B06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9132967F-41A9-446D-A142-107CE8687B06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9132967F-41A9-446D-A142-107CE8687B06}.Release|Any CPU.Build.0 = Release|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -155,7 +155,6 @@ Class | Method | HTTP request | Description
 *OrdersApi* | [**PostCreateorderV7**](docs/OrdersApi.md#postcreateorderv7) | **POST** /resellers/v7/orders | Create your Order v7
 *OrdersApi* | [**PutOrdermodify**](docs/OrdersApi.md#putordermodify) | **PUT** /resellers/v6/orders/{orderNumber} | Modify your Order
 *ProductCatalogApi* | [**GetResellerV6Productdetail**](docs/ProductCatalogApi.md#getresellerv6productdetail) | **GET** /resellers/v6/catalog/details/{ingramPartNumber} | Product Details
-*ProductCatalogApi* | [**GetResellerV6ProductdetailCmp**](docs/ProductCatalogApi.md#getresellerv6productdetailcmp) | **GET** /resellers/v6/catalog/details | Product Details
 *ProductCatalogApi* | [**GetResellerV6Productsearch**](docs/ProductCatalogApi.md#getresellerv6productsearch) | **GET** /resellers/v6/catalog | Search Products
 *ProductCatalogApi* | [**PostPriceandavailability**](docs/ProductCatalogApi.md#postpriceandavailability) | **POST** /resellers/v6/catalog/priceandavailability | Price and Availability
 *QuotesApi* | [**GetQuotessearchV6**](docs/QuotesApi.md#getquotessearchv6) | **GET** /resellers/v6/quotes/search | Quote Search
