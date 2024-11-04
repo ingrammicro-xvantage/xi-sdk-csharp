@@ -5,7 +5,7 @@ All URIs are relative to *https://api.ingrammicro.com:443*
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
 | [**GetResellerV6Productdetail**](ProductCatalogApi.md#getresellerv6productdetail) | **GET** /resellers/v6/catalog/details/{ingramPartNumber} | Product Details |
-| [**GetResellerV6ProductdetailCmp**](ProductCatalogApi.md#getresellerv6productdetailcmp) | **GET** /resellers/v6/catalog/details | Product Details |
+| [**GetResellerV6Productdetailcmp**](ProductCatalogApi.md#getresellerv6productdetailcmp) | **GET** /resellers/v6/catalog/details | Product Details |
 | [**GetResellerV6Productsearch**](ProductCatalogApi.md#getresellerv6productsearch) | **GET** /resellers/v6/catalog | Search Products |
 | [**PostPriceandavailability**](ProductCatalogApi.md#postpriceandavailability) | **POST** /resellers/v6/catalog/priceandavailability | Price and Availability |
 
@@ -119,12 +119,12 @@ catch (ApiException e)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="getresellerv6productdetailcmp"></a>
-# **GetResellerV6ProductdetailCmp**
-> ProductDetailResponse GetResellerV6ProductdetailCmp (string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = null, string? vendorPartNumber = null, string? planName = null, string? planId = null)
+# **GetResellerV6Productdetailcmp**
+> ProductDetailResponse GetResellerV6Productdetailcmp (string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = null, string? planName = null, string? planId = null, string? vendorPartNumber = null)
 
 Product Details
 
-Search all the product-related details using a unique Ingram Part Number.
+Search all the product-related details.
 
 ### Example
 ```csharp
@@ -137,7 +137,7 @@ using xi.sdk.resellers.Model;
 
 namespace Example
 {
-    public class GetResellerV6ProductdetailCmpExample
+    public class GetResellerV6ProductdetailcmpExample
     {
         public static void Main()
         {
@@ -154,19 +154,19 @@ namespace Example
             var iMCountryCode = US;  // string | Two-character ISO country code.
             var iMCorrelationID = fbac82ba-cf0a-4bcf-fc03-0c5084;  // string | Unique transaction number to identify each transaction across all the systems
             var iMSenderID = MyCompany;  // string? | Sender Identification text (optional) 
-            var vendorPartNumber = "vendorPartNumber_example";  // string? | Vendor’s part number for the product. (optional) 
             var planName = "planName_example";  // string? | Name of the subscription plan (optional) 
             var planId = "planId_example";  // string? | Id of the subscription plan.   <span style='color:red'>To search for details of subscription products, customer must pass either vendorPartNumber, planName or planId.</span> (optional) 
+            var vendorPartNumber = "vendorPartNumber_example";  // string? | Vendor’s part number for the product. (optional) 
 
             try
             {
                 // Product Details
-                ProductDetailResponse result = apiInstance.GetResellerV6ProductdetailCmp(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMSenderID, vendorPartNumber, planName, planId);
+                ProductDetailResponse result = apiInstance.GetResellerV6Productdetailcmp(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMSenderID, planName, planId, vendorPartNumber);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ProductCatalogApi.GetResellerV6ProductdetailCmp: " + e.Message);
+                Debug.Print("Exception when calling ProductCatalogApi.GetResellerV6Productdetailcmp: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -175,21 +175,21 @@ namespace Example
 }
 ```
 
-#### Using the GetResellerV6ProductdetailCmpWithHttpInfo variant
+#### Using the GetResellerV6ProductdetailcmpWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Product Details
-    ApiResponse<ProductDetailResponse> response = apiInstance.GetResellerV6ProductdetailCmpWithHttpInfo(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMSenderID, vendorPartNumber, planName, planId);
+    ApiResponse<ProductDetailResponse> response = apiInstance.GetResellerV6ProductdetailcmpWithHttpInfo(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMSenderID, planName, planId, vendorPartNumber);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling ProductCatalogApi.GetResellerV6ProductdetailCmpWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling ProductCatalogApi.GetResellerV6ProductdetailcmpWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -203,9 +203,9 @@ catch (ApiException e)
 | **iMCountryCode** | **string** | Two-character ISO country code. |  |
 | **iMCorrelationID** | **string** | Unique transaction number to identify each transaction across all the systems |  |
 | **iMSenderID** | **string?** | Sender Identification text | [optional]  |
-| **vendorPartNumber** | **string?** | Vendor’s part number for the product. | [optional]  |
 | **planName** | **string?** | Name of the subscription plan | [optional]  |
 | **planId** | **string?** | Id of the subscription plan.   &lt;span style&#x3D;&#39;color:red&#39;&gt;To search for details of subscription products, customer must pass either vendorPartNumber, planName or planId.&lt;/span&gt; | [optional]  |
+| **vendorPartNumber** | **string?** | Vendor’s part number for the product. | [optional]  |
 
 ### Return type
 

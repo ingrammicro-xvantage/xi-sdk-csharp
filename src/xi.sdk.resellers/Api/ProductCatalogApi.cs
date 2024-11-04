@@ -60,35 +60,35 @@ namespace xi.sdk.resellers.Api
         /// Product Details
         /// </summary>
         /// <remarks>
-        /// Search all the product-related details using a unique Ingram Part Number.
+        /// Search all the product-related details.
         /// </remarks>
         /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number</param>
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems</param>
         /// <param name="iMSenderID">Sender Identification text (optional)</param>
-        /// <param name="vendorPartNumber">Vendor’s part number for the product. (optional)</param>
         /// <param name="planName">Name of the subscription plan (optional)</param>
         /// <param name="planId">Id of the subscription plan.   &lt;span style&#x3D;&#39;color:red&#39;&gt;To search for details of subscription products, customer must pass either vendorPartNumber, planName or planId.&lt;/span&gt; (optional)</param>
+        /// <param name="vendorPartNumber">Vendor’s part number for the product. (optional)</param>
         /// <returns>ProductDetailResponse</returns>
-        ProductDetailResponse GetResellerV6ProductdetailCmp(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? vendorPartNumber = default(string?), string? planName = default(string?), string? planId = default(string?));
+        ProductDetailResponse GetResellerV6Productdetailcmp(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? planName = default(string?), string? planId = default(string?), string? vendorPartNumber = default(string?));
 
         /// <summary>
         /// Product Details
         /// </summary>
         /// <remarks>
-        /// Search all the product-related details using a unique Ingram Part Number.
+        /// Search all the product-related details.
         /// </remarks>
         /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number</param>
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems</param>
         /// <param name="iMSenderID">Sender Identification text (optional)</param>
-        /// <param name="vendorPartNumber">Vendor’s part number for the product. (optional)</param>
         /// <param name="planName">Name of the subscription plan (optional)</param>
         /// <param name="planId">Id of the subscription plan.   &lt;span style&#x3D;&#39;color:red&#39;&gt;To search for details of subscription products, customer must pass either vendorPartNumber, planName or planId.&lt;/span&gt; (optional)</param>
+        /// <param name="vendorPartNumber">Vendor’s part number for the product. (optional)</param>
         /// <returns>ApiResponse of ProductDetailResponse</returns>
-        ApiResponse<ProductDetailResponse> GetResellerV6ProductdetailCmpWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? vendorPartNumber = default(string?), string? planName = default(string?), string? planId = default(string?));
+        ApiResponse<ProductDetailResponse> GetResellerV6ProductdetailcmpWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? planName = default(string?), string? planId = default(string?), string? vendorPartNumber = default(string?));
         /// <summary>
         /// Search Products
         /// </summary>
@@ -223,37 +223,37 @@ namespace xi.sdk.resellers.Api
         /// Product Details
         /// </summary>
         /// <remarks>
-        /// Search all the product-related details using a unique Ingram Part Number.
+        /// Search all the product-related details.
         /// </remarks>
         /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number</param>
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems</param>
         /// <param name="iMSenderID">Sender Identification text (optional)</param>
-        /// <param name="vendorPartNumber">Vendor’s part number for the product. (optional)</param>
         /// <param name="planName">Name of the subscription plan (optional)</param>
         /// <param name="planId">Id of the subscription plan.   &lt;span style&#x3D;&#39;color:red&#39;&gt;To search for details of subscription products, customer must pass either vendorPartNumber, planName or planId.&lt;/span&gt; (optional)</param>
+        /// <param name="vendorPartNumber">Vendor’s part number for the product. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductDetailResponse</returns>
-        System.Threading.Tasks.Task<ProductDetailResponse> GetResellerV6ProductdetailCmpAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? vendorPartNumber = default(string?), string? planName = default(string?), string? planId = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ProductDetailResponse> GetResellerV6ProductdetailcmpAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? planName = default(string?), string? planId = default(string?), string? vendorPartNumber = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Product Details
         /// </summary>
         /// <remarks>
-        /// Search all the product-related details using a unique Ingram Part Number.
+        /// Search all the product-related details.
         /// </remarks>
         /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number</param>
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems</param>
         /// <param name="iMSenderID">Sender Identification text (optional)</param>
-        /// <param name="vendorPartNumber">Vendor’s part number for the product. (optional)</param>
         /// <param name="planName">Name of the subscription plan (optional)</param>
         /// <param name="planId">Id of the subscription plan.   &lt;span style&#x3D;&#39;color:red&#39;&gt;To search for details of subscription products, customer must pass either vendorPartNumber, planName or planId.&lt;/span&gt; (optional)</param>
+        /// <param name="vendorPartNumber">Vendor’s part number for the product. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductDetailResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ProductDetailResponse>> GetResellerV6ProductdetailCmpWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? vendorPartNumber = default(string?), string? planName = default(string?), string? planId = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ProductDetailResponse>> GetResellerV6ProductdetailcmpWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? planName = default(string?), string? planId = default(string?), string? vendorPartNumber = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Search Products
         /// </summary>
@@ -743,48 +743,48 @@ namespace xi.sdk.resellers.Api
         }
 
         /// <summary>
-        /// Product Details Search all the product-related details using a unique Ingram Part Number.
+        /// Product Details Search all the product-related details.
         /// </summary>
         /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number</param>
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems</param>
         /// <param name="iMSenderID">Sender Identification text (optional)</param>
-        /// <param name="vendorPartNumber">Vendor’s part number for the product. (optional)</param>
         /// <param name="planName">Name of the subscription plan (optional)</param>
         /// <param name="planId">Id of the subscription plan.   &lt;span style&#x3D;&#39;color:red&#39;&gt;To search for details of subscription products, customer must pass either vendorPartNumber, planName or planId.&lt;/span&gt; (optional)</param>
+        /// <param name="vendorPartNumber">Vendor’s part number for the product. (optional)</param>
         /// <returns>ProductDetailResponse</returns>
-        public ProductDetailResponse GetResellerV6ProductdetailCmp(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? vendorPartNumber = default(string?), string? planName = default(string?), string? planId = default(string?))
+        public ProductDetailResponse GetResellerV6Productdetailcmp(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? planName = default(string?), string? planId = default(string?), string? vendorPartNumber = default(string?))
         {
-            xi.sdk.resellers.Client.ApiResponse<ProductDetailResponse> localVarResponse = GetResellerV6ProductdetailCmpWithHttpInfo(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMSenderID, vendorPartNumber, planName, planId);
+            xi.sdk.resellers.Client.ApiResponse<ProductDetailResponse> localVarResponse = GetResellerV6ProductdetailcmpWithHttpInfo(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMSenderID, planName, planId, vendorPartNumber);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Product Details Search all the product-related details using a unique Ingram Part Number.
+        /// Product Details Search all the product-related details.
         /// </summary>
         /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number</param>
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems</param>
         /// <param name="iMSenderID">Sender Identification text (optional)</param>
-        /// <param name="vendorPartNumber">Vendor’s part number for the product. (optional)</param>
         /// <param name="planName">Name of the subscription plan (optional)</param>
         /// <param name="planId">Id of the subscription plan.   &lt;span style&#x3D;&#39;color:red&#39;&gt;To search for details of subscription products, customer must pass either vendorPartNumber, planName or planId.&lt;/span&gt; (optional)</param>
+        /// <param name="vendorPartNumber">Vendor’s part number for the product. (optional)</param>
         /// <returns>ApiResponse of ProductDetailResponse</returns>
-        public xi.sdk.resellers.Client.ApiResponse<ProductDetailResponse> GetResellerV6ProductdetailCmpWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? vendorPartNumber = default(string?), string? planName = default(string?), string? planId = default(string?))
+        public xi.sdk.resellers.Client.ApiResponse<ProductDetailResponse> GetResellerV6ProductdetailcmpWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? planName = default(string?), string? planId = default(string?), string? vendorPartNumber = default(string?))
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)
-                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCustomerNumber' when calling ProductCatalogApi->GetResellerV6ProductdetailCmp");
+                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCustomerNumber' when calling ProductCatalogApi->GetResellerV6Productdetailcmp");
 
             // verify the required parameter 'iMCountryCode' is set
             if (iMCountryCode == null)
-                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCountryCode' when calling ProductCatalogApi->GetResellerV6ProductdetailCmp");
+                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCountryCode' when calling ProductCatalogApi->GetResellerV6Productdetailcmp");
 
             // verify the required parameter 'iMCorrelationID' is set
             if (iMCorrelationID == null)
-                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCorrelationID' when calling ProductCatalogApi->GetResellerV6ProductdetailCmp");
+                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCorrelationID' when calling ProductCatalogApi->GetResellerV6Productdetailcmp");
 
             xi.sdk.resellers.Client.RequestOptions localVarRequestOptions = new xi.sdk.resellers.Client.RequestOptions();
 
@@ -802,10 +802,6 @@ namespace xi.sdk.resellers.Api
             var localVarAccept = xi.sdk.resellers.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (vendorPartNumber != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(xi.sdk.resellers.Client.ClientUtils.ParameterToMultiMap("", "vendorPartNumber", vendorPartNumber));
-            }
             if (planName != null)
             {
                 localVarRequestOptions.QueryParameters.Add(xi.sdk.resellers.Client.ClientUtils.ParameterToMultiMap("", "planName", planName));
@@ -813,6 +809,10 @@ namespace xi.sdk.resellers.Api
             if (planId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(xi.sdk.resellers.Client.ClientUtils.ParameterToMultiMap("", "planId", planId));
+            }
+            if (vendorPartNumber != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(xi.sdk.resellers.Client.ClientUtils.ParameterToMultiMap("", "vendorPartNumber", vendorPartNumber));
             }
             localVarRequestOptions.HeaderParameters.Add("IM-CustomerNumber", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCustomerNumber)); // header parameter
             localVarRequestOptions.HeaderParameters.Add("IM-CountryCode", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCountryCode)); // header parameter
@@ -834,7 +834,7 @@ namespace xi.sdk.resellers.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetResellerV6ProductdetailCmp", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetResellerV6Productdetailcmp", localVarResponse);
                 if (_exception != null) throw _exception;
             }
 
@@ -842,50 +842,50 @@ namespace xi.sdk.resellers.Api
         }
 
         /// <summary>
-        /// Product Details Search all the product-related details using a unique Ingram Part Number.
+        /// Product Details Search all the product-related details.
         /// </summary>
         /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number</param>
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems</param>
         /// <param name="iMSenderID">Sender Identification text (optional)</param>
-        /// <param name="vendorPartNumber">Vendor’s part number for the product. (optional)</param>
         /// <param name="planName">Name of the subscription plan (optional)</param>
         /// <param name="planId">Id of the subscription plan.   &lt;span style&#x3D;&#39;color:red&#39;&gt;To search for details of subscription products, customer must pass either vendorPartNumber, planName or planId.&lt;/span&gt; (optional)</param>
+        /// <param name="vendorPartNumber">Vendor’s part number for the product. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ProductDetailResponse</returns>
-        public async System.Threading.Tasks.Task<ProductDetailResponse> GetResellerV6ProductdetailCmpAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? vendorPartNumber = default(string?), string? planName = default(string?), string? planId = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ProductDetailResponse> GetResellerV6ProductdetailcmpAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? planName = default(string?), string? planId = default(string?), string? vendorPartNumber = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            xi.sdk.resellers.Client.ApiResponse<ProductDetailResponse> localVarResponse = await GetResellerV6ProductdetailCmpWithHttpInfoAsync(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMSenderID, vendorPartNumber, planName, planId, cancellationToken).ConfigureAwait(false);
+            xi.sdk.resellers.Client.ApiResponse<ProductDetailResponse> localVarResponse = await GetResellerV6ProductdetailcmpWithHttpInfoAsync(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMSenderID, planName, planId, vendorPartNumber, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Product Details Search all the product-related details using a unique Ingram Part Number.
+        /// Product Details Search all the product-related details.
         /// </summary>
         /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number</param>
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems</param>
         /// <param name="iMSenderID">Sender Identification text (optional)</param>
-        /// <param name="vendorPartNumber">Vendor’s part number for the product. (optional)</param>
         /// <param name="planName">Name of the subscription plan (optional)</param>
         /// <param name="planId">Id of the subscription plan.   &lt;span style&#x3D;&#39;color:red&#39;&gt;To search for details of subscription products, customer must pass either vendorPartNumber, planName or planId.&lt;/span&gt; (optional)</param>
+        /// <param name="vendorPartNumber">Vendor’s part number for the product. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ProductDetailResponse)</returns>
-        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<ProductDetailResponse>> GetResellerV6ProductdetailCmpWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? vendorPartNumber = default(string?), string? planName = default(string?), string? planId = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<ProductDetailResponse>> GetResellerV6ProductdetailcmpWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMSenderID = default(string?), string? planName = default(string?), string? planId = default(string?), string? vendorPartNumber = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)
-                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCustomerNumber' when calling ProductCatalogApi->GetResellerV6ProductdetailCmp");
+                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCustomerNumber' when calling ProductCatalogApi->GetResellerV6Productdetailcmp");
 
             // verify the required parameter 'iMCountryCode' is set
             if (iMCountryCode == null)
-                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCountryCode' when calling ProductCatalogApi->GetResellerV6ProductdetailCmp");
+                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCountryCode' when calling ProductCatalogApi->GetResellerV6Productdetailcmp");
 
             // verify the required parameter 'iMCorrelationID' is set
             if (iMCorrelationID == null)
-                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCorrelationID' when calling ProductCatalogApi->GetResellerV6ProductdetailCmp");
+                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCorrelationID' when calling ProductCatalogApi->GetResellerV6Productdetailcmp");
 
 
             xi.sdk.resellers.Client.RequestOptions localVarRequestOptions = new xi.sdk.resellers.Client.RequestOptions();
@@ -905,10 +905,6 @@ namespace xi.sdk.resellers.Api
             var localVarAccept = xi.sdk.resellers.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (vendorPartNumber != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(xi.sdk.resellers.Client.ClientUtils.ParameterToMultiMap("", "vendorPartNumber", vendorPartNumber));
-            }
             if (planName != null)
             {
                 localVarRequestOptions.QueryParameters.Add(xi.sdk.resellers.Client.ClientUtils.ParameterToMultiMap("", "planName", planName));
@@ -916,6 +912,10 @@ namespace xi.sdk.resellers.Api
             if (planId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(xi.sdk.resellers.Client.ClientUtils.ParameterToMultiMap("", "planId", planId));
+            }
+            if (vendorPartNumber != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(xi.sdk.resellers.Client.ClientUtils.ParameterToMultiMap("", "vendorPartNumber", vendorPartNumber));
             }
             localVarRequestOptions.HeaderParameters.Add("IM-CustomerNumber", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCustomerNumber)); // header parameter
             localVarRequestOptions.HeaderParameters.Add("IM-CountryCode", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCountryCode)); // header parameter
@@ -938,7 +938,7 @@ namespace xi.sdk.resellers.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetResellerV6ProductdetailCmp", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetResellerV6Productdetailcmp", localVarResponse);
                 if (_exception != null) throw _exception;
             }
 

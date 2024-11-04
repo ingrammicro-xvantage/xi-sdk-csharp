@@ -70,20 +70,20 @@ namespace xi.sdk.resellers.Test.Api
         }
 
         /// <summary>
-        /// Test GetResellerV6ProductdetailCmp
+        /// Test GetResellerV6Productdetailcmp
         /// </summary>
         [Fact]
-        public void GetResellerV6ProductdetailCmpTest()
+        public void GetResellerV6ProductdetailcmpTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string iMCustomerNumber = null;
             //string iMCountryCode = null;
             //string iMCorrelationID = null;
             //string? iMSenderID = null;
-            //string? vendorPartNumber = null;
             //string? planName = null;
             //string? planId = null;
-            //var response = instance.GetResellerV6ProductdetailCmp(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMSenderID, vendorPartNumber, planName, planId);
+            //string? vendorPartNumber = null;
+            //var response = instance.GetResellerV6Productdetailcmp(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMSenderID, planName, planId, vendorPartNumber);
             //Assert.IsType<ProductDetailResponse>(response);
         }
 
