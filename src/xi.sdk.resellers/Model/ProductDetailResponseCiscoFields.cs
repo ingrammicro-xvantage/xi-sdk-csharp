@@ -27,13 +27,13 @@ using OpenAPIDateConverter = xi.sdk.resellers.Client.OpenAPIDateConverter;
 namespace xi.sdk.resellers.Model
 {
     /// <summary>
-    /// ProductDetailResponseCiscoFieldsInner
+    /// Cisco product related information.
     /// </summary>
-    [DataContract(Name = "ProductDetailResponse_ciscoFields_inner")]
-    public partial class ProductDetailResponseCiscoFieldsInner : IValidatableObject
+    [DataContract(Name = "ProductDetailResponse_ciscoFields")]
+    public partial class ProductDetailResponseCiscoFields : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ProductDetailResponseCiscoFieldsInner" /> class.
+        /// Initializes a new instance of the <see cref="ProductDetailResponseCiscoFields" /> class.
         /// </summary>
         /// <param name="productSubGroup">Cisco product sub-group.</param>
         /// <param name="serviceProgramName">Cisco service program name.</param>
@@ -42,7 +42,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="internalBusinessEntity">Cisco internal business entity.</param>
         /// <param name="itemType">Cisco item type.</param>
         /// <param name="globalListPrice">Cisco global list price.</param>
-        public ProductDetailResponseCiscoFieldsInner(string productSubGroup = default(string), string serviceProgramName = default(string), string itemCatalogCategory = default(string), string configurationIndicator = default(string), string internalBusinessEntity = default(string), string itemType = default(string), string globalListPrice = default(string))
+        public ProductDetailResponseCiscoFields(string productSubGroup = default(string), string serviceProgramName = default(string), string itemCatalogCategory = default(string), string configurationIndicator = default(string), string internalBusinessEntity = default(string), string itemType = default(string), string globalListPrice = default(string))
         {
             this.ProductSubGroup = productSubGroup;
             this.ServiceProgramName = serviceProgramName;
@@ -109,7 +109,7 @@ namespace xi.sdk.resellers.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class ProductDetailResponseCiscoFieldsInner {\n");
+            sb.Append("class ProductDetailResponseCiscoFields {\n");
             sb.Append("  ProductSubGroup: ").Append(ProductSubGroup).Append("\n");
             sb.Append("  ServiceProgramName: ").Append(ServiceProgramName).Append("\n");
             sb.Append("  ItemCatalogCategory: ").Append(ItemCatalogCategory).Append("\n");

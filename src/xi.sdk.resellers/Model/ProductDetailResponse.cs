@@ -47,12 +47,12 @@ namespace xi.sdk.resellers.Model
         /// <param name="productStatusCode">Status code of the product..</param>
         /// <param name="productClass">Indicates whether the product is directly shipped from the vendor’s warehouse or if the product ships from Ingram Micro’s warehouse. Class Codes are Ingram classifications on how skus are stocked A &#x3D; Product that is stocked usually in all IM warehouses and replenished on a regular basis. B &#x3D; Product that is stocked in limited IM warehouses and replenished on a regular basis C &#x3D; Product that is stocked in fewer IM warehouses and replenished on a regular basis. D &#x3D; Product that Ingram Micro has elected to discontinue. E &#x3D; Product that will be phased out later, according to the vendor. You may not want to replenish this product, but instead sell down what is in stock. F &#x3D; Product that we carry for a specific customer or supplier under a contractual agreement. N &#x3D; New Sku. Classification before first receipt O &#x3D; Discontinued product to be liquidated S&#x3D; Order for Specialized Demand (Order to backorder) X&#x3D; direct ship from Vendor V &#x3D; product that vendor has elected to discontinue..</param>
         /// <param name="customerPartNumber">Reseller / end-user’s part number for the product..</param>
-        /// <param name="indicators">Indicators of the Product.</param>
-        /// <param name="ciscoFields">Cisco product related information..</param>
+        /// <param name="indicators">indicators.</param>
+        /// <param name="ciscoFields">ciscoFields.</param>
         /// <param name="warrantyInformation">Warranty information related to the product..</param>
         /// <param name="additionalInformation">additionalInformation.</param>
         /// <param name="subscriptionDetails">Subscription product Details.</param>
-        public ProductDetailResponse(string ingramPartNumber = default(string), string vendorPartNumber = default(string), bool productAuthorized = default(bool), string description = default(string), string upc = default(string), string productCategory = default(string), string productSubcategory = default(string), string vendorName = default(string), string vendorNumber = default(string), string productStatusCode = default(string), string productClass = default(string), string customerPartNumber = default(string), List<ProductDetailResponseIndicatorsInner> indicators = default(List<ProductDetailResponseIndicatorsInner>), List<ProductDetailResponseCiscoFieldsInner> ciscoFields = default(List<ProductDetailResponseCiscoFieldsInner>), List<Object> warrantyInformation = default(List<Object>), ProductDetailResponseAdditionalInformation additionalInformation = default(ProductDetailResponseAdditionalInformation), List<ProductDetailResponseSubscriptionDetailsInner> subscriptionDetails = default(List<ProductDetailResponseSubscriptionDetailsInner>))
+        public ProductDetailResponse(string ingramPartNumber = default(string), string vendorPartNumber = default(string), bool productAuthorized = default(bool), string description = default(string), string upc = default(string), string productCategory = default(string), string productSubcategory = default(string), string vendorName = default(string), string vendorNumber = default(string), string productStatusCode = default(string), string productClass = default(string), string customerPartNumber = default(string), ProductDetailResponseIndicators indicators = default(ProductDetailResponseIndicators), ProductDetailResponseCiscoFields ciscoFields = default(ProductDetailResponseCiscoFields), List<Object> warrantyInformation = default(List<Object>), ProductDetailResponseAdditionalInformation additionalInformation = default(ProductDetailResponseAdditionalInformation), List<ProductDetailResponseSubscriptionDetailsInner> subscriptionDetails = default(List<ProductDetailResponseSubscriptionDetailsInner>))
         {
             this.IngramPartNumber = ingramPartNumber;
             this.VendorPartNumber = vendorPartNumber;
@@ -158,18 +158,16 @@ namespace xi.sdk.resellers.Model
         public string CustomerPartNumber { get; set; }
 
         /// <summary>
-        /// Indicators of the Product
+        /// Gets or Sets Indicators
         /// </summary>
-        /// <value>Indicators of the Product</value>
         [DataMember(Name = "indicators", EmitDefaultValue = false)]
-        public List<ProductDetailResponseIndicatorsInner> Indicators { get; set; }
+        public ProductDetailResponseIndicators Indicators { get; set; }
 
         /// <summary>
-        /// Cisco product related information.
+        /// Gets or Sets CiscoFields
         /// </summary>
-        /// <value>Cisco product related information.</value>
         [DataMember(Name = "ciscoFields", EmitDefaultValue = false)]
-        public List<ProductDetailResponseCiscoFieldsInner> CiscoFields { get; set; }
+        public ProductDetailResponseCiscoFields CiscoFields { get; set; }
 
         /// <summary>
         /// Warranty information related to the product.

@@ -177,8 +177,8 @@ docs/ProductCatalogApi.md
 docs/ProductDetailResponse.md
 docs/ProductDetailResponseAdditionalInformation.md
 docs/ProductDetailResponseAdditionalInformationProductWeightInner.md
-docs/ProductDetailResponseCiscoFieldsInner.md
-docs/ProductDetailResponseIndicatorsInner.md
+docs/ProductDetailResponseCiscoFields.md
+docs/ProductDetailResponseIndicators.md
 docs/ProductDetailResponseSubscriptionDetailsInner.md
 docs/ProductDetailResponseSubscriptionDetailsInnerBillingPeriod.md
 docs/ProductDetailResponseSubscriptionDetailsInnerGroupsInner.md
@@ -416,8 +416,8 @@ src/xi.sdk.resellers.Test/Model/PriceAndAvailabilityResponseInnerSubscriptionPri
 src/xi.sdk.resellers.Test/Model/PriceAndAvailabilityResponseInnerTests.cs
 src/xi.sdk.resellers.Test/Model/ProductDetailResponseAdditionalInformationProductWeightInnerTests.cs
 src/xi.sdk.resellers.Test/Model/ProductDetailResponseAdditionalInformationTests.cs
-src/xi.sdk.resellers.Test/Model/ProductDetailResponseCiscoFieldsInnerTests.cs
-src/xi.sdk.resellers.Test/Model/ProductDetailResponseIndicatorsInnerTests.cs
+src/xi.sdk.resellers.Test/Model/ProductDetailResponseCiscoFieldsTests.cs
+src/xi.sdk.resellers.Test/Model/ProductDetailResponseIndicatorsTests.cs
 src/xi.sdk.resellers.Test/Model/ProductDetailResponseSubscriptionDetailsInnerBillingPeriodTests.cs
 src/xi.sdk.resellers.Test/Model/ProductDetailResponseSubscriptionDetailsInnerGroupsInnerTests.cs
 src/xi.sdk.resellers.Test/Model/ProductDetailResponseSubscriptionDetailsInnerOptionsInnerTests.cs
@@ -671,8 +671,8 @@ src/xi.sdk.resellers/Model/PriceAndAvailabilityResponseInnerSubscriptionPriceInn
 src/xi.sdk.resellers/Model/ProductDetailResponse.cs
 src/xi.sdk.resellers/Model/ProductDetailResponseAdditionalInformation.cs
 src/xi.sdk.resellers/Model/ProductDetailResponseAdditionalInformationProductWeightInner.cs
-src/xi.sdk.resellers/Model/ProductDetailResponseCiscoFieldsInner.cs
-src/xi.sdk.resellers/Model/ProductDetailResponseIndicatorsInner.cs
+src/xi.sdk.resellers/Model/ProductDetailResponseCiscoFields.cs
+src/xi.sdk.resellers/Model/ProductDetailResponseIndicators.cs
 src/xi.sdk.resellers/Model/ProductDetailResponseSubscriptionDetailsInner.cs
 src/xi.sdk.resellers/Model/ProductDetailResponseSubscriptionDetailsInnerBillingPeriod.cs
 src/xi.sdk.resellers/Model/ProductDetailResponseSubscriptionDetailsInnerGroupsInner.cs

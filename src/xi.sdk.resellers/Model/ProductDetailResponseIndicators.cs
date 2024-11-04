@@ -27,13 +27,13 @@ using OpenAPIDateConverter = xi.sdk.resellers.Client.OpenAPIDateConverter;
 namespace xi.sdk.resellers.Model
 {
     /// <summary>
-    /// ProductDetailResponseIndicatorsInner
+    /// ProductDetailResponseIndicators
     /// </summary>
-    [DataContract(Name = "ProductDetailResponse_indicators_inner")]
-    public partial class ProductDetailResponseIndicatorsInner : IValidatableObject
+    [DataContract(Name = "ProductDetailResponse_indicators")]
+    public partial class ProductDetailResponseIndicators : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ProductDetailResponseIndicatorsInner" /> class.
+        /// Initializes a new instance of the <see cref="ProductDetailResponseIndicators" /> class.
         /// </summary>
         /// <param name="hasWarranty">Boolean that indicates whether product has a warranty..</param>
         /// <param name="isNewProduct">Boolean that indicates whether it’s a new product. .</param>
@@ -66,7 +66,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="isDirectshipOrderable">Boolean that indicates whether product is directship orderable..</param>
         /// <param name="isServiceSku">Boolean that indicates whether product is service SKU..</param>
         /// <param name="isConfigurable">Boolean that indicates whether product is configurable..</param>
-        public ProductDetailResponseIndicatorsInner(bool hasWarranty = default(bool), bool isNewProduct = default(bool), bool hasReturnLimits = default(bool), bool isBackOrderAllowed = default(bool), bool isShippedFromPartner = default(bool), bool isReplacementProduct = default(bool), bool isDirectship = default(bool), bool isDownloadable = default(bool), bool isDigitalType = default(bool), string skuType = default(string), bool hasStdSpecialPrice = default(bool), bool hasAcopSpecialPrice = default(bool), bool hasAcopQuantityBreak = default(bool), bool hasStdWebDiscount = default(bool), bool hasSpecialBid = default(bool), bool isExportableToCountry = default(bool), bool isDiscontinuedProduct = default(bool), bool isRefurbishedProduct = default(bool), bool isReturnableProduct = default(bool), bool isIngramShip = default(bool), bool isEnduserRequired = default(bool), bool isHeavyWeight = default(bool), bool hasLtl = default(bool), bool isClearanceProduct = default(bool), bool hasBundle = default(bool), bool isOversizeProduct = default(bool), bool isPreorderProduct = default(bool), bool isLicenseProduct = default(bool), bool isDirectshipOrderable = default(bool), bool isServiceSku = default(bool), bool isConfigurable = default(bool))
+        public ProductDetailResponseIndicators(bool hasWarranty = default(bool), bool isNewProduct = default(bool), bool hasReturnLimits = default(bool), bool isBackOrderAllowed = default(bool), bool isShippedFromPartner = default(bool), bool isReplacementProduct = default(bool), bool isDirectship = default(bool), bool isDownloadable = default(bool), bool isDigitalType = default(bool), string skuType = default(string), bool hasStdSpecialPrice = default(bool), bool hasAcopSpecialPrice = default(bool), bool hasAcopQuantityBreak = default(bool), bool hasStdWebDiscount = default(bool), bool hasSpecialBid = default(bool), bool isExportableToCountry = default(bool), bool isDiscontinuedProduct = default(bool), bool isRefurbishedProduct = default(bool), bool isReturnableProduct = default(bool), bool isIngramShip = default(bool), bool isEnduserRequired = default(bool), bool isHeavyWeight = default(bool), bool hasLtl = default(bool), bool isClearanceProduct = default(bool), bool hasBundle = default(bool), bool isOversizeProduct = default(bool), bool isPreorderProduct = default(bool), bool isLicenseProduct = default(bool), bool isDirectshipOrderable = default(bool), bool isServiceSku = default(bool), bool isConfigurable = default(bool))
         {
             this.HasWarranty = hasWarranty;
             this.IsNewProduct = isNewProduct;
@@ -325,7 +325,7 @@ namespace xi.sdk.resellers.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class ProductDetailResponseIndicatorsInner {\n");
+            sb.Append("class ProductDetailResponseIndicators {\n");
             sb.Append("  HasWarranty: ").Append(HasWarranty).Append("\n");
             sb.Append("  IsNewProduct: ").Append(IsNewProduct).Append("\n");
             sb.Append("  HasReturnLimits: ").Append(HasReturnLimits).Append("\n");

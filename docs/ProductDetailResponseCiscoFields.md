@@ -1,4 +1,5 @@
-# xi.sdk.resellers.Model.ProductDetailResponseCiscoFieldsInner
+# xi.sdk.resellers.Model.ProductDetailResponseCiscoFields
+Cisco product related information.
 
 ## Properties
 

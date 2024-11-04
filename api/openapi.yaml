@@ -9624,38 +9624,7 @@ components:
         productAuthorized: true
         vendorName: vendorName
         indicators:
-        - isHeavyWeight: true
-          isEnduserRequired: true
-          hasStdWebDiscount: true
-          hasStdSpecialPrice: true
-          isPreorderProduct: true
-          hasWarranty: true
-          isDirectshipOrderable: true
-          isNewProduct: true
-          isDownloadable: true
-          isClearanceProduct: true
-          isOversizeProduct: true
-          isShippedFromPartner: true
-          isIngramShip: true
-          hasAcopQuantityBreak: true
-          IsBackOrderAllowed: true
-          isReplacementProduct: true
-          hasSpecialBid: true
-          isReturnableProduct: true
-          isConfigurable: true
-          isExportableToCountry: true
-          isDigitalType: true
-          hasAcopSpecialPrice: true
-          isRefurbishedProduct: true
-          isLicenseProduct: true
-          HasReturnLimits: true
-          skuType: skuType
-          isDiscontinuedProduct: true
-          hasLtl: true
-          isServiceSku: true
-          hasBundle: true
-          isDirectship: true
-        - isHeavyWeight: true
+          isHeavyWeight: true
           isEnduserRequired: true
           hasStdWebDiscount: true
           hasStdSpecialPrice: true
@@ -9689,14 +9658,7 @@ components:
         productCategory: productCategory
         productSubcategory: productSubcategory
         ciscoFields:
-        - itemType: itemType
-          productSubGroup: productSubGroup
-          configurationIndicator: configurationIndicator
-          internalBusinessEntity: internalBusinessEntity
-          serviceProgramName: serviceProgramName
-          globalListPrice: globalListPrice
-          itemCatalogCategory: itemCatalogCategory
-        - itemType: itemType
+          itemType: itemType
           productSubGroup: productSubGroup
           configurationIndicator: configurationIndicator
           internalBusinessEntity: internalBusinessEntity
@@ -9835,15 +9797,9 @@ components:
           description: Reseller / end-user’s part number for the product.
           type: string
         indicators:
-          description: Indicators of the Product
-          items:
-            $ref: '#/components/schemas/ProductDetailResponse_indicators_inner'
-          type: array
+          $ref: '#/components/schemas/ProductDetailResponse_indicators'
         ciscoFields:
-          description: Cisco product related information.
-          items:
-            $ref: '#/components/schemas/ProductDetailResponse_ciscoFields_inner'
-          type: array
+          $ref: '#/components/schemas/ProductDetailResponse_ciscoFields'
         warrantyInformation:
           description: Warranty information related to the product.
           items:
@@ -16270,7 +16226,7 @@ components:
             $ref: '#/components/schemas/ProductSearch_Response_subscriptionCatalog_inner_plans_inner'
           type: array
       type: object
-    ProductDetailResponse_indicators_inner:
+    ProductDetailResponse_indicators:
       example:
         isHeavyWeight: true
         isEnduserRequired: true
@@ -16405,7 +16361,8 @@ components:
           description: Boolean that indicates whether product is configurable.
           type: boolean
       type: object
-    ProductDetailResponse_ciscoFields_inner:
+    ProductDetailResponse_ciscoFields:
+      description: Cisco product related information.
       example:
         itemType: itemType
         productSubGroup: productSubGroup
