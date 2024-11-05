@@ -87,7 +87,7 @@ namespace xi.sdk.resellers.Model
         /// The end customer&#39;s order number for reference in their system.
         /// </summary>
         /// <value>The end customer&#39;s order number for reference in their system.</value>
-        [DataMember(Name = "endCustomerOrderNumber", EmitDefaultValue = false)]
+        [DataMember(Name = "endCustomerOrderNumber", EmitDefaultValue = true)]
         public string EndCustomerOrderNumber { get; set; }
 
         /// <summary>
