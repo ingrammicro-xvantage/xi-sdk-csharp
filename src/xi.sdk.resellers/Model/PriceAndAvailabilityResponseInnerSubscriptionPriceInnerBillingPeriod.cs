@@ -27,17 +27,17 @@ using OpenAPIDateConverter = xi.sdk.resellers.Client.OpenAPIDateConverter;
 namespace xi.sdk.resellers.Model
 {
     /// <summary>
-    /// PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriodInner
+    /// PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriod
     /// </summary>
-    [DataContract(Name = "PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_billingPeriod_inner")]
-    public partial class PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriodInner : IValidatableObject
+    [DataContract(Name = "PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_billingPeriod")]
+    public partial class PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriod : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriodInner" /> class.
+        /// Initializes a new instance of the <see cref="PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriod" /> class.
         /// </summary>
         /// <param name="billingPeriodUnit">The unit of the billing period..</param>
         /// <param name="billingPeriod">The billing period value..</param>
-        public PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriodInner(string billingPeriodUnit = default(string), decimal billingPeriod = default(decimal))
+        public PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriod(string billingPeriodUnit = default(string), decimal billingPeriod = default(decimal))
         {
             this.BillingPeriodUnit = billingPeriodUnit;
             this.BillingPeriod = billingPeriod;
@@ -64,7 +64,7 @@ namespace xi.sdk.resellers.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriodInner {\n");
+            sb.Append("class PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriod {\n");
             sb.Append("  BillingPeriodUnit: ").Append(BillingPeriodUnit).Append("\n");
             sb.Append("  BillingPeriod: ").Append(BillingPeriod).Append("\n");
             sb.Append("}\n");

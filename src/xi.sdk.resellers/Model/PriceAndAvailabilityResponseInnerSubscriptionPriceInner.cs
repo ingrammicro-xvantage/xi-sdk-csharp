@@ -37,16 +37,18 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <param name="index">index.</param>
         /// <param name="planId">Id of the plan..</param>
+        /// <param name="planUId">planUId.</param>
         /// <param name="planName">Name of the plan..</param>
         /// <param name="planDescription">The description of the plan..</param>
         /// <param name="groups">groups.</param>
         /// <param name="billingPeriod">billingPeriod.</param>
         /// <param name="subscriptionPeriod">subscriptionPeriod.</param>
         /// <param name="options">options.</param>
-        public PriceAndAvailabilityResponseInnerSubscriptionPriceInner(decimal index = default(decimal), string planId = default(string), string planName = default(string), string planDescription = default(string), List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerGroupsInner> groups = default(List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerGroupsInner>), List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriodInner> billingPeriod = default(List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriodInner>), List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerSubscriptionPeriodInner> subscriptionPeriod = default(List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerSubscriptionPeriodInner>), List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInner> options = default(List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInner>))
+        public PriceAndAvailabilityResponseInnerSubscriptionPriceInner(decimal index = default(decimal), string planId = default(string), string planUId = default(string), string planName = default(string), string planDescription = default(string), List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerGroupsInner> groups = default(List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerGroupsInner>), PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriod billingPeriod = default(PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriod), List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerSubscriptionPeriodInner> subscriptionPeriod = default(List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerSubscriptionPeriodInner>), List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInner> options = default(List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInner>))
         {
             this.Index = index;
             this.PlanId = planId;
+            this.PlanUId = planUId;
             this.PlanName = planName;
             this.PlanDescription = planDescription;
             this.Groups = groups;
@@ -67,6 +69,12 @@ namespace xi.sdk.resellers.Model
         /// <value>Id of the plan.</value>
         [DataMember(Name = "planId", EmitDefaultValue = false)]
         public string PlanId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets PlanUId
+        /// </summary>
+        [DataMember(Name = "planUId", EmitDefaultValue = false)]
+        public string PlanUId { get; set; }
 
         /// <summary>
         /// Name of the plan.
@@ -92,7 +100,7 @@ namespace xi.sdk.resellers.Model
         /// Gets or Sets BillingPeriod
         /// </summary>
         [DataMember(Name = "billingPeriod", EmitDefaultValue = false)]
-        public List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriodInner> BillingPeriod { get; set; }
+        public PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriod BillingPeriod { get; set; }
 
         /// <summary>
         /// Gets or Sets SubscriptionPeriod
@@ -116,6 +124,7 @@ namespace xi.sdk.resellers.Model
             sb.Append("class PriceAndAvailabilityResponseInnerSubscriptionPriceInner {\n");
             sb.Append("  Index: ").Append(Index).Append("\n");
             sb.Append("  PlanId: ").Append(PlanId).Append("\n");
+            sb.Append("  PlanUId: ").Append(PlanUId).Append("\n");
             sb.Append("  PlanName: ").Append(PlanName).Append("\n");
             sb.Append("  PlanDescription: ").Append(PlanDescription).Append("\n");
             sb.Append("  Groups: ").Append(Groups).Append("\n");

@@ -1,4 +1,4 @@
-# xi.sdk.resellers.Model.PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriodInner
+# xi.sdk.resellers.Model.PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriod
 
 ## Properties
 

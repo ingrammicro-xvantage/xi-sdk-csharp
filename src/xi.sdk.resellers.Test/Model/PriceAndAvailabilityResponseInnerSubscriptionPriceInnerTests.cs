@@ -73,6 +73,15 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'PlanUId'
+        /// </summary>
+        [Fact]
+        public void PlanUIdTest()
+        {
+            // TODO unit test for the property 'PlanUId'
+        }
+
+        /// <summary>
         /// Test the property 'PlanName'
         /// </summary>
         [Fact]
