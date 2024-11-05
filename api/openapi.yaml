@@ -14593,7 +14593,7 @@ components:
       type: object
     PriceAndAvailabilityResponse_inner_availability_availabilityByWarehouse_inner_backOrderInfo_inner:
       example:
-        quantity: 5
+        quantity: 2
         etaDate: etaDate
       properties:
         quantity:
@@ -14606,16 +14606,16 @@ components:
       type: object
     PriceAndAvailabilityResponse_inner_availability_availabilityByWarehouse_inner:
       example:
-        quantityAvailable: 6
+        quantityAvailable: 1
         backOrderInfo:
-        - quantity: 5
+        - quantity: 2
           etaDate: etaDate
-        - quantity: 5
+        - quantity: 2
           etaDate: etaDate
         warehouseId: warehouseId
         quantityOnOrder: 5
         location: location
-        quantityBackordered: 1
+        quantityBackordered: 5
         quantityBackorderedEta: quantityBackorderedEta
       properties:
         location:
@@ -14647,29 +14647,29 @@ components:
       type: object
     PriceAndAvailabilityResponse_inner_availability:
       example:
-        totalAvailability: 0
+        totalAvailability: 6
         availabilityByWarehouse:
-        - quantityAvailable: 6
+        - quantityAvailable: 1
           backOrderInfo:
-          - quantity: 5
+          - quantity: 2
             etaDate: etaDate
-          - quantity: 5
+          - quantity: 2
             etaDate: etaDate
           warehouseId: warehouseId
           quantityOnOrder: 5
           location: location
-          quantityBackordered: 1
+          quantityBackordered: 5
           quantityBackorderedEta: quantityBackorderedEta
-        - quantityAvailable: 6
+        - quantityAvailable: 1
           backOrderInfo:
-          - quantity: 5
+          - quantity: 2
             etaDate: etaDate
-          - quantity: 5
+          - quantity: 2
             etaDate: etaDate
           warehouseId: warehouseId
           quantityOnOrder: 5
           location: location
-          quantityBackordered: 1
+          quantityBackordered: 5
           quantityBackorderedEta: quantityBackorderedEta
         available: true
       nullable: true
@@ -14689,8 +14689,8 @@ components:
     PriceAndAvailabilityResponse_inner_reserveInventoryDetails_inner:
       example:
         expirydate: expirydate
-        quantityAvailable: 7
-        quantityReserved: 2
+        quantityAvailable: 9
+        quantityReserved: 7
         effectivedate: effectivedate
       properties:
         quantityReserved:
@@ -14711,12 +14711,12 @@ components:
       type: object
     PriceAndAvailabilityResponse_inner_pricing:
       example:
-        mapPrice: 3.616076749251911
+        mapPrice: 2.027123023002322
         webDiscountsAvailable: true
         specialBidPricingAvailable: true
         currencyCode: currencyCode
-        retailPrice: 9.301444243932576
-        customerPrice: 2.027123023002322
+        retailPrice: 3.616076749251911
+        customerPrice: 4.145608029883936
       nullable: true
       properties:
         currencyCode:
@@ -14748,14 +14748,14 @@ components:
     PriceAndAvailabilityResponse_inner_discounts_inner_specialPricing_inner:
       example:
         specialBidNumer: specialBidNumer
-        specialPricingAvailableQuantity: 7
+        specialPricingAvailableQuantity: 1
         specialPricingExpirationDate: 2000-01-23
         specialPricingMinQuantity: 1
-        governmentDiscountedCustomerPrice: 1.0246457001441578
+        governmentDiscountedCustomerPrice: 1.4894159098541704
         specialPricingEffectiveDate: 2000-01-23
         governmentDiscountType: governmentDiscountType
         discountType: "Special Bid, Promo Discount"
-        specialPricingDiscount: 4.145608029883936
+        specialPricingDiscount: 7.386281948385884
       properties:
         discountType:
           description: The type of discount being given to the customer.
@@ -14801,8 +14801,8 @@ components:
     PriceAndAvailabilityResponse_inner_discounts_inner_quantityDiscounts_inner:
       example:
         currencyType: currencyType
-        amount: 6.84685269835264
-        quantity: 1
+        amount: 7.457744773683766
+        quantity: 6
         conditionType: Total fee
         currencyCode: currencyCode
       properties:
@@ -14829,32 +14829,32 @@ components:
       example:
         specialPricing:
         - specialBidNumer: specialBidNumer
-          specialPricingAvailableQuantity: 7
+          specialPricingAvailableQuantity: 1
           specialPricingExpirationDate: 2000-01-23
           specialPricingMinQuantity: 1
-          governmentDiscountedCustomerPrice: 1.0246457001441578
+          governmentDiscountedCustomerPrice: 1.4894159098541704
           specialPricingEffectiveDate: 2000-01-23
           governmentDiscountType: governmentDiscountType
           discountType: "Special Bid, Promo Discount"
-          specialPricingDiscount: 4.145608029883936
+          specialPricingDiscount: 7.386281948385884
         - specialBidNumer: specialBidNumer
-          specialPricingAvailableQuantity: 7
+          specialPricingAvailableQuantity: 1
           specialPricingExpirationDate: 2000-01-23
           specialPricingMinQuantity: 1
-          governmentDiscountedCustomerPrice: 1.0246457001441578
+          governmentDiscountedCustomerPrice: 1.4894159098541704
           specialPricingEffectiveDate: 2000-01-23
           governmentDiscountType: governmentDiscountType
           discountType: "Special Bid, Promo Discount"
-          specialPricingDiscount: 4.145608029883936
+          specialPricingDiscount: 7.386281948385884
         quantityDiscounts:
         - currencyType: currencyType
-          amount: 6.84685269835264
-          quantity: 1
+          amount: 7.457744773683766
+          quantity: 6
           conditionType: Total fee
           currencyCode: currencyCode
         - currencyType: currencyType
-          amount: 6.84685269835264
-          quantity: 1
+          amount: 7.457744773683766
+          quantity: 6
           conditionType: Total fee
           currencyCode: currencyCode
       properties:
@@ -14870,7 +14870,7 @@ components:
       type: object
     PriceAndAvailabilityResponse_inner_serviceFees_inner:
       example:
-        amount: 7.457744773683766
+        amount: 1.1730742509559433
         endDate: endDate
         description: description
         conditionType: conditionType
@@ -14907,7 +14907,7 @@ components:
       type: object
     PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_billingPeriod_inner:
       example:
-        billingPeriod: billingPeriod
+        billingPeriod: 5.025004791520295
         billingPeriodUnit: billingPeriodUnit
       properties:
         billingPeriodUnit:
@@ -14915,7 +14915,7 @@ components:
           type: string
         billingPeriod:
           description: The billing period value.
-          type: string
+          type: number
       type: object
     PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_subscriptionPeriod_inner:
       example:
@@ -14931,11 +14931,11 @@ components:
       type: object
     PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_options_inner_resourcePricing_inner:
       example:
-        unitPrice: 9.965781217890562
-        margin: 9.369310271410669
+        unitPrice: 8.762042012749001
+        margin: 9.018348186070783
         subscriptionPeriod: subscriptionPeriod
-        quantity: 4
-        msrp: 5.025004791520295
+        quantity: quantity
+        msrp: 6.683562403749608
         name: name
         currencyCode: currencyCode
       properties:
@@ -14944,7 +14944,7 @@ components:
           type: string
         quantity:
           description: Quantity of the line item.
-          type: integer
+          type: string
         msrp:
           description: Manufacturer Suggested Retail Price.
           format: decimal
@@ -14966,10 +14966,10 @@ components:
       type: object
     PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_options_inner_discounts_inner_volumeDiscounts_inner:
       example:
-        unitPrice: 9.018348186070783
-        margin: 6.438423552598547
+        unitPrice: 6.965117697638846
+        margin: 1.284659006116532
         quantity: 6
-        msrp: 8.762042012749001
+        msrp: 3.5571952270680973
         currencyCode: currencyCode
       properties:
         currencyCode:
@@ -14995,7 +14995,7 @@ components:
       example:
         discountQtyLimit: 6
         vendorProgramName: vendorProgramName
-        discount: 3.5571952270680973
+        discount: 2.8841621266687802
         discountType: discountType
         currencyCode: currencyCode
         discountExpiryDate: discountExpiryDate
@@ -15025,26 +15025,26 @@ components:
         specialPricing:
         - discountQtyLimit: 6
           vendorProgramName: vendorProgramName
-          discount: 3.5571952270680973
+          discount: 2.8841621266687802
           discountType: discountType
           currencyCode: currencyCode
           discountExpiryDate: discountExpiryDate
         - discountQtyLimit: 6
           vendorProgramName: vendorProgramName
-          discount: 3.5571952270680973
+          discount: 2.8841621266687802
           discountType: discountType
           currencyCode: currencyCode
           discountExpiryDate: discountExpiryDate
         volumeDiscounts:
-        - unitPrice: 9.018348186070783
-          margin: 6.438423552598547
+        - unitPrice: 6.965117697638846
+          margin: 1.284659006116532
           quantity: 6
-          msrp: 8.762042012749001
+          msrp: 3.5571952270680973
           currencyCode: currencyCode
-        - unitPrice: 9.018348186070783
-          margin: 6.438423552598547
+        - unitPrice: 6.965117697638846
+          margin: 1.284659006116532
           quantity: 6
-          msrp: 8.762042012749001
+          msrp: 3.5571952270680973
           currencyCode: currencyCode
       properties:
         volumeDiscounts:
@@ -15058,7 +15058,9 @@ components:
       type: object
     PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_options_inner_fees_inner:
       example:
-        price: 1.284659006116532
+        code: code
+        price: 6.878052220127876
+        msrp: 5.944895607614016
         type: type
       properties:
         price:
@@ -15068,87 +15070,99 @@ components:
         type:
           description: The type of the fees.
           type: string
+        msrp:
+          format: decimal
+          type: number
+        code:
+          type: string
       type: object
     PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_options_inner:
       example:
         resourceId: resourceId
         fees:
-        - price: 1.284659006116532
+        - code: code
+          price: 6.878052220127876
+          msrp: 5.944895607614016
           type: type
-        - price: 1.284659006116532
+        - code: code
+          price: 6.878052220127876
+          msrp: 5.944895607614016
           type: type
         unitOfMeasure: unitOfMeasure
         discounts:
         - specialPricing:
           - discountQtyLimit: 6
             vendorProgramName: vendorProgramName
-            discount: 3.5571952270680973
+            discount: 2.8841621266687802
             discountType: discountType
             currencyCode: currencyCode
             discountExpiryDate: discountExpiryDate
           - discountQtyLimit: 6
             vendorProgramName: vendorProgramName
-            discount: 3.5571952270680973
+            discount: 2.8841621266687802
             discountType: discountType
             currencyCode: currencyCode
             discountExpiryDate: discountExpiryDate
           volumeDiscounts:
-          - unitPrice: 9.018348186070783
-            margin: 6.438423552598547
+          - unitPrice: 6.965117697638846
+            margin: 1.284659006116532
             quantity: 6
-            msrp: 8.762042012749001
+            msrp: 3.5571952270680973
             currencyCode: currencyCode
-          - unitPrice: 9.018348186070783
-            margin: 6.438423552598547
+          - unitPrice: 6.965117697638846
+            margin: 1.284659006116532
             quantity: 6
-            msrp: 8.762042012749001
+            msrp: 3.5571952270680973
             currencyCode: currencyCode
         - specialPricing:
           - discountQtyLimit: 6
             vendorProgramName: vendorProgramName
-            discount: 3.5571952270680973
+            discount: 2.8841621266687802
             discountType: discountType
             currencyCode: currencyCode
             discountExpiryDate: discountExpiryDate
           - discountQtyLimit: 6
             vendorProgramName: vendorProgramName
-            discount: 3.5571952270680973
+            discount: 2.8841621266687802
             discountType: discountType
             currencyCode: currencyCode
             discountExpiryDate: discountExpiryDate
           volumeDiscounts:
-          - unitPrice: 9.018348186070783
-            margin: 6.438423552598547
+          - unitPrice: 6.965117697638846
+            margin: 1.284659006116532
             quantity: 6
-            msrp: 8.762042012749001
+            msrp: 3.5571952270680973
             currencyCode: currencyCode
-          - unitPrice: 9.018348186070783
-            margin: 6.438423552598547
+          - unitPrice: 6.965117697638846
+            margin: 1.284659006116532
             quantity: 6
-            msrp: 8.762042012749001
+            msrp: 3.5571952270680973
             currencyCode: currencyCode
-        maxUnits: maxUnits
+        resourceUId: resourceUId
+        maxUnits: 9.369310271410669
         recurringpricemodel: recurringpricemodel
-        minUnits: minUnits
+        minUnits: 9.965781217890562
         resourcePricing:
-        - unitPrice: 9.965781217890562
-          margin: 9.369310271410669
+        - unitPrice: 8.762042012749001
+          margin: 9.018348186070783
           subscriptionPeriod: subscriptionPeriod
-          quantity: 4
-          msrp: 5.025004791520295
+          quantity: quantity
+          msrp: 6.683562403749608
           name: name
           currencyCode: currencyCode
-        - unitPrice: 9.965781217890562
-          margin: 9.369310271410669
+        - unitPrice: 8.762042012749001
+          margin: 9.018348186070783
           subscriptionPeriod: subscriptionPeriod
-          quantity: 4
-          msrp: 5.025004791520295
+          quantity: quantity
+          msrp: 6.683562403749608
           name: name
           currencyCode: currencyCode
         resourceName: resourceName
         vendorPartNumber: vendorPartNumber
       properties:
         resourceId:
+          type: string
+        resourceUId:
           description: The resource id of the subscription product.
           type: string
         resourceName:
@@ -15159,10 +15173,12 @@ components:
           type: string
         minUnits:
           description: Minimum unit needs to purchased.
-          type: string
+          format: decimal
+          type: number
         maxUnits:
           description: Maximum unit available for a purchase.
-          type: string
+          format: decimal
+          type: number
         recurringpricemodel:
           description: Recurring price model
           type: string
@@ -15190,163 +15206,174 @@ components:
         - subscriptionPeriod: subscriptionPeriod
           subscriptionPeriodUnit: subscriptionPeriodUnit
         billingPeriod:
-        - billingPeriod: billingPeriod
+        - billingPeriod: 5.025004791520295
           billingPeriodUnit: billingPeriodUnit
-        - billingPeriod: billingPeriod
+        - billingPeriod: 5.025004791520295
           billingPeriodUnit: billingPeriodUnit
         options:
         - resourceId: resourceId
           fees:
-          - price: 1.284659006116532
+          - code: code
+            price: 6.878052220127876
+            msrp: 5.944895607614016
             type: type
-          - price: 1.284659006116532
+          - code: code
+            price: 6.878052220127876
+            msrp: 5.944895607614016
             type: type
           unitOfMeasure: unitOfMeasure
           discounts:
           - specialPricing:
             - discountQtyLimit: 6
               vendorProgramName: vendorProgramName
-              discount: 3.5571952270680973
+              discount: 2.8841621266687802
               discountType: discountType
               currencyCode: currencyCode
               discountExpiryDate: discountExpiryDate
             - discountQtyLimit: 6
               vendorProgramName: vendorProgramName
-              discount: 3.5571952270680973
+              discount: 2.8841621266687802
               discountType: discountType
               currencyCode: currencyCode
               discountExpiryDate: discountExpiryDate
             volumeDiscounts:
-            - unitPrice: 9.018348186070783
-              margin: 6.438423552598547
+            - unitPrice: 6.965117697638846
+              margin: 1.284659006116532
               quantity: 6
-              msrp: 8.762042012749001
+              msrp: 3.5571952270680973
               currencyCode: currencyCode
-            - unitPrice: 9.018348186070783
-              margin: 6.438423552598547
+            - unitPrice: 6.965117697638846
+              margin: 1.284659006116532
               quantity: 6
-              msrp: 8.762042012749001
+              msrp: 3.5571952270680973
               currencyCode: currencyCode
           - specialPricing:
             - discountQtyLimit: 6
               vendorProgramName: vendorProgramName
-              discount: 3.5571952270680973
+              discount: 2.8841621266687802
               discountType: discountType
               currencyCode: currencyCode
               discountExpiryDate: discountExpiryDate
             - discountQtyLimit: 6
               vendorProgramName: vendorProgramName
-              discount: 3.5571952270680973
+              discount: 2.8841621266687802
               discountType: discountType
               currencyCode: currencyCode
               discountExpiryDate: discountExpiryDate
             volumeDiscounts:
-            - unitPrice: 9.018348186070783
-              margin: 6.438423552598547
+            - unitPrice: 6.965117697638846
+              margin: 1.284659006116532
               quantity: 6
-              msrp: 8.762042012749001
+              msrp: 3.5571952270680973
               currencyCode: currencyCode
-            - unitPrice: 9.018348186070783
-              margin: 6.438423552598547
+            - unitPrice: 6.965117697638846
+              margin: 1.284659006116532
               quantity: 6
-              msrp: 8.762042012749001
+              msrp: 3.5571952270680973
               currencyCode: currencyCode
-          maxUnits: maxUnits
+          resourceUId: resourceUId
+          maxUnits: 9.369310271410669
           recurringpricemodel: recurringpricemodel
-          minUnits: minUnits
+          minUnits: 9.965781217890562
           resourcePricing:
-          - unitPrice: 9.965781217890562
-            margin: 9.369310271410669
+          - unitPrice: 8.762042012749001
+            margin: 9.018348186070783
             subscriptionPeriod: subscriptionPeriod
-            quantity: 4
-            msrp: 5.025004791520295
+            quantity: quantity
+            msrp: 6.683562403749608
             name: name
             currencyCode: currencyCode
-          - unitPrice: 9.965781217890562
-            margin: 9.369310271410669
+          - unitPrice: 8.762042012749001
+            margin: 9.018348186070783
             subscriptionPeriod: subscriptionPeriod
-            quantity: 4
-            msrp: 5.025004791520295
+            quantity: quantity
+            msrp: 6.683562403749608
             name: name
             currencyCode: currencyCode
           resourceName: resourceName
           vendorPartNumber: vendorPartNumber
         - resourceId: resourceId
           fees:
-          - price: 1.284659006116532
+          - code: code
+            price: 6.878052220127876
+            msrp: 5.944895607614016
             type: type
-          - price: 1.284659006116532
+          - code: code
+            price: 6.878052220127876
+            msrp: 5.944895607614016
             type: type
           unitOfMeasure: unitOfMeasure
           discounts:
           - specialPricing:
             - discountQtyLimit: 6
               vendorProgramName: vendorProgramName
-              discount: 3.5571952270680973
+              discount: 2.8841621266687802
               discountType: discountType
               currencyCode: currencyCode
               discountExpiryDate: discountExpiryDate
             - discountQtyLimit: 6
               vendorProgramName: vendorProgramName
-              discount: 3.5571952270680973
+              discount: 2.8841621266687802
               discountType: discountType
               currencyCode: currencyCode
               discountExpiryDate: discountExpiryDate
             volumeDiscounts:
-            - unitPrice: 9.018348186070783
-              margin: 6.438423552598547
+            - unitPrice: 6.965117697638846
+              margin: 1.284659006116532
               quantity: 6
-              msrp: 8.762042012749001
+              msrp: 3.5571952270680973
               currencyCode: currencyCode
-            - unitPrice: 9.018348186070783
-              margin: 6.438423552598547
+            - unitPrice: 6.965117697638846
+              margin: 1.284659006116532
               quantity: 6
-              msrp: 8.762042012749001
+              msrp: 3.5571952270680973
               currencyCode: currencyCode
           - specialPricing:
             - discountQtyLimit: 6
               vendorProgramName: vendorProgramName
-              discount: 3.5571952270680973
+              discount: 2.8841621266687802
               discountType: discountType
               currencyCode: currencyCode
               discountExpiryDate: discountExpiryDate
             - discountQtyLimit: 6
               vendorProgramName: vendorProgramName
-              discount: 3.5571952270680973
+              discount: 2.8841621266687802
               discountType: discountType
               currencyCode: currencyCode
               discountExpiryDate: discountExpiryDate
             volumeDiscounts:
-            - unitPrice: 9.018348186070783
-              margin: 6.438423552598547
+            - unitPrice: 6.965117697638846
+              margin: 1.284659006116532
               quantity: 6
-              msrp: 8.762042012749001
+              msrp: 3.5571952270680973
               currencyCode: currencyCode
-            - unitPrice: 9.018348186070783
-              margin: 6.438423552598547
+            - unitPrice: 6.965117697638846
+              margin: 1.284659006116532
               quantity: 6
-              msrp: 8.762042012749001
+              msrp: 3.5571952270680973
               currencyCode: currencyCode
-          maxUnits: maxUnits
+          resourceUId: resourceUId
+          maxUnits: 9.369310271410669
           recurringpricemodel: recurringpricemodel
-          minUnits: minUnits
+          minUnits: 9.965781217890562
           resourcePricing:
-          - unitPrice: 9.965781217890562
-            margin: 9.369310271410669
+          - unitPrice: 8.762042012749001
+            margin: 9.018348186070783
             subscriptionPeriod: subscriptionPeriod
-            quantity: 4
-            msrp: 5.025004791520295
+            quantity: quantity
+            msrp: 6.683562403749608
             name: name
             currencyCode: currencyCode
-          - unitPrice: 9.965781217890562
-            margin: 9.369310271410669
+          - unitPrice: 8.762042012749001
+            margin: 9.018348186070783
             subscriptionPeriod: subscriptionPeriod
-            quantity: 4
-            msrp: 5.025004791520295
+            quantity: quantity
+            msrp: 6.683562403749608
             name: name
             currencyCode: currencyCode
           resourceName: resourceName
           vendorPartNumber: vendorPartNumber
+        index: 4.965218492984954
         planName: planName
         groups:
         - groupName: groupName
@@ -15354,8 +15381,10 @@ components:
         - groupName: groupName
           groupDescription: groupDescription
         planId: planId
-        planDescription: 1.1730742509559433
+        planDescription: planDescription
       properties:
+        index:
+          type: number
         planId:
           description: Id of the plan.
           type: string
@@ -15364,7 +15393,7 @@ components:
           type: string
         planDescription:
           description: The description of the plan.
-          type: number
+          type: string
         groups:
           items:
             $ref: '#/components/schemas/PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_groups_inner'
@@ -15389,102 +15418,102 @@ components:
         description: description
         productAuthorized: true
         serviceFees:
-        - amount: 7.457744773683766
+        - amount: 1.1730742509559433
           endDate: endDate
           description: description
           conditionType: conditionType
           currencyCode: currencyCode
-        - amount: 7.457744773683766
+        - amount: 1.1730742509559433
           endDate: endDate
           description: description
           conditionType: conditionType
           currencyCode: currencyCode
         availability:
-          totalAvailability: 0
+          totalAvailability: 6
           availabilityByWarehouse:
-          - quantityAvailable: 6
+          - quantityAvailable: 1
             backOrderInfo:
-            - quantity: 5
+            - quantity: 2
               etaDate: etaDate
-            - quantity: 5
+            - quantity: 2
               etaDate: etaDate
             warehouseId: warehouseId
             quantityOnOrder: 5
             location: location
-            quantityBackordered: 1
+            quantityBackordered: 5
             quantityBackorderedEta: quantityBackorderedEta
-          - quantityAvailable: 6
+          - quantityAvailable: 1
             backOrderInfo:
-            - quantity: 5
+            - quantity: 2
               etaDate: etaDate
-            - quantity: 5
+            - quantity: 2
               etaDate: etaDate
             warehouseId: warehouseId
             quantityOnOrder: 5
             location: location
-            quantityBackordered: 1
+            quantityBackordered: 5
             quantityBackorderedEta: quantityBackorderedEta
           available: true
         uom: uom
         discounts:
         - specialPricing:
           - specialBidNumer: specialBidNumer
-            specialPricingAvailableQuantity: 7
+            specialPricingAvailableQuantity: 1
             specialPricingExpirationDate: 2000-01-23
             specialPricingMinQuantity: 1
-            governmentDiscountedCustomerPrice: 1.0246457001441578
+            governmentDiscountedCustomerPrice: 1.4894159098541704
             specialPricingEffectiveDate: 2000-01-23
             governmentDiscountType: governmentDiscountType
             discountType: "Special Bid, Promo Discount"
-            specialPricingDiscount: 4.145608029883936
+            specialPricingDiscount: 7.386281948385884
           - specialBidNumer: specialBidNumer
-            specialPricingAvailableQuantity: 7
+            specialPricingAvailableQuantity: 1
             specialPricingExpirationDate: 2000-01-23
             specialPricingMinQuantity: 1
-            governmentDiscountedCustomerPrice: 1.0246457001441578
+            governmentDiscountedCustomerPrice: 1.4894159098541704
             specialPricingEffectiveDate: 2000-01-23
             governmentDiscountType: governmentDiscountType
             discountType: "Special Bid, Promo Discount"
-            specialPricingDiscount: 4.145608029883936
+            specialPricingDiscount: 7.386281948385884
           quantityDiscounts:
           - currencyType: currencyType
-            amount: 6.84685269835264
-            quantity: 1
+            amount: 7.457744773683766
+            quantity: 6
             conditionType: Total fee
             currencyCode: currencyCode
           - currencyType: currencyType
-            amount: 6.84685269835264
-            quantity: 1
+            amount: 7.457744773683766
+            quantity: 6
             conditionType: Total fee
             currencyCode: currencyCode
         - specialPricing:
           - specialBidNumer: specialBidNumer
-            specialPricingAvailableQuantity: 7
+            specialPricingAvailableQuantity: 1
             specialPricingExpirationDate: 2000-01-23
             specialPricingMinQuantity: 1
-            governmentDiscountedCustomerPrice: 1.0246457001441578
+            governmentDiscountedCustomerPrice: 1.4894159098541704
             specialPricingEffectiveDate: 2000-01-23
             governmentDiscountType: governmentDiscountType
             discountType: "Special Bid, Promo Discount"
-            specialPricingDiscount: 4.145608029883936
+            specialPricingDiscount: 7.386281948385884
           - specialBidNumer: specialBidNumer
-            specialPricingAvailableQuantity: 7
+            specialPricingAvailableQuantity: 1
             specialPricingExpirationDate: 2000-01-23
             specialPricingMinQuantity: 1
-            governmentDiscountedCustomerPrice: 1.0246457001441578
+            governmentDiscountedCustomerPrice: 1.4894159098541704
             specialPricingEffectiveDate: 2000-01-23
             governmentDiscountType: governmentDiscountType
             discountType: "Special Bid, Promo Discount"
-            specialPricingDiscount: 4.145608029883936
+            specialPricingDiscount: 7.386281948385884
           quantityDiscounts:
           - currencyType: currencyType
-            amount: 6.84685269835264
-            quantity: 1
+            amount: 7.457744773683766
+            quantity: 6
             conditionType: Total fee
             currencyCode: currencyCode
           - currencyType: currencyType
-            amount: 6.84685269835264
-            quantity: 1
+            amount: 7.457744773683766
+            quantity: 6
             conditionType: Total fee
             currencyCode: currencyCode
         productStatusCode: productStatusCode
@@ -15494,6 +15523,7 @@ components:
         productClass: productClass
         govtProgramType: govtProgramType
         govtEndUserType: govtEndUserType
+        index: 0.8008281904610115
         upc: upc
         productStatus: productStatus
         partNumberType: partNumberType
@@ -15506,20 +15536,20 @@ components:
         vendorNumber: vendorNumber
         reserveInventoryDetails:
         - expirydate: expirydate
-          quantityAvailable: 7
-          quantityReserved: 2
+          quantityAvailable: 9
+          quantityReserved: 7
           effectivedate: effectivedate
         - expirydate: expirydate
-          quantityAvailable: 7
-          quantityReserved: 2
+          quantityAvailable: 9
+          quantityReserved: 7
           effectivedate: effectivedate
         pricing:
-          mapPrice: 3.616076749251911
+          mapPrice: 2.027123023002322
           webDiscountsAvailable: true
           specialBidPricingAvailable: true
           currencyCode: currencyCode
-          retailPrice: 9.301444243932576
-          customerPrice: 2.027123023002322
+          retailPrice: 3.616076749251911
+          customerPrice: 4.145608029883936
         subscriptionPrice:
         - subscriptionPeriod:
           - subscriptionPeriod: subscriptionPeriod
@@ -15527,163 +15557,174 @@ components:
           - subscriptionPeriod: subscriptionPeriod
             subscriptionPeriodUnit: subscriptionPeriodUnit
           billingPeriod:
-          - billingPeriod: billingPeriod
+          - billingPeriod: 5.025004791520295
             billingPeriodUnit: billingPeriodUnit
-          - billingPeriod: billingPeriod
+          - billingPeriod: 5.025004791520295
             billingPeriodUnit: billingPeriodUnit
           options:
           - resourceId: resourceId
             fees:
-            - price: 1.284659006116532
+            - code: code
+              price: 6.878052220127876
+              msrp: 5.944895607614016
               type: type
-            - price: 1.284659006116532
+            - code: code
+              price: 6.878052220127876
+              msrp: 5.944895607614016
               type: type
             unitOfMeasure: unitOfMeasure
             discounts:
             - specialPricing:
               - discountQtyLimit: 6
                 vendorProgramName: vendorProgramName
-                discount: 3.5571952270680973
+                discount: 2.8841621266687802
                 discountType: discountType
                 currencyCode: currencyCode
                 discountExpiryDate: discountExpiryDate
               - discountQtyLimit: 6
                 vendorProgramName: vendorProgramName
-                discount: 3.5571952270680973
+                discount: 2.8841621266687802
                 discountType: discountType
                 currencyCode: currencyCode
                 discountExpiryDate: discountExpiryDate
               volumeDiscounts:
-              - unitPrice: 9.018348186070783
-                margin: 6.438423552598547
+              - unitPrice: 6.965117697638846
+                margin: 1.284659006116532
                 quantity: 6
-                msrp: 8.762042012749001
+                msrp: 3.5571952270680973
                 currencyCode: currencyCode
-              - unitPrice: 9.018348186070783
-                margin: 6.438423552598547
+              - unitPrice: 6.965117697638846
+                margin: 1.284659006116532
                 quantity: 6
-                msrp: 8.762042012749001
+                msrp: 3.5571952270680973
                 currencyCode: currencyCode
             - specialPricing:
               - discountQtyLimit: 6
                 vendorProgramName: vendorProgramName
-                discount: 3.5571952270680973
+                discount: 2.8841621266687802
                 discountType: discountType
                 currencyCode: currencyCode
                 discountExpiryDate: discountExpiryDate
               - discountQtyLimit: 6
                 vendorProgramName: vendorProgramName
-                discount: 3.5571952270680973
+                discount: 2.8841621266687802
                 discountType: discountType
                 currencyCode: currencyCode
                 discountExpiryDate: discountExpiryDate
               volumeDiscounts:
-              - unitPrice: 9.018348186070783
-                margin: 6.438423552598547
+              - unitPrice: 6.965117697638846
+                margin: 1.284659006116532
                 quantity: 6
-                msrp: 8.762042012749001
+                msrp: 3.5571952270680973
                 currencyCode: currencyCode
-              - unitPrice: 9.018348186070783
-                margin: 6.438423552598547
+              - unitPrice: 6.965117697638846
+                margin: 1.284659006116532
                 quantity: 6
-                msrp: 8.762042012749001
+                msrp: 3.5571952270680973
                 currencyCode: currencyCode
-            maxUnits: maxUnits
+            resourceUId: resourceUId
+            maxUnits: 9.369310271410669
             recurringpricemodel: recurringpricemodel
-            minUnits: minUnits
+            minUnits: 9.965781217890562
             resourcePricing:
-            - unitPrice: 9.965781217890562
-              margin: 9.369310271410669
+            - unitPrice: 8.762042012749001
+              margin: 9.018348186070783
               subscriptionPeriod: subscriptionPeriod
-              quantity: 4
-              msrp: 5.025004791520295
+              quantity: quantity
+              msrp: 6.683562403749608
               name: name
               currencyCode: currencyCode
-            - unitPrice: 9.965781217890562
-              margin: 9.369310271410669
+            - unitPrice: 8.762042012749001
+              margin: 9.018348186070783
               subscriptionPeriod: subscriptionPeriod
-              quantity: 4
-              msrp: 5.025004791520295
+              quantity: quantity
+              msrp: 6.683562403749608
               name: name
               currencyCode: currencyCode
             resourceName: resourceName
             vendorPartNumber: vendorPartNumber
           - resourceId: resourceId
             fees:
-            - price: 1.284659006116532
+            - code: code
+              price: 6.878052220127876
+              msrp: 5.944895607614016
               type: type
-            - price: 1.284659006116532
+            - code: code
+              price: 6.878052220127876
+              msrp: 5.944895607614016
               type: type
             unitOfMeasure: unitOfMeasure
             discounts:
             - specialPricing:
               - discountQtyLimit: 6
                 vendorProgramName: vendorProgramName
-                discount: 3.5571952270680973
+                discount: 2.8841621266687802
                 discountType: discountType
                 currencyCode: currencyCode
                 discountExpiryDate: discountExpiryDate
               - discountQtyLimit: 6
                 vendorProgramName: vendorProgramName
-                discount: 3.5571952270680973
+                discount: 2.8841621266687802
                 discountType: discountType
                 currencyCode: currencyCode
                 discountExpiryDate: discountExpiryDate
               volumeDiscounts:
-              - unitPrice: 9.018348186070783
-                margin: 6.438423552598547
+              - unitPrice: 6.965117697638846
+                margin: 1.284659006116532
                 quantity: 6
-                msrp: 8.762042012749001
+                msrp: 3.5571952270680973
                 currencyCode: currencyCode
-              - unitPrice: 9.018348186070783
-                margin: 6.438423552598547
+              - unitPrice: 6.965117697638846
+                margin: 1.284659006116532
                 quantity: 6
-                msrp: 8.762042012749001
+                msrp: 3.5571952270680973
                 currencyCode: currencyCode
             - specialPricing:
               - discountQtyLimit: 6
                 vendorProgramName: vendorProgramName
-                discount: 3.5571952270680973
+                discount: 2.8841621266687802
                 discountType: discountType
                 currencyCode: currencyCode
                 discountExpiryDate: discountExpiryDate
               - discountQtyLimit: 6
                 vendorProgramName: vendorProgramName
-                discount: 3.5571952270680973
+                discount: 2.8841621266687802
                 discountType: discountType
                 currencyCode: currencyCode
                 discountExpiryDate: discountExpiryDate
               volumeDiscounts:
-              - unitPrice: 9.018348186070783
-                margin: 6.438423552598547
+              - unitPrice: 6.965117697638846
+                margin: 1.284659006116532
                 quantity: 6
-                msrp: 8.762042012749001
+                msrp: 3.5571952270680973
                 currencyCode: currencyCode
-              - unitPrice: 9.018348186070783
-                margin: 6.438423552598547
+              - unitPrice: 6.965117697638846
+                margin: 1.284659006116532
                 quantity: 6
-                msrp: 8.762042012749001
+                msrp: 3.5571952270680973
                 currencyCode: currencyCode
-            maxUnits: maxUnits
+            resourceUId: resourceUId
+            maxUnits: 9.369310271410669
             recurringpricemodel: recurringpricemodel
-            minUnits: minUnits
+            minUnits: 9.965781217890562
             resourcePricing:
-            - unitPrice: 9.965781217890562
-              margin: 9.369310271410669
+            - unitPrice: 8.762042012749001
+              margin: 9.018348186070783
               subscriptionPeriod: subscriptionPeriod
-              quantity: 4
-              msrp: 5.025004791520295
+              quantity: quantity
+              msrp: 6.683562403749608
               name: name
               currencyCode: currencyCode
-            - unitPrice: 9.965781217890562
-              margin: 9.369310271410669
+            - unitPrice: 8.762042012749001
+              margin: 9.018348186070783
               subscriptionPeriod: subscriptionPeriod
-              quantity: 4
-              msrp: 5.025004791520295
+              quantity: quantity
+              msrp: 6.683562403749608
               name: name
               currencyCode: currencyCode
             resourceName: resourceName
             vendorPartNumber: vendorPartNumber
+          index: 4.965218492984954
           planName: planName
           groups:
           - groupName: groupName
@@ -15691,170 +15732,181 @@ components:
           - groupName: groupName
             groupDescription: groupDescription
           planId: planId
-          planDescription: 1.1730742509559433
+          planDescription: planDescription
         - subscriptionPeriod:
           - subscriptionPeriod: subscriptionPeriod
             subscriptionPeriodUnit: subscriptionPeriodUnit
           - subscriptionPeriod: subscriptionPeriod
             subscriptionPeriodUnit: subscriptionPeriodUnit
           billingPeriod:
-          - billingPeriod: billingPeriod
+          - billingPeriod: 5.025004791520295
             billingPeriodUnit: billingPeriodUnit
-          - billingPeriod: billingPeriod
+          - billingPeriod: 5.025004791520295
             billingPeriodUnit: billingPeriodUnit
           options:
           - resourceId: resourceId
             fees:
-            - price: 1.284659006116532
+            - code: code
+              price: 6.878052220127876
+              msrp: 5.944895607614016
               type: type
-            - price: 1.284659006116532
+            - code: code
+              price: 6.878052220127876
+              msrp: 5.944895607614016
               type: type
             unitOfMeasure: unitOfMeasure
             discounts:
             - specialPricing:
               - discountQtyLimit: 6
                 vendorProgramName: vendorProgramName
-                discount: 3.5571952270680973
+                discount: 2.8841621266687802
                 discountType: discountType
                 currencyCode: currencyCode
                 discountExpiryDate: discountExpiryDate
               - discountQtyLimit: 6
                 vendorProgramName: vendorProgramName
-                discount: 3.5571952270680973
+                discount: 2.8841621266687802
                 discountType: discountType
                 currencyCode: currencyCode
                 discountExpiryDate: discountExpiryDate
               volumeDiscounts:
-              - unitPrice: 9.018348186070783
-                margin: 6.438423552598547
+              - unitPrice: 6.965117697638846
+                margin: 1.284659006116532
                 quantity: 6
-                msrp: 8.762042012749001
+                msrp: 3.5571952270680973
                 currencyCode: currencyCode
-              - unitPrice: 9.018348186070783
-                margin: 6.438423552598547
+              - unitPrice: 6.965117697638846
+                margin: 1.284659006116532
                 quantity: 6
-                msrp: 8.762042012749001
+                msrp: 3.5571952270680973
                 currencyCode: currencyCode
             - specialPricing:
               - discountQtyLimit: 6
                 vendorProgramName: vendorProgramName
-                discount: 3.5571952270680973
+                discount: 2.8841621266687802
                 discountType: discountType
                 currencyCode: currencyCode
                 discountExpiryDate: discountExpiryDate
               - discountQtyLimit: 6
                 vendorProgramName: vendorProgramName
-                discount: 3.5571952270680973
+                discount: 2.8841621266687802
                 discountType: discountType
                 currencyCode: currencyCode
                 discountExpiryDate: discountExpiryDate
               volumeDiscounts:
-              - unitPrice: 9.018348186070783
-                margin: 6.438423552598547
+              - unitPrice: 6.965117697638846
+                margin: 1.284659006116532
                 quantity: 6
-                msrp: 8.762042012749001
+                msrp: 3.5571952270680973
                 currencyCode: currencyCode
-              - unitPrice: 9.018348186070783
-                margin: 6.438423552598547
+              - unitPrice: 6.965117697638846
+                margin: 1.284659006116532
                 quantity: 6
-                msrp: 8.762042012749001
+                msrp: 3.5571952270680973
                 currencyCode: currencyCode
-            maxUnits: maxUnits
+            resourceUId: resourceUId
+            maxUnits: 9.369310271410669
             recurringpricemodel: recurringpricemodel
-            minUnits: minUnits
+            minUnits: 9.965781217890562
             resourcePricing:
-            - unitPrice: 9.965781217890562
-              margin: 9.369310271410669
+            - unitPrice: 8.762042012749001
+              margin: 9.018348186070783
               subscriptionPeriod: subscriptionPeriod
-              quantity: 4
-              msrp: 5.025004791520295
+              quantity: quantity
+              msrp: 6.683562403749608
               name: name
               currencyCode: currencyCode
-            - unitPrice: 9.965781217890562
-              margin: 9.369310271410669
+            - unitPrice: 8.762042012749001
+              margin: 9.018348186070783
               subscriptionPeriod: subscriptionPeriod
-              quantity: 4
-              msrp: 5.025004791520295
+              quantity: quantity
+              msrp: 6.683562403749608
               name: name
               currencyCode: currencyCode
             resourceName: resourceName
             vendorPartNumber: vendorPartNumber
           - resourceId: resourceId
             fees:
-            - price: 1.284659006116532
+            - code: code
+              price: 6.878052220127876
+              msrp: 5.944895607614016
               type: type
-            - price: 1.284659006116532
+            - code: code
+              price: 6.878052220127876
+              msrp: 5.944895607614016
               type: type
             unitOfMeasure: unitOfMeasure
             discounts:
             - specialPricing:
               - discountQtyLimit: 6
                 vendorProgramName: vendorProgramName
-                discount: 3.5571952270680973
+                discount: 2.8841621266687802
                 discountType: discountType
                 currencyCode: currencyCode
                 discountExpiryDate: discountExpiryDate
               - discountQtyLimit: 6
                 vendorProgramName: vendorProgramName
-                discount: 3.5571952270680973
+                discount: 2.8841621266687802
                 discountType: discountType
                 currencyCode: currencyCode
                 discountExpiryDate: discountExpiryDate
               volumeDiscounts:
-              - unitPrice: 9.018348186070783
-                margin: 6.438423552598547
+              - unitPrice: 6.965117697638846
+                margin: 1.284659006116532
                 quantity: 6
-                msrp: 8.762042012749001
+                msrp: 3.5571952270680973
                 currencyCode: currencyCode
-              - unitPrice: 9.018348186070783
-                margin: 6.438423552598547
+              - unitPrice: 6.965117697638846
+                margin: 1.284659006116532
                 quantity: 6
-                msrp: 8.762042012749001
+                msrp: 3.5571952270680973
                 currencyCode: currencyCode
             - specialPricing:
               - discountQtyLimit: 6
                 vendorProgramName: vendorProgramName
-                discount: 3.5571952270680973
+                discount: 2.8841621266687802
                 discountType: discountType
                 currencyCode: currencyCode
                 discountExpiryDate: discountExpiryDate
               - discountQtyLimit: 6
                 vendorProgramName: vendorProgramName
-                discount: 3.5571952270680973
+                discount: 2.8841621266687802
                 discountType: discountType
                 currencyCode: currencyCode
                 discountExpiryDate: discountExpiryDate
               volumeDiscounts:
-              - unitPrice: 9.018348186070783
-                margin: 6.438423552598547
+              - unitPrice: 6.965117697638846
+                margin: 1.284659006116532
                 quantity: 6
-                msrp: 8.762042012749001
+                msrp: 3.5571952270680973
                 currencyCode: currencyCode
-              - unitPrice: 9.018348186070783
-                margin: 6.438423552598547
+              - unitPrice: 6.965117697638846
+                margin: 1.284659006116532
                 quantity: 6
-                msrp: 8.762042012749001
+                msrp: 3.5571952270680973
                 currencyCode: currencyCode
-            maxUnits: maxUnits
+            resourceUId: resourceUId
+            maxUnits: 9.369310271410669
             recurringpricemodel: recurringpricemodel
-            minUnits: minUnits
+            minUnits: 9.965781217890562
             resourcePricing:
-            - unitPrice: 9.965781217890562
-              margin: 9.369310271410669
+            - unitPrice: 8.762042012749001
+              margin: 9.018348186070783
               subscriptionPeriod: subscriptionPeriod
-              quantity: 4
-              msrp: 5.025004791520295
+              quantity: quantity
+              msrp: 6.683562403749608
               name: name
               currencyCode: currencyCode
-            - unitPrice: 9.965781217890562
-              margin: 9.369310271410669
+            - unitPrice: 8.762042012749001
+              margin: 9.018348186070783
               subscriptionPeriod: subscriptionPeriod
-              quantity: 4
-              msrp: 5.025004791520295
+              quantity: quantity
+              msrp: 6.683562403749608
               name: name
               currencyCode: currencyCode
             resourceName: resourceName
             vendorPartNumber: vendorPartNumber
+          index: 4.965218492984954
           planName: planName
           groups:
           - groupName: groupName
@@ -15862,8 +15914,10 @@ components:
           - groupName: groupName
             groupDescription: groupDescription
           planId: planId
-          planDescription: 1.1730742509559433
+          planDescription: planDescription
       properties:
+        index:
+          type: number
         productStatusCode:
           description: Codes signifying whether the sku is active or not.
           type: string
@@ -15967,7 +16021,6 @@ components:
         reserveInventoryDetails:
           items:
             $ref: '#/components/schemas/PriceAndAvailabilityResponse_inner_reserveInventoryDetails_inner'
-          nullable: true
           type: array
         pricing:
           $ref: '#/components/schemas/PriceAndAvailabilityResponse_inner_pricing'

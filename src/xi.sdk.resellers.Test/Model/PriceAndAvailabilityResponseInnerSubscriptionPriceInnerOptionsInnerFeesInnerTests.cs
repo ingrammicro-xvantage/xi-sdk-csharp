@@ -71,5 +71,23 @@ namespace xi.sdk.resellers.Test.Model
         {
             // TODO unit test for the property 'Type'
         }
+
+        /// <summary>
+        /// Test the property 'Msrp'
+        /// </summary>
+        [Fact]
+        public void MsrpTest()
+        {
+            // TODO unit test for the property 'Msrp'
+        }
+
+        /// <summary>
+        /// Test the property 'Code'
+        /// </summary>
+        [Fact]
+        public void CodeTest()
+        {
+            // TODO unit test for the property 'Code'
+        }
     }
 }

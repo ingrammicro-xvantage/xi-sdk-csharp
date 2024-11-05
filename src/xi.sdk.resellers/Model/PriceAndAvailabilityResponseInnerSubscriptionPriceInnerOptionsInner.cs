@@ -35,7 +35,8 @@ namespace xi.sdk.resellers.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInner" /> class.
         /// </summary>
-        /// <param name="resourceId">The resource id of the subscription product..</param>
+        /// <param name="resourceId">resourceId.</param>
+        /// <param name="resourceUId">The resource id of the subscription product..</param>
         /// <param name="resourceName">The name of the resource of the subscription product..</param>
         /// <param name="vendorPartNumber">Vendor’s part number for the subscription product..</param>
         /// <param name="minUnits">Minimum unit needs to purchased..</param>
@@ -45,9 +46,10 @@ namespace xi.sdk.resellers.Model
         /// <param name="resourcePricing">resourcePricing.</param>
         /// <param name="discounts">discounts.</param>
         /// <param name="fees">fees.</param>
-        public PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInner(string resourceId = default(string), string resourceName = default(string), string vendorPartNumber = default(string), string minUnits = default(string), string maxUnits = default(string), string recurringpricemodel = default(string), string unitOfMeasure = default(string), List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerResourcePricingInner> resourcePricing = default(List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerResourcePricingInner>), List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerDiscountsInner> discounts = default(List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerDiscountsInner>), List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerFeesInner> fees = default(List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerFeesInner>))
+        public PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInner(string resourceId = default(string), string resourceUId = default(string), string resourceName = default(string), string vendorPartNumber = default(string), decimal minUnits = default(decimal), decimal maxUnits = default(decimal), string recurringpricemodel = default(string), string unitOfMeasure = default(string), List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerResourcePricingInner> resourcePricing = default(List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerResourcePricingInner>), List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerDiscountsInner> discounts = default(List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerDiscountsInner>), List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerFeesInner> fees = default(List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerFeesInner>))
         {
             this.ResourceId = resourceId;
+            this.ResourceUId = resourceUId;
             this.ResourceName = resourceName;
             this.VendorPartNumber = vendorPartNumber;
             this.MinUnits = minUnits;
@@ -60,11 +62,17 @@ namespace xi.sdk.resellers.Model
         }
 
         /// <summary>
+        /// Gets or Sets ResourceId
+        /// </summary>
+        [DataMember(Name = "resourceId", EmitDefaultValue = false)]
+        public string ResourceId { get; set; }
+
+        /// <summary>
         /// The resource id of the subscription product.
         /// </summary>
         /// <value>The resource id of the subscription product.</value>
-        [DataMember(Name = "resourceId", EmitDefaultValue = false)]
-        public string ResourceId { get; set; }
+        [DataMember(Name = "resourceUId", EmitDefaultValue = false)]
+        public string ResourceUId { get; set; }
 
         /// <summary>
         /// The name of the resource of the subscription product.
@@ -85,14 +93,14 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>Minimum unit needs to purchased.</value>
         [DataMember(Name = "minUnits", EmitDefaultValue = false)]
-        public string MinUnits { get; set; }
+        public decimal MinUnits { get; set; }
 
         /// <summary>
         /// Maximum unit available for a purchase.
         /// </summary>
         /// <value>Maximum unit available for a purchase.</value>
         [DataMember(Name = "maxUnits", EmitDefaultValue = false)]
-        public string MaxUnits { get; set; }
+        public decimal MaxUnits { get; set; }
 
         /// <summary>
         /// Recurring price model
@@ -135,6 +143,7 @@ namespace xi.sdk.resellers.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInner {\n");
             sb.Append("  ResourceId: ").Append(ResourceId).Append("\n");
+            sb.Append("  ResourceUId: ").Append(ResourceUId).Append("\n");
             sb.Append("  ResourceName: ").Append(ResourceName).Append("\n");
             sb.Append("  VendorPartNumber: ").Append(VendorPartNumber).Append("\n");
             sb.Append("  MinUnits: ").Append(MinUnits).Append("\n");

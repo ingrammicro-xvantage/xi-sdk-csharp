@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | **string** | Name of the type of pricing. | [optional] 
-**Quantity** | **int** | Quantity of the line item. | [optional] 
+**Quantity** | **string** | Quantity of the line item. | [optional] 
 **Msrp** | **decimal** | Manufacturer Suggested Retail Price. | [optional] 
 **UnitPrice** | **decimal** | The unit price of the line item. | [optional] 
 **Margin** | **decimal** | Reseller’s margin percentage | [optional] 

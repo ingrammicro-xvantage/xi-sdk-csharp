@@ -64,6 +64,15 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'ResourceUId'
+        /// </summary>
+        [Fact]
+        public void ResourceUIdTest()
+        {
+            // TODO unit test for the property 'ResourceUId'
+        }
+
+        /// <summary>
         /// Test the property 'ResourceName'
         /// </summary>
         [Fact]

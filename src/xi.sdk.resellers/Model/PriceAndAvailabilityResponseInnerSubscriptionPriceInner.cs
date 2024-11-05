@@ -35,6 +35,7 @@ namespace xi.sdk.resellers.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PriceAndAvailabilityResponseInnerSubscriptionPriceInner" /> class.
         /// </summary>
+        /// <param name="index">index.</param>
         /// <param name="planId">Id of the plan..</param>
         /// <param name="planName">Name of the plan..</param>
         /// <param name="planDescription">The description of the plan..</param>
@@ -42,8 +43,9 @@ namespace xi.sdk.resellers.Model
         /// <param name="billingPeriod">billingPeriod.</param>
         /// <param name="subscriptionPeriod">subscriptionPeriod.</param>
         /// <param name="options">options.</param>
-        public PriceAndAvailabilityResponseInnerSubscriptionPriceInner(string planId = default(string), string planName = default(string), decimal planDescription = default(decimal), List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerGroupsInner> groups = default(List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerGroupsInner>), List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriodInner> billingPeriod = default(List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriodInner>), List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerSubscriptionPeriodInner> subscriptionPeriod = default(List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerSubscriptionPeriodInner>), List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInner> options = default(List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInner>))
+        public PriceAndAvailabilityResponseInnerSubscriptionPriceInner(decimal index = default(decimal), string planId = default(string), string planName = default(string), string planDescription = default(string), List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerGroupsInner> groups = default(List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerGroupsInner>), List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriodInner> billingPeriod = default(List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriodInner>), List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerSubscriptionPeriodInner> subscriptionPeriod = default(List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerSubscriptionPeriodInner>), List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInner> options = default(List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInner>))
         {
+            this.Index = index;
             this.PlanId = planId;
             this.PlanName = planName;
             this.PlanDescription = planDescription;
@@ -52,6 +54,12 @@ namespace xi.sdk.resellers.Model
             this.SubscriptionPeriod = subscriptionPeriod;
             this.Options = options;
         }
+
+        /// <summary>
+        /// Gets or Sets Index
+        /// </summary>
+        [DataMember(Name = "index", EmitDefaultValue = false)]
+        public decimal Index { get; set; }
 
         /// <summary>
         /// Id of the plan.
@@ -72,7 +80,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>The description of the plan.</value>
         [DataMember(Name = "planDescription", EmitDefaultValue = false)]
-        public decimal PlanDescription { get; set; }
+        public string PlanDescription { get; set; }
 
         /// <summary>
         /// Gets or Sets Groups
@@ -106,6 +114,7 @@ namespace xi.sdk.resellers.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class PriceAndAvailabilityResponseInnerSubscriptionPriceInner {\n");
+            sb.Append("  Index: ").Append(Index).Append("\n");
             sb.Append("  PlanId: ").Append(PlanId).Append("\n");
             sb.Append("  PlanName: ").Append(PlanName).Append("\n");
             sb.Append("  PlanDescription: ").Append(PlanDescription).Append("\n");

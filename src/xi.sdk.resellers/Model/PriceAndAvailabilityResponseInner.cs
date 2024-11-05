@@ -35,6 +35,7 @@ namespace xi.sdk.resellers.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PriceAndAvailabilityResponseInner" /> class.
         /// </summary>
+        /// <param name="index">index.</param>
         /// <param name="productStatusCode">Codes signifying whether the sku is active or not..</param>
         /// <param name="productStatusMessage">Message returned saying whether sku is active..</param>
         /// <param name="ingramPartNumber">Ingram Micro unique part number for the product..</param>
@@ -63,8 +64,9 @@ namespace xi.sdk.resellers.Model
         /// <param name="bundlePartIndicator">True of false value to indicate whether it’s bundle part. *Currently, this feature is not available in these countries (Mexico, Turkey, New Zealand, Colombia, Chile, Brazil, Peru, Western Sahara)..</param>
         /// <param name="serviceFees">*Currently, this feature is not available in these countries (Mexico, Turkey, New Zealand, Colombia, Chile, Brazil, Peru, Western Sahara)..</param>
         /// <param name="subscriptionPrice">subscriptionPrice.</param>
-        public PriceAndAvailabilityResponseInner(string productStatusCode = default(string), string productStatusMessage = default(string), string ingramPartNumber = default(string), string vendorPartNumber = default(string), string extendedVendorPartNumber = default(string), string customerPartNumber = default(string), string upc = default(string), string partNumberType = default(string), string vendorNumber = default(string), string vendorName = default(string), string description = default(string), string productClass = default(string), string uom = default(string), string productStatus = default(string), bool? acceptBackOrder = default(bool?), bool? productAuthorized = default(bool?), bool? returnableProduct = default(bool?), bool? endUserInfoRequired = default(bool?), bool? govtSpecialPriceAvailable = default(bool?), string govtProgramType = default(string), string govtEndUserType = default(string), PriceAndAvailabilityResponseInnerAvailability availability = default(PriceAndAvailabilityResponseInnerAvailability), List<PriceAndAvailabilityResponseInnerReserveInventoryDetailsInner> reserveInventoryDetails = default(List<PriceAndAvailabilityResponseInnerReserveInventoryDetailsInner>), PriceAndAvailabilityResponseInnerPricing pricing = default(PriceAndAvailabilityResponseInnerPricing), List<PriceAndAvailabilityResponseInnerDiscountsInner> discounts = default(List<PriceAndAvailabilityResponseInnerDiscountsInner>), bool? bundlePartIndicator = default(bool?), List<PriceAndAvailabilityResponseInnerServiceFeesInner> serviceFees = default(List<PriceAndAvailabilityResponseInnerServiceFeesInner>), List<PriceAndAvailabilityResponseInnerSubscriptionPriceInner> subscriptionPrice = default(List<PriceAndAvailabilityResponseInnerSubscriptionPriceInner>))
+        public PriceAndAvailabilityResponseInner(decimal index = default(decimal), string productStatusCode = default(string), string productStatusMessage = default(string), string ingramPartNumber = default(string), string vendorPartNumber = default(string), string extendedVendorPartNumber = default(string), string customerPartNumber = default(string), string upc = default(string), string partNumberType = default(string), string vendorNumber = default(string), string vendorName = default(string), string description = default(string), string productClass = default(string), string uom = default(string), string productStatus = default(string), bool? acceptBackOrder = default(bool?), bool? productAuthorized = default(bool?), bool? returnableProduct = default(bool?), bool? endUserInfoRequired = default(bool?), bool? govtSpecialPriceAvailable = default(bool?), string govtProgramType = default(string), string govtEndUserType = default(string), PriceAndAvailabilityResponseInnerAvailability availability = default(PriceAndAvailabilityResponseInnerAvailability), List<PriceAndAvailabilityResponseInnerReserveInventoryDetailsInner> reserveInventoryDetails = default(List<PriceAndAvailabilityResponseInnerReserveInventoryDetailsInner>), PriceAndAvailabilityResponseInnerPricing pricing = default(PriceAndAvailabilityResponseInnerPricing), List<PriceAndAvailabilityResponseInnerDiscountsInner> discounts = default(List<PriceAndAvailabilityResponseInnerDiscountsInner>), bool? bundlePartIndicator = default(bool?), List<PriceAndAvailabilityResponseInnerServiceFeesInner> serviceFees = default(List<PriceAndAvailabilityResponseInnerServiceFeesInner>), List<PriceAndAvailabilityResponseInnerSubscriptionPriceInner> subscriptionPrice = default(List<PriceAndAvailabilityResponseInnerSubscriptionPriceInner>))
         {
+            this.Index = index;
             this.ProductStatusCode = productStatusCode;
             this.ProductStatusMessage = productStatusMessage;
             this.IngramPartNumber = ingramPartNumber;
@@ -94,6 +96,12 @@ namespace xi.sdk.resellers.Model
             this.ServiceFees = serviceFees;
             this.SubscriptionPrice = subscriptionPrice;
         }
+
+        /// <summary>
+        /// Gets or Sets Index
+        /// </summary>
+        [DataMember(Name = "index", EmitDefaultValue = false)]
+        public decimal Index { get; set; }
 
         /// <summary>
         /// Codes signifying whether the sku is active or not.
@@ -251,7 +259,7 @@ namespace xi.sdk.resellers.Model
         /// <summary>
         /// Gets or Sets ReserveInventoryDetails
         /// </summary>
-        [DataMember(Name = "reserveInventoryDetails", EmitDefaultValue = true)]
+        [DataMember(Name = "reserveInventoryDetails", EmitDefaultValue = false)]
         public List<PriceAndAvailabilityResponseInnerReserveInventoryDetailsInner> ReserveInventoryDetails { get; set; }
 
         /// <summary>
@@ -294,6 +302,7 @@ namespace xi.sdk.resellers.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class PriceAndAvailabilityResponseInner {\n");
+            sb.Append("  Index: ").Append(Index).Append("\n");
             sb.Append("  ProductStatusCode: ").Append(ProductStatusCode).Append("\n");
             sb.Append("  ProductStatusMessage: ").Append(ProductStatusMessage).Append("\n");
             sb.Append("  IngramPartNumber: ").Append(IngramPartNumber).Append("\n");

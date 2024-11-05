@@ -37,10 +37,14 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <param name="price">Fee price of the line item..</param>
         /// <param name="type">The type of the fees..</param>
-        public PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerFeesInner(decimal price = default(decimal), string type = default(string))
+        /// <param name="msrp">msrp.</param>
+        /// <param name="code">code.</param>
+        public PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerFeesInner(decimal price = default(decimal), string type = default(string), decimal msrp = default(decimal), string code = default(string))
         {
             this.Price = price;
             this.Type = type;
+            this.Msrp = msrp;
+            this.Code = code;
         }
 
         /// <summary>
@@ -58,6 +62,18 @@ namespace xi.sdk.resellers.Model
         public string Type { get; set; }
 
         /// <summary>
+        /// Gets or Sets Msrp
+        /// </summary>
+        [DataMember(Name = "msrp", EmitDefaultValue = false)]
+        public decimal Msrp { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Code
+        /// </summary>
+        [DataMember(Name = "code", EmitDefaultValue = false)]
+        public string Code { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -67,6 +83,8 @@ namespace xi.sdk.resellers.Model
             sb.Append("class PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerFeesInner {\n");
             sb.Append("  Price: ").Append(Price).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  Msrp: ").Append(Msrp).Append("\n");
+            sb.Append("  Code: ").Append(Code).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

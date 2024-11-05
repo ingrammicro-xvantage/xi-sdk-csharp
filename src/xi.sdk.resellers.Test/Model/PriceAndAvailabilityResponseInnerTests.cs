@@ -55,6 +55,15 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'Index'
+        /// </summary>
+        [Fact]
+        public void IndexTest()
+        {
+            // TODO unit test for the property 'Index'
+        }
+
+        /// <summary>
         /// Test the property 'ProductStatusCode'
         /// </summary>
         [Fact]
