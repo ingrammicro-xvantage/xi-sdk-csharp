@@ -52,7 +52,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="warrantyInformation">Warranty information related to the product..</param>
         /// <param name="additionalInformation">additionalInformation.</param>
         /// <param name="subscriptionDetails">Subscription product Details.</param>
-        public ProductDetailResponse(string ingramPartNumber = default(string), string vendorPartNumber = default(string), bool productAuthorized = default(bool), string description = default(string), string upc = default(string), string productCategory = default(string), string productSubcategory = default(string), string vendorName = default(string), string vendorNumber = default(string), string productStatusCode = default(string), string productClass = default(string), string customerPartNumber = default(string), ProductDetailResponseIndicators indicators = default(ProductDetailResponseIndicators), ProductDetailResponseCiscoFields ciscoFields = default(ProductDetailResponseCiscoFields), List<Object> warrantyInformation = default(List<Object>), ProductDetailResponseAdditionalInformation additionalInformation = default(ProductDetailResponseAdditionalInformation), List<ProductDetailResponseSubscriptionDetailsInner> subscriptionDetails = default(List<ProductDetailResponseSubscriptionDetailsInner>))
+        public ProductDetailResponse(string ingramPartNumber = default(string), string vendorPartNumber = default(string), bool? productAuthorized = default(bool?), string description = default(string), string upc = default(string), string productCategory = default(string), string productSubcategory = default(string), string vendorName = default(string), string vendorNumber = default(string), string productStatusCode = default(string), string productClass = default(string), string customerPartNumber = default(string), ProductDetailResponseIndicators indicators = default(ProductDetailResponseIndicators), ProductDetailResponseCiscoFields ciscoFields = default(ProductDetailResponseCiscoFields), List<Object> warrantyInformation = default(List<Object>), ProductDetailResponseAdditionalInformation additionalInformation = default(ProductDetailResponseAdditionalInformation), List<ProductDetailResponseSubscriptionDetailsInner> subscriptionDetails = default(List<ProductDetailResponseSubscriptionDetailsInner>))
         {
             this.IngramPartNumber = ingramPartNumber;
             this.VendorPartNumber = vendorPartNumber;
@@ -77,14 +77,14 @@ namespace xi.sdk.resellers.Model
         /// Ingram Micro unique part number for the product.
         /// </summary>
         /// <value>Ingram Micro unique part number for the product.</value>
-        [DataMember(Name = "ingramPartNumber", EmitDefaultValue = false)]
+        [DataMember(Name = "ingramPartNumber", EmitDefaultValue = true)]
         public string IngramPartNumber { get; set; }
 
         /// <summary>
         /// Vendor’s part number for the product.
         /// </summary>
         /// <value>Vendor’s part number for the product.</value>
-        [DataMember(Name = "vendorPartNumber", EmitDefaultValue = false)]
+        [DataMember(Name = "vendorPartNumber", EmitDefaultValue = true)]
         public string VendorPartNumber { get; set; }
 
         /// <summary>
@@ -92,69 +92,69 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>Boolean that indicates whether a product is authorized.</value>
         [DataMember(Name = "productAuthorized", EmitDefaultValue = true)]
-        public bool ProductAuthorized { get; set; }
+        public bool? ProductAuthorized { get; set; }
 
         /// <summary>
         /// The description given for the product.
         /// </summary>
         /// <value>The description given for the product.</value>
-        [DataMember(Name = "description", EmitDefaultValue = false)]
+        [DataMember(Name = "description", EmitDefaultValue = true)]
         public string Description { get; set; }
 
         /// <summary>
         /// The UPC code for the product. Consists of 12 numeric digits that are uniquely assigned to each trade item.
         /// </summary>
         /// <value>The UPC code for the product. Consists of 12 numeric digits that are uniquely assigned to each trade item.</value>
-        [DataMember(Name = "upc", EmitDefaultValue = false)]
+        [DataMember(Name = "upc", EmitDefaultValue = true)]
         public string Upc { get; set; }
 
         /// <summary>
         /// The category of the product.
         /// </summary>
         /// <value>The category of the product.</value>
-        [DataMember(Name = "productCategory", EmitDefaultValue = false)]
+        [DataMember(Name = "productCategory", EmitDefaultValue = true)]
         public string ProductCategory { get; set; }
 
         /// <summary>
         /// The sub-category of the product.
         /// </summary>
         /// <value>The sub-category of the product.</value>
-        [DataMember(Name = "productSubcategory", EmitDefaultValue = false)]
+        [DataMember(Name = "productSubcategory", EmitDefaultValue = true)]
         public string ProductSubcategory { get; set; }
 
         /// <summary>
         /// Vendor name for the order.
         /// </summary>
         /// <value>Vendor name for the order.</value>
-        [DataMember(Name = "vendorName", EmitDefaultValue = false)]
+        [DataMember(Name = "vendorName", EmitDefaultValue = true)]
         public string VendorName { get; set; }
 
         /// <summary>
         /// Vendor number that identifies the product.
         /// </summary>
         /// <value>Vendor number that identifies the product.</value>
-        [DataMember(Name = "vendorNumber", EmitDefaultValue = false)]
+        [DataMember(Name = "vendorNumber", EmitDefaultValue = true)]
         public string VendorNumber { get; set; }
 
         /// <summary>
         /// Status code of the product.
         /// </summary>
         /// <value>Status code of the product.</value>
-        [DataMember(Name = "productStatusCode", EmitDefaultValue = false)]
+        [DataMember(Name = "productStatusCode", EmitDefaultValue = true)]
         public string ProductStatusCode { get; set; }
 
         /// <summary>
         /// Indicates whether the product is directly shipped from the vendor’s warehouse or if the product ships from Ingram Micro’s warehouse. Class Codes are Ingram classifications on how skus are stocked A &#x3D; Product that is stocked usually in all IM warehouses and replenished on a regular basis. B &#x3D; Product that is stocked in limited IM warehouses and replenished on a regular basis C &#x3D; Product that is stocked in fewer IM warehouses and replenished on a regular basis. D &#x3D; Product that Ingram Micro has elected to discontinue. E &#x3D; Product that will be phased out later, according to the vendor. You may not want to replenish this product, but instead sell down what is in stock. F &#x3D; Product that we carry for a specific customer or supplier under a contractual agreement. N &#x3D; New Sku. Classification before first receipt O &#x3D; Discontinued product to be liquidated S&#x3D; Order for Specialized Demand (Order to backorder) X&#x3D; direct ship from Vendor V &#x3D; product that vendor has elected to discontinue.
         /// </summary>
         /// <value>Indicates whether the product is directly shipped from the vendor’s warehouse or if the product ships from Ingram Micro’s warehouse. Class Codes are Ingram classifications on how skus are stocked A &#x3D; Product that is stocked usually in all IM warehouses and replenished on a regular basis. B &#x3D; Product that is stocked in limited IM warehouses and replenished on a regular basis C &#x3D; Product that is stocked in fewer IM warehouses and replenished on a regular basis. D &#x3D; Product that Ingram Micro has elected to discontinue. E &#x3D; Product that will be phased out later, according to the vendor. You may not want to replenish this product, but instead sell down what is in stock. F &#x3D; Product that we carry for a specific customer or supplier under a contractual agreement. N &#x3D; New Sku. Classification before first receipt O &#x3D; Discontinued product to be liquidated S&#x3D; Order for Specialized Demand (Order to backorder) X&#x3D; direct ship from Vendor V &#x3D; product that vendor has elected to discontinue.</value>
-        [DataMember(Name = "productClass", EmitDefaultValue = false)]
+        [DataMember(Name = "productClass", EmitDefaultValue = true)]
         public string ProductClass { get; set; }
 
         /// <summary>
         /// Reseller / end-user’s part number for the product.
         /// </summary>
         /// <value>Reseller / end-user’s part number for the product.</value>
-        [DataMember(Name = "customerPartNumber", EmitDefaultValue = false)]
+        [DataMember(Name = "customerPartNumber", EmitDefaultValue = true)]
         public string CustomerPartNumber { get; set; }
 
         /// <summary>

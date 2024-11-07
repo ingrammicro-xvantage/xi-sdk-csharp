@@ -9749,34 +9749,44 @@ components:
       properties:
         ingramPartNumber:
           description: Ingram Micro unique part number for the product.
+          nullable: true
           type: string
         vendorPartNumber:
           description: Vendor’s part number for the product.
+          nullable: true
           type: string
         productAuthorized:
           description: Boolean that indicates whether a product is authorized.
+          nullable: true
           type: boolean
         description:
           description: The description given for the product.
+          nullable: true
           type: string
         upc:
           description: The UPC code for the product. Consists of 12 numeric digits
             that are uniquely assigned to each trade item.
+          nullable: true
           type: string
         productCategory:
           description: The category of the product.
+          nullable: true
           type: string
         productSubcategory:
           description: The sub-category of the product.
+          nullable: true
           type: string
         vendorName:
           description: Vendor name for the order.
+          nullable: true
           type: string
         vendorNumber:
           description: Vendor number that identifies the product.
+          nullable: true
           type: string
         productStatusCode:
           description: Status code of the product.
+          nullable: true
           type: string
         productClass:
           description: "Indicates whether the product is directly shipped from the\
@@ -9793,9 +9803,11 @@ components:
             \ before first receipt O = Discontinued product to be liquidated S= Order\
             \ for Specialized Demand (Order to backorder) X= direct ship from Vendor\
             \ V = product that vendor has elected to discontinue."
+          nullable: true
           type: string
         customerPartNumber:
           description: Reseller / end-user’s part number for the product.
+          nullable: true
           type: string
         indicators:
           $ref: '#/components/schemas/ProductDetailResponse_indicators'
