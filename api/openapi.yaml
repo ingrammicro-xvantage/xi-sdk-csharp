@@ -9427,10 +9427,12 @@ components:
           description: Pre-approved special pricing/bid number provided to the reseller
             by the vendor for special pricing and discounts. Used to track the bid
             number where different line items have different bid numbers.
+          nullable: true
           type: string
         availabilityByWarehouse:
           items:
             $ref: '#/components/schemas/PriceAndAvailabilityRequest_availabilityByWarehouse_inner'
+          nullable: true
           type: array
         products:
           items:
@@ -9439,6 +9441,7 @@ components:
         additionalAttributes:
           items:
             $ref: '#/components/schemas/PriceAndAvailabilityRequest_additionalAttributes_inner'
+          nullable: true
           type: array
       type: object
     PriceAndAvailabilityResponse:
@@ -14509,26 +14512,31 @@ components:
         availabilityByWarehouseId:
           description: Plant/warehouse Id of a particular location in order to get
             just the inventory of that location.
+          nullable: true
           type: string
         availabilityForAllLocation:
           description: "Pass boolean value as input, if true the response will contain\
             \ warehouse location details, if false the response will not hold warehouse\
             \ location details. By default value is true."
+          nullable: true
           type: boolean
       type: object
     PriceAndAvailabilityRequest_products_inner_additionalAttributes_inner:
       example:
         attributeValue: attributeValue
         attributeName: attributeName
+      nullable: true
       properties:
         attributeName:
           description: |-
             governmentprogramcode: Special Discount details will be provided based on the governmentprogramcode if available.
             shiptostatebrazil: Attribute Specific to Brazil.
             shipfrombranchnumber: If provided, displays only the availability of the specified branch number.
+          nullable: true
           type: string
         attributeValue:
           description: key value pair -key value.
+          nullable: true
           type: string
       type: object
     PriceAndAvailabilityRequest_products_inner:
@@ -14573,18 +14581,22 @@ components:
         additionalAttributes:
           items:
             $ref: '#/components/schemas/PriceAndAvailabilityRequest_products_inner_additionalAttributes_inner'
+          nullable: true
           type: array
       type: object
     PriceAndAvailabilityRequest_additionalAttributes_inner:
       example:
         attributeValue: attributeValue
         attributeName: attributeName
+      nullable: true
       properties:
         attributeName:
           description: key value pair -key Name.
+          nullable: true
           type: string
         attributeValue:
           description: key value pair -key value.
+          nullable: true
           type: string
       type: object
     PriceAndAvailabilityResponse_inner_availability_availabilityByWarehouse_inner_backOrderInfo_inner:

@@ -47,14 +47,14 @@ namespace xi.sdk.resellers.Model
         /// governmentprogramcode: Special Discount details will be provided based on the governmentprogramcode if available. shiptostatebrazil: Attribute Specific to Brazil. shipfrombranchnumber: If provided, displays only the availability of the specified branch number.
         /// </summary>
         /// <value>governmentprogramcode: Special Discount details will be provided based on the governmentprogramcode if available. shiptostatebrazil: Attribute Specific to Brazil. shipfrombranchnumber: If provided, displays only the availability of the specified branch number.</value>
-        [DataMember(Name = "attributeName", EmitDefaultValue = false)]
+        [DataMember(Name = "attributeName", EmitDefaultValue = true)]
         public string AttributeName { get; set; }
 
         /// <summary>
         /// key value pair -key value.
         /// </summary>
         /// <value>key value pair -key value.</value>
-        [DataMember(Name = "attributeValue", EmitDefaultValue = false)]
+        [DataMember(Name = "attributeValue", EmitDefaultValue = true)]
         public string AttributeValue { get; set; }
 
         /// <summary>

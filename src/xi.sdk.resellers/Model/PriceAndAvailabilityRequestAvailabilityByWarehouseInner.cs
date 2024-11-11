@@ -37,7 +37,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <param name="availabilityByWarehouseId">Plant/warehouse Id of a particular location in order to get just the inventory of that location..</param>
         /// <param name="availabilityForAllLocation">Pass boolean value as input, if true the response will contain warehouse location details, if false the response will not hold warehouse location details. By default value is true..</param>
-        public PriceAndAvailabilityRequestAvailabilityByWarehouseInner(string availabilityByWarehouseId = default(string), bool availabilityForAllLocation = default(bool))
+        public PriceAndAvailabilityRequestAvailabilityByWarehouseInner(string availabilityByWarehouseId = default(string), bool? availabilityForAllLocation = default(bool?))
         {
             this.AvailabilityByWarehouseId = availabilityByWarehouseId;
             this.AvailabilityForAllLocation = availabilityForAllLocation;
@@ -47,7 +47,7 @@ namespace xi.sdk.resellers.Model
         /// Plant/warehouse Id of a particular location in order to get just the inventory of that location.
         /// </summary>
         /// <value>Plant/warehouse Id of a particular location in order to get just the inventory of that location.</value>
-        [DataMember(Name = "availabilityByWarehouseId", EmitDefaultValue = false)]
+        [DataMember(Name = "availabilityByWarehouseId", EmitDefaultValue = true)]
         public string AvailabilityByWarehouseId { get; set; }
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>Pass boolean value as input, if true the response will contain warehouse location details, if false the response will not hold warehouse location details. By default value is true.</value>
         [DataMember(Name = "availabilityForAllLocation", EmitDefaultValue = true)]
-        public bool AvailabilityForAllLocation { get; set; }
+        public bool? AvailabilityForAllLocation { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

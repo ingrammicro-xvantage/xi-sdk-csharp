@@ -69,13 +69,13 @@ namespace xi.sdk.resellers.Model
         /// Pre-approved special pricing/bid number provided to the reseller by the vendor for special pricing and discounts. Used to track the bid number where different line items have different bid numbers.
         /// </summary>
         /// <value>Pre-approved special pricing/bid number provided to the reseller by the vendor for special pricing and discounts. Used to track the bid number where different line items have different bid numbers.</value>
-        [DataMember(Name = "specialBidNumber", EmitDefaultValue = false)]
+        [DataMember(Name = "specialBidNumber", EmitDefaultValue = true)]
         public string SpecialBidNumber { get; set; }
 
         /// <summary>
         /// Gets or Sets AvailabilityByWarehouse
         /// </summary>
-        [DataMember(Name = "availabilityByWarehouse", EmitDefaultValue = false)]
+        [DataMember(Name = "availabilityByWarehouse", EmitDefaultValue = true)]
         public List<PriceAndAvailabilityRequestAvailabilityByWarehouseInner> AvailabilityByWarehouse { get; set; }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace xi.sdk.resellers.Model
         /// <summary>
         /// Gets or Sets AdditionalAttributes
         /// </summary>
-        [DataMember(Name = "additionalAttributes", EmitDefaultValue = false)]
+        [DataMember(Name = "additionalAttributes", EmitDefaultValue = true)]
         public List<PriceAndAvailabilityRequestAdditionalAttributesInner> AdditionalAttributes { get; set; }
 
         /// <summary>

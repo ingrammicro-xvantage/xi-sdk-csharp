@@ -98,7 +98,7 @@ namespace xi.sdk.resellers.Model
         /// <summary>
         /// Gets or Sets AdditionalAttributes
         /// </summary>
-        [DataMember(Name = "additionalAttributes", EmitDefaultValue = false)]
+        [DataMember(Name = "additionalAttributes", EmitDefaultValue = true)]
         public List<PriceAndAvailabilityRequestProductsInnerAdditionalAttributesInner> AdditionalAttributes { get; set; }
 
         /// <summary>

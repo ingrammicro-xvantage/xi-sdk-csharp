@@ -47,14 +47,14 @@ namespace xi.sdk.resellers.Model
         /// key value pair -key Name.
         /// </summary>
         /// <value>key value pair -key Name.</value>
-        [DataMember(Name = "attributeName", EmitDefaultValue = false)]
+        [DataMember(Name = "attributeName", EmitDefaultValue = true)]
         public string AttributeName { get; set; }
 
         /// <summary>
         /// key value pair -key value.
         /// </summary>
         /// <value>key value pair -key value.</value>
-        [DataMember(Name = "attributeValue", EmitDefaultValue = false)]
+        [DataMember(Name = "attributeValue", EmitDefaultValue = true)]
         public string AttributeValue { get; set; }
 
         /// <summary>
