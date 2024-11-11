@@ -32,7 +32,6 @@ docs/GetAccesstoken400Response.md
 docs/GetAccesstoken500Response.md
 docs/GetAccesstoken500ResponseFault.md
 docs/GetAccesstoken500ResponseFaultDetail.md
-docs/GetResellerV6ProductsearchPlanIDParameter.md
 docs/GetResellerV6ValidateQuote400Response.md
 docs/GetResellerV6ValidateQuote400ResponseFieldsInner.md
 docs/InvoiceDetailsv61Response.md
@@ -148,11 +147,8 @@ docs/PostRenewalssearch400Response.md
 docs/PriceAndAvailabilityRequest.md
 docs/PriceAndAvailabilityRequestAdditionalAttributesInner.md
 docs/PriceAndAvailabilityRequestAvailabilityByWarehouseInner.md
-docs/PriceAndAvailabilityRequestAvailabilityByWarehouseInnerAvailabilityByWarehouseId.md
 docs/PriceAndAvailabilityRequestProductsInner.md
 docs/PriceAndAvailabilityRequestProductsInnerAdditionalAttributesInner.md
-docs/PriceAndAvailabilityRequestProductsInnerPlanID.md
-docs/PriceAndAvailabilityRequestProductsInnerQuantityRequested.md
 docs/PriceAndAvailabilityResponseInner.md
 docs/PriceAndAvailabilityResponseInnerAvailability.md
 docs/PriceAndAvailabilityResponseInnerAvailabilityAvailabilityByWarehouseInner.md
@@ -276,7 +272,6 @@ src/xi.sdk.resellers.Test/Model/GetAccesstoken400ResponseTests.cs
 src/xi.sdk.resellers.Test/Model/GetAccesstoken500ResponseFaultDetailTests.cs
 src/xi.sdk.resellers.Test/Model/GetAccesstoken500ResponseFaultTests.cs
 src/xi.sdk.resellers.Test/Model/GetAccesstoken500ResponseTests.cs
-src/xi.sdk.resellers.Test/Model/GetResellerV6ProductsearchPlanIDParameterTests.cs
 src/xi.sdk.resellers.Test/Model/GetResellerV6ValidateQuote400ResponseFieldsInnerTests.cs
 src/xi.sdk.resellers.Test/Model/GetResellerV6ValidateQuote400ResponseTests.cs
 src/xi.sdk.resellers.Test/Model/InvoiceDetailsv61ResponseBillToInfoTests.cs
@@ -387,11 +382,8 @@ src/xi.sdk.resellers.Test/Model/PostCreateorderV7400ResponseTests.cs
 src/xi.sdk.resellers.Test/Model/PostCreateorderV7500ResponseTests.cs
 src/xi.sdk.resellers.Test/Model/PostRenewalssearch400ResponseTests.cs
 src/xi.sdk.resellers.Test/Model/PriceAndAvailabilityRequestAdditionalAttributesInnerTests.cs
-src/xi.sdk.resellers.Test/Model/PriceAndAvailabilityRequestAvailabilityByWarehouseInnerAvailabilityByWarehouseIdTests.cs
 src/xi.sdk.resellers.Test/Model/PriceAndAvailabilityRequestAvailabilityByWarehouseInnerTests.cs
 src/xi.sdk.resellers.Test/Model/PriceAndAvailabilityRequestProductsInnerAdditionalAttributesInnerTests.cs
-src/xi.sdk.resellers.Test/Model/PriceAndAvailabilityRequestProductsInnerPlanIDTests.cs
-src/xi.sdk.resellers.Test/Model/PriceAndAvailabilityRequestProductsInnerQuantityRequestedTests.cs
 src/xi.sdk.resellers.Test/Model/PriceAndAvailabilityRequestProductsInnerTests.cs
 src/xi.sdk.resellers.Test/Model/PriceAndAvailabilityRequestTests.cs
 src/xi.sdk.resellers.Test/Model/PriceAndAvailabilityResponseInnerAvailabilityAvailabilityByWarehouseInnerBackOrderInfoInnerTests.cs
@@ -530,7 +522,6 @@ src/xi.sdk.resellers/Model/GetAccesstoken400Response.cs
 src/xi.sdk.resellers/Model/GetAccesstoken500Response.cs
 src/xi.sdk.resellers/Model/GetAccesstoken500ResponseFault.cs
 src/xi.sdk.resellers/Model/GetAccesstoken500ResponseFaultDetail.cs
-src/xi.sdk.resellers/Model/GetResellerV6ProductsearchPlanIDParameter.cs
 src/xi.sdk.resellers/Model/GetResellerV6ValidateQuote400Response.cs
 src/xi.sdk.resellers/Model/GetResellerV6ValidateQuote400ResponseFieldsInner.cs
 src/xi.sdk.resellers/Model/InvoiceDetailsv61Response.cs
@@ -643,11 +634,8 @@ src/xi.sdk.resellers/Model/PostRenewalssearch400Response.cs
 src/xi.sdk.resellers/Model/PriceAndAvailabilityRequest.cs
 src/xi.sdk.resellers/Model/PriceAndAvailabilityRequestAdditionalAttributesInner.cs
 src/xi.sdk.resellers/Model/PriceAndAvailabilityRequestAvailabilityByWarehouseInner.cs
-src/xi.sdk.resellers/Model/PriceAndAvailabilityRequestAvailabilityByWarehouseInnerAvailabilityByWarehouseId.cs
 src/xi.sdk.resellers/Model/PriceAndAvailabilityRequestProductsInner.cs
 src/xi.sdk.resellers/Model/PriceAndAvailabilityRequestProductsInnerAdditionalAttributesInner.cs
-src/xi.sdk.resellers/Model/PriceAndAvailabilityRequestProductsInnerPlanID.cs
-src/xi.sdk.resellers/Model/PriceAndAvailabilityRequestProductsInnerQuantityRequested.cs
 src/xi.sdk.resellers/Model/PriceAndAvailabilityResponseInner.cs
 src/xi.sdk.resellers/Model/PriceAndAvailabilityResponseInnerAvailability.cs
 src/xi.sdk.resellers/Model/PriceAndAvailabilityResponseInnerAvailabilityAvailabilityByWarehouseInner.cs

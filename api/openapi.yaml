@@ -601,7 +601,8 @@ paths:
         name: planID
         required: false
         schema:
-          $ref: '#/components/schemas/get_reseller_v6_productsearch_planID_parameter'
+          example: "471490"
+          type: string
         style: form
       - description: "In case of value true, below Group related information will\
           \ displayed without the plan info. Group Name, Group Description, Number\
@@ -9381,17 +9382,17 @@ components:
         specialBidNumber: specialBidNumber
         availabilityByWarehouse:
         - availabilityForAllLocation: true
-          availabilityByWarehouseId: PriceAndAvailabilityRequest_availabilityByWarehouse_inner_availabilityByWarehouseId
+          availabilityByWarehouseId: availabilityByWarehouseId
         - availabilityForAllLocation: true
-          availabilityByWarehouseId: PriceAndAvailabilityRequest_availabilityByWarehouse_inner_availabilityByWarehouseId
+          availabilityByWarehouseId: availabilityByWarehouseId
         showReserveInventoryDetails: true
         products:
         - ingramPartNumber: ingramPartNumber
           customerPartNumber: customerPartNumber
-          quantityRequested: PriceAndAvailabilityRequest_products_inner_quantityRequested
+          quantityRequested: quantityRequested
           upc: upc
           vendorPartNumber: vendorPartNumber
-          planID: PriceAndAvailabilityRequest_products_inner_planID
+          planID: planID
           additionalAttributes:
           - attributeValue: attributeValue
             attributeName: attributeName
@@ -9399,10 +9400,10 @@ components:
             attributeName: attributeName
         - ingramPartNumber: ingramPartNumber
           customerPartNumber: customerPartNumber
-          quantityRequested: PriceAndAvailabilityRequest_products_inner_quantityRequested
+          quantityRequested: quantityRequested
           upc: upc
           vendorPartNumber: vendorPartNumber
-          planID: PriceAndAvailabilityRequest_products_inner_planID
+          planID: planID
           additionalAttributes:
           - attributeValue: attributeValue
             attributeName: attributeName
@@ -12347,11 +12348,6 @@ components:
         fault:
           $ref: '#/components/schemas/get_accesstoken_500_response_fault'
       type: object
-    get_reseller_v6_productsearch_planID_parameter:
-      example: 471490
-      oneOf:
-      - type: string
-      - type: integer
     post_createorder_v7_400_response_fields_inner:
       example:
         field: field
@@ -14505,37 +14501,21 @@ components:
         links:
           $ref: '#/components/schemas/OrderSearch_Response_orders_inner_links'
       type: object
-    PriceAndAvailabilityRequest_availabilityByWarehouse_inner_availabilityByWarehouseId:
-      description: Plant/warehouse Id of a particular location in order to get just
-        the inventory of that location.
-      oneOf:
-      - type: string
-      - type: integer
     PriceAndAvailabilityRequest_availabilityByWarehouse_inner:
       example:
         availabilityForAllLocation: true
-        availabilityByWarehouseId: PriceAndAvailabilityRequest_availabilityByWarehouse_inner_availabilityByWarehouseId
+        availabilityByWarehouseId: availabilityByWarehouseId
       properties:
         availabilityByWarehouseId:
-          $ref: '#/components/schemas/PriceAndAvailabilityRequest_availabilityByWarehouse_inner_availabilityByWarehouseId'
+          description: Plant/warehouse Id of a particular location in order to get
+            just the inventory of that location.
+          type: string
         availabilityForAllLocation:
           description: "Pass boolean value as input, if true the response will contain\
             \ warehouse location details, if false the response will not hold warehouse\
             \ location details. By default value is true."
           type: boolean
       type: object
-    PriceAndAvailabilityRequest_products_inner_quantityRequested:
-      description: Number of quantity of the Product.
-      nullable: true
-      oneOf:
-      - type: string
-      - type: integer
-    PriceAndAvailabilityRequest_products_inner_planID:
-      description: Id of the plan
-      nullable: true
-      oneOf:
-      - type: string
-      - type: integer
     PriceAndAvailabilityRequest_products_inner_additionalAttributes_inner:
       example:
         attributeValue: attributeValue
@@ -14555,10 +14535,10 @@ components:
       example:
         ingramPartNumber: ingramPartNumber
         customerPartNumber: customerPartNumber
-        quantityRequested: PriceAndAvailabilityRequest_products_inner_quantityRequested
+        quantityRequested: quantityRequested
         upc: upc
         vendorPartNumber: vendorPartNumber
-        planID: PriceAndAvailabilityRequest_products_inner_planID
+        planID: planID
         additionalAttributes:
         - attributeValue: attributeValue
           attributeName: attributeName
@@ -14583,9 +14563,13 @@ components:
           nullable: true
           type: string
         quantityRequested:
-          $ref: '#/components/schemas/PriceAndAvailabilityRequest_products_inner_quantityRequested'
+          description: Number of quantity of the Product.
+          nullable: true
+          type: string
         planID:
-          $ref: '#/components/schemas/PriceAndAvailabilityRequest_products_inner_planID'
+          description: Id of the plan
+          nullable: true
+          type: string
         additionalAttributes:
           items:
             $ref: '#/components/schemas/PriceAndAvailabilityRequest_products_inner_additionalAttributes_inner'

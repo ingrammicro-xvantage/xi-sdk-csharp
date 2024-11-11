@@ -39,10 +39,10 @@ namespace xi.sdk.resellers.Model
         /// <param name="vendorPartNumber">Vendor’s part number for the product..</param>
         /// <param name="customerPartNumber">Reseller/end-user’s part number for the product..</param>
         /// <param name="upc">The UPC code for the product. Consists of 12 numeric digits that are uniquely assigned to each trade item..</param>
-        /// <param name="quantityRequested">quantityRequested.</param>
-        /// <param name="planID">planID.</param>
+        /// <param name="quantityRequested">Number of quantity of the Product..</param>
+        /// <param name="planID">Id of the plan.</param>
         /// <param name="additionalAttributes">additionalAttributes.</param>
-        public PriceAndAvailabilityRequestProductsInner(string ingramPartNumber = default(string), string vendorPartNumber = default(string), string customerPartNumber = default(string), string upc = default(string), PriceAndAvailabilityRequestProductsInnerQuantityRequested quantityRequested = default(PriceAndAvailabilityRequestProductsInnerQuantityRequested), PriceAndAvailabilityRequestProductsInnerPlanID planID = default(PriceAndAvailabilityRequestProductsInnerPlanID), List<PriceAndAvailabilityRequestProductsInnerAdditionalAttributesInner> additionalAttributes = default(List<PriceAndAvailabilityRequestProductsInnerAdditionalAttributesInner>))
+        public PriceAndAvailabilityRequestProductsInner(string ingramPartNumber = default(string), string vendorPartNumber = default(string), string customerPartNumber = default(string), string upc = default(string), string quantityRequested = default(string), string planID = default(string), List<PriceAndAvailabilityRequestProductsInnerAdditionalAttributesInner> additionalAttributes = default(List<PriceAndAvailabilityRequestProductsInnerAdditionalAttributesInner>))
         {
             this.IngramPartNumber = ingramPartNumber;
             this.VendorPartNumber = vendorPartNumber;
@@ -82,16 +82,18 @@ namespace xi.sdk.resellers.Model
         public string Upc { get; set; }
 
         /// <summary>
-        /// Gets or Sets QuantityRequested
+        /// Number of quantity of the Product.
         /// </summary>
+        /// <value>Number of quantity of the Product.</value>
         [DataMember(Name = "quantityRequested", EmitDefaultValue = true)]
-        public PriceAndAvailabilityRequestProductsInnerQuantityRequested QuantityRequested { get; set; }
+        public string QuantityRequested { get; set; }
 
         /// <summary>
-        /// Gets or Sets PlanID
+        /// Id of the plan
         /// </summary>
+        /// <value>Id of the plan</value>
         [DataMember(Name = "planID", EmitDefaultValue = true)]
-        public PriceAndAvailabilityRequestProductsInnerPlanID PlanID { get; set; }
+        public string PlanID { get; set; }
 
         /// <summary>
         /// Gets or Sets AdditionalAttributes

@@ -233,7 +233,7 @@ catch (ApiException e)
 
 <a id="getresellerv6productsearch"></a>
 # **GetResellerV6Productsearch**
-> ProductSearchResponse GetResellerV6Productsearch (string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, int? pageNumber = null, int? pageSize = null, string? iMSenderID = null, string? type = null, string? hasDiscounts = null, List<string>? vendor = null, List<string>? vendorPartNumber = null, string? acceptLanguage = null, string? vendorNumber = null, List<string>? keyword = null, string? category = null, string? skipAuthorisation = null, string? groupName = null, GetResellerV6ProductsearchPlanIDParameter? planID = null, bool? showGroupInfo = null)
+> ProductSearchResponse GetResellerV6Productsearch (string iMCustomerNumber, string iMCorrelationID, string iMCountryCode, int? pageNumber = null, int? pageSize = null, string? iMSenderID = null, string? type = null, string? hasDiscounts = null, List<string>? vendor = null, List<string>? vendorPartNumber = null, string? acceptLanguage = null, string? vendorNumber = null, List<string>? keyword = null, string? category = null, string? skipAuthorisation = null, string? groupName = null, string? planID = null, bool? showGroupInfo = null)
 
 Search Products
 
@@ -279,7 +279,7 @@ namespace Example
             var category = Accessories;  // string? | The category of the product. Example: Displays. (optional) 
             var skipAuthorisation = true;  // string? | This parameter is True when you want Skip the authorization, so template will work like current B2b template. (optional) 
             var groupName = Microsoft Defender for Endpoint P2 (NCE COM MTH);  // string? | Name of the Product Group (optional) 
-            var planID = new GetResellerV6ProductsearchPlanIDParameter?(); // GetResellerV6ProductsearchPlanIDParameter? | ID of the plan (optional) 
+            var planID = 471490;  // string? | ID of the plan (optional) 
             var showGroupInfo = true;  // bool? | In case of value true, below Group related information will displayed without the plan info. Group Name, Group Description, Number of plans, link in the group. A link will be provided if customer want to see all the plans in that group. (optional) 
 
             try
@@ -339,7 +339,7 @@ catch (ApiException e)
 | **category** | **string?** | The category of the product. Example: Displays. | [optional]  |
 | **skipAuthorisation** | **string?** | This parameter is True when you want Skip the authorization, so template will work like current B2b template. | [optional]  |
 | **groupName** | **string?** | Name of the Product Group | [optional]  |
-| **planID** | [**GetResellerV6ProductsearchPlanIDParameter?**](GetResellerV6ProductsearchPlanIDParameter?.md) | ID of the plan | [optional]  |
+| **planID** | **string?** | ID of the plan | [optional]  |
 | **showGroupInfo** | **bool?** | In case of value true, below Group related information will displayed without the plan info. Group Name, Group Description, Number of plans, link in the group. A link will be provided if customer want to see all the plans in that group. | [optional]  |
 
 ### Return type

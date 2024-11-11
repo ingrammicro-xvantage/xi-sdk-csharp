@@ -110,7 +110,7 @@ namespace xi.sdk.resellers.Test.Api
             //string? category = null;
             //string? skipAuthorisation = null;
             //string? groupName = null;
-            //GetResellerV6ProductsearchPlanIDParameter? planID = null;
+            //string? planID = null;
             //bool? showGroupInfo = null;
             //var response = instance.GetResellerV6Productsearch(iMCustomerNumber, iMCorrelationID, iMCountryCode, pageNumber, pageSize, iMSenderID, type, hasDiscounts, vendor, vendorPartNumber, acceptLanguage, vendorNumber, keyword, category, skipAuthorisation, groupName, planID, showGroupInfo);
             //Assert.IsType<ProductSearchResponse>(response);
