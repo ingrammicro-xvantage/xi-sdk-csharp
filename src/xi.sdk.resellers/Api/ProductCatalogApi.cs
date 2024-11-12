@@ -156,11 +156,11 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
-        /// <param name="priceAndAvailabilityRequest"></param>
         /// <param name="includeProductAttributes">Pass boolean value as input, if true the response will contain detailed attributes related to the Product, if false or not sent the response will contain very few Product details. (optional)</param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
+        /// <param name="priceAndAvailabilityRequest"> (optional)</param>
         /// <returns>List&lt;PriceAndAvailabilityResponseInner&gt;</returns>
-        List<PriceAndAvailabilityResponseInner> PostPriceandavailability(bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, PriceAndAvailabilityRequest priceAndAvailabilityRequest, bool? includeProductAttributes = default(bool?), string? iMSenderID = default(string?));
+        List<PriceAndAvailabilityResponseInner> PostPriceandavailability(bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, bool? includeProductAttributes = default(bool?), string? iMSenderID = default(string?), PriceAndAvailabilityRequest? priceAndAvailabilityRequest = default(PriceAndAvailabilityRequest?));
 
         /// <summary>
         /// Price and Availability
@@ -174,11 +174,11 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
-        /// <param name="priceAndAvailabilityRequest"></param>
         /// <param name="includeProductAttributes">Pass boolean value as input, if true the response will contain detailed attributes related to the Product, if false or not sent the response will contain very few Product details. (optional)</param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
+        /// <param name="priceAndAvailabilityRequest"> (optional)</param>
         /// <returns>ApiResponse of List&lt;PriceAndAvailabilityResponseInner&gt;</returns>
-        ApiResponse<List<PriceAndAvailabilityResponseInner>> PostPriceandavailabilityWithHttpInfo(bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, PriceAndAvailabilityRequest priceAndAvailabilityRequest, bool? includeProductAttributes = default(bool?), string? iMSenderID = default(string?));
+        ApiResponse<List<PriceAndAvailabilityResponseInner>> PostPriceandavailabilityWithHttpInfo(bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, bool? includeProductAttributes = default(bool?), string? iMSenderID = default(string?), PriceAndAvailabilityRequest? priceAndAvailabilityRequest = default(PriceAndAvailabilityRequest?));
         #endregion Synchronous Operations
     }
 
@@ -323,12 +323,12 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
-        /// <param name="priceAndAvailabilityRequest"></param>
         /// <param name="includeProductAttributes">Pass boolean value as input, if true the response will contain detailed attributes related to the Product, if false or not sent the response will contain very few Product details. (optional)</param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
+        /// <param name="priceAndAvailabilityRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;PriceAndAvailabilityResponseInner&gt;</returns>
-        System.Threading.Tasks.Task<List<PriceAndAvailabilityResponseInner>> PostPriceandavailabilityAsync(bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, PriceAndAvailabilityRequest priceAndAvailabilityRequest, bool? includeProductAttributes = default(bool?), string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<PriceAndAvailabilityResponseInner>> PostPriceandavailabilityAsync(bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, bool? includeProductAttributes = default(bool?), string? iMSenderID = default(string?), PriceAndAvailabilityRequest? priceAndAvailabilityRequest = default(PriceAndAvailabilityRequest?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Price and Availability
@@ -342,12 +342,12 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
-        /// <param name="priceAndAvailabilityRequest"></param>
         /// <param name="includeProductAttributes">Pass boolean value as input, if true the response will contain detailed attributes related to the Product, if false or not sent the response will contain very few Product details. (optional)</param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
+        /// <param name="priceAndAvailabilityRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;PriceAndAvailabilityResponseInner&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<PriceAndAvailabilityResponseInner>>> PostPriceandavailabilityWithHttpInfoAsync(bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, PriceAndAvailabilityRequest priceAndAvailabilityRequest, bool? includeProductAttributes = default(bool?), string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<PriceAndAvailabilityResponseInner>>> PostPriceandavailabilityWithHttpInfoAsync(bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, bool? includeProductAttributes = default(bool?), string? iMSenderID = default(string?), PriceAndAvailabilityRequest? priceAndAvailabilityRequest = default(PriceAndAvailabilityRequest?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -1289,13 +1289,13 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
-        /// <param name="priceAndAvailabilityRequest"></param>
         /// <param name="includeProductAttributes">Pass boolean value as input, if true the response will contain detailed attributes related to the Product, if false or not sent the response will contain very few Product details. (optional)</param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
+        /// <param name="priceAndAvailabilityRequest"> (optional)</param>
         /// <returns>List&lt;PriceAndAvailabilityResponseInner&gt;</returns>
-        public List<PriceAndAvailabilityResponseInner> PostPriceandavailability(bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, PriceAndAvailabilityRequest priceAndAvailabilityRequest, bool? includeProductAttributes = default(bool?), string? iMSenderID = default(string?))
+        public List<PriceAndAvailabilityResponseInner> PostPriceandavailability(bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, bool? includeProductAttributes = default(bool?), string? iMSenderID = default(string?), PriceAndAvailabilityRequest? priceAndAvailabilityRequest = default(PriceAndAvailabilityRequest?))
         {
-            xi.sdk.resellers.Client.ApiResponse<List<PriceAndAvailabilityResponseInner>> localVarResponse = PostPriceandavailabilityWithHttpInfo(includeAvailability, includePricing, iMCustomerNumber, iMCountryCode, iMCorrelationID, priceAndAvailabilityRequest, includeProductAttributes, iMSenderID);
+            xi.sdk.resellers.Client.ApiResponse<List<PriceAndAvailabilityResponseInner>> localVarResponse = PostPriceandavailabilityWithHttpInfo(includeAvailability, includePricing, iMCustomerNumber, iMCountryCode, iMCorrelationID, includeProductAttributes, iMSenderID, priceAndAvailabilityRequest);
             return localVarResponse.Data;
         }
 
@@ -1308,11 +1308,11 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
-        /// <param name="priceAndAvailabilityRequest"></param>
         /// <param name="includeProductAttributes">Pass boolean value as input, if true the response will contain detailed attributes related to the Product, if false or not sent the response will contain very few Product details. (optional)</param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
+        /// <param name="priceAndAvailabilityRequest"> (optional)</param>
         /// <returns>ApiResponse of List&lt;PriceAndAvailabilityResponseInner&gt;</returns>
-        public xi.sdk.resellers.Client.ApiResponse<List<PriceAndAvailabilityResponseInner>> PostPriceandavailabilityWithHttpInfo(bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, PriceAndAvailabilityRequest priceAndAvailabilityRequest, bool? includeProductAttributes = default(bool?), string? iMSenderID = default(string?))
+        public xi.sdk.resellers.Client.ApiResponse<List<PriceAndAvailabilityResponseInner>> PostPriceandavailabilityWithHttpInfo(bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, bool? includeProductAttributes = default(bool?), string? iMSenderID = default(string?), PriceAndAvailabilityRequest? priceAndAvailabilityRequest = default(PriceAndAvailabilityRequest?))
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)
@@ -1325,10 +1325,6 @@ namespace xi.sdk.resellers.Api
             // verify the required parameter 'iMCorrelationID' is set
             if (iMCorrelationID == null)
                 throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCorrelationID' when calling ProductCatalogApi->PostPriceandavailability");
-
-            // verify the required parameter 'priceAndAvailabilityRequest' is set
-            if (priceAndAvailabilityRequest == null)
-                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'priceAndAvailabilityRequest' when calling ProductCatalogApi->PostPriceandavailability");
 
             xi.sdk.resellers.Client.RequestOptions localVarRequestOptions = new xi.sdk.resellers.Client.RequestOptions();
 
@@ -1390,14 +1386,14 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
-        /// <param name="priceAndAvailabilityRequest"></param>
         /// <param name="includeProductAttributes">Pass boolean value as input, if true the response will contain detailed attributes related to the Product, if false or not sent the response will contain very few Product details. (optional)</param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
+        /// <param name="priceAndAvailabilityRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;PriceAndAvailabilityResponseInner&gt;</returns>
-        public async System.Threading.Tasks.Task<List<PriceAndAvailabilityResponseInner>> PostPriceandavailabilityAsync(bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, PriceAndAvailabilityRequest priceAndAvailabilityRequest, bool? includeProductAttributes = default(bool?), string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<PriceAndAvailabilityResponseInner>> PostPriceandavailabilityAsync(bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, bool? includeProductAttributes = default(bool?), string? iMSenderID = default(string?), PriceAndAvailabilityRequest? priceAndAvailabilityRequest = default(PriceAndAvailabilityRequest?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            xi.sdk.resellers.Client.ApiResponse<List<PriceAndAvailabilityResponseInner>> localVarResponse = await PostPriceandavailabilityWithHttpInfoAsync(includeAvailability, includePricing, iMCustomerNumber, iMCountryCode, iMCorrelationID, priceAndAvailabilityRequest, includeProductAttributes, iMSenderID, cancellationToken).ConfigureAwait(false);
+            xi.sdk.resellers.Client.ApiResponse<List<PriceAndAvailabilityResponseInner>> localVarResponse = await PostPriceandavailabilityWithHttpInfoAsync(includeAvailability, includePricing, iMCustomerNumber, iMCountryCode, iMCorrelationID, includeProductAttributes, iMSenderID, priceAndAvailabilityRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1410,12 +1406,12 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
-        /// <param name="priceAndAvailabilityRequest"></param>
         /// <param name="includeProductAttributes">Pass boolean value as input, if true the response will contain detailed attributes related to the Product, if false or not sent the response will contain very few Product details. (optional)</param>
         /// <param name="iMSenderID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
+        /// <param name="priceAndAvailabilityRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;PriceAndAvailabilityResponseInner&gt;)</returns>
-        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<List<PriceAndAvailabilityResponseInner>>> PostPriceandavailabilityWithHttpInfoAsync(bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, PriceAndAvailabilityRequest priceAndAvailabilityRequest, bool? includeProductAttributes = default(bool?), string? iMSenderID = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<List<PriceAndAvailabilityResponseInner>>> PostPriceandavailabilityWithHttpInfoAsync(bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, bool? includeProductAttributes = default(bool?), string? iMSenderID = default(string?), PriceAndAvailabilityRequest? priceAndAvailabilityRequest = default(PriceAndAvailabilityRequest?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)
@@ -1428,10 +1424,6 @@ namespace xi.sdk.resellers.Api
             // verify the required parameter 'iMCorrelationID' is set
             if (iMCorrelationID == null)
                 throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCorrelationID' when calling ProductCatalogApi->PostPriceandavailability");
-
-            // verify the required parameter 'priceAndAvailabilityRequest' is set
-            if (priceAndAvailabilityRequest == null)
-                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'priceAndAvailabilityRequest' when calling ProductCatalogApi->PostPriceandavailability");
 
 
             xi.sdk.resellers.Client.RequestOptions localVarRequestOptions = new xi.sdk.resellers.Client.RequestOptions();

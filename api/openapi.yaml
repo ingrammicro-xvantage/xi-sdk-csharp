@@ -226,7 +226,6 @@ paths:
                   - availabilityByWarehouseId: "40"
             schema:
               $ref: '#/components/schemas/PriceAndAvailabilityRequest'
-        required: true
       responses:
         "200":
           content:

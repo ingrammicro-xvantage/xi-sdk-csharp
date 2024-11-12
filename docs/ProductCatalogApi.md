@@ -368,7 +368,7 @@ catch (ApiException e)
 
 <a id="postpriceandavailability"></a>
 # **PostPriceandavailability**
-> List&lt;PriceAndAvailabilityResponseInner&gt; PostPriceandavailability (bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, PriceAndAvailabilityRequest priceAndAvailabilityRequest, bool? includeProductAttributes = null, string? iMSenderID = null)
+> List&lt;PriceAndAvailabilityResponseInner&gt; PostPriceandavailability (bool includeAvailability, bool includePricing, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, bool? includeProductAttributes = null, string? iMSenderID = null, PriceAndAvailabilityRequest? priceAndAvailabilityRequest = null)
 
 Price and Availability
 
@@ -403,14 +403,14 @@ namespace Example
             var iMCustomerNumber = 20-222222;  // string | Your unique Ingram Micro customer number.
             var iMCountryCode = US;  // string | Two-character ISO country code.
             var iMCorrelationID = fbac82ba-cf0a-4bcf-fc03-0c5084;  // string | Unique transaction number to identify each transaction across all the systems.
-            var priceAndAvailabilityRequest = new PriceAndAvailabilityRequest(); // PriceAndAvailabilityRequest | 
             var includeProductAttributes = true;  // bool? | Pass boolean value as input, if true the response will contain detailed attributes related to the Product, if false or not sent the response will contain very few Product details. (optional) 
             var iMSenderID = MyCompany;  // string? | Unique value used to identify the sender of the transaction. Example: MyCompany (optional) 
+            var priceAndAvailabilityRequest = new PriceAndAvailabilityRequest?(); // PriceAndAvailabilityRequest? |  (optional) 
 
             try
             {
                 // Price and Availability
-                List<PriceAndAvailabilityResponseInner> result = apiInstance.PostPriceandavailability(includeAvailability, includePricing, iMCustomerNumber, iMCountryCode, iMCorrelationID, priceAndAvailabilityRequest, includeProductAttributes, iMSenderID);
+                List<PriceAndAvailabilityResponseInner> result = apiInstance.PostPriceandavailability(includeAvailability, includePricing, iMCustomerNumber, iMCountryCode, iMCorrelationID, includeProductAttributes, iMSenderID, priceAndAvailabilityRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -431,7 +431,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Price and Availability
-    ApiResponse<List<PriceAndAvailabilityResponseInner>> response = apiInstance.PostPriceandavailabilityWithHttpInfo(includeAvailability, includePricing, iMCustomerNumber, iMCountryCode, iMCorrelationID, priceAndAvailabilityRequest, includeProductAttributes, iMSenderID);
+    ApiResponse<List<PriceAndAvailabilityResponseInner>> response = apiInstance.PostPriceandavailabilityWithHttpInfo(includeAvailability, includePricing, iMCustomerNumber, iMCountryCode, iMCorrelationID, includeProductAttributes, iMSenderID, priceAndAvailabilityRequest);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -453,9 +453,9 @@ catch (ApiException e)
 | **iMCustomerNumber** | **string** | Your unique Ingram Micro customer number. |  |
 | **iMCountryCode** | **string** | Two-character ISO country code. |  |
 | **iMCorrelationID** | **string** | Unique transaction number to identify each transaction across all the systems. |  |
-| **priceAndAvailabilityRequest** | [**PriceAndAvailabilityRequest**](PriceAndAvailabilityRequest.md) |  |  |
 | **includeProductAttributes** | **bool?** | Pass boolean value as input, if true the response will contain detailed attributes related to the Product, if false or not sent the response will contain very few Product details. | [optional]  |
 | **iMSenderID** | **string?** | Unique value used to identify the sender of the transaction. Example: MyCompany | [optional]  |
+| **priceAndAvailabilityRequest** | [**PriceAndAvailabilityRequest?**](PriceAndAvailabilityRequest?.md) |  | [optional]  |
 
 ### Return type
 

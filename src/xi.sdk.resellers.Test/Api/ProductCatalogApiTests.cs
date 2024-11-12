@@ -128,10 +128,10 @@ namespace xi.sdk.resellers.Test.Api
             //string iMCustomerNumber = null;
             //string iMCountryCode = null;
             //string iMCorrelationID = null;
-            //PriceAndAvailabilityRequest priceAndAvailabilityRequest = null;
             //bool? includeProductAttributes = null;
             //string? iMSenderID = null;
-            //var response = instance.PostPriceandavailability(includeAvailability, includePricing, iMCustomerNumber, iMCountryCode, iMCorrelationID, priceAndAvailabilityRequest, includeProductAttributes, iMSenderID);
+            //PriceAndAvailabilityRequest? priceAndAvailabilityRequest = null;
+            //var response = instance.PostPriceandavailability(includeAvailability, includePricing, iMCustomerNumber, iMCountryCode, iMCorrelationID, includeProductAttributes, iMSenderID, priceAndAvailabilityRequest);
             //Assert.IsType<List<PriceAndAvailabilityResponseInner>>(response);
         }
     }
