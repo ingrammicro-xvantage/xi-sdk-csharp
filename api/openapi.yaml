@@ -10850,6 +10850,7 @@ components:
         extendedMsrpTotal:
           description: Total extended MSRP for all products included in the quote
           format: decimal
+          nullable: true
           type: number
         quantityTotal:
           description: Total quantity of all items in the quote.

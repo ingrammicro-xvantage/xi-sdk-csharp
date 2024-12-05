@@ -37,7 +37,7 @@ Name | Type | Description | Notes
 **ShippingInfo** | [**QuoteDetailsResponseShippingInfo**](QuoteDetailsResponseShippingInfo.md) |  | [optional] 
 **Products** | [**List&lt;QuoteDetailsResponseProductsInner&gt;**](QuoteDetailsResponseProductsInner.md) |  | [optional] 
 **ProductsCount** | **int** | Total number of products included in the quote | [optional] 
-**ExtendedMsrpTotal** | **decimal** | Total extended MSRP for all products included in the quote | [optional] 
+**ExtendedMsrpTotal** | **decimal?** | Total extended MSRP for all products included in the quote | [optional] 
 **QuantityTotal** | **int** | Total quantity of all items in the quote. | [optional] 
 **ExtraFeesTotal** | **decimal** |  | [optional] 
 **ExtraFeesTotalDetails** | [**List&lt;QuoteDetailsResponseProductsInnerPriceExtraFeesDetailsInner&gt;**](QuoteDetailsResponseProductsInnerPriceExtraFeesDetailsInner.md) |  | [optional] 
