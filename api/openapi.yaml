@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  description: "For resellers seeking to innovate with Ingram Micro's API solutions,\
+  description: "For Resellers seeking to innovate with Ingram Micro's API solutions,\
     \ automate your eCommerce experience with our array of API's and webhooks to craft\
     \ a seamless journey for your customers."
   title: XI Sdk Resellers
