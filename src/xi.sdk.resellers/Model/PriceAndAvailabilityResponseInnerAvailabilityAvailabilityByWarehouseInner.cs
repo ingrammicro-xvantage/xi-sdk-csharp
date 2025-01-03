@@ -42,7 +42,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="quantityBackorderedEta">The estimated time of arrival of a product that has been backordered in a given warehouse..</param>
         /// <param name="quantityOnOrder">The quantity of the product on order..</param>
         /// <param name="backOrderInfo">*Currently, this feature is not available in these countries (Mexico, Turkey, New Zealand, Colombia, Chile, Brazil, Peru, Western Sahara)..</param>
-        public PriceAndAvailabilityResponseInnerAvailabilityAvailabilityByWarehouseInner(string location = default(string), string warehouseId = default(string), int quantityAvailable = default(int), int quantityBackordered = default(int), string quantityBackorderedEta = default(string), int quantityOnOrder = default(int), List<PriceAndAvailabilityResponseInnerAvailabilityAvailabilityByWarehouseInnerBackOrderInfoInner> backOrderInfo = default(List<PriceAndAvailabilityResponseInnerAvailabilityAvailabilityByWarehouseInnerBackOrderInfoInner>))
+        public PriceAndAvailabilityResponseInnerAvailabilityAvailabilityByWarehouseInner(string location = default(string), string warehouseId = default(string), int? quantityAvailable = default(int?), int? quantityBackordered = default(int?), string quantityBackorderedEta = default(string), int? quantityOnOrder = default(int?), List<PriceAndAvailabilityResponseInnerAvailabilityAvailabilityByWarehouseInnerBackOrderInfoInner> backOrderInfo = default(List<PriceAndAvailabilityResponseInnerAvailabilityAvailabilityByWarehouseInnerBackOrderInfoInner>))
         {
             this.Location = location;
             this.WarehouseId = warehouseId;
@@ -57,43 +57,43 @@ namespace xi.sdk.resellers.Model
         /// Indicates where (location) the product is available.
         /// </summary>
         /// <value>Indicates where (location) the product is available.</value>
-        [DataMember(Name = "location", EmitDefaultValue = false)]
+        [DataMember(Name = "location", EmitDefaultValue = true)]
         public string Location { get; set; }
 
         /// <summary>
         /// Indicates where (Ingram Warehouse Id) the product is available.
         /// </summary>
         /// <value>Indicates where (Ingram Warehouse Id) the product is available.</value>
-        [DataMember(Name = "warehouseId", EmitDefaultValue = false)]
+        [DataMember(Name = "warehouseId", EmitDefaultValue = true)]
         public string WarehouseId { get; set; }
 
         /// <summary>
         /// The quantity of the product available in a given warehouse.
         /// </summary>
         /// <value>The quantity of the product available in a given warehouse.</value>
-        [DataMember(Name = "quantityAvailable", EmitDefaultValue = false)]
-        public int QuantityAvailable { get; set; }
+        [DataMember(Name = "quantityAvailable", EmitDefaultValue = true)]
+        public int? QuantityAvailable { get; set; }
 
         /// <summary>
         /// The quantity of a product backordered in a given warehouse.
         /// </summary>
         /// <value>The quantity of a product backordered in a given warehouse.</value>
-        [DataMember(Name = "quantityBackordered", EmitDefaultValue = false)]
-        public int QuantityBackordered { get; set; }
+        [DataMember(Name = "quantityBackordered", EmitDefaultValue = true)]
+        public int? QuantityBackordered { get; set; }
 
         /// <summary>
         /// The estimated time of arrival of a product that has been backordered in a given warehouse.
         /// </summary>
         /// <value>The estimated time of arrival of a product that has been backordered in a given warehouse.</value>
-        [DataMember(Name = "quantityBackorderedEta", EmitDefaultValue = false)]
+        [DataMember(Name = "quantityBackorderedEta", EmitDefaultValue = true)]
         public string QuantityBackorderedEta { get; set; }
 
         /// <summary>
         /// The quantity of the product on order.
         /// </summary>
         /// <value>The quantity of the product on order.</value>
-        [DataMember(Name = "quantityOnOrder", EmitDefaultValue = false)]
-        public int QuantityOnOrder { get; set; }
+        [DataMember(Name = "quantityOnOrder", EmitDefaultValue = true)]
+        public int? QuantityOnOrder { get; set; }
 
         /// <summary>
         /// *Currently, this feature is not available in these countries (Mexico, Turkey, New Zealand, Colombia, Chile, Brazil, Peru, Western Sahara).

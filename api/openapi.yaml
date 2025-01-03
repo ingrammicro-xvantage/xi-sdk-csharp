@@ -14606,10 +14606,12 @@ components:
       properties:
         quantity:
           description: Quantity backordered.
+          nullable: true
           type: integer
         etaDate:
           description: Expected availability date.
           format: Date
+          nullable: true
           type: string
       type: object
     PriceAndAvailabilityResponse_inner_availability_availabilityByWarehouse_inner:
@@ -14628,22 +14630,28 @@ components:
       properties:
         location:
           description: Indicates where (location) the product is available.
+          nullable: true
           type: string
         warehouseId:
           description: Indicates where (Ingram Warehouse Id) the product is available.
+          nullable: true
           type: string
         quantityAvailable:
           description: The quantity of the product available in a given warehouse.
+          nullable: true
           type: integer
         quantityBackordered:
           description: The quantity of a product backordered in a given warehouse.
+          nullable: true
           type: integer
         quantityBackorderedEta:
           description: The estimated time of arrival of a product that has been backordered
             in a given warehouse.
+          nullable: true
           type: string
         quantityOnOrder:
           description: The quantity of the product on order.
+          nullable: true
           type: integer
         backOrderInfo:
           description: "*Currently, this feature is not available in these countries\
@@ -14687,6 +14695,7 @@ components:
           type: boolean
         totalAvailability:
           description: The total amount of available products
+          nullable: true
           type: integer
         availabilityByWarehouse:
           items:
@@ -14703,18 +14712,22 @@ components:
       properties:
         quantityReserved:
           description: The quantity of the product reserved for the customer.
+          nullable: true
           type: integer
         quantityAvailable:
           description: The availability of the product reserved.
+          nullable: true
           type: integer
         effectivedate:
           description: The reservation date for the product in UTC format.
           format: Date
+          nullable: true
           type: string
         expirydate:
           description: The expiration date for the reservation of the product in UTC
             format.
           format: Date
+          nullable: true
           type: string
       type: object
     PriceAndAvailabilityResponse_inner_pricing:
@@ -14733,24 +14746,29 @@ components:
         retailPrice:
           description: The retail price of the product.
           format: decimal
+          nullable: true
           type: number
         mapPrice:
           description: "Minimum Advertised Price (MAP). If required by the vendor,\
             \ resellers can not sell below MAP price."
           format: decimal
+          nullable: true
           type: number
         customerPrice:
           description: The price customer pays after all special pricing and discounts
             have been applied.
           format: decimal
+          nullable: true
           type: number
         specialBidPricingAvailable:
           description: Boolean values specifies whether special Bid discounts are
             available for the product.
+          nullable: true
           type: boolean
         webDiscountsAvailable:
           description: Boolean values specifies whether web Discounts are available
             for the product.
+          nullable: true
           type: boolean
       type: object
     PriceAndAvailabilityResponse_inner_discounts_inner_specialPricing_inner:
@@ -14768,42 +14786,51 @@ components:
         discountType:
           description: The type of discount being given to the customer.
           example: "Special Bid, Promo Discount"
+          nullable: true
           type: string
         specialBidNumer:
           description: Pre-approved special pricing/bid number provided to the reseller
             by the vendor for special pricing and discounts. Used to track the bid
             number where different line items have different bid numbers. Line-level
             bid numbers take precedence over header-level bid numbers.
+          nullable: true
           type: string
         specialPricingDiscount:
           description: Special pricing discount amount given to the customer.
           format: decimal
+          nullable: true
           type: number
         specialPricingEffectiveDate:
           description: The effective date of the special pricing available to the
             customer.
           format: date
+          nullable: true
           type: string
         specialPricingExpirationDate:
           description: The expiration date of the special pricing available to the
             customer.
           format: date
+          nullable: true
           type: string
         specialPricingAvailableQuantity:
           description: The available quantity of products with discounts.
+          nullable: true
           type: integer
         specialPricingMinQuantity:
           description: The minimum quantity of products that have to be purchased
             to ensure the discount is applied.
+          nullable: true
           type: integer
         governmentDiscountType:
           description: "Type of Government Discount. *Currently, this discount is\
             \ only available in the USA."
+          nullable: true
           type: string
         governmentDiscountedCustomerPrice:
           description: "Government Discounted Customer Price. *Currently, this discount\
             \ is only available in the USA."
           format: decimal
+          nullable: true
           type: number
       type: object
     PriceAndAvailabilityResponse_inner_discounts_inner_quantityDiscounts_inner:
@@ -14817,20 +14844,25 @@ components:
         conditionType:
           description: Indicates when the discount is applied after ordering the product.
           example: Total fee
+          nullable: true
           type: string
         currencyCode:
           description: The country-specific three digit ISO 4217 currency code for
             the order.
+          nullable: true
           type: string
         currencyType:
           description: Type of currency.
+          nullable: true
           type: string
         quantity:
           description: The total discounted quantity of the product.
+          nullable: true
           type: integer
         amount:
           description: The total price of all the discounts applied.
           format: decimal
+          nullable: true
           type: number
       type: object
     PriceAndAvailabilityResponse_inner_discounts_inner:
@@ -14886,19 +14918,24 @@ components:
       properties:
         conditionType:
           description: Condition Type of the service fees.
+          nullable: true
           type: string
         description:
           description: Description of the service fees.
+          nullable: true
           type: string
         amount:
           description: Amount of the service fees.
           format: decimal
+          nullable: true
           type: number
         endDate:
           description: End Date of the service fees.
+          nullable: true
           type: string
         currencyCode:
           description: Currency Code of the service fees.
+          nullable: true
           type: string
       type: object
     PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_groups_inner:
@@ -14908,9 +14945,11 @@ components:
       properties:
         groupName:
           description: The name of the group
+          nullable: true
           type: string
         groupDescription:
           description: The description of the group.
+          nullable: true
           type: string
       type: object
     PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_billingPeriod:
@@ -14920,9 +14959,11 @@ components:
       properties:
         billingPeriodUnit:
           description: The unit of the billing period.
+          nullable: true
           type: string
         billingPeriod:
           description: The billing period value.
+          nullable: true
           type: number
       type: object
     PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_subscriptionPeriod_inner:
@@ -14932,9 +14973,11 @@ components:
       properties:
         subscriptionPeriodUnit:
           description: The unit of the subscription period.
+          nullable: true
           type: string
         subscriptionPeriod:
           description: The subscription period value.
+          nullable: true
           type: string
       type: object
     PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_options_inner_resourcePricing_inner:
@@ -14949,27 +14992,34 @@ components:
       properties:
         name:
           description: Name of the type of pricing.
+          nullable: true
           type: string
         quantity:
           description: Quantity of the line item.
+          nullable: true
           type: string
         msrp:
           description: Manufacturer Suggested Retail Price.
           format: decimal
+          nullable: true
           type: number
         unitPrice:
           description: The unit price of the line item.
           format: decimal
+          nullable: true
           type: number
         margin:
           description: Reseller’s margin percentage
           format: decimal
+          nullable: true
           type: number
         currencyCode:
           description: The 3-digit ISO currency code.
+          nullable: true
           type: string
         subscriptionPeriod:
           description: The subscription period of the line item.
+          nullable: true
           type: string
       type: object
     PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_options_inner_discounts_inner_volumeDiscounts_inner:
@@ -14982,21 +15032,26 @@ components:
       properties:
         currencyCode:
           description: The 3-digit ISO currency code.
+          nullable: true
           type: string
         quantity:
           description: Quantity of the line item.
+          nullable: true
           type: integer
         msrp:
           description: Manufacturer Suggested Retail Price.
           format: decimal
+          nullable: true
           type: number
         unitPrice:
           description: The unit price of the line item.
           format: decimal
+          nullable: true
           type: number
         margin:
           description: Reseller’s margin percentage
           format: decimal
+          nullable: true
           type: number
       type: object
     PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_options_inner_discounts_inner_specialPricing_inner:
@@ -15010,22 +15065,28 @@ components:
       properties:
         currencyCode:
           description: The 3-digit ISO currency code.
+          nullable: true
           type: string
         discount:
           description: The discount for the line item.
           format: decimal
+          nullable: true
           type: number
         discountType:
           description: The type of the discount
+          nullable: true
           type: string
         discountQtyLimit:
           description: The quantity available at the discounted price
+          nullable: true
           type: integer
         discountExpiryDate:
           description: The date when discount expires.
+          nullable: true
           type: string
         vendorProgramName:
           description: The vendors discount program name.
+          nullable: true
           type: string
       type: object
     PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_options_inner_discounts_inner:
@@ -15074,14 +15135,18 @@ components:
         price:
           description: Fee price of the line item.
           format: decimal
+          nullable: true
           type: number
         type:
           description: The type of the fees.
+          nullable: true
           type: string
         msrp:
           format: decimal
+          nullable: true
           type: number
         code:
+          nullable: true
           type: string
       type: object
     PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_options_inner:
@@ -15169,29 +15234,37 @@ components:
         vendorPartNumber: vendorPartNumber
       properties:
         resourceId:
+          nullable: true
           type: string
         resourceUId:
           description: The resource id of the subscription product.
+          nullable: true
           type: string
         resourceName:
           description: The name of the resource of the subscription product.
+          nullable: true
           type: string
         vendorPartNumber:
           description: Vendor’s part number for the subscription product.
+          nullable: true
           type: string
         minUnits:
           description: Minimum unit needs to purchased.
           format: decimal
+          nullable: true
           type: number
         maxUnits:
           description: Maximum unit available for a purchase.
           format: decimal
+          nullable: true
           type: number
         recurringpricemodel:
           description: Recurring price model
+          nullable: true
           type: string
         unitOfMeasure:
           description: Unit of mesaure for a subscription product.
+          nullable: true
           type: string
         resourcePricing:
           items:
@@ -15391,17 +15464,22 @@ components:
         planDescription: planDescription
       properties:
         index:
+          nullable: true
           type: number
         planId:
           description: Id of the plan.
+          nullable: true
           type: string
         planUId:
+          nullable: true
           type: string
         planName:
           description: Name of the plan.
+          nullable: true
           type: string
         planDescription:
           description: The description of the plan.
+          nullable: true
           type: string
         groups:
           items:
@@ -15925,12 +16003,15 @@ components:
           type: number
         productStatusCode:
           description: Codes signifying whether the sku is active or not.
+          nullable: true
           type: string
         productStatusMessage:
           description: Message returned saying whether sku is active.
+          nullable: true
           type: string
         ingramPartNumber:
           description: Ingram Micro unique part number for the product.
+          nullable: true
           type: string
         vendorPartNumber:
           description: Vendor’s part number for the product.
@@ -15949,6 +16030,7 @@ components:
         upc:
           description: The UPC code for the product. Consists of 12 numeric digits
             that are uniquely assigned to each trade item.
+          nullable: true
           type: string
         partNumberType:
           description: Number type of the part.

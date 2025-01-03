@@ -47,14 +47,14 @@ namespace xi.sdk.resellers.Model
         /// The unit of the subscription period.
         /// </summary>
         /// <value>The unit of the subscription period.</value>
-        [DataMember(Name = "subscriptionPeriodUnit", EmitDefaultValue = false)]
+        [DataMember(Name = "subscriptionPeriodUnit", EmitDefaultValue = true)]
         public string SubscriptionPeriodUnit { get; set; }
 
         /// <summary>
         /// The subscription period value.
         /// </summary>
         /// <value>The subscription period value.</value>
-        [DataMember(Name = "subscriptionPeriod", EmitDefaultValue = false)]
+        [DataMember(Name = "subscriptionPeriod", EmitDefaultValue = true)]
         public string SubscriptionPeriod { get; set; }
 
         /// <summary>

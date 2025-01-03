@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Index** | **decimal** |  | [optional] 
+**Index** | **decimal?** |  | [optional] 
 **PlanId** | **string** | Id of the plan. | [optional] 
 **PlanUId** | **string** |  | [optional] 
 **PlanName** | **string** | Name of the plan. | [optional] 

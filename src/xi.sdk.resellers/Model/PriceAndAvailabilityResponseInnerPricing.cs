@@ -41,7 +41,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="customerPrice">The price customer pays after all special pricing and discounts have been applied..</param>
         /// <param name="specialBidPricingAvailable">Boolean values specifies whether special Bid discounts are available for the product..</param>
         /// <param name="webDiscountsAvailable">Boolean values specifies whether web Discounts are available for the product..</param>
-        public PriceAndAvailabilityResponseInnerPricing(string currencyCode = default(string), decimal retailPrice = default(decimal), decimal mapPrice = default(decimal), decimal customerPrice = default(decimal), bool specialBidPricingAvailable = default(bool), bool webDiscountsAvailable = default(bool))
+        public PriceAndAvailabilityResponseInnerPricing(string currencyCode = default(string), decimal? retailPrice = default(decimal?), decimal? mapPrice = default(decimal?), decimal? customerPrice = default(decimal?), bool? specialBidPricingAvailable = default(bool?), bool? webDiscountsAvailable = default(bool?))
         {
             this.CurrencyCode = currencyCode;
             this.RetailPrice = retailPrice;
@@ -62,36 +62,36 @@ namespace xi.sdk.resellers.Model
         /// The retail price of the product.
         /// </summary>
         /// <value>The retail price of the product.</value>
-        [DataMember(Name = "retailPrice", EmitDefaultValue = false)]
-        public decimal RetailPrice { get; set; }
+        [DataMember(Name = "retailPrice", EmitDefaultValue = true)]
+        public decimal? RetailPrice { get; set; }
 
         /// <summary>
         /// Minimum Advertised Price (MAP). If required by the vendor, resellers can not sell below MAP price.
         /// </summary>
         /// <value>Minimum Advertised Price (MAP). If required by the vendor, resellers can not sell below MAP price.</value>
-        [DataMember(Name = "mapPrice", EmitDefaultValue = false)]
-        public decimal MapPrice { get; set; }
+        [DataMember(Name = "mapPrice", EmitDefaultValue = true)]
+        public decimal? MapPrice { get; set; }
 
         /// <summary>
         /// The price customer pays after all special pricing and discounts have been applied.
         /// </summary>
         /// <value>The price customer pays after all special pricing and discounts have been applied.</value>
-        [DataMember(Name = "customerPrice", EmitDefaultValue = false)]
-        public decimal CustomerPrice { get; set; }
+        [DataMember(Name = "customerPrice", EmitDefaultValue = true)]
+        public decimal? CustomerPrice { get; set; }
 
         /// <summary>
         /// Boolean values specifies whether special Bid discounts are available for the product.
         /// </summary>
         /// <value>Boolean values specifies whether special Bid discounts are available for the product.</value>
         [DataMember(Name = "specialBidPricingAvailable", EmitDefaultValue = true)]
-        public bool SpecialBidPricingAvailable { get; set; }
+        public bool? SpecialBidPricingAvailable { get; set; }
 
         /// <summary>
         /// Boolean values specifies whether web Discounts are available for the product.
         /// </summary>
         /// <value>Boolean values specifies whether web Discounts are available for the product.</value>
         [DataMember(Name = "webDiscountsAvailable", EmitDefaultValue = true)]
-        public bool WebDiscountsAvailable { get; set; }
+        public bool? WebDiscountsAvailable { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

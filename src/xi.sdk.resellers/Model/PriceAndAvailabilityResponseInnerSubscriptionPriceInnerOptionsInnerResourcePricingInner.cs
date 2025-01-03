@@ -42,7 +42,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="margin">Reseller’s margin percentage.</param>
         /// <param name="currencyCode">The 3-digit ISO currency code..</param>
         /// <param name="subscriptionPeriod">The subscription period of the line item..</param>
-        public PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerResourcePricingInner(string name = default(string), string quantity = default(string), decimal msrp = default(decimal), decimal unitPrice = default(decimal), decimal margin = default(decimal), string currencyCode = default(string), string subscriptionPeriod = default(string))
+        public PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerResourcePricingInner(string name = default(string), string quantity = default(string), decimal? msrp = default(decimal?), decimal? unitPrice = default(decimal?), decimal? margin = default(decimal?), string currencyCode = default(string), string subscriptionPeriod = default(string))
         {
             this.Name = name;
             this.Quantity = quantity;
@@ -57,49 +57,49 @@ namespace xi.sdk.resellers.Model
         /// Name of the type of pricing.
         /// </summary>
         /// <value>Name of the type of pricing.</value>
-        [DataMember(Name = "name", EmitDefaultValue = false)]
+        [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
         /// Quantity of the line item.
         /// </summary>
         /// <value>Quantity of the line item.</value>
-        [DataMember(Name = "quantity", EmitDefaultValue = false)]
+        [DataMember(Name = "quantity", EmitDefaultValue = true)]
         public string Quantity { get; set; }
 
         /// <summary>
         /// Manufacturer Suggested Retail Price.
         /// </summary>
         /// <value>Manufacturer Suggested Retail Price.</value>
-        [DataMember(Name = "msrp", EmitDefaultValue = false)]
-        public decimal Msrp { get; set; }
+        [DataMember(Name = "msrp", EmitDefaultValue = true)]
+        public decimal? Msrp { get; set; }
 
         /// <summary>
         /// The unit price of the line item.
         /// </summary>
         /// <value>The unit price of the line item.</value>
-        [DataMember(Name = "unitPrice", EmitDefaultValue = false)]
-        public decimal UnitPrice { get; set; }
+        [DataMember(Name = "unitPrice", EmitDefaultValue = true)]
+        public decimal? UnitPrice { get; set; }
 
         /// <summary>
         /// Reseller’s margin percentage
         /// </summary>
         /// <value>Reseller’s margin percentage</value>
-        [DataMember(Name = "margin", EmitDefaultValue = false)]
-        public decimal Margin { get; set; }
+        [DataMember(Name = "margin", EmitDefaultValue = true)]
+        public decimal? Margin { get; set; }
 
         /// <summary>
         /// The 3-digit ISO currency code.
         /// </summary>
         /// <value>The 3-digit ISO currency code.</value>
-        [DataMember(Name = "currencyCode", EmitDefaultValue = false)]
+        [DataMember(Name = "currencyCode", EmitDefaultValue = true)]
         public string CurrencyCode { get; set; }
 
         /// <summary>
         /// The subscription period of the line item.
         /// </summary>
         /// <value>The subscription period of the line item.</value>
-        [DataMember(Name = "subscriptionPeriod", EmitDefaultValue = false)]
+        [DataMember(Name = "subscriptionPeriod", EmitDefaultValue = true)]
         public string SubscriptionPeriod { get; set; }
 
         /// <summary>

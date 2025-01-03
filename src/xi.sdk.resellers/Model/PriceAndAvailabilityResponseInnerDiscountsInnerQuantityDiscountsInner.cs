@@ -40,7 +40,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="currencyType">Type of currency..</param>
         /// <param name="quantity">The total discounted quantity of the product..</param>
         /// <param name="amount">The total price of all the discounts applied..</param>
-        public PriceAndAvailabilityResponseInnerDiscountsInnerQuantityDiscountsInner(string conditionType = default(string), string currencyCode = default(string), string currencyType = default(string), int quantity = default(int), decimal amount = default(decimal))
+        public PriceAndAvailabilityResponseInnerDiscountsInnerQuantityDiscountsInner(string conditionType = default(string), string currencyCode = default(string), string currencyType = default(string), int? quantity = default(int?), decimal? amount = default(decimal?))
         {
             this.ConditionType = conditionType;
             this.CurrencyCode = currencyCode;
@@ -56,36 +56,36 @@ namespace xi.sdk.resellers.Model
         /*
         <example>Total fee</example>
         */
-        [DataMember(Name = "conditionType", EmitDefaultValue = false)]
+        [DataMember(Name = "conditionType", EmitDefaultValue = true)]
         public string ConditionType { get; set; }
 
         /// <summary>
         /// The country-specific three digit ISO 4217 currency code for the order.
         /// </summary>
         /// <value>The country-specific three digit ISO 4217 currency code for the order.</value>
-        [DataMember(Name = "currencyCode", EmitDefaultValue = false)]
+        [DataMember(Name = "currencyCode", EmitDefaultValue = true)]
         public string CurrencyCode { get; set; }
 
         /// <summary>
         /// Type of currency.
         /// </summary>
         /// <value>Type of currency.</value>
-        [DataMember(Name = "currencyType", EmitDefaultValue = false)]
+        [DataMember(Name = "currencyType", EmitDefaultValue = true)]
         public string CurrencyType { get; set; }
 
         /// <summary>
         /// The total discounted quantity of the product.
         /// </summary>
         /// <value>The total discounted quantity of the product.</value>
-        [DataMember(Name = "quantity", EmitDefaultValue = false)]
-        public int Quantity { get; set; }
+        [DataMember(Name = "quantity", EmitDefaultValue = true)]
+        public int? Quantity { get; set; }
 
         /// <summary>
         /// The total price of all the discounts applied.
         /// </summary>
         /// <value>The total price of all the discounts applied.</value>
-        [DataMember(Name = "amount", EmitDefaultValue = false)]
-        public decimal Amount { get; set; }
+        [DataMember(Name = "amount", EmitDefaultValue = true)]
+        public decimal? Amount { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

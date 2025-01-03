@@ -107,21 +107,21 @@ namespace xi.sdk.resellers.Model
         /// Codes signifying whether the sku is active or not.
         /// </summary>
         /// <value>Codes signifying whether the sku is active or not.</value>
-        [DataMember(Name = "productStatusCode", EmitDefaultValue = false)]
+        [DataMember(Name = "productStatusCode", EmitDefaultValue = true)]
         public string ProductStatusCode { get; set; }
 
         /// <summary>
         /// Message returned saying whether sku is active.
         /// </summary>
         /// <value>Message returned saying whether sku is active.</value>
-        [DataMember(Name = "productStatusMessage", EmitDefaultValue = false)]
+        [DataMember(Name = "productStatusMessage", EmitDefaultValue = true)]
         public string ProductStatusMessage { get; set; }
 
         /// <summary>
         /// Ingram Micro unique part number for the product.
         /// </summary>
         /// <value>Ingram Micro unique part number for the product.</value>
-        [DataMember(Name = "ingramPartNumber", EmitDefaultValue = false)]
+        [DataMember(Name = "ingramPartNumber", EmitDefaultValue = true)]
         public string IngramPartNumber { get; set; }
 
         /// <summary>
@@ -149,7 +149,7 @@ namespace xi.sdk.resellers.Model
         /// The UPC code for the product. Consists of 12 numeric digits that are uniquely assigned to each trade item.
         /// </summary>
         /// <value>The UPC code for the product. Consists of 12 numeric digits that are uniquely assigned to each trade item.</value>
-        [DataMember(Name = "upc", EmitDefaultValue = false)]
+        [DataMember(Name = "upc", EmitDefaultValue = true)]
         public string Upc { get; set; }
 
         /// <summary>

@@ -39,7 +39,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="type">The type of the fees..</param>
         /// <param name="msrp">msrp.</param>
         /// <param name="code">code.</param>
-        public PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerFeesInner(decimal price = default(decimal), string type = default(string), decimal msrp = default(decimal), string code = default(string))
+        public PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerFeesInner(decimal? price = default(decimal?), string type = default(string), decimal? msrp = default(decimal?), string code = default(string))
         {
             this.Price = price;
             this.Type = type;
@@ -51,26 +51,26 @@ namespace xi.sdk.resellers.Model
         /// Fee price of the line item.
         /// </summary>
         /// <value>Fee price of the line item.</value>
-        [DataMember(Name = "price", EmitDefaultValue = false)]
-        public decimal Price { get; set; }
+        [DataMember(Name = "price", EmitDefaultValue = true)]
+        public decimal? Price { get; set; }
 
         /// <summary>
         /// The type of the fees.
         /// </summary>
         /// <value>The type of the fees.</value>
-        [DataMember(Name = "type", EmitDefaultValue = false)]
+        [DataMember(Name = "type", EmitDefaultValue = true)]
         public string Type { get; set; }
 
         /// <summary>
         /// Gets or Sets Msrp
         /// </summary>
-        [DataMember(Name = "msrp", EmitDefaultValue = false)]
-        public decimal Msrp { get; set; }
+        [DataMember(Name = "msrp", EmitDefaultValue = true)]
+        public decimal? Msrp { get; set; }
 
         /// <summary>
         /// Gets or Sets Code
         /// </summary>
-        [DataMember(Name = "code", EmitDefaultValue = false)]
+        [DataMember(Name = "code", EmitDefaultValue = true)]
         public string Code { get; set; }
 
         /// <summary>

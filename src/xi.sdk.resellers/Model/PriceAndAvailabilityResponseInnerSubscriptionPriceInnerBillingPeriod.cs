@@ -37,7 +37,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <param name="billingPeriodUnit">The unit of the billing period..</param>
         /// <param name="billingPeriod">The billing period value..</param>
-        public PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriod(string billingPeriodUnit = default(string), decimal billingPeriod = default(decimal))
+        public PriceAndAvailabilityResponseInnerSubscriptionPriceInnerBillingPeriod(string billingPeriodUnit = default(string), decimal? billingPeriod = default(decimal?))
         {
             this.BillingPeriodUnit = billingPeriodUnit;
             this.BillingPeriod = billingPeriod;
@@ -47,15 +47,15 @@ namespace xi.sdk.resellers.Model
         /// The unit of the billing period.
         /// </summary>
         /// <value>The unit of the billing period.</value>
-        [DataMember(Name = "billingPeriodUnit", EmitDefaultValue = false)]
+        [DataMember(Name = "billingPeriodUnit", EmitDefaultValue = true)]
         public string BillingPeriodUnit { get; set; }
 
         /// <summary>
         /// The billing period value.
         /// </summary>
         /// <value>The billing period value.</value>
-        [DataMember(Name = "billingPeriod", EmitDefaultValue = false)]
-        public decimal BillingPeriod { get; set; }
+        [DataMember(Name = "billingPeriod", EmitDefaultValue = true)]
+        public decimal? BillingPeriod { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

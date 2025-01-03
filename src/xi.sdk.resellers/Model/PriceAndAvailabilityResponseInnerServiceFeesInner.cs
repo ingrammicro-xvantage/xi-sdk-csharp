@@ -40,7 +40,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="amount">Amount of the service fees..</param>
         /// <param name="endDate">End Date of the service fees..</param>
         /// <param name="currencyCode">Currency Code of the service fees..</param>
-        public PriceAndAvailabilityResponseInnerServiceFeesInner(string conditionType = default(string), string description = default(string), decimal amount = default(decimal), string endDate = default(string), string currencyCode = default(string))
+        public PriceAndAvailabilityResponseInnerServiceFeesInner(string conditionType = default(string), string description = default(string), decimal? amount = default(decimal?), string endDate = default(string), string currencyCode = default(string))
         {
             this.ConditionType = conditionType;
             this.Description = description;
@@ -53,35 +53,35 @@ namespace xi.sdk.resellers.Model
         /// Condition Type of the service fees.
         /// </summary>
         /// <value>Condition Type of the service fees.</value>
-        [DataMember(Name = "conditionType", EmitDefaultValue = false)]
+        [DataMember(Name = "conditionType", EmitDefaultValue = true)]
         public string ConditionType { get; set; }
 
         /// <summary>
         /// Description of the service fees.
         /// </summary>
         /// <value>Description of the service fees.</value>
-        [DataMember(Name = "description", EmitDefaultValue = false)]
+        [DataMember(Name = "description", EmitDefaultValue = true)]
         public string Description { get; set; }
 
         /// <summary>
         /// Amount of the service fees.
         /// </summary>
         /// <value>Amount of the service fees.</value>
-        [DataMember(Name = "amount", EmitDefaultValue = false)]
-        public decimal Amount { get; set; }
+        [DataMember(Name = "amount", EmitDefaultValue = true)]
+        public decimal? Amount { get; set; }
 
         /// <summary>
         /// End Date of the service fees.
         /// </summary>
         /// <value>End Date of the service fees.</value>
-        [DataMember(Name = "endDate", EmitDefaultValue = false)]
+        [DataMember(Name = "endDate", EmitDefaultValue = true)]
         public string EndDate { get; set; }
 
         /// <summary>
         /// Currency Code of the service fees.
         /// </summary>
         /// <value>Currency Code of the service fees.</value>
-        [DataMember(Name = "currencyCode", EmitDefaultValue = false)]
+        [DataMember(Name = "currencyCode", EmitDefaultValue = true)]
         public string CurrencyCode { get; set; }
 
         /// <summary>

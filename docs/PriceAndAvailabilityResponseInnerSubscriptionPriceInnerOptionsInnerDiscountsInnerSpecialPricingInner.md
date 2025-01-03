@@ -5,9 +5,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **CurrencyCode** | **string** | The 3-digit ISO currency code. | [optional] 
-**Discount** | **decimal** | The discount for the line item. | [optional] 
+**Discount** | **decimal?** | The discount for the line item. | [optional] 
 **DiscountType** | **string** | The type of the discount | [optional] 
-**DiscountQtyLimit** | **int** | The quantity available at the discounted price | [optional] 
+**DiscountQtyLimit** | **int?** | The quantity available at the discounted price | [optional] 
 **DiscountExpiryDate** | **string** | The date when discount expires. | [optional] 
 **VendorProgramName** | **string** | The vendors discount program name. | [optional] 
 

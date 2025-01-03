@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ConditionType** | **string** | Condition Type of the service fees. | [optional] 
 **Description** | **string** | Description of the service fees. | [optional] 
-**Amount** | **decimal** | Amount of the service fees. | [optional] 
+**Amount** | **decimal?** | Amount of the service fees. | [optional] 
 **EndDate** | **string** | End Date of the service fees. | [optional] 
 **CurrencyCode** | **string** | Currency Code of the service fees. | [optional] 
 

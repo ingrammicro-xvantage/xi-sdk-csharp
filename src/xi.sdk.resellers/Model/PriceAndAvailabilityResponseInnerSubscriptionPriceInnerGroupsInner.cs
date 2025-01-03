@@ -47,14 +47,14 @@ namespace xi.sdk.resellers.Model
         /// The name of the group
         /// </summary>
         /// <value>The name of the group</value>
-        [DataMember(Name = "groupName", EmitDefaultValue = false)]
+        [DataMember(Name = "groupName", EmitDefaultValue = true)]
         public string GroupName { get; set; }
 
         /// <summary>
         /// The description of the group.
         /// </summary>
         /// <value>The description of the group.</value>
-        [DataMember(Name = "groupDescription", EmitDefaultValue = false)]
+        [DataMember(Name = "groupDescription", EmitDefaultValue = true)]
         public string GroupDescription { get; set; }
 
         /// <summary>

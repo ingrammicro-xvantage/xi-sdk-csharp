@@ -6,9 +6,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | **string** | Name of the type of pricing. | [optional] 
 **Quantity** | **string** | Quantity of the line item. | [optional] 
-**Msrp** | **decimal** | Manufacturer Suggested Retail Price. | [optional] 
-**UnitPrice** | **decimal** | The unit price of the line item. | [optional] 
-**Margin** | **decimal** | Reseller’s margin percentage | [optional] 
+**Msrp** | **decimal?** | Manufacturer Suggested Retail Price. | [optional] 
+**UnitPrice** | **decimal?** | The unit price of the line item. | [optional] 
+**Margin** | **decimal?** | Reseller’s margin percentage | [optional] 
 **CurrencyCode** | **string** | The 3-digit ISO currency code. | [optional] 
 **SubscriptionPeriod** | **string** | The subscription period of the line item. | [optional] 
 

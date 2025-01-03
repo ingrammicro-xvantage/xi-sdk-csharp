@@ -37,7 +37,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <param name="quantity">Quantity backordered..</param>
         /// <param name="etaDate">Expected availability date..</param>
-        public PriceAndAvailabilityResponseInnerAvailabilityAvailabilityByWarehouseInnerBackOrderInfoInner(int quantity = default(int), string etaDate = default(string))
+        public PriceAndAvailabilityResponseInnerAvailabilityAvailabilityByWarehouseInnerBackOrderInfoInner(int? quantity = default(int?), string etaDate = default(string))
         {
             this.Quantity = quantity;
             this.EtaDate = etaDate;
@@ -47,14 +47,14 @@ namespace xi.sdk.resellers.Model
         /// Quantity backordered.
         /// </summary>
         /// <value>Quantity backordered.</value>
-        [DataMember(Name = "quantity", EmitDefaultValue = false)]
-        public int Quantity { get; set; }
+        [DataMember(Name = "quantity", EmitDefaultValue = true)]
+        public int? Quantity { get; set; }
 
         /// <summary>
         /// Expected availability date.
         /// </summary>
         /// <value>Expected availability date.</value>
-        [DataMember(Name = "etaDate", EmitDefaultValue = false)]
+        [DataMember(Name = "etaDate", EmitDefaultValue = true)]
         public string EtaDate { get; set; }
 
         /// <summary>

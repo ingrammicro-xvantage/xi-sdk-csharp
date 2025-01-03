@@ -41,7 +41,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="discountQtyLimit">The quantity available at the discounted price.</param>
         /// <param name="discountExpiryDate">The date when discount expires..</param>
         /// <param name="vendorProgramName">The vendors discount program name..</param>
-        public PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerDiscountsInnerSpecialPricingInner(string currencyCode = default(string), decimal discount = default(decimal), string discountType = default(string), int discountQtyLimit = default(int), string discountExpiryDate = default(string), string vendorProgramName = default(string))
+        public PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerDiscountsInnerSpecialPricingInner(string currencyCode = default(string), decimal? discount = default(decimal?), string discountType = default(string), int? discountQtyLimit = default(int?), string discountExpiryDate = default(string), string vendorProgramName = default(string))
         {
             this.CurrencyCode = currencyCode;
             this.Discount = discount;
@@ -55,42 +55,42 @@ namespace xi.sdk.resellers.Model
         /// The 3-digit ISO currency code.
         /// </summary>
         /// <value>The 3-digit ISO currency code.</value>
-        [DataMember(Name = "currencyCode", EmitDefaultValue = false)]
+        [DataMember(Name = "currencyCode", EmitDefaultValue = true)]
         public string CurrencyCode { get; set; }
 
         /// <summary>
         /// The discount for the line item.
         /// </summary>
         /// <value>The discount for the line item.</value>
-        [DataMember(Name = "discount", EmitDefaultValue = false)]
-        public decimal Discount { get; set; }
+        [DataMember(Name = "discount", EmitDefaultValue = true)]
+        public decimal? Discount { get; set; }
 
         /// <summary>
         /// The type of the discount
         /// </summary>
         /// <value>The type of the discount</value>
-        [DataMember(Name = "discountType", EmitDefaultValue = false)]
+        [DataMember(Name = "discountType", EmitDefaultValue = true)]
         public string DiscountType { get; set; }
 
         /// <summary>
         /// The quantity available at the discounted price
         /// </summary>
         /// <value>The quantity available at the discounted price</value>
-        [DataMember(Name = "discountQtyLimit", EmitDefaultValue = false)]
-        public int DiscountQtyLimit { get; set; }
+        [DataMember(Name = "discountQtyLimit", EmitDefaultValue = true)]
+        public int? DiscountQtyLimit { get; set; }
 
         /// <summary>
         /// The date when discount expires.
         /// </summary>
         /// <value>The date when discount expires.</value>
-        [DataMember(Name = "discountExpiryDate", EmitDefaultValue = false)]
+        [DataMember(Name = "discountExpiryDate", EmitDefaultValue = true)]
         public string DiscountExpiryDate { get; set; }
 
         /// <summary>
         /// The vendors discount program name.
         /// </summary>
         /// <value>The vendors discount program name.</value>
-        [DataMember(Name = "vendorProgramName", EmitDefaultValue = false)]
+        [DataMember(Name = "vendorProgramName", EmitDefaultValue = true)]
         public string VendorProgramName { get; set; }
 
         /// <summary>

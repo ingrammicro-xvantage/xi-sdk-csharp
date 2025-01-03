@@ -40,7 +40,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="msrp">Manufacturer Suggested Retail Price..</param>
         /// <param name="unitPrice">The unit price of the line item..</param>
         /// <param name="margin">Reseller’s margin percentage.</param>
-        public PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerDiscountsInnerVolumeDiscountsInner(string currencyCode = default(string), int quantity = default(int), decimal msrp = default(decimal), decimal unitPrice = default(decimal), decimal margin = default(decimal))
+        public PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerDiscountsInnerVolumeDiscountsInner(string currencyCode = default(string), int? quantity = default(int?), decimal? msrp = default(decimal?), decimal? unitPrice = default(decimal?), decimal? margin = default(decimal?))
         {
             this.CurrencyCode = currencyCode;
             this.Quantity = quantity;
@@ -53,36 +53,36 @@ namespace xi.sdk.resellers.Model
         /// The 3-digit ISO currency code.
         /// </summary>
         /// <value>The 3-digit ISO currency code.</value>
-        [DataMember(Name = "currencyCode", EmitDefaultValue = false)]
+        [DataMember(Name = "currencyCode", EmitDefaultValue = true)]
         public string CurrencyCode { get; set; }
 
         /// <summary>
         /// Quantity of the line item.
         /// </summary>
         /// <value>Quantity of the line item.</value>
-        [DataMember(Name = "quantity", EmitDefaultValue = false)]
-        public int Quantity { get; set; }
+        [DataMember(Name = "quantity", EmitDefaultValue = true)]
+        public int? Quantity { get; set; }
 
         /// <summary>
         /// Manufacturer Suggested Retail Price.
         /// </summary>
         /// <value>Manufacturer Suggested Retail Price.</value>
-        [DataMember(Name = "msrp", EmitDefaultValue = false)]
-        public decimal Msrp { get; set; }
+        [DataMember(Name = "msrp", EmitDefaultValue = true)]
+        public decimal? Msrp { get; set; }
 
         /// <summary>
         /// The unit price of the line item.
         /// </summary>
         /// <value>The unit price of the line item.</value>
-        [DataMember(Name = "unitPrice", EmitDefaultValue = false)]
-        public decimal UnitPrice { get; set; }
+        [DataMember(Name = "unitPrice", EmitDefaultValue = true)]
+        public decimal? UnitPrice { get; set; }
 
         /// <summary>
         /// Reseller’s margin percentage
         /// </summary>
         /// <value>Reseller’s margin percentage</value>
-        [DataMember(Name = "margin", EmitDefaultValue = false)]
-        public decimal Margin { get; set; }
+        [DataMember(Name = "margin", EmitDefaultValue = true)]
+        public decimal? Margin { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

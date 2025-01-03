@@ -38,7 +38,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="available">Boolean that indicates if the product ordered is available.</param>
         /// <param name="totalAvailability">The total amount of available products.</param>
         /// <param name="availabilityByWarehouse">availabilityByWarehouse.</param>
-        public PriceAndAvailabilityResponseInnerAvailability(bool available = default(bool), int totalAvailability = default(int), List<PriceAndAvailabilityResponseInnerAvailabilityAvailabilityByWarehouseInner> availabilityByWarehouse = default(List<PriceAndAvailabilityResponseInnerAvailabilityAvailabilityByWarehouseInner>))
+        public PriceAndAvailabilityResponseInnerAvailability(bool available = default(bool), int? totalAvailability = default(int?), List<PriceAndAvailabilityResponseInnerAvailabilityAvailabilityByWarehouseInner> availabilityByWarehouse = default(List<PriceAndAvailabilityResponseInnerAvailabilityAvailabilityByWarehouseInner>))
         {
             this.Available = available;
             this.TotalAvailability = totalAvailability;
@@ -56,8 +56,8 @@ namespace xi.sdk.resellers.Model
         /// The total amount of available products
         /// </summary>
         /// <value>The total amount of available products</value>
-        [DataMember(Name = "totalAvailability", EmitDefaultValue = false)]
-        public int TotalAvailability { get; set; }
+        [DataMember(Name = "totalAvailability", EmitDefaultValue = true)]
+        public int? TotalAvailability { get; set; }
 
         /// <summary>
         /// Gets or Sets AvailabilityByWarehouse

@@ -46,7 +46,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="resourcePricing">resourcePricing.</param>
         /// <param name="discounts">discounts.</param>
         /// <param name="fees">fees.</param>
-        public PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInner(string resourceId = default(string), string resourceUId = default(string), string resourceName = default(string), string vendorPartNumber = default(string), decimal minUnits = default(decimal), decimal maxUnits = default(decimal), string recurringpricemodel = default(string), string unitOfMeasure = default(string), List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerResourcePricingInner> resourcePricing = default(List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerResourcePricingInner>), List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerDiscountsInner> discounts = default(List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerDiscountsInner>), List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerFeesInner> fees = default(List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerFeesInner>))
+        public PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInner(string resourceId = default(string), string resourceUId = default(string), string resourceName = default(string), string vendorPartNumber = default(string), decimal? minUnits = default(decimal?), decimal? maxUnits = default(decimal?), string recurringpricemodel = default(string), string unitOfMeasure = default(string), List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerResourcePricingInner> resourcePricing = default(List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerResourcePricingInner>), List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerDiscountsInner> discounts = default(List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerDiscountsInner>), List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerFeesInner> fees = default(List<PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerFeesInner>))
         {
             this.ResourceId = resourceId;
             this.ResourceUId = resourceUId;
@@ -64,56 +64,56 @@ namespace xi.sdk.resellers.Model
         /// <summary>
         /// Gets or Sets ResourceId
         /// </summary>
-        [DataMember(Name = "resourceId", EmitDefaultValue = false)]
+        [DataMember(Name = "resourceId", EmitDefaultValue = true)]
         public string ResourceId { get; set; }
 
         /// <summary>
         /// The resource id of the subscription product.
         /// </summary>
         /// <value>The resource id of the subscription product.</value>
-        [DataMember(Name = "resourceUId", EmitDefaultValue = false)]
+        [DataMember(Name = "resourceUId", EmitDefaultValue = true)]
         public string ResourceUId { get; set; }
 
         /// <summary>
         /// The name of the resource of the subscription product.
         /// </summary>
         /// <value>The name of the resource of the subscription product.</value>
-        [DataMember(Name = "resourceName", EmitDefaultValue = false)]
+        [DataMember(Name = "resourceName", EmitDefaultValue = true)]
         public string ResourceName { get; set; }
 
         /// <summary>
         /// Vendor’s part number for the subscription product.
         /// </summary>
         /// <value>Vendor’s part number for the subscription product.</value>
-        [DataMember(Name = "vendorPartNumber", EmitDefaultValue = false)]
+        [DataMember(Name = "vendorPartNumber", EmitDefaultValue = true)]
         public string VendorPartNumber { get; set; }
 
         /// <summary>
         /// Minimum unit needs to purchased.
         /// </summary>
         /// <value>Minimum unit needs to purchased.</value>
-        [DataMember(Name = "minUnits", EmitDefaultValue = false)]
-        public decimal MinUnits { get; set; }
+        [DataMember(Name = "minUnits", EmitDefaultValue = true)]
+        public decimal? MinUnits { get; set; }
 
         /// <summary>
         /// Maximum unit available for a purchase.
         /// </summary>
         /// <value>Maximum unit available for a purchase.</value>
-        [DataMember(Name = "maxUnits", EmitDefaultValue = false)]
-        public decimal MaxUnits { get; set; }
+        [DataMember(Name = "maxUnits", EmitDefaultValue = true)]
+        public decimal? MaxUnits { get; set; }
 
         /// <summary>
         /// Recurring price model
         /// </summary>
         /// <value>Recurring price model</value>
-        [DataMember(Name = "recurringpricemodel", EmitDefaultValue = false)]
+        [DataMember(Name = "recurringpricemodel", EmitDefaultValue = true)]
         public string Recurringpricemodel { get; set; }
 
         /// <summary>
         /// Unit of mesaure for a subscription product.
         /// </summary>
         /// <value>Unit of mesaure for a subscription product.</value>
-        [DataMember(Name = "unitOfMeasure", EmitDefaultValue = false)]
+        [DataMember(Name = "unitOfMeasure", EmitDefaultValue = true)]
         public string UnitOfMeasure { get; set; }
 
         /// <summary>

@@ -39,7 +39,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="quantityAvailable">The availability of the product reserved..</param>
         /// <param name="effectivedate">The reservation date for the product in UTC format..</param>
         /// <param name="expirydate">The expiration date for the reservation of the product in UTC format..</param>
-        public PriceAndAvailabilityResponseInnerReserveInventoryDetailsInner(int quantityReserved = default(int), int quantityAvailable = default(int), string effectivedate = default(string), string expirydate = default(string))
+        public PriceAndAvailabilityResponseInnerReserveInventoryDetailsInner(int? quantityReserved = default(int?), int? quantityAvailable = default(int?), string effectivedate = default(string), string expirydate = default(string))
         {
             this.QuantityReserved = quantityReserved;
             this.QuantityAvailable = quantityAvailable;
@@ -51,28 +51,28 @@ namespace xi.sdk.resellers.Model
         /// The quantity of the product reserved for the customer.
         /// </summary>
         /// <value>The quantity of the product reserved for the customer.</value>
-        [DataMember(Name = "quantityReserved", EmitDefaultValue = false)]
-        public int QuantityReserved { get; set; }
+        [DataMember(Name = "quantityReserved", EmitDefaultValue = true)]
+        public int? QuantityReserved { get; set; }
 
         /// <summary>
         /// The availability of the product reserved.
         /// </summary>
         /// <value>The availability of the product reserved.</value>
-        [DataMember(Name = "quantityAvailable", EmitDefaultValue = false)]
-        public int QuantityAvailable { get; set; }
+        [DataMember(Name = "quantityAvailable", EmitDefaultValue = true)]
+        public int? QuantityAvailable { get; set; }
 
         /// <summary>
         /// The reservation date for the product in UTC format.
         /// </summary>
         /// <value>The reservation date for the product in UTC format.</value>
-        [DataMember(Name = "effectivedate", EmitDefaultValue = false)]
+        [DataMember(Name = "effectivedate", EmitDefaultValue = true)]
         public string Effectivedate { get; set; }
 
         /// <summary>
         /// The expiration date for the reservation of the product in UTC format.
         /// </summary>
         /// <value>The expiration date for the reservation of the product in UTC format.</value>
-        [DataMember(Name = "expirydate", EmitDefaultValue = false)]
+        [DataMember(Name = "expirydate", EmitDefaultValue = true)]
         public string Expirydate { get; set; }
 
         /// <summary>
