@@ -9417,10 +9417,12 @@ components:
         showAvailableDiscounts:
           description: Boolean value that will display Discount details in the response
             when true.
+          nullable: true
           type: boolean
         showReserveInventoryDetails:
           description: Boolean value that will display reserve inventory details in
             the response when true.
+          nullable: true
           type: boolean
         specialBidNumber:
           description: Pre-approved special pricing/bid number provided to the reseller

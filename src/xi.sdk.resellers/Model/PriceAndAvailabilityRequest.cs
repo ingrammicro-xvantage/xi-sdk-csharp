@@ -41,7 +41,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="availabilityByWarehouse">availabilityByWarehouse.</param>
         /// <param name="products">products.</param>
         /// <param name="additionalAttributes">additionalAttributes.</param>
-        public PriceAndAvailabilityRequest(bool showAvailableDiscounts = default(bool), bool showReserveInventoryDetails = default(bool), string specialBidNumber = default(string), List<PriceAndAvailabilityRequestAvailabilityByWarehouseInner> availabilityByWarehouse = default(List<PriceAndAvailabilityRequestAvailabilityByWarehouseInner>), List<PriceAndAvailabilityRequestProductsInner> products = default(List<PriceAndAvailabilityRequestProductsInner>), List<PriceAndAvailabilityRequestAdditionalAttributesInner> additionalAttributes = default(List<PriceAndAvailabilityRequestAdditionalAttributesInner>))
+        public PriceAndAvailabilityRequest(bool? showAvailableDiscounts = default(bool?), bool? showReserveInventoryDetails = default(bool?), string specialBidNumber = default(string), List<PriceAndAvailabilityRequestAvailabilityByWarehouseInner> availabilityByWarehouse = default(List<PriceAndAvailabilityRequestAvailabilityByWarehouseInner>), List<PriceAndAvailabilityRequestProductsInner> products = default(List<PriceAndAvailabilityRequestProductsInner>), List<PriceAndAvailabilityRequestAdditionalAttributesInner> additionalAttributes = default(List<PriceAndAvailabilityRequestAdditionalAttributesInner>))
         {
             this.ShowAvailableDiscounts = showAvailableDiscounts;
             this.ShowReserveInventoryDetails = showReserveInventoryDetails;
@@ -56,14 +56,14 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>Boolean value that will display Discount details in the response when true.</value>
         [DataMember(Name = "showAvailableDiscounts", EmitDefaultValue = true)]
-        public bool ShowAvailableDiscounts { get; set; }
+        public bool? ShowAvailableDiscounts { get; set; }
 
         /// <summary>
         /// Boolean value that will display reserve inventory details in the response when true.
         /// </summary>
         /// <value>Boolean value that will display reserve inventory details in the response when true.</value>
         [DataMember(Name = "showReserveInventoryDetails", EmitDefaultValue = true)]
-        public bool ShowReserveInventoryDetails { get; set; }
+        public bool? ShowReserveInventoryDetails { get; set; }
 
         /// <summary>
         /// Pre-approved special pricing/bid number provided to the reseller by the vendor for special pricing and discounts. Used to track the bid number where different line items have different bid numbers.
