@@ -40,7 +40,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="msrp">Manufacturer Suggested Retail Price..</param>
         /// <param name="unitPrice">The unit price of the line item..</param>
         /// <param name="margin">Reseller’s margin percentage.</param>
-        public PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerDiscountsInnerVolumeDiscountsInner(string currencyCode = default(string), int? quantity = default(int?), decimal? msrp = default(decimal?), decimal? unitPrice = default(decimal?), decimal? margin = default(decimal?))
+        public PriceAndAvailabilityResponseInnerSubscriptionPriceInnerOptionsInnerDiscountsInnerVolumeDiscountsInner(string currencyCode = default(string), string quantity = default(string), decimal? msrp = default(decimal?), decimal? unitPrice = default(decimal?), decimal? margin = default(decimal?))
         {
             this.CurrencyCode = currencyCode;
             this.Quantity = quantity;
@@ -61,7 +61,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>Quantity of the line item.</value>
         [DataMember(Name = "quantity", EmitDefaultValue = true)]
-        public int? Quantity { get; set; }
+        public string Quantity { get; set; }
 
         /// <summary>
         /// Manufacturer Suggested Retail Price.

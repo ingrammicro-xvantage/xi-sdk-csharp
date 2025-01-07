@@ -15040,10 +15040,10 @@ components:
       type: object
     PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_options_inner_discounts_inner_volumeDiscounts_inner:
       example:
-        unitPrice: 6.965117697638846
-        margin: 1.284659006116532
-        quantity: 6
-        msrp: 3.5571952270680973
+        unitPrice: 3.5571952270680973
+        margin: 6.965117697638846
+        quantity: quantity
+        msrp: 6.438423552598547
         currencyCode: currencyCode
       properties:
         currencyCode:
@@ -15053,7 +15053,7 @@ components:
         quantity:
           description: Quantity of the line item.
           nullable: true
-          type: integer
+          type: string
         msrp:
           description: Manufacturer Suggested Retail Price.
           format: decimal
@@ -15072,9 +15072,9 @@ components:
       type: object
     PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_options_inner_discounts_inner_specialPricing_inner:
       example:
-        discountQtyLimit: 6
+        discountQtyLimit: 2
         vendorProgramName: vendorProgramName
-        discount: 2.8841621266687802
+        discount: 1.284659006116532
         discountType: discountType
         currencyCode: currencyCode
         discountExpiryDate: discountExpiryDate
@@ -15108,28 +15108,28 @@ components:
     PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_options_inner_discounts_inner:
       example:
         specialPricing:
-        - discountQtyLimit: 6
+        - discountQtyLimit: 2
           vendorProgramName: vendorProgramName
-          discount: 2.8841621266687802
+          discount: 1.284659006116532
           discountType: discountType
           currencyCode: currencyCode
           discountExpiryDate: discountExpiryDate
-        - discountQtyLimit: 6
+        - discountQtyLimit: 2
           vendorProgramName: vendorProgramName
-          discount: 2.8841621266687802
+          discount: 1.284659006116532
           discountType: discountType
           currencyCode: currencyCode
           discountExpiryDate: discountExpiryDate
         volumeDiscounts:
-        - unitPrice: 6.965117697638846
-          margin: 1.284659006116532
-          quantity: 6
-          msrp: 3.5571952270680973
+        - unitPrice: 3.5571952270680973
+          margin: 6.965117697638846
+          quantity: quantity
+          msrp: 6.438423552598547
           currencyCode: currencyCode
-        - unitPrice: 6.965117697638846
-          margin: 1.284659006116532
-          quantity: 6
-          msrp: 3.5571952270680973
+        - unitPrice: 3.5571952270680973
+          margin: 6.965117697638846
+          quantity: quantity
+          msrp: 6.438423552598547
           currencyCode: currencyCode
       properties:
         volumeDiscounts:
@@ -15144,8 +15144,8 @@ components:
     PriceAndAvailabilityResponse_inner_subscriptionPrice_inner_options_inner_fees_inner:
       example:
         code: code
-        price: 6.878052220127876
-        msrp: 5.944895607614016
+        price: 6.778324963048013
+        msrp: 6.878052220127876
         type: type
       properties:
         price:
@@ -15170,62 +15170,62 @@ components:
         resourceId: resourceId
         fees:
         - code: code
-          price: 6.878052220127876
-          msrp: 5.944895607614016
+          price: 6.778324963048013
+          msrp: 6.878052220127876
           type: type
         - code: code
-          price: 6.878052220127876
-          msrp: 5.944895607614016
+          price: 6.778324963048013
+          msrp: 6.878052220127876
           type: type
         unitOfMeasure: unitOfMeasure
         discounts:
         - specialPricing:
-          - discountQtyLimit: 6
+          - discountQtyLimit: 2
             vendorProgramName: vendorProgramName
-            discount: 2.8841621266687802
+            discount: 1.284659006116532
             discountType: discountType
             currencyCode: currencyCode
             discountExpiryDate: discountExpiryDate
-          - discountQtyLimit: 6
+          - discountQtyLimit: 2
             vendorProgramName: vendorProgramName
-            discount: 2.8841621266687802
+            discount: 1.284659006116532
             discountType: discountType
             currencyCode: currencyCode
             discountExpiryDate: discountExpiryDate
           volumeDiscounts:
-          - unitPrice: 6.965117697638846
-            margin: 1.284659006116532
-            quantity: 6
-            msrp: 3.5571952270680973
+          - unitPrice: 3.5571952270680973
+            margin: 6.965117697638846
+            quantity: quantity
+            msrp: 6.438423552598547
             currencyCode: currencyCode
-          - unitPrice: 6.965117697638846
-            margin: 1.284659006116532
-            quantity: 6
-            msrp: 3.5571952270680973
+          - unitPrice: 3.5571952270680973
+            margin: 6.965117697638846
+            quantity: quantity
+            msrp: 6.438423552598547
             currencyCode: currencyCode
         - specialPricing:
-          - discountQtyLimit: 6
+          - discountQtyLimit: 2
             vendorProgramName: vendorProgramName
-            discount: 2.8841621266687802
+            discount: 1.284659006116532
             discountType: discountType
             currencyCode: currencyCode
             discountExpiryDate: discountExpiryDate
-          - discountQtyLimit: 6
+          - discountQtyLimit: 2
             vendorProgramName: vendorProgramName
-            discount: 2.8841621266687802
+            discount: 1.284659006116532
             discountType: discountType
             currencyCode: currencyCode
             discountExpiryDate: discountExpiryDate
           volumeDiscounts:
-          - unitPrice: 6.965117697638846
-            margin: 1.284659006116532
-            quantity: 6
-            msrp: 3.5571952270680973
+          - unitPrice: 3.5571952270680973
+            margin: 6.965117697638846
+            quantity: quantity
+            msrp: 6.438423552598547
             currencyCode: currencyCode
-          - unitPrice: 6.965117697638846
-            margin: 1.284659006116532
-            quantity: 6
-            msrp: 3.5571952270680973
+          - unitPrice: 3.5571952270680973
+            margin: 6.965117697638846
+            quantity: quantity
+            msrp: 6.438423552598547
             currencyCode: currencyCode
         resourceUId: resourceUId
         maxUnits: 9.369310271410669
@@ -15310,62 +15310,62 @@ components:
         - resourceId: resourceId
           fees:
           - code: code
-            price: 6.878052220127876
-            msrp: 5.944895607614016
+            price: 6.778324963048013
+            msrp: 6.878052220127876
             type: type
           - code: code
-            price: 6.878052220127876
-            msrp: 5.944895607614016
+            price: 6.778324963048013
+            msrp: 6.878052220127876
             type: type
           unitOfMeasure: unitOfMeasure
           discounts:
           - specialPricing:
-            - discountQtyLimit: 6
+            - discountQtyLimit: 2
               vendorProgramName: vendorProgramName
-              discount: 2.8841621266687802
+              discount: 1.284659006116532
               discountType: discountType
               currencyCode: currencyCode
               discountExpiryDate: discountExpiryDate
-            - discountQtyLimit: 6
+            - discountQtyLimit: 2
               vendorProgramName: vendorProgramName
-              discount: 2.8841621266687802
+              discount: 1.284659006116532
               discountType: discountType
               currencyCode: currencyCode
               discountExpiryDate: discountExpiryDate
             volumeDiscounts:
-            - unitPrice: 6.965117697638846
-              margin: 1.284659006116532
-              quantity: 6
-              msrp: 3.5571952270680973
+            - unitPrice: 3.5571952270680973
+              margin: 6.965117697638846
+              quantity: quantity
+              msrp: 6.438423552598547
               currencyCode: currencyCode
-            - unitPrice: 6.965117697638846
-              margin: 1.284659006116532
-              quantity: 6
-              msrp: 3.5571952270680973
+            - unitPrice: 3.5571952270680973
+              margin: 6.965117697638846
+              quantity: quantity
+              msrp: 6.438423552598547
               currencyCode: currencyCode
           - specialPricing:
-            - discountQtyLimit: 6
+            - discountQtyLimit: 2
               vendorProgramName: vendorProgramName
-              discount: 2.8841621266687802
+              discount: 1.284659006116532
               discountType: discountType
               currencyCode: currencyCode
               discountExpiryDate: discountExpiryDate
-            - discountQtyLimit: 6
+            - discountQtyLimit: 2
               vendorProgramName: vendorProgramName
-              discount: 2.8841621266687802
+              discount: 1.284659006116532
               discountType: discountType
               currencyCode: currencyCode
               discountExpiryDate: discountExpiryDate
             volumeDiscounts:
-            - unitPrice: 6.965117697638846
-              margin: 1.284659006116532
-              quantity: 6
-              msrp: 3.5571952270680973
+            - unitPrice: 3.5571952270680973
+              margin: 6.965117697638846
+              quantity: quantity
+              msrp: 6.438423552598547
               currencyCode: currencyCode
-            - unitPrice: 6.965117697638846
-              margin: 1.284659006116532
-              quantity: 6
-              msrp: 3.5571952270680973
+            - unitPrice: 3.5571952270680973
+              margin: 6.965117697638846
+              quantity: quantity
+              msrp: 6.438423552598547
               currencyCode: currencyCode
           resourceUId: resourceUId
           maxUnits: 9.369310271410669
@@ -15391,62 +15391,62 @@ components:
         - resourceId: resourceId
           fees:
           - code: code
-            price: 6.878052220127876
-            msrp: 5.944895607614016
+            price: 6.778324963048013
+            msrp: 6.878052220127876
             type: type
           - code: code
-            price: 6.878052220127876
-            msrp: 5.944895607614016
+            price: 6.778324963048013
+            msrp: 6.878052220127876
             type: type
           unitOfMeasure: unitOfMeasure
           discounts:
           - specialPricing:
-            - discountQtyLimit: 6
+            - discountQtyLimit: 2
               vendorProgramName: vendorProgramName
-              discount: 2.8841621266687802
+              discount: 1.284659006116532
               discountType: discountType
               currencyCode: currencyCode
               discountExpiryDate: discountExpiryDate
-            - discountQtyLimit: 6
+            - discountQtyLimit: 2
               vendorProgramName: vendorProgramName
-              discount: 2.8841621266687802
+              discount: 1.284659006116532
               discountType: discountType
               currencyCode: currencyCode
               discountExpiryDate: discountExpiryDate
             volumeDiscounts:
-            - unitPrice: 6.965117697638846
-              margin: 1.284659006116532
-              quantity: 6
-              msrp: 3.5571952270680973
+            - unitPrice: 3.5571952270680973
+              margin: 6.965117697638846
+              quantity: quantity
+              msrp: 6.438423552598547
               currencyCode: currencyCode
-            - unitPrice: 6.965117697638846
-              margin: 1.284659006116532
-              quantity: 6
-              msrp: 3.5571952270680973
+            - unitPrice: 3.5571952270680973
+              margin: 6.965117697638846
+              quantity: quantity
+              msrp: 6.438423552598547
               currencyCode: currencyCode
           - specialPricing:
-            - discountQtyLimit: 6
+            - discountQtyLimit: 2
               vendorProgramName: vendorProgramName
-              discount: 2.8841621266687802
+              discount: 1.284659006116532
               discountType: discountType
               currencyCode: currencyCode
               discountExpiryDate: discountExpiryDate
-            - discountQtyLimit: 6
+            - discountQtyLimit: 2
               vendorProgramName: vendorProgramName
-              discount: 2.8841621266687802
+              discount: 1.284659006116532
               discountType: discountType
               currencyCode: currencyCode
               discountExpiryDate: discountExpiryDate
             volumeDiscounts:
-            - unitPrice: 6.965117697638846
-              margin: 1.284659006116532
-              quantity: 6
-              msrp: 3.5571952270680973
+            - unitPrice: 3.5571952270680973
+              margin: 6.965117697638846
+              quantity: quantity
+              msrp: 6.438423552598547
               currencyCode: currencyCode
-            - unitPrice: 6.965117697638846
-              margin: 1.284659006116532
-              quantity: 6
-              msrp: 3.5571952270680973
+            - unitPrice: 3.5571952270680973
+              margin: 6.965117697638846
+              quantity: quantity
+              msrp: 6.438423552598547
               currencyCode: currencyCode
           resourceUId: resourceUId
           maxUnits: 9.369310271410669
@@ -15665,62 +15665,62 @@ components:
           - resourceId: resourceId
             fees:
             - code: code
-              price: 6.878052220127876
-              msrp: 5.944895607614016
+              price: 6.778324963048013
+              msrp: 6.878052220127876
               type: type
             - code: code
-              price: 6.878052220127876
-              msrp: 5.944895607614016
+              price: 6.778324963048013
+              msrp: 6.878052220127876
               type: type
             unitOfMeasure: unitOfMeasure
             discounts:
             - specialPricing:
-              - discountQtyLimit: 6
+              - discountQtyLimit: 2
                 vendorProgramName: vendorProgramName
-                discount: 2.8841621266687802
+                discount: 1.284659006116532
                 discountType: discountType
                 currencyCode: currencyCode
                 discountExpiryDate: discountExpiryDate
-              - discountQtyLimit: 6
+              - discountQtyLimit: 2
                 vendorProgramName: vendorProgramName
-                discount: 2.8841621266687802
+                discount: 1.284659006116532
                 discountType: discountType
                 currencyCode: currencyCode
                 discountExpiryDate: discountExpiryDate
               volumeDiscounts:
-              - unitPrice: 6.965117697638846
-                margin: 1.284659006116532
-                quantity: 6
-                msrp: 3.5571952270680973
+              - unitPrice: 3.5571952270680973
+                margin: 6.965117697638846
+                quantity: quantity
+                msrp: 6.438423552598547
                 currencyCode: currencyCode
-              - unitPrice: 6.965117697638846
-                margin: 1.284659006116532
-                quantity: 6
-                msrp: 3.5571952270680973
+              - unitPrice: 3.5571952270680973
+                margin: 6.965117697638846
+                quantity: quantity
+                msrp: 6.438423552598547
                 currencyCode: currencyCode
             - specialPricing:
-              - discountQtyLimit: 6
+              - discountQtyLimit: 2
                 vendorProgramName: vendorProgramName
-                discount: 2.8841621266687802
+                discount: 1.284659006116532
                 discountType: discountType
                 currencyCode: currencyCode
                 discountExpiryDate: discountExpiryDate
-              - discountQtyLimit: 6
+              - discountQtyLimit: 2
                 vendorProgramName: vendorProgramName
-                discount: 2.8841621266687802
+                discount: 1.284659006116532
                 discountType: discountType
                 currencyCode: currencyCode
                 discountExpiryDate: discountExpiryDate
               volumeDiscounts:
-              - unitPrice: 6.965117697638846
-                margin: 1.284659006116532
-                quantity: 6
-                msrp: 3.5571952270680973
+              - unitPrice: 3.5571952270680973
+                margin: 6.965117697638846
+                quantity: quantity
+                msrp: 6.438423552598547
                 currencyCode: currencyCode
-              - unitPrice: 6.965117697638846
-                margin: 1.284659006116532
-                quantity: 6
-                msrp: 3.5571952270680973
+              - unitPrice: 3.5571952270680973
+                margin: 6.965117697638846
+                quantity: quantity
+                msrp: 6.438423552598547
                 currencyCode: currencyCode
             resourceUId: resourceUId
             maxUnits: 9.369310271410669
@@ -15746,62 +15746,62 @@ components:
           - resourceId: resourceId
             fees:
             - code: code
-              price: 6.878052220127876
-              msrp: 5.944895607614016
+              price: 6.778324963048013
+              msrp: 6.878052220127876
               type: type
             - code: code
-              price: 6.878052220127876
-              msrp: 5.944895607614016
+              price: 6.778324963048013
+              msrp: 6.878052220127876
               type: type
             unitOfMeasure: unitOfMeasure
             discounts:
             - specialPricing:
-              - discountQtyLimit: 6
+              - discountQtyLimit: 2
                 vendorProgramName: vendorProgramName
-                discount: 2.8841621266687802
+                discount: 1.284659006116532
                 discountType: discountType
                 currencyCode: currencyCode
                 discountExpiryDate: discountExpiryDate
-              - discountQtyLimit: 6
+              - discountQtyLimit: 2
                 vendorProgramName: vendorProgramName
-                discount: 2.8841621266687802
+                discount: 1.284659006116532
                 discountType: discountType
                 currencyCode: currencyCode
                 discountExpiryDate: discountExpiryDate
               volumeDiscounts:
-              - unitPrice: 6.965117697638846
-                margin: 1.284659006116532
-                quantity: 6
-                msrp: 3.5571952270680973
+              - unitPrice: 3.5571952270680973
+                margin: 6.965117697638846
+                quantity: quantity
+                msrp: 6.438423552598547
                 currencyCode: currencyCode
-              - unitPrice: 6.965117697638846
-                margin: 1.284659006116532
-                quantity: 6
-                msrp: 3.5571952270680973
+              - unitPrice: 3.5571952270680973
+                margin: 6.965117697638846
+                quantity: quantity
+                msrp: 6.438423552598547
                 currencyCode: currencyCode
             - specialPricing:
-              - discountQtyLimit: 6
+              - discountQtyLimit: 2
                 vendorProgramName: vendorProgramName
-                discount: 2.8841621266687802
+                discount: 1.284659006116532
                 discountType: discountType
                 currencyCode: currencyCode
                 discountExpiryDate: discountExpiryDate
-              - discountQtyLimit: 6
+              - discountQtyLimit: 2
                 vendorProgramName: vendorProgramName
-                discount: 2.8841621266687802
+                discount: 1.284659006116532
                 discountType: discountType
                 currencyCode: currencyCode
                 discountExpiryDate: discountExpiryDate
               volumeDiscounts:
-              - unitPrice: 6.965117697638846
-                margin: 1.284659006116532
-                quantity: 6
-                msrp: 3.5571952270680973
+              - unitPrice: 3.5571952270680973
+                margin: 6.965117697638846
+                quantity: quantity
+                msrp: 6.438423552598547
                 currencyCode: currencyCode
-              - unitPrice: 6.965117697638846
-                margin: 1.284659006116532
-                quantity: 6
-                msrp: 3.5571952270680973
+              - unitPrice: 3.5571952270680973
+                margin: 6.965117697638846
+                quantity: quantity
+                msrp: 6.438423552598547
                 currencyCode: currencyCode
             resourceUId: resourceUId
             maxUnits: 9.369310271410669
@@ -15846,62 +15846,62 @@ components:
           - resourceId: resourceId
             fees:
             - code: code
-              price: 6.878052220127876
-              msrp: 5.944895607614016
+              price: 6.778324963048013
+              msrp: 6.878052220127876
               type: type
             - code: code
-              price: 6.878052220127876
-              msrp: 5.944895607614016
+              price: 6.778324963048013
+              msrp: 6.878052220127876
               type: type
             unitOfMeasure: unitOfMeasure
             discounts:
             - specialPricing:
-              - discountQtyLimit: 6
+              - discountQtyLimit: 2
                 vendorProgramName: vendorProgramName
-                discount: 2.8841621266687802
+                discount: 1.284659006116532
                 discountType: discountType
                 currencyCode: currencyCode
                 discountExpiryDate: discountExpiryDate
-              - discountQtyLimit: 6
+              - discountQtyLimit: 2
                 vendorProgramName: vendorProgramName
-                discount: 2.8841621266687802
+                discount: 1.284659006116532
                 discountType: discountType
                 currencyCode: currencyCode
                 discountExpiryDate: discountExpiryDate
               volumeDiscounts:
-              - unitPrice: 6.965117697638846
-                margin: 1.284659006116532
-                quantity: 6
-                msrp: 3.5571952270680973
+              - unitPrice: 3.5571952270680973
+                margin: 6.965117697638846
+                quantity: quantity
+                msrp: 6.438423552598547
                 currencyCode: currencyCode
-              - unitPrice: 6.965117697638846
-                margin: 1.284659006116532
-                quantity: 6
-                msrp: 3.5571952270680973
+              - unitPrice: 3.5571952270680973
+                margin: 6.965117697638846
+                quantity: quantity
+                msrp: 6.438423552598547
                 currencyCode: currencyCode
             - specialPricing:
-              - discountQtyLimit: 6
+              - discountQtyLimit: 2
                 vendorProgramName: vendorProgramName
-                discount: 2.8841621266687802
+                discount: 1.284659006116532
                 discountType: discountType
                 currencyCode: currencyCode
                 discountExpiryDate: discountExpiryDate
-              - discountQtyLimit: 6
+              - discountQtyLimit: 2
                 vendorProgramName: vendorProgramName
-                discount: 2.8841621266687802
+                discount: 1.284659006116532
                 discountType: discountType
                 currencyCode: currencyCode
                 discountExpiryDate: discountExpiryDate
               volumeDiscounts:
-              - unitPrice: 6.965117697638846
-                margin: 1.284659006116532
-                quantity: 6
-                msrp: 3.5571952270680973
+              - unitPrice: 3.5571952270680973
+                margin: 6.965117697638846
+                quantity: quantity
+                msrp: 6.438423552598547
                 currencyCode: currencyCode
-              - unitPrice: 6.965117697638846
-                margin: 1.284659006116532
-                quantity: 6
-                msrp: 3.5571952270680973
+              - unitPrice: 3.5571952270680973
+                margin: 6.965117697638846
+                quantity: quantity
+                msrp: 6.438423552598547
                 currencyCode: currencyCode
             resourceUId: resourceUId
             maxUnits: 9.369310271410669
@@ -15927,62 +15927,62 @@ components:
           - resourceId: resourceId
             fees:
             - code: code
-              price: 6.878052220127876
-              msrp: 5.944895607614016
+              price: 6.778324963048013
+              msrp: 6.878052220127876
               type: type
             - code: code
-              price: 6.878052220127876
-              msrp: 5.944895607614016
+              price: 6.778324963048013
+              msrp: 6.878052220127876
               type: type
             unitOfMeasure: unitOfMeasure
             discounts:
             - specialPricing:
-              - discountQtyLimit: 6
+              - discountQtyLimit: 2
                 vendorProgramName: vendorProgramName
-                discount: 2.8841621266687802
+                discount: 1.284659006116532
                 discountType: discountType
                 currencyCode: currencyCode
                 discountExpiryDate: discountExpiryDate
-              - discountQtyLimit: 6
+              - discountQtyLimit: 2
                 vendorProgramName: vendorProgramName
-                discount: 2.8841621266687802
+                discount: 1.284659006116532
                 discountType: discountType
                 currencyCode: currencyCode
                 discountExpiryDate: discountExpiryDate
               volumeDiscounts:
-              - unitPrice: 6.965117697638846
-                margin: 1.284659006116532
-                quantity: 6
-                msrp: 3.5571952270680973
+              - unitPrice: 3.5571952270680973
+                margin: 6.965117697638846
+                quantity: quantity
+                msrp: 6.438423552598547
                 currencyCode: currencyCode
-              - unitPrice: 6.965117697638846
-                margin: 1.284659006116532
-                quantity: 6
-                msrp: 3.5571952270680973
+              - unitPrice: 3.5571952270680973
+                margin: 6.965117697638846
+                quantity: quantity
+                msrp: 6.438423552598547
                 currencyCode: currencyCode
             - specialPricing:
-              - discountQtyLimit: 6
+              - discountQtyLimit: 2
                 vendorProgramName: vendorProgramName
-                discount: 2.8841621266687802
+                discount: 1.284659006116532
                 discountType: discountType
                 currencyCode: currencyCode
                 discountExpiryDate: discountExpiryDate
-              - discountQtyLimit: 6
+              - discountQtyLimit: 2
                 vendorProgramName: vendorProgramName
-                discount: 2.8841621266687802
+                discount: 1.284659006116532
                 discountType: discountType
                 currencyCode: currencyCode
                 discountExpiryDate: discountExpiryDate
               volumeDiscounts:
-              - unitPrice: 6.965117697638846
-                margin: 1.284659006116532
-                quantity: 6
-                msrp: 3.5571952270680973
+              - unitPrice: 3.5571952270680973
+                margin: 6.965117697638846
+                quantity: quantity
+                msrp: 6.438423552598547
                 currencyCode: currencyCode
-              - unitPrice: 6.965117697638846
-                margin: 1.284659006116532
-                quantity: 6
-                msrp: 3.5571952270680973
+              - unitPrice: 3.5571952270680973
+                margin: 6.965117697638846
+                quantity: quantity
+                msrp: 6.438423552598547
                 currencyCode: currencyCode
             resourceUId: resourceUId
             maxUnits: 9.369310271410669
