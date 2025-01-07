@@ -13337,49 +13337,6 @@ components:
           description: TLine-level additional attributes.
           type: string
       type: object
-    order_create_v7_request_lines_inner_warrantyInfo_inner_serialInfo_inner:
-      description: "Serial information of the hardware to be associated with the warranty,\
-        \ applicable on post sale orders."
-      properties:
-        dateOfPurchase:
-          description: Date of purchase of the hardware.
-          maxLength: 8
-          type: string
-        shipDate:
-          description: "Vendor specific mandatory field, date of hardware/product\
-            \ shipment from vendor."
-          maxLength: 8
-          type: string
-        primarySerialNumber:
-          description: Serial number of the hardware/product.
-          type: string
-        secondarySerialNumber:
-          description: Serial number of accessory associated with the above hardware/product.
-          type: string
-      type: object
-    order_create_v7_request_lines_inner_warrantyInfo_inner:
-      properties:
-        hardwareLineLink:
-          description: "Customer line number of the warranty product in this request\
-            \ for linkage, either hardwareLineLink or warrantyLineLink can be used\
-            \ in a line"
-          type: string
-        warrantyLineLink:
-          description: "Customer line number of the hardware product in this request\
-            \ for linkage, either hardwareLineLink or warrantyLineLink can be used\
-            \ in a line."
-          type: string
-        directLineLink:
-          description: Unique value to link hardware and warranty lines. Should be
-            used only when products are purchased from both Ingram and/or vendor but
-            the warranty is purchased through Ingram for them.
-          maxLength: 25
-          type: string
-        serialInfo:
-          items:
-            $ref: '#/components/schemas/order_create_v7_request_lines_inner_warrantyInfo_inner_serialInfo_inner'
-          type: array
-      type: object
     order_create_v7_request_lines_inner_vmfAdditionalAttributesLines_inner:
       description: The object containing the list of fields required at a line level
         by the vendor.
@@ -13438,10 +13395,6 @@ components:
         additionalAttributes:
           items:
             $ref: '#/components/schemas/order_create_v7_request_lines_inner_additionalAttributes_inner'
-          type: array
-        warrantyInfo:
-          items:
-            $ref: '#/components/schemas/order_create_v7_request_lines_inner_warrantyInfo_inner'
           type: array
         vmfAdditionalAttributesLines:
           items:

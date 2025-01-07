@@ -14,7 +14,6 @@ Name | Type | Description | Notes
 **Notes** | **string** | The attribute field data. | [optional] 
 **EndUserInfo** | [**List&lt;OrderCreateV7RequestLinesInnerEndUserInfoInner&gt;**](OrderCreateV7RequestLinesInnerEndUserInfoInner.md) |  | [optional] 
 **AdditionalAttributes** | [**List&lt;OrderCreateV7RequestLinesInnerAdditionalAttributesInner&gt;**](OrderCreateV7RequestLinesInnerAdditionalAttributesInner.md) |  | [optional] 
-**WarrantyInfo** | [**List&lt;OrderCreateV7RequestLinesInnerWarrantyInfoInner&gt;**](OrderCreateV7RequestLinesInnerWarrantyInfoInner.md) |  | [optional] 
 **VmfAdditionalAttributesLines** | [**List&lt;OrderCreateV7RequestLinesInnerVmfAdditionalAttributesLinesInner&gt;**](OrderCreateV7RequestLinesInnerVmfAdditionalAttributesLinesInner.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

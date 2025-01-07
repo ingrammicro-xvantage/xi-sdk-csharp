@@ -145,15 +145,6 @@ namespace xi.sdk.resellers.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'WarrantyInfo'
-        /// </summary>
-        [Fact]
-        public void WarrantyInfoTest()
-        {
-            // TODO unit test for the property 'WarrantyInfo'
-        }
-
-        /// <summary>
         /// Test the property 'VmfAdditionalAttributesLines'
         /// </summary>
         [Fact]

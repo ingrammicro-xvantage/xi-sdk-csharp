@@ -244,8 +244,6 @@ Class | Method | HTTP request | Description
  - [Model.OrderCreateV7RequestLinesInnerAdditionalAttributesInner](docs/OrderCreateV7RequestLinesInnerAdditionalAttributesInner.md)
  - [Model.OrderCreateV7RequestLinesInnerEndUserInfoInner](docs/OrderCreateV7RequestLinesInnerEndUserInfoInner.md)
  - [Model.OrderCreateV7RequestLinesInnerVmfAdditionalAttributesLinesInner](docs/OrderCreateV7RequestLinesInnerVmfAdditionalAttributesLinesInner.md)
- - [Model.OrderCreateV7RequestLinesInnerWarrantyInfoInner](docs/OrderCreateV7RequestLinesInnerWarrantyInfoInner.md)
- - [Model.OrderCreateV7RequestLinesInnerWarrantyInfoInnerSerialInfoInner](docs/OrderCreateV7RequestLinesInnerWarrantyInfoInnerSerialInfoInner.md)
  - [Model.OrderCreateV7RequestResellerInfo](docs/OrderCreateV7RequestResellerInfo.md)
  - [Model.OrderCreateV7RequestShipToInfo](docs/OrderCreateV7RequestShipToInfo.md)
  - [Model.OrderCreateV7RequestShipmentDetails](docs/OrderCreateV7RequestShipmentDetails.md)

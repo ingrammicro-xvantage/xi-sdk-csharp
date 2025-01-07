@@ -45,9 +45,8 @@ namespace xi.sdk.resellers.Model
         /// <param name="notes">The attribute field data..</param>
         /// <param name="endUserInfo">endUserInfo.</param>
         /// <param name="additionalAttributes">additionalAttributes.</param>
-        /// <param name="warrantyInfo">warrantyInfo.</param>
         /// <param name="vmfAdditionalAttributesLines">vmfAdditionalAttributesLines.</param>
-        public OrderCreateV7RequestLinesInner(string customerLineNumber = default(string), string ingramPartNumber = default(string), string vendorPartNumber = default(string), int quantity = default(int), decimal unitPrice = default(decimal), string specialBidNumber = default(string), decimal endUserPrice = default(decimal), string notes = default(string), List<OrderCreateV7RequestLinesInnerEndUserInfoInner> endUserInfo = default(List<OrderCreateV7RequestLinesInnerEndUserInfoInner>), List<OrderCreateV7RequestLinesInnerAdditionalAttributesInner> additionalAttributes = default(List<OrderCreateV7RequestLinesInnerAdditionalAttributesInner>), List<OrderCreateV7RequestLinesInnerWarrantyInfoInner> warrantyInfo = default(List<OrderCreateV7RequestLinesInnerWarrantyInfoInner>), List<OrderCreateV7RequestLinesInnerVmfAdditionalAttributesLinesInner> vmfAdditionalAttributesLines = default(List<OrderCreateV7RequestLinesInnerVmfAdditionalAttributesLinesInner>))
+        public OrderCreateV7RequestLinesInner(string customerLineNumber = default(string), string ingramPartNumber = default(string), string vendorPartNumber = default(string), int quantity = default(int), decimal unitPrice = default(decimal), string specialBidNumber = default(string), decimal endUserPrice = default(decimal), string notes = default(string), List<OrderCreateV7RequestLinesInnerEndUserInfoInner> endUserInfo = default(List<OrderCreateV7RequestLinesInnerEndUserInfoInner>), List<OrderCreateV7RequestLinesInnerAdditionalAttributesInner> additionalAttributes = default(List<OrderCreateV7RequestLinesInnerAdditionalAttributesInner>), List<OrderCreateV7RequestLinesInnerVmfAdditionalAttributesLinesInner> vmfAdditionalAttributesLines = default(List<OrderCreateV7RequestLinesInnerVmfAdditionalAttributesLinesInner>))
         {
             this.CustomerLineNumber = customerLineNumber;
             this.IngramPartNumber = ingramPartNumber;
@@ -59,7 +58,6 @@ namespace xi.sdk.resellers.Model
             this.Notes = notes;
             this.EndUserInfo = endUserInfo;
             this.AdditionalAttributes = additionalAttributes;
-            this.WarrantyInfo = warrantyInfo;
             this.VmfAdditionalAttributesLines = vmfAdditionalAttributesLines;
         }
 
@@ -132,12 +130,6 @@ namespace xi.sdk.resellers.Model
         public List<OrderCreateV7RequestLinesInnerAdditionalAttributesInner> AdditionalAttributes { get; set; }
 
         /// <summary>
-        /// Gets or Sets WarrantyInfo
-        /// </summary>
-        [DataMember(Name = "warrantyInfo", EmitDefaultValue = false)]
-        public List<OrderCreateV7RequestLinesInnerWarrantyInfoInner> WarrantyInfo { get; set; }
-
-        /// <summary>
         /// Gets or Sets VmfAdditionalAttributesLines
         /// </summary>
         [DataMember(Name = "vmfAdditionalAttributesLines", EmitDefaultValue = false)]
@@ -161,7 +153,6 @@ namespace xi.sdk.resellers.Model
             sb.Append("  Notes: ").Append(Notes).Append("\n");
             sb.Append("  EndUserInfo: ").Append(EndUserInfo).Append("\n");
             sb.Append("  AdditionalAttributes: ").Append(AdditionalAttributes).Append("\n");
-            sb.Append("  WarrantyInfo: ").Append(WarrantyInfo).Append("\n");
             sb.Append("  VmfAdditionalAttributesLines: ").Append(VmfAdditionalAttributesLines).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

@@ -79,8 +79,6 @@ docs/OrderCreateV7RequestLinesInner.md
 docs/OrderCreateV7RequestLinesInnerAdditionalAttributesInner.md
 docs/OrderCreateV7RequestLinesInnerEndUserInfoInner.md
 docs/OrderCreateV7RequestLinesInnerVmfAdditionalAttributesLinesInner.md
-docs/OrderCreateV7RequestLinesInnerWarrantyInfoInner.md
-docs/OrderCreateV7RequestLinesInnerWarrantyInfoInnerSerialInfoInner.md
 docs/OrderCreateV7RequestResellerInfo.md
 docs/OrderCreateV7RequestShipToInfo.md
 docs/OrderCreateV7RequestShipmentDetails.md
@@ -317,8 +315,6 @@ src/xi.sdk.resellers.Test/Model/OrderCreateV7RequestLinesInnerAdditionalAttribut
 src/xi.sdk.resellers.Test/Model/OrderCreateV7RequestLinesInnerEndUserInfoInnerTests.cs
 src/xi.sdk.resellers.Test/Model/OrderCreateV7RequestLinesInnerTests.cs
 src/xi.sdk.resellers.Test/Model/OrderCreateV7RequestLinesInnerVmfAdditionalAttributesLinesInnerTests.cs
-src/xi.sdk.resellers.Test/Model/OrderCreateV7RequestLinesInnerWarrantyInfoInnerSerialInfoInnerTests.cs
-src/xi.sdk.resellers.Test/Model/OrderCreateV7RequestLinesInnerWarrantyInfoInnerTests.cs
 src/xi.sdk.resellers.Test/Model/OrderCreateV7RequestResellerInfoTests.cs
 src/xi.sdk.resellers.Test/Model/OrderCreateV7RequestShipToInfoTests.cs
 src/xi.sdk.resellers.Test/Model/OrderCreateV7RequestShipmentDetailsTests.cs
@@ -568,8 +564,6 @@ src/xi.sdk.resellers/Model/OrderCreateV7RequestLinesInner.cs
 src/xi.sdk.resellers/Model/OrderCreateV7RequestLinesInnerAdditionalAttributesInner.cs
 src/xi.sdk.resellers/Model/OrderCreateV7RequestLinesInnerEndUserInfoInner.cs
 src/xi.sdk.resellers/Model/OrderCreateV7RequestLinesInnerVmfAdditionalAttributesLinesInner.cs
-src/xi.sdk.resellers/Model/OrderCreateV7RequestLinesInnerWarrantyInfoInner.cs
-src/xi.sdk.resellers/Model/OrderCreateV7RequestLinesInnerWarrantyInfoInnerSerialInfoInner.cs
 src/xi.sdk.resellers/Model/OrderCreateV7RequestResellerInfo.cs
 src/xi.sdk.resellers/Model/OrderCreateV7RequestShipToInfo.cs
 src/xi.sdk.resellers/Model/OrderCreateV7RequestShipmentDetails.cs
