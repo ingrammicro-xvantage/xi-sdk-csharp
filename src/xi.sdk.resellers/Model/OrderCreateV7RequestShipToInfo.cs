@@ -67,83 +67,83 @@ namespace xi.sdk.resellers.Model
         /// The ID references the resellers address in Ingram Micro&#39;s system for shipping. Provided to resellers during the onboarding process.
         /// </summary>
         /// <value>The ID references the resellers address in Ingram Micro&#39;s system for shipping. Provided to resellers during the onboarding process.</value>
-        [DataMember(Name = "addressId", EmitDefaultValue = false)]
+        [DataMember(Name = "addressId", EmitDefaultValue = true)]
         public string AddressId { get; set; }
 
         /// <summary>
         /// The company contact provided by the reseller.
         /// </summary>
         /// <value>The company contact provided by the reseller.</value>
-        [DataMember(Name = "contact", EmitDefaultValue = false)]
+        [DataMember(Name = "contact", EmitDefaultValue = true)]
         public string Contact { get; set; }
 
         /// <summary>
         /// The reseller&#39;s company name or the End-User&#39;s Name
         /// </summary>
         /// <value>The reseller&#39;s company name or the End-User&#39;s Name</value>
-        [DataMember(Name = "companyName", EmitDefaultValue = false)]
+        [DataMember(Name = "companyName", EmitDefaultValue = true)]
         public string CompanyName { get; set; }
 
         /// <summary>
         /// The street address and building or house number the order will be shipped to.
         /// </summary>
         /// <value>The street address and building or house number the order will be shipped to.</value>
-        [DataMember(Name = "addressLine1", EmitDefaultValue = false)]
+        [DataMember(Name = "addressLine1", EmitDefaultValue = true)]
         public string AddressLine1 { get; set; }
 
         /// <summary>
         /// The apartment number the order will be shipped to.
         /// </summary>
         /// <value>The apartment number the order will be shipped to.</value>
-        [DataMember(Name = "addressLine2", EmitDefaultValue = false)]
+        [DataMember(Name = "addressLine2", EmitDefaultValue = true)]
         public string AddressLine2 { get; set; }
 
         /// <summary>
         /// The city the order will be shipped to.
         /// </summary>
         /// <value>The city the order will be shipped to.</value>
-        [DataMember(Name = "city", EmitDefaultValue = false)]
+        [DataMember(Name = "city", EmitDefaultValue = true)]
         public string City { get; set; }
 
         /// <summary>
         /// The state the order will be shipped to.
         /// </summary>
         /// <value>The state the order will be shipped to.</value>
-        [DataMember(Name = "state", EmitDefaultValue = false)]
+        [DataMember(Name = "state", EmitDefaultValue = true)]
         public string State { get; set; }
 
         /// <summary>
         /// End User Name
         /// </summary>
         /// <value>End User Name</value>
-        [DataMember(Name = "postalCode", EmitDefaultValue = false)]
+        [DataMember(Name = "postalCode", EmitDefaultValue = true)]
         public string PostalCode { get; set; }
 
         /// <summary>
         /// The zip or postal code the order will be shipped to.
         /// </summary>
         /// <value>The zip or postal code the order will be shipped to.</value>
-        [DataMember(Name = "countryCode", EmitDefaultValue = false)]
+        [DataMember(Name = "countryCode", EmitDefaultValue = true)]
         public string CountryCode { get; set; }
 
         /// <summary>
         /// The company contact email address.
         /// </summary>
         /// <value>The company contact email address.</value>
-        [DataMember(Name = "email", EmitDefaultValue = false)]
+        [DataMember(Name = "email", EmitDefaultValue = true)]
         public string Email { get; set; }
 
         /// <summary>
         /// Gets or Sets ShippingNotes
         /// </summary>
-        [DataMember(Name = "shippingNotes", EmitDefaultValue = false)]
+        [DataMember(Name = "shippingNotes", EmitDefaultValue = true)]
         public string ShippingNotes { get; set; }
 
         /// <summary>
         /// The company contact phone number.
         /// </summary>
         /// <value>The company contact phone number.</value>
-        [DataMember(Name = "phoneNumber", EmitDefaultValue = false)]
+        [DataMember(Name = "phoneNumber", EmitDefaultValue = true)]
         public string PhoneNumber { get; set; }
 
         /// <summary>

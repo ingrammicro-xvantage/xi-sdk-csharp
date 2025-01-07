@@ -41,7 +41,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="shippingInstructions">Any special shipping instructions for the order..</param>
         /// <param name="freightAccountNumber">The reseller &#39;s shipping account number with carrier. Used to bill the shipping carrier directly from the reseller&#39;s account with the carrier..</param>
         /// <param name="signatureRequired">Specifies whether a signature is required for delivery. Default is False..</param>
-        public OrderCreateV7RequestShipmentDetails(string carrierCode = default(string), string requestedDeliveryDate = default(string), string shipComplete = default(string), string shippingInstructions = default(string), string freightAccountNumber = default(string), bool signatureRequired = default(bool))
+        public OrderCreateV7RequestShipmentDetails(string carrierCode = default(string), string requestedDeliveryDate = default(string), string shipComplete = default(string), string shippingInstructions = default(string), string freightAccountNumber = default(string), bool? signatureRequired = default(bool?))
         {
             this.CarrierCode = carrierCode;
             this.RequestedDeliveryDate = requestedDeliveryDate;
@@ -55,35 +55,35 @@ namespace xi.sdk.resellers.Model
         /// The code for the shipping carrier for the line item.
         /// </summary>
         /// <value>The code for the shipping carrier for the line item.</value>
-        [DataMember(Name = "carrierCode", EmitDefaultValue = false)]
+        [DataMember(Name = "carrierCode", EmitDefaultValue = true)]
         public string CarrierCode { get; set; }
 
         /// <summary>
         /// The reseller-requested delivery date in UTC format. Delivery date is not guaranteed. Must be a future date.
         /// </summary>
         /// <value>The reseller-requested delivery date in UTC format. Delivery date is not guaranteed. Must be a future date.</value>
-        [DataMember(Name = "requestedDeliveryDate", EmitDefaultValue = false)]
+        [DataMember(Name = "requestedDeliveryDate", EmitDefaultValue = true)]
         public string RequestedDeliveryDate { get; set; }
 
         /// <summary>
         /// Specifies whether the shipment will be shipped only when all products are fulfilled. The value of this field along with acceptBackOrder field decides the value of backorderflag. If this field is set, acceptBackOrder field is ignored. Possible values for this field are true, C, P, E.With value as true or C, backorderflag will be set as C.With value as P, or E, backorderflag will be set as P or E respectively.C &#x3D; Ship complete at distribution level.P &#x3D; ship complete at line level.E &#x3D; ship complete across all distributions.
         /// </summary>
         /// <value>Specifies whether the shipment will be shipped only when all products are fulfilled. The value of this field along with acceptBackOrder field decides the value of backorderflag. If this field is set, acceptBackOrder field is ignored. Possible values for this field are true, C, P, E.With value as true or C, backorderflag will be set as C.With value as P, or E, backorderflag will be set as P or E respectively.C &#x3D; Ship complete at distribution level.P &#x3D; ship complete at line level.E &#x3D; ship complete across all distributions.</value>
-        [DataMember(Name = "shipComplete", EmitDefaultValue = false)]
+        [DataMember(Name = "shipComplete", EmitDefaultValue = true)]
         public string ShipComplete { get; set; }
 
         /// <summary>
         /// Any special shipping instructions for the order.
         /// </summary>
         /// <value>Any special shipping instructions for the order.</value>
-        [DataMember(Name = "shippingInstructions", EmitDefaultValue = false)]
+        [DataMember(Name = "shippingInstructions", EmitDefaultValue = true)]
         public string ShippingInstructions { get; set; }
 
         /// <summary>
         /// The reseller &#39;s shipping account number with carrier. Used to bill the shipping carrier directly from the reseller&#39;s account with the carrier.
         /// </summary>
         /// <value>The reseller &#39;s shipping account number with carrier. Used to bill the shipping carrier directly from the reseller&#39;s account with the carrier.</value>
-        [DataMember(Name = "freightAccountNumber", EmitDefaultValue = false)]
+        [DataMember(Name = "freightAccountNumber", EmitDefaultValue = true)]
         public string FreightAccountNumber { get; set; }
 
         /// <summary>
@@ -91,7 +91,7 @@ namespace xi.sdk.resellers.Model
         /// </summary>
         /// <value>Specifies whether a signature is required for delivery. Default is False.</value>
         [DataMember(Name = "signatureRequired", EmitDefaultValue = true)]
-        public bool SignatureRequired { get; set; }
+        public bool? SignatureRequired { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

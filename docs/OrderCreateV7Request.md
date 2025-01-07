@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **Notes** | **string** | Order header level notes. | [optional] 
 **BillToAddressId** | **string** | Suffix used to identify billing address. Created during onboarding. Resellers are provided with one or more address IDs depending on how many bill to addresses they need for various flooring companies they are using for credit. | [optional] 
 **SpecialBidNumber** | **string** | The bid number is provided to the reseller by the vendor for special pricing and discounts. Line-level bid numbers take precedence over header-level bid numbers. | [optional] 
-**AcceptBackOrder** | **bool** | ENUM [&#39;true&#39;,&#39;false&#39;] - accept order if this item is backordered. This field along with shipComplete field decides the value of backorderflag. The value of this field is ignored when shipComplete field is present. | [optional] 
+**AcceptBackOrder** | **bool?** | ENUM [&#39;true&#39;,&#39;false&#39;] - accept order if this item is backordered. This field along with shipComplete field decides the value of backorderflag. The value of this field is ignored when shipComplete field is present. | [optional] 
 **VendAuthNumber** | **string** | Authorization number provided by vendor to Ingram&#39;s reseller. Orders will be placed on hold without this value, vendor specific mandatory field - please reach out Ingram Sales team for list of vendor for whom this is mandatory. | [optional] 
 **ResellerInfo** | [**OrderCreateV7RequestResellerInfo**](OrderCreateV7RequestResellerInfo.md) |  | [optional] 
 **EndUserInfo** | [**OrderCreateV7RequestEndUserInfo**](OrderCreateV7RequestEndUserInfo.md) |  | [optional] 

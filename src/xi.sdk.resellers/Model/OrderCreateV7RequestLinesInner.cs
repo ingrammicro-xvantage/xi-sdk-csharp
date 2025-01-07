@@ -46,7 +46,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="endUserInfo">endUserInfo.</param>
         /// <param name="additionalAttributes">additionalAttributes.</param>
         /// <param name="vmfAdditionalAttributesLines">vmfAdditionalAttributesLines.</param>
-        public OrderCreateV7RequestLinesInner(string customerLineNumber = default(string), string ingramPartNumber = default(string), string vendorPartNumber = default(string), int quantity = default(int), decimal unitPrice = default(decimal), string specialBidNumber = default(string), decimal endUserPrice = default(decimal), string notes = default(string), List<OrderCreateV7RequestLinesInnerEndUserInfoInner> endUserInfo = default(List<OrderCreateV7RequestLinesInnerEndUserInfoInner>), List<OrderCreateV7RequestLinesInnerAdditionalAttributesInner> additionalAttributes = default(List<OrderCreateV7RequestLinesInnerAdditionalAttributesInner>), List<OrderCreateV7RequestLinesInnerVmfAdditionalAttributesLinesInner> vmfAdditionalAttributesLines = default(List<OrderCreateV7RequestLinesInnerVmfAdditionalAttributesLinesInner>))
+        public OrderCreateV7RequestLinesInner(string customerLineNumber = default(string), string ingramPartNumber = default(string), string vendorPartNumber = default(string), int quantity = default(int), decimal? unitPrice = default(decimal?), string specialBidNumber = default(string), decimal? endUserPrice = default(decimal?), string notes = default(string), List<OrderCreateV7RequestLinesInnerEndUserInfoInner> endUserInfo = default(List<OrderCreateV7RequestLinesInnerEndUserInfoInner>), List<OrderCreateV7RequestLinesInnerAdditionalAttributesInner> additionalAttributes = default(List<OrderCreateV7RequestLinesInnerAdditionalAttributesInner>), List<OrderCreateV7RequestLinesInnerVmfAdditionalAttributesLinesInner> vmfAdditionalAttributesLines = default(List<OrderCreateV7RequestLinesInnerVmfAdditionalAttributesLinesInner>))
         {
             this.CustomerLineNumber = customerLineNumber;
             this.IngramPartNumber = ingramPartNumber;
@@ -72,14 +72,14 @@ namespace xi.sdk.resellers.Model
         /// The unique IngramMicro part number.
         /// </summary>
         /// <value>The unique IngramMicro part number.</value>
-        [DataMember(Name = "ingramPartNumber", EmitDefaultValue = false)]
+        [DataMember(Name = "ingramPartNumber", EmitDefaultValue = true)]
         public string IngramPartNumber { get; set; }
 
         /// <summary>
         /// The vendor&#39;s part number for the line item.
         /// </summary>
         /// <value>The vendor&#39;s part number for the line item.</value>
-        [DataMember(Name = "vendorPartNumber", EmitDefaultValue = false)]
+        [DataMember(Name = "vendorPartNumber", EmitDefaultValue = true)]
         public string VendorPartNumber { get; set; }
 
         /// <summary>
@@ -93,34 +93,34 @@ namespace xi.sdk.resellers.Model
         /// The reseller-requested unit price for the line item. The unit price is not guaranteed.
         /// </summary>
         /// <value>The reseller-requested unit price for the line item. The unit price is not guaranteed.</value>
-        [DataMember(Name = "unitPrice", EmitDefaultValue = false)]
-        public decimal UnitPrice { get; set; }
+        [DataMember(Name = "unitPrice", EmitDefaultValue = true)]
+        public decimal? UnitPrice { get; set; }
 
         /// <summary>
         /// The line-level bid number provided to the reseller by the vendor for special pricing and discounts. Used to track the bid number in the case of split orders or where different line items have different bid numbers. Line-level bid number take precedence over header-level bid numbers.
         /// </summary>
         /// <value>The line-level bid number provided to the reseller by the vendor for special pricing and discounts. Used to track the bid number in the case of split orders or where different line items have different bid numbers. Line-level bid number take precedence over header-level bid numbers.</value>
-        [DataMember(Name = "specialBidNumber", EmitDefaultValue = false)]
+        [DataMember(Name = "specialBidNumber", EmitDefaultValue = true)]
         public string SpecialBidNumber { get; set; }
 
         /// <summary>
         /// The end-user price. Required for Export Orders.
         /// </summary>
         /// <value>The end-user price. Required for Export Orders.</value>
-        [DataMember(Name = "endUserPrice", EmitDefaultValue = false)]
-        public decimal EndUserPrice { get; set; }
+        [DataMember(Name = "endUserPrice", EmitDefaultValue = true)]
+        public decimal? EndUserPrice { get; set; }
 
         /// <summary>
         /// The attribute field data.
         /// </summary>
         /// <value>The attribute field data.</value>
-        [DataMember(Name = "notes", EmitDefaultValue = false)]
+        [DataMember(Name = "notes", EmitDefaultValue = true)]
         public string Notes { get; set; }
 
         /// <summary>
         /// Gets or Sets EndUserInfo
         /// </summary>
-        [DataMember(Name = "endUserInfo", EmitDefaultValue = false)]
+        [DataMember(Name = "endUserInfo", EmitDefaultValue = true)]
         public List<OrderCreateV7RequestLinesInnerEndUserInfoInner> EndUserInfo { get; set; }
 
         /// <summary>

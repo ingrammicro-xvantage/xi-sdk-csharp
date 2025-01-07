@@ -46,7 +46,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="countryCode">The end user/customer&#39;s two-character ISO country code..</param>
         /// <param name="phoneNumber">The end user/customer&#39;s phone number..</param>
         /// <param name="email">The end user/customer&#39;s email..</param>
-        public OrderCreateV7RequestEndUserInfo(string endUserId = default(string), string contact = default(string), string companyName = default(string), string addressLine1 = default(string), string addressLine2 = default(string), string city = default(string), string state = default(string), string postalCode = default(string), string countryCode = default(string), int phoneNumber = default(int), string email = default(string))
+        public OrderCreateV7RequestEndUserInfo(string endUserId = default(string), string contact = default(string), string companyName = default(string), string addressLine1 = default(string), string addressLine2 = default(string), string city = default(string), string state = default(string), string postalCode = default(string), string countryCode = default(string), string phoneNumber = default(string), string email = default(string))
         {
             this.EndUserId = endUserId;
             this.Contact = contact;
@@ -65,77 +65,77 @@ namespace xi.sdk.resellers.Model
         /// ID for the end user/customer in Ingram Micro&#39;s system.
         /// </summary>
         /// <value>ID for the end user/customer in Ingram Micro&#39;s system.</value>
-        [DataMember(Name = "endUserId", EmitDefaultValue = false)]
+        [DataMember(Name = "endUserId", EmitDefaultValue = true)]
         public string EndUserId { get; set; }
 
         /// <summary>
         /// The contact name for the end user/customer.
         /// </summary>
         /// <value>The contact name for the end user/customer.</value>
-        [DataMember(Name = "contact", EmitDefaultValue = false)]
+        [DataMember(Name = "contact", EmitDefaultValue = true)]
         public string Contact { get; set; }
 
         /// <summary>
         /// The company name for the end user/customer. Required for Impulse countries.
         /// </summary>
         /// <value>The company name for the end user/customer. Required for Impulse countries.</value>
-        [DataMember(Name = "companyName", EmitDefaultValue = false)]
+        [DataMember(Name = "companyName", EmitDefaultValue = true)]
         public string CompanyName { get; set; }
 
         /// <summary>
         /// The end user/customer&#39;s street address and building or house number. Required for Impulse countries.
         /// </summary>
         /// <value>The end user/customer&#39;s street address and building or house number. Required for Impulse countries.</value>
-        [DataMember(Name = "addressLine1", EmitDefaultValue = false)]
+        [DataMember(Name = "addressLine1", EmitDefaultValue = true)]
         public string AddressLine1 { get; set; }
 
         /// <summary>
         /// The end user/customer&#39;s apartment number.
         /// </summary>
         /// <value>The end user/customer&#39;s apartment number.</value>
-        [DataMember(Name = "addressLine2", EmitDefaultValue = false)]
+        [DataMember(Name = "addressLine2", EmitDefaultValue = true)]
         public string AddressLine2 { get; set; }
 
         /// <summary>
         /// The end user/customer&#39;s city. Required for Impulse countries.
         /// </summary>
         /// <value>The end user/customer&#39;s city. Required for Impulse countries.</value>
-        [DataMember(Name = "city", EmitDefaultValue = false)]
+        [DataMember(Name = "city", EmitDefaultValue = true)]
         public string City { get; set; }
 
         /// <summary>
         /// The end user/customer&#39;s state. Required for Impulse countries but optional for EMEA countries.
         /// </summary>
         /// <value>The end user/customer&#39;s state. Required for Impulse countries but optional for EMEA countries.</value>
-        [DataMember(Name = "state", EmitDefaultValue = false)]
+        [DataMember(Name = "state", EmitDefaultValue = true)]
         public string State { get; set; }
 
         /// <summary>
         /// The end user/customer&#39;s zip or postal code. Required for Impulse countries.
         /// </summary>
         /// <value>The end user/customer&#39;s zip or postal code. Required for Impulse countries.</value>
-        [DataMember(Name = "postalCode", EmitDefaultValue = false)]
+        [DataMember(Name = "postalCode", EmitDefaultValue = true)]
         public string PostalCode { get; set; }
 
         /// <summary>
         /// The end user/customer&#39;s two-character ISO country code.
         /// </summary>
         /// <value>The end user/customer&#39;s two-character ISO country code.</value>
-        [DataMember(Name = "countryCode", EmitDefaultValue = false)]
+        [DataMember(Name = "countryCode", EmitDefaultValue = true)]
         public string CountryCode { get; set; }
 
         /// <summary>
         /// The end user/customer&#39;s phone number.
         /// </summary>
         /// <value>The end user/customer&#39;s phone number.</value>
-        [DataMember(Name = "phoneNumber", EmitDefaultValue = false)]
-        public int PhoneNumber { get; set; }
+        [DataMember(Name = "phoneNumber", EmitDefaultValue = true)]
+        public string PhoneNumber { get; set; }
 
         /// <summary>
         /// The end user/customer&#39;s email.
         /// </summary>
         /// <value>The end user/customer&#39;s email.</value>
-        [DataMember(Name = "email", EmitDefaultValue = false)]
+        [DataMember(Name = "email", EmitDefaultValue = true)]
         public string Email { get; set; }
 
         /// <summary>

@@ -47,14 +47,14 @@ namespace xi.sdk.resellers.Model
         /// The name of the header level field.
         /// </summary>
         /// <value>The name of the header level field.</value>
-        [DataMember(Name = "attributeName", EmitDefaultValue = false)]
+        [DataMember(Name = "attributeName", EmitDefaultValue = true)]
         public string AttributeName { get; set; }
 
         /// <summary>
         /// The value of the header level field.
         /// </summary>
         /// <value>The value of the header level field.</value>
-        [DataMember(Name = "attributeValue", EmitDefaultValue = false)]
+        [DataMember(Name = "attributeValue", EmitDefaultValue = true)]
         public string AttributeValue { get; set; }
 
         /// <summary>

@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **State** | **string** | The reseller&#39;s state. | [optional] 
 **PostalCode** | **string** | The reseller&#39;s zip or postal code. | [optional] 
 **CountryCode** | **string** | The reseller&#39;s two-character ISO country code. | [optional] 
-**PhoneNumber** | **int** | The reseller&#39;s phone number. | [optional] 
+**PhoneNumber** | **string** | The reseller&#39;s phone number. | [optional] 
 **Email** | **string** | The reseller&#39;s email address. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

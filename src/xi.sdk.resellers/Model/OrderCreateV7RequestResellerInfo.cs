@@ -46,7 +46,7 @@ namespace xi.sdk.resellers.Model
         /// <param name="countryCode">The reseller&#39;s two-character ISO country code..</param>
         /// <param name="phoneNumber">The reseller&#39;s phone number..</param>
         /// <param name="email">The reseller&#39;s email address..</param>
-        public OrderCreateV7RequestResellerInfo(string resellerId = default(string), string companyName = default(string), string contact = default(string), string addressLine1 = default(string), string addressLine2 = default(string), string city = default(string), string state = default(string), string postalCode = default(string), string countryCode = default(string), int phoneNumber = default(int), string email = default(string))
+        public OrderCreateV7RequestResellerInfo(string resellerId = default(string), string companyName = default(string), string contact = default(string), string addressLine1 = default(string), string addressLine2 = default(string), string city = default(string), string state = default(string), string postalCode = default(string), string countryCode = default(string), string phoneNumber = default(string), string email = default(string))
         {
             this.ResellerId = resellerId;
             this.CompanyName = companyName;
@@ -65,77 +65,77 @@ namespace xi.sdk.resellers.Model
         /// The reseller&#39;s Id.
         /// </summary>
         /// <value>The reseller&#39;s Id.</value>
-        [DataMember(Name = "resellerId", EmitDefaultValue = false)]
+        [DataMember(Name = "resellerId", EmitDefaultValue = true)]
         public string ResellerId { get; set; }
 
         /// <summary>
         /// The reseller&#39;s company name.
         /// </summary>
         /// <value>The reseller&#39;s company name.</value>
-        [DataMember(Name = "companyName", EmitDefaultValue = false)]
+        [DataMember(Name = "companyName", EmitDefaultValue = true)]
         public string CompanyName { get; set; }
 
         /// <summary>
         /// The reseller&#39;s contact name.
         /// </summary>
         /// <value>The reseller&#39;s contact name.</value>
-        [DataMember(Name = "contact", EmitDefaultValue = false)]
+        [DataMember(Name = "contact", EmitDefaultValue = true)]
         public string Contact { get; set; }
 
         /// <summary>
         /// The reseller&#39;s address line 1
         /// </summary>
         /// <value>The reseller&#39;s address line 1</value>
-        [DataMember(Name = "addressLine1", EmitDefaultValue = false)]
+        [DataMember(Name = "addressLine1", EmitDefaultValue = true)]
         public string AddressLine1 { get; set; }
 
         /// <summary>
         /// The reseller&#39;s address line 2.
         /// </summary>
         /// <value>The reseller&#39;s address line 2.</value>
-        [DataMember(Name = "addressLine2", EmitDefaultValue = false)]
+        [DataMember(Name = "addressLine2", EmitDefaultValue = true)]
         public string AddressLine2 { get; set; }
 
         /// <summary>
         /// The reseller&#39;s city.
         /// </summary>
         /// <value>The reseller&#39;s city.</value>
-        [DataMember(Name = "city", EmitDefaultValue = false)]
+        [DataMember(Name = "city", EmitDefaultValue = true)]
         public string City { get; set; }
 
         /// <summary>
         /// The reseller&#39;s state.
         /// </summary>
         /// <value>The reseller&#39;s state.</value>
-        [DataMember(Name = "state", EmitDefaultValue = false)]
+        [DataMember(Name = "state", EmitDefaultValue = true)]
         public string State { get; set; }
 
         /// <summary>
         /// The reseller&#39;s zip or postal code.
         /// </summary>
         /// <value>The reseller&#39;s zip or postal code.</value>
-        [DataMember(Name = "postalCode", EmitDefaultValue = false)]
+        [DataMember(Name = "postalCode", EmitDefaultValue = true)]
         public string PostalCode { get; set; }
 
         /// <summary>
         /// The reseller&#39;s two-character ISO country code.
         /// </summary>
         /// <value>The reseller&#39;s two-character ISO country code.</value>
-        [DataMember(Name = "countryCode", EmitDefaultValue = false)]
+        [DataMember(Name = "countryCode", EmitDefaultValue = true)]
         public string CountryCode { get; set; }
 
         /// <summary>
         /// The reseller&#39;s phone number.
         /// </summary>
         /// <value>The reseller&#39;s phone number.</value>
-        [DataMember(Name = "phoneNumber", EmitDefaultValue = false)]
-        public int PhoneNumber { get; set; }
+        [DataMember(Name = "phoneNumber", EmitDefaultValue = true)]
+        public string PhoneNumber { get; set; }
 
         /// <summary>
         /// The reseller&#39;s email address.
         /// </summary>
         /// <value>The reseller&#39;s email address.</value>
-        [DataMember(Name = "email", EmitDefaultValue = false)]
+        [DataMember(Name = "email", EmitDefaultValue = true)]
         public string Email { get; set; }
 
         /// <summary>
