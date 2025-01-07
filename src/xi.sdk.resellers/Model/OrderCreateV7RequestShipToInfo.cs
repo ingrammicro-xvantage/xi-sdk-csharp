@@ -67,7 +67,7 @@ namespace xi.sdk.resellers.Model
         /// The ID references the resellers address in Ingram Micro&#39;s system for shipping. Provided to resellers during the onboarding process.
         /// </summary>
         /// <value>The ID references the resellers address in Ingram Micro&#39;s system for shipping. Provided to resellers during the onboarding process.</value>
-        [DataMember(Name = "addressId", EmitDefaultValue = true)]
+        [DataMember(Name = "addressId", EmitDefaultValue = false)]
         public string AddressId { get; set; }
 
         /// <summary>
