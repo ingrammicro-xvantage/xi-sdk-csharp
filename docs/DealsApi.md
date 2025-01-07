@@ -9,7 +9,7 @@ All URIs are relative to *https://api.ingrammicro.com:443*
 
 <a id="getresellersv6dealsdetails"></a>
 # **GetResellersV6Dealsdetails**
-> DealsDetailsResponse GetResellersV6Dealsdetails (string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMApplicationId, string iMEnvironment, string dealId)
+> DealsDetailsResponse GetResellersV6Dealsdetails (string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMApplicationId, string dealId)
 
 Deals Details
 
@@ -43,13 +43,12 @@ namespace Example
             var iMCountryCode = US;  // string | Two-character ISO country code.
             var iMCorrelationID = fbac82ba-cf0a-4bcf-fc03-0c5084;  // string | Unique transaction number to identify each transaction across all the systems.
             var iMApplicationId = MyCompany;  // string | Unique value used to identify the sender of the transaction. Example: MyCompany
-            var iMEnvironment = prodChicago;  // string | Environment name.
             var dealId = 12345678;  // string | Unique deal ID.
 
             try
             {
                 // Deals Details
-                DealsDetailsResponse result = apiInstance.GetResellersV6Dealsdetails(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMApplicationId, iMEnvironment, dealId);
+                DealsDetailsResponse result = apiInstance.GetResellersV6Dealsdetails(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMApplicationId, dealId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -70,7 +69,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Deals Details
-    ApiResponse<DealsDetailsResponse> response = apiInstance.GetResellersV6DealsdetailsWithHttpInfo(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMApplicationId, iMEnvironment, dealId);
+    ApiResponse<DealsDetailsResponse> response = apiInstance.GetResellersV6DealsdetailsWithHttpInfo(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMApplicationId, dealId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -91,7 +90,6 @@ catch (ApiException e)
 | **iMCountryCode** | **string** | Two-character ISO country code. |  |
 | **iMCorrelationID** | **string** | Unique transaction number to identify each transaction across all the systems. |  |
 | **iMApplicationId** | **string** | Unique value used to identify the sender of the transaction. Example: MyCompany |  |
-| **iMEnvironment** | **string** | Environment name. |  |
 | **dealId** | **string** | Unique deal ID. |  |
 
 ### Return type
