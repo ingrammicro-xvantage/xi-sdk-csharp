@@ -64,7 +64,7 @@ namespace xi.sdk.resellers.Test.Api
             //string iMCustomerNumber = null;
             //string iMCountryCode = null;
             //string iMCorrelationID = null;
-            //string? iMApplicationID = null;
+            //string iMApplicationID = null;
             //string? customerType = null;
             //bool? includeSerialNumbers = null;
             //var response = instance.GetInvoicedetailsV61(invoiceNumber, iMCustomerNumber, iMCountryCode, iMCorrelationID, iMApplicationID, customerType, includeSerialNumbers);
@@ -78,10 +78,10 @@ namespace xi.sdk.resellers.Test.Api
         public void GetResellersV6InvoicesearchTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //string iMApplicationID = null;
             //string iMCustomerNumber = null;
             //string iMCountryCode = null;
             //string iMCorrelationID = null;
-            //string? iMApplicationID = null;
             //string? paymentTermsNetDate = null;
             //string? invoiceDate = null;
             //string? invoiceDueDate = null;
@@ -105,7 +105,7 @@ namespace xi.sdk.resellers.Test.Api
             //string? orderby = null;
             //string? direction = null;
             //string? serialNumber = null;
-            //var response = instance.GetResellersV6Invoicesearch(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMApplicationID, paymentTermsNetDate, invoiceDate, invoiceDueDate, orderDate, orderFromDate, orderToDate, orderNumber, deliveryNumber, invoiceNumber, invoiceStatus, invoiceType, customerOrderNumber, endCustomerOrderNumber, specialBidNumber, invoiceFromDueDate, invoiceToDueDate, invoiceFromDate, invoiceToDate, pageSize, pageNumber, orderby, direction, serialNumber);
+            //var response = instance.GetResellersV6Invoicesearch(iMApplicationID, iMCustomerNumber, iMCountryCode, iMCorrelationID, paymentTermsNetDate, invoiceDate, invoiceDueDate, orderDate, orderFromDate, orderToDate, orderNumber, deliveryNumber, invoiceNumber, invoiceStatus, invoiceType, customerOrderNumber, endCustomerOrderNumber, specialBidNumber, invoiceFromDueDate, invoiceToDueDate, invoiceFromDate, invoiceToDate, pageSize, pageNumber, orderby, direction, serialNumber);
             //Assert.IsType<InvoiceSearchResponse>(response);
         }
     }

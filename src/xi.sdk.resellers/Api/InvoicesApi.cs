@@ -38,11 +38,11 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
-        /// <param name="iMApplicationID">Unique value used to identify the sender of the transaction. Example: MyCompany. (optional)</param>
+        /// <param name="iMApplicationID">Unique value used to identify the sender of the transaction. Example: MyCompany.</param>
         /// <param name="customerType">it should be invoice or order (optional)</param>
         /// <param name="includeSerialNumbers">if serial in the response send as true or else false (optional)</param>
         /// <returns>InvoiceDetailsv61Response</returns>
-        InvoiceDetailsv61Response GetInvoicedetailsV61(string invoiceNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMApplicationID = default(string?), string? customerType = default(string?), bool? includeSerialNumbers = default(bool?));
+        InvoiceDetailsv61Response GetInvoicedetailsV61(string invoiceNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMApplicationID, string? customerType = default(string?), bool? includeSerialNumbers = default(bool?));
 
         /// <summary>
         /// Get Invoice Details v6.1
@@ -55,11 +55,11 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
-        /// <param name="iMApplicationID">Unique value used to identify the sender of the transaction. Example: MyCompany. (optional)</param>
+        /// <param name="iMApplicationID">Unique value used to identify the sender of the transaction. Example: MyCompany.</param>
         /// <param name="customerType">it should be invoice or order (optional)</param>
         /// <param name="includeSerialNumbers">if serial in the response send as true or else false (optional)</param>
         /// <returns>ApiResponse of InvoiceDetailsv61Response</returns>
-        ApiResponse<InvoiceDetailsv61Response> GetInvoicedetailsV61WithHttpInfo(string invoiceNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMApplicationID = default(string?), string? customerType = default(string?), bool? includeSerialNumbers = default(bool?));
+        ApiResponse<InvoiceDetailsv61Response> GetInvoicedetailsV61WithHttpInfo(string invoiceNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMApplicationID, string? customerType = default(string?), bool? includeSerialNumbers = default(bool?));
         /// <summary>
         /// Search your invoice
         /// </summary>
@@ -67,10 +67,10 @@ namespace xi.sdk.resellers.Api
         /// Search your Ingram Micro invoices. This endpoint searches by multiple invoice parameters and supports pagination of results.
         /// </remarks>
         /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="iMApplicationID">Unique value used to identify the sender of the transaction. Example: MyCompany</param>
         /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
-        /// <param name="iMApplicationID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="paymentTermsNetDate">Search by payment terms net date(yyyy-MM-dd). (optional)</param>
         /// <param name="invoiceDate">Search by invoice date(yyyy-MM-dd). (optional)</param>
         /// <param name="invoiceDueDate">Search by invoice date from(yyyy-MM-dd). (optional)</param>
@@ -95,7 +95,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="direction">asc or desc , along with orderby column result set will be sorted. (optional)</param>
         /// <param name="serialNumber">Serial number of the product. (optional)</param>
         /// <returns>InvoiceSearchResponse</returns>
-        InvoiceSearchResponse GetResellersV6Invoicesearch(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMApplicationID = default(string?), string? paymentTermsNetDate = default(string?), string? invoiceDate = default(string?), string? invoiceDueDate = default(string?), string? orderDate = default(string?), string? orderFromDate = default(string?), string? orderToDate = default(string?), string? orderNumber = default(string?), string? deliveryNumber = default(string?), string? invoiceNumber = default(string?), string? invoiceStatus = default(string?), string? invoiceType = default(string?), string? customerOrderNumber = default(string?), string? endCustomerOrderNumber = default(string?), string? specialBidNumber = default(string?), string? invoiceFromDueDate = default(string?), string? invoiceToDueDate = default(string?), List<string>? invoiceFromDate = default(List<string>?), List<string>? invoiceToDate = default(List<string>?), int? pageSize = default(int?), int? pageNumber = default(int?), string? orderby = default(string?), string? direction = default(string?), string? serialNumber = default(string?));
+        InvoiceSearchResponse GetResellersV6Invoicesearch(string iMApplicationID, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? paymentTermsNetDate = default(string?), string? invoiceDate = default(string?), string? invoiceDueDate = default(string?), string? orderDate = default(string?), string? orderFromDate = default(string?), string? orderToDate = default(string?), string? orderNumber = default(string?), string? deliveryNumber = default(string?), string? invoiceNumber = default(string?), string? invoiceStatus = default(string?), string? invoiceType = default(string?), string? customerOrderNumber = default(string?), string? endCustomerOrderNumber = default(string?), string? specialBidNumber = default(string?), string? invoiceFromDueDate = default(string?), string? invoiceToDueDate = default(string?), List<string>? invoiceFromDate = default(List<string>?), List<string>? invoiceToDate = default(List<string>?), int? pageSize = default(int?), int? pageNumber = default(int?), string? orderby = default(string?), string? direction = default(string?), string? serialNumber = default(string?));
 
         /// <summary>
         /// Search your invoice
@@ -104,10 +104,10 @@ namespace xi.sdk.resellers.Api
         /// Search your Ingram Micro invoices. This endpoint searches by multiple invoice parameters and supports pagination of results.
         /// </remarks>
         /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="iMApplicationID">Unique value used to identify the sender of the transaction. Example: MyCompany</param>
         /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
-        /// <param name="iMApplicationID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="paymentTermsNetDate">Search by payment terms net date(yyyy-MM-dd). (optional)</param>
         /// <param name="invoiceDate">Search by invoice date(yyyy-MM-dd). (optional)</param>
         /// <param name="invoiceDueDate">Search by invoice date from(yyyy-MM-dd). (optional)</param>
@@ -132,7 +132,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="direction">asc or desc , along with orderby column result set will be sorted. (optional)</param>
         /// <param name="serialNumber">Serial number of the product. (optional)</param>
         /// <returns>ApiResponse of InvoiceSearchResponse</returns>
-        ApiResponse<InvoiceSearchResponse> GetResellersV6InvoicesearchWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMApplicationID = default(string?), string? paymentTermsNetDate = default(string?), string? invoiceDate = default(string?), string? invoiceDueDate = default(string?), string? orderDate = default(string?), string? orderFromDate = default(string?), string? orderToDate = default(string?), string? orderNumber = default(string?), string? deliveryNumber = default(string?), string? invoiceNumber = default(string?), string? invoiceStatus = default(string?), string? invoiceType = default(string?), string? customerOrderNumber = default(string?), string? endCustomerOrderNumber = default(string?), string? specialBidNumber = default(string?), string? invoiceFromDueDate = default(string?), string? invoiceToDueDate = default(string?), List<string>? invoiceFromDate = default(List<string>?), List<string>? invoiceToDate = default(List<string>?), int? pageSize = default(int?), int? pageNumber = default(int?), string? orderby = default(string?), string? direction = default(string?), string? serialNumber = default(string?));
+        ApiResponse<InvoiceSearchResponse> GetResellersV6InvoicesearchWithHttpInfo(string iMApplicationID, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? paymentTermsNetDate = default(string?), string? invoiceDate = default(string?), string? invoiceDueDate = default(string?), string? orderDate = default(string?), string? orderFromDate = default(string?), string? orderToDate = default(string?), string? orderNumber = default(string?), string? deliveryNumber = default(string?), string? invoiceNumber = default(string?), string? invoiceStatus = default(string?), string? invoiceType = default(string?), string? customerOrderNumber = default(string?), string? endCustomerOrderNumber = default(string?), string? specialBidNumber = default(string?), string? invoiceFromDueDate = default(string?), string? invoiceToDueDate = default(string?), List<string>? invoiceFromDate = default(List<string>?), List<string>? invoiceToDate = default(List<string>?), int? pageSize = default(int?), int? pageNumber = default(int?), string? orderby = default(string?), string? direction = default(string?), string? serialNumber = default(string?));
         #endregion Synchronous Operations
     }
 
@@ -153,12 +153,12 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
-        /// <param name="iMApplicationID">Unique value used to identify the sender of the transaction. Example: MyCompany. (optional)</param>
+        /// <param name="iMApplicationID">Unique value used to identify the sender of the transaction. Example: MyCompany.</param>
         /// <param name="customerType">it should be invoice or order (optional)</param>
         /// <param name="includeSerialNumbers">if serial in the response send as true or else false (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of InvoiceDetailsv61Response</returns>
-        System.Threading.Tasks.Task<InvoiceDetailsv61Response> GetInvoicedetailsV61Async(string invoiceNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMApplicationID = default(string?), string? customerType = default(string?), bool? includeSerialNumbers = default(bool?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<InvoiceDetailsv61Response> GetInvoicedetailsV61Async(string invoiceNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMApplicationID, string? customerType = default(string?), bool? includeSerialNumbers = default(bool?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Invoice Details v6.1
@@ -171,12 +171,12 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
-        /// <param name="iMApplicationID">Unique value used to identify the sender of the transaction. Example: MyCompany. (optional)</param>
+        /// <param name="iMApplicationID">Unique value used to identify the sender of the transaction. Example: MyCompany.</param>
         /// <param name="customerType">it should be invoice or order (optional)</param>
         /// <param name="includeSerialNumbers">if serial in the response send as true or else false (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (InvoiceDetailsv61Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InvoiceDetailsv61Response>> GetInvoicedetailsV61WithHttpInfoAsync(string invoiceNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMApplicationID = default(string?), string? customerType = default(string?), bool? includeSerialNumbers = default(bool?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<InvoiceDetailsv61Response>> GetInvoicedetailsV61WithHttpInfoAsync(string invoiceNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMApplicationID, string? customerType = default(string?), bool? includeSerialNumbers = default(bool?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Search your invoice
         /// </summary>
@@ -184,10 +184,10 @@ namespace xi.sdk.resellers.Api
         /// Search your Ingram Micro invoices. This endpoint searches by multiple invoice parameters and supports pagination of results.
         /// </remarks>
         /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="iMApplicationID">Unique value used to identify the sender of the transaction. Example: MyCompany</param>
         /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
-        /// <param name="iMApplicationID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="paymentTermsNetDate">Search by payment terms net date(yyyy-MM-dd). (optional)</param>
         /// <param name="invoiceDate">Search by invoice date(yyyy-MM-dd). (optional)</param>
         /// <param name="invoiceDueDate">Search by invoice date from(yyyy-MM-dd). (optional)</param>
@@ -213,7 +213,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="serialNumber">Serial number of the product. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of InvoiceSearchResponse</returns>
-        System.Threading.Tasks.Task<InvoiceSearchResponse> GetResellersV6InvoicesearchAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMApplicationID = default(string?), string? paymentTermsNetDate = default(string?), string? invoiceDate = default(string?), string? invoiceDueDate = default(string?), string? orderDate = default(string?), string? orderFromDate = default(string?), string? orderToDate = default(string?), string? orderNumber = default(string?), string? deliveryNumber = default(string?), string? invoiceNumber = default(string?), string? invoiceStatus = default(string?), string? invoiceType = default(string?), string? customerOrderNumber = default(string?), string? endCustomerOrderNumber = default(string?), string? specialBidNumber = default(string?), string? invoiceFromDueDate = default(string?), string? invoiceToDueDate = default(string?), List<string>? invoiceFromDate = default(List<string>?), List<string>? invoiceToDate = default(List<string>?), int? pageSize = default(int?), int? pageNumber = default(int?), string? orderby = default(string?), string? direction = default(string?), string? serialNumber = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<InvoiceSearchResponse> GetResellersV6InvoicesearchAsync(string iMApplicationID, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? paymentTermsNetDate = default(string?), string? invoiceDate = default(string?), string? invoiceDueDate = default(string?), string? orderDate = default(string?), string? orderFromDate = default(string?), string? orderToDate = default(string?), string? orderNumber = default(string?), string? deliveryNumber = default(string?), string? invoiceNumber = default(string?), string? invoiceStatus = default(string?), string? invoiceType = default(string?), string? customerOrderNumber = default(string?), string? endCustomerOrderNumber = default(string?), string? specialBidNumber = default(string?), string? invoiceFromDueDate = default(string?), string? invoiceToDueDate = default(string?), List<string>? invoiceFromDate = default(List<string>?), List<string>? invoiceToDate = default(List<string>?), int? pageSize = default(int?), int? pageNumber = default(int?), string? orderby = default(string?), string? direction = default(string?), string? serialNumber = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Search your invoice
@@ -222,10 +222,10 @@ namespace xi.sdk.resellers.Api
         /// Search your Ingram Micro invoices. This endpoint searches by multiple invoice parameters and supports pagination of results.
         /// </remarks>
         /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="iMApplicationID">Unique value used to identify the sender of the transaction. Example: MyCompany</param>
         /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
-        /// <param name="iMApplicationID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="paymentTermsNetDate">Search by payment terms net date(yyyy-MM-dd). (optional)</param>
         /// <param name="invoiceDate">Search by invoice date(yyyy-MM-dd). (optional)</param>
         /// <param name="invoiceDueDate">Search by invoice date from(yyyy-MM-dd). (optional)</param>
@@ -251,7 +251,7 @@ namespace xi.sdk.resellers.Api
         /// <param name="serialNumber">Serial number of the product. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (InvoiceSearchResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InvoiceSearchResponse>> GetResellersV6InvoicesearchWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMApplicationID = default(string?), string? paymentTermsNetDate = default(string?), string? invoiceDate = default(string?), string? invoiceDueDate = default(string?), string? orderDate = default(string?), string? orderFromDate = default(string?), string? orderToDate = default(string?), string? orderNumber = default(string?), string? deliveryNumber = default(string?), string? invoiceNumber = default(string?), string? invoiceStatus = default(string?), string? invoiceType = default(string?), string? customerOrderNumber = default(string?), string? endCustomerOrderNumber = default(string?), string? specialBidNumber = default(string?), string? invoiceFromDueDate = default(string?), string? invoiceToDueDate = default(string?), List<string>? invoiceFromDate = default(List<string>?), List<string>? invoiceToDate = default(List<string>?), int? pageSize = default(int?), int? pageNumber = default(int?), string? orderby = default(string?), string? direction = default(string?), string? serialNumber = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<InvoiceSearchResponse>> GetResellersV6InvoicesearchWithHttpInfoAsync(string iMApplicationID, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? paymentTermsNetDate = default(string?), string? invoiceDate = default(string?), string? invoiceDueDate = default(string?), string? orderDate = default(string?), string? orderFromDate = default(string?), string? orderToDate = default(string?), string? orderNumber = default(string?), string? deliveryNumber = default(string?), string? invoiceNumber = default(string?), string? invoiceStatus = default(string?), string? invoiceType = default(string?), string? customerOrderNumber = default(string?), string? endCustomerOrderNumber = default(string?), string? specialBidNumber = default(string?), string? invoiceFromDueDate = default(string?), string? invoiceToDueDate = default(string?), List<string>? invoiceFromDate = default(List<string>?), List<string>? invoiceToDate = default(List<string>?), int? pageSize = default(int?), int? pageNumber = default(int?), string? orderby = default(string?), string? direction = default(string?), string? serialNumber = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -473,11 +473,11 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
-        /// <param name="iMApplicationID">Unique value used to identify the sender of the transaction. Example: MyCompany. (optional)</param>
+        /// <param name="iMApplicationID">Unique value used to identify the sender of the transaction. Example: MyCompany.</param>
         /// <param name="customerType">it should be invoice or order (optional)</param>
         /// <param name="includeSerialNumbers">if serial in the response send as true or else false (optional)</param>
         /// <returns>InvoiceDetailsv61Response</returns>
-        public InvoiceDetailsv61Response GetInvoicedetailsV61(string invoiceNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMApplicationID = default(string?), string? customerType = default(string?), bool? includeSerialNumbers = default(bool?))
+        public InvoiceDetailsv61Response GetInvoicedetailsV61(string invoiceNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMApplicationID, string? customerType = default(string?), bool? includeSerialNumbers = default(bool?))
         {
             xi.sdk.resellers.Client.ApiResponse<InvoiceDetailsv61Response> localVarResponse = GetInvoicedetailsV61WithHttpInfo(invoiceNumber, iMCustomerNumber, iMCountryCode, iMCorrelationID, iMApplicationID, customerType, includeSerialNumbers);
             return localVarResponse.Data;
@@ -491,11 +491,11 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
-        /// <param name="iMApplicationID">Unique value used to identify the sender of the transaction. Example: MyCompany. (optional)</param>
+        /// <param name="iMApplicationID">Unique value used to identify the sender of the transaction. Example: MyCompany.</param>
         /// <param name="customerType">it should be invoice or order (optional)</param>
         /// <param name="includeSerialNumbers">if serial in the response send as true or else false (optional)</param>
         /// <returns>ApiResponse of InvoiceDetailsv61Response</returns>
-        public xi.sdk.resellers.Client.ApiResponse<InvoiceDetailsv61Response> GetInvoicedetailsV61WithHttpInfo(string invoiceNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMApplicationID = default(string?), string? customerType = default(string?), bool? includeSerialNumbers = default(bool?))
+        public xi.sdk.resellers.Client.ApiResponse<InvoiceDetailsv61Response> GetInvoicedetailsV61WithHttpInfo(string invoiceNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMApplicationID, string? customerType = default(string?), bool? includeSerialNumbers = default(bool?))
         {
             // verify the required parameter 'invoiceNumber' is set
             if (invoiceNumber == null)
@@ -512,6 +512,10 @@ namespace xi.sdk.resellers.Api
             // verify the required parameter 'iMCorrelationID' is set
             if (iMCorrelationID == null)
                 throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCorrelationID' when calling InvoicesApi->GetInvoicedetailsV61");
+
+            // verify the required parameter 'iMApplicationID' is set
+            if (iMApplicationID == null)
+                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMApplicationID' when calling InvoicesApi->GetInvoicedetailsV61");
 
             xi.sdk.resellers.Client.RequestOptions localVarRequestOptions = new xi.sdk.resellers.Client.RequestOptions();
 
@@ -541,10 +545,7 @@ namespace xi.sdk.resellers.Api
             localVarRequestOptions.HeaderParameters.Add("IM-CustomerNumber", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCustomerNumber)); // header parameter
             localVarRequestOptions.HeaderParameters.Add("IM-CountryCode", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCountryCode)); // header parameter
             localVarRequestOptions.HeaderParameters.Add("IM-CorrelationID", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCorrelationID)); // header parameter
-            if (iMApplicationID != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("IM-ApplicationID", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMApplicationID)); // header parameter
-            }
+            localVarRequestOptions.HeaderParameters.Add("IM-ApplicationID", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMApplicationID)); // header parameter
 
             // authentication (application) required
             // oauth required
@@ -573,12 +574,12 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
-        /// <param name="iMApplicationID">Unique value used to identify the sender of the transaction. Example: MyCompany. (optional)</param>
+        /// <param name="iMApplicationID">Unique value used to identify the sender of the transaction. Example: MyCompany.</param>
         /// <param name="customerType">it should be invoice or order (optional)</param>
         /// <param name="includeSerialNumbers">if serial in the response send as true or else false (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of InvoiceDetailsv61Response</returns>
-        public async System.Threading.Tasks.Task<InvoiceDetailsv61Response> GetInvoicedetailsV61Async(string invoiceNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMApplicationID = default(string?), string? customerType = default(string?), bool? includeSerialNumbers = default(bool?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoiceDetailsv61Response> GetInvoicedetailsV61Async(string invoiceNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMApplicationID, string? customerType = default(string?), bool? includeSerialNumbers = default(bool?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             xi.sdk.resellers.Client.ApiResponse<InvoiceDetailsv61Response> localVarResponse = await GetInvoicedetailsV61WithHttpInfoAsync(invoiceNumber, iMCustomerNumber, iMCountryCode, iMCorrelationID, iMApplicationID, customerType, includeSerialNumbers, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -592,12 +593,12 @@ namespace xi.sdk.resellers.Api
         /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
-        /// <param name="iMApplicationID">Unique value used to identify the sender of the transaction. Example: MyCompany. (optional)</param>
+        /// <param name="iMApplicationID">Unique value used to identify the sender of the transaction. Example: MyCompany.</param>
         /// <param name="customerType">it should be invoice or order (optional)</param>
         /// <param name="includeSerialNumbers">if serial in the response send as true or else false (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (InvoiceDetailsv61Response)</returns>
-        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<InvoiceDetailsv61Response>> GetInvoicedetailsV61WithHttpInfoAsync(string invoiceNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMApplicationID = default(string?), string? customerType = default(string?), bool? includeSerialNumbers = default(bool?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<InvoiceDetailsv61Response>> GetInvoicedetailsV61WithHttpInfoAsync(string invoiceNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMApplicationID, string? customerType = default(string?), bool? includeSerialNumbers = default(bool?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'invoiceNumber' is set
             if (invoiceNumber == null)
@@ -614,6 +615,10 @@ namespace xi.sdk.resellers.Api
             // verify the required parameter 'iMCorrelationID' is set
             if (iMCorrelationID == null)
                 throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCorrelationID' when calling InvoicesApi->GetInvoicedetailsV61");
+
+            // verify the required parameter 'iMApplicationID' is set
+            if (iMApplicationID == null)
+                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMApplicationID' when calling InvoicesApi->GetInvoicedetailsV61");
 
 
             xi.sdk.resellers.Client.RequestOptions localVarRequestOptions = new xi.sdk.resellers.Client.RequestOptions();
@@ -645,10 +650,7 @@ namespace xi.sdk.resellers.Api
             localVarRequestOptions.HeaderParameters.Add("IM-CustomerNumber", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCustomerNumber)); // header parameter
             localVarRequestOptions.HeaderParameters.Add("IM-CountryCode", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCountryCode)); // header parameter
             localVarRequestOptions.HeaderParameters.Add("IM-CorrelationID", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCorrelationID)); // header parameter
-            if (iMApplicationID != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("IM-ApplicationID", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMApplicationID)); // header parameter
-            }
+            localVarRequestOptions.HeaderParameters.Add("IM-ApplicationID", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMApplicationID)); // header parameter
 
             // authentication (application) required
             // oauth required
@@ -674,10 +676,10 @@ namespace xi.sdk.resellers.Api
         /// Search your invoice Search your Ingram Micro invoices. This endpoint searches by multiple invoice parameters and supports pagination of results.
         /// </summary>
         /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="iMApplicationID">Unique value used to identify the sender of the transaction. Example: MyCompany</param>
         /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
-        /// <param name="iMApplicationID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="paymentTermsNetDate">Search by payment terms net date(yyyy-MM-dd). (optional)</param>
         /// <param name="invoiceDate">Search by invoice date(yyyy-MM-dd). (optional)</param>
         /// <param name="invoiceDueDate">Search by invoice date from(yyyy-MM-dd). (optional)</param>
@@ -702,9 +704,9 @@ namespace xi.sdk.resellers.Api
         /// <param name="direction">asc or desc , along with orderby column result set will be sorted. (optional)</param>
         /// <param name="serialNumber">Serial number of the product. (optional)</param>
         /// <returns>InvoiceSearchResponse</returns>
-        public InvoiceSearchResponse GetResellersV6Invoicesearch(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMApplicationID = default(string?), string? paymentTermsNetDate = default(string?), string? invoiceDate = default(string?), string? invoiceDueDate = default(string?), string? orderDate = default(string?), string? orderFromDate = default(string?), string? orderToDate = default(string?), string? orderNumber = default(string?), string? deliveryNumber = default(string?), string? invoiceNumber = default(string?), string? invoiceStatus = default(string?), string? invoiceType = default(string?), string? customerOrderNumber = default(string?), string? endCustomerOrderNumber = default(string?), string? specialBidNumber = default(string?), string? invoiceFromDueDate = default(string?), string? invoiceToDueDate = default(string?), List<string>? invoiceFromDate = default(List<string>?), List<string>? invoiceToDate = default(List<string>?), int? pageSize = default(int?), int? pageNumber = default(int?), string? orderby = default(string?), string? direction = default(string?), string? serialNumber = default(string?))
+        public InvoiceSearchResponse GetResellersV6Invoicesearch(string iMApplicationID, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? paymentTermsNetDate = default(string?), string? invoiceDate = default(string?), string? invoiceDueDate = default(string?), string? orderDate = default(string?), string? orderFromDate = default(string?), string? orderToDate = default(string?), string? orderNumber = default(string?), string? deliveryNumber = default(string?), string? invoiceNumber = default(string?), string? invoiceStatus = default(string?), string? invoiceType = default(string?), string? customerOrderNumber = default(string?), string? endCustomerOrderNumber = default(string?), string? specialBidNumber = default(string?), string? invoiceFromDueDate = default(string?), string? invoiceToDueDate = default(string?), List<string>? invoiceFromDate = default(List<string>?), List<string>? invoiceToDate = default(List<string>?), int? pageSize = default(int?), int? pageNumber = default(int?), string? orderby = default(string?), string? direction = default(string?), string? serialNumber = default(string?))
         {
-            xi.sdk.resellers.Client.ApiResponse<InvoiceSearchResponse> localVarResponse = GetResellersV6InvoicesearchWithHttpInfo(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMApplicationID, paymentTermsNetDate, invoiceDate, invoiceDueDate, orderDate, orderFromDate, orderToDate, orderNumber, deliveryNumber, invoiceNumber, invoiceStatus, invoiceType, customerOrderNumber, endCustomerOrderNumber, specialBidNumber, invoiceFromDueDate, invoiceToDueDate, invoiceFromDate, invoiceToDate, pageSize, pageNumber, orderby, direction, serialNumber);
+            xi.sdk.resellers.Client.ApiResponse<InvoiceSearchResponse> localVarResponse = GetResellersV6InvoicesearchWithHttpInfo(iMApplicationID, iMCustomerNumber, iMCountryCode, iMCorrelationID, paymentTermsNetDate, invoiceDate, invoiceDueDate, orderDate, orderFromDate, orderToDate, orderNumber, deliveryNumber, invoiceNumber, invoiceStatus, invoiceType, customerOrderNumber, endCustomerOrderNumber, specialBidNumber, invoiceFromDueDate, invoiceToDueDate, invoiceFromDate, invoiceToDate, pageSize, pageNumber, orderby, direction, serialNumber);
             return localVarResponse.Data;
         }
 
@@ -712,10 +714,10 @@ namespace xi.sdk.resellers.Api
         /// Search your invoice Search your Ingram Micro invoices. This endpoint searches by multiple invoice parameters and supports pagination of results.
         /// </summary>
         /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="iMApplicationID">Unique value used to identify the sender of the transaction. Example: MyCompany</param>
         /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
-        /// <param name="iMApplicationID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="paymentTermsNetDate">Search by payment terms net date(yyyy-MM-dd). (optional)</param>
         /// <param name="invoiceDate">Search by invoice date(yyyy-MM-dd). (optional)</param>
         /// <param name="invoiceDueDate">Search by invoice date from(yyyy-MM-dd). (optional)</param>
@@ -740,8 +742,12 @@ namespace xi.sdk.resellers.Api
         /// <param name="direction">asc or desc , along with orderby column result set will be sorted. (optional)</param>
         /// <param name="serialNumber">Serial number of the product. (optional)</param>
         /// <returns>ApiResponse of InvoiceSearchResponse</returns>
-        public xi.sdk.resellers.Client.ApiResponse<InvoiceSearchResponse> GetResellersV6InvoicesearchWithHttpInfo(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMApplicationID = default(string?), string? paymentTermsNetDate = default(string?), string? invoiceDate = default(string?), string? invoiceDueDate = default(string?), string? orderDate = default(string?), string? orderFromDate = default(string?), string? orderToDate = default(string?), string? orderNumber = default(string?), string? deliveryNumber = default(string?), string? invoiceNumber = default(string?), string? invoiceStatus = default(string?), string? invoiceType = default(string?), string? customerOrderNumber = default(string?), string? endCustomerOrderNumber = default(string?), string? specialBidNumber = default(string?), string? invoiceFromDueDate = default(string?), string? invoiceToDueDate = default(string?), List<string>? invoiceFromDate = default(List<string>?), List<string>? invoiceToDate = default(List<string>?), int? pageSize = default(int?), int? pageNumber = default(int?), string? orderby = default(string?), string? direction = default(string?), string? serialNumber = default(string?))
+        public xi.sdk.resellers.Client.ApiResponse<InvoiceSearchResponse> GetResellersV6InvoicesearchWithHttpInfo(string iMApplicationID, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? paymentTermsNetDate = default(string?), string? invoiceDate = default(string?), string? invoiceDueDate = default(string?), string? orderDate = default(string?), string? orderFromDate = default(string?), string? orderToDate = default(string?), string? orderNumber = default(string?), string? deliveryNumber = default(string?), string? invoiceNumber = default(string?), string? invoiceStatus = default(string?), string? invoiceType = default(string?), string? customerOrderNumber = default(string?), string? endCustomerOrderNumber = default(string?), string? specialBidNumber = default(string?), string? invoiceFromDueDate = default(string?), string? invoiceToDueDate = default(string?), List<string>? invoiceFromDate = default(List<string>?), List<string>? invoiceToDate = default(List<string>?), int? pageSize = default(int?), int? pageNumber = default(int?), string? orderby = default(string?), string? direction = default(string?), string? serialNumber = default(string?))
         {
+            // verify the required parameter 'iMApplicationID' is set
+            if (iMApplicationID == null)
+                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMApplicationID' when calling InvoicesApi->GetResellersV6Invoicesearch");
+
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)
                 throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCustomerNumber' when calling InvoicesApi->GetResellersV6Invoicesearch");
@@ -862,10 +868,7 @@ namespace xi.sdk.resellers.Api
             {
                 localVarRequestOptions.QueryParameters.Add(xi.sdk.resellers.Client.ClientUtils.ParameterToMultiMap("", "serialNumber", serialNumber));
             }
-            if (iMApplicationID != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("IM-ApplicationID", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMApplicationID)); // header parameter
-            }
+            localVarRequestOptions.HeaderParameters.Add("IM-ApplicationID", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMApplicationID)); // header parameter
             localVarRequestOptions.HeaderParameters.Add("IM-CustomerNumber", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCustomerNumber)); // header parameter
             localVarRequestOptions.HeaderParameters.Add("IM-CountryCode", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCountryCode)); // header parameter
             localVarRequestOptions.HeaderParameters.Add("IM-CorrelationID", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCorrelationID)); // header parameter
@@ -893,10 +896,10 @@ namespace xi.sdk.resellers.Api
         /// Search your invoice Search your Ingram Micro invoices. This endpoint searches by multiple invoice parameters and supports pagination of results.
         /// </summary>
         /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="iMApplicationID">Unique value used to identify the sender of the transaction. Example: MyCompany</param>
         /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
-        /// <param name="iMApplicationID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="paymentTermsNetDate">Search by payment terms net date(yyyy-MM-dd). (optional)</param>
         /// <param name="invoiceDate">Search by invoice date(yyyy-MM-dd). (optional)</param>
         /// <param name="invoiceDueDate">Search by invoice date from(yyyy-MM-dd). (optional)</param>
@@ -922,9 +925,9 @@ namespace xi.sdk.resellers.Api
         /// <param name="serialNumber">Serial number of the product. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of InvoiceSearchResponse</returns>
-        public async System.Threading.Tasks.Task<InvoiceSearchResponse> GetResellersV6InvoicesearchAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMApplicationID = default(string?), string? paymentTermsNetDate = default(string?), string? invoiceDate = default(string?), string? invoiceDueDate = default(string?), string? orderDate = default(string?), string? orderFromDate = default(string?), string? orderToDate = default(string?), string? orderNumber = default(string?), string? deliveryNumber = default(string?), string? invoiceNumber = default(string?), string? invoiceStatus = default(string?), string? invoiceType = default(string?), string? customerOrderNumber = default(string?), string? endCustomerOrderNumber = default(string?), string? specialBidNumber = default(string?), string? invoiceFromDueDate = default(string?), string? invoiceToDueDate = default(string?), List<string>? invoiceFromDate = default(List<string>?), List<string>? invoiceToDate = default(List<string>?), int? pageSize = default(int?), int? pageNumber = default(int?), string? orderby = default(string?), string? direction = default(string?), string? serialNumber = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoiceSearchResponse> GetResellersV6InvoicesearchAsync(string iMApplicationID, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? paymentTermsNetDate = default(string?), string? invoiceDate = default(string?), string? invoiceDueDate = default(string?), string? orderDate = default(string?), string? orderFromDate = default(string?), string? orderToDate = default(string?), string? orderNumber = default(string?), string? deliveryNumber = default(string?), string? invoiceNumber = default(string?), string? invoiceStatus = default(string?), string? invoiceType = default(string?), string? customerOrderNumber = default(string?), string? endCustomerOrderNumber = default(string?), string? specialBidNumber = default(string?), string? invoiceFromDueDate = default(string?), string? invoiceToDueDate = default(string?), List<string>? invoiceFromDate = default(List<string>?), List<string>? invoiceToDate = default(List<string>?), int? pageSize = default(int?), int? pageNumber = default(int?), string? orderby = default(string?), string? direction = default(string?), string? serialNumber = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            xi.sdk.resellers.Client.ApiResponse<InvoiceSearchResponse> localVarResponse = await GetResellersV6InvoicesearchWithHttpInfoAsync(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMApplicationID, paymentTermsNetDate, invoiceDate, invoiceDueDate, orderDate, orderFromDate, orderToDate, orderNumber, deliveryNumber, invoiceNumber, invoiceStatus, invoiceType, customerOrderNumber, endCustomerOrderNumber, specialBidNumber, invoiceFromDueDate, invoiceToDueDate, invoiceFromDate, invoiceToDate, pageSize, pageNumber, orderby, direction, serialNumber, cancellationToken).ConfigureAwait(false);
+            xi.sdk.resellers.Client.ApiResponse<InvoiceSearchResponse> localVarResponse = await GetResellersV6InvoicesearchWithHttpInfoAsync(iMApplicationID, iMCustomerNumber, iMCountryCode, iMCorrelationID, paymentTermsNetDate, invoiceDate, invoiceDueDate, orderDate, orderFromDate, orderToDate, orderNumber, deliveryNumber, invoiceNumber, invoiceStatus, invoiceType, customerOrderNumber, endCustomerOrderNumber, specialBidNumber, invoiceFromDueDate, invoiceToDueDate, invoiceFromDate, invoiceToDate, pageSize, pageNumber, orderby, direction, serialNumber, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -932,10 +935,10 @@ namespace xi.sdk.resellers.Api
         /// Search your invoice Search your Ingram Micro invoices. This endpoint searches by multiple invoice parameters and supports pagination of results.
         /// </summary>
         /// <exception cref="xi.sdk.resellers.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="iMApplicationID">Unique value used to identify the sender of the transaction. Example: MyCompany</param>
         /// <param name="iMCustomerNumber">Your unique Ingram Micro customer number.</param>
         /// <param name="iMCountryCode">Two-character ISO country code.</param>
         /// <param name="iMCorrelationID">Unique transaction number to identify each transaction across all the systems.</param>
-        /// <param name="iMApplicationID">Unique value used to identify the sender of the transaction. Example: MyCompany (optional)</param>
         /// <param name="paymentTermsNetDate">Search by payment terms net date(yyyy-MM-dd). (optional)</param>
         /// <param name="invoiceDate">Search by invoice date(yyyy-MM-dd). (optional)</param>
         /// <param name="invoiceDueDate">Search by invoice date from(yyyy-MM-dd). (optional)</param>
@@ -961,8 +964,12 @@ namespace xi.sdk.resellers.Api
         /// <param name="serialNumber">Serial number of the product. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (InvoiceSearchResponse)</returns>
-        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<InvoiceSearchResponse>> GetResellersV6InvoicesearchWithHttpInfoAsync(string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMApplicationID = default(string?), string? paymentTermsNetDate = default(string?), string? invoiceDate = default(string?), string? invoiceDueDate = default(string?), string? orderDate = default(string?), string? orderFromDate = default(string?), string? orderToDate = default(string?), string? orderNumber = default(string?), string? deliveryNumber = default(string?), string? invoiceNumber = default(string?), string? invoiceStatus = default(string?), string? invoiceType = default(string?), string? customerOrderNumber = default(string?), string? endCustomerOrderNumber = default(string?), string? specialBidNumber = default(string?), string? invoiceFromDueDate = default(string?), string? invoiceToDueDate = default(string?), List<string>? invoiceFromDate = default(List<string>?), List<string>? invoiceToDate = default(List<string>?), int? pageSize = default(int?), int? pageNumber = default(int?), string? orderby = default(string?), string? direction = default(string?), string? serialNumber = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<xi.sdk.resellers.Client.ApiResponse<InvoiceSearchResponse>> GetResellersV6InvoicesearchWithHttpInfoAsync(string iMApplicationID, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? paymentTermsNetDate = default(string?), string? invoiceDate = default(string?), string? invoiceDueDate = default(string?), string? orderDate = default(string?), string? orderFromDate = default(string?), string? orderToDate = default(string?), string? orderNumber = default(string?), string? deliveryNumber = default(string?), string? invoiceNumber = default(string?), string? invoiceStatus = default(string?), string? invoiceType = default(string?), string? customerOrderNumber = default(string?), string? endCustomerOrderNumber = default(string?), string? specialBidNumber = default(string?), string? invoiceFromDueDate = default(string?), string? invoiceToDueDate = default(string?), List<string>? invoiceFromDate = default(List<string>?), List<string>? invoiceToDate = default(List<string>?), int? pageSize = default(int?), int? pageNumber = default(int?), string? orderby = default(string?), string? direction = default(string?), string? serialNumber = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
+            // verify the required parameter 'iMApplicationID' is set
+            if (iMApplicationID == null)
+                throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMApplicationID' when calling InvoicesApi->GetResellersV6Invoicesearch");
+
             // verify the required parameter 'iMCustomerNumber' is set
             if (iMCustomerNumber == null)
                 throw new xi.sdk.resellers.Client.ApiException(400, "Missing required parameter 'iMCustomerNumber' when calling InvoicesApi->GetResellersV6Invoicesearch");
@@ -1085,10 +1092,7 @@ namespace xi.sdk.resellers.Api
             {
                 localVarRequestOptions.QueryParameters.Add(xi.sdk.resellers.Client.ClientUtils.ParameterToMultiMap("", "serialNumber", serialNumber));
             }
-            if (iMApplicationID != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("IM-ApplicationID", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMApplicationID)); // header parameter
-            }
+            localVarRequestOptions.HeaderParameters.Add("IM-ApplicationID", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMApplicationID)); // header parameter
             localVarRequestOptions.HeaderParameters.Add("IM-CustomerNumber", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCustomerNumber)); // header parameter
             localVarRequestOptions.HeaderParameters.Add("IM-CountryCode", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCountryCode)); // header parameter
             localVarRequestOptions.HeaderParameters.Add("IM-CorrelationID", xi.sdk.resellers.Client.ClientUtils.ParameterToString(iMCorrelationID)); // header parameter

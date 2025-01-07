@@ -9,7 +9,7 @@ All URIs are relative to *https://api.ingrammicro.com:443*
 
 <a id="getinvoicedetailsv61"></a>
 # **GetInvoicedetailsV61**
-> InvoiceDetailsv61Response GetInvoicedetailsV61 (string invoiceNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMApplicationID = null, string? customerType = null, bool? includeSerialNumbers = null)
+> InvoiceDetailsv61Response GetInvoicedetailsV61 (string invoiceNumber, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string iMApplicationID, string? customerType = null, bool? includeSerialNumbers = null)
 
 Get Invoice Details v6.1
 
@@ -43,7 +43,7 @@ namespace Example
             var iMCustomerNumber = 20-222222;  // string | Your unique Ingram Micro customer number.
             var iMCountryCode = US;  // string | Two-character ISO country code.
             var iMCorrelationID = fbac82ba-cf0a-4bcf-fc03-0c5084;  // string | Unique transaction number to identify each transaction across all the systems.
-            var iMApplicationID = MyCompany;  // string? | Unique value used to identify the sender of the transaction. Example: MyCompany. (optional) 
+            var iMApplicationID = MyCompany;  // string | Unique value used to identify the sender of the transaction. Example: MyCompany.
             var customerType = invoice;  // string? | it should be invoice or order (optional) 
             var includeSerialNumbers = false;  // bool? | if serial in the response send as true or else false (optional) 
 
@@ -92,7 +92,7 @@ catch (ApiException e)
 | **iMCustomerNumber** | **string** | Your unique Ingram Micro customer number. |  |
 | **iMCountryCode** | **string** | Two-character ISO country code. |  |
 | **iMCorrelationID** | **string** | Unique transaction number to identify each transaction across all the systems. |  |
-| **iMApplicationID** | **string?** | Unique value used to identify the sender of the transaction. Example: MyCompany. | [optional]  |
+| **iMApplicationID** | **string** | Unique value used to identify the sender of the transaction. Example: MyCompany. |  |
 | **customerType** | **string?** | it should be invoice or order | [optional]  |
 | **includeSerialNumbers** | **bool?** | if serial in the response send as true or else false | [optional]  |
 
@@ -121,7 +121,7 @@ catch (ApiException e)
 
 <a id="getresellersv6invoicesearch"></a>
 # **GetResellersV6Invoicesearch**
-> InvoiceSearchResponse GetResellersV6Invoicesearch (string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? iMApplicationID = null, string? paymentTermsNetDate = null, string? invoiceDate = null, string? invoiceDueDate = null, string? orderDate = null, string? orderFromDate = null, string? orderToDate = null, string? orderNumber = null, string? deliveryNumber = null, string? invoiceNumber = null, string? invoiceStatus = null, string? invoiceType = null, string? customerOrderNumber = null, string? endCustomerOrderNumber = null, string? specialBidNumber = null, string? invoiceFromDueDate = null, string? invoiceToDueDate = null, List<string>? invoiceFromDate = null, List<string>? invoiceToDate = null, int? pageSize = null, int? pageNumber = null, string? orderby = null, string? direction = null, string? serialNumber = null)
+> InvoiceSearchResponse GetResellersV6Invoicesearch (string iMApplicationID, string iMCustomerNumber, string iMCountryCode, string iMCorrelationID, string? paymentTermsNetDate = null, string? invoiceDate = null, string? invoiceDueDate = null, string? orderDate = null, string? orderFromDate = null, string? orderToDate = null, string? orderNumber = null, string? deliveryNumber = null, string? invoiceNumber = null, string? invoiceStatus = null, string? invoiceType = null, string? customerOrderNumber = null, string? endCustomerOrderNumber = null, string? specialBidNumber = null, string? invoiceFromDueDate = null, string? invoiceToDueDate = null, List<string>? invoiceFromDate = null, List<string>? invoiceToDate = null, int? pageSize = null, int? pageNumber = null, string? orderby = null, string? direction = null, string? serialNumber = null)
 
 Search your invoice
 
@@ -151,10 +151,10 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new InvoicesApi(httpClient, config, httpClientHandler);
+            var iMApplicationID = MyCompany;  // string | Unique value used to identify the sender of the transaction. Example: MyCompany
             var iMCustomerNumber = 20-222222;  // string | Your unique Ingram Micro customer number.
             var iMCountryCode = US;  // string | Two-character ISO country code.
             var iMCorrelationID = fbac82ba-cf0a-4bcf-fc03-0c5084;  // string | Unique transaction number to identify each transaction across all the systems.
-            var iMApplicationID = MyCompany;  // string? | Unique value used to identify the sender of the transaction. Example: MyCompany (optional) 
             var paymentTermsNetDate = 2021-04-23;  // string? | Search by payment terms net date(yyyy-MM-dd). (optional) 
             var invoiceDate = 2021-04-23;  // string? | Search by invoice date(yyyy-MM-dd). (optional) 
             var invoiceDueDate = 2021-04-23;  // string? | Search by invoice date from(yyyy-MM-dd). (optional) 
@@ -182,7 +182,7 @@ namespace Example
             try
             {
                 // Search your invoice
-                InvoiceSearchResponse result = apiInstance.GetResellersV6Invoicesearch(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMApplicationID, paymentTermsNetDate, invoiceDate, invoiceDueDate, orderDate, orderFromDate, orderToDate, orderNumber, deliveryNumber, invoiceNumber, invoiceStatus, invoiceType, customerOrderNumber, endCustomerOrderNumber, specialBidNumber, invoiceFromDueDate, invoiceToDueDate, invoiceFromDate, invoiceToDate, pageSize, pageNumber, orderby, direction, serialNumber);
+                InvoiceSearchResponse result = apiInstance.GetResellersV6Invoicesearch(iMApplicationID, iMCustomerNumber, iMCountryCode, iMCorrelationID, paymentTermsNetDate, invoiceDate, invoiceDueDate, orderDate, orderFromDate, orderToDate, orderNumber, deliveryNumber, invoiceNumber, invoiceStatus, invoiceType, customerOrderNumber, endCustomerOrderNumber, specialBidNumber, invoiceFromDueDate, invoiceToDueDate, invoiceFromDate, invoiceToDate, pageSize, pageNumber, orderby, direction, serialNumber);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -203,7 +203,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Search your invoice
-    ApiResponse<InvoiceSearchResponse> response = apiInstance.GetResellersV6InvoicesearchWithHttpInfo(iMCustomerNumber, iMCountryCode, iMCorrelationID, iMApplicationID, paymentTermsNetDate, invoiceDate, invoiceDueDate, orderDate, orderFromDate, orderToDate, orderNumber, deliveryNumber, invoiceNumber, invoiceStatus, invoiceType, customerOrderNumber, endCustomerOrderNumber, specialBidNumber, invoiceFromDueDate, invoiceToDueDate, invoiceFromDate, invoiceToDate, pageSize, pageNumber, orderby, direction, serialNumber);
+    ApiResponse<InvoiceSearchResponse> response = apiInstance.GetResellersV6InvoicesearchWithHttpInfo(iMApplicationID, iMCustomerNumber, iMCountryCode, iMCorrelationID, paymentTermsNetDate, invoiceDate, invoiceDueDate, orderDate, orderFromDate, orderToDate, orderNumber, deliveryNumber, invoiceNumber, invoiceStatus, invoiceType, customerOrderNumber, endCustomerOrderNumber, specialBidNumber, invoiceFromDueDate, invoiceToDueDate, invoiceFromDate, invoiceToDate, pageSize, pageNumber, orderby, direction, serialNumber);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -220,10 +220,10 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
+| **iMApplicationID** | **string** | Unique value used to identify the sender of the transaction. Example: MyCompany |  |
 | **iMCustomerNumber** | **string** | Your unique Ingram Micro customer number. |  |
 | **iMCountryCode** | **string** | Two-character ISO country code. |  |
 | **iMCorrelationID** | **string** | Unique transaction number to identify each transaction across all the systems. |  |
-| **iMApplicationID** | **string?** | Unique value used to identify the sender of the transaction. Example: MyCompany | [optional]  |
 | **paymentTermsNetDate** | **string?** | Search by payment terms net date(yyyy-MM-dd). | [optional]  |
 | **invoiceDate** | **string?** | Search by invoice date(yyyy-MM-dd). | [optional]  |
 | **invoiceDueDate** | **string?** | Search by invoice date from(yyyy-MM-dd). | [optional]  |

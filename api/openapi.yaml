@@ -6366,7 +6366,7 @@ paths:
         explode: false
         in: header
         name: IM-ApplicationID
-        required: false
+        required: true
         schema:
           example: MyCompany
           maxLength: 32
@@ -6736,7 +6736,7 @@ paths:
         explode: false
         in: header
         name: IM-ApplicationID
-        required: false
+        required: true
         schema:
           example: MyCompany
           maxLength: 32
